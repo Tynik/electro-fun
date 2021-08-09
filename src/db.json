@@ -1,0 +1,479 @@
+{
+  "seo": {
+    "title": "Electo Fun - Купить радиомодуль",
+    "description": "Продажа радиомодулей и подробная документация к их подключению",
+    "keywords": "радиомодули, микросхемы, датчики, IOT, arduino"
+  },
+  "menu": [
+    {
+      "name": "Радиомодули",
+      "icon": "dashboard",
+      "url": "радиомодули"
+    }
+  ],
+  "articles": [
+
+  ],
+  "categories": {
+    "1": "Датчики",
+    "2": "Микропроцессоры"
+  },
+  "featureSections": {
+    "1": "Точность измерения",
+    "2": "Разрешающая способность",
+    "3": "Напряжение",
+    "4": "Ток",
+    "5": "Измерение",
+    "6": "GPIO"
+  },
+  "options": {
+    "1": {
+      "name": "CPU",
+      "categories": [2]
+    },
+    "2": {
+      "name": "Интерфейс",
+      "categories": [1]
+    },
+    "3": {
+      "name": "Питание",
+      "categories": [1],
+      "featureSectionRef": 3
+    },
+    "4": {
+      "name": "Температура",
+      "categories": [1],
+      "featureSectionRef": 5
+    },
+    "5": {
+      "name": "Влажность",
+      "categories": [1],
+      "featureSectionRef": 5
+    },
+    "6": {
+      "name": "Давление",
+      "categories": [1],
+      "featureSectionRef": 5
+    },
+    "7": {
+      "name": "I²C адрес",
+      "categories": [1]
+    },
+    "8": {
+      "name": "Температура",
+      "categories": [1],
+      "featureSectionRef": 1
+    },
+    "9": {
+      "name": "Давление",
+      "categories": [1],
+      "featureSectionRef": 1
+    },
+    "10": {
+      "name": "Влажность",
+      "categories": [1],
+      "featureSectionRef": 1
+    },
+    "11": {
+      "name": "Влажность",
+      "categories": [1],
+      "featureSectionRef": 2
+    },
+    "12": {
+      "name": "Давление",
+      "categories": [1],
+      "featureSectionRef": 2
+    },
+    "13": {
+      "name": "Входное",
+      "featureSectionRef": 3
+    },
+    "14": {
+      "name": "Выходное",
+      "featureSectionRef": 3
+    },
+    "15": {
+      "name": "Макс. выходной ток",
+      "featureSectionRef": 4
+    },
+    "16": {
+      "name": "Гироскоп",
+      "suffix": {
+        "axis": "-x осевой",
+        "range": "º/с"
+      },
+      "categories": [1]
+    },
+    "17": {
+      "name": "Акселерометр",
+      "suffix": {
+        "axis": "-x осевой"
+      },
+      "categories": [1]
+    },
+    "18": {
+      "name": "Mагнитометр",
+      "suffix": {
+        "axis": "-x осевой"
+      },
+      "categories": [1]
+    },
+    "19": {
+      "name": "USB питание",
+      "categories": [1],
+      "featureSectionRef": 3
+    },
+    "20": {
+      "name": "Кол-во",
+      "featureSectionRef": 6
+    },
+    "21": {
+      "name": "Тактовый выход для внешних устройств",
+      "featureSectionRef": 6
+    },
+    "22": {
+      "name": "Вкл. LED во время чтения/записи SMBus",
+      "featureSectionRef": 6
+    },
+    "23": {
+      "name": "Исп. в качестве входов, выходов с открытым стоком или двухтактных выходов",
+      "featureSectionRef": 6
+    },
+    "24": {
+      "name": "Диапазон температуры"
+    },
+    "25": {
+      "name": "SMBus буфер"
+    },
+    "26": {
+      "name": "Диапазон влажности"
+    },
+    "27": {
+      "name": "Потребляемая мощность"
+    },
+    "28": {
+      "name": "Макс. потребляемый",
+      "featureSectionRef": 4
+    },
+    "29": {
+      "name": "Сред. потребляемый",
+      "featureSectionRef": 4
+    }
+  },
+  "items": [
+    {
+      "title": "LM2596s DC-DC 3 A",
+      "subtitle": "Понижающий стабилизатор напряжения",
+      "buyLink": "https://izi.ua/p-19437930-stabilizator-napryazheniya-ponizhayushchiy-lm2596s-dc-dc-3a",
+      "datasheetLink": "",
+      "images": [
+        {
+          "src": "https://images.izi.ua/86338821",
+          "alt": "LM2596s"
+        },
+        {
+          "src": "https://images.izi.ua/85993150",
+          "alt": "LM2596s"
+        },
+        {
+          "src": "https://images.izi.ua/83859610",
+          "alt": "LM2596s"
+        },
+        {
+          "src": "https://images.izi.ua/83859871",
+          "alt": "LM2596s"
+        },
+        {
+          "src": "https://images.izi.ua/83859870",
+          "alt": "LM2596s"
+        },
+        {
+          "src": "https://images.izi.ua/83859609",
+          "alt": "LM2596s"
+        }
+      ],
+      "content": "Стабилизатор напряжения LM2596s предназначен для понижения напряжения путем регулировки подстраиваемым резистором.",
+      "options": [
+        {
+          "idRef": 13,
+          "value": "4.5 - 28 В"
+        },
+        {
+          "idRef": 14,
+          "value": "0.8 - 20 В"
+        },
+        {
+          "idRef": 15,
+          "value": "3 A"
+        }
+      ]
+    },
+    {
+      "title": "BMP280",
+      "subtitle": "Датчик для измерения температуры, давления и влажности",
+      "buyLink": "https://izi.ua/p-19665588-bmp280-temperature-pressure-humidity-sensor-for-arduino",
+      "datasheetLink": "/datasheets/BMP280.pdf",
+      "images": [
+        {
+          "src": "https://images.izi.ua/84778923",
+          "alt": "BMP280"
+        },
+        {
+          "src": "https://images.izi.ua/84778922",
+          "alt": "BMP280"
+        }
+      ],
+      "content": "BME280, прецизионный датчик, впаян в печатную плату. Используется для измерения давления, температуры и влажности.",
+      "options": [
+        {
+          "idRef": 2,
+          "value": [
+            "I²C (до 3.4 МГц)",
+            "SPI (3 и 4 провода, до 10 МГц)"
+          ]
+        },
+        {
+          "idRef": 3,
+          "value": "1.8 - 5 В"
+        },
+        {
+          "idRef": 4,
+          "value": "-40 - +85°C"
+        },
+        {
+          "idRef": 5,
+          "value": "0 - 100%"
+        },
+        {
+          "idRef": 6,
+          "value": "300 - 1100 гПа"
+        },
+        {
+          "idRef": 7,
+          "value": ["0x76", "0x77"]
+        },
+        {
+          "idRef": 8,
+          "value": "1°C"
+        },
+        {
+          "idRef": 9,
+          "value": "1 Pa"
+        },
+        {
+          "idRef": 11,
+          "value": "0.008 %"
+        },
+        {
+          "idRef": 12,
+          "value": "0.18 Па"
+        }
+      ]
+    },
+    {
+      "title": "MPU-9250",
+      "subtitle": "Гироскоп/акселерометр/магнитометр",
+      "buyLink": "https://izi.ua/p-6267920-akselerometr-giroskop-magnitometr-gy-9250-9-dof-na-mpu-9250-i2c",
+      "datasheetLink": "/datasheets/MPU-9250A-1.1.pdf",
+      "images": [
+        {
+          "src": "https://images.izi.ua/85945462",
+          "alt": "MPU-9250"
+        },
+        {
+          "src": "https://images.izi.ua/85945463",
+          "alt": "MPU-9250"
+        },
+        {
+          "src": "https://images.izi.ua/29881771",
+          "alt": "MPU-9250"
+        },
+        {
+          "src": "https://images.izi.ua/29881770",
+          "alt": "MPU-9250"
+        },
+        {
+          "src": "https://images.izi.ua/29886022",
+          "alt": "MPU-9250"
+        }
+      ],
+      "content": "MPU-9250 - это 9-осевое устройство отслеживания движения, которое сочетает в себе 3-осевой гироскоп, 3-осевой акселерометр, 3-осевой магнитометр и Digital Motion Processor ™ (DMP), все в небольшом корпусе 3x3x1 мм, доступном в качестве совместимого с выводами обновления. от МПУ-6515. Благодаря специальной шине датчиков I2C, MPU-9250 напрямую обеспечивает полный 9-осевой вывод MotionFusion ™. Устройство отслеживания движения MPU-9250 с его 9-осевой интеграцией, встроенной системой MotionFusion ™ и встроенным программным обеспечением для калибровки во время выполнения.",
+      "companyLink": "https://invensense.tdk.com",
+      "options": [
+        {
+          "idRef": 2,
+          "value": [
+            "I²C (400 кГц)",
+            "SPI (1 МГц, 20 МГц)"
+          ]
+        },
+        {
+          "idRef": 16,
+          "value": [
+            {
+              "value": 3,
+              "type": "axis"
+            },
+            {
+              "value": [250, 500, 1000, 2000],
+              "type": "range"
+            }
+          ]
+        },
+        {
+          "idRef": 17,
+          "value": [
+            {
+              "value": 3,
+              "type": "axis"
+            }
+          ]
+        },
+        {
+          "idRef": 18,
+          "value": [
+            {
+              "value": 3,
+              "type": "axis"
+            }
+          ]
+        },
+        {
+          "idRef": 13,
+          "value": "2.4 - 3.6 В"
+        },
+        {
+          "idRef": 7,
+          "value": ["0x68", "0x69"]
+        }
+      ]
+    },
+    {
+      "title": "USB в SMBus CP2112",
+      "buyLink": "https://izi.ua/p-5455863-adapter-cp2112-usb-uart-i2c-dlya-proshivki-batarey-noutbukov-i-proch",
+      "datasheetLink": "/datasheets/cp2112.pdf",
+      "images": [
+        {
+          "src": "https://images.izi.ua/85951622",
+          "alt": "CP2112"
+        },
+        {
+          "src": "https://images.izi.ua/85951621",
+          "alt": "CP2112"
+        },
+        {
+          "src": "https://images.izi.ua/25804009",
+          "alt": "CP2112"
+        },
+        {
+          "src": "https://images.izi.ua/25804008",
+          "alt": "CP2112"
+        },
+        {
+          "src": "https://images.izi.ua/25804007",
+          "alt": ""
+        }
+      ],
+      "content": "Модуль конвертер USB в SMBus построенный чипе Silabs С2112.\nВ основном требуется для прошивки контроллера батареи ноутбука. Поддерживается программой BE2WORKS.\n\nПоставляется в упаковке.",
+      "options": [
+        {
+          "idRef": 3,
+          "value": "3.0 - 3.6 В"
+        },
+        {
+          "idRef": 19,
+          "value": "4.0 - 5.25 В"
+        },
+        {
+          "idRef": 20,
+          "value": 8
+        },
+        {
+          "idRef": 21,
+          "value": "8 МГц - 94 кГц"
+        },
+        {
+          "idRef": 22,
+          "value": "Да"
+        },
+        {
+          "idRef": 23,
+          "value": "Да"
+        },
+        {
+          "idRef": 24,
+          "value": "-40 - +85°C"
+        },
+        {
+          "idRef": 25,
+          "value": "512 байт"
+        }
+      ]
+    },
+    {
+      "title": "CCS811",
+      "subtitle": "Датчик для измерения качества воздуха",
+      "buyLink": "https://izi.ua/p-11439002-datchik-co2-kachestva-vozdukha-arduino-ccs811-i2c-cjmcu-811",
+      "datasheetLink": "/datasheets/CCS811.pdf",
+      "images": [
+        {
+          "src": "https://images.izi.ua/54929459",
+          "alt": "CCS811"
+        },
+        {
+          "src": "https://images.izi.ua/54929458",
+          "alt": "CCS811"
+        },
+        {
+          "src": "https://images.izi.ua/54929353",
+          "alt": "CCS811"
+        }
+      ],
+      "content": "CCS811 - это маломощный цифровой датчик газа для обнаружения низких уровней VOCs, обычно обнаруживаемых в помещении, с блоком микроконтроллера (MCU) и аналого-цифровым преобразователем (ADC) для мониторинга локальной среды и обеспечения индикация качества воздуха в помещении через эквивалентный выход CO2 или TVOC через стандартный цифровой интерфейс I²C.",
+      "options": [
+        {
+          "idRef": 2,
+          "value": "I²C (до 400 кГц)"
+        },
+        {
+          "idRef": 3,
+          "value": "1.8 - 3.6 В"
+        },
+        {
+          "idRef": 24,
+          "value": "-40 - +85°C"
+        },
+        {
+          "idRef": 26,
+          "value": "10 - 95%"
+        },
+        {
+          "idRef": 27,
+          "value": "1.2 - 46 мВ"
+        },
+        {
+          "idRef": 28,
+          "value": "54 мА"
+        },
+        {
+          "idRef": 29,
+          "value": "30 мА"
+        }
+      ],
+      "externalResources": [
+        {
+          "name": "Официальная страница CCS811",
+          "url": "https://www.sciosense.com/products/environmental-sensors/ccs811-gas-sensor-solution/",
+          "icon": "sciosense.com.png",
+          "iconAlt": "sciosense.com"
+        },
+        {
+          "name": "Adafruit CCS811",
+          "url": "https://github.com/adafruit/Adafruit_CCS811",
+          "icon": "github.com.svg",
+          "iconAlt": "github.com"
+        }
+      ]
+    }
+  ]
+}
