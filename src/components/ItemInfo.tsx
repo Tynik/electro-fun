@@ -10,12 +10,14 @@ import {
   List,
   ListItem,
   ListItemText,
-  ListItemIcon,
+  Modal,
+  Icon,
   useTheme
 } from '@material-ui/core';
 import {
   Link as LinkIcon,
-  ShoppingCart as ShoppingCartIcon
+  ShoppingCart as ShoppingCartIcon,
+  Close as CloseIcon
 } from '@material-ui/icons';
 
 import { DbOptions, ItemOption, OptionDefinitionSuffix } from '../types';
@@ -23,7 +25,7 @@ import { AppContext } from '../context';
 import { getItemById } from '../utils';
 import { ImageSlider } from './ImageSlider';
 import { BackButton } from './BackButton';
-import { Icon } from '@material-ui/core';
+import { ItemImage } from '../types';
 
 export const sortItemOptions = (allOptions, options: ItemOption[]) =>
   options.sort((optionA, optionB) => {
@@ -161,15 +163,16 @@ export const ItemInfo = () => {
                   startIcon={<LinkIcon/>}
                 >Datasheet</Button>
               )}
-
-              <Button
-                component={'a'}
-                variant={'contained'}
-                target={'_blank'}
-                href={item.buyLink}
-                color={'success'}
-                startIcon={<ShoppingCartIcon/>}
-              >Купить</Button>
+              {Boolean(item.buyLink) && (
+                <Button
+                  component={'a'}
+                  variant={'contained'}
+                  target={'_blank'}
+                  href={item.buyLink}
+                  color={'success'}
+                  startIcon={<ShoppingCartIcon/>}
+                >Купить</Button>
+              )}
             </Stack>
           </Box>
         </Grid>
@@ -182,19 +185,13 @@ export const ItemInfo = () => {
             sx={{ whiteSpace: 'pre-line' }}
           >{item.content}</Typography>
 
-          {item.externalResources && (
+          {item.externalLinks && (
             <Box marginTop={theme.spacing(2)}>
               <Typography variant={'overline'}>Ссылки на внешние ресурсы</Typography>
 
               <List disablePadding>
-                {item.externalResources.map(externalResource => (
-                  <ListItem
-                    component={'a'}
-                    key={externalResource.name}
-                    href={externalResource.url}
-                    target={'_blank'}
-                    disablePadding
-                  >
+                {item.externalLinks.map(externalResource => (
+                  <ListItem key={externalResource.name} disablePadding>
                     {externalResource.icon && (
                       <Icon
                         fontSize={'small'}
@@ -207,7 +204,11 @@ export const ItemInfo = () => {
                           height={16}/>
                       </Icon>
                     )}
-                    <ListItemText>{externalResource.name}</ListItemText>
+                    <ListItemText>
+                      <a
+                        href={externalResource.url}
+                        target={'_blank'}>{externalResource.name}</a>
+                    </ListItemText>
                   </ListItem>
                 ))}
               </List>

@@ -16,7 +16,8 @@
   ],
   "categories": {
     "1": "Датчики",
-    "2": "Микропроцессоры"
+    "2": "Микропроцессоры",
+    "3": "Елементы Пельтье"
   },
   "featureSections": {
     "1": "Точность измерения",
@@ -140,7 +141,7 @@
       "featureSectionRef": 6
     },
     "24": {
-      "name": "Диапазон температуры"
+      "name": "Диапазон рабочей температуры"
     },
     "25": {
       "name": "SMBus буфер"
@@ -158,6 +159,14 @@
     "29": {
       "name": "Сред. потребляемый",
       "featureSectionRef": 4
+    },
+    "30": {
+      "name": "Макс. разница температур между сторонами",
+      "categories": [3]
+    },
+    "31": {
+      "name": "Макс. мощность охлаждения",
+      "categories": [3]
     }
   },
   "items": [
@@ -167,14 +176,6 @@
       "buyLink": "https://izi.ua/p-19437930-stabilizator-napryazheniya-ponizhayushchiy-lm2596s-dc-dc-3a",
       "datasheetLink": "",
       "images": [
-        {
-          "src": "https://images.izi.ua/86338821",
-          "alt": "LM2596s"
-        },
-        {
-          "src": "https://images.izi.ua/85993150",
-          "alt": "LM2596s"
-        },
         {
           "src": "https://images.izi.ua/83859610",
           "alt": "LM2596s"
@@ -277,14 +278,6 @@
       "datasheetLink": "/datasheets/MPU-9250A-1.1.pdf",
       "images": [
         {
-          "src": "https://images.izi.ua/85945462",
-          "alt": "MPU-9250"
-        },
-        {
-          "src": "https://images.izi.ua/85945463",
-          "alt": "MPU-9250"
-        },
-        {
           "src": "https://images.izi.ua/29881771",
           "alt": "MPU-9250"
         },
@@ -353,14 +346,6 @@
       "buyLink": "https://izi.ua/p-5455863-adapter-cp2112-usb-uart-i2c-dlya-proshivki-batarey-noutbukov-i-proch",
       "datasheetLink": "/datasheets/cp2112.pdf",
       "images": [
-        {
-          "src": "https://images.izi.ua/85951622",
-          "alt": "CP2112"
-        },
-        {
-          "src": "https://images.izi.ua/85951621",
-          "alt": "CP2112"
-        },
         {
           "src": "https://images.izi.ua/25804009",
           "alt": "CP2112"
@@ -449,7 +434,7 @@
         },
         {
           "idRef": 27,
-          "value": "1.2 - 46 мВ"
+          "value": "1.2 - 46 мВт"
         },
         {
           "idRef": 28,
@@ -460,7 +445,7 @@
           "value": "30 мА"
         }
       ],
-      "externalResources": [
+      "externalLinks": [
         {
           "name": "Официальная страница CCS811",
           "url": "https://www.sciosense.com/products/environmental-sensors/ccs811-gas-sensor-solution/",
@@ -474,6 +459,144 @@
           "iconAlt": "github.com"
         }
       ]
+    },
+    {
+      "title": "APDS-9960",
+      "subtitle": "Датчик RGB и распознавание жестов",
+      "buyLink": "https://izi.ua/p-5455883-apds-9960-datchik-rgb-i-raspoznavanie-zhestov",
+      "datasheetLink": "/datasheets/APDS-9960.pdf",
+      "images": [
+        {
+          "src": "https://images.izi.ua/25804439",
+          "alt": "APDS-9960"
+        },
+        {
+          "src": "https://images.izi.ua/25804442",
+          "alt": "APDS-9960"
+        },
+        {
+          "src": "https://images.izi.ua/25804441",
+          "alt": "APDS-9960"
+        },
+        {
+          "src": "https://images.izi.ua/25804440",
+          "alt": "APDS-9960"
+        }
+      ],
+      "content": "С помощью этого датчика можно управлять любым устройством, где можно применить жестикуляцию или реакцию на цвет.\n\nДатчик используют красный, зеленый, синий и прозрачный сенсор приближения и жестов с ИК-светодиодом. Измерения RGB и окружающего света определяет интенсивность света при различных условиях освещения и материалах. Встроенный блочный UV-IR фильтр обеспечивает точное измерение интенсивности света и соответствующую ему цветовую температуру.\n\nДля обнаружение жестов используется 4 направленных фото-диода, интегрированные с видимым фильтром, для точного определения простых жестов вверх/вниз/вправо/влево или чуть сложных.\n\nДобавлены микро-оптические линзы в модуль обеспечивающие высокую эффективность передачи и приема ИК излучения. Внутренний контроллер переводит датчик в режим пониженного энергопотребления между измерениями RGBC, приближения и жестов, обеспечивая очень низкое энергопотребление.\n\nОбласти применения:\n- бесконтактные измерения\n- замена механических выключателей\n- измерения интенсивности рассеянного света\n- датчики цветовой температуры (определение цвета)\n- датчики движения (влево / вправо / вверх / вниз / вперед / назад)\n\nНастройка перемычек:\n\n- PS - эта перемычка соединяет источники питания датчика и ИК-светодиода. Когда перемычка запаяна, вам нужно только подать питание на вывод VCC для питания как датчика, так и инфракрасного светодиода. Если перемычка разомкнута, вам необходимо подавать питание на контакты VCC (2,4-3,6 В) и VL (3,0-4,5 В) по отдельности. Эта перемычка запаяна по умолчанию;\n\n- I2C PU - это 3-x позиционная перемычка для пайки, которая используется для подключения и отключения нагрузочных резисторов I2C. По умолчанию эта перемычка запаяна, что означает, что линии SDA и SCL имеют подключенные нагрузочные резисторы на плате коммутации. Используйте фитиль припоя, чтобы разомкнуть перемычку, если вам не нужны подтягивающие резисторы (например, у вас есть подтягивающие резисторы, которые расположены на шине I2C где-то еще).",
+      "options": [
+        {
+          "idRef": 2,
+          "value": "I²C (до 400 кГц)"
+        },
+        {
+          "idRef": 3,
+          "value": "2.4 - 3.8 В"
+        },
+        {
+          "idRef": 24,
+          "value": "-40 - +85°C"
+        }
+      ],
+      "externalLinks": [
+        {
+          "name": "Официальная страница APDS-9960",
+          "url": "https://www.broadcom.com/products/optical-sensors/integrated-ambient-light-and-proximity-sensors/apds-9960",
+          "icon": "broadcom.com.ico",
+          "iconAlt": "www.broadcom.com"
+        },
+        {
+          "name": "SparkFun APDS-9960",
+          "url": "https://github.com/sparkfun/SparkFun_APDS-9960_Sensor_Arduino_Library",
+          "icon": "github.com.svg",
+          "iconAlt": "github.com"
+        }
+      ]
+    },
+    {
+      "title": "MAC Серия 35",
+      "subtitle": "3-х ходовый тарельчатый клапан с прямым электромагнитным управлением",
+      "buyLink": "https://izi.ua/p-19438695-mac-3-port-boost-control-solenoid-valve-35a-12v-6mm",
+      "datasheetLink": "/datasheets/MAC-35A.pdf",
+      "images": [
+        {
+          "src": "https://images.izi.ua/83862864",
+          "alt": "MAC 3-Port"
+        },
+        {
+          "src": "https://images.izi.ua/83862868",
+          "alt": "MAC 3-Port"
+        },
+        {
+          "src": "https://images.izi.ua/83862869",
+          "alt": "MAC 3-Port"
+        },
+        {
+          "src": "https://images.izi.ua/83862865",
+          "alt": "MAC 3-Port"
+        },
+        {
+          "src": "https://images.izi.ua/83862866",
+          "alt": "MAC 3-Port"
+        },
+        {
+          "src": "https://images.izi.ua/83862867",
+          "alt": "MAC 3-Port"
+        }
+      ],
+      "content": "Model: 35A-ACA-DDBA-1BA\nPort: 1/8BSP\nFittings Dia: 6mm\n\nВ комплект входит:\n- 1x Solenoid valve\n- 2x Pagoda Fitting\n- 1x Muffler",
+      "options": [
+        {
+          "idRef": 3,
+          "value": "12 В"
+        },
+        {
+          "idRef": 27,
+          "value": "5.4 Вт"
+        },
+        {
+          "idRef": 24,
+          "value": "-18 - +50°C"
+        }
+      ],
+      "externalLinks": [
+        {
+          "name": "Официальная страница MAC 35-й серии",
+          "url": "https://www.macvalves.com/product/35-series",
+          "icon": "macvalves.com.png",
+          "iconAlt": "macvalves.com"
+        }
+      ]
+    },
+    {
+      "title": "TEC1-12715",
+      "subtitle": "Елемент Пельтье 40x40x4 мм, до 136 Вт",
+      "datasheetLink": "/datasheets/TEC1-12715.pdf",
+      "images": [
+        {
+          "src": "/photos/TEC1-12715-1.jpg",
+          "alt": "TEC1-12715"
+        }
+      ],
+      "options": [
+        {
+          "idRef": 31,
+          "value": "136 Вт"
+        },
+        {
+          "idRef": 30,
+          "value": "60°C"
+        },
+        {
+          "idRef": 28,
+          "value": "15 А"
+        },
+        {
+          "idRef": 3,
+          "value": "до 15.4 В"
+        }
+      ],
+      "content": "Елемент Пельтье"
     }
   ]
 }

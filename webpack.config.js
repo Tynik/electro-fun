@@ -58,6 +58,10 @@ module.exports = {
       patterns: [
         'src/db.json',
         {
+          from: 'src/photos',
+          to: 'photos'
+        },
+        {
           from: 'src/images',
           to: 'images'
         },

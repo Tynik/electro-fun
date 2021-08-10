@@ -35,14 +35,14 @@ export type ExternalResourceLink = {
 export type Item = {
   title: string
   content: string
-  buyLink: string
   id?: string
   options?: ItemOption[]
   subtitle?: string
   images?: ItemImages
   datasheetLink?: string
+  buyLink?: string
   companyLink?: string
-  externalResources?: ExternalResourceLink[]
+  externalLinks?: ExternalResourceLink[]
 }
 
 export type OptionDefinitionSuffix = string | Record<ItemOptionValueType, string>

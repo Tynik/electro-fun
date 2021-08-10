@@ -1,15 +1,19 @@
 import React from 'react';
 import {
-  CircularProgress,
+  Box,
+  Modal,
   styled,
+  CircularProgress,
   useTheme
 } from '@material-ui/core';
+import { Close as CloseIcon } from '@material-ui/icons';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 
 import { ItemImages } from '../types';
 import { CImage } from './CImage';
+import { ItemImage } from '../types';
 
 const CustomCarousel = styled(Carousel)(({ theme }) => (
   {
@@ -33,10 +37,17 @@ export type ImageSliderProps = {
   height: string
 }
 
-export const ImageSlider = ({ images, height }: ImageSliderProps) => {
+export const ImageSlider = (props: ImageSliderProps) => {
+  const { images, height } = props;
+
   const theme = useTheme();
 
   const [inLoading, setInLoading] = React.useState(images.length);
+  const [photo, setPhoto] = React.useState<string>(null);
+
+  const onImageClick = (image: string | ItemImage, index: number) => {
+    setPhoto(typeof image === 'string' ? image : image.src);
+  }
 
   return (
     <>
@@ -55,12 +66,17 @@ export const ImageSlider = ({ images, height }: ImageSliderProps) => {
             return <img key={`${props.key}-thumb`} src={props.src} alt={props.alt}/>;
           })
         }
+        autoPlay={false}
         showStatus={false}
         emulateTouch
         infiniteLoop
       >
         {images.map((image, index) => (
-          <div key={`image-${index}`} style={{ height: height }}>
+          <div
+            key={`image-${index}`}
+            style={{ height: height }}
+            onClick={() => onImageClick(image, index)}
+          >
             <CImage
               src={typeof image === 'string' ? image : image.src}
               alt={typeof image === 'string' ? '' : image.alt}
@@ -73,6 +89,30 @@ export const ImageSlider = ({ images, height }: ImageSliderProps) => {
           </div>
         ))}
       </CustomCarousel>
+
+      <Modal
+        open={Boolean(photo)}
+        onClose={() => setPhoto(null)}
+      >
+        <Box sx={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          bgcolor: 'background.paper',
+          border: '1px solid #000',
+          boxShadow: 24,
+          p: 2,
+        }}>
+          <div style={{ textAlign: 'right' }}>
+            <CloseIcon
+              onClick={() => setPhoto(null)}
+              sx={{ cursor: 'pointer' }}
+            />
+          </div>
+          <img src={photo} alt={''} style={{ width: '100%' }}/>
+        </Box>
+      </Modal>
     </>
   );
 };
