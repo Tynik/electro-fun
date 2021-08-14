@@ -9,36 +9,36 @@ import {
   Typography,
   List,
   ListItem,
-  ListItemText,
-  Modal,
+  Link,
   Icon,
+  ListItemText,
+  Alert,
   useTheme
 } from '@material-ui/core';
 import {
   Link as LinkIcon,
-  ShoppingCart as ShoppingCartIcon,
-  Close as CloseIcon
+  ShoppingCart as ShoppingCartIcon
 } from '@material-ui/icons';
 
-import { DbOptions, ItemOption, OptionDefinitionSuffix } from '../types';
+import { ItemOption, OptionDefinitionSuffix } from '../types';
 import { AppContext } from '../context';
+import { useTextProcessor, useSmoothScroll } from '../hooks';
 import { getItemById } from '../utils';
 import { ImageSlider } from './ImageSlider';
 import { BackButton } from './BackButton';
-import { ItemImage } from '../types';
 
 export const sortItemOptions = (allOptions, options: ItemOption[]) =>
   options.sort((optionA, optionB) => {
-    const featureSectionRefA = allOptions[optionA.idRef].featureSectionRef;
-    const featureSectionRefB = allOptions[optionB.idRef].featureSectionRef;
+    const featSecRefIdA = allOptions[optionA.refId].featSecRefId;
+    const featSecRefIdB = allOptions[optionB.refId].featSecRefId;
 
-    if (!featureSectionRefA) {
+    if (!featSecRefIdA) {
       return -1;
     }
-    if (!featureSectionRefB) {
+    if (!featSecRefIdB) {
       return 1;
     }
-    return featureSectionRefA - featureSectionRefB;
+    return featSecRefIdA - featSecRefIdB;
   });
 
 export const ItemInfo = () => {
@@ -46,50 +46,86 @@ export const ItemInfo = () => {
 
   const { id } = useParams<any>();
   const { db } = React.useContext(AppContext);
+  const { wordsWrapper } = useTextProcessor();
 
   const item = getItemById(db, id);
 
+  useSmoothScroll({ top: 0, left: 0 });
+
   React.useEffect(() => {
-    document.title = `${db.seo.title} - ${item.title}`;
-    return () => {
-      document.title = db.seo.title;
+    let originalDocumentTitle,
+      originalDescription,
+      originalKeywords,
+      meta;
+
+    originalDocumentTitle = document.title;
+
+    if (item.seo) {
+      if (item.seo.title) {
+        document.title = `${db.seo.title} - ${item.seo.title}`;
+      }
+      setTimeout(() => {
+        meta = document.getElementsByTagName('meta');
+        originalDescription = meta['description'].content;
+        originalKeywords = meta['keywords'].content;
+
+        meta['description'].content = item.seo.description;
+        meta['keywords'].content = item.seo.keywords;
+      });
     }
+    if (!item.seo || !item.seo.title) {
+      document.title = `${db.seo.title} - ${item.title}`;
+    }
+
+    return () => {
+      document.title = originalDocumentTitle;
+
+      if (meta) {
+        meta['description'].content = originalDescription;
+        meta['keywords'].content = originalKeywords;
+      }
+    };
   }, [item]);
 
-  const insertFeatureSectionName = (
-    allOptions: DbOptions, options: ItemOption[], index: number
-  ): boolean => {
-    const featSectionRef = allOptions[options[index].idRef].featureSectionRef;
+  const insertFeatureSectionName = (options: ItemOption[], index: number): boolean => {
+    const featSectionRef = db.options[options[index].refId].featSecRefId;
 
     if (!index) {
       return Boolean(featSectionRef);
     }
-    const prevFeatSectionRef = allOptions[options[index - 1].idRef].featureSectionRef;
+    const prevFeatSectionRef = db.options[options[index - 1].refId].featSecRefId;
 
     return !prevFeatSectionRef
       ? Boolean(featSectionRef)
       : featSectionRef !== prevFeatSectionRef;
   };
 
-  const getOptionValue = (allOptions: DbOptions, option: ItemOption) => {
-    const a = (values: any, suffix: OptionDefinitionSuffix) => {
+  const getOptionValue = (option: ItemOption) => {
+    const processOptionValue = (values: any, suffix: OptionDefinitionSuffix) => {
       if (!Array.isArray(values)) {
-         return [values + (suffix || '')];
+        return [
+          values + (
+            suffix || ''
+          )
+        ];
       }
       return values.map(values =>
-         ['string', 'number'].includes(typeof values)
-          ? a(values, suffix)
-          : a(values.value, suffix[values.type]).join(', ')
-      )
-    }
+        ['string', 'number'].includes(typeof values)
+          ? processOptionValue(values, suffix)
+          : processOptionValue(values.value, suffix[values.type]).join(', ')
+      );
+    };
 
-    return a(option.value as any, allOptions[option.idRef].suffix).map((value, index) =>
+    return processOptionValue(
+      option.value as any,
+      db.options[option.refId].suffix
+    ).map((value, index) =>
       <span
-        key={`${option.idRef}-${index}`}
+        key={`${option.refId}-${index}`}
         style={{ display: 'block' }}
       >{value}</span>
-    )
-  }
+    );
+  };
 
   return (
     <Container>
@@ -108,6 +144,64 @@ export const ItemInfo = () => {
             images={item.images}
             height={'300px'}
           />
+
+          <Box>
+            <Typography variant={'overline'}>Описание</Typography>
+
+            <Typography
+              variant={'body1'}
+              sx={{ whiteSpace: 'pre-line' }}
+            >
+              {wordsWrapper(
+                db.clarifications,
+                item.content,
+                (text, phrase, index) => (
+                  <Link
+                    key={`${text}-${phrase}-${index}`}
+                    href={db.clarifications[phrase]}
+                    target="_blank"
+                  >{phrase}</Link>
+                )
+              )}
+            </Typography>
+
+            {item.warningContent && (
+              <Alert
+                severity={'warning'}
+                sx={{ whiteSpace: 'pre-line', marginTop: theme.spacing(2) }}
+              >{item.warningContent}</Alert>
+            )}
+
+            {item.externalLinks && (
+              <Box marginTop={theme.spacing(2)}>
+                <Typography variant={'overline'}>Ссылки на внешние ресурсы</Typography>
+
+                <List disablePadding>
+                  {item.externalLinks.map(externalResource => (
+                    <ListItem key={externalResource.name} disablePadding>
+                      {externalResource.icon && (
+                        <Icon
+                          fontSize={'small'}
+                          sx={{ display: 'flex', alignItems: 'center' }}
+                        >
+                          <img
+                            src={`/icons/${externalResource.icon}`}
+                            alt={externalResource.iconAlt}
+                            width={16}
+                            height={16}/>
+                        </Icon>
+                      )}
+                      <ListItemText>
+                        <Link
+                          href={externalResource.url}
+                          target={'_blank'}>{externalResource.name}</Link>
+                      </ListItemText>
+                    </ListItem>
+                  ))}
+                </List>
+              </Box>
+            )}
+          </Box>
         </Grid>
 
         <Grid xs={12} sm={6} item>
@@ -115,13 +209,16 @@ export const ItemInfo = () => {
 
           <Box>
             {sortItemOptions(db.options, item.options || []).map((option, index, array) => (
-              <div key={`${option.idRef}-feature`} style={{ position: 'relative' }}>
-                {insertFeatureSectionName(db.options, array, index) && (
+              <div
+                key={`${option.refId}-feature`}
+                style={{ position: 'relative' }}
+              >
+                {insertFeatureSectionName(array, index) && (
                   <Typography
                     variant={'subtitle2'}
                     marginTop={theme.spacing(1)}
                   >
-                    {db.featureSections[db.options[option.idRef].featureSectionRef]}
+                    {db.featureSections[db.options[option.refId].featSecRefId]}
                   </Typography>
                 )}
                 <Grid
@@ -140,11 +237,23 @@ export const ItemInfo = () => {
                   container
                 >
                   <Grid xs={8} item>
-                    <Typography variant={'body1'}>{db.options[option.idRef].name}: </Typography>
+                    <Typography variant={'body1'}>
+                      {wordsWrapper(db.abbreviations, db.options[option.refId].name, (
+                        (text, abbr, index) => (
+                          <Link
+                            key={`${text}-${abbr}-${index}`}
+                            href={db.abbreviations[abbr]}
+                            target="_blank"
+                          >
+                            <abbr>{abbr}</abbr>
+                          </Link>
+                        )
+                      ))}
+                    </Typography>
                   </Grid>
                   <Grid xs={4} sx={{ display: 'flex', alignItems: 'center' }} item>
                     <Typography variant={'body2'}>
-                      {getOptionValue(db.options, option)}
+                      {getOptionValue(option)}
                     </Typography>
                   </Grid>
                 </Grid>
@@ -175,45 +284,6 @@ export const ItemInfo = () => {
               )}
             </Stack>
           </Box>
-        </Grid>
-
-        <Grid xs={12} sm={6} item>
-          <Typography variant={'overline'}>Описание</Typography>
-
-          <Typography
-            variant={'body1'}
-            sx={{ whiteSpace: 'pre-line' }}
-          >{item.content}</Typography>
-
-          {item.externalLinks && (
-            <Box marginTop={theme.spacing(2)}>
-              <Typography variant={'overline'}>Ссылки на внешние ресурсы</Typography>
-
-              <List disablePadding>
-                {item.externalLinks.map(externalResource => (
-                  <ListItem key={externalResource.name} disablePadding>
-                    {externalResource.icon && (
-                      <Icon
-                        fontSize={'small'}
-                        sx={{ display: 'flex', alignItems: 'center'}}
-                      >
-                        <img
-                          src={`/icons/${externalResource.icon}`}
-                          alt={externalResource.iconAlt}
-                          width={16}
-                          height={16}/>
-                      </Icon>
-                    )}
-                    <ListItemText>
-                      <a
-                        href={externalResource.url}
-                        target={'_blank'}>{externalResource.name}</a>
-                    </ListItemText>
-                  </ListItem>
-                ))}
-              </List>
-            </Box>
-          )}
         </Grid>
       </Grid>
     </Container>

@@ -1,23 +1,31 @@
 {
   "seo": {
-    "title": "Electo Fun - Купить радиомодуль",
-    "description": "Продажа радиомодулей и подробная документация к их подключению",
-    "keywords": "радиомодули, микросхемы, датчики, IOT, arduino"
+    "title": "Electo Fun - Купить радиокомпоненты",
+    "description": "Продажа радиокомпонентов и подробная документация к их подключению",
+    "keywords": "радиокомпоненты, радиомодули, микросхемы, датчики, iot, arduino"
   },
   "menu": [
     {
-      "name": "Радиомодули",
-      "icon": "dashboard",
-      "url": "радиомодули"
+      "name": "Радиокомпоненты",
+      "url": "радиокомпоненты",
+      "icon": "dashboard"
     }
   ],
   "articles": [
-
   ],
+  "abbreviations": {
+    "FPU": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D1%80",
+    "MPU": "https://en.wikipedia.org/wiki/Memory_protection_unit",
+    "DMA": "https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D1%8F%D0%BC%D0%BE%D0%B9_%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF_%D0%BA_%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8",
+    "SMBus": "https://ru.wikipedia.org/wiki/SMBus"
+  },
+  "clarifications": {
+    "Enhanced ShockBurst™": "https://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.sdk5.v12.0.0%2Fesb_users_guide.html"
+  },
   "categories": {
     "1": "Датчики",
     "2": "Микропроцессоры",
-    "3": "Елементы Пельтье"
+    "3": "Элементы Пельтье"
   },
   "featureSections": {
     "1": "Точность измерения",
@@ -25,77 +33,109 @@
     "3": "Напряжение",
     "4": "Ток",
     "5": "Измерение",
-    "6": "GPIO"
+    "6": "GPIO",
+    "7": "Потребление тока",
+    "8": "CPU"
+  },
+  "optionTypes": {
+    "bool": {
+      "y": "Есть",
+      "n": "Нету"
+    }
   },
   "options": {
     "1": {
       "name": "CPU",
-      "categories": [2]
+      "categories": [
+        2
+      ]
     },
     "2": {
       "name": "Интерфейс",
-      "categories": [1]
+      "categories": [
+        1
+      ]
     },
     "3": {
       "name": "Питание",
-      "categories": [1],
-      "featureSectionRef": 3
+      "categories": [
+        1
+      ],
+      "featSecRefId": 3
     },
     "4": {
       "name": "Температура",
-      "categories": [1],
-      "featureSectionRef": 5
+      "categories": [
+        1
+      ],
+      "featSecRefId": 5
     },
     "5": {
       "name": "Влажность",
-      "categories": [1],
-      "featureSectionRef": 5
+      "categories": [
+        1
+      ],
+      "featSecRefId": 5
     },
     "6": {
       "name": "Давление",
-      "categories": [1],
-      "featureSectionRef": 5
+      "categories": [
+        1
+      ],
+      "featSecRefId": 5
     },
     "7": {
       "name": "I²C адрес",
-      "categories": [1]
+      "categories": [
+        1
+      ]
     },
     "8": {
       "name": "Температура",
-      "categories": [1],
-      "featureSectionRef": 1
+      "categories": [
+        1
+      ],
+      "featSecRefId": 1
     },
     "9": {
       "name": "Давление",
-      "categories": [1],
-      "featureSectionRef": 1
+      "categories": [
+        1
+      ],
+      "featSecRefId": 1
     },
     "10": {
       "name": "Влажность",
-      "categories": [1],
-      "featureSectionRef": 1
+      "categories": [
+        1
+      ],
+      "featSecRefId": 1
     },
     "11": {
       "name": "Влажность",
-      "categories": [1],
-      "featureSectionRef": 2
+      "categories": [
+        1
+      ],
+      "featSecRefId": 2
     },
     "12": {
       "name": "Давление",
-      "categories": [1],
-      "featureSectionRef": 2
+      "categories": [
+        1
+      ],
+      "featSecRefId": 2
     },
     "13": {
       "name": "Входное",
-      "featureSectionRef": 3
+      "featSecRefId": 3
     },
     "14": {
       "name": "Выходное",
-      "featureSectionRef": 3
+      "featSecRefId": 3
     },
     "15": {
       "name": "Макс. выходной ток",
-      "featureSectionRef": 4
+      "featSecRefId": 4
     },
     "16": {
       "name": "Гироскоп",
@@ -103,42 +143,52 @@
         "axis": "-x осевой",
         "range": "º/с"
       },
-      "categories": [1]
+      "categories": [
+        1
+      ]
     },
     "17": {
       "name": "Акселерометр",
       "suffix": {
         "axis": "-x осевой"
       },
-      "categories": [1]
+      "categories": [
+        1
+      ]
     },
     "18": {
       "name": "Mагнитометр",
       "suffix": {
         "axis": "-x осевой"
       },
-      "categories": [1]
+      "categories": [
+        1
+      ]
     },
     "19": {
       "name": "USB питание",
-      "categories": [1],
-      "featureSectionRef": 3
+      "categories": [
+        1
+      ],
+      "featSecRefId": 3
     },
     "20": {
       "name": "Кол-во",
-      "featureSectionRef": 6
+      "featSecRefId": 6
     },
     "21": {
       "name": "Тактовый выход для внешних устройств",
-      "featureSectionRef": 6
+      "featSecRefId": 6
     },
     "22": {
       "name": "Вкл. LED во время чтения/записи SMBus",
-      "featureSectionRef": 6
+      "featSecRefId": 6,
+      "type": "bool"
     },
     "23": {
       "name": "Исп. в качестве входов, выходов с открытым стоком или двухтактных выходов",
-      "featureSectionRef": 6
+      "featSecRefId": 6,
+      "type": "bool"
     },
     "24": {
       "name": "Диапазон рабочей температуры"
@@ -153,26 +203,81 @@
       "name": "Потребляемая мощность"
     },
     "28": {
-      "name": "Макс. потребляемый",
-      "featureSectionRef": 4
+      "name": "Максимальный",
+      "featSecRefId": 7
     },
     "29": {
-      "name": "Сред. потребляемый",
-      "featureSectionRef": 4
+      "name": "Средний",
+      "featSecRefId": 7
     },
     "30": {
       "name": "Макс. разница температур между сторонами",
-      "categories": [3]
+      "categories": [
+        3
+      ]
     },
     "31": {
       "name": "Макс. мощность охлаждения",
-      "categories": [3]
+      "categories": [
+        3
+      ]
+    },
+    "32": {
+      "name": "Кол-во термопар",
+      "categories": [
+        3
+      ]
+    },
+    "33": {
+      "name": "Сопротивление",
+      "categories": [
+        3
+      ]
+    },
+    "34": {
+      "name": "Самообучение (25 Гц)",
+      "featSecRefId": 7
+    },
+    "35": {
+      "name": "Самообучение (50 Гц)",
+      "featSecRefId": 7
+    },
+    "36": {
+      "name": "Режим ожидания",
+      "featSecRefId": 7
+    },
+    "37": {
+      "name": "Регулятор напряжения",
+      "type": "bool"
+    },
+    "38": {
+      "name": "Тип",
+      "featSecRefId": 8
+    },
+    "39": {
+      "name": "Модуль с плавающей запятой (FPU)",
+      "featSecRefId": 8,
+      "type": "bool"
+    },
+    "40": {
+      "name": "Блок защиты памяти (MPU)",
+      "featSecRefId": 8,
+      "type": "bool"
+    },
+    "41": {
+      "name": "Прямой доступ к памяти (DMA)",
+      "featSecRefId": 8,
+      "suffix": " канала"
     }
   },
   "items": [
     {
       "title": "LM2596s DC-DC 3 A",
       "subtitle": "Понижающий стабилизатор напряжения",
+      "seo": {
+        "description": "LM2596s - понижающий стабилизатор напряжения",
+        "keywords": "lm2596s, стабилизатор, понижение"
+      },
       "buyLink": "https://izi.ua/p-19437930-stabilizator-napryazheniya-ponizhayushchiy-lm2596s-dc-dc-3a",
       "datasheetLink": "",
       "images": [
@@ -196,22 +301,26 @@
       "content": "Стабилизатор напряжения LM2596s предназначен для понижения напряжения путем регулировки подстраиваемым резистором.",
       "options": [
         {
-          "idRef": 13,
+          "refId": 13,
           "value": "4.5 - 28 В"
         },
         {
-          "idRef": 14,
+          "refId": 14,
           "value": "0.8 - 20 В"
         },
         {
-          "idRef": 15,
+          "refId": 15,
           "value": "3 A"
         }
       ]
     },
     {
       "title": "BMP280",
-      "subtitle": "Датчик для измерения температуры, давления и влажности",
+      "subtitle": "Датчик для измерения температуры и т.д.",
+      "seo": {
+        "description": "BMP280 - датчик для измерения температуры, давления и влажности",
+        "keywords": "bmp280, температура, давление, влажность"
+      },
       "buyLink": "https://izi.ua/p-19665588-bmp280-temperature-pressure-humidity-sensor-for-arduino",
       "datasheetLink": "/datasheets/BMP280.pdf",
       "images": [
@@ -224,56 +333,71 @@
           "alt": "BMP280"
         }
       ],
-      "content": "BME280, прецизионный датчик, впаян в печатную плату. Используется для измерения давления, температуры и влажности.",
+      "content": "BMP280 - датчик абсолютного барометрического давления, специально разработанный для мобильных приложений. Сенсорный модуль BMP280 размещен в чрезвычайно компактном корпусе. Его небольшие размеры и низкое энергопотребление позволяют использовать его в устройствах с батарейным питанием.",
       "options": [
         {
-          "idRef": 2,
+          "refId": 2,
           "value": [
             "I²C (до 3.4 МГц)",
             "SPI (3 и 4 провода, до 10 МГц)"
           ]
         },
         {
-          "idRef": 3,
+          "refId": 3,
           "value": "1.8 - 5 В"
         },
         {
-          "idRef": 4,
+          "refId": 4,
           "value": "-40 - +85°C"
         },
         {
-          "idRef": 5,
+          "refId": 5,
           "value": "0 - 100%"
         },
         {
-          "idRef": 6,
+          "refId": 6,
           "value": "300 - 1100 гПа"
         },
         {
-          "idRef": 7,
-          "value": ["0x76", "0x77"]
+          "refId": 7,
+          "value": [
+            "0x76",
+            "0x77"
+          ]
         },
         {
-          "idRef": 8,
+          "refId": 8,
           "value": "1°C"
         },
         {
-          "idRef": 9,
+          "refId": 9,
           "value": "1 Pa"
         },
         {
-          "idRef": 11,
+          "refId": 11,
           "value": "0.008 %"
         },
         {
-          "idRef": 12,
+          "refId": 12,
           "value": "0.18 Па"
+        }
+      ],
+      "externalLinks": [
+        {
+          "name": "Официальная страница BMP280",
+          "url": "https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp280/",
+          "icon": "bosch-sensortec.com.ico",
+          "iconAlt": "www.bosch-sensortec.com"
         }
       ]
     },
     {
       "title": "MPU-9250",
       "subtitle": "Гироскоп/акселерометр/магнитометр",
+      "seo": {
+        "description": "MPU-9250 - гироскоп, акселерометр и магнитометр в одном устройстве",
+        "keywords": "mpu-9250, гироскоп, акселерометр, магнитометр, dmp"
+      },
       "buyLink": "https://izi.ua/p-6267920-akselerometr-giroskop-magnitometr-gy-9250-9-dof-na-mpu-9250-i2c",
       "datasheetLink": "/datasheets/MPU-9250A-1.1.pdf",
       "images": [
@@ -290,31 +414,36 @@
           "alt": "MPU-9250"
         }
       ],
-      "content": "MPU-9250 - это 9-осевое устройство отслеживания движения, которое сочетает в себе 3-осевой гироскоп, 3-осевой акселерометр, 3-осевой магнитометр и Digital Motion Processor ™ (DMP), все в небольшом корпусе 3x3x1 мм, доступном в качестве совместимого с выводами обновления. от МПУ-6515. Благодаря специальной шине датчиков I2C, MPU-9250 напрямую обеспечивает полный 9-осевой вывод MotionFusion ™. Устройство отслеживания движения MPU-9250 с его 9-осевой интеграцией, встроенной системой MotionFusion ™ и встроенным программным обеспечением для калибровки во время выполнения.",
+      "content": "MPU-9250 - это 9-осевое устройство отслеживания движения, которое сочетает в себе 3-x осевой гироскоп, 3-x осевой акселерометр, 3-x осевой магнитометр и Digital Motion Processor ™ (DMP), все в небольшом корпусе 3x3x1 мм, доступном в качестве совместимого с выводами обновления. от MPU-6515. Благодаря специальной шине датчиков I2C, MPU-9250 напрямую обеспечивает полный 9-ти осевой вывод MotionFusion™. Устройство отслеживания движения MPU-9250 с его 9-ти осевой интеграцией, встроенной системой MotionFusion™ и встроенным программным обеспечением для калибровки во время выполнения.",
       "companyLink": "https://invensense.tdk.com",
       "options": [
         {
-          "idRef": 2,
+          "refId": 2,
           "value": [
             "I²C (400 кГц)",
             "SPI (1 МГц, 20 МГц)"
           ]
         },
         {
-          "idRef": 16,
+          "refId": 16,
           "value": [
             {
               "value": 3,
               "type": "axis"
             },
             {
-              "value": [250, 500, 1000, 2000],
+              "value": [
+                250,
+                500,
+                1000,
+                2000
+              ],
               "type": "range"
             }
           ]
         },
         {
-          "idRef": 17,
+          "refId": 17,
           "value": [
             {
               "value": 3,
@@ -323,7 +452,7 @@
           ]
         },
         {
-          "idRef": 18,
+          "refId": 18,
           "value": [
             {
               "value": 3,
@@ -332,17 +461,25 @@
           ]
         },
         {
-          "idRef": 13,
+          "refId": 13,
           "value": "2.4 - 3.6 В"
         },
         {
-          "idRef": 7,
-          "value": ["0x68", "0x69"]
+          "refId": 7,
+          "value": [
+            "0x68",
+            "0x69"
+          ]
         }
       ]
     },
     {
       "title": "USB в SMBus CP2112",
+      "subtitle": "Модуль-конвертер",
+      "seo": {
+        "description": "CP2112 - USB в SMBus",
+        "keywords": "cp2112, usb, smbus, конвертер, перепрошивка, батареи"
+      },
       "buyLink": "https://izi.ua/p-5455863-adapter-cp2112-usb-uart-i2c-dlya-proshivki-batarey-noutbukov-i-proch",
       "datasheetLink": "/datasheets/cp2112.pdf",
       "images": [
@@ -359,45 +496,57 @@
           "alt": ""
         }
       ],
-      "content": "Модуль конвертер USB в SMBus построенный чипе Silabs С2112.\nВ основном требуется для прошивки контроллера батареи ноутбука. Поддерживается программой BE2WORKS.\n\nПоставляется в упаковке.",
+      "content": "Модуль USB в SMBus построенный чипе Silabs С2112.\nВ основном требуется для прошивки контроллера батареи ноутбука. Поддерживается программой BE2WORKS.\n\nПоставляется в упаковке.",
       "options": [
         {
-          "idRef": 3,
+          "refId": 3,
           "value": "3.0 - 3.6 В"
         },
         {
-          "idRef": 19,
+          "refId": 19,
           "value": "4.0 - 5.25 В"
         },
         {
-          "idRef": 20,
+          "refId": 20,
           "value": 8
         },
         {
-          "idRef": 21,
+          "refId": 21,
           "value": "8 МГц - 94 кГц"
         },
         {
-          "idRef": 22,
+          "refId": 22,
           "value": "Да"
         },
         {
-          "idRef": 23,
+          "refId": 23,
           "value": "Да"
         },
         {
-          "idRef": 24,
+          "refId": 24,
           "value": "-40 - +85°C"
         },
         {
-          "idRef": 25,
+          "refId": 25,
           "value": "512 байт"
+        }
+      ],
+      "externalLinks": [
+        {
+          "name": "Подключение и разблокировка батареи ноутбука (адаптер и Be2works) / Laptop battery unlock",
+          "url": "https://youtu.be/Urs0xgfHKpY",
+          "icon": "youtube.com.png",
+          "iconAlt": "youtube.com"
         }
       ]
     },
     {
       "title": "CCS811",
       "subtitle": "Датчик для измерения качества воздуха",
+      "seo": {
+        "description": "CCS811 - датчик для измерения качества воздуха",
+        "keywords": "датчик, co2, качество, воздух, частицы, voc, tvoc"
+      },
       "buyLink": "https://izi.ua/p-11439002-datchik-co2-kachestva-vozdukha-arduino-ccs811-i2c-cjmcu-811",
       "datasheetLink": "/datasheets/CCS811.pdf",
       "images": [
@@ -417,31 +566,31 @@
       "content": "CCS811 - это маломощный цифровой датчик газа для обнаружения низких уровней VOCs, обычно обнаруживаемых в помещении, с блоком микроконтроллера (MCU) и аналого-цифровым преобразователем (ADC) для мониторинга локальной среды и обеспечения индикация качества воздуха в помещении через эквивалентный выход CO2 или TVOC через стандартный цифровой интерфейс I²C.",
       "options": [
         {
-          "idRef": 2,
+          "refId": 2,
           "value": "I²C (до 400 кГц)"
         },
         {
-          "idRef": 3,
+          "refId": 3,
           "value": "1.8 - 3.6 В"
         },
         {
-          "idRef": 24,
+          "refId": 24,
           "value": "-40 - +85°C"
         },
         {
-          "idRef": 26,
+          "refId": 26,
           "value": "10 - 95%"
         },
         {
-          "idRef": 27,
+          "refId": 27,
           "value": "1.2 - 46 мВт"
         },
         {
-          "idRef": 28,
+          "refId": 28,
           "value": "54 мА"
         },
         {
-          "idRef": 29,
+          "refId": 29,
           "value": "30 мА"
         }
       ],
@@ -463,6 +612,10 @@
     {
       "title": "APDS-9960",
       "subtitle": "Датчик RGB и распознавание жестов",
+      "seo": {
+        "description": "Датчик цвета RGB и распознавание жестов",
+        "keywords": "датчик, жесты, rgb, распознавание"
+      },
       "buyLink": "https://izi.ua/p-5455883-apds-9960-datchik-rgb-i-raspoznavanie-zhestov",
       "datasheetLink": "/datasheets/APDS-9960.pdf",
       "images": [
@@ -486,15 +639,15 @@
       "content": "С помощью этого датчика можно управлять любым устройством, где можно применить жестикуляцию или реакцию на цвет.\n\nДатчик используют красный, зеленый, синий и прозрачный сенсор приближения и жестов с ИК-светодиодом. Измерения RGB и окружающего света определяет интенсивность света при различных условиях освещения и материалах. Встроенный блочный UV-IR фильтр обеспечивает точное измерение интенсивности света и соответствующую ему цветовую температуру.\n\nДля обнаружение жестов используется 4 направленных фото-диода, интегрированные с видимым фильтром, для точного определения простых жестов вверх/вниз/вправо/влево или чуть сложных.\n\nДобавлены микро-оптические линзы в модуль обеспечивающие высокую эффективность передачи и приема ИК излучения. Внутренний контроллер переводит датчик в режим пониженного энергопотребления между измерениями RGBC, приближения и жестов, обеспечивая очень низкое энергопотребление.\n\nОбласти применения:\n- бесконтактные измерения\n- замена механических выключателей\n- измерения интенсивности рассеянного света\n- датчики цветовой температуры (определение цвета)\n- датчики движения (влево / вправо / вверх / вниз / вперед / назад)\n\nНастройка перемычек:\n\n- PS - эта перемычка соединяет источники питания датчика и ИК-светодиода. Когда перемычка запаяна, вам нужно только подать питание на вывод VCC для питания как датчика, так и инфракрасного светодиода. Если перемычка разомкнута, вам необходимо подавать питание на контакты VCC (2,4-3,6 В) и VL (3,0-4,5 В) по отдельности. Эта перемычка запаяна по умолчанию;\n\n- I2C PU - это 3-x позиционная перемычка для пайки, которая используется для подключения и отключения нагрузочных резисторов I2C. По умолчанию эта перемычка запаяна, что означает, что линии SDA и SCL имеют подключенные нагрузочные резисторы на плате коммутации. Используйте фитиль припоя, чтобы разомкнуть перемычку, если вам не нужны подтягивающие резисторы (например, у вас есть подтягивающие резисторы, которые расположены на шине I2C где-то еще).",
       "options": [
         {
-          "idRef": 2,
+          "refId": 2,
           "value": "I²C (до 400 кГц)"
         },
         {
-          "idRef": 3,
+          "refId": 3,
           "value": "2.4 - 3.8 В"
         },
         {
-          "idRef": 24,
+          "refId": 24,
           "value": "-40 - +85°C"
         }
       ],
@@ -515,47 +668,51 @@
     },
     {
       "title": "MAC Серия 35",
-      "subtitle": "3-х ходовый тарельчатый клапан с прямым электромагнитным управлением",
+      "subtitle": "Соленоид с электромагнитным управ.",
+      "seo": {
+        "description": "MAC 35 серия - соленоид на 35A с электромагнитным управлением",
+        "keywords": "соленоид, boost, вакуум, давление, управление"
+      },
       "buyLink": "https://izi.ua/p-19438695-mac-3-port-boost-control-solenoid-valve-35a-12v-6mm",
       "datasheetLink": "/datasheets/MAC-35A.pdf",
       "images": [
         {
           "src": "https://images.izi.ua/83862864",
-          "alt": "MAC 3-Port"
+          "alt": "MAC 3 - 35A"
         },
         {
           "src": "https://images.izi.ua/83862868",
-          "alt": "MAC 3-Port"
+          "alt": "MAC 3 - 35A"
         },
         {
           "src": "https://images.izi.ua/83862869",
-          "alt": "MAC 3-Port"
+          "alt": "MAC 3 - 35A"
         },
         {
           "src": "https://images.izi.ua/83862865",
-          "alt": "MAC 3-Port"
+          "alt": "MAC 3 - 35A"
         },
         {
           "src": "https://images.izi.ua/83862866",
-          "alt": "MAC 3-Port"
+          "alt": "MAC 3 - 35A"
         },
         {
           "src": "https://images.izi.ua/83862867",
-          "alt": "MAC 3-Port"
+          "alt": "MAC 3 - 35A"
         }
       ],
       "content": "Model: 35A-ACA-DDBA-1BA\nPort: 1/8BSP\nFittings Dia: 6mm\n\nВ комплект входит:\n- 1x Solenoid valve\n- 2x Pagoda Fitting\n- 1x Muffler",
       "options": [
         {
-          "idRef": 3,
+          "refId": 3,
           "value": "12 В"
         },
         {
-          "idRef": 27,
+          "refId": 27,
           "value": "5.4 Вт"
         },
         {
-          "idRef": 24,
+          "refId": 24,
           "value": "-18 - +50°C"
         }
       ],
@@ -570,8 +727,13 @@
     },
     {
       "title": "TEC1-12715",
-      "subtitle": "Елемент Пельтье 40x40x4 мм, до 136 Вт",
+      "subtitle": "Элемент Пельтье 40x40x4 мм, до 136 Вт",
+      "seo": {
+        "description": "TEC1-12715 - элемент Пельтье мощностью до 136 Вт",
+        "keywords": "tec1-12715, пельтье, термопара, охлаждение, нагрев"
+      },
       "datasheetLink": "/datasheets/TEC1-12715.pdf",
+      "buyLink": "https://izi.ua/p-21834878-element-pelte-tec1-12715",
       "images": [
         {
           "src": "/photos/TEC1-12715-1.jpg",
@@ -580,23 +742,183 @@
       ],
       "options": [
         {
-          "idRef": 31,
+          "refId": 31,
           "value": "136 Вт"
         },
         {
-          "idRef": 30,
+          "refId": 30,
           "value": "60°C"
         },
         {
-          "idRef": 28,
+          "refId": 28,
           "value": "15 А"
         },
         {
-          "idRef": 3,
-          "value": "до 15.4 В"
+          "refId": 3,
+          "value": "12 - 15.4 В"
+        },
+        {
+          "refId": 32,
+          "value": 127
+        },
+        {
+          "refId": 33,
+          "value": "0.75 Ом"
         }
       ],
-      "content": "Елемент Пельтье"
+      "content": "Элемент Пельтье",
+      "warningContent": "Не допускать нагрев горячей стороны термоэлемента >50°C ибо через 1-2 мин. работы, без отвода тепла, термоэлемент выйдет из строя."
+    },
+    {
+      "title": "BHI260AP",
+      "subtitle": "Самообучающийся интеллектуальный датчик",
+      "seo": {
+        "description": "BHI260AP - самообучающийся интеллектуальный датчик",
+        "keywords": "bhi260ap, датчик, ai, микроконтроллер, гироскоп, акселерометр, обучение"
+      },
+      "buyLink": "https://eu.mouser.com/ProductDetail/Bosch-Sensortec/BHI260AP?qs=T94vaHKWudTEPTnGI%252BTy9w%3D%3D",
+      "datasheetLink": "/datasheets/BHI260AP.pdf",
+      "images": [
+        {
+          "src": "/photos/BHI260AP-1.jpg",
+          "alt": "BHI260AP"
+        },
+        {
+          "src": "/photos/BHI260AP-2.png",
+          "alt": "Контактные площадки BHI260AP"
+        },
+        {
+          "src": "/photos/BHI260AP-3.png",
+          "alt": "Распиновка BHI260AP"
+        },
+        {
+          "src": "/photos/BHI260AP-4.png",
+          "alt": "Диаграмма BHI260AP"
+        }
+      ],
+      "options": [
+        {
+          "refId": 2,
+          "value": [
+            "I²C (3.4 МГц)",
+            "SPI and GPIOs (50 МГц)"
+          ]
+        },
+        {
+          "refId": 3,
+          "value": "1.8 В"
+        },
+        {
+          "refId": 20,
+          "value": 25
+        },
+        {
+          "refId": 34,
+          "value": "249 мкА"
+        },
+        {
+          "refId": 35,
+          "value": "386 мкА"
+        },
+        {
+          "refId": 36,
+          "value": "8 мкА"
+        },
+        {
+          "refId": 16,
+          "value": [
+            {
+              "value": 3,
+              "type": "axis"
+            }
+          ]
+        },
+        {
+          "refId": 17,
+          "value": [
+            {
+              "value": 3,
+              "type": "axis"
+            }
+          ]
+        },
+        {
+          "refId": 37,
+          "value": "Есть"
+        },
+        {
+          "refId": 38,
+          "value": "ARC EM4 CPU (≤ 3.6 CoreMark/Мгц) "
+        },
+        {
+          "refId": 39,
+          "value": "Есть"
+        },
+        {
+          "refId": 40,
+          "value": "Есть"
+        },
+        {
+          "refId": 41,
+          "value": 4
+        }
+      ],
+      "content": "BHI260AP представляет собой идеальное комплексное решение для постоянно включенных сенсорных устройств, таких как отслеживание физической формы, определение местоположения пешеходов, аналитика машинного обучения и оценка ориентации.\n\nBHI260AP - это интеллектуальный датчик, который включает в себя широкий спектр программных функций, 32-разрядный программируемый микроконтроллер и 6-осевой IMU в одном корпусе.",
+      "externalLinks": [
+        {
+          "name": "Официальная страница BHI260AP",
+          "url": "https://www.bosch-sensortec.com/products/smart-sensors/bhi260ap",
+          "icon": "bosch-sensortec.com.ico",
+          "iconAlt": "www.bosch-sensortec.com"
+        }
+      ]
+    },
+    {
+      "title": "nRF24L01+",
+      "subtitle": "Трансивер и аудиостример 2.4 ГГц",
+      "seo": {
+        "description": "nRF24L01+ - приемопередатчик 2.4 ГГц",
+        "keywords": "nrf24l01, приемопередатчик, трансивер, ресивер"
+      },
+      "buyLink": "https://izi.ua/p-19433326-mini-radiomodul-smd-nrf24l01-wireless-mini-2-4-ghz",
+      "datasheetLink": "/datasheets/nRF24L01.pdf",
+      "images": [
+        {
+          "src": "https://images.izi.ua/83841527",
+          "alt": "nRF24L01+ - вид сверху"
+        },
+        {
+          "src": "https://images.izi.ua/83841526",
+          "alt": "nRF24L01+ - размеры"
+        },
+        {
+          "src": "/photos/nRF24L01+-1.png",
+          "alt": "nRF24L01+ - блочная диаграмма"
+        },
+        {
+          "src": "/photos/nRF24L01+-2.png",
+          "alt": "nRF24L01+ - пример подключения"
+        }
+      ],
+      "options": [
+        {
+          "refId": 2,
+          "value": "SPI (4 провода, до 10 Мбит/с)"
+        },
+        {
+          "refId": 3,
+          "value": "1.9 - 3.6 В"
+        }
+      ],
+      "content": "NRF24L01+ - это однокристальный приемопередатчик 2.4 ГГц со встроенным механизмом протокола основной полосы частот Enhanced ShockBurst™, подходящий для беспроводных приложений со сверхнизким энергопотреблением.\n\nNRF24L01+ разработан для работы во всемирном диапазоне частот ISM от 2.4 до 2.4835 ГГц.",
+      "externalLinks": [
+        {
+          "name": "Официальная страница BHI260AP",
+          "url": "https://www.nordicsemi.com/Products/nRF24-series",
+          "icon": "nordicsemi.com.png",
+          "iconAlt": "nordicsemi.com"
+        }
+      ]
     }
   ]
 }

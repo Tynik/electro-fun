@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "dist/main.js",
   "scripts": {
+    "sitemap": "tsc --lib ESNext sitemap-generator.ts && node sitemap-generator.js",
     "build": "NODE_ENV=production webpack",
-    "deploy": "yarn run build && cp CNAME ./dist && cp 404.md ./dist && cp dist/index.html dist/404.html && gh-pages -d dist",
+    "deploy": "yarn run sitemap && yarn run build && gh-pages -d dist",
     "start": "NODE_ENV=development webpack serve",
     "test": "jest"
   },

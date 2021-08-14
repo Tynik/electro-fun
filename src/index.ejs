@@ -6,6 +6,17 @@
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Electro Fun</title>
+
+    <script>
+      (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
 </head>
 <body>
 <div id="app"></div>
@@ -13,7 +24,9 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2QFDYEEWD7"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+
+  function gtag () {dataLayer.push(arguments);}
+
   gtag('js', new Date());
 
   gtag('config', 'G-2QFDYEEWD7');

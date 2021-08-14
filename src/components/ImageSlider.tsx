@@ -6,7 +6,6 @@ import {
   CircularProgress,
   useTheme
 } from '@material-ui/core';
-import { Close as CloseIcon } from '@material-ui/icons';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
@@ -47,12 +46,21 @@ export const ImageSlider = (props: ImageSliderProps) => {
 
   const onImageClick = (image: string | ItemImage, index: number) => {
     setPhoto(typeof image === 'string' ? image : image.src);
-  }
+  };
 
   return (
     <>
       {inLoading > 0 && (
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div
+          aria-busy={true}
+          aria-live={'polite'}
+          style={{
+            height: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}
+        >
           <CircularProgress/>
         </div>
       )}
@@ -68,13 +76,12 @@ export const ImageSlider = (props: ImageSliderProps) => {
         }
         autoPlay={false}
         showStatus={false}
-        emulateTouch
         infiniteLoop
       >
         {images.map((image, index) => (
           <div
             key={`image-${index}`}
-            style={{ height: height }}
+            style={{ height: height, cursor: 'zoom-in' }}
             onClick={() => onImageClick(image, index)}
           >
             <CImage
@@ -102,15 +109,13 @@ export const ImageSlider = (props: ImageSliderProps) => {
           bgcolor: 'background.paper',
           border: '1px solid #000',
           boxShadow: 24,
-          p: 2,
+          p: 1
         }}>
-          <div style={{ textAlign: 'right' }}>
-            <CloseIcon
-              onClick={() => setPhoto(null)}
-              sx={{ cursor: 'pointer' }}
-            />
-          </div>
-          <img src={photo} alt={''} style={{ width: '100%' }}/>
+          <img
+            src={photo}
+            alt={''}
+            onClick={() => setPhoto(null)}
+            style={{ width: '100%', cursor: 'zoom-out' }}/>
         </Box>
       </Modal>
     </>

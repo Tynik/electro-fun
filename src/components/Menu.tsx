@@ -2,11 +2,12 @@ import React from 'react';
 import {
   AppBar as MuiAppBar,
   Toolbar,
-  Drawer,
   IconButton,
   Divider,
   List,
   ListItem,
+  Typography,
+  Drawer,
   ListItemIcon,
   ListItemText,
   useTheme,
@@ -99,6 +100,9 @@ export const Menu = (props: MenuProps) => {
           >
             <MenuIcon/>
           </IconButton>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} noWrap>
+            Electro Fun
+          </Typography>
         </Toolbar>
       </AppBar>
       <Drawer

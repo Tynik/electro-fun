@@ -56,6 +56,9 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
+        'CNAME',
+        '404.html',
+        'sitemap.txt',
         'src/db.json',
         {
           from: 'src/photos',

@@ -9,11 +9,17 @@ export enum ItemOptionValueType {
   range,
 }
 
+export type Seo = {
+  title: string
+  description: string
+  keywords: string
+}
+
 export type ItemOption = {
-  idRef: OptionId
+  refId: OptionId
   value: string | (string | {
     type: ItemOptionValueType,
-    value: string
+    value: string | string[]
   })[]
   comment?: string
 }
@@ -34,27 +40,38 @@ export type ExternalResourceLink = {
 
 export type Item = {
   title: string
+  subtitle: string
   content: string
   id?: string
-  options?: ItemOption[]
-  subtitle?: string
-  images?: ItemImages
+  warningContent?: string
+  seo?: Seo & { title?: string }
   datasheetLink?: string
   buyLink?: string
   companyLink?: string
+  options?: ItemOption[]
+  images?: ItemImages
+  applications?: string[]
   externalLinks?: ExternalResourceLink[]
 }
 
 export type OptionDefinitionSuffix = string | Record<ItemOptionValueType, string>
 
+export enum OptionTypeId {
+  bool
+}
+
 export type OptionDefinition = {
   name: string
   suffix?: OptionDefinitionSuffix
   categories?: CategoryId[]
-  featureSectionRef?: FeatureSectionId
+  featSecRefId?: FeatureSectionId
+  type?: OptionTypeId
 }
 
 export type DbOptions = Record<OptionId, OptionDefinition>
+
+export type Abbreviations = Record<string, string>
+export type Clarifications = Record<string, string>
 
 export type Db = {
   menu: {
@@ -62,14 +79,16 @@ export type Db = {
     name: string
     icon: string
   }[]
-  seo: {
-    title: string
-    description: string
-    keywords: string
-  }
+  seo: Seo
+  abbreviations: Abbreviations
+  clarifications: Clarifications
   articles: Article[]
-  featureSections: Record<FeatureSectionId, string>
   categories: Record<CategoryId, string>
+  featureSections: Record<FeatureSectionId, string>
+  optionTypes: Record<OptionTypeId, {
+    y: string
+    n: string
+  }>
   options: DbOptions
   items: Item[]
 }

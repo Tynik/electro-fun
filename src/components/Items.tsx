@@ -6,7 +6,6 @@ import {
   Container,
   CardActionArea,
   CardHeader,
-  CardMedia,
   CardContent,
   Typography
 } from '@material-ui/core';
@@ -15,18 +14,20 @@ import { Item } from '../types';
 import { AppContext } from '../context';
 import { generateItemId } from '../utils';
 import { NO_IMAGE } from '../constants';
+import { CCardMedia } from './CCardMedia';
 
 export const getItemMainImage = (item: Item) => {
   if (!item.images || !item.images.length) {
     return NO_IMAGE;
   }
   const firstImage = item.images[0];
-  return typeof firstImage === 'string' ? firstImage : firstImage.src
+  return typeof firstImage === 'string' ? firstImage : firstImage.src;
 };
 
 export const Items = () => {
-    const { db } = React.useContext(AppContext);
     const history = useHistory();
+
+    const { db } = React.useContext(AppContext);
 
     const onItemClick = (item: Item, e) => {
       e.preventDefault();
@@ -50,14 +51,11 @@ export const Items = () => {
                     titleTypographyProps={{ variant: 'subtitle1' }}
                     subheaderTypographyProps={{ variant: 'subtitle2' }}
                   />
-                  <CardMedia
-                    sx={{
-                      height: 0,
-                      paddingTop: '56.25%' // 16:9
-                    }}
-                    image={getItemMainImage(item)}
-                    title={item.title}
-                  />
+
+                  <CCardMedia
+                    src={getItemMainImage(item)}
+                    alt={item.title}/>
+
                   <CardContent>
                     <Typography
                       variant="body2"
@@ -70,9 +68,6 @@ export const Items = () => {
                     >{item.content}</Typography>
 
                   </CardContent>
-                  {/*<CardActions>*/}
-                  {/*  <Button onClick={() => {}}>See</Button>*/}
-                  {/*</CardActions>*/}
                 </CardActionArea>
               </Card>
             </Grid>
