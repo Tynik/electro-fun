@@ -29,8 +29,6 @@ export type ItemImage = {
   src: string
 }
 
-export type ItemImages = (string | ItemImage)[];
-
 export type ExternalResourceLink = {
   name: string
   url: string
@@ -49,7 +47,7 @@ export type Item = {
   buyLink?: string
   companyLink?: string
   options?: ItemOption[]
-  images?: ItemImages
+  images?: ItemImage[]
   applications?: string[]
   externalLinks?: ExternalResourceLink[]
 }

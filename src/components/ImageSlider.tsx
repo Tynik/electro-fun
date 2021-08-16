@@ -10,12 +10,15 @@ import {
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 
-import { ItemImages } from '../types';
 import { CImage } from './CImage';
 import { ItemImage } from '../types';
+import { Typography } from '@material-ui/core';
 
 const CustomCarousel = styled(Carousel)(({ theme }) => (
   {
+    '& > .carousel img': {
+      pointerEvents: 'auto'
+    },
     '& > .carousel .thumbs-wrapper': {
       margin: theme.spacing(1),
       '& > ul': {
@@ -32,7 +35,7 @@ const CustomCarousel = styled(Carousel)(({ theme }) => (
 ));
 
 export type ImageSliderProps = {
-  images: ItemImages
+  images: ItemImage[]
   height: string
 }
 
@@ -42,10 +45,10 @@ export const ImageSlider = (props: ImageSliderProps) => {
   const theme = useTheme();
 
   const [inLoading, setInLoading] = React.useState(images.length);
-  const [photo, setPhoto] = React.useState<string>(null);
+  const [photo, setPhoto] = React.useState<ItemImage>(null);
 
-  const onImageClick = (image: string | ItemImage, index: number) => {
-    setPhoto(typeof image === 'string' ? image : image.src);
+  const onImageClick = (image: ItemImage, index: number) => {
+    setPhoto(image);
   };
 
   return (
@@ -71,7 +74,12 @@ export const ImageSlider = (props: ImageSliderProps) => {
         renderThumbs={(children) =>
           children.map((child: any) => {
             const props = child.props.children.props;
-            return <img key={`${props.key}-thumb`} src={props.src} alt={props.alt}/>;
+            return <img
+              key={`${props.key}-thumb`}
+              src={props.src}
+              alt={props.alt}
+              title={props.alt}
+            />;
           })
         }
         autoPlay={false}
@@ -85,8 +93,8 @@ export const ImageSlider = (props: ImageSliderProps) => {
             onClick={() => onImageClick(image, index)}
           >
             <CImage
-              src={typeof image === 'string' ? image : image.src}
-              alt={typeof image === 'string' ? '' : image.alt}
+              src={image.src}
+              alt={image.alt}
               style={{
                 height: '100%',
                 objectFit: 'cover'
@@ -97,27 +105,37 @@ export const ImageSlider = (props: ImageSliderProps) => {
         ))}
       </CustomCarousel>
 
-      <Modal
-        open={Boolean(photo)}
-        onClose={() => setPhoto(null)}
-      >
-        <Box sx={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          bgcolor: 'background.paper',
-          border: '1px solid #000',
-          boxShadow: 24,
-          p: 1
-        }}>
-          <img
-            src={photo}
-            alt={''}
-            onClick={() => setPhoto(null)}
-            style={{ width: '100%', cursor: 'zoom-out' }}/>
-        </Box>
-      </Modal>
+      {photo && (
+        <Modal
+          open={true}
+          onClose={() => setPhoto(null)}
+        >
+          <Box sx={{
+            maxHeight: `calc(100% - ${theme.spacing(4)})`,
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            bgcolor: 'background.paper',
+            border: '1px solid #000',
+            boxShadow: 24,
+            overflow: 'scroll',
+            p: 1
+          }}>
+            <Typography variant={'subtitle1'}>{photo.alt}</Typography>
+
+            <img
+              src={photo.src}
+              alt={''}
+              onClick={() => setPhoto(null)}
+              style={{
+                maxWidth: '100%',
+                maxHeight: '100%',
+                cursor: 'zoom-out'
+              }}/>
+          </Box>
+        </Modal>
+      )}
     </>
   );
 };

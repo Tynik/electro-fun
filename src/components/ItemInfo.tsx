@@ -26,6 +26,7 @@ import { useTextProcessor, useSmoothScroll } from '../hooks';
 import { getItemById } from '../utils';
 import { ImageSlider } from './ImageSlider';
 import { BackButton } from './BackButton';
+import { Item } from '../types';
 
 export const sortItemOptions = (allOptions, options: ItemOption[]) =>
   options.sort((optionA, optionB) => {
@@ -127,6 +128,34 @@ export const ItemInfo = () => {
     );
   };
 
+  const abbreviationsWrapper = (text: string) =>
+    wordsWrapper(db.abbreviations, text, (
+      (text, abbr, index) => (
+        <Link
+          key={`${text}-${abbr}-${index}`}
+          href={db.abbreviations[abbr]}
+          target="_blank"
+        >
+          <abbr>{abbr}</abbr>
+        </Link>
+      )
+    ));
+
+  const clarificationsWrapper = (text: string) =>
+    wordsWrapper(db.clarifications, text, (
+      (text, phrase, index) => (
+        <Link
+          key={`${text}-${phrase}-${index}`}
+          href={db.clarifications[phrase]}
+          target="_blank"
+        >{phrase}</Link>
+      )
+    ));
+
+  const processItemContent = (itemContent: string) => {
+    return clarificationsWrapper(itemContent);
+  };
+
   return (
     <Container>
       <Grid spacing={2} container>
@@ -150,19 +179,9 @@ export const ItemInfo = () => {
 
             <Typography
               variant={'body1'}
-              sx={{ whiteSpace: 'pre-line' }}
+              sx={{ whiteSpace: 'pre-line', textAlign: 'justify' }}
             >
-              {wordsWrapper(
-                db.clarifications,
-                item.content,
-                (text, phrase, index) => (
-                  <Link
-                    key={`${text}-${phrase}-${index}`}
-                    href={db.clarifications[phrase]}
-                    target="_blank"
-                  >{phrase}</Link>
-                )
-              )}
+              {processItemContent(item.content)}
             </Typography>
 
             {item.warningContent && (
@@ -208,57 +227,48 @@ export const ItemInfo = () => {
           <Typography variant={'overline'}>Характеристики</Typography>
 
           <Box>
-            {sortItemOptions(db.options, item.options || []).map((option, index, array) => (
-              <div
-                key={`${option.refId}-feature`}
-                style={{ position: 'relative' }}
-              >
-                {insertFeatureSectionName(array, index) && (
-                  <Typography
-                    variant={'subtitle2'}
-                    marginTop={theme.spacing(1)}
-                  >
-                    {db.featureSections[db.options[option.refId].featSecRefId]}
-                  </Typography>
-                )}
-                <Grid
-                  sx={{
-                    ':hover': {
-                      '::after': {
-                        width: '100%',
-                        borderBottom: '1px dashed #eee',
-                        position: 'absolute',
-                        display: 'block',
-                        content: '""',
-                        bottom: 0
-                      }
-                    }
-                  }}
-                  container
+            {sortItemOptions(db.options, item.options || []).map(
+              (option, index, array) => (
+                <div
+                  key={`${option.refId}-${index}-feature`}
+                  style={{ position: 'relative' }}
                 >
-                  <Grid xs={8} item>
-                    <Typography variant={'body1'}>
-                      {wordsWrapper(db.abbreviations, db.options[option.refId].name, (
-                        (text, abbr, index) => (
-                          <Link
-                            key={`${text}-${abbr}-${index}`}
-                            href={db.abbreviations[abbr]}
-                            target="_blank"
-                          >
-                            <abbr>{abbr}</abbr>
-                          </Link>
-                        )
-                      ))}
+                  {insertFeatureSectionName(array, index) && (
+                    <Typography
+                      variant={'subtitle2'}
+                      marginTop={theme.spacing(1)}
+                    >
+                      {db.featureSections[db.options[option.refId].featSecRefId]}
                     </Typography>
+                  )}
+                  <Grid
+                    sx={{
+                      ':hover': {
+                        '::after': {
+                          width: '100%',
+                          borderBottom: '1px dashed #eee',
+                          position: 'absolute',
+                          display: 'block',
+                          content: '""',
+                          bottom: 0
+                        }
+                      }
+                    }}
+                    container
+                  >
+                    <Grid xs={8} item>
+                      <Typography variant={'body1'}>
+                        {abbreviationsWrapper(db.options[option.refId].name)}
+                      </Typography>
+                    </Grid>
+                    <Grid xs={4} sx={{ display: 'flex', alignItems: 'center' }} item>
+                      <Typography variant={'body2'}>
+                        {getOptionValue(option)}
+                      </Typography>
+                    </Grid>
                   </Grid>
-                  <Grid xs={4} sx={{ display: 'flex', alignItems: 'center' }} item>
-                    <Typography variant={'body2'}>
-                      {getOptionValue(option)}
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </div>
-            ))}
+                </div>
+              ))}
           </Box>
 
           <Box marginTop={theme.spacing(2)}>

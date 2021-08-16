@@ -56,6 +56,8 @@ export const App = () => {
 
   React.useEffect(() => {
     if (db) {
+      document.title = db.seo.title;
+
       const meta = document.getElementsByTagName('meta');
       meta['description'].content = db.seo.description;
       meta['keywords'].content = db.seo.keywords;

@@ -8,3 +8,6 @@ https://electro-fun.site/#/item/mac-серия-35
 https://electro-fun.site/#/item/tec1-12715
 https://electro-fun.site/#/item/bhi260ap
 https://electro-fun.site/#/item/nrf24l01+
+https://electro-fun.site/#/item/esp8266ex
+https://electro-fun.site/#/item/cc1310
+https://electro-fun.site/#/item/cc2652p

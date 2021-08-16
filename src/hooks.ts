@@ -21,11 +21,11 @@ export const wordsWrapper = (
       }
     }
 
-    return textParts.reduce((result, part, index) => {
-      if (part) {
+    return textParts.reduce((result, textPart, index) => {
+      if (textPart) {
         const leftAbbreviations = words.filter(a => a !== word);
 
-        result.push(wrap(leftAbbreviations, part));
+        result.push(wrap(leftAbbreviations, textPart));
       }
       if (index !== textParts.length - 1) {
         result.push(wrapper(text, word, index));
