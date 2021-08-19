@@ -1,4 +1,6 @@
 import React from 'react';
+import { Container, Alert, Link } from '@material-ui/core';
+import { Link as RouterLink } from 'react-router-dom';
 
 export const wordsWrapper = (
   words: Record<string, string>,
@@ -60,3 +62,30 @@ export const useSmoothScroll = (
     behavior: 'smooth'
   }, delay);
 };
+
+export const usePrintErrors = ({ returnToMain } = { returnToMain: true }) => {
+  const [errors, setErrors] = React.useState<string[]>([]);
+
+  const printErrors = () => {
+    return (
+      <Container sx={{
+        display: 'flex',
+        alignItems: 'center',
+        flexDirection: 'column'
+      }}>
+        <Alert severity={'error'}>
+          {errors.map(error => <div key={error}>{error}</div>)}
+        </Alert>
+        {returnToMain && (
+          <Link to={'/'} component={RouterLink}>Вернуться на главную</Link>
+        )}
+      </Container>
+    )
+  }
+
+  return {
+    errors,
+    setErrors,
+    printErrors
+  }
+}

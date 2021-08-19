@@ -68,6 +68,7 @@ export const ImageSlider = (props: ImageSliderProps) => {
         </div>
       )}
 
+      {/*https://github.com/leandrowd/react-responsive-carousel*/}
       <CustomCarousel
         theme={theme}
         sx={{ display: inLoading > 0 ? 'none' : 'block' }}

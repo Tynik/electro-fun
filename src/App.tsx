@@ -15,6 +15,7 @@ import {
 import { AppContext } from './context';
 import { Db } from './types';
 import { preprocessDb } from './utils';
+import { usePrintErrors } from './hooks';
 import './App.scss';
 
 const drawerWidth = 240;
@@ -45,11 +46,16 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
 export const App = () => {
   const [db, setDb] = React.useState<Db>(null);
   const [menuIsOpened, setMenuOpen] = React.useState(false);
+  const { errors, setErrors, printErrors } = usePrintErrors({ returnToMain: false });
 
   React.useEffect(() => {
     fetch('/db.json').then(async (response) => {
       if (response.ok) {
-        setDb(preprocessDb(await response.json()));
+        try {
+          setDb(preprocessDb(await response.json()));
+        } catch (e) {
+          setErrors(['Ошибка загрузки БД']);
+        }
       }
     });
   }, []);
@@ -64,10 +70,12 @@ export const App = () => {
     }
   }, [db]);
 
+  if (errors.length) {
+    return printErrors();
+  }
   if (!db) {
     return <LinearProgress/>;
   }
-
   return (
     <AppContext.Provider value={{ db }}>
       <Menu onOpen={setMenuOpen} drawerWidth={drawerWidth}/>

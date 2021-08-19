@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link as RouterLink } from 'react-router-dom';
 import {
   Container,
   Box,
@@ -22,11 +22,10 @@ import {
 
 import { ItemOption, OptionDefinitionSuffix } from '../types';
 import { AppContext } from '../context';
-import { useTextProcessor, useSmoothScroll } from '../hooks';
+import { useTextProcessor, useSmoothScroll, usePrintErrors } from '../hooks';
 import { getItemById } from '../utils';
 import { ImageSlider } from './ImageSlider';
 import { BackButton } from './BackButton';
-import { Item } from '../types';
 
 export const sortItemOptions = (allOptions, options: ItemOption[]) =>
   options.sort((optionA, optionB) => {
@@ -48,12 +47,17 @@ export const ItemInfo = () => {
   const { id } = useParams<any>();
   const { db } = React.useContext(AppContext);
   const { wordsWrapper } = useTextProcessor();
+  const { setErrors, printErrors } = usePrintErrors();
 
   const item = getItemById(db, id);
 
   useSmoothScroll({ top: 0, left: 0 });
 
   React.useEffect(() => {
+    if (!item) {
+      setErrors([`"${id}" не найден или был переименован`]);
+      return;
+    }
     let originalDocumentTitle,
       originalDescription,
       originalKeywords,
@@ -155,6 +159,10 @@ export const ItemInfo = () => {
   const processItemContent = (itemContent: string) => {
     return clarificationsWrapper(itemContent);
   };
+
+  if (!item) {
+    return printErrors();
+  }
 
   return (
     <Container>

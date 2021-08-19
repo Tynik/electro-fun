@@ -14,15 +14,35 @@
   "articles": [
   ],
   "abbreviations": {
+    "QFN": "https://ru.wikipedia.org/wiki/QFN",
+    "RAM": "https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%BF%D0%BE%D0%BC%D0%B8%D0%BD%D0%B0%D1%8E%D1%89%D0%B5%D0%B5_%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE_%D1%81_%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%BC_%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%BE%D0%BC",
+    "SRAM": "https://ru.wikipedia.org/wiki/SRAM_(%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D1%8C)",
+    "ISP": "https://ru.wikipedia.org/wiki/%D0%92%D0%BD%D1%83%D1%82%D1%80%D0%B8%D1%81%D1%85%D0%B5%D0%BC%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5",
+    "ROM": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B7%D0%B0%D0%BF%D0%BE%D0%BC%D0%B8%D0%BD%D0%B0%D1%8E%D1%89%D0%B5%D0%B5_%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE",
+    "PROM": "https://ru.wikipedia.org/wiki/PROM",
+    "EPROM": "https://ru.wikipedia.org/wiki/EPROM",
+    "EEPROM": "https://ru.wikipedia.org/wiki/EEPROM",
     "OTA": "https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BF%D0%BE_%D0%B2%D0%BE%D0%B7%D0%B4%D1%83%D1%85%D1%83",
     "SoC": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D0%BD%D0%B0_%D0%BA%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BB%D0%BB%D0%B5",
     "FPU": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D1%80",
     "MPU": "https://en.wikipedia.org/wiki/Memory_protection_unit",
     "DMA": "https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D1%8F%D0%BC%D0%BE%D0%B9_%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF_%D0%BA_%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8",
+    "DMM": "/datasheets/DMM.pdf",
     "SMBus": "https://ru.wikipedia.org/wiki/SMBus"
   },
   "clarifications": {
-    "DMM": "/datasheets/DMM.pdf",
+    "CoreMark®": "https://www.eembc.org/coremark",
+    "Wi-Fi®": "https://ru.wikipedia.org/wiki/Wi-Fi",
+    "Ethernet": "https://ru.wikipedia.org/wiki/Ethernet",
+    "Sub-1 GHz": "/datasheets/Sub-1GHz.pdf",
+    "TI 15.4-Stack": "/datasheets/TI 15.4-Stack.pdf",
+    "6LoWPAN": "https://ru.wikipedia.org/wiki/6LoWPAN",
+    "Thread": "https://en.wikipedia.org/wiki/Thread_(network_protocol)",
+    "IEEE 802.15.4": "https://ru.wikipedia.org/wiki/IEEE_802.15.4",
+    "TI-RTOS": "https://en.wikipedia.org/wiki/TI-RTOS",
+    "Bluetooth® Low Energy": "https://ru.wikipedia.org/wiki/Bluetooth_%D1%81_%D0%BD%D0%B8%D0%B7%D0%BA%D0%B8%D0%BC_%D1%8D%D0%BD%D0%B5%D1%80%D0%B3%D0%BE%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC",
+    "Bluetooth® 5.2 Low Energy": "https://ru.wikipedia.org/wiki/Bluetooth_%D1%81_%D0%BD%D0%B8%D0%B7%D0%BA%D0%B8%D0%BC_%D1%8D%D0%BD%D0%B5%D1%80%D0%B3%D0%BE%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC",
+    "SimpleLink™": "/datasheets/SimpleLink™.pdf",
     "Zigbee®": "https://ru.wikipedia.org/wiki/Zigbee",
     "ARC® EM4": "/datasheets/ARM-EM4-EM6.pdf",
     "RF Balun": "https://www.digikey.com/en/articles/understanding-the-rf-balun-and-its-transformative-function",
@@ -198,7 +218,7 @@
       "type": "bool"
     },
     "24": {
-      "name": "Диапазон рабочей температуры"
+      "name": "Рабочая температура"
     },
     "25": {
       "name": "SMBus буфер"
@@ -300,11 +320,11 @@
       "featSecRefId": 10
     },
     "51": {
-      "name": "CoreMark® рейтинг",
+      "name": "CoreMark®",
       "featSecRefId": 10
     },
     "52": {
-      "name": "ULPBench™ рейтинг",
+      "name": "ULPBench™",
       "featSecRefId": 10
     },
     "53": {
@@ -316,7 +336,7 @@
       "featSecRefId": 10
     },
     "55": {
-      "name": "Поддерживает обновление по воздуху (OTA)",
+      "name": "Обновление по воздуху (OTA)",
       "featSecRefId": 10
     },
     "56": {
@@ -330,6 +350,21 @@
     "58": {
       "name": "В выкл. состоянии",
       "featSecRefId": 7
+    },
+    "59": {
+      "name": "ROM",
+      "featSecRefId": 10
+    },
+    "60": {
+      "name": "SRAM",
+      "featSecRefId": 10
+    },
+    "61": {
+      "name": "RAM",
+      "featSecRefId": 10
+    },
+    "62": {
+      "name": "Температура хранения"
     }
   },
   "items": [
@@ -1071,6 +1106,10 @@
     {
       "title": "CC1310",
       "subtitle": "РЧ устройство с частотой до 1 ГГц",
+      "seo": {
+        "description": "CC1310 - РЧ устройство с частотой до 1 ГГц",
+        "keywords": "cc1310, рч, simplelink, zigbee, thread, ti"
+      },
       "datasheetLink": "/datasheets/CC1310.pdf",
       "buyLink": "https://www.aliexpress.com/item/4001345191255.html?spm=a2g0o.productlist.0.0.4cb43b0aswX868&algo_pvid=c6d0f977-b439-4238-bf26-1f574b40f4aa&algo_exp_id=c6d0f977-b439-4238-bf26-1f574b40f4aa-5&pdp_ext_f=%7B%22sku_id%22%3A%2210000015755343950%22%7D",
       "images": [
@@ -1149,7 +1188,7 @@
           "value": "185 нА (пробуждение по внешним событиям)"
         }
       ],
-      "content": "CC1310 - это экономичное, сверхмалопотребляющее РЧ устройство с частотой менее 1 ГГц от Texas Instruments™, которое является частью платформы микроконтроллеров SimpleLink™ (MCU). Платформа состоит из Wi-Fi®, Bluetooth® low energy, Sub-1 GHz, Ethernet, Zigbee®, Thread и хост-микроконтроллеров. Все эти устройства используют общую, простую в использовании среду разработки с одноядерным комплектом разработки программного обеспечения (SDK) и богатым набором инструментов. Единовременная интеграция платформы SimpleLink позволяет пользователям добавлять в свой дизайн любую комбинацию устройств из коробки, обеспечивая 100-процентное повторное использование кода при изменении требований к дизайну.\n\nБлагодаря очень низкому активному потреблению тока РЧ и микроконтроллера, в дополнение к гибким режимам низкого энергопотребления, устройство CC1310 обеспечивает отличное время автономной работы и позволяет использовать плоские батареи.",
+      "content": "CC1310 - это экономичное, сверхмалопотребляющее РЧ устройство с частотой менее 1 ГГц от Texas Instruments™, которое является частью платформы микроконтроллеров SimpleLink™ (MCU). Платформа состоит из Wi-Fi®, Bluetooth® Low Energy, Sub-1 GHz, Ethernet, Zigbee®, Thread и хост-микроконтроллеров. Все эти устройства используют общую, простую в использовании среду разработки с одноядерным комплектом разработки программного обеспечения (SDK) и богатым набором инструментов. Единовременная интеграция платформы SimpleLink позволяет пользователям добавлять в свой дизайн любую комбинацию устройств из коробки, обеспечивая 100-процентное повторное использование кода при изменении требований к дизайну.\n\nБлагодаря очень низкому активному потреблению тока РЧ и микроконтроллера, в дополнение к гибким режимам низкого энергопотребления, устройство CC1310 обеспечивает отличное время автономной работы и позволяет использовать плоские батареи.",
       "externalLinks": [
         {
           "name": "Официальная страница CC1310",
@@ -1162,6 +1201,10 @@
     {
       "title": "CC2652P",
       "subtitle": "Многопротокольный беспроводной MCU",
+      "seo": {
+        "description": "CC2652P - многопротокольный беспроводной MCU",
+        "keywords": "cc2652p, simplelink, bluetooth, zigbee, thread, ti"
+      },
       "datasheetLink": "/datasheets/CC2652P.pdf",
       "buyLink": "",
       "images": [
@@ -1184,6 +1227,10 @@
       ],
       "options": [
         {
+          "refId": 2,
+          "value": "2 x UART/2 x SSI/SPI/Microwire/TI/I²C/I²S/RTC/GPIO/12-бит ADC"
+        },
+        {
           "refId": 50,
           "value": "Arm® Cortex®-M4F"
         },
@@ -1201,11 +1248,15 @@
         },
         {
           "refId": 36,
-          "value": "0.94 мкА (RTC вкл., 80 КБ ОЗУ и CPU retention)"
+          "value": "0.94 мкА (вкл. RTC, 80 КБ RAM и CPU retention)"
         },
         {
           "refId": 54,
           "value": "352 КБ"
+        },
+        {
+          "refId": 55,
+          "value": "Да"
         },
         {
           "refId": 56,
@@ -1223,6 +1274,18 @@
         {
           "refId": 58,
           "value": "150 нА (пробуждение по внешним событиям)"
+        },
+        {
+          "refId": 59,
+          "value": "256 КБ"
+        },
+        {
+          "refId": 60,
+          "value": "8 КБ"
+        },
+        {
+          "refId": 61,
+          "value": "80 КБ"
         }
       ],
       "content": "SimpleLink™ CC2652P представляет собой многопротокольный беспроводной микроконтроллер (MCU) с частотой 2.4 ГГц, поддерживающий Thread, Zigbee®, Bluetooth® 5.2 Low Energy, IEEE 802.15.4, интеллектуальные объекты с поддержкой IPv6 (6LoWPAN), проприетарные системы, включая TI 15.4-Stack (2.4 ГГц) и параллельный мультипротокол через драйвер DMM.",
@@ -1234,6 +1297,55 @@
           "iconAlt": "ti.com"
         }
       ]
+    },
+    {
+      "title": "CH340G",
+      "subtitle": "Преобразование USB в UART",
+      "seo": {
+        "description": "CH340G - преобразование шины USB в последовательный интерфейс UART",
+        "keywords": "ch340g, usb, uart, преобразование"
+      },
+      "datasheetLink": "/datasheets/CH340.pdf",
+      "buyLink": "",
+      "images": [
+        {
+          "src": "/photos/CH340G-1.jpg",
+          "alt": "CH340G"
+        }
+      ],
+      "options": [
+        {
+          "refId": 3,
+          "value": "2.8 - 3.6 В",
+          "comment": "V3 -> VCC"
+        },
+        {
+          "refId": 3,
+          "value": "4.0 - 5.3 В",
+          "comment": "V3 ≠ VCC"
+        },
+        {
+          "refId": 42,
+          "value": "SOP-16"
+        },
+        {
+          "refId": 24,
+          "value": "-40 - +85°C"
+        },
+        {
+          "refId": 62,
+          "value": "-55 - +125°C"
+        },
+        {
+          "refId": 28,
+          "value": "20 мА"
+        },
+        {
+          "refId": 29,
+          "value": "7 мА"
+        }
+      ],
+      "content": "CH340 - это микросхема преобразователя шины USB, которая преобразует USB в последовательный интерфейс UART или интерфейс принтера. В последовательном режиме UART CH340 обеспечивает общий сигнал MODEM, чтобы расширить интерфейс UART."
     }
   ]
 }
