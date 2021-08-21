@@ -2,6 +2,10 @@ import React from 'react';
 import { Container, Alert, Link } from '@material-ui/core';
 import { Link as RouterLink } from 'react-router-dom';
 
+import { Db, DbMeta, Item } from './types';
+import { preprocessDb, mergeDeep } from './utils';
+import { fetchDbMeta, fetchDbPart } from './db-api';
+
 export const wordsWrapper = (
   words: Record<string, string>,
   text: string,
@@ -80,12 +84,140 @@ export const usePrintErrors = ({ returnToMain } = { returnToMain: true }) => {
           <Link to={'/'} component={RouterLink}>Вернуться на главную</Link>
         )}
       </Container>
-    )
-  }
+    );
+  };
 
   return {
     errors,
     setErrors,
     printErrors
-  }
+  };
+};
+
+export type useDbOptions = {
+  partNumber: number
 }
+
+export const useDb = (options: useDbOptions = { partNumber: 1 }) => {
+  const [dbMeta, setDbMeta] = React.useState<DbMeta>(null);
+  const [db, setDb] = React.useState<Db>(null);
+  const [dbPartNumber, setDbPartNumber] = React.useState<number>(options.partNumber);
+  const [dbParts, setDbParts] = React.useState<Record<string, Db>>({});
+
+  const { errors, setErrors, printErrors } = usePrintErrors({ returnToMain: false });
+
+  React.useEffect(() => {
+    (
+      async () => {
+        await loadDbMeta();
+      }
+    )();
+  }, []);
+
+  React.useEffect(() => {
+    (
+      async () => {
+        if (!dbMeta) {
+          return;
+        }
+        if (dbParts[dbPartNumber]) {
+          // cache db part mechanism
+          return;
+        }
+        await loadDbPart(dbPartNumber);
+      }
+    )();
+  }, [dbMeta, dbPartNumber]);
+
+  React.useEffect(() => {
+    if (!Object.keys(dbParts).length) {
+      return
+    }
+    setDb(mergeDeep({}, ...Object.values(dbParts)));
+
+  }, [dbParts]);
+
+  const loadDbMeta = async () => {
+    try {
+      setDbMeta(await fetchDbMeta());
+    } catch (e) {
+      setErrors(['Error loading meta db']);
+      throw e;
+    }
+  };
+
+  const loadDbPart = async (partNumber: number) => {
+    try {
+      const dbPart = await fetchDbPart(partNumber);
+
+      setDbParts(dbParts => (
+        { ...dbParts, [partNumber]: preprocessDb(dbPart) }
+      ));
+    } catch (e) {
+      setErrors(['Error loading db']);
+      throw e;
+    }
+  };
+
+  const loadPreviousDbPart = (): boolean => {
+    if (dbPartNumber > 1) {
+      setDbPartNumber(dbPartNumber - 1);
+      return true;
+    }
+    return false;
+  };
+
+  const isNextDbPart = (): boolean => {
+    return dbPartNumber < dbMeta.parts;
+  };
+
+  const loadNextDbPart = (): boolean => {
+    if (isNextDbPart()) {
+      setDbPartNumber(dbPartNumber + 1);
+      return true;
+    }
+    return false;
+  };
+
+  return {
+    db,
+    loadDbPart: setDbPartNumber,
+    loadPreviousDbPart,
+    isNextDbPart,
+    loadNextDbPart,
+    errors,
+    printErrors
+  };
+};
+
+export const useDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
+  const [searchText, setSearchText] = React.useState<string>(null);
+  const [foundItems, setFoundItems] = React.useState<Item[]>(null);
+
+  React.useEffect(() => {
+    if (searchText === null || !db) {
+      return;
+    }
+    if (searchText === '') {
+      setFoundItems(null);
+      return;
+    }
+    const foundItems = db.items.filter((item) =>
+      item.title.toLowerCase().includes(searchText) ||
+      item.subtitle.toLowerCase().includes(searchText) ||
+      item.content.toLowerCase().includes(searchText)
+    );
+    setFoundItems(foundItems);
+
+    loadNextDbPart();
+  }, [db, searchText]);
+
+  const search = (text: string) => {
+    setSearchText(text.toLowerCase());
+  };
+
+  return {
+    search,
+    foundItems
+  };
+};

@@ -2,7 +2,7 @@ import { writeFile, readFile } from 'fs';
 
 import { generateItemId } from './src/utils';
 
-readFile('./src/db.json', (err, data) => {
+readFile('./src/db/db.1.json', (err, data) => {
   if (err) throw err;
 
   let db = JSON.parse(data as any);
@@ -14,7 +14,6 @@ readFile('./src/db.json', (err, data) => {
   writeFile('sitemap.txt', sitemapData, (err => {
     if (err) throw err;
 
-    console.log('The sitemap.txt has been created');
+    console.info('The sitemap.txt has been created');
   }));
 });
-

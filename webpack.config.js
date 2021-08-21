@@ -14,6 +14,7 @@ module.exports = {
   experiments: {
     asset: true
   },
+  devtool: 'eval-source-map',
   module: {
     rules: [
       {
@@ -59,7 +60,10 @@ module.exports = {
         'CNAME',
         '404.html',
         'sitemap.txt',
-        'src/db.json',
+        {
+          from: 'src/db',
+          to: 'db'
+        },
         {
           from: 'src/photos',
           to: 'photos'

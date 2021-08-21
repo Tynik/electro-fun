@@ -71,6 +71,10 @@ export type DbOptions = Record<OptionId, OptionDefinition>
 export type Abbreviations = Record<string, string>
 export type Clarifications = Record<string, string>
 
+export type DbMeta = {
+  parts: number
+}
+
 export type Db = {
   menu: {
     title: string

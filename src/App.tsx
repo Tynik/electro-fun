@@ -12,10 +12,8 @@ import {
   ItemInfo,
   Footer
 } from './components';
-import { AppContext } from './context';
-import { Db } from './types';
-import { preprocessDb } from './utils';
-import { usePrintErrors } from './hooks';
+import { DbContext } from './context';
+import { useDb, useDbSearch } from './hooks';
 import './App.scss';
 
 const drawerWidth = 240;
@@ -44,31 +42,28 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
 );
 
 export const App = () => {
-  const [db, setDb] = React.useState<Db>(null);
+  const [isAlreadyMounted, setIsAlreadyMounted] = React.useState(false);
   const [menuIsOpened, setMenuOpen] = React.useState(false);
-  const { errors, setErrors, printErrors } = usePrintErrors({ returnToMain: false });
+  const {
+    db,
+    errors,
+    printErrors,
+    isNextDbPart,
+    loadNextDbPart
+  } = useDb();
+  const { search, foundItems } = useDbSearch(db, loadNextDbPart);
 
   React.useEffect(() => {
-    fetch('/db.json').then(async (response) => {
-      if (response.ok) {
-        try {
-          setDb(preprocessDb(await response.json()));
-        } catch (e) {
-          setErrors(['Ошибка загрузки БД']);
-        }
-      }
-    });
-  }, []);
+    if (db && !isAlreadyMounted) {
+      setIsAlreadyMounted(true);
 
-  React.useEffect(() => {
-    if (db) {
       document.title = db.seo.title;
 
       const meta = document.getElementsByTagName('meta');
       meta['description'].content = db.seo.description;
       meta['keywords'].content = db.seo.keywords;
     }
-  }, [db]);
+  }, [db, isAlreadyMounted]);
 
   if (errors.length) {
     return printErrors();
@@ -77,15 +72,19 @@ export const App = () => {
     return <LinearProgress/>;
   }
   return (
-    <AppContext.Provider value={{ db }}>
-      <Menu onOpen={setMenuOpen} drawerWidth={drawerWidth}/>
+    <DbContext.Provider value={{ db, isNextDbPart, loadNextDbPart }}>
+      <Menu
+        onOpen={setMenuOpen}
+        drawerWidth={drawerWidth}
+        onSearch={search}
+      />
 
       <Main open={menuIsOpened}>
         <DrawerHeader/>
 
         <Switch>
           <Route path="/" exact>
-            <Items/>
+            <Items items={foundItems ? foundItems : db.items}/>
           </Route>
           <Route path="/item/:id">
             <ItemInfo/>
@@ -94,6 +93,6 @@ export const App = () => {
       </Main>
 
       <Footer/>
-    </AppContext.Provider>
+    </DbContext.Provider>
   );
 };

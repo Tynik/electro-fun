@@ -21,7 +21,7 @@ import {
 } from '@material-ui/icons';
 
 import { ItemOption, OptionDefinitionSuffix } from '../types';
-import { AppContext } from '../context';
+import { DbContext } from '../context';
 import { useTextProcessor, useSmoothScroll, usePrintErrors } from '../hooks';
 import { getItemById } from '../utils';
 import { ImageSlider } from './ImageSlider';
@@ -45,7 +45,7 @@ export const ItemInfo = () => {
   const theme = useTheme();
 
   const { id } = useParams<any>();
-  const { db } = React.useContext(AppContext);
+  const { db } = React.useContext(DbContext);
   const { wordsWrapper } = useTextProcessor();
   const { setErrors, printErrors } = usePrintErrors();
 

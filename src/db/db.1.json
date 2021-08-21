@@ -31,6 +31,7 @@
     "SMBus": "https://ru.wikipedia.org/wiki/SMBus"
   },
   "clarifications": {
+    "HEXFET®": "https://www.rfwireless-world.com/Terminology/HEXFET-vs-MOSFET.html",
     "CoreMark®": "https://www.eembc.org/coremark",
     "Wi-Fi®": "https://ru.wikipedia.org/wiki/Wi-Fi",
     "Ethernet": "https://ru.wikipedia.org/wiki/Ethernet",
@@ -365,6 +366,39 @@
     },
     "62": {
       "name": "Температура хранения"
+    },
+    "63": {
+      "name": "Id (25°C) max"
+    },
+    "64": {
+      "name": "Ptot max"
+    },
+    "65": {
+      "name": "Полярность"
+    },
+    "66": {
+      "name": "Qgd"
+    },
+    "67": {
+      "name": "Qg (typ 10 В)"
+    },
+    "68": {
+      "name": "Rds (on) (10 В) max"
+    },
+    "69": {
+      "name": "RthJC max"
+    },
+    "70": {
+      "name": "Tj max"
+    },
+    "71": {
+      "name": "Vds max"
+    },
+    "72": {
+      "name": "Vgs(th)"
+    },
+    "73": {
+      "name": "Vgs max"
     }
   },
   "items": [
@@ -1346,6 +1380,81 @@
         }
       ],
       "content": "CH340 - это микросхема преобразователя шины USB, которая преобразует USB в последовательный интерфейс UART или интерфейс принтера. В последовательном режиме UART CH340 обеспечивает общий сигнал MODEM, чтобы расширить интерфейс UART."
+    },
+    {
+      "title": "IRF3205",
+      "subtitle": "MOSFET 55 В, 110 А",
+      "seo": {
+        "description": "",
+        "keywords": "pb-irf3205, irf3205pbf, mosfet, мосфет"
+      },
+      "buyLink": "",
+      "datasheetLink": "/datasheets/IRF3205PbF.pdf",
+      "images": [
+        {
+          "src": "/photos/IRF3205PbF-1.png",
+          "alt": "IRF3205"
+        }
+      ],
+      "options": [
+        {
+          "refId": 42,
+          "value": "TO-220"
+        },
+        {
+          "refId": 63,
+          "value": "110.0 А"
+        },
+        {
+          "refId": 64,
+          "value": "150 Вт"
+        },
+        {
+          "refId": 65,
+          "value": "N"
+        },
+        {
+          "refId": 66,
+          "value": "36 нКл"
+        },
+        {
+          "refId": 67,
+          "value": "97.3 нКл"
+        },
+        {
+          "refId": 68,
+          "value": "8 мОм"
+        },
+        {
+          "refId": 69,
+          "value": "1 K/Вт"
+        },
+        {
+          "refId": 70,
+          "value": "175°C"
+        },
+        {
+          "refId": 71,
+          "value": "55 В"
+        },
+        {
+          "refId": 72,
+          "value": "2.0 - 4.0 В"
+        },
+        {
+          "refId": 73,
+          "value": "20 В"
+        }
+      ],
+      "content": "",
+      "externalLinks": [
+        {
+          "name": "Официальная страница IRF3205",
+          "url": "https://www.infineon.com/cms/en/product/power/mosfet/12v-300v-n-channel-power-mosfet/irf3205/",
+          "icon": "infineon.com.ico",
+          "iconAlt": "infineon.com"
+        }
+      ]
     }
   ]
 }

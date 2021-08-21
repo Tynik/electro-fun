@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "title": "Test",
+      "subtitle": "",
+      "seo": {
+        "description": "",
+        "keywords": ""
+      },
+      "buyLink": "",
+      "datasheetLink": "/datasheets/IRF3205PbF.pdf",
+      "images": [
+        {
+          "src": "/photos/IRF3205PbF-1.png",
+          "alt": ""
+        }
+      ],
+      "options": [
+      ],
+      "content": "",
+      "externalLinks": [
+      ]
+    }
+  ]
+}

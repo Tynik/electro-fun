@@ -2,12 +2,16 @@ import React from 'react';
 
 import { Db } from './types';
 
-export type AppContextState = {
+export type DbContextState = {
   db: Db
+  isNextDbPart: () => boolean
+  loadNextDbPart: () => boolean
 }
 
-const initialAppContextState: AppContextState = {
-  db: null
+const initialDbContextState: DbContextState = {
+  db: null,
+  isNextDbPart: null,
+  loadNextDbPart: null,
 }
 
-export const AppContext = React.createContext(initialAppContextState);
+export const DbContext = React.createContext(initialDbContextState);

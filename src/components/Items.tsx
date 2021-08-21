@@ -1,17 +1,19 @@
 import React from 'react';
-import { useHistory } from 'react-router';
+import { Link as RouterLink } from 'react-router-dom';
 import {
   Grid,
   Card,
+  Button,
   Container,
   CardActionArea,
   CardHeader,
   CardContent,
   Typography
 } from '@material-ui/core';
+import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 
 import { Item } from '../types';
-import { AppContext } from '../context';
+import { DbContext } from '../context';
 import { generateItemId } from '../utils';
 import { NO_IMAGE } from '../constants';
 import { CCardMedia } from './CCardMedia';
@@ -24,57 +26,59 @@ export const getItemMainImage = (item: Item) => {
   return typeof firstImage === 'string' ? firstImage : firstImage.src;
 };
 
-export const Items = () => {
-    const history = useHistory();
+export type ItemsProps = {
+  items: Item[]
+}
 
-    const { db } = React.useContext(AppContext);
+export const Items = ({ items }: ItemsProps) => {
+  const { isNextDbPart, loadNextDbPart } = React.useContext(DbContext);
 
-    const onItemClick = (item: Item, e) => {
-      e.preventDefault();
-      history.push(`/item/${generateItemId(item.title)}`);
-    };
+  return (
+    <Container>
+      <Grid spacing={2} container>
+        {items.map(item => (
+          <Grid key={item.title} xs={12} md={6} lg={4} item>
+            <Card sx={{ maxWidth: 345 }}>
+              <CardActionArea
+                component={RouterLink}
+                to={`/item/${generateItemId(item.title)}`}
+              >
+                <CardHeader
+                  title={item.title}
+                  subheader={item.subtitle || ''}
+                  titleTypographyProps={{ variant: 'subtitle1' }}
+                  subheaderTypographyProps={{ variant: 'subtitle2' }}
+                />
 
-    return (
-      <Container>
-        <Grid spacing={2} container>
-          {db.items.map(item => (
-            <Grid key={item.title} xs={12} md={6} lg={4} item>
-              <Card sx={{ maxWidth: 345 }}>
-                <CardActionArea
-                  component={'a'}
-                  href={`#/item/${generateItemId(item.title)}`}
-                  onClick={(e) => onItemClick(item, e)}
-                >
-                  <CardHeader
-                    title={item.title}
-                    subheader={item.subtitle || ''}
-                    titleTypographyProps={{ variant: 'subtitle1' }}
-                    subheaderTypographyProps={{ variant: 'subtitle2' }}
-                  />
+                <CCardMedia
+                  src={getItemMainImage(item)}
+                  alt={item.title}/>
 
-                  <CCardMedia
-                    src={getItemMainImage(item)}
-                    alt={item.title}/>
+                <CardContent>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    sx={{
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      whiteSpace: 'nowrap'
+                    }}
+                  >{item.content}</Typography>
 
-                  <CardContent>
-                    <Typography
-                      variant="body2"
-                      color="text.secondary"
-                      sx={{
-                        overflow: 'hidden',
-                        textOverflow: 'ellipsis',
-                        whiteSpace: 'nowrap'
-                      }}
-                    >{item.content}</Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
+        ))}
 
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </Grid>
-          ))}
+        <Grid xs={12} sx={{ textAlign: 'center' }} item>
+          <Button
+            onClick={loadNextDbPart}
+            disabled={!isNextDbPart()}
+            startIcon={<ExpandMoreIcon/>}
+            variant={'outlined'}>Показать больше</Button>
         </Grid>
-      </Container>
-
-    );
-  }
-;
+      </Grid>
+    </Container>
+  );
+};
