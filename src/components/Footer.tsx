@@ -2,16 +2,22 @@ import React from 'react';
 import {
   Box,
   Grid,
-  Container
+  Container,
+  useTheme
 } from '@material-ui/core';
 
 export const Footer = () => {
+  const theme = useTheme();
+
   return (
     <Box
       component={'footer'}
-      bgcolor={'info.main'}
-      color={'white'}
-      padding={2}
+      sx={{
+        marginTop: 'auto',
+        backgroundColor: theme.palette.info.main,
+        color: 'white',
+        padding: theme.spacing(2)
+      }}
     >
       <Container maxWidth={'lg'}>
         <Grid spacing={2} container>

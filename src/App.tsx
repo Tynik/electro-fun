@@ -84,28 +84,30 @@ export const App = () => {
   }
   return (
     <DbContext.Provider value={{ db, isNextDbPart, loadNextDbPart }}>
-      <Box sx={{ display: 'flex' }}>
-        <Menu
-          onOpen={setMenuOpen}
-          drawerWidth={drawerWidth}
-          onSearch={onSearch}
-        />
+      <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+        <Box sx={{ display: 'flex' }}>
+          <Menu
+            onOpen={setMenuOpen}
+            drawerWidth={drawerWidth}
+            onSearch={onSearch}
+          />
 
-        <Main open={menuIsOpened}>
-          <DrawerHeader/>
+          <Main open={menuIsOpened}>
+            <DrawerHeader/>
 
-          <Switch>
-            <Route path="/" exact>
-              <Items items={foundItems ? foundItems : db.items}/>
-            </Route>
-            <Route path="/item/:id">
-              <ItemInfo/>
-            </Route>
-          </Switch>
-        </Main>
+            <Switch>
+              <Route path="/" exact>
+                <Items items={foundItems ? foundItems : db.items}/>
+              </Route>
+              <Route path="/item/:id">
+                <ItemInfo/>
+              </Route>
+            </Switch>
+          </Main>
+        </Box>
+
+        <Footer/>
       </Box>
-
-      <Footer/>
     </DbContext.Provider>
   );
 };
