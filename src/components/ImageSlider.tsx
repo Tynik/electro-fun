@@ -58,7 +58,7 @@ export const ImageSlider = (props: ImageSliderProps) => {
           aria-busy={true}
           aria-live={'polite'}
           style={{
-            height: '100%',
+            height: '300px',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center'

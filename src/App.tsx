@@ -1,7 +1,8 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, useLocation, useHistory } from 'react-router-dom';
 import {
   LinearProgress,
+  Box,
   styled
 } from '@material-ui/core';
 
@@ -42,6 +43,9 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
 );
 
 export const App = () => {
+  const location = useLocation();
+  const history = useHistory();
+
   const [isAlreadyMounted, setIsAlreadyMounted] = React.useState(false);
   const [menuIsOpened, setMenuOpen] = React.useState(false);
   const {
@@ -65,6 +69,13 @@ export const App = () => {
     }
   }, [db, isAlreadyMounted]);
 
+  const onSearch = (text: string) => {
+    if (location.pathname !== '/') {
+      history.push('/');
+    }
+    search(text);
+  };
+
   if (errors.length) {
     return printErrors();
   }
@@ -73,24 +84,26 @@ export const App = () => {
   }
   return (
     <DbContext.Provider value={{ db, isNextDbPart, loadNextDbPart }}>
-      <Menu
-        onOpen={setMenuOpen}
-        drawerWidth={drawerWidth}
-        onSearch={search}
-      />
+      <Box sx={{ display: 'flex' }}>
+        <Menu
+          onOpen={setMenuOpen}
+          drawerWidth={drawerWidth}
+          onSearch={onSearch}
+        />
 
-      <Main open={menuIsOpened}>
-        <DrawerHeader/>
+        <Main open={menuIsOpened}>
+          <DrawerHeader/>
 
-        <Switch>
-          <Route path="/" exact>
-            <Items items={foundItems ? foundItems : db.items}/>
-          </Route>
-          <Route path="/item/:id">
-            <ItemInfo/>
-          </Route>
-        </Switch>
-      </Main>
+          <Switch>
+            <Route path="/" exact>
+              <Items items={foundItems ? foundItems : db.items}/>
+            </Route>
+            <Route path="/item/:id">
+              <ItemInfo/>
+            </Route>
+          </Switch>
+        </Main>
+      </Box>
 
       <Footer/>
     </DbContext.Provider>

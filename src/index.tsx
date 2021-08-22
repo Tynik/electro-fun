@@ -18,10 +18,8 @@ import { theme } from './theme';
 ReactDOM.render(
   <HashRouter>
     <ThemeProvider theme={theme}>
-      <Box sx={{ display: 'flex' }}>
-        <CssBaseline/>
-        <App/>
-      </Box>
+      <CssBaseline/>
+      <App/>
     </ThemeProvider>
   </HashRouter>,
   document.getElementById('app')
