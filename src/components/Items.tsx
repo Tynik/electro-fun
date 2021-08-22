@@ -37,7 +37,7 @@ export const Items = ({ items }: ItemsProps) => {
     <Container>
       <Grid spacing={2} container>
         {items.map(item => (
-          <Grid key={item.title} xs={12} md={6} lg={4} item>
+          <Grid key={item.title} xs={12} sm={6} lg={4} item>
             <Card sx={{ maxWidth: 345 }}>
               <CardActionArea
                 component={RouterLink}

@@ -9,9 +9,10 @@ readFile('./src/db/db.1.json', (err, data) => {
 
   const sitemapData = db.items.map((item) =>
     'https://electro-fun.site/#/item/' + generateItemId(item.title)
-  ).join('\n');
+  );
+  sitemapData.push('https://electro-fun.site/');
 
-  writeFile('sitemap.txt', sitemapData, (err => {
+  writeFile('sitemap.txt', sitemapData.join('\n'), (err => {
     if (err) throw err;
 
     console.info('The sitemap.txt has been created');
