@@ -9,6 +9,7 @@ import {
 import {
   Menu,
   DrawerHeader,
+  Category,
   Items,
   Datasheets,
   ItemInfo,
@@ -74,7 +75,7 @@ export const App = () => {
     if (location.pathname !== '/') {
       history.push('/');
     }
-    search(text);
+    search({ text });
   };
 
   if (errors.length) {
@@ -102,6 +103,9 @@ export const App = () => {
               </Route>
               <Route path="/item/:id">
                 <ItemInfo/>
+              </Route>
+              <Route path="/category/:categoryId">
+                <Category/>
               </Route>
               <Route path="/datasheets">
                 <Datasheets/>

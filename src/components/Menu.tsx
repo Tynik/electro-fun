@@ -21,11 +21,21 @@ import {
   ChevronLeft as ChevronLeftIcon,
   ChevronRight as ChevronRightIcon,
   Dashboard as DashboardIcon,
-  Search as SearchIcon
+  AcUnit as AcUnitIcon,
+  Memory as MemoryIcon,
+  Sensors as SensorsIcon,
+  Search as SearchIcon,
+  FlashOn as FlashOnIcon,
+  Explore as ExploreIcon,
+  CallMerge as CallMergeIcon,
+  Wifi as WifiIcon,
+  SettingsInputAntenna as SettingsInputAntennaIcon,
+  MultipleStop as MultipleStopIcon,
+  ViewHeadline as ViewHeadlineIcon,
+  Description as DescriptionIcon,
 } from '@material-ui/icons';
 
 import { DbContext } from '../context';
-import { Link } from '@material-ui/core';
 
 const Search = styled('div')(({ theme }) => (
   {
@@ -98,7 +108,18 @@ const AppBar = styled(MuiAppBar, {
 
 const getIcon = (name) => {
   return {
-    dashboard: <DashboardIcon/>
+    cpu: <MemoryIcon/>,
+    sensor: <SensorsIcon/>,
+    snow: <AcUnitIcon/>,
+    dashboard: <DashboardIcon/>,
+    flash: <FlashOnIcon/>,
+    compass: <ExploreIcon/>,
+    mosfet: <CallMergeIcon/>,
+    wifi: <WifiIcon/>,
+    antenna: <SettingsInputAntennaIcon/>,
+    convertors: <MultipleStopIcon/>,
+    coil: <ViewHeadlineIcon/>,
+    document: <DescriptionIcon/>,
   }[name];
 };
 
@@ -200,21 +221,35 @@ export const Menu = (props: MenuProps) => {
         </DrawerHeader>
         <Divider/>
         <List>
-          {db.menu.map((itemMenu) => (
-            <ListItem key={itemMenu.name} button>
+          {Object.keys(db.categories).map(categoryId => (
+            <ListItem
+              key={`category-${categoryId}`}
+              component={RouterLink}
+              to={`/category/${categoryId}`}
+              sx={{
+                textDecoration: 'none',
+                color: theme.palette.text.primary
+              }}
+              button
+            >
+              <ListItemIcon>{getIcon(db.categories[categoryId].icon)}</ListItemIcon>
+              <ListItemText>{db.categories[categoryId].name}</ListItemText>
+            </ListItem>
+          ))}
+
+          {db.menu.map(itemMenu => (
+            <ListItem
+              key={itemMenu.name}
+              component={RouterLink}
+              to={itemMenu.url}
+              sx={{
+                textDecoration: 'none',
+                color: theme.palette.text.primary
+              }}
+              button
+            >
               <ListItemIcon>{getIcon(itemMenu.icon)}</ListItemIcon>
-              <ListItemText>
-                <Link
-                  to={itemMenu.url}
-                  component={RouterLink}
-                  sx={{
-                    textDecoration: 'none',
-                    color: theme.palette.text.primary
-                  }}
-                >
-                  {itemMenu.name}
-                </Link>
-              </ListItemText>
+              <ListItemText>{itemMenu.name}</ListItemText>
             </ListItem>
           ))}
         </List>

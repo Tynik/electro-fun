@@ -131,7 +131,7 @@ export const useDb = (options: useDbOptions = { partNumber: 1 }) => {
 
   React.useEffect(() => {
     if (!Object.keys(dbParts).length) {
-      return
+      return;
     }
     setDb(mergeDeep({}, ...Object.values(dbParts)));
 
@@ -192,28 +192,43 @@ export const useDb = (options: useDbOptions = { partNumber: 1 }) => {
 
 export const useDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
   const [searchText, setSearchText] = React.useState<string>(null);
+  const [categoryId, setCategoryId] = React.useState<number>(null);
   const [foundItems, setFoundItems] = React.useState<Item[]>(null);
 
   React.useEffect(() => {
-    if (searchText === null || !db) {
+    if ((
+      searchText === null && categoryId === null
+    ) || !db) {
       return;
     }
-    if (searchText === '') {
+    if (searchText === '' && categoryId === null) {
       setFoundItems(null);
       return;
     }
-    const foundItems = db.items.filter((item) =>
-      item.title.toLowerCase().includes(searchText) ||
-      item.subtitle.toLowerCase().includes(searchText) ||
-      item.content.toLowerCase().includes(searchText)
-    );
+    const foundItems = db.items.filter((item) => {
+      let r = true;
+      if (searchText) {
+        r &&= item.title.toLowerCase().includes(searchText) ||
+          item.subtitle.toLowerCase().includes(searchText) ||
+          item.content.toLowerCase().includes(searchText);
+      }
+      if (categoryId) {
+        r &&= item.categoryId === categoryId;
+      }
+      return r;
+    });
     setFoundItems(foundItems);
 
     loadNextDbPart();
-  }, [db, searchText]);
+  }, [db, searchText, categoryId]);
 
-  const search = (text: string) => {
-    setSearchText(text.toLowerCase());
+  const search = ({ text, categoryId }: { text?: string, categoryId?: number }) => {
+    if (text !== undefined) {
+      setSearchText(text.toLowerCase());
+    }
+    if (categoryId !== undefined) {
+      setCategoryId(categoryId);
+    }
   };
 
   return {

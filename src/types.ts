@@ -42,6 +42,7 @@ export type Item = {
   subtitle: string
   content: string
   id?: string
+  categoryId?: number
   warningContent?: string
   seo?: Seo & { title?: string }
   datasheetLink?: string
@@ -92,7 +93,10 @@ export type Db = {
   abbreviations: Abbreviations
   clarifications: Clarifications
   articles: Article[]
-  categories: Record<CategoryId, string>
+  categories: Record<CategoryId, {
+    name: string
+    icon?: string
+  }>
   featureSections: Record<FeatureSectionId, string>
   optionTypes: Record<OptionTypeId, {
     y: string
