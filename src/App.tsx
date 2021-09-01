@@ -10,6 +10,7 @@ import {
   Menu,
   DrawerHeader,
   Items,
+  Datasheets,
   ItemInfo,
   Footer
 } from './components';
@@ -101,6 +102,9 @@ export const App = () => {
               </Route>
               <Route path="/item/:id">
                 <ItemInfo/>
+              </Route>
+              <Route path="/datasheets">
+                <Datasheets/>
               </Route>
             </Switch>
           </Main>

@@ -1,3 +1,5 @@
+https://electro-fun.site/
+https://electro-fun.site/#/datasheets
 https://electro-fun.site/#/item/lm2596s-dc-dc-3-a
 https://electro-fun.site/#/item/bmp280
 https://electro-fun.site/#/item/mpu-9250
@@ -13,4 +15,3 @@ https://electro-fun.site/#/item/cc1310
 https://electro-fun.site/#/item/cc2652p
 https://electro-fun.site/#/item/ch340g
 https://electro-fun.site/#/item/irf3205
-https://electro-fun.site/

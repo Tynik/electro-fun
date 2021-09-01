@@ -1,5 +1,6 @@
 export * from './BackButton';
 export * from './Menu';
+export * from './Datasheets';
 export * from './Items';
 export * from './ItemInfo';
 export * from './CImage';

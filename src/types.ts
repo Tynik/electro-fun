@@ -3,6 +3,7 @@ export type Article = {}
 export type FeatureSectionId = number;
 export type CategoryId = number;
 export type OptionId = number;
+export type DatasheetId = string;
 
 export enum ItemOptionValueType {
   axis,
@@ -75,10 +76,16 @@ export type DbMeta = {
   parts: number
 }
 
+export type Datasheet = {
+  url: string
+  version?: string
+  description?: string
+}
+
 export type Db = {
   menu: {
-    title: string
     name: string
+    url: string
     icon: string
   }[]
   seo: Seo
@@ -93,4 +100,5 @@ export type Db = {
   }>
   options: DbOptions
   items: Item[]
+  datasheets: Record<DatasheetId, Datasheet>
 }

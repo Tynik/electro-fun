@@ -7,7 +7,12 @@
   "menu": [
     {
       "name": "Радиокомпоненты",
-      "url": "радиокомпоненты",
+      "url": "/радиокомпоненты",
+      "icon": "dashboard"
+    },
+    {
+      "name": "Datasheets",
+      "url": "/datasheets",
       "icon": "dashboard"
     }
   ],
@@ -49,6 +54,77 @@
     "RF Balun": "https://www.digikey.com/en/articles/understanding-the-rf-balun-and-its-transformative-function",
     "Texas Instruments™": "https://www.ti.com",
     "Enhanced ShockBurst™": "https://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.sdk5.v12.0.0%2Fesb_users_guide.html"
+  },
+  "datasheets": {
+    "CP2112": {
+      "url": "/datasheets/CP2112.pdf"
+    },
+    "APDS-9960": {
+      "url": "/datasheets/APDS-9960.pdf"
+    },
+    "ARM-EM4-EM6": {
+      "url": "/datasheets/ARM-EM4-EM6.pdf"
+    },
+    "BHI260AP": {
+      "url": "/datasheets/BHI260AP.pdf"
+    },
+    "BMG250": {
+      "url": "/datasheets/BMG250.pdf"
+    },
+    "BMP280": {
+      "url": "/datasheets/BMP280.pdf"
+    },
+    "CC1310": {
+      "url": "/datasheets/CC1310.pdf"
+    },
+    "CC1312R": {
+      "url": "/datasheets/CC1312R.pdf"
+    },
+    "CC1352P": {
+      "url": "/datasheets/CC1352P.pdf"
+    },
+    "CC2530": {
+      "url": "/datasheets/CC2530.pdf"
+    },
+    "CC2652P": {
+      "url": "/datasheets/CC2652P.pdf"
+    },
+    "CC2652R": {
+      "url": "/datasheets/CC2652R.pdf"
+    },
+    "CCS811": {
+      "url": "/datasheets/CCS811.pdf"
+    },
+    "CH340": {
+      "url": "/datasheets/CH340.pdf"
+    },
+    "ESP8266EX": {
+      "url": "/datasheets/ESP8266EX.pdf"
+    },
+    "IRF3205PbF": {
+      "url": "/datasheets/IRF3205PbF.pdf"
+    },
+    "IRLB4030PbF": {
+      "url": "/datasheets/IRLB4030PbF.pdf"
+    },
+    "LM1117": {
+      "url": "/datasheets/LM1117.pdf"
+    },
+    "MAC-35A": {
+      "url": "/datasheets/MAC-35A.pdf"
+    },
+    "MPU-9250A-1.1": {
+      "url": "/datasheets/MPU-9250A-1.1.pdf"
+    },
+    "nRF24L01": {
+      "url": "/datasheets/nRF24L01.pdf"
+    },
+    "TEC1-12715": {
+      "url": "/datasheets/TEC1-12715.pdf"
+    },
+    "ULN200x": {
+      "url": "/datasheets/ULN200x.pdf"
+    }
   },
   "categories": {
     "1": "Датчики",
@@ -612,7 +688,7 @@
         "keywords": "cp2112, usb, smbus, конвертер, перепрошивка, батареи"
       },
       "buyLink": "https://izi.ua/p-5455863-adapter-cp2112-usb-uart-i2c-dlya-proshivki-batarey-noutbukov-i-proch",
-      "datasheetLink": "/datasheets/cp2112.pdf",
+      "datasheetLink": "/datasheets/CP2112.pdf",
       "images": [
         {
           "src": "https://images.izi.ua/25804009",

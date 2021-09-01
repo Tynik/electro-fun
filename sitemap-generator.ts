@@ -1,20 +1,36 @@
-import { writeFile, readFile } from 'fs';
-
+import { readFileSync, writeFileSync } from 'fs';
 import { generateItemId } from './src/utils';
+import { Db, DbMeta } from './src/types';
 
-readFile('./src/db/db.1.json', (err, data) => {
-  if (err) throw err;
+const generateSitemapData = (): string[] => {
+  const metadata = readFileSync('./src/db/db.meta.json');
+  const meta: DbMeta = JSON.parse(metadata as any);
 
-  let db = JSON.parse(data as any);
+  let sitemapData = [
+    'https://electro-fun.site/',
+    'https://electro-fun.site/#/datasheets'
+  ];
 
-  const sitemapData = db.items.map((item) =>
-    'https://electro-fun.site/#/item/' + generateItemId(item.title)
-  );
-  sitemapData.push('https://electro-fun.site/');
+  Array.from(new Array(meta.parts)).forEach((_, part) => {
+    const dbPartData = readFileSync(`./src/db/db.${part + 1}.json`);
+    const dbPart: Db = JSON.parse(dbPartData as any);
 
-  writeFile('sitemap.txt', sitemapData.join('\n'), (err => {
-    if (err) throw err;
+    sitemapData = [
+      ...sitemapData,
+      ...dbPart.items.map((item) =>
+        'https://electro-fun.site/#/item/' + generateItemId(item.title)
+      )
+    ];
+  });
+  return sitemapData;
+};
 
-    console.info('The sitemap.txt has been created');
-  }));
-});
+const run = () => {
+  const sitemapData = generateSitemapData();
+
+  writeFileSync('sitemap.txt', sitemapData.join('\n'));
+
+  console.info('The sitemap.txt has been created');
+};
+
+run();
