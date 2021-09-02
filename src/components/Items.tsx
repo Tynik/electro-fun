@@ -4,7 +4,6 @@ import {
   Grid,
   Card,
   Button,
-  Container,
   CardActionArea,
   CardHeader,
   CardContent,
@@ -34,8 +33,7 @@ export const Items = ({ items }: ItemsProps) => {
   const { isNextDbPart, loadNextDbPart } = React.useContext(DbContext);
 
   return (
-    <Container>
-      <Grid spacing={2} container>
+    <Grid spacing={2} container>
         {items.map(item => (
           <Grid key={item.title} xs={12} sm={6} lg={4} item>
             <Card sx={{ maxWidth: 345 }}>
@@ -79,6 +77,5 @@ export const Items = ({ items }: ItemsProps) => {
             variant={'outlined'}>Показать больше</Button>
         </Grid>
       </Grid>
-    </Container>
   );
 };

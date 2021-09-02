@@ -20,22 +20,11 @@ import {
   Menu as MenuIcon,
   ChevronLeft as ChevronLeftIcon,
   ChevronRight as ChevronRightIcon,
-  Dashboard as DashboardIcon,
-  AcUnit as AcUnitIcon,
-  Memory as MemoryIcon,
-  Sensors as SensorsIcon,
   Search as SearchIcon,
-  FlashOn as FlashOnIcon,
-  Explore as ExploreIcon,
-  CallMerge as CallMergeIcon,
-  Wifi as WifiIcon,
-  SettingsInputAntenna as SettingsInputAntennaIcon,
-  MultipleStop as MultipleStopIcon,
-  ViewHeadline as ViewHeadlineIcon,
-  Description as DescriptionIcon,
 } from '@material-ui/icons';
 
 import { DbContext } from '../context';
+import { getIcon } from '../utils';
 
 const Search = styled('div')(({ theme }) => (
   {
@@ -105,23 +94,6 @@ const AppBar = styled(MuiAppBar, {
     )
   }
 ));
-
-const getIcon = (name) => {
-  return {
-    cpu: <MemoryIcon/>,
-    sensor: <SensorsIcon/>,
-    snow: <AcUnitIcon/>,
-    dashboard: <DashboardIcon/>,
-    flash: <FlashOnIcon/>,
-    compass: <ExploreIcon/>,
-    mosfet: <CallMergeIcon/>,
-    wifi: <WifiIcon/>,
-    antenna: <SettingsInputAntennaIcon/>,
-    convertors: <MultipleStopIcon/>,
-    coil: <ViewHeadlineIcon/>,
-    document: <DescriptionIcon/>,
-  }[name];
-};
 
 export const DrawerHeader = styled('div')(({ theme }) => (
   {
@@ -228,7 +200,8 @@ export const Menu = (props: MenuProps) => {
               to={`/category/${categoryId}`}
               sx={{
                 textDecoration: 'none',
-                color: theme.palette.text.primary
+                color: theme.palette.text.primary,
+                // backgroundColor: theme.palette.action.selected
               }}
               button
             >

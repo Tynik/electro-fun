@@ -1,3 +1,19 @@
+import React from 'react';
+import {
+  Dashboard as DashboardIcon,
+  AcUnit as AcUnitIcon,
+  Memory as MemoryIcon,
+  Sensors as SensorsIcon,
+  FlashOn as FlashOnIcon,
+  Explore as ExploreIcon,
+  CallMerge as CallMergeIcon,
+  Wifi as WifiIcon,
+  SettingsInputAntenna as SettingsInputAntennaIcon,
+  MultipleStop as MultipleStopIcon,
+  ViewHeadline as ViewHeadlineIcon,
+  Description as DescriptionIcon,
+} from '@material-ui/icons';
+
 import { Item, Db } from './types';
 
 export const generateItemId = (itemTitle: string) =>
@@ -51,3 +67,21 @@ export function mergeDeep(target, ...sources) {
   }
   return mergeDeep(target, ...sources);
 }
+
+
+export const getIcon = (name, props = {}) => {
+  return {
+    cpu: <MemoryIcon {...props}/>,
+    sensor: <SensorsIcon {...props}/>,
+    snow: <AcUnitIcon {...props}/>,
+    dashboard: <DashboardIcon {...props}/>,
+    flash: <FlashOnIcon {...props}/>,
+    compass: <ExploreIcon {...props}/>,
+    mosfet: <CallMergeIcon {...props}/>,
+    wifi: <WifiIcon {...props}/>,
+    antenna: <SettingsInputAntennaIcon {...props}/>,
+    convertors: <MultipleStopIcon {...props}/>,
+    coil: <ViewHeadlineIcon {...props}/>,
+    document: <DescriptionIcon {...props}/>,
+  }[name];
+};

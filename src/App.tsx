@@ -1,9 +1,10 @@
 import React from 'react';
 import { Switch, Route, useLocation, useHistory } from 'react-router-dom';
 import {
-  LinearProgress,
+  Container,
   Box,
-  styled
+  styled,
+  LinearProgress
 } from '@material-ui/core';
 
 import {
@@ -99,7 +100,9 @@ export const App = () => {
 
             <Switch>
               <Route path="/" exact>
-                <Items items={foundItems ? foundItems : db.items}/>
+                <Container>
+                  <Items items={foundItems ? foundItems : db.items}/>
+                </Container>
               </Route>
               <Route path="/item/:id">
                 <ItemInfo/>
