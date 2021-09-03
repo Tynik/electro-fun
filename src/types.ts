@@ -84,14 +84,15 @@ export type Datasheet = {
 }
 
 export type Db = {
+  siteName: string
+  seo: Seo
+  abbreviations: Abbreviations
+  clarifications: Clarifications
   menu: {
     name: string
     url: string
     icon: string
   }[]
-  seo: Seo
-  abbreviations: Abbreviations
-  clarifications: Clarifications
   articles: Article[]
   categories: Record<CategoryId, {
     name: string
@@ -105,4 +106,7 @@ export type Db = {
   options: DbOptions
   items: Item[]
   datasheets: Record<DatasheetId, Datasheet>
+  footer: {
+    bottom: string
+  }
 }

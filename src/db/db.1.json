@@ -1,8 +1,12 @@
 {
+  "siteName": "Electo Fun",
   "seo": {
     "title": "Electo Fun",
     "description": "Каталог радиомодулей, чипов, микросхем и т.д.",
     "keywords": "радиокомпоненты, радиомодули, микросхемы, датчики, iot, arduino"
+  },
+  "footer": {
+    "bottom": "Electro Fun 2021"
   },
   "menu": [
     {

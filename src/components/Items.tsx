@@ -34,48 +34,35 @@ export const Items = ({ items }: ItemsProps) => {
 
   return (
     <Grid spacing={2} container>
-        {items.map(item => (
-          <Grid key={item.title} xs={12} sm={6} lg={4} item>
-            <Card sx={{ maxWidth: 345 }}>
-              <CardActionArea
-                component={RouterLink}
-                to={`/item/${generateItemId(item.title)}`}
-              >
-                <CardHeader
-                  title={item.title}
-                  subheader={item.subtitle || ''}
-                  titleTypographyProps={{ variant: 'subtitle1' }}
-                  subheaderTypographyProps={{ variant: 'subtitle2' }}
-                />
+      {items.map(item => (
+        <Grid key={item.title} xs={12} sm={6} lg={4} item>
+          <Card sx={{ maxWidth: '345px', width: '100%' }}>
+            <CardActionArea
+              component={RouterLink}
+              to={`/item/${generateItemId(item.title)}`}
+            >
+              <CardHeader
+                title={item.title}
+                subheader={item.subtitle || ''}
+                titleTypographyProps={{ variant: 'subtitle1' }}
+                subheaderTypographyProps={{ variant: 'subtitle2' }}
+              />
 
-                <CCardMedia
-                  src={getItemMainImage(item)}
-                  alt={item.title}/>
-
-                <CardContent>
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{
-                      overflow: 'hidden',
-                      textOverflow: 'ellipsis',
-                      whiteSpace: 'nowrap'
-                    }}
-                  >{item.content}</Typography>
-
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Grid>
-        ))}
-
-        <Grid xs={12} sx={{ textAlign: 'center' }} item>
-          <Button
-            onClick={loadNextDbPart}
-            disabled={!isNextDbPart()}
-            startIcon={<ExpandMoreIcon/>}
-            variant={'outlined'}>Показать больше</Button>
+              <CCardMedia
+                src={getItemMainImage(item)}
+                alt={item.title}/>
+            </CardActionArea>
+          </Card>
         </Grid>
+      ))}
+
+      <Grid xs={12} sx={{ textAlign: 'center' }} item>
+        <Button
+          onClick={loadNextDbPart}
+          disabled={!isNextDbPart()}
+          startIcon={<ExpandMoreIcon/>}
+          variant={'outlined'}>Показать больше</Button>
       </Grid>
+    </Grid>
   );
 };

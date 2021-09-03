@@ -22,7 +22,7 @@ import {
 
 import { ItemOption, OptionDefinitionSuffix } from '../types';
 import { DbContext } from '../context';
-import { useTextProcessor, useSmoothScroll, usePrintErrors } from '../hooks';
+import { useTextProcessor, useSmoothScroll, useStaticErrors } from '../hooks';
 import { getItemById } from '../utils';
 import { ImageSlider } from './ImageSlider';
 import { BackButton } from './BackButton';
@@ -47,7 +47,7 @@ export const ItemInfo = () => {
   const { id } = useParams<any>();
   const { db } = React.useContext(DbContext);
   const { wordsWrapper } = useTextProcessor();
-  const { setErrors, printErrors } = usePrintErrors();
+  const { setErrors, printErrors } = useStaticErrors();
 
   const item = getItemById(db, id);
 
@@ -151,7 +151,7 @@ export const ItemInfo = () => {
         <Link
           key={`${text}-${phrase}-${index}`}
           href={db.clarifications[phrase]}
-          target="_blank"
+          target={'_blank'}
         >{phrase}</Link>
       )
     ));

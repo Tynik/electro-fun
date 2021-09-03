@@ -67,7 +67,7 @@ export const useSmoothScroll = (
   }, delay);
 };
 
-export const usePrintErrors = ({ returnToMain } = { returnToMain: true }) => {
+export const useStaticErrors = ({ showReturnToMain } = { showReturnToMain: true }) => {
   const [errors, setErrors] = React.useState<string[]>([]);
 
   const printErrors = () => {
@@ -80,7 +80,7 @@ export const usePrintErrors = ({ returnToMain } = { returnToMain: true }) => {
         <Alert severity={'error'}>
           {errors.map(error => <div key={error}>{error}</div>)}
         </Alert>
-        {returnToMain && (
+        {showReturnToMain && (
           <Link to={'/'} component={RouterLink}>Вернуться на главную</Link>
         )}
       </Container>
@@ -104,7 +104,7 @@ export const useDb = (options: useDbOptions = { partNumber: 1 }) => {
   const [dbPartNumber, setDbPartNumber] = React.useState<number>(options.partNumber);
   const [dbParts, setDbParts] = React.useState<Record<string, Db>>({});
 
-  const { errors, setErrors, printErrors } = usePrintErrors({ returnToMain: false });
+  const { errors, setErrors, printErrors } = useStaticErrors({ showReturnToMain: false });
 
   React.useEffect(() => {
     (

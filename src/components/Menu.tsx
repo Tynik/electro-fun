@@ -158,7 +158,7 @@ export const Menu = (props: MenuProps) => {
               textDecoration: 'none'
             }}
           >
-            Electro Fun
+            {db.siteName}
           </Typography>
 
           <Search>
@@ -166,7 +166,7 @@ export const Menu = (props: MenuProps) => {
               <SearchIcon/>
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Найти..."
+              placeholder={'Найти...'}
               inputProps={{ 'aria-label': 'search' }}
               onChange={(e) => onSearch(e.target.value)}
             />

@@ -68,7 +68,6 @@ export function mergeDeep(target, ...sources) {
   return mergeDeep(target, ...sources);
 }
 
-
 export const getIcon = (name, props = {}) => {
   return {
     cpu: <MemoryIcon {...props}/>,

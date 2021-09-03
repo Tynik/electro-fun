@@ -9,9 +9,12 @@ import {
   ListItem,
   useTheme
 } from '@material-ui/core';
+import { DbContext } from '../context';
 
 export const Footer = () => {
   const theme = useTheme();
+
+  const { db } = React.useContext(DbContext);
 
   return (
     <Box
@@ -38,6 +41,10 @@ export const Footer = () => {
                   variant={'overline'}
                   color={'white'}
                   component={'div'}
+                  sx={{
+                    width: { xs: '100%' },
+                    textAlign: { xs: 'center', sm: 'left' }
+                  }}
                 >
                   Контакты
                 </Typography>
@@ -47,6 +54,10 @@ export const Footer = () => {
                   variant={'body2'}
                   component={'div'}
                   color={'white'}
+                  sx={{
+                    width: { xs: '100%' },
+                    textAlign: { xs: 'center', sm: 'left' }
+                  }}
                 >
                   Украина, Киев
                 </Typography>
@@ -57,6 +68,10 @@ export const Footer = () => {
                   component={Link}
                   href={'tel:+38(099) 441-57-77'}
                   color={'white'}
+                  sx={{
+                    width: { xs: '100%' },
+                    textAlign: { xs: 'center', sm: 'left' }
+                  }}
                 >
                   Ph.: 099-441-57-77
                 </Typography>
@@ -67,23 +82,27 @@ export const Footer = () => {
                   component={Link}
                   href={'mailto:m.aliynik@gmail.com'}
                   color={'white'}
+                  sx={{
+                    width: { xs: '100%' },
+                    textAlign: { xs: 'center', sm: 'left' }
+                  }}
                 >
                   E-mail: m.aliynik@gmail.com
                 </Typography>
               </ListItem>
             </List>
           </Grid>
+          <Grid xs={12} textAlign={'center'} item>
+            <Typography
+              variant={'body2'}
+              component={'div'}
+              fontSize={12}
+            >
+              {db.footer.bottom}
+            </Typography>
+          </Grid>
         </Grid>
-        <Box textAlign={'center'}>
-          <Typography
-            variant={'body2'}
-            component={'div'}
-            fontSize={12}
-          >
-            Electro Fun 2021
-          </Typography>
-        </Box>
       </Container>
     </Box>
-  )
-}
+  );
+};

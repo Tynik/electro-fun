@@ -1,13 +1,16 @@
 import React, { SyntheticEvent, ImgHTMLAttributes } from 'react';
 import {
   CardMedia,
-  CircularProgress
+  CircularProgress,
+  useTheme
 } from '@material-ui/core';
 
 export interface CCardMediaProps extends Omit<ImgHTMLAttributes<any>, 'onLoad'> {
 }
 
 export const CCardMedia = (props: CCardMediaProps) => {
+  const theme = useTheme();
+
   const [imageIsLoaded, setImageIsLoaded] = React.useState(false);
 
   const onImageLoad = (e: SyntheticEvent) => {
@@ -21,7 +24,8 @@ export const CCardMedia = (props: CCardMediaProps) => {
       height: '250px',
       display: 'flex',
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
+      padding: theme.spacing(0, 2, 2)
     }}>
       {!imageIsLoaded && (
         <CircularProgress/>
