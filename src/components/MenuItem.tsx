@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 import {
   ListItem,
   ListItemIcon,
@@ -21,6 +21,7 @@ export const MenuItem = (props: MenuItemProps) => {
   } = props;
 
   const theme = useTheme();
+  const location = useLocation();
 
   return (
     <ListItem
@@ -28,8 +29,10 @@ export const MenuItem = (props: MenuItemProps) => {
       to={to}
       sx={{
         textDecoration: 'none',
-        color: theme.palette.text.primary
-        // backgroundColor: theme.palette.action.selected
+        color: theme.palette.text.primary,
+        backgroundColor: to === location.pathname
+          ? theme.palette.action.selected
+          : 'inherit'
       }}
       button
     >
