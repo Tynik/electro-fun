@@ -1,4 +1,5 @@
 const path = require('path');
+const process = require('process');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
@@ -14,7 +15,7 @@ module.exports = {
   experiments: {
     asset: true
   },
-  devtool: 'eval-source-map',
+  devtool: process.env.NODE_ENV === 'production' ? false : 'eval-source-map',
   module: {
     rules: [
       {
@@ -87,6 +88,8 @@ module.exports = {
     hot: true,
     port: 8097,
     historyApiFallback: true,
-    contentBase: path.join(__dirname, 'dist'),
+    static: {
+      directory: path.join(__dirname, 'dist')
+    },
   }
 };

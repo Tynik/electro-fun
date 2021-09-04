@@ -18,7 +18,6 @@ import {
 } from './components';
 import { DbContext } from './context';
 import { useDb, useDbSearch } from './hooks';
-import './App.scss';
 
 const drawerWidth = 240;
 
