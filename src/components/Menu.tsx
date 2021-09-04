@@ -25,6 +25,7 @@ import {
 
 import { DbContext } from '../context';
 import { getIcon } from '../utils';
+import { MenuItem } from './MenuItem';
 
 const Search = styled('div')(({ theme }) => (
   {
@@ -194,36 +195,23 @@ export const Menu = (props: MenuProps) => {
         <Divider/>
         <List>
           {Object.keys(db.categories).map(categoryId => (
-            <ListItem
+            <MenuItem
               key={`category-${categoryId}`}
-              component={RouterLink}
               to={`/category/${categoryId}`}
-              sx={{
-                textDecoration: 'none',
-                color: theme.palette.text.primary,
-                // backgroundColor: theme.palette.action.selected
-              }}
-              button
-            >
-              <ListItemIcon>{getIcon(db.categories[categoryId].icon)}</ListItemIcon>
-              <ListItemText>{db.categories[categoryId].name}</ListItemText>
-            </ListItem>
+              icon={getIcon(db.categories[categoryId].icon)}
+              name={db.categories[categoryId].name}
+            />
           ))}
-
+        </List>
+        <Divider/>
+        <List>
           {db.menu.map(itemMenu => (
-            <ListItem
+            <MenuItem
               key={itemMenu.name}
-              component={RouterLink}
               to={itemMenu.url}
-              sx={{
-                textDecoration: 'none',
-                color: theme.palette.text.primary
-              }}
-              button
-            >
-              <ListItemIcon>{getIcon(itemMenu.icon)}</ListItemIcon>
-              <ListItemText>{itemMenu.name}</ListItemText>
-            </ListItem>
+              icon={getIcon(itemMenu.icon)}
+              name={itemMenu.name}
+            />
           ))}
         </List>
       </Drawer>

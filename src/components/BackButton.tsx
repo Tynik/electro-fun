@@ -11,6 +11,8 @@ export const BackButton = () => {
       size={'small'}
       startIcon={<ArrowBackIcon/>}
       onClick={() => history.goBack()}
-    >Назад</Button>
+    >
+      Назад
+    </Button>
   );
 };
