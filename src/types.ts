@@ -40,9 +40,9 @@ export type ExternalResourceLink = {
 export type Item = {
   title: string
   subtitle: string
-  content: string
   id?: string
   categoryId?: number
+  content?: string
   warningContent?: string
   seo?: Seo & { title?: string }
   datasheetLink?: string

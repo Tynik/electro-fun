@@ -186,6 +186,7 @@ export const ItemInfo = () => {
   const processItemContent = (itemContent: string) => {
     return clarificationsWrapper(itemContent);
   };
+
   // high priority to show errors
   if (errors.length) {
     return printErrors();
@@ -213,53 +214,64 @@ export const ItemInfo = () => {
             height={'300px'}
           />
 
-          <Box>
-            <Typography variant={'overline'}>Описание</Typography>
+          {item.content && (
+            <Box marginBottom={theme.spacing(2)}>
+              <Typography variant={'overline'}>Описание</Typography>
 
-            <Typography
-              variant={'body1'}
-              sx={{ whiteSpace: 'pre-line', textAlign: 'justify' }}
-            >
-              {processItemContent(item.content)}
-            </Typography>
+              <Typography
+                variant={'body1'}
+                sx={{ whiteSpace: 'pre-line', textAlign: 'justify' }}
+              >
+                {processItemContent(item.content)}
+              </Typography>
+            </Box>
+          )}
 
-            {item.warningContent && (
+          {item.warningContent && (
+            <Box marginBottom={theme.spacing(2)}>
               <Alert
                 severity={'warning'}
-                sx={{ whiteSpace: 'pre-line', marginTop: theme.spacing(2) }}
-              >{item.warningContent}</Alert>
-            )}
+                sx={{
+                  whiteSpace: 'pre-line',
+                  marginTop: theme.spacing(2)
+                }}
+              >
+                {item.warningContent}
+              </Alert>
+            </Box>
+          )}
 
-            {item.externalLinks && (
-              <Box marginTop={theme.spacing(2)}>
-                <Typography variant={'overline'}>Ссылки на внешние ресурсы</Typography>
+          {item.externalLinks && item.externalLinks.length > 0 && (
+            <Box>
+              <Typography variant={'overline'}>
+                Ссылки на внешние ресурсы
+              </Typography>
 
-                <List disablePadding>
-                  {item.externalLinks.map(externalResource => (
-                    <ListItem key={externalResource.name} disablePadding>
-                      {externalResource.icon && (
-                        <Icon
-                          fontSize={'small'}
-                          sx={{ display: 'flex', alignItems: 'center' }}
-                        >
-                          <img
-                            src={`/icons/${externalResource.icon}`}
-                            alt={externalResource.iconAlt}
-                            width={16}
-                            height={16}/>
-                        </Icon>
-                      )}
-                      <ListItemText>
-                        <ExternalLink href={externalResource.url}>
-                          {externalResource.name}
-                        </ExternalLink>
-                      </ListItemText>
-                    </ListItem>
-                  ))}
-                </List>
-              </Box>
-            )}
-          </Box>
+              <List disablePadding>
+                {item.externalLinks.map(externalResource => (
+                  <ListItem key={externalResource.name} disablePadding>
+                    {externalResource.icon && (
+                      <Icon
+                        fontSize={'small'}
+                        sx={{ display: 'flex', alignItems: 'center' }}
+                      >
+                        <img
+                          src={`/icons/${externalResource.icon}`}
+                          alt={externalResource.iconAlt}
+                          width={16}
+                          height={16}/>
+                      </Icon>
+                    )}
+                    <ListItemText>
+                      <ExternalLink href={externalResource.url}>
+                        {externalResource.name}
+                      </ExternalLink>
+                    </ListItemText>
+                  </ListItem>
+                ))}
+              </List>
+            </Box>
+          )}
         </Grid>
 
         <Grid xs={12} sm={6} item>
@@ -340,5 +352,6 @@ export const ItemInfo = () => {
         </Grid>
       </Grid>
     </Container>
-  );
+  )
+    ;
 };
