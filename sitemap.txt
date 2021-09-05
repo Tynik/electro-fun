@@ -15,3 +15,4 @@ https://electro-fun.site/#/item/cc1310
 https://electro-fun.site/#/item/cc2652p
 https://electro-fun.site/#/item/ch340g
 https://electro-fun.site/#/item/irf3205
+https://electro-fun.site/#/item/led-smd-0805

@@ -14,19 +14,25 @@ export const CCardMedia = (props: CCardMediaProps) => {
   const [imageIsLoaded, setImageIsLoaded] = React.useState(false);
 
   const onImageLoad = (e: SyntheticEvent) => {
-    if ((e.target as HTMLImageElement).complete) {
+    if ((
+      e.target as HTMLImageElement
+    ).complete) {
       setImageIsLoaded(true);
     }
   };
 
   return (
-    <div style={{
-      height: '250px',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      padding: theme.spacing(0, 2, 2)
-    }}>
+    <div
+      aria-busy={true}
+      aria-live={'polite'}
+      style={{
+        height: '250px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: theme.spacing(0, 2, 2)
+      }}
+    >
       {!imageIsLoaded && (
         <CircularProgress/>
       )}

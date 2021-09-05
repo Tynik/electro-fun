@@ -3,16 +3,16 @@ import {
   Box,
   Modal,
   styled,
-  CircularProgress,
+  Typography,
   useTheme
 } from '@material-ui/core';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 
+import { Loader } from './Loader';
 import { CImage } from './CImage';
 import { ItemImage } from '../types';
-import { Typography } from '@material-ui/core';
 
 const CustomCarousel = styled(Carousel)(({ theme }) => (
   {
@@ -54,18 +54,10 @@ export const ImageSlider = (props: ImageSliderProps) => {
   return (
     <>
       {inLoading > 0 && (
-        <div
-          aria-busy={true}
-          aria-live={'polite'}
-          style={{
-            height: '300px',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}
-        >
-          <CircularProgress/>
-        </div>
+        <Loader style={{
+          height: '300px',
+          alignItems: 'center'
+        }}/>
       )}
 
       {/*https://github.com/leandrowd/react-responsive-carousel*/}

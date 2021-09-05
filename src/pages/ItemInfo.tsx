@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, Link as RouterLink } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import {
   Container,
   Box,
@@ -9,7 +9,6 @@ import {
   Typography,
   List,
   ListItem,
-  Link,
   Icon,
   ListItemText,
   Alert,
@@ -20,12 +19,21 @@ import {
   ShoppingCart as ShoppingCartIcon
 } from '@material-ui/icons';
 
-import { ItemOption, OptionDefinitionSuffix } from '../types';
+import { Item, ItemOption, OptionDefinitionSuffix } from '../types';
 import { DbContext } from '../context';
-import { useTextProcessor, useSmoothScroll, useStaticErrors } from '../hooks';
-import { getItemById } from '../utils';
-import { ImageSlider } from './ImageSlider';
-import { BackButton } from './BackButton';
+import {
+  useTextProcessor,
+  useSmoothScroll,
+  useStaticErrors,
+  useDbSearch
+} from '../hooks';
+import {
+  Loader,
+  ExternalLink,
+  AbbrLink,
+  ImageSlider,
+  BackButton
+} from '../components';
 
 export const sortItemOptions = (allOptions, options: ItemOption[]) =>
   options.sort((optionA, optionB) => {
@@ -45,17 +53,34 @@ export const ItemInfo = () => {
   const theme = useTheme();
 
   const { id } = useParams<any>();
-  const { db } = React.useContext(DbContext);
-  const { wordsWrapper } = useTextProcessor();
-  const { setErrors, printErrors } = useStaticErrors();
 
-  const item = getItemById(db, id);
+  const [item, setItem] = React.useState<Item>(null);
+
+  const { db, loadNextDbPart } = React.useContext(DbContext);
+  const { search, foundItems } = useDbSearch(db, loadNextDbPart);
+
+  const { wordsWrapper } = useTextProcessor();
+  const { errors, setErrors, printErrors } = useStaticErrors();
 
   useSmoothScroll({ top: 0, left: 0 });
 
   React.useEffect(() => {
-    if (!item) {
+    search({ id });
+  }, []);
+
+  React.useEffect(() => {
+    if (!foundItems) {
+      return;
+    }
+    if (foundItems.length) {
+      setItem(foundItems[0]);
+    } else {
       setErrors([`"${id}" не найден или был переименован`]);
+    }
+  }, [foundItems]);
+
+  React.useEffect(() => {
+    if (item === null) {
       return;
     }
     let originalDocumentTitle,
@@ -92,7 +117,7 @@ export const ItemInfo = () => {
     };
   }, [item]);
 
-  const insertFeatureSectionName = (options: ItemOption[], index: number): boolean => {
+  const insertFeatureSectionName = React.useCallback((options: ItemOption[], index: number): boolean => {
     const featSectionRef = db.options[options[index].refId].featSecRefId;
 
     if (!index) {
@@ -103,9 +128,9 @@ export const ItemInfo = () => {
     return !prevFeatSectionRef
       ? Boolean(featSectionRef)
       : featSectionRef !== prevFeatSectionRef;
-  };
+  }, []);
 
-  const getOptionValue = (option: ItemOption) => {
+  const getOptionValue = React.useCallback((option: ItemOption) => {
     const processOptionValue = (values: any, suffix: OptionDefinitionSuffix) => {
       if (!Array.isArray(values)) {
         return [
@@ -128,40 +153,46 @@ export const ItemInfo = () => {
       <span
         key={`${option.refId}-${index}`}
         style={{ display: 'block' }}
-      >{value}</span>
+      >
+        {value}
+      </span>
     );
-  };
+  }, []);
 
-  const abbreviationsWrapper = (text: string) =>
+  const abbreviationsWrapper = React.useCallback((text: string) =>
     wordsWrapper(db.abbreviations, text, (
       (text, abbr, index) => (
-        <Link
+        <AbbrLink
           key={`${text}-${abbr}-${index}`}
           href={db.abbreviations[abbr]}
-          target="_blank"
         >
-          <abbr>{abbr}</abbr>
-        </Link>
+          {abbr}
+        </AbbrLink>
       )
-    ));
+    )), []);
 
-  const clarificationsWrapper = (text: string) =>
+  const clarificationsWrapper = React.useCallback((text: string) =>
     wordsWrapper(db.clarifications, text, (
       (text, phrase, index) => (
-        <Link
+        <ExternalLink
           key={`${text}-${phrase}-${index}`}
           href={db.clarifications[phrase]}
-          target={'_blank'}
-        >{phrase}</Link>
+        >
+          {phrase}
+        </ExternalLink>
       )
-    ));
+    )), []);
 
   const processItemContent = (itemContent: string) => {
     return clarificationsWrapper(itemContent);
   };
-
-  if (!item) {
+  // high priority to show errors
+  if (errors.length) {
     return printErrors();
+  }
+  // item is loading in progress
+  if (item === null) {
+    return <Loader/>;
   }
 
   return (
@@ -219,9 +250,9 @@ export const ItemInfo = () => {
                         </Icon>
                       )}
                       <ListItemText>
-                        <Link
-                          href={externalResource.url}
-                          target={'_blank'}>{externalResource.name}</Link>
+                        <ExternalLink href={externalResource.url}>
+                          {externalResource.name}
+                        </ExternalLink>
                       </ListItemText>
                     </ListItem>
                   ))}
@@ -288,7 +319,9 @@ export const ItemInfo = () => {
                   target={'_blank'}
                   href={item.datasheetLink}
                   startIcon={<LinkIcon/>}
-                >Datasheet</Button>
+                >
+                  Datasheet
+                </Button>
               )}
               {Boolean(item.buyLink) && (
                 <Button
@@ -298,7 +331,9 @@ export const ItemInfo = () => {
                   href={item.buyLink}
                   color={'success'}
                   startIcon={<ShoppingCartIcon/>}
-                >Купить</Button>
+                >
+                  Купить
+                </Button>
               )}
             </Stack>
           </Box>

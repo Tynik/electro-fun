@@ -11,18 +11,21 @@ import {
   Menu,
   DrawerHeader,
   Category,
-  Items,
-  Datasheets,
-  ItemInfo,
   Footer
 } from './components';
+import {
+  Items,
+  ItemInfo,
+  Datasheets
+} from './pages';
 import { DbContext } from './context';
 import { useDb, useDbSearch } from './hooks';
 
 const drawerWidth = 240;
 
-const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
-  ({ theme, open }: any) => (
+const Main = styled('main', {
+  shouldForwardProp: (prop) => prop !== 'menuIsOpened'
+})(({ theme, menuIsOpened }: any) => (
     {
       flexGrow: 1,
       padding: theme.spacing(2, 0),
@@ -32,7 +35,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
       }),
       marginLeft: `-${drawerWidth}px`,
       ...(
-        open && {
+        menuIsOpened && {
           transition: theme.transitions.create('margin', {
             easing: theme.transitions.easing.easeOut,
             duration: theme.transitions.duration.enteringScreen
@@ -94,7 +97,7 @@ export const App = () => {
             onSearch={onSearch}
           />
 
-          <Main open={menuIsOpened}>
+          <Main menuIsOpened={menuIsOpened}>
             <DrawerHeader/>
 
             <Switch>

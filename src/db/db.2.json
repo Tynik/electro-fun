@@ -1,14 +1,14 @@
 {
   "items": [
     {
-      "title": "Test",
-      "subtitle": "",
+      "title": "LED SMD 0805",
+      "subtitle": "Желтый",
       "seo": {
         "description": "",
-        "keywords": ""
+        "keywords": "led, 0805, желтый, smd"
       },
       "buyLink": "",
-      "datasheetLink": "/datasheets/IRF3205PbF.pdf",
+      "datasheetLink": "/datasheets/LED0805BLUE.pdf",
       "images": [
         {
           "src": "/photos/IRF3205PbF-1.png",

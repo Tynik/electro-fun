@@ -3,9 +3,9 @@ import { useParams } from 'react-router-dom';
 import {
   Container
 } from '@material-ui/core';
+import { Items } from '../pages';
 import { DbContext } from '../context';
 import { useDbSearch } from '../hooks';
-import { Items } from './Items';
 import { Breadcrumbs } from './Breadcrumbs';
 import { BreadcrumbItem } from './BreadcrumbItem';
 import { getIcon } from '../utils';

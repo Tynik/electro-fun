@@ -5,12 +5,9 @@ import {
   IconButton,
   Divider,
   List,
-  ListItem,
   Typography,
   InputBase,
   Drawer,
-  ListItemIcon,
-  ListItemText,
   useTheme,
   alpha,
   styled
@@ -20,12 +17,13 @@ import {
   Menu as MenuIcon,
   ChevronLeft as ChevronLeftIcon,
   ChevronRight as ChevronRightIcon,
-  Search as SearchIcon,
+  Search as SearchIcon
 } from '@material-ui/icons';
 
 import { DbContext } from '../context';
 import { getIcon } from '../utils';
 import { MenuItem } from './MenuItem';
+import { useLocalStorage } from '../hooks';
 
 const Search = styled('div')(({ theme }) => (
   {
@@ -122,23 +120,37 @@ export const Menu = (props: MenuProps) => {
 
   const theme = useTheme();
 
-  const [menuIsOpened, setMenuOpen] = React.useState(false);
+  const { db } = React.useContext(DbContext);
+
+  const {
+    set: setMenuIsOpenedInitialState,
+    initialValue: menuIsOpenedInitialState
+  } = useLocalStorage('menuIsOpened', 'boolean')
+
+  const [menuIsOpened, setMenuOpen] = React.useState<boolean>(menuIsOpenedInitialState);
 
   React.useEffect(() => {
     onOpen(menuIsOpened);
   }, [menuIsOpened]);
 
-  const { db } = React.useContext(DbContext);
+  const onToggleMenuHandler = (state: boolean) => {
+    setMenuOpen(state);
+    setMenuIsOpenedInitialState(state);
+  };
 
   return (
     <>
-      <AppBar position="fixed" open={menuIsOpened} drawerWidth={drawerWidth}>
+      <AppBar
+        position={'fixed'}
+        open={menuIsOpened}
+        drawerWidth={drawerWidth}
+      >
         <Toolbar>
           <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={() => setMenuOpen(true)}
-            edge="start"
+            color={'inherit'}
+            aria-label={'open drawer'}
+            onClick={() => onToggleMenuHandler(true)}
+            edge={'start'}
             sx={{
               mr: 2, ...(
                 menuIsOpened && { display: 'none' }
@@ -183,12 +195,12 @@ export const Menu = (props: MenuProps) => {
             boxSizing: 'border-box'
           }
         }}
-        variant="persistent"
-        anchor="left"
+        variant={'persistent'}
+        anchor={'left'}
         open={menuIsOpened}
       >
         <DrawerHeader>
-          <IconButton onClick={() => setMenuOpen(false)}>
+          <IconButton onClick={() => onToggleMenuHandler(false)}>
             {theme.direction === 'ltr' ? <ChevronLeftIcon/> : <ChevronRightIcon/>}
           </IconButton>
         </DrawerHeader>

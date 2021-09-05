@@ -5,9 +5,7 @@ import {
   Card,
   Button,
   CardActionArea,
-  CardHeader,
-  CardContent,
-  Typography
+  CardHeader
 } from '@material-ui/core';
 import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 
@@ -15,7 +13,7 @@ import { Item } from '../types';
 import { DbContext } from '../context';
 import { generateItemId } from '../utils';
 import { NO_IMAGE } from '../constants';
-import { CCardMedia } from './CCardMedia';
+import { CCardMedia } from '../components';
 
 export const getItemMainImage = (item: Item) => {
   if (!item.images || !item.images.length) {
