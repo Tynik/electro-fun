@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link, LinkProps } from '@material-ui/core';
 
-export interface ExternalLinkProps extends Omit<LinkProps, 'target'> {
-  children: JSX.Element | JSX.Element[] | string
-}
+export interface ExternalLinkProps extends Omit<LinkProps, 'target'> {}
 
 export const ExternalLink = ({ children, ...props }: ExternalLinkProps) => {
   return (

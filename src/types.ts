@@ -33,6 +33,7 @@ export type ItemImage = {
 export type ExternalResourceLink = {
   name: string
   url: string
+  lang: string
   icon?: string
   iconAlt: string
 }

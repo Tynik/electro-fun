@@ -631,6 +631,7 @@
         {
           "name": "Официальная страница BMP280",
           "url": "https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp280/",
+          "lang": "en",
           "icon": "bosch-sensortec.com.ico",
           "iconAlt": "www.bosch-sensortec.com"
         }
@@ -782,6 +783,7 @@
         {
           "name": "Подключение и разблокировка батареи ноутбука (адаптер и Be2works) / Laptop battery unlock",
           "url": "https://youtu.be/Urs0xgfHKpY",
+          "lang": "ru",
           "icon": "youtube.com.png",
           "iconAlt": "youtube.com"
         }
@@ -846,12 +848,14 @@
         {
           "name": "Официальная страница CCS811",
           "url": "https://www.sciosense.com/products/environmental-sensors/ccs811-gas-sensor-solution/",
+          "lang": "en",
           "icon": "sciosense.com.png",
           "iconAlt": "sciosense.com"
         },
         {
           "name": "Adafruit CCS811",
           "url": "https://github.com/adafruit/Adafruit_CCS811",
+          "lang": "en",
           "icon": "github.com.svg",
           "iconAlt": "github.com"
         }
@@ -904,12 +908,14 @@
         {
           "name": "Официальная страница APDS-9960",
           "url": "https://www.broadcom.com/products/optical-sensors/integrated-ambient-light-and-proximity-sensors/apds-9960",
+          "lang": "en",
           "icon": "broadcom.com.ico",
           "iconAlt": "www.broadcom.com"
         },
         {
           "name": "SparkFun APDS-9960",
           "url": "https://github.com/sparkfun/SparkFun_APDS-9960_Sensor_Arduino_Library",
+          "lang": "en",
           "icon": "github.com.svg",
           "iconAlt": "github.com"
         }
@@ -970,6 +976,7 @@
         {
           "name": "Официальная страница MAC 35-й серии",
           "url": "https://www.macvalves.com/product/35-series",
+          "lang": "en",
           "icon": "macvalves.com.png",
           "iconAlt": "macvalves.com"
         }
@@ -1120,6 +1127,7 @@
         {
           "name": "Официальная страница BHI260AP",
           "url": "https://www.bosch-sensortec.com/products/smart-sensors/bhi260ap",
+          "lang": "en",
           "icon": "bosch-sensortec.com.ico",
           "iconAlt": "www.bosch-sensortec.com"
         }
@@ -1176,6 +1184,7 @@
         {
           "name": "Официальная страница BHI260AP",
           "url": "https://www.nordicsemi.com/Products/nRF24-series",
+          "lang": "en",
           "icon": "nordicsemi.com.png",
           "iconAlt": "nordicsemi.com"
         }
@@ -1255,6 +1264,7 @@
         {
           "name": "Официальная страница ESP8266EX",
           "url": "https://www.espressif.com/en/products/socs",
+          "lang": "en",
           "icon": "espressif.com.ico",
           "iconAlt": "espressif.com"
         }
@@ -1351,6 +1361,7 @@
         {
           "name": "Официальная страница CC1310",
           "url": "https://www.ti.com/product/CC1310",
+          "lang": "en",
           "icon": "ti.com.ico",
           "iconAlt": "ti.com"
         }
@@ -1452,12 +1463,14 @@
         {
           "name": "Официальная страница CC2652P",
           "url": "https://www.ti.com/product/CC2652P",
+          "lang": "en",
           "icon": "ti.com.ico",
           "iconAlt": "ti.com"
         },
         {
           "name": "ZigBee стик v4 (модули RF-STAR)",
           "url": "https://github.com/egony/cc2652p_cc1352p_RF-STAR/wiki",
+          "lang": "en",
           "icon": "github.com.svg",
           "iconAlt": "github.com"
         }
@@ -1584,6 +1597,7 @@
         {
           "name": "Официальная страница IRF3205",
           "url": "https://www.infineon.com/cms/en/product/power/mosfet/12v-300v-n-channel-power-mosfet/irf3205/",
+          "lang": "en",
           "icon": "infineon.com.ico",
           "iconAlt": "infineon.com"
         }

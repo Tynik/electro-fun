@@ -28,7 +28,7 @@ export type ItemsProps = {
 }
 
 export const Items = ({ items }: ItemsProps) => {
-  const { isNextDbPart, loadNextDbPart } = React.useContext(DbContext);
+  const { isNextPage, loadNextPage } = React.useContext(DbContext);
 
   return (
     <Grid spacing={2} container>
@@ -56,10 +56,13 @@ export const Items = ({ items }: ItemsProps) => {
 
       <Grid xs={12} sx={{ textAlign: 'center' }} item>
         <Button
-          onClick={loadNextDbPart}
-          disabled={!isNextDbPart()}
+          onClick={loadNextPage}
+          disabled={!isNextPage()}
           startIcon={<ExpandMoreIcon/>}
-          variant={'outlined'}>Показать больше</Button>
+          variant={'outlined'}
+        >
+          Показать больше
+        </Button>
       </Grid>
     </Grid>
   );

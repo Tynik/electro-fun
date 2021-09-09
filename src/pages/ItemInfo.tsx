@@ -4,7 +4,6 @@ import {
   Container,
   Box,
   Stack,
-  Button,
   Grid,
   Typography,
   List,
@@ -32,7 +31,8 @@ import {
   ExternalLink,
   AbbrLink,
   ImageSlider,
-  BackButton
+  BackButton,
+  ExternalButtonLink
 } from '../components';
 
 export const sortItemOptions = (allOptions, options: ItemOption[]) =>
@@ -263,7 +263,10 @@ export const ItemInfo = () => {
                       </Icon>
                     )}
                     <ListItemText>
-                      <ExternalLink href={externalResource.url}>
+                      <ExternalLink
+                        href={externalResource.url}
+                        hrefLang={externalResource.lang}
+                      >
                         {externalResource.name}
                       </ExternalLink>
                     </ListItemText>
@@ -325,27 +328,24 @@ export const ItemInfo = () => {
           <Box marginTop={theme.spacing(2)}>
             <Stack direction={'row'} spacing={2}>
               {Boolean(item.datasheetLink) && (
-                <Button
-                  component={'a'}
-                  variant={'outlined'}
-                  target={'_blank'}
+                <ExternalButtonLink
                   href={item.datasheetLink}
+                  hrefLang={'en'}
+                  variant={'outlined'}
                   startIcon={<LinkIcon/>}
                 >
                   Datasheet
-                </Button>
+                </ExternalButtonLink>
               )}
               {Boolean(item.buyLink) && (
-                <Button
-                  component={'a'}
-                  variant={'contained'}
-                  target={'_blank'}
+                <ExternalButtonLink
                   href={item.buyLink}
+                  variant={'contained'}
                   color={'success'}
                   startIcon={<ShoppingCartIcon/>}
                 >
                   Купить
-                </Button>
+                </ExternalButtonLink>
               )}
             </Stack>
           </Box>

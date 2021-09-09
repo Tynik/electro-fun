@@ -58,7 +58,9 @@ export const App = () => {
     errors,
     printErrors,
     isNextDbPart,
-    loadNextDbPart
+    loadNextDbPart,
+    isNextPage,
+    loadNextPage
   } = useDb();
   const { search, foundItems } = useDbSearch(db, loadNextDbPart);
 
@@ -88,7 +90,13 @@ export const App = () => {
     return <LinearProgress/>;
   }
   return (
-    <DbContext.Provider value={{ db, isNextDbPart, loadNextDbPart }}>
+    <DbContext.Provider value={{
+      db,
+      isNextDbPart,
+      loadNextDbPart,
+      isNextPage,
+      loadNextPage
+    }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
         <Box sx={{ display: 'flex' }}>
           <Menu
