@@ -18,7 +18,10 @@ export const Datasheets = () => {
       <List>
         {sortedDatasheets.map(datasheet => (
           <ListItem key={datasheet}>
-            <ExternalLink href={db.datasheets[datasheet].url}>
+            <ExternalLink
+              href={db.datasheets[datasheet].url}
+              hrefLang={db.datasheets[datasheet].lang}
+            >
               {datasheet}
             </ExternalLink>
           </ListItem>

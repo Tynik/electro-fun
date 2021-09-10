@@ -327,10 +327,10 @@ export const ItemInfo = () => {
 
           <Box marginTop={theme.spacing(2)}>
             <Stack direction={'row'} spacing={2}>
-              {Boolean(item.datasheetLink) && (
+              {Boolean(item.datasheetId) && (
                 <ExternalButtonLink
-                  href={item.datasheetLink}
-                  hrefLang={'en'}
+                  href={db.datasheets[item.datasheetId].url}
+                  hrefLang={db.datasheets[item.datasheetId].lang}
                   variant={'outlined'}
                   startIcon={<LinkIcon/>}
                 >

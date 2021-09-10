@@ -23,24 +23,24 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "7.15.0",
-    "@babel/preset-env": "7.15.0",
+    "@babel/preset-env": "7.15.6",
     "@babel/preset-typescript": "7.15.0",
     "@types/jest": "27.0.1",
-    "@types/node": "16.7.10",
+    "@types/node": "16.9.1",
     "@types/react-router-dom": "5.1.8",
     "copy-webpack-plugin": "9.0.1",
     "css-loader": "6.2.0",
     "gh-pages": "3.2.3",
     "html-webpack-plugin": "5.3.2",
-    "jest": "27.0.6",
-    "sass": "1.39.0",
+    "jest": "27.1.1",
+    "sass": "1.39.2",
     "sass-loader": "12.1.0",
     "style-loader": "3.2.1",
     "ts-loader": "9.2.5",
     "ts-node": "10.2.1",
     "typescript": "4.4.2",
-    "webpack": "5.52.0",
+    "webpack": "5.52.1",
     "webpack-cli": "4.8.0",
-    "webpack-dev-server": "4.1.0"
+    "webpack-dev-server": "4.2.0"
   }
 }

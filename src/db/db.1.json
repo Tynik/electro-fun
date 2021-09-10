@@ -55,74 +55,105 @@
     "Enhanced ShockBurst™": "https://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.sdk5.v12.0.0%2Fesb_users_guide.html"
   },
   "datasheets": {
+    "BC847": {
+      "url": "/datasheets/BC847.pdf",
+      "lang": "en"
+    },
     "CP2112": {
-      "url": "/datasheets/CP2112.pdf"
+      "url": "/datasheets/CP2112.pdf",
+      "lang": "en"
     },
     "APDS-9960": {
-      "url": "/datasheets/APDS-9960.pdf"
+      "url": "/datasheets/APDS-9960.pdf",
+      "lang": "en"
     },
     "ARM-EM4-EM6": {
-      "url": "/datasheets/ARM-EM4-EM6.pdf"
+      "url": "/datasheets/ARM-EM4-EM6.pdf",
+      "lang": "en"
     },
     "BHI260AP": {
-      "url": "/datasheets/BHI260AP.pdf"
+      "url": "/datasheets/BHI260AP.pdf",
+      "lang": "en"
     },
     "BMG250": {
-      "url": "/datasheets/BMG250.pdf"
+      "url": "/datasheets/BMG250.pdf",
+      "lang": "en"
     },
     "BMP280": {
-      "url": "/datasheets/BMP280.pdf"
+      "url": "/datasheets/BMP280.pdf",
+      "lang": "en"
     },
     "CC1310": {
-      "url": "/datasheets/CC1310.pdf"
+      "url": "/datasheets/CC1310.pdf",
+      "lang": "en"
     },
     "CC1312R": {
-      "url": "/datasheets/CC1312R.pdf"
+      "url": "/datasheets/CC1312R.pdf",
+      "lang": "en"
     },
     "CC1352P": {
-      "url": "/datasheets/CC1352P.pdf"
+      "url": "/datasheets/CC1352P.pdf",
+      "lang": "en"
     },
     "CC2530": {
-      "url": "/datasheets/CC2530.pdf"
+      "url": "/datasheets/CC2530.pdf",
+      "lang": "en"
     },
     "CC2652P": {
-      "url": "/datasheets/CC2652P.pdf"
+      "url": "/datasheets/CC2652P.pdf",
+      "lang": "en"
     },
     "CC2652R": {
-      "url": "/datasheets/CC2652R.pdf"
+      "url": "/datasheets/CC2652R.pdf",
+      "lang": "en"
     },
     "CCS811": {
-      "url": "/datasheets/CCS811.pdf"
+      "url": "/datasheets/CCS811.pdf",
+      "lang": "en"
     },
     "CH340": {
-      "url": "/datasheets/CH340.pdf"
+      "url": "/datasheets/CH340.pdf",
+      "lang": "en"
     },
     "ESP8266EX": {
-      "url": "/datasheets/ESP8266EX.pdf"
+      "url": "/datasheets/ESP8266EX.pdf",
+      "lang": "en"
     },
     "IRF3205PbF": {
-      "url": "/datasheets/IRF3205PbF.pdf"
+      "url": "/datasheets/IRF3205PbF.pdf",
+      "lang": "en"
     },
     "IRLB4030PbF": {
-      "url": "/datasheets/IRLB4030PbF.pdf"
+      "url": "/datasheets/IRLB4030PbF.pdf",
+      "lang": "en"
     },
     "LM1117": {
-      "url": "/datasheets/LM1117.pdf"
+      "url": "/datasheets/LM1117.pdf",
+      "lang": "en"
     },
     "MAC-35A": {
-      "url": "/datasheets/MAC-35A.pdf"
+      "url": "/datasheets/MAC-35A.pdf",
+      "lang": "en"
     },
     "MPU-9250A-1.1": {
-      "url": "/datasheets/MPU-9250A-1.1.pdf"
+      "url": "/datasheets/MPU-9250A-1.1.pdf",
+      "lang": "en"
     },
     "nRF24L01": {
-      "url": "/datasheets/nRF24L01.pdf"
+      "url": "/datasheets/nRF24L01.pdf",
+      "lang": "en"
     },
     "TEC1-12715": {
-      "url": "/datasheets/TEC1-12715.pdf"
+      "url": "/datasheets/TEC1-12715.pdf",
+      "lang": "en"
     },
     "ULN200x": {
-      "url": "/datasheets/ULN200x.pdf"
+      "url": "/datasheets/ULN200x.pdf",
+      "lang": "en"
+    },
+    "LED0805BLUE": {
+      "url": "/datasheets/LED0805BLUE.pdf",
+      "lang": "en"
     }
   },
   "categories": {
@@ -523,7 +554,7 @@
         "keywords": "lm2596s, стабилизатор, понижение"
       },
       "buyLink": "https://izi.ua/p-19437930-stabilizator-napryazheniya-ponizhayushchiy-lm2596s-dc-dc-3a",
-      "datasheetLink": "",
+      "datasheetId": "",
       "images": [
         {
           "src": "https://images.izi.ua/83859610",
@@ -567,7 +598,7 @@
         "keywords": "bmp280, температура, давление, влажность"
       },
       "buyLink": "https://izi.ua/p-19665588-bmp280-temperature-pressure-humidity-sensor-for-arduino",
-      "datasheetLink": "/datasheets/BMP280.pdf",
+      "datasheetId": "BMP280",
       "images": [
         {
           "src": "https://images.izi.ua/84778923",
@@ -646,7 +677,7 @@
         "keywords": "mpu-9250, гироскоп, акселерометр, магнитометр, dmp"
       },
       "buyLink": "https://izi.ua/p-6267920-akselerometr-giroskop-magnitometr-gy-9250-9-dof-na-mpu-9250-i2c",
-      "datasheetLink": "/datasheets/MPU-9250A-1.1.pdf",
+      "datasheetId": "MPU-9250A-1.1",
       "images": [
         {
           "src": "https://images.izi.ua/29881771",
@@ -729,7 +760,7 @@
         "keywords": "cp2112, usb, smbus, конвертер, перепрошивка, батареи"
       },
       "buyLink": "https://izi.ua/p-5455863-adapter-cp2112-usb-uart-i2c-dlya-proshivki-batarey-noutbukov-i-proch",
-      "datasheetLink": "/datasheets/CP2112.pdf",
+      "datasheetId": "CP2112",
       "images": [
         {
           "src": "https://images.izi.ua/25804009",
@@ -798,7 +829,7 @@
         "keywords": "датчик, co2, качество, воздух, частицы, voc, tvoc"
       },
       "buyLink": "https://izi.ua/p-11439002-datchik-co2-kachestva-vozdukha-arduino-ccs811-i2c-cjmcu-811",
-      "datasheetLink": "/datasheets/CCS811.pdf",
+      "datasheetId": "CCS811",
       "images": [
         {
           "src": "https://images.izi.ua/54929459",
@@ -870,7 +901,7 @@
         "keywords": "датчик, жесты, rgb, распознавание"
       },
       "buyLink": "https://izi.ua/p-5455883-apds-9960-datchik-rgb-i-raspoznavanie-zhestov",
-      "datasheetLink": "/datasheets/APDS-9960.pdf",
+      "datasheetId": "APDS-9960",
       "images": [
         {
           "src": "https://images.izi.ua/25804439",
@@ -930,7 +961,7 @@
         "keywords": "соленоид, boost, вакуум, давление, управление"
       },
       "buyLink": "https://izi.ua/p-19438695-mac-3-port-boost-control-solenoid-valve-35a-12v-6mm",
-      "datasheetLink": "/datasheets/MAC-35A.pdf",
+      "datasheetId": "MAC-35A",
       "images": [
         {
           "src": "https://images.izi.ua/83862864",
@@ -990,7 +1021,7 @@
         "description": "TEC1-12715 - элемент Пельтье мощностью до 136 Вт",
         "keywords": "tec1-12715, пельтье, термопара, охлаждение, нагрев"
       },
-      "datasheetLink": "/datasheets/TEC1-12715.pdf",
+      "datasheetId": "TEC1-12715",
       "buyLink": "https://izi.ua/p-21834878-element-pelte-tec1-12715",
       "images": [
         {
@@ -1036,7 +1067,7 @@
         "keywords": "bhi260ap, датчик, ai, микроконтроллер, гироскоп, акселерометр, обучение"
       },
       "buyLink": "https://eu.mouser.com/ProductDetail/Bosch-Sensortec/BHI260AP?qs=T94vaHKWudTEPTnGI%252BTy9w%3D%3D",
-      "datasheetLink": "/datasheets/BHI260AP.pdf",
+      "datasheetId": "BHI260AP",
       "images": [
         {
           "src": "/photos/BHI260AP-1.jpg",
@@ -1142,7 +1173,7 @@
         "keywords": "nrf24l01, приемопередатчик, трансивер, ресивер"
       },
       "buyLink": "https://izi.ua/p-19433326-mini-radiomodul-smd-nrf24l01-wireless-mini-2-4-ghz",
-      "datasheetLink": "/datasheets/nRF24L01.pdf",
+      "datasheetId": "nRF24L01",
       "images": [
         {
           "src": "https://images.izi.ua/83841527",
@@ -1198,7 +1229,7 @@
         "description": "ESP8266EX - Wi-Fi микросхема для IoT решений",
         "keywords": "esp8266, wi-fi, iot"
       },
-      "datasheetLink": "/datasheets/ESP8266EX.pdf",
+      "datasheetId": "ESP8266EX",
       "images": [
         {
           "src": "/photos/ESP8266EX-1.jpg",
@@ -1278,7 +1309,7 @@
         "description": "CC1310 - сверхмалопотребляющее РЧ устройство с поддержкой Sub-1 GHz",
         "keywords": "cc1310, рч, сверхмалопотребляющее, экономичное, simplelink, zigbee, thread, ti, sub-1"
       },
-      "datasheetLink": "/datasheets/CC1310.pdf",
+      "datasheetId": "CC1310",
       "buyLink": "https://www.aliexpress.com/item/4001345191255.html?spm=a2g0o.productlist.0.0.4cb43b0aswX868&algo_pvid=c6d0f977-b439-4238-bf26-1f574b40f4aa&algo_exp_id=c6d0f977-b439-4238-bf26-1f574b40f4aa-5&pdp_ext_f=%7B%22sku_id%22%3A%2210000015755343950%22%7D",
       "images": [
         {
@@ -1375,7 +1406,7 @@
         "description": "CC2652P - многопротокольный беспроводной MCU",
         "keywords": "cc2652p, simplelink, bluetooth, zigbee, thread, ti"
       },
-      "datasheetLink": "/datasheets/CC2652P.pdf",
+      "datasheetId": "CC2652P",
       "buyLink": "",
       "images": [
         {
@@ -1484,7 +1515,7 @@
         "description": "CH340G - преобразование шины USB в последовательный интерфейс UART",
         "keywords": "ch340g, usb, uart, преобразование"
       },
-      "datasheetLink": "/datasheets/CH340.pdf",
+      "datasheetId": "CH340",
       "buyLink": "",
       "images": [
         {
@@ -1535,7 +1566,7 @@
         "keywords": "pb-irf3205, irf3205pbf, mosfet, мосфет"
       },
       "buyLink": "",
-      "datasheetLink": "/datasheets/IRF3205PbF.pdf",
+      "datasheetId": "IRF3205PbF",
       "images": [
         {
           "src": "/photos/IRF3205PbF-1.png",

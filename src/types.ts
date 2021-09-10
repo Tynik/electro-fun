@@ -46,7 +46,7 @@ export type Item = {
   content?: string
   warningContent?: string
   seo?: Seo & { title?: string }
-  datasheetLink?: string
+  datasheetId?: string
   buyLink?: string
   companyLink?: string
   options?: ItemOption[]
@@ -80,6 +80,7 @@ export type DbMeta = {
 
 export type Datasheet = {
   url: string
+  lang: string
   version?: string
   description?: string
 }

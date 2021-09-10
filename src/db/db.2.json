@@ -8,7 +8,7 @@
         "keywords": "led, 0805, 2012, желтый, smd"
       },
       "buyLink": "",
-      "datasheetLink": "/datasheets/LED0805BLUE.pdf",
+      "datasheetId": "LED0805BLUE",
       "images": [
         {
           "src": "/photos/LED0805-1.jpg",
