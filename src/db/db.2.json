@@ -1,6 +1,7 @@
 {
   "items": [
     {
+      "categoryId": 12,
       "title": "LED SMD 0805 (2012)",
       "subtitle": "Желтый",
       "seo": {
@@ -39,6 +40,62 @@
         {
           "refId": 62,
           "value": "-40 - +100°C"
+        }
+      ]
+    },
+    {
+      "categoryId": 11,
+      "title": "J-Link v8",
+      "subtitle": "Программатор USB-JTAG",
+      "seo": {
+        "description": "J-Link - программатор v8 USB-JTAG",
+        "keywords": "программатор, segger, j-link, usb, jtag, arm, cortex-m"
+      },
+      "buyLink": "",
+      "datasheetId": "JLINKUM08001",
+      "images": [
+        {
+          "src": "/photos/J-Link-1.webp",
+          "alt": "J-Link v8 - комплектация"
+        },
+        {
+          "src": "/photos/J-Link-2.webp",
+          "alt": "J-Link v8 - размеры"
+        },
+        {
+          "src": "/photos/J-Link-3.webp",
+          "alt": "J-Link v8 - с разных сторон"
+        },
+        {
+          "src": "/photos/J-Link-4.png",
+          "alt": "J-Link v8 - распиновка"
+        }
+      ],
+      "options": [
+        {
+          "refId": 74,
+          "value": [
+            "Linux",
+            "Windows 2000 и выше",
+            "macOS 10.5 и выше"
+          ]
+        }
+      ],
+      "content": "",
+      "externalLinks": [
+        {
+          "name": "Официальная страница J-Link",
+          "url": "https://www.segger.com/products/debug-probes/j-link/",
+          "lang": "en",
+          "icon": "segger.com.ico",
+          "iconAlt": "segger.com"
+        },
+        {
+          "name": "Среда разработки J-Link",
+          "url": "https://www.segger.com/downloads/jlink/",
+          "lang": "en",
+          "icon": "segger.com.ico",
+          "iconAlt": "segger.com"
         }
       ]
     }

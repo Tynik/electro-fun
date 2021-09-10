@@ -12,6 +12,8 @@ import {
   MultipleStop as MultipleStopIcon,
   ViewHeadline as ViewHeadlineIcon,
   Description as DescriptionIcon,
+  Keyboard as KeyboardIcon,
+  WbTwilight as WbTwilightIcon,
 } from '@material-ui/icons';
 
 import { Item, Db } from './types';
@@ -79,6 +81,8 @@ export const getIcon = (name, props = {}) => {
     convertors: <MultipleStopIcon {...props}/>,
     coil: <ViewHeadlineIcon {...props}/>,
     document: <DescriptionIcon {...props}/>,
+    keyboard: <KeyboardIcon {...props}/>,
+    led: <WbTwilightIcon {...props}/>,
   }[name];
 };
 

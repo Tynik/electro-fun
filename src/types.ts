@@ -16,6 +16,12 @@ export type Seo = {
   keywords: string
 }
 
+export type Category = {
+  id: CategoryId
+  name: string
+  icon?: string
+}
+
 export type ItemOption = {
   refId: OptionId
   value: string | (string | {
@@ -96,10 +102,7 @@ export type Db = {
     icon: string
   }[]
   articles: Article[]
-  categories: Record<CategoryId, {
-    name: string
-    icon?: string
-  }>
+  categories: Category[]
   featureSections: Record<FeatureSectionId, string>
   optionTypes: Record<OptionTypeId, {
     y: string

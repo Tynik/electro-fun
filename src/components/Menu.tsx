@@ -13,6 +13,7 @@ import {
   styled
 } from '@material-ui/core';
 import { Link as RouterLink } from 'react-router-dom';
+import sortBy from 'lodash.sortby'
 import {
   Menu as MenuIcon,
   ChevronLeft as ChevronLeftIcon,
@@ -206,12 +207,12 @@ export const Menu = (props: MenuProps) => {
         </DrawerHeader>
         <Divider/>
         <List>
-          {Object.keys(db.categories).map(categoryId => (
+          {sortBy(db.categories, 'name').map(category => (
             <MenuItem
-              key={`category-${categoryId}`}
-              to={`/category/${categoryId}`}
-              icon={getIcon(db.categories[categoryId].icon)}
-              name={db.categories[categoryId].name}
+              key={`category-${category.id}`}
+              to={`/category/${category.id}`}
+              icon={getIcon(category.icon)}
+              name={category.name}
             />
           ))}
         </List>
