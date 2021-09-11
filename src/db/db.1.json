@@ -1070,7 +1070,7 @@
       "buyLink": "https://izi.ua/p-21834878-element-pelte-tec1-12715",
       "images": [
         {
-          "src": "/photos/TEC1-12715-1.jpg",
+          "src": "/photos/TEC1-12715-1.webp",
           "alt": "TEC1-12715"
         }
       ],
@@ -1116,19 +1116,19 @@
       "datasheetId": "BHI260AP",
       "images": [
         {
-          "src": "/photos/BHI260AP-1.jpg",
+          "src": "/photos/BHI260AP-1.webp",
           "alt": "BHI260AP"
         },
         {
-          "src": "/photos/BHI260AP-2.png",
+          "src": "/photos/BHI260AP-2.webp",
           "alt": "Контактные площадки BHI260AP"
         },
         {
-          "src": "/photos/BHI260AP-3.png",
+          "src": "/photos/BHI260AP-3.webp",
           "alt": "Распиновка BHI260AP"
         },
         {
-          "src": "/photos/BHI260AP-4.png",
+          "src": "/photos/BHI260AP-4.webp",
           "alt": "Диаграмма BHI260AP"
         }
       ],
@@ -1231,11 +1231,11 @@
           "alt": "nRF24L01+ - размеры"
         },
         {
-          "src": "/photos/nRF24L01+-1.png",
+          "src": "/photos/nRF24L01+-1.webp",
           "alt": "nRF24L01+ - блочная диаграмма"
         },
         {
-          "src": "/photos/nRF24L01+-2.png",
+          "src": "/photos/nRF24L01+-2.webp",
           "alt": "nRF24L01+ - пример подключения"
         }
       ],
@@ -1280,15 +1280,15 @@
       "datasheetId": "ESP8266EX",
       "images": [
         {
-          "src": "/photos/ESP8266EX-1.jpg",
+          "src": "/photos/ESP8266EX-1.webp",
           "alt": "ESP8266EX"
         },
         {
-          "src": "/photos/ESP8266EX-2.jpg",
+          "src": "/photos/ESP8266EX-2.webp",
           "alt": "ESP8266EX - блочная диаграмма"
         },
         {
-          "src": "/photos/ESP8266EX-3.jpg",
+          "src": "/photos/ESP8266EX-3.webp",
           "alt": "ESP8266EX - расположение контактов"
         }
       ],
@@ -1362,23 +1362,23 @@
       "buyLink": "https://www.aliexpress.com/item/4001345191255.html?spm=a2g0o.productlist.0.0.4cb43b0aswX868&algo_pvid=c6d0f977-b439-4238-bf26-1f574b40f4aa&algo_exp_id=c6d0f977-b439-4238-bf26-1f574b40f4aa-5&pdp_ext_f=%7B%22sku_id%22%3A%2210000015755343950%22%7D",
       "images": [
         {
-          "src": "/photos/CC1310-1.png",
+          "src": "/photos/CC1310-1.webp",
           "alt": "CC1310 - RHB 5 x 5 мм"
         },
         {
-          "src": "/photos/CC1310-2.png",
+          "src": "/photos/CC1310-2.webp",
           "alt": "CC1310 - блок диаграмма"
         },
         {
-          "src": "/photos/CC1310-3.png",
+          "src": "/photos/CC1310-3.webp",
           "alt": "CC1310 - распиновка RSM 4 x 4 мм"
         },
         {
-          "src": "/photos/CC1310-4.png",
+          "src": "/photos/CC1310-4.webp",
           "alt": "CC1310 - распиновка RHB 5 x 5 мм"
         },
         {
-          "src": "/photos/CC1310-5.png",
+          "src": "/photos/CC1310-5.webp",
           "alt": "CC1310 - распиновка RGZ 7 x 7 мм"
         }
       ],
@@ -1460,19 +1460,19 @@
       "buyLink": "",
       "images": [
         {
-          "src": "/photos/CC2652P-1.png",
+          "src": "/photos/CC2652P-1.webp",
           "alt": "CC2652P - RGZ 48 7 x 7 мм"
         },
         {
-          "src": "/photos/CC2652P-2.png",
+          "src": "/photos/CC2652P-2.webp",
           "alt": "CC2652P - блок диаграмма"
         },
         {
-          "src": "/photos/CC2652P-3.png",
+          "src": "/photos/CC2652P-3.webp",
           "alt": "CC2652P - распиновка RGZ 7 x 7 мм"
         },
         {
-          "src": "/photos/CC2652P-4.png",
+          "src": "/photos/CC2652P-4.webp",
           "alt": "CC2652P - обзор семейства устройств"
         }
       ],
@@ -1570,7 +1570,7 @@
       "buyLink": "",
       "images": [
         {
-          "src": "/photos/CH340G-1.jpg",
+          "src": "/photos/CH340G-1.webp",
           "alt": "CH340G"
         }
       ],
@@ -1621,7 +1621,7 @@
       "datasheetId": "IRF3205PbF",
       "images": [
         {
-          "src": "/photos/IRF3205PbF-1.png",
+          "src": "/photos/IRF3205PbF-1.webp",
           "alt": "IRF3205"
         }
       ],

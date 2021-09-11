@@ -13,7 +13,7 @@
       "datasheetId": "LED0805BLUE",
       "images": [
         {
-          "src": "/photos/LED0805-1.jpg",
+          "src": "/photos/LED0805-1.webp",
           "alt": "LED0805"
         },
         {
@@ -70,7 +70,7 @@
           "alt": "J-Link v8 - с разных сторон"
         },
         {
-          "src": "/photos/J-Link-4.png",
+          "src": "/photos/J-Link-4.webp",
           "alt": "J-Link v8 - jTAG распиновка"
         }
       ],
@@ -133,7 +133,7 @@
           "alt": "RF-BM-2652P2 - внешний вид"
         },
         {
-          "src": "/photos/RF-BM-2652P2-2.png",
+          "src": "/photos/RF-BM-2652P2-2.webp",
           "alt": "RF-BM-2652P2 - распиновка"
         }
       ],
