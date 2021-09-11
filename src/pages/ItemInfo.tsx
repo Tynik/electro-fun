@@ -19,7 +19,7 @@ import {
   ShoppingCart as ShoppingCartIcon
 } from '@material-ui/icons';
 
-import { Item, ItemOption, OptionDefinitionSuffix } from '../types';
+import { Item } from '../types';
 import { DbContext } from '../context';
 import {
   useTextProcessor,
@@ -30,25 +30,11 @@ import {
 import {
   Loader,
   ExternalLink,
-  AbbrLink,
   ImageSlider,
   BackButton,
   ExternalButtonLink
 } from '../components';
-
-export const sortItemOptions = (allOptions, options: ItemOption[]) =>
-  options.sort((optionA, optionB) => {
-    const featSecRefIdA = allOptions[optionA.refId].featSecRefId;
-    const featSecRefIdB = allOptions[optionB.refId].featSecRefId;
-
-    if (!featSecRefIdA) {
-      return -1;
-    }
-    if (!featSecRefIdB) {
-      return 1;
-    }
-    return featSecRefIdA - featSecRefIdB;
-  });
+import { ItemInfoOptions } from './ItemInfoOptions';
 
 export const ItemInfo = () => {
   const theme = useTheme();
@@ -117,60 +103,6 @@ export const ItemInfo = () => {
       }
     };
   }, [item]);
-
-  const insertFeatureSectionName = React.useCallback((options: ItemOption[], index: number): boolean => {
-    const featSectionRef = db.options[options[index].refId].featSecRefId;
-
-    if (!index) {
-      return Boolean(featSectionRef);
-    }
-    const prevFeatSectionRef = db.options[options[index - 1].refId].featSecRefId;
-
-    return !prevFeatSectionRef
-      ? Boolean(featSectionRef)
-      : featSectionRef !== prevFeatSectionRef;
-  }, []);
-
-  const getOptionValue = React.useCallback((option: ItemOption) => {
-    const processOptionValue = (values: any, suffix: OptionDefinitionSuffix) => {
-      if (!Array.isArray(values)) {
-        return [
-          values + (
-            suffix || ''
-          )
-        ];
-      }
-      return values.map(values =>
-        ['string', 'number'].includes(typeof values)
-          ? processOptionValue(values, suffix)
-          : processOptionValue(values.value, suffix[values.type]).join(', ')
-      );
-    };
-
-    return processOptionValue(
-      option.value as any,
-      db.options[option.refId].suffix
-    ).map((value, index) =>
-      <span
-        key={`${option.refId}-${index}`}
-        style={{ display: 'block' }}
-      >
-        {value}
-      </span>
-    );
-  }, []);
-
-  const abbreviationsWrapper = React.useCallback((text: string) =>
-    wordsWrapper(db.abbreviations, text, (
-      (text, abbr, index) => (
-        <AbbrLink
-          key={`${text}-${abbr}-${index}`}
-          href={db.abbreviations[abbr]}
-        >
-          {abbr}
-        </AbbrLink>
-      )
-    )), []);
 
   const clarificationsWrapper = React.useCallback((text: string) =>
     wordsWrapper(db.clarifications, text, (
@@ -294,41 +226,7 @@ export const ItemInfo = () => {
         </Grid>
 
         <Grid xs={12} sm={6} item>
-          <Typography variant={'overline'}>Характеристики</Typography>
-
-          <Box>
-            {sortItemOptions(db.options, item.options || []).map(
-              (option, index, array) => (
-                <div
-                  key={`${option.refId}-${index}-feature`}
-                  style={{
-                    position: 'relative',
-                    marginBottom: theme.spacing(1)
-                  }}
-                >
-                  {insertFeatureSectionName(array, index) && (
-                    <Typography
-                      variant={'subtitle2'}
-                      marginTop={theme.spacing(1)}
-                    >
-                      {db.featureSections[db.options[option.refId].featSecRefId]}
-                    </Typography>
-                  )}
-                  <Grid container>
-                    <Grid xs={8} item>
-                      <Typography variant={'body1'}>
-                        {abbreviationsWrapper(db.options[option.refId].name)}
-                      </Typography>
-                    </Grid>
-                    <Grid xs={4} sx={{ display: 'flex', alignItems: 'center' }} item>
-                      <Typography variant={'body2'}>
-                        {getOptionValue(option)}
-                      </Typography>
-                    </Grid>
-                  </Grid>
-                </div>
-              ))}
-          </Box>
+          <ItemInfoOptions item={item}/>
 
           <Box marginTop={theme.spacing(2)}>
             <Stack direction={'row'} spacing={2}>

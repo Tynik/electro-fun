@@ -23,7 +23,7 @@ import { useDb, useDbSearch } from './hooks';
 
 const drawerWidth = 240;
 
-const Main = styled('main', {
+const Main = styled('div', {
   shouldForwardProp: (prop) => prop !== 'menuIsOpened'
 })(({ theme, menuIsOpened }: any) => (
     {

@@ -139,6 +139,15 @@
       ],
       "options": [
         {
+          "refId": 2,
+          "value": "UART/SPI/I²C/I²S"
+        },
+        {
+          "refId": 3,
+          "value": "1.8 - 3.8 В",
+          "comment": "3.3 В рекомендуется"
+        },
+        {
           "refId": 36,
           "value": "0.94 мкА (вкл. RTC, 80 КБ RAM и CPU retention)"
         },

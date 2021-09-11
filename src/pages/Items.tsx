@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useHistory } from 'react-router-dom';
 import {
   Grid,
   Card,
@@ -11,16 +11,14 @@ import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 
 import { Item } from '../types';
 import { DbContext } from '../context';
-import { generateItemId } from '../utils';
 import { NO_IMAGE } from '../constants';
 import { CCardMedia } from '../components';
 
-export const getItemMainImage = (item: Item) => {
+export const getItemMainImageSrc = (item: Item) => {
   if (!item.images || !item.images.length) {
     return NO_IMAGE;
   }
-  const firstImage = item.images[0];
-  return typeof firstImage === 'string' ? firstImage : firstImage.src;
+  return item.images[0].src;
 };
 
 export type ItemsProps = {
@@ -28,27 +26,41 @@ export type ItemsProps = {
 }
 
 export const Items = ({ items }: ItemsProps) => {
+  const history = useHistory();
+
   const { isNextPage, loadNextPage } = React.useContext(DbContext);
+
+  const onItemKeyPress = (url: string, e: React.KeyboardEvent) => {
+    if (e.key === ' ' || e.key === 'Enter') {
+      history.push(url);
+    }
+  };
 
   return (
     <Grid role={'list'} spacing={2} container>
       {items.map(item => (
-        <Grid key={item.title} role={'listitem'} xs={12} sm={6} lg={4} item>
-          <Card sx={{ maxWidth: '345px', width: '100%' }}>
+        <Grid key={item.id} role={'listitem'} xs={12} sm={6} lg={4} item>
+          <Card
+            sx={{ maxWidth: '345px', width: '100%' }}
+            onKeyPress={(e) =>
+              onItemKeyPress(`/item/${item.id}`, e)
+            }
+            tabIndex={0}
+          >
             <CardActionArea
               component={RouterLink}
-              to={`/item/${generateItemId(item.title)}`}
+              to={`/item/${item.id}`}
               hrefLang={item.lang}
             >
               <CardHeader
                 title={item.title}
-                subheader={item.subtitle || ''}
+                subheader={item.subtitle}
                 titleTypographyProps={{ variant: 'subtitle1' }}
                 subheaderTypographyProps={{ variant: 'subtitle2' }}
               />
 
               <CCardMedia
-                src={getItemMainImage(item)}
+                src={getItemMainImageSrc(item)}
                 alt={item.title}/>
             </CardActionArea>
           </Card>

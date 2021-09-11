@@ -22,12 +22,14 @@ export type Category = {
   icon?: string
 }
 
+export type ItemOptionValue = string | (string | {
+  type: ItemOptionValueType,
+  value: string | string[]
+})
+
 export type ItemOption = {
   refId: OptionId
-  value: string | (string | {
-    type: ItemOptionValueType,
-    value: string | string[]
-  })[]
+  value: ItemOptionValue[]
   comment?: string
 }
 

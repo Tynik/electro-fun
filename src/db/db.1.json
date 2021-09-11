@@ -1478,6 +1478,11 @@
       ],
       "options": [
         {
+          "refId": 3,
+          "value": "1.8 - 3.8 В",
+          "comment": "3.3 В рекомендуется"
+        },
+        {
           "refId": 2,
           "value": "2 x UART/2 x SSI/SPI/Microwire/TI/I²C/I²S/RTC/GPIO/12-бит ADC"
         },
