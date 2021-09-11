@@ -3,7 +3,8 @@ import {
   Grid,
   Box,
   Typography,
-  Popper,
+  Popover,
+  Paper,
   useTheme
 } from '@material-ui/core';
 import { Info as InfoIcon } from '@material-ui/icons';
@@ -16,7 +17,6 @@ import {
 import { DbContext } from '../context';
 import { useTextProcessor } from '../hooks';
 import { AbbrLink } from '../components';
-import { Paper } from '@material-ui/core';
 
 export const sortItemFeatures = (allFeatures, features: ItemFeature[]) =>
   features.sort((featureA, featureB) => {
@@ -61,9 +61,7 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
 
   const onFeatureInfoClick = (featureInfo: string, e) => {
     setFeatureInfoAnchorEl(e.currentTarget);
-    setFeatureInfo((prevFeatureInfo) =>
-      prevFeatureInfo === featureInfo ? '' : featureInfo
-    );
+    setFeatureInfo(featureInfo);
   };
 
   const getFeatureValue = React.useCallback((feature: ItemFeature) => {
@@ -100,6 +98,8 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
             onClick={(e) =>
               onFeatureInfoClick(feature.info, e)
             }
+            aria-owns={featureInfo ? 'mouse-feature-info-click-popover' : undefined}
+            aria-haspopup
           />
         )}
       </span>
@@ -156,15 +156,17 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
           ))}
       </Box>
 
-      <Popper
+      <Popover
+        id={'mouse-feature-info-click-popover'}
         open={Boolean(featureInfo)}
         anchorEl={featureInfoAnchorEl}
-        placement={'top'}
+        onClose={() => setFeatureInfo('')}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
       >
         <Paper sx={{ p: 1, backgroundColor: '#212121', color: 'white' }}>
           <Typography variant={'body2'}>{featureInfo}</Typography>
         </Paper>
-      </Popper>
+      </Popover>
     </>
   );
 };
