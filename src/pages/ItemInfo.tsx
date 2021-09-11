@@ -9,6 +9,7 @@ import {
   List,
   ListItem,
   Icon,
+  Chip,
   ListItemText,
   Alert,
   useTheme
@@ -204,8 +205,23 @@ export const ItemInfo = () => {
         </Grid>
 
         <Grid xs={12} item>
-          <Typography variant={'h5'}>{item.title}</Typography>
-          <Typography variant={'subtitle1'}>{item.subtitle}</Typography>
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <Typography variant={'h5'} role={'heading'} aria-level={1}>
+              {item.title}
+            </Typography>
+
+            {item.original === false && (
+              <Chip
+                size={'small'}
+                label={'копия'}
+                color={'info'}
+                sx={{ marginLeft: theme.spacing(1) }}
+              />
+            )}
+          </Box>
+          <Typography variant={'subtitle1'} role={'heading'} aria-level={2}>
+            {item.subtitle}
+          </Typography>
         </Grid>
 
         <Grid xs={12} sm={6} item>
@@ -215,7 +231,7 @@ export const ItemInfo = () => {
           />
 
           {item.content && (
-            <Box marginBottom={theme.spacing(2)}>
+            <Box component={'main'} marginTop={theme.spacing(2)}>
               <Typography variant={'overline'}>Описание</Typography>
 
               <Typography
@@ -228,7 +244,7 @@ export const ItemInfo = () => {
           )}
 
           {item.warningContent && (
-            <Box marginBottom={theme.spacing(2)}>
+            <Box marginTop={theme.spacing(2)}>
               <Alert
                 severity={'warning'}
                 sx={{
@@ -242,7 +258,7 @@ export const ItemInfo = () => {
           )}
 
           {item.externalLinks && item.externalLinks.length > 0 && (
-            <Box>
+            <Box marginTop={theme.spacing(2)}>
               <Typography variant={'overline'}>
                 Ссылки на внешние ресурсы
               </Typography>
@@ -285,7 +301,10 @@ export const ItemInfo = () => {
               (option, index, array) => (
                 <div
                   key={`${option.refId}-${index}-feature`}
-                  style={{ position: 'relative' }}
+                  style={{
+                    position: 'relative',
+                    marginBottom: theme.spacing(1)
+                  }}
                 >
                   {insertFeatureSectionName(array, index) && (
                     <Typography
@@ -295,21 +314,7 @@ export const ItemInfo = () => {
                       {db.featureSections[db.options[option.refId].featSecRefId]}
                     </Typography>
                   )}
-                  <Grid
-                    sx={{
-                      ':hover': {
-                        '::after': {
-                          width: '100%',
-                          borderBottom: '1px dashed #eee',
-                          position: 'absolute',
-                          display: 'block',
-                          content: '""',
-                          bottom: 0
-                        }
-                      }
-                    }}
-                    container
-                  >
+                  <Grid container>
                     <Grid xs={8} item>
                       <Typography variant={'body1'}>
                         {abbreviationsWrapper(db.options[option.refId].name)}

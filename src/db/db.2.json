@@ -2,6 +2,7 @@
   "items": [
     {
       "categoryId": 12,
+      "lang": "ru",
       "title": "LED SMD 0805 (2012)",
       "subtitle": "Желтый",
       "seo": {
@@ -45,12 +46,14 @@
     },
     {
       "categoryId": 11,
+      "lang": "ru",
       "title": "J-Link v8",
-      "subtitle": "Программатор USB-JTAG",
+      "subtitle": "Программатор USB-jTAG",
       "seo": {
         "description": "J-Link - программатор v8 USB-JTAG",
         "keywords": "программатор, segger, j-link, usb, jtag, arm, cortex-m"
       },
+      "original": false,
       "buyLink": "",
       "datasheetId": "JLINKUM08001",
       "images": [
@@ -68,7 +71,7 @@
         },
         {
           "src": "/photos/J-Link-4.png",
-          "alt": "J-Link v8 - распиновка"
+          "alt": "J-Link v8 - jTAG распиновка"
         }
       ],
       "options": [
@@ -78,6 +81,15 @@
             "Linux",
             "Windows 2000 и выше",
             "macOS 10.5 и выше"
+          ]
+        },
+        {
+          "refId": 75,
+          "value": [
+            "ARM Cortex",
+            "ARM legacy",
+            "Microchip PIC32",
+            "Renesas RX"
           ]
         }
       ],
@@ -96,6 +108,78 @@
           "lang": "en",
           "icon": "segger.com.ico",
           "iconAlt": "segger.com"
+        },
+        {
+          "name": "Прошивка CC2652p для Zigbee используя BSL и jTAG JLink",
+          "url": "https://www.youtube.com/watch?v=xmpBBz5_7E4",
+          "lang": "en",
+          "icon": "youtube.com.png",
+          "iconAlt": "youtube.com"
+        }
+      ]
+    },
+    {
+      "categoryId": 8,
+      "lang": "ru",
+      "title": "RF-BM-2652P2",
+      "subtitle": "Многопротокольный беспроводной модуль",
+      "seo": {
+        "description": "RF-BM-2652P2 - многопротокольный беспроводной модуль",
+        "keywords": "rf-star, cc2652p, simplelink, bluetooth, zigbee, thread, ti"
+      },
+      "images": [
+        {
+          "src": "/photos/RF-BM-2652P2-1.webp",
+          "alt": "RF-BM-2652P2 - внешний вид"
+        },
+        {
+          "src": "/photos/RF-BM-2652P2-2.png",
+          "alt": "RF-BM-2652P2 - распиновка"
+        }
+      ],
+      "options": [
+        {
+          "refId": 36,
+          "value": "0.94 мкА (вкл. RTC, 80 КБ RAM и CPU retention)"
+        },
+        {
+          "refId": 50,
+          "value": "Arm® Cortex®-M4F"
+        },
+        {
+          "refId": 53,
+          "value": "48 МГц"
+        },
+        {
+          "refId": 56,
+          "value": [
+            "0 дБм = 7.3 мА",
+            "+5 дБм = 9.6 мА",
+            "+10 дБм = 22 мА",
+            "+20 дБм = 85 мА"
+          ]
+        },
+        {
+          "refId": 57,
+          "value": "6.9 мА"
+        },
+        {
+          "refId": 58,
+          "value": "150 нА (пробуждение по внешним событиям)"
+        },
+        {
+          "refId": 76,
+          "value": "30.0 x 16.4 x (2.2 ± 0.1) мм"
+        }
+      ],
+      "content": "RF-BM-2652P2 - это радиочастотный модуль на основе CC2652P, который представляет собой многопротокольный беспроводной модуль 2.4 ГГц, поддерживающий Thread, Zigbee®, Bluetooth® 5.1 Low Energy, IEEE 802.15.4, smart объекты с поддержкой IPv6 (6LoWPAN), проприетарные системы, включая TI 15.4-Stack (2.4 ГГц), и параллельный мульти-протокол через драйвер DMM.\n\nОн объединяет кристалл 48 МГц и кристалл 32.768 кГц, 352 КБ встроенной программируемой флэш-памяти, 256 КБ ПЗУ, 8 КБ кэш-памяти SRAM, 80 КБ SRAM со сверхнизкой утечкой.\n\nЕго основной прикладной процессор ARM® Cortex®-M4F может работать при чрезвычайно низком токе в гибких режимах питания. Кроме того, модуль позволяет использовать приложения с большим радиусом действия и с низким энергопотреблением с использованием встроенного мощного усилителя +20 дБм с лучшим в своем классе потребляемым током передачи на уровне 85 мА.\n\nОн отличается небольшими размерами, большим расстоянием подключения и высокой надежностью.",
+      "externalLinks": [
+        {
+          "name": "Официальная страница RF-BM-2652P2",
+          "url": "https://www.szrfstar.com/product/237-en.html",
+          "lang": "en",
+          "icon": "szrfstar.com.ico",
+          "iconAlt": "szrfstar.com"
         }
       ]
     }

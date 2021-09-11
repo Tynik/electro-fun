@@ -47,6 +47,7 @@ export type ExternalResourceLink = {
 export type Item = {
   title: string
   subtitle: string
+  lang: string
   id?: string
   categoryId?: number
   content?: string
@@ -57,6 +58,7 @@ export type Item = {
   companyLink?: string
   options?: ItemOption[]
   images?: ItemImage[]
+  original?: boolean
   applications?: string[]
   externalLinks?: ExternalResourceLink[]
 }

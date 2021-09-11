@@ -46,6 +46,7 @@
     "IEEE 802.15.4": "https://ru.wikipedia.org/wiki/IEEE_802.15.4",
     "TI-RTOS": "https://en.wikipedia.org/wiki/TI-RTOS",
     "Bluetooth® Low Energy": "https://ru.wikipedia.org/wiki/Bluetooth_%D1%81_%D0%BD%D0%B8%D0%B7%D0%BA%D0%B8%D0%BC_%D1%8D%D0%BD%D0%B5%D1%80%D0%B3%D0%BE%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC",
+    "Bluetooth® 5.1 Low Energy": "https://ru.wikipedia.org/wiki/Bluetooth_%D1%81_%D0%BD%D0%B8%D0%B7%D0%BA%D0%B8%D0%BC_%D1%8D%D0%BD%D0%B5%D1%80%D0%B3%D0%BE%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC",
     "Bluetooth® 5.2 Low Energy": "https://ru.wikipedia.org/wiki/Bluetooth_%D1%81_%D0%BD%D0%B8%D0%B7%D0%BA%D0%B8%D0%BC_%D1%8D%D0%BD%D0%B5%D1%80%D0%B3%D0%BE%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC",
     "SimpleLink™": "/datasheets/SimpleLink™.pdf",
     "Zigbee®": "https://ru.wikipedia.org/wiki/Zigbee",
@@ -232,7 +233,8 @@
     "7": "Потребление тока",
     "8": "CPU",
     "9": "Программного обеспечения",
-    "10": "MCU"
+    "10": "MCU",
+    "11": "Поддержка"
   },
   "optionTypes": {
     "bool": {
@@ -568,12 +570,21 @@
       "name": "Vgs max"
     },
     "74": {
-      "name": "Поддерживаемая ОС"
+      "name": "ОС",
+      "featSecRefId": 11
+    },
+    "75": {
+      "name": "CPU",
+      "featSecRefId": 11
+    },
+    "76": {
+      "name": "Габариты"
     }
   },
   "items": [
     {
       "categoryId": 4,
+      "lang": "ru",
       "title": "LM2596s DC-DC 3 A",
       "subtitle": "Понижающий стабилизатор напряжения",
       "seo": {
@@ -618,6 +629,7 @@
     },
     {
       "categoryId": 1,
+      "lang": "ru",
       "title": "BMP280",
       "subtitle": "Датчик для измерения температуры и т.д.",
       "seo": {
@@ -697,6 +709,7 @@
     },
     {
       "categoryId": 5,
+      "lang": "ru",
       "title": "MPU-9250",
       "subtitle": "Гироскоп/акселерометр/магнитометр",
       "seo": {
@@ -780,6 +793,7 @@
     },
     {
       "categoryId": 6,
+      "lang": "ru",
       "title": "USB в SMBus CP2112",
       "subtitle": "Модуль-конвертер",
       "seo": {
@@ -849,6 +863,7 @@
     },
     {
       "categoryId": 1,
+      "lang": "ru",
       "title": "CCS811",
       "subtitle": "Датчик для измерения качества воздуха",
       "seo": {
@@ -921,6 +936,7 @@
     },
     {
       "categoryId": 1,
+      "lang": "ru",
       "title": "APDS-9960",
       "subtitle": "Датчик RGB и распознавание жестов",
       "seo": {
@@ -981,6 +997,7 @@
     },
     {
       "categoryId": 7,
+      "lang": "ru",
       "title": "MAC Серия 35",
       "subtitle": "Соленоид с электромагнитным управ.",
       "seo": {
@@ -1042,6 +1059,7 @@
     },
     {
       "categoryId": 3,
+      "lang": "ru",
       "title": "TEC1-12715",
       "subtitle": "Элемент Пельтье 40x40x4 мм, до 136 Вт",
       "seo": {
@@ -1087,6 +1105,7 @@
     },
     {
       "categoryId": 1,
+      "lang": "ru",
       "title": "BHI260AP",
       "subtitle": "Самообучающийся интеллектуальный датчик",
       "seo": {
@@ -1193,6 +1212,7 @@
     },
     {
       "categoryId": 8,
+      "lang": "ru",
       "title": "nRF24L01+",
       "subtitle": "Трансивер и аудиостример 2.4 ГГц",
       "seo": {
@@ -1250,6 +1270,7 @@
     },
     {
       "categoryId": 9,
+      "lang": "ru",
       "title": "ESP8266EX",
       "subtitle": "Wi-Fi микросхема",
       "seo": {
@@ -1330,6 +1351,7 @@
     },
     {
       "categoryId": 8,
+      "lang": "ru",
       "title": "CC1310",
       "subtitle": "РЧ устройство с поддержкой Sub-1 GHz",
       "seo": {
@@ -1341,7 +1363,7 @@
       "images": [
         {
           "src": "/photos/CC1310-1.png",
-          "alt": "CC1310 - RHB 5x5 мм"
+          "alt": "CC1310 - RHB 5 x 5 мм"
         },
         {
           "src": "/photos/CC1310-2.png",
@@ -1349,15 +1371,15 @@
         },
         {
           "src": "/photos/CC1310-3.png",
-          "alt": "CC1310 - распиновка RSM 4x4 мм"
+          "alt": "CC1310 - распиновка RSM 4 x 4 мм"
         },
         {
           "src": "/photos/CC1310-4.png",
-          "alt": "CC1310 - распиновка RHB 5x5 мм"
+          "alt": "CC1310 - распиновка RHB 5 x 5 мм"
         },
         {
           "src": "/photos/CC1310-5.png",
-          "alt": "CC1310 - распиновка RGZ 7x7 мм"
+          "alt": "CC1310 - распиновка RGZ 7 x 7 мм"
         }
       ],
       "options": [
@@ -1392,9 +1414,9 @@
         {
           "refId": 42,
           "value": [
-            "7x7 мм RGZ VQFN48 (30 GPIOs)",
-            "5x5 мм RHB VQFN32 (15 GPIOs)",
-            "4x4 мм RSM VQFN32 (10 GPIOs)"
+            "7 x 7 мм RGZ VQFN48 (30 GPIOs)",
+            "5 x 5 мм RHB VQFN32 (15 GPIOs)",
+            "4 x 4 мм RSM VQFN32 (10 GPIOs)"
           ]
         },
         {
@@ -1427,6 +1449,7 @@
     },
     {
       "categoryId": 8,
+      "lang": "ru",
       "title": "CC2652P",
       "subtitle": "Многопротокольный беспроводной MCU",
       "seo": {
@@ -1438,7 +1461,7 @@
       "images": [
         {
           "src": "/photos/CC2652P-1.png",
-          "alt": "CC2652P - RGZ 48 7x7 мм"
+          "alt": "CC2652P - RGZ 48 7 x 7 мм"
         },
         {
           "src": "/photos/CC2652P-2.png",
@@ -1446,7 +1469,7 @@
         },
         {
           "src": "/photos/CC2652P-3.png",
-          "alt": "CC2652P - распиновка RGZ 7x7 мм"
+          "alt": "CC2652P - распиновка RGZ 7 x 7 мм"
         },
         {
           "src": "/photos/CC2652P-4.png",
@@ -1468,7 +1491,7 @@
         },
         {
           "refId": 42,
-          "value": "7x7 мм RGZ VQFN48 (26 GPIOs)"
+          "value": "7 x 7 мм RGZ VQFN48 (26 GPIOs)"
         },
         {
           "refId": 53,
@@ -1536,6 +1559,7 @@
     },
     {
       "categoryId": 6,
+      "lang": "ru",
       "title": "CH340G",
       "subtitle": "Преобразование USB в UART",
       "seo": {
@@ -1586,6 +1610,7 @@
     },
     {
       "categoryId": 10,
+      "lang": "ru",
       "title": "IRF3205",
       "subtitle": "MOSFET 55 В, 110 А",
       "seo": {

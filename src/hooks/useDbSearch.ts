@@ -29,9 +29,20 @@ export const useDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
         return item.id === id;
       }
       if (text) {
-        matched &&= item.title.toLowerCase().includes(text) ||
-          item.subtitle.toLowerCase().includes(text) ||
-          item.content.toLowerCase().includes(text);
+        let textMatch = item.title.toLowerCase().includes(text) ||
+          item.subtitle.toLowerCase().includes(text);
+
+        if (item.content) {
+          textMatch ||= item.content.toLowerCase().includes(text);
+        }
+
+        if (item.seo) {
+          textMatch ||= item.seo.description.toLowerCase().includes(text) ||
+            item.seo.keywords.split(',').some(keyword => {
+              return keyword.trim().toLowerCase().includes(text);
+            });
+        }
+        matched &&= textMatch;
       }
       if (categoryId) {
         matched &&= item.categoryId === categoryId;

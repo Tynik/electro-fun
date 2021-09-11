@@ -31,13 +31,14 @@ export const Items = ({ items }: ItemsProps) => {
   const { isNextPage, loadNextPage } = React.useContext(DbContext);
 
   return (
-    <Grid spacing={2} container>
+    <Grid role={'list'} spacing={2} container>
       {items.map(item => (
-        <Grid key={item.title} xs={12} sm={6} lg={4} item>
+        <Grid key={item.title} role={'listitem'} xs={12} sm={6} lg={4} item>
           <Card sx={{ maxWidth: '345px', width: '100%' }}>
             <CardActionArea
               component={RouterLink}
               to={`/item/${generateItemId(item.title)}`}
+              hrefLang={item.lang}
             >
               <CardHeader
                 title={item.title}

@@ -20,6 +20,12 @@ export const Category = () => {
     search({ categoryId: +categoryId });
   }, [categoryId]);
 
+  const category = React.useMemo(() => {
+    const convertedCategoryId = +categoryId;
+
+    return db.categories.find(category => category.id === convertedCategoryId);
+  }, [categoryId]);
+
   if (!foundItems) {
     return <></>;
   }
@@ -27,8 +33,8 @@ export const Category = () => {
   return (
     <Container>
       <Breadcrumbs>
-        <BreadcrumbItem icon={getIcon(db.categories[categoryId].icon)} final>
-          {db.categories[categoryId].name}
+        <BreadcrumbItem icon={getIcon(category.icon)} final>
+          {category.name}
         </BreadcrumbItem>
       </Breadcrumbs>
 
