@@ -21,7 +21,7 @@
           "alt": "LED0805 - Рекомендуемый профиль пайки оплавлением"
         }
       ],
-      "options": [
+      "features": [
         {
           "refId": 3,
           "value": "2 В"
@@ -74,7 +74,7 @@
           "alt": "J-Link v8 - jTAG распиновка"
         }
       ],
-      "options": [
+      "features": [
         {
           "refId": 74,
           "value": [
@@ -137,7 +137,7 @@
           "alt": "RF-BM-2652P2 - распиновка"
         }
       ],
-      "options": [
+      "features": [
         {
           "refId": 2,
           "value": "UART/SPI/I²C/I²S"
@@ -145,7 +145,7 @@
         {
           "refId": 3,
           "value": "1.8 - 3.8 В",
-          "comment": "3.3 В рекомендуется"
+          "info": "3.3 В рекомендуется"
         },
         {
           "refId": 36,

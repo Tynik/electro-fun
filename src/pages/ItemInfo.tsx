@@ -34,7 +34,7 @@ import {
   BackButton,
   ExternalButtonLink
 } from '../components';
-import { ItemInfoOptions } from './ItemInfoOptions';
+import { ItemInfoFeatures } from './ItemInfoFeatures';
 
 export const ItemInfo = () => {
   const theme = useTheme();
@@ -226,7 +226,7 @@ export const ItemInfo = () => {
         </Grid>
 
         <Grid xs={12} sm={6} item>
-          <ItemInfoOptions item={item}/>
+          <ItemInfoFeatures item={item}/>
 
           <Box marginTop={theme.spacing(2)}>
             <Stack direction={'row'} spacing={2}>
@@ -255,6 +255,5 @@ export const ItemInfo = () => {
         </Grid>
       </Grid>
     </Container>
-  )
-    ;
+  );
 };

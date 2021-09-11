@@ -2,7 +2,7 @@ export type Article = {}
 
 export type FeatureSectionId = number;
 export type CategoryId = number;
-export type OptionId = number;
+export type FeatureId = number;
 export type DatasheetId = string;
 
 export enum ItemOptionValueType {
@@ -22,15 +22,15 @@ export type Category = {
   icon?: string
 }
 
-export type ItemOptionValue = string | (string | {
+export type ItemFeatureValue = string | (string | {
   type: ItemOptionValueType,
   value: string | string[]
 })
 
-export type ItemOption = {
-  refId: OptionId
-  value: ItemOptionValue[]
-  comment?: string
+export type ItemFeature = {
+  refId: FeatureId
+  value: ItemFeatureValue[]
+  info?: string
 }
 
 export type ItemImage = {
@@ -58,7 +58,7 @@ export type Item = {
   datasheetId?: string
   buyLink?: string
   companyLink?: string
-  options?: ItemOption[]
+  features?: ItemFeature[]
   images?: ItemImage[]
   original?: boolean
   applications?: string[]
@@ -79,7 +79,7 @@ export type OptionDefinition = {
   type?: OptionTypeId
 }
 
-export type DbOptions = Record<OptionId, OptionDefinition>
+export type DbItemFeatures = Record<FeatureId, OptionDefinition>
 
 export type Abbreviations = Record<string, string>
 export type Clarifications = Record<string, string>
@@ -112,7 +112,7 @@ export type Db = {
     y: string
     n: string
   }>
-  options: DbOptions
+  itemFeatures: DbItemFeatures
   items: Item[]
   datasheets: Record<DatasheetId, Datasheet>
   footer: {
