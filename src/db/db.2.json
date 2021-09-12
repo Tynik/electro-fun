@@ -127,6 +127,7 @@
         "description": "RF-BM-2652P2 - многопротокольный беспроводной модуль",
         "keywords": "rf-star, cc2652p, simplelink, bluetooth, zigbee, thread, ti"
       },
+      "datasheetId": "RF-BM-2652P2",
       "images": [
         {
           "src": "/photos/RF-BM-2652P2-1.webp",

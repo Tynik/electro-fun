@@ -107,11 +107,12 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
   }, []);
 
   const abbreviationsWrapper = React.useCallback((text: string) =>
-    wordsWrapper(db.abbreviations, text, (
+    wordsWrapper(Object.keys(db.abbreviations), text, (
       (text, abbr, index) => (
         <AbbrLink
           key={`${text}-${abbr}-${index}`}
-          href={db.abbreviations[abbr]}
+          href={db.abbreviations[abbr].url}
+          hrefLang={db.abbreviations[abbr].lang}
         >
           {abbr}
         </AbbrLink>
@@ -163,7 +164,7 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
         onClose={() => setFeatureInfo('')}
         anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
       >
-        <Paper sx={{ p: 1, backgroundColor: '#212121', color: 'white' }}>
+        <Paper sx={{ padding: 1, backgroundColor: '#212121', color: 'white' }}>
           <Typography variant={'body2'}>{featureInfo}</Typography>
         </Paper>
       </Popover>

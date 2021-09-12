@@ -87,7 +87,7 @@ export const getIcon = (name, props = {}) => {
 };
 
 export const wordsWrapper = (
-  words: Record<string, string>,
+  words: string[],
   text: string,
   wrapper: (text: string, word: string, index: number) => any
 ): (string | JSX.Element)[] => {
@@ -120,5 +120,5 @@ export const wordsWrapper = (
     }, []);
   };
 
-  return wrap(Object.keys(words), text);
+  return wrap(words, text);
 };

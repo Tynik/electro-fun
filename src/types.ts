@@ -81,8 +81,14 @@ export type OptionDefinition = {
 
 export type DbItemFeatures = Record<FeatureId, OptionDefinition>
 
-export type Abbreviations = Record<string, string>
-export type Clarifications = Record<string, string>
+export type Abbreviations = Record<string, {
+  url: string
+  lang: string
+}>
+export type Clarifications = Record<string, {
+  url: string
+  lang: string
+}>
 
 export type DbMeta = {
   parts: number
