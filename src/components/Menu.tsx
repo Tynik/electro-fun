@@ -123,6 +123,8 @@ export const Menu = (props: MenuProps) => {
 
   const { db } = React.useContext(DbContext);
 
+  const [searchValue, setSearchValue] = React.useState<string>(null);
+
   const {
     set: setMenuIsOpenedInitialState,
     initialValue: menuIsOpenedInitialState
@@ -133,6 +135,13 @@ export const Menu = (props: MenuProps) => {
   React.useEffect(() => {
     onOpen(menuIsOpened);
   }, [menuIsOpened]);
+
+  React.useEffect(() => {
+    if (searchValue === null) {
+      return;
+    }
+    onSearch(searchValue);
+  }, [searchValue]);
 
   const onToggleMenuHandler = (state: boolean) => {
     setMenuOpen(state);
@@ -162,7 +171,7 @@ export const Menu = (props: MenuProps) => {
           </IconButton>
 
           <Typography
-            variant="h6"
+            variant={'h6'}
             component={RouterLink}
             to={'/'}
             sx={{
@@ -171,6 +180,7 @@ export const Menu = (props: MenuProps) => {
               color: 'white',
               textDecoration: 'none'
             }}
+            onClick={() => setSearchValue('')}
           >
             {db.siteName}
           </Typography>
@@ -180,9 +190,10 @@ export const Menu = (props: MenuProps) => {
               <SearchIcon/>
             </SearchIconWrapper>
             <StyledInputBase
+              value={searchValue || ''}
               placeholder={'Найти...'}
               inputProps={{ 'aria-label': 'search' }}
-              onChange={(e) => onSearch(e.target.value)}
+              onChange={(e) => setSearchValue(e.target.value)}
             />
           </Search>
         </Toolbar>
