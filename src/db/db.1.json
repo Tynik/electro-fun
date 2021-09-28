@@ -1,7 +1,7 @@
 {
-  "siteName": "Electo Fun",
+  "siteName": "Electro Fun",
   "seo": {
-    "title": "Electo Fun",
+    "title": "Electro Fun",
     "description": "Каталог радиомодулей, чипов, микросхем и т.д.",
     "keywords": "радиокомпоненты, радиомодули, микросхемы, датчики, iot, arduino"
   },
@@ -77,9 +77,21 @@
     "SMBus": {
       "url": "https://ru.wikipedia.org/wiki/SMBus",
       "lang": "ru"
+    },
+    "ARM": {
+      "url": "https://ru.wikipedia.org/wiki/ARM_(%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0)",
+      "lang": "ru"
+    },
+    "JTAG": {
+      "url": "https://ru.wikipedia.org/wiki/JTAG",
+      "lang": "ru"
     }
   },
   "clarifications": {
+    "Cortex®-M4": {
+      "url": "https://en.wikipedia.org/wiki/ARM_Cortex-M#Cortex-M4",
+      "lang": "en"
+    },
     "HEXFET®": {
       "url": "https://www.rfwireless-world.com/Terminology/HEXFET-vs-MOSFET.html",
       "lang": "en"
@@ -158,6 +170,10 @@
     }
   },
   "datasheets": {
+    "LM2596": {
+      "url": "/datasheets/LM2596.pdf",
+      "lang": "en"
+    },
     "RF-SM-1077B2": {
       "url": "/datasheets/RF-SM-1077B2.pdf",
       "lang": "en"
@@ -699,10 +715,10 @@
       "subtitle": "Понижающий стабилизатор напряжения",
       "seo": {
         "description": "LM2596s - понижающий стабилизатор напряжения",
-        "keywords": "lm2596s, стабилизатор, понижение"
+        "keywords": "lm2596s, стабилизатор, понижение, ti"
       },
       "buyLink": "https://izi.ua/p-19437930-stabilizator-napryazheniya-ponizhayushchiy-lm2596s-dc-dc-3a",
-      "datasheetId": "",
+      "datasheetId": "LM2596",
       "images": [
         {
           "src": "https://images.izi.ua/83859610",
@@ -734,6 +750,15 @@
         {
           "refId": 15,
           "value": "3 A"
+        }
+      ],
+      "externalLinks": [
+        {
+          "name": "Официальная страница LM2596",
+          "url": "https://www.ti.com/product/LM2596",
+          "lang": "en",
+          "icon": "ti.com.ico",
+          "iconAlt": "ti.com"
         }
       ]
     },

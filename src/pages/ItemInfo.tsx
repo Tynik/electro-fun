@@ -35,6 +35,7 @@ import {
   ExternalButtonLink
 } from '../components';
 import { ItemInfoFeatures } from './ItemInfoFeatures';
+import { ItemInfoOptions } from './ItemInfoOptions';
 
 export const ItemInfo = () => {
   const theme = useTheme();
@@ -227,7 +228,11 @@ export const ItemInfo = () => {
         </Grid>
 
         <Grid xs={12} sm={6} item>
-          <ItemInfoFeatures item={item}/>
+          <ItemInfoFeatures features={item.features}/>
+
+          {Boolean(Object.keys(item.options).length) && (
+            <ItemInfoOptions options={item.options}/>
+          )}
 
           <Box marginTop={theme.spacing(2)}>
             <Stack direction={'row'} spacing={2}>

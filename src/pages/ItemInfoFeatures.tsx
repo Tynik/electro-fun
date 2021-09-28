@@ -11,8 +11,7 @@ import { Info as InfoIcon } from '@material-ui/icons';
 
 import {
   ItemFeature,
-  OptionDefinitionSuffix,
-  Item
+  FeatureDefinitionSuffix
 } from '../types';
 import { DbContext } from '../context';
 import { useTextProcessor } from '../hooks';
@@ -33,10 +32,10 @@ export const sortItemFeatures = (allFeatures, features: ItemFeature[]) =>
   });
 
 export type ItemInfoFeaturesProps = {
-  item: Item
+  features: ItemFeature[]
 }
 
-export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
+export const ItemInfoFeatures = ({ features }: ItemInfoFeaturesProps) => {
   const theme = useTheme();
 
   const { db } = React.useContext(DbContext);
@@ -65,7 +64,7 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
   };
 
   const getFeatureValue = React.useCallback((feature: ItemFeature) => {
-    const processFeatureValue = (values: any, suffix: OptionDefinitionSuffix) => {
+    const processFeatureValue = (values: any, suffix: FeatureDefinitionSuffix) => {
       if (!Array.isArray(values)) {
         return [
           values + (
@@ -124,7 +123,7 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
       <Typography variant={'overline'}>Характеристики</Typography>
 
       <Box>
-        {sortItemFeatures(db.itemFeatures, item.features || []).map(
+        {sortItemFeatures(db.itemFeatures, features || []).map(
           (feature, index, array) => (
             <div
               key={`${feature.refId}-${index}-feature`}

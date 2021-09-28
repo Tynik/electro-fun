@@ -1,11 +1,12 @@
 export type Article = {}
 
-export type FeatureSectionId = number;
-export type CategoryId = number;
-export type FeatureId = number;
-export type DatasheetId = string;
+export type ItemOptionId = string
+export type FeatureSectionId = number
+export type CategoryId = number
+export type FeatureId = number
+export type DatasheetId = string
 
-export enum ItemOptionValueType {
+export enum ItemFeatureValueType {
   axis,
   range,
 }
@@ -23,7 +24,7 @@ export type Category = {
 }
 
 export type ItemFeatureValue = string | (string | {
-  type: ItemOptionValueType,
+  type: ItemFeatureValueType,
   value: string | string[]
 })
 
@@ -46,6 +47,13 @@ export type ExternalResourceLink = {
   iconAlt: string
 }
 
+export type ItemOption = {
+  name: string
+  default?: boolean
+}
+
+export type ItemOptions = Record<ItemOptionId, ItemOption>
+
 export type Item = {
   title: string
   subtitle: string
@@ -58,6 +66,7 @@ export type Item = {
   datasheetId?: string
   buyLink?: string
   companyLink?: string
+  options?: ItemOptions
   features?: ItemFeature[]
   images?: ItemImage[]
   original?: boolean
@@ -65,21 +74,21 @@ export type Item = {
   externalLinks?: ExternalResourceLink[]
 }
 
-export type OptionDefinitionSuffix = string | Record<ItemOptionValueType, string>
+export type FeatureDefinitionSuffix = string | Record<ItemFeatureValueType, string>
 
-export enum OptionTypeId {
+export enum FeatureTypeId {
   bool
 }
 
-export type OptionDefinition = {
+export type FeatureDefinition = {
   name: string
-  suffix?: OptionDefinitionSuffix
+  suffix?: FeatureDefinitionSuffix
   categories?: CategoryId[]
   featSecRefId?: FeatureSectionId
-  type?: OptionTypeId
+  type?: FeatureTypeId
 }
 
-export type DbItemFeatures = Record<FeatureId, OptionDefinition>
+export type DbItemFeatures = Record<FeatureId, FeatureDefinition>
 
 export type Abbreviations = Record<string, {
   url: string
@@ -114,7 +123,7 @@ export type Db = {
   articles: Article[]
   categories: Category[]
   featureSections: Record<FeatureSectionId, string>
-  optionTypes: Record<OptionTypeId, {
+  optionTypes: Record<FeatureTypeId, {
     y: string
     n: string
   }>

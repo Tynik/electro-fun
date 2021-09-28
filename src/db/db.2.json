@@ -17,10 +17,25 @@
           "alt": "LED0805"
         },
         {
-          "src": "/photos/LED0805-2.png",
+          "src": "/photos/LED0805-2.webp",
           "alt": "LED0805 - Рекомендуемый профиль пайки оплавлением"
         }
       ],
+      "options": {
+        "1": {
+          "name": "Желтый",
+          "default": true
+        },
+        "2": {
+          "name": "Красный"
+        },
+        "3": {
+          "name": "Синий"
+        },
+        "4": {
+          "name": "Зелёный"
+        }
+      },
       "features": [
         {
           "refId": 3,
@@ -48,7 +63,7 @@
       "categoryId": 11,
       "lang": "ru",
       "title": "J-Link v8",
-      "subtitle": "Программатор USB-jTAG",
+      "subtitle": "Программатор USB-JTAG",
       "seo": {
         "description": "J-Link - программатор v8 USB-JTAG",
         "keywords": "программатор, segger, j-link, usb, jtag, arm, cortex-m"
@@ -71,7 +86,7 @@
         },
         {
           "src": "/photos/J-Link-4.webp",
-          "alt": "J-Link v8 - jTAG распиновка"
+          "alt": "J-Link v8 - JTAG распиновка"
         }
       ],
       "features": [
@@ -110,9 +125,9 @@
           "iconAlt": "segger.com"
         },
         {
-          "name": "Прошивка CC2652p для Zigbee используя BSL и jTAG JLink",
+          "name": "Прошивка CC2652p для Zigbee используя BSL и JTAG JLink",
           "url": "https://www.youtube.com/watch?v=xmpBBz5_7E4",
-          "lang": "en",
+          "lang": "ru",
           "icon": "youtube.com.png",
           "iconAlt": "youtube.com"
         }
@@ -190,6 +205,13 @@
           "lang": "en",
           "icon": "szrfstar.com.ico",
           "iconAlt": "szrfstar.com"
+        },
+        {
+          "name": "Официальная страница CC2652P",
+          "url": "https://www.ti.com/product/CC2652P",
+          "lang": "en",
+          "icon": "ti.com.ico",
+          "iconAlt": "ti.com"
         }
       ]
     }
