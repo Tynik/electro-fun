@@ -18,6 +18,10 @@
   "articles": [
   ],
   "abbreviations": {
+    "MQTT": {
+      "url": "https://ru.wikipedia.org/wiki/MQTT",
+      "lang": "ru"
+    },
     "QFN": {
       "url": "https://ru.wikipedia.org/wiki/QFN",
       "lang": "ru"
@@ -1694,6 +1698,20 @@
           "lang": "en",
           "icon": "github.com.svg",
           "iconAlt": "github.com"
+        },
+        {
+          "name": "Прошивка для ZigBee координатора RF-STAR RF-BM-2652P2",
+          "url": "https://github.com/egony/cc2652p_cc1352p_RF-STAR/tree/9a099573659901c416ee2b3b657210ce16b8d19b/firmware/coordinator",
+          "lang": "en",
+          "icon": "github.com.svg",
+          "iconAlt": "github.com"
+        },
+        {
+          "name": "Zigbee в MQTT",
+          "url": "https://www.zigbee2mqtt.io",
+          "lang": "en",
+          "icon": "zigbee2mqtt.io.ico",
+          "iconAlt": "zigbee2mqtt.io"
         }
       ]
     },

@@ -212,6 +212,27 @@
           "lang": "en",
           "icon": "ti.com.ico",
           "iconAlt": "ti.com"
+        },
+        {
+          "name": "ZigBee стик v4 (модули RF-STAR)",
+          "url": "https://github.com/egony/cc2652p_cc1352p_RF-STAR/wiki",
+          "lang": "en",
+          "icon": "github.com.svg",
+          "iconAlt": "github.com"
+        },
+        {
+          "name": "Инструкции по компиляции и скомпилированные прошивки Z-Stack",
+          "url": "https://github.com/Koenkk/Z-Stack-firmware",
+          "lang": "en",
+          "icon": "github.com.svg",
+          "iconAlt": "github.com"
+        },
+        {
+          "name": "Zigbee в MQTT",
+          "url": "https://www.zigbee2mqtt.io",
+          "lang": "en",
+          "icon": "zigbee2mqtt.io.ico",
+          "iconAlt": "zigbee2mqtt.io"
         }
       ]
     }

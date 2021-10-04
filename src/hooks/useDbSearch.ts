@@ -42,6 +42,13 @@ export const useDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
               return keyword.trim().toLowerCase().includes(text);
             });
         }
+
+        if (item.externalLinks) {
+          textMatch ||= item.externalLinks.some(externalLink =>
+            externalLink.name.toLowerCase().includes(text)
+          )
+        }
+
         matched &&= textMatch;
       }
       if (categoryId) {

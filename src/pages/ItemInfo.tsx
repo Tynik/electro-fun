@@ -230,7 +230,7 @@ export const ItemInfo = () => {
         <Grid xs={12} sm={6} item>
           <ItemInfoFeatures features={item.features}/>
 
-          {Boolean(Object.keys(item.options).length) && (
+          {item.options && Boolean(Object.keys(item.options).length) && (
             <ItemInfoOptions options={item.options}/>
           )}
 
