@@ -14,6 +14,7 @@ import {
   Description as DescriptionIcon,
   Keyboard as KeyboardIcon,
   WbTwilight as WbTwilightIcon,
+  Speed as SpeedIcon,
 } from '@material-ui/icons';
 
 import { Item, Db } from './types';
@@ -83,6 +84,7 @@ export const getIcon = (name, props = {}) => {
     document: <DescriptionIcon {...props}/>,
     keyboard: <KeyboardIcon {...props}/>,
     led: <WbTwilightIcon {...props}/>,
+    measure: <SpeedIcon {...props}/>,
   }[name];
 };
 

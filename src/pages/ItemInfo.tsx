@@ -10,6 +10,8 @@ import {
   ListItem,
   Icon,
   Chip,
+  AvatarGroup,
+  Avatar,
   ListItemText,
   Alert,
   useTheme
@@ -258,6 +260,31 @@ export const ItemInfo = () => {
               )}
             </Stack>
           </Box>
+
+          {item.drivers && item.drivers.length > 0 && (
+            <Box marginTop={theme.spacing(2)}>
+              <Typography variant={'overline'}>
+                Драйверы
+              </Typography>
+
+              <AvatarGroup
+                max={10}
+                sx={{ display: 'flex', justifyContent: 'center' }}
+              >
+                {item.drivers.map(driver => (
+                  <ExternalLink
+                    key={driver.name}
+                    href={driver.url}
+                    hrefLang={'en'}
+                    title={driver.name}
+                    sx={{ textDecoration: 'none' }}
+                  >
+                    <Avatar alt={driver.name} src={driver.avatarSrc}/>
+                  </ExternalLink>
+                ))}
+              </AvatarGroup>
+            </Box>
+          )}
         </Grid>
       </Grid>
     </Container>

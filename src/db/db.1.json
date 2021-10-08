@@ -174,8 +174,24 @@
     }
   },
   "datasheets": {
+    "PZEM-004": {
+      "url": "/datasheets/PZEM-004.pdf",
+      "lang": "en"
+    },
+    "LP5036": {
+      "url": "/datasheets/LP5036.pdf",
+      "lang": "en"
+    },
     "LM2596": {
       "url": "/datasheets/LM2596.pdf",
+      "lang": "en"
+    },
+    "LM324N": {
+      "url": "/datasheets/LM324N.pdf",
+      "lang": "en"
+    },
+    "SD3004": {
+      "url": "/datasheets/SD3004.pdf",
       "lang": "en"
     },
     "RF-SM-1077B2": {
@@ -351,6 +367,11 @@
       "id": 12,
       "name": "LED(s)",
       "icon": "led"
+    },
+    {
+      "id": 13,
+      "name": "Измерители",
+      "icon": "measure"
     }
   ],
   "featureSections": {
@@ -709,6 +730,30 @@
     },
     "76": {
       "name": "Габариты"
+    },
+    "77": {
+      "name": "Напряжение",
+      "featSecRefId": 5
+    },
+    "78": {
+      "name": "Напряжение",
+      "featSecRefId": 2
+    },
+    "79": {
+      "name": "Напряжение",
+      "featSecRefId": 1
+    },
+    "80": {
+      "name": "Ток",
+      "featSecRefId": 5
+    },
+    "81": {
+      "name": "Ток",
+      "featSecRefId": 2
+    },
+    "82": {
+      "name": "Ток",
+      "featSecRefId": 1
     }
   },
   "items": [

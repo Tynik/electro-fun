@@ -39,7 +39,15 @@ export type ItemImage = {
   src: string
 }
 
-export type ExternalResourceLink = {
+export type ItemApplication = string
+
+export type ItemDriver = {
+  name: string
+  url: string
+  avatarSrc: string
+}
+
+export type ItemExternalLink = {
   name: string
   url: string
   lang: string
@@ -70,8 +78,9 @@ export type Item = {
   features?: ItemFeature[]
   images?: ItemImage[]
   original?: boolean
-  applications?: string[]
-  externalLinks?: ExternalResourceLink[]
+  applications?: ItemApplication[]
+  drivers?: ItemDriver[]
+  externalLinks?: ItemExternalLink[]
 }
 
 export type FeatureDefinitionSuffix = string | Record<ItemFeatureValueType, string>
