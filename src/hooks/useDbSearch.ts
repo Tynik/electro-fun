@@ -3,7 +3,7 @@ import { Db, Item } from '../types';
 
 export const useDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
   const [id, setId] = React.useState<string>(null);
-  const [text, setText] = React.useState<string>(null);
+  const [keywords, setKeywords] = React.useState<string[]>(null);
   const [categoryId, setCategoryId] = React.useState<number>(null);
   const [foundItems, setFoundItems] = React.useState<Item[]>(null);
   const [searchOffset, setSearchOffset] = React.useState<number>(0);
@@ -14,42 +14,43 @@ export const useDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
 
   React.useEffect(() => {
     if ((
-      id === null && text === null && categoryId === null
+      id === null && keywords === null && categoryId === null
     ) || !db) {
       return;
     }
-    if (id === null && text === '' && categoryId === null) {
+    if (id === null && (keywords && !keywords.length) && categoryId === null) {
       setFoundItems(null);
       return;
     }
-    const foundItems = db.items.filter((item) => {
+    const foundItems = db.items.filter(item => {
       let matched = true;
 
       if (id) {
         return item.id === id;
       }
-      if (text) {
-        let textMatch = item.title.toLowerCase().includes(text) ||
-          item.subtitle.toLowerCase().includes(text);
+      if (keywords.length) {
+        matched &&= keywords.every(keyword => {
+          let keywordMatch = item.title.toLowerCase().includes(keyword) ||
+            item.subtitle.toLowerCase().includes(keyword);
 
-        if (item.content) {
-          textMatch ||= item.content.toLowerCase().includes(text);
-        }
+          if (item.content) {
+            keywordMatch ||= item.content.toLowerCase().includes(keyword);
+          }
 
-        if (item.seo) {
-          textMatch ||= item.seo.description.toLowerCase().includes(text) ||
-            item.seo.keywords.split(',').some(keyword => {
-              return keyword.trim().toLowerCase().includes(text);
-            });
-        }
+          if (item.seo) {
+            keywordMatch ||= item.seo.description.toLowerCase().includes(keyword) ||
+              item.seo.keywords.split(',').some(seoKeyword => {
+                return seoKeyword.trim().toLowerCase().includes(keyword);
+              });
+          }
 
-        if (item.externalLinks) {
-          textMatch ||= item.externalLinks.some(externalLink =>
-            externalLink.name.toLowerCase().includes(text)
-          )
-        }
-
-        matched &&= textMatch;
+          if (item.externalLinks) {
+            keywordMatch ||= item.externalLinks.some(externalLink =>
+              externalLink.name.toLowerCase().includes(keyword)
+            )
+          }
+          return keywordMatch;
+        });
       }
       if (categoryId) {
         matched &&= item.categoryId === categoryId;
@@ -73,7 +74,7 @@ export const useDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
       // finish
       setFoundItems(foundItems);
     }
-  }, [db, id, text, categoryId]);
+  }, [db, id, keywords, categoryId]);
 
   const search = React.useCallback(({ id, text, categoryId }: {
     id?: string,
@@ -85,7 +86,7 @@ export const useDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
       return;
     }
     if (text !== undefined) {
-      setText(text.toLowerCase());
+      setKeywords(text.toLowerCase().split(' ').filter(keyword => keyword));
     }
     if (categoryId !== undefined) {
       setCategoryId(categoryId);
