@@ -6,13 +6,9 @@ import {
   Stack,
   Grid,
   Typography,
-  List,
-  ListItem,
-  Icon,
   Chip,
   AvatarGroup,
   Avatar,
-  ListItemText,
   Alert,
   useTheme
 } from '@material-ui/core';
@@ -38,6 +34,7 @@ import {
 } from '../components';
 import { ItemInfoFeatures } from './ItemInfoFeatures';
 import { ItemInfoOptions } from './ItemInfoOptions';
+import { ItemInfoExternalLinks } from './ItemInfoExternalLinks';
 import { getItemDriverAvatarSrc } from '../utils';
 
 export const ItemInfo = () => {
@@ -196,36 +193,7 @@ export const ItemInfo = () => {
 
           {item.externalLinks && item.externalLinks.length > 0 && (
             <Box marginTop={theme.spacing(2)}>
-              <Typography variant={'overline'}>
-                Ссылки на внешние ресурсы
-              </Typography>
-
-              <List disablePadding>
-                {item.externalLinks.map(externalResource => (
-                  <ListItem key={externalResource.name} disablePadding>
-                    {externalResource.icon && (
-                      <Icon
-                        fontSize={'small'}
-                        sx={{ display: 'flex', alignItems: 'center' }}
-                      >
-                        <img
-                          src={`/icons/${externalResource.icon}`}
-                          alt={externalResource.iconAlt}
-                          width={16}
-                          height={16}/>
-                      </Icon>
-                    )}
-                    <ListItemText>
-                      <ExternalLink
-                        href={externalResource.url}
-                        hrefLang={externalResource.lang}
-                      >
-                        {externalResource.name}
-                      </ExternalLink>
-                    </ListItemText>
-                  </ListItem>
-                ))}
-              </List>
+              <ItemInfoExternalLinks item={item}/>
             </Box>
           )}
         </Grid>

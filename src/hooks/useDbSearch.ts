@@ -1,5 +1,6 @@
 import React from 'react';
 import { Db, Item } from '../types';
+import { matchItemKeyword } from '../utils';
 
 export const useDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
   const [id, setId] = React.useState<string>(null);
@@ -29,28 +30,7 @@ export const useDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
         return item.id === id;
       }
       if (keywords && keywords.length) {
-        matched &&= keywords.every(keyword => {
-          let keywordMatch = item.title.toLowerCase().includes(keyword) ||
-            item.subtitle.toLowerCase().includes(keyword);
-
-          if (item.content) {
-            keywordMatch ||= item.content.toLowerCase().includes(keyword);
-          }
-
-          if (item.seo) {
-            keywordMatch ||= item.seo.description.toLowerCase().includes(keyword) ||
-              item.seo.keywords.split(',').some(seoKeyword => {
-                return seoKeyword.trim().toLowerCase().includes(keyword);
-              });
-          }
-
-          if (item.externalLinks) {
-            keywordMatch ||= item.externalLinks.some(externalLink =>
-              externalLink.name.toLowerCase().includes(keyword)
-            )
-          }
-          return keywordMatch;
-        });
+        matched &&= keywords.every(keyword => matchItemKeyword(item, keyword));
       }
       if (categoryId) {
         matched &&= item.categoryId === categoryId;

@@ -16,7 +16,7 @@ import {
   WbTwilight as WbTwilightIcon,
   Speed as SpeedIcon,
   Security as SecurityIcon,
-  Apps as AppsIcon,
+  Apps as AppsIcon
 } from '@material-ui/icons';
 
 import { Item, Db, ItemDriverSrc, ItemDriverSrcSource } from './types';
@@ -40,7 +40,9 @@ export const preprocessDb = (db: Db) => (
 );
 
 export function isObject(item) {
-  return (item && typeof item === 'object' && !Array.isArray(item));
+  return (
+    item && typeof item === 'object' && !Array.isArray(item)
+  );
 }
 
 export function mergeDeep(target, ...sources) {
@@ -88,7 +90,7 @@ export const getIcon = (name, props = {}) => {
     led: <WbTwilightIcon {...props}/>,
     measure: <SpeedIcon {...props}/>,
     fuse: <SecurityIcon {...props}/>,
-    apps: <AppsIcon {...props}/>,
+    apps: <AppsIcon {...props}/>
   }[name];
 };
 
@@ -131,7 +133,32 @@ export const wordsWrapper = (
 
 export const getItemDriverAvatarSrc = (itemDriverSrc: ItemDriverSrc): string => {
   if (itemDriverSrc.source === ItemDriverSrcSource.GITHUB) {
-    return `https://avatars.githubusercontent.com/u/${itemDriverSrc.userId}?s=60&v=4`
+    return `https://avatars.githubusercontent.com/u/${itemDriverSrc.userId}?s=60&v=4`;
   }
   throw new Error('Driver avatar src cannot be found');
-}
+};
+
+export const matchItemKeyword = (item: Item, keyword: string): boolean => {
+  let keywordMatch = item.title.toLowerCase().includes(keyword) ||
+    item.subtitle.toLowerCase().includes(keyword);
+
+  if (item.content) {
+    keywordMatch ||= item.content.toLowerCase().includes(keyword);
+  }
+
+  if (item.seo) {
+    keywordMatch ||= item.seo.description.toLowerCase().includes(keyword);
+    keywordMatch ||= item.seo.keywords.split(',').some(seoKeyword =>
+      seoKeyword.trim().toLowerCase().split('-').some(seoKeywordPart =>
+        seoKeywordPart.startsWith(keyword)
+      )
+    );
+  }
+
+  if (item.externalLinks) {
+    keywordMatch ||= item.externalLinks.some(externalLink =>
+      externalLink.name.toLowerCase().includes(keyword)
+    );
+  }
+  return keywordMatch;
+};

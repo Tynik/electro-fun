@@ -182,6 +182,10 @@
     }
   },
   "datasheets": {
+    "ESP-12E": {
+      "url": "/datasheets/ESP-12E.pdf",
+      "lang": "en"
+    },
     "ESP-C3-13U-Kit": {
       "url": "/datasheets/ESP-C3-13U-Kit.pdf",
       "lang": "en"
