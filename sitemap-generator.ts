@@ -7,8 +7,8 @@ const generateSitemapData = (): string[] => {
   const meta: DbMeta = JSON.parse(metadata as any);
 
   let sitemapData = [
-    'https://electro-fun.site/',
-    'https://electro-fun.site/#/datasheets'
+    'https://smart-home-tech.com.ua/',
+    'https://smart-home-tech.com.ua/#/datasheets'
   ];
 
   Array.from(new Array(meta.parts)).forEach((_, part) => {
@@ -18,7 +18,7 @@ const generateSitemapData = (): string[] => {
     sitemapData = [
       ...sitemapData,
       ...dbPart.items.map((item) =>
-        'https://electro-fun.site/#/item/' + generateItemId(item.title)
+        'https://smart-home-tech.com.ua/#/item/' + generateItemId(item.title)
       )
     ];
   });

@@ -5,6 +5,7 @@ export type FeatureSectionId = number
 export type CategoryId = number
 export type FeatureId = number
 export type DatasheetId = string
+export type DocId = string
 
 export enum ItemFeatureValueType {
   axis,
@@ -129,6 +130,11 @@ export type Datasheet = {
   description?: string
 }
 
+export type Doc = {
+  name: string
+  url: string
+}
+
 export type MenuItem = {
   name: string
   url: string
@@ -151,6 +157,7 @@ export type Db = {
   itemFeatures: DbItemFeatures
   items: Item[]
   datasheets: Record<DatasheetId, Datasheet>
+  docs: Record<DocId, Doc>
   footer: {
     bottom: string
   }

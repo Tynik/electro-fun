@@ -407,7 +407,84 @@
       ]
     },
     {
-      "title": "NodeMCU ESP8266",
+      "categoryId": 9,
+      "lang": "ru",
+      "title": "LoLin NodeMCU ESP8266 4MB v3",
+      "subtitle": "DevKit",
+      "seo": {
+        "description": "NodeMCU ESP8266 V3",
+        "keywords": "nodemcu, esp8266, esp, devkit, arduino, wifi"
+      },
+      "buyLink": "https://izi.ua/p-5455159-nodemcu-v3-s-wifi-esp8266-ch340-4mb-arduino",
+      "content": "LoLin NodeMCU V3 на базе ESP8266 Wi-Fi / ESP-12E / CH340 – это платформа которая используется для программирования и управления различными устройствами.\n\nESP8266 Wi-Fi - программируемый модуль который позволяет подключаться к сети по Wi-Fi. На данную плату ESP8266 можно загружать прошивку NodeMCU (Lua) / Micropython (Python) / Arduino файлы, создавать файлы во Flash памяти и запускать их.\n\nМодуль имеет 11 портов ввода / вывода, некоторые из них мультилексированы с интерфейсами UART, I2C, SPI, PWM и ADC. Все выводы платы выполнены с шагом 2,54 мм. Питание платы, а так же загрузка кода, осуществляется через MicroUSB разъем. Прошивка NodeMCU позволяет отправлять модуль в режим глубокого сна для снижения энергопотребления и открывает доступ к широким возможностям модуля, недоступным в стандартной прошивке.\n\nНа плате есть регулятор напряжения, позволяющий подавать питание на плату через USB.\n\nWiFi модуль ESP-12E построен на базе процессора с ядром ESP8266, отличие в радио-интерфейсе Wi-Fi. Ядро ESP8266 интегрировано в Tensilica L106 – 32-битный микроконтроллер с ультра-низким энергопотреблением.\n\nПоддержка тактовых частот 80 или 160MHz, поддержка RTOS (Операционная Система Реального Времени), встроенные Wi-Fi MAC/BB/RF/PA/LNA, микро-антенна на плате модуля. Модуль поддерживает стандарт IEEE802.11 b/g/n, полный стек TCP/IP протоколов.",
+      "images": [
+        {
+          "src": "photos/LoLin-NodeMCU-ESP8266-1.webp",
+          "alt": "NodeMCU-ESP8266"
+        },
+        {
+          "src": "photos/LoLin-NodeMCU-ESP8266-2.webp",
+          "alt": "NodeMCU-ESP8266 - распиновка"
+        },
+        {
+          "src": "photos/LoLin-NodeMCU-ESP8266-3.webp",
+          "alt": "NodeMCU-ESP8266 - схема"
+        }
+      ],
+      "features": [
+        {
+          "refId": 2,
+          "value": "UART/GPIO/SDIO/SPI/I²C/I²S/PWM/ADC"
+        },
+        {
+          "refId": 15,
+          "value": "15 мА"
+        },
+        {
+          "refId": 20,
+          "value": 17
+        },
+        {
+          "refId": 24,
+          "value": "-40 - +120°C"
+        },
+        {
+          "refId": 28,
+          "value": "200 мА"
+        },
+        {
+          "refId": 29,
+          "value": "70 мА"
+        },
+        {
+          "refId": 36,
+          "value": "до 200 мкА"
+        },
+        {
+          "refId": 38,
+          "value": "Tensilica Xtensa Diamond 32-бит RISC"
+        },
+        {
+          "refId": 53,
+          "value": "80/160 МГц"
+        },
+        {
+          "refId": 54,
+          "value": "4 МБ"
+        },
+        {
+          "refId": 55,
+          "value": "Да"
+        },
+        {
+          "refId": 3,
+          "value": "4.5 - 9 В"
+        },
+        {
+          "refId": 46,
+          "value": "Station/SoftAP/SoftAP+Station"
+        }
+      ],
       "externalLinks": [
         {
           "name": "Add your ESP32 Board to Home Assistant with ESPHome",

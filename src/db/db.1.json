@@ -1,12 +1,12 @@
 {
-  "siteName": "Electro Fun",
+  "siteName": "Smart Home Tech",
   "seo": {
-    "title": "Electro Fun",
-    "description": "Каталог радиомодулей, чипов, микросхем и т.д.",
-    "keywords": "радиокомпоненты, радиомодули, микросхемы, датчики, iot, arduino"
+    "title": "Smart Home Tech",
+    "description": "Решения для создания умного дома своими руками",
+    "keywords": "smart-home, умный-дом, радиокомпоненты, радиомодули, микросхемы, датчики, iot, arduino"
   },
   "footer": {
-    "bottom": "Electro Fun 2021"
+    "bottom": "Smart Home Tech 2021"
   },
   "menu": [
     {
@@ -18,6 +18,14 @@
   "articles": [
   ],
   "abbreviations": {
+    "RISC": {
+      "url": "https://ru.wikipedia.org/wiki/RISC",
+      "lang": "ru"
+    },
+    "RISC-V": {
+      "url": "https://ru.wikipedia.org/wiki/RISC-V",
+      "lang": "ru"
+    },
     "MQTT": {
       "url": "https://ru.wikipedia.org/wiki/MQTT",
       "lang": "ru"
@@ -391,6 +399,16 @@
       "lang": "en"
     }
   },
+  "docs": [
+    {
+      "name": "SimpleLink™ - CC13x2, CC26x2 Wireless MCU",
+      "url": "SimpleLink/CC13x2, CC26x2 SimpleLink™ Wireless MCU.pdf"
+    },
+    {
+      "name": "TI-RTOS - Bios user guide",
+      "url": "TI-RTOS/Bios_User_Guide.pdf"
+    }
+  ],
   "categories": [
     {
       "id": 1,
@@ -474,10 +492,10 @@
     "3": "Напряжение",
     "4": "Ток",
     "5": "Измерение",
-    "6": "GPIO",
+    "6": "GPIOs",
     "7": "Потребление тока",
     "8": "CPU",
-    "9": "Программного обеспечения",
+    "9": "Программное обеспечения",
     "10": "MCU",
     "11": "Поддержка"
   },
@@ -1629,7 +1647,11 @@
         },
         {
           "refId": 38,
-          "value": "Tensilica L106 32-bit "
+          "value": "Tensilica L106 32-бит RISC"
+        },
+        {
+          "refId": 53,
+          "value": "80/160 МГц"
         },
         {
           "refId": 43,

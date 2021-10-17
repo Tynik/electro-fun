@@ -163,7 +163,7 @@ export const ItemInfo = () => {
 
         <Grid xs={12} sm={6} item>
           <ImageSlider
-            images={item.images}
+            images={item.images || []}
             height={'300px'}
           />
 
