@@ -151,6 +151,14 @@
         {
           "src": "/photos/RF-BM-2652P2-2.webp",
           "alt": "RF-BM-2652P2 - распиновка"
+        },
+        {
+          "src": "/photos/RF-BM-2652P2-3.webp",
+          "alt": "RF-BM-2652P2 - список возможных модулей"
+        },
+        {
+          "src": "/photos/RF-BM-2652P2-4.webp",
+          "alt": "RF-BM-2652P2 - список возможных модулей (продолжение)"
         }
       ],
       "features": [
@@ -202,12 +210,18 @@
         {
           "name": "Koen Kanters",
           "url": "https://github.com/Koenkk",
-          "avatarSrc": "https://avatars.githubusercontent.com/u/2892853?s=60&v=4"
+          "src": {
+            "source": "github",
+            "userId": 2892853
+          }
         },
         {
           "name": "Alex Egony",
           "url": "https://github.com/egony",
-          "avatarSrc": "https://avatars.githubusercontent.com/u/52287546?s=60&v=4"
+          "src": {
+            "source": "github",
+            "userId": 52287546
+          }
         }
       ],
       "externalLinks": [
@@ -221,6 +235,13 @@
         {
           "name": "Официальная страница CC2652P",
           "url": "https://www.ti.com/product/CC2652P",
+          "lang": "en",
+          "icon": "ti.com.ico",
+          "iconAlt": "ti.com"
+        },
+        {
+          "name": "Z-STACK SDK",
+          "url": "https://www.ti.com/tool/Z-STACK",
           "lang": "en",
           "icon": "ti.com.ico",
           "iconAlt": "ti.com"
@@ -251,8 +272,8 @@
     {
       "categoryId": 13,
       "lang": "ru",
-      "title": "PZEM-004T",
-      "subtitle": "Измерение напряжения и тока 100A v3.0",
+      "title": "PZEM-004T v3.0",
+      "subtitle": "Измерение напряжения 80 - 260 В и тока 100A",
       "datasheetId": "PZEM-004",
       "images": [
         {
@@ -266,8 +287,16 @@
       ],
       "features": [
         {
+          "refId": 2,
+          "value": "RS485"
+        },
+        {
+          "refId": 24,
+          "value": "-20 - +60°C"
+        },
+        {
           "refId": 76,
-          "value": "30.1 x 73 мм"
+          "value": "30.1 x 73.7 x 14.3 мм"
         },
         {
           "refId": 77,
@@ -283,7 +312,16 @@
         },
         {
           "refId": 80,
-          "value": "0 - 100 А"
+          "value": [
+            {
+              "value": "0 - 10 А",
+              "info": "от 0.01 А"
+            },
+            {
+              "value": "0 - 100 А",
+              "info": "от 0.02 А"
+            }
+          ]
         },
         {
           "refId": 81,
@@ -291,6 +329,52 @@
         },
         {
           "refId": 82,
+          "value": "0.5 %"
+        },
+        {
+          "refId": 83,
+          "value": "45 - 65 Гц"
+        },
+        {
+          "refId": 84,
+          "value": "0.1 Гц"
+        },
+        {
+          "refId": 85,
+          "value": "0.5 %"
+        },
+        {
+          "refId": 86,
+          "value": "0.0 - 1.0"
+        },
+        {
+          "refId": 87,
+          "value": "0.01"
+        },
+        {
+          "refId": 88,
+          "value": "1 %"
+        },
+        {
+          "refId": 89,
+          "value": [
+            {
+              "value": "0 - 2.3 кВт",
+              "info": "PZEM-004T-10A"
+            },
+            {
+              "value": "0 - 23 кВт",
+              "info": "PZEM-004T-100A"
+            }
+          ],
+          "info": "от 0.4 Вт"
+        },
+        {
+          "refId": 90,
+          "value": "0.1 Вт"
+        },
+        {
+          "refId": 91,
           "value": "0.5 %"
         }
       ],
@@ -302,8 +386,37 @@
           "lang": "ru",
           "icon": "youtube.com.png",
           "iconAlt": "youtube.com"
+        },
+        {
+          "name": "Библиотека Arduino для PZEM-004T v3.0",
+          "url": "https://github.com/mandulaj/PZEM-004T-v30",
+          "lang": "en",
+          "icon": "github.com.svg",
+          "iconAlt": "github.com"
+        }
+      ],
+      "drivers": [
+        {
+          "name": "Jakub Mandula",
+          "url": "https://github.com/mandulaj",
+          "src": {
+            "source": "github",
+            "userId": 3600920
+          }
         }
       ]
+    },
+    {
+      "title": "NodeMCU ESP8266",
+      "externalLinks": [
+        {
+          "name": "Add your ESP32 Board to Home Assistant with ESPHome",
+          "url": "https://youtu.be/Be5zWukjV9I",
+          "lang": "en",
+          "icon": "youtube.com.png",
+          "iconAlt": "youtube.com"
+        }
+     ]
     }
   ]
 }

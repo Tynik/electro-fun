@@ -174,6 +174,90 @@
     }
   },
   "datasheets": {
+    "ESP-C3-13U-Kit": {
+      "url": "/datasheets/ESP-C3-13U-Kit.pdf",
+      "lang": "en"
+    },
+    "ESP32-C3N": {
+      "url": "/datasheets/ESP32-C3N.pdf",
+      "lang": "en"
+    },
+    "ESP32-C3U": {
+      "url": "/datasheets/ESP32-C3U.pdf",
+      "lang": "en"
+    },
+    "ESP32-C3M": {
+      "url": "/datasheets/ESP32-C3M.pdf",
+      "lang": "en"
+    },
+    "ESP32-C3S": {
+      "url": "/datasheets/ESP32-C3S.pdf",
+      "lang": "en"
+    },
+    "ESP32-C3F": {
+      "url": "/datasheets/ESP32-C3F.pdf",
+      "lang": "en"
+    },
+    "ESP32-C3": {
+      "url": "/datasheets/ESP32-C3.pdf",
+      "lang": "en"
+    },
+    "ESP32-C3-WROOM-02|ESP32-C3-WROOM-02U": {
+      "url": "/datasheets/ESP32-C3-WROOM-02|ESP32-C3-WROOM-02U.pdf",
+      "lang": "en"
+    },
+    "ESP32-WROOM-32E|ESP32-WROOM-32UE": {
+      "url": "/datasheets/ESP32-WROOM-32E|ESP32-WROOM-32UE.pdf",
+      "lang": "en"
+    },
+    "ESP32-WROVER-B|ESP32-WROVER-IB": {
+      "url": "/datasheets/ESP32-WROVER-B|ESP32-WROVER-IB.pdf",
+      "lang": "en"
+    },
+    "ESP32-WROVER-E|ESP32-WROVER-IE": {
+      "url": "/datasheets/ESP32-WROVER-E|ESP32-WROVER-IE.pdf",
+      "lang": "en"
+    },
+    "ESP32-S2-WROOM|ESP32-S2-WROOM-I": {
+      "url": "/datasheets/ESP32-S2-WROOM|ESP32-S2-WROOM-I.pdf",
+      "lang": "en"
+    },
+    "ESP32-S2-WROVER|ESP32-S2-WROVER-I": {
+      "url": "/datasheets/ESP32-S2-WROVER|ESP32-S2-WROVER-I.pdf",
+      "lang": "en"
+    },
+    "ESP32-S2 (Technical Reference Manual)": {
+      "url": "/datasheets/ESP32-S2 (Technical Reference Manual).pdf",
+      "lang": "en"
+    },
+    "ESP32-S3": {
+      "url": "/datasheets/ESP32-S3.pdf",
+      "lang": "en"
+    },
+    "MOC302x": {
+      "url": "/datasheets/MOC302x.pdf",
+      "lang": "en"
+    },
+    "G3MB-202P": {
+      "url": "/datasheets/G3MB-202P.pdf",
+      "lang": "en"
+    },
+    "TLP281": {
+      "url": "/datasheets/TLP281.pdf",
+      "lang": "en"
+    },
+    "CD74HC4051-EP": {
+      "url": "/datasheets/CD74HC4051-EP.pdf",
+      "lang": "en"
+    },
+    "HLK-PM0x": {
+      "url": "/datasheets/HLK-PM0x.pdf",
+      "lang": "en"
+    },
+    "E72-2G4M20S1E": {
+      "url": "/datasheets/E72-2G4M20S1E.pdf",
+      "lang": "en"
+    },
     "PZEM-004": {
       "url": "/datasheets/PZEM-004.pdf",
       "lang": "en"
@@ -372,6 +456,16 @@
       "id": 13,
       "name": "Измерители",
       "icon": "measure"
+    },
+    {
+      "id": 14,
+      "name": "Предохранители",
+      "icon": "fuse"
+    },
+    {
+      "id": 15,
+      "name": "Оптоизоляторы",
+      "icon": "apps"
     }
   ],
   "featureSections": {
@@ -753,6 +847,42 @@
     },
     "82": {
       "name": "Ток",
+      "featSecRefId": 1
+    },
+    "83": {
+      "name": "Частота",
+      "featSecRefId": 5
+    },
+    "84": {
+      "name": "Частота",
+      "featSecRefId": 2
+    },
+    "85": {
+      "name": "Частота",
+      "featSecRefId": 1
+    },
+    "86": {
+      "name": "Коэффициент мощности",
+      "featSecRefId": 5
+    },
+    "87": {
+      "name": "Коэффициент мощности",
+      "featSecRefId": 2
+    },
+    "88": {
+      "name": "Коэффициент мощности",
+      "featSecRefId": 1
+    },
+    "89": {
+      "name": "Мощность",
+      "featSecRefId": 5
+    },
+    "90": {
+      "name": "Мощность",
+      "featSecRefId": 2
+    },
+    "91": {
+      "name": "Мощность",
       "featSecRefId": 1
     }
   },

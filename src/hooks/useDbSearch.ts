@@ -28,7 +28,7 @@ export const useDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
       if (id) {
         return item.id === id;
       }
-      if (keywords.length) {
+      if (keywords && keywords.length) {
         matched &&= keywords.every(keyword => {
           let keywordMatch = item.title.toLowerCase().includes(keyword) ||
             item.subtitle.toLowerCase().includes(keyword);

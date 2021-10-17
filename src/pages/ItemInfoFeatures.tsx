@@ -75,12 +75,12 @@ export const ItemInfoFeatures = ({ features }: ItemInfoFeaturesProps) => {
       return values.map(values =>
         ['string', 'number'].includes(typeof values)
           ? processFeatureValue(values, suffix)
-          : processFeatureValue(values.value, suffix[values.type]).join(', ')
+          : processFeatureValue(values.value, suffix && suffix[values.type]).join(', ')
       );
     };
 
     return processFeatureValue(
-      feature.value as any,
+      feature.value,
       db.itemFeatures[feature.refId].suffix
     ).map((value, index) =>
       <span

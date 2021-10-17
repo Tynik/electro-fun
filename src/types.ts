@@ -23,14 +23,15 @@ export type Category = {
   icon?: string
 }
 
-export type ItemFeatureValue = string | (string | {
-  type: ItemFeatureValueType,
+export type ItemFeatureMultiValue = string | {
   value: string | string[]
-})
+  type?: ItemFeatureValueType,
+  info?: string
+}
 
 export type ItemFeature = {
   refId: FeatureId
-  value: ItemFeatureValue[]
+  value: string | ItemFeatureMultiValue[]
   info?: string
 }
 
@@ -41,10 +42,19 @@ export type ItemImage = {
 
 export type ItemApplication = string
 
+export enum ItemDriverSrcSource {
+  GITHUB = 'github',
+}
+
+export type ItemDriverSrc = {
+  source: ItemDriverSrcSource
+  userId: number
+}
+
 export type ItemDriver = {
   name: string
   url: string
-  avatarSrc: string
+  src?: ItemDriverSrc
 }
 
 export type ItemExternalLink = {
@@ -119,16 +129,18 @@ export type Datasheet = {
   description?: string
 }
 
+export type MenuItem = {
+  name: string
+  url: string
+  icon: string
+}
+
 export type Db = {
   siteName: string
   seo: Seo
   abbreviations: Abbreviations
   clarifications: Clarifications
-  menu: {
-    name: string
-    url: string
-    icon: string
-  }[]
+  menu: MenuItem[]
   articles: Article[]
   categories: Category[]
   featureSections: Record<FeatureSectionId, string>

@@ -38,6 +38,7 @@ import {
 } from '../components';
 import { ItemInfoFeatures } from './ItemInfoFeatures';
 import { ItemInfoOptions } from './ItemInfoOptions';
+import { getItemDriverAvatarSrc } from '../utils';
 
 export const ItemInfo = () => {
   const theme = useTheme();
@@ -279,7 +280,10 @@ export const ItemInfo = () => {
                     title={driver.name}
                     sx={{ textDecoration: 'none' }}
                   >
-                    <Avatar alt={driver.name} src={driver.avatarSrc}/>
+                    <Avatar
+                      alt={driver.name}
+                      src={getItemDriverAvatarSrc(driver.src)}
+                    />
                   </ExternalLink>
                 ))}
               </AvatarGroup>

@@ -15,9 +15,11 @@ import {
   Keyboard as KeyboardIcon,
   WbTwilight as WbTwilightIcon,
   Speed as SpeedIcon,
+  Security as SecurityIcon,
+  Apps as AppsIcon,
 } from '@material-ui/icons';
 
-import { Item, Db } from './types';
+import { Item, Db, ItemDriverSrc, ItemDriverSrcSource } from './types';
 
 export const generateItemId = (itemTitle: string) =>
   itemTitle.replaceAll(' ', '-').toLowerCase();
@@ -85,6 +87,8 @@ export const getIcon = (name, props = {}) => {
     keyboard: <KeyboardIcon {...props}/>,
     led: <WbTwilightIcon {...props}/>,
     measure: <SpeedIcon {...props}/>,
+    fuse: <SecurityIcon {...props}/>,
+    apps: <AppsIcon {...props}/>,
   }[name];
 };
 
@@ -124,3 +128,10 @@ export const wordsWrapper = (
 
   return wrap(words, text);
 };
+
+export const getItemDriverAvatarSrc = (itemDriverSrc: ItemDriverSrc): string => {
+  if (itemDriverSrc.source === ItemDriverSrcSource.GITHUB) {
+    return `https://avatars.githubusercontent.com/u/${itemDriverSrc.userId}?s=60&v=4`
+  }
+  throw new Error('Driver avatar src cannot be found');
+}
