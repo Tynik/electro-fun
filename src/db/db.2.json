@@ -502,6 +502,13 @@
       ],
       "externalLinks": [
         {
+          "name": "ESPHome ESP8266 component",
+          "url": "https://esphome.io/devices/esp8266.html",
+          "lang": "en",
+          "icon": "esphome.io.ico",
+          "iconAlt": "esphome.io"
+        },
+        {
           "name": "Add your ESP32 Board to Home Assistant with ESPHome",
           "url": "https://youtu.be/Be5zWukjV9I",
           "lang": "en",
@@ -509,8 +516,22 @@
           "iconAlt": "youtube.com"
         },
         {
+          "name": "This is SO Much Better! Getting Started with ESPHome 2021",
+          "url": "https://youtu.be/iufph4dF3YU",
+          "lang": "en",
+          "icon": "youtube.com.png",
+          "iconAlt": "youtube.com"
+        },
+        {
           "name": "ESP8266 Pinout Reference: Which GPIO pins should you use?",
           "url": "https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/",
+          "lang": "en",
+          "icon": "randomnerdtutorials.com.webp",
+          "iconAlt": "randomnerdtutorials.com"
+        },
+        {
+          "name": "ESP8266 NodeMCU WebSocket Server: Control Outputs (Arduino IDE)",
+          "url": "https://randomnerdtutorials.com/esp8266-nodemcu-websocket-server-arduino/",
           "lang": "en",
           "icon": "randomnerdtutorials.com.webp",
           "iconAlt": "randomnerdtutorials.com"

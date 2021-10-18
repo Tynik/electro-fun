@@ -8,7 +8,7 @@ const generateSitemapData = (): string[] => {
 
   let sitemapData = [
     'https://smart-home-tech.com.ua/',
-    'https://smart-home-tech.com.ua/#/datasheets'
+    'https://smart-home-tech.com.ua/datasheets'
   ];
 
   Array.from(new Array(meta.parts)).forEach((_, part) => {
@@ -18,7 +18,7 @@ const generateSitemapData = (): string[] => {
     sitemapData = [
       ...sitemapData,
       ...dbPart.items.map((item) =>
-        'https://smart-home-tech.com.ua/#/item/' + generateItemId(item.title)
+        'https://smart-home-tech.com.ua/item/' + generateItemId(item.title)
       )
     ];
   });

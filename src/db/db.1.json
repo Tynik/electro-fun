@@ -1262,6 +1262,13 @@
           "iconAlt": "sciosense.com"
         },
         {
+          "name": "ESPHome CCS811 CO2 and volatile organic compound sensor component",
+          "url": "https://esphome.io/components/sensor/ccs811.html",
+          "lang": "en",
+          "icon": "esphome.io.ico",
+          "iconAlt": "esphome.io"
+        },
+        {
           "name": "Adafruit CCS811",
           "url": "https://github.com/adafruit/Adafruit_CCS811",
           "lang": "en",
