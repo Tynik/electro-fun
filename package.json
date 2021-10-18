@@ -32,7 +32,6 @@
     "@types/lodash.sortby": "4.7.6",
     "copy-webpack-plugin": "9.0.1",
     "css-loader": "6.4.0",
-    "gh-pages": "3.2.3",
     "html-webpack-plugin": "5.4.0",
     "jest": "27.3.0",
     "sass": "1.43.2",

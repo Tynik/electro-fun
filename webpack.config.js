@@ -58,7 +58,6 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         'CNAME',
-        '404.html',
         'sitemap.txt',
         {
           from: 'src/db',
