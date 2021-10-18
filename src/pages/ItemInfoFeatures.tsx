@@ -85,7 +85,12 @@ export const ItemInfoFeatures = ({ features }: ItemInfoFeaturesProps) => {
     ).map((value, index) =>
       <span
         key={`${feature.refId}-${index}`}
-        style={{ display: 'flex', alignItems: 'center' }}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          wordBreak: 'break-word',
+          whiteSpace: 'pre-wrap',
+        }}
       >
         {value}
 
