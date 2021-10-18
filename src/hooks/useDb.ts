@@ -1,5 +1,5 @@
 import React from 'react';
-import { Db, DbMeta } from '../types';
+import { DbT, DbMetaT } from '../types';
 import { mergeDeep, preprocessDb } from '../utils';
 import { fetchDbMeta, fetchDbPart } from '../db-api';
 import { useStaticErrors } from './useStaticErrors';
@@ -10,11 +10,11 @@ export type useDbOptions = {
 }
 
 export const useDb = (options: useDbOptions = { partNumber: 1, itemsPerPage: 25 }) => {
-  const [dbMeta, setDbMeta] = React.useState<DbMeta>(null);
-  const [fullDb, setFullDb] = React.useState<Db>(null);
+  const [dbMeta, setDbMeta] = React.useState<DbMetaT>(null);
+  const [fullDb, setFullDb] = React.useState<DbT>(null);
   const [page, setPage] = React.useState<number>(1);
   const [dbPartNumber, setDbPartNumber] = React.useState<number>(options.partNumber);
-  const [dbParts, setDbParts] = React.useState<Record<string, Db>>({});
+  const [dbParts, setDbParts] = React.useState<Record<string, DbT>>({});
 
   const { errors, setErrors, printErrors } = useStaticErrors({ showReturnToMain: false });
 

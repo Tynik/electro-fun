@@ -1,7 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import {
-  Container,
   Box,
   Stack,
   Grid,
@@ -17,7 +16,7 @@ import {
   ShoppingCart as ShoppingCartIcon
 } from '@material-ui/icons';
 
-import { Item } from '../types';
+import { ItemT } from '../types';
 import { DbContext } from '../context';
 import {
   useTextProcessor,
@@ -42,7 +41,7 @@ export const ItemInfo = () => {
 
   const { id } = useParams<any>();
 
-  const [item, setItem] = React.useState<Item>(null);
+  const [item, setItem] = React.useState<ItemT>(null);
 
   const { db, loadNextDbPart } = React.useContext(DbContext);
   const { search, foundItems } = useDbSearch(db, loadNextDbPart);
@@ -132,133 +131,131 @@ export const ItemInfo = () => {
   }
 
   return (
-    <Container>
-      <Grid spacing={2} container>
-        <Grid xs={12} item>
-          <BackButton/>
-        </Grid>
+    <Grid spacing={2} container>
+      <Grid xs={12} item>
+        <BackButton/>
+      </Grid>
 
-        <Grid xs={12} item>
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <Typography variant={'h5'} role={'heading'} aria-level={1}>
-              {item.title}
+      <Grid xs={12} item>
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <Typography variant={'h5'} role={'heading'} aria-level={1}>
+            {item.title}
+          </Typography>
+
+          {item.original === false && (
+            <Chip
+              size={'small'}
+              label={'копия'}
+              color={'info'}
+              sx={{ marginLeft: theme.spacing(1) }}
+            />
+          )}
+        </Box>
+        <Typography variant={'subtitle1'} role={'heading'} aria-level={2}>
+          {item.subtitle}
+        </Typography>
+      </Grid>
+
+      <Grid xs={12} sm={6} item>
+        <ImageSlider
+          images={item.images || []}
+          height={'300px'}
+        />
+
+        {item.content && (
+          <Box component={'main'} marginTop={theme.spacing(2)}>
+            <Typography variant={'overline'}>Описание</Typography>
+
+            <Typography
+              variant={'body1'}
+              sx={{ whiteSpace: 'pre-line', textAlign: 'justify' }}
+            >
+              {processItemContent(item.content)}
+            </Typography>
+          </Box>
+        )}
+
+        {item.warningContent && (
+          <Box marginTop={theme.spacing(2)}>
+            <Alert
+              severity={'warning'}
+              sx={{
+                whiteSpace: 'pre-line',
+                marginTop: theme.spacing(2)
+              }}
+            >
+              {item.warningContent}
+            </Alert>
+          </Box>
+        )}
+
+        {item.externalLinks && item.externalLinks.length > 0 && (
+          <Box marginTop={theme.spacing(2)}>
+            <ItemInfoExternalLinks item={item}/>
+          </Box>
+        )}
+      </Grid>
+
+      <Grid xs={12} sm={6} item>
+        <ItemInfoFeatures features={item.features}/>
+
+        {item.options && Object.keys(item.options).length > 0 && (
+          <ItemInfoOptions options={item.options}/>
+        )}
+
+        <Box marginTop={theme.spacing(2)}>
+          <Stack direction={'row'} spacing={2}>
+            {Boolean(item.datasheetId) && (
+              <ExternalButtonLink
+                href={db.datasheets[item.datasheetId].url}
+                hrefLang={db.datasheets[item.datasheetId].lang}
+                variant={'outlined'}
+                startIcon={<LinkIcon/>}
+              >
+                Datasheet
+              </ExternalButtonLink>
+            )}
+            {Boolean(item.buyLink) && (
+              <ExternalButtonLink
+                href={item.buyLink}
+                variant={'contained'}
+                color={'success'}
+                startIcon={<ShoppingCartIcon/>}
+              >
+                Купить
+              </ExternalButtonLink>
+            )}
+          </Stack>
+        </Box>
+
+        {item.drivers && item.drivers.length > 0 && (
+          <Box marginTop={theme.spacing(2)}>
+            <Typography variant={'overline'}>
+              Драйверы
             </Typography>
 
-            {item.original === false && (
-              <Chip
-                size={'small'}
-                label={'копия'}
-                color={'info'}
-                sx={{ marginLeft: theme.spacing(1) }}
-              />
-            )}
-          </Box>
-          <Typography variant={'subtitle1'} role={'heading'} aria-level={2}>
-            {item.subtitle}
-          </Typography>
-        </Grid>
-
-        <Grid xs={12} sm={6} item>
-          <ImageSlider
-            images={item.images || []}
-            height={'300px'}
-          />
-
-          {item.content && (
-            <Box component={'main'} marginTop={theme.spacing(2)}>
-              <Typography variant={'overline'}>Описание</Typography>
-
-              <Typography
-                variant={'body1'}
-                sx={{ whiteSpace: 'pre-line', textAlign: 'justify' }}
-              >
-                {processItemContent(item.content)}
-              </Typography>
-            </Box>
-          )}
-
-          {item.warningContent && (
-            <Box marginTop={theme.spacing(2)}>
-              <Alert
-                severity={'warning'}
-                sx={{
-                  whiteSpace: 'pre-line',
-                  marginTop: theme.spacing(2)
-                }}
-              >
-                {item.warningContent}
-              </Alert>
-            </Box>
-          )}
-
-          {item.externalLinks && item.externalLinks.length > 0 && (
-            <Box marginTop={theme.spacing(2)}>
-              <ItemInfoExternalLinks item={item}/>
-            </Box>
-          )}
-        </Grid>
-
-        <Grid xs={12} sm={6} item>
-          <ItemInfoFeatures features={item.features}/>
-
-          {item.options && Boolean(Object.keys(item.options).length) && (
-            <ItemInfoOptions options={item.options}/>
-          )}
-
-          <Box marginTop={theme.spacing(2)}>
-            <Stack direction={'row'} spacing={2}>
-              {Boolean(item.datasheetId) && (
-                <ExternalButtonLink
-                  href={db.datasheets[item.datasheetId].url}
-                  hrefLang={db.datasheets[item.datasheetId].lang}
-                  variant={'outlined'}
-                  startIcon={<LinkIcon/>}
+            <AvatarGroup
+              max={10}
+              sx={{ display: 'flex', justifyContent: 'center' }}
+            >
+              {item.drivers.map(driver => (
+                <ExternalLink
+                  key={driver.name}
+                  href={driver.url}
+                  hrefLang={'en'}
+                  title={driver.name}
+                  sx={{ textDecoration: 'none' }}
                 >
-                  Datasheet
-                </ExternalButtonLink>
-              )}
-              {Boolean(item.buyLink) && (
-                <ExternalButtonLink
-                  href={item.buyLink}
-                  variant={'contained'}
-                  color={'success'}
-                  startIcon={<ShoppingCartIcon/>}
-                >
-                  Купить
-                </ExternalButtonLink>
-              )}
-            </Stack>
+                  <Avatar
+                    alt={driver.name}
+                    src={getItemDriverAvatarSrc(driver.src)}
+                  />
+                </ExternalLink>
+              ))}
+            </AvatarGroup>
           </Box>
-
-          {item.drivers && item.drivers.length > 0 && (
-            <Box marginTop={theme.spacing(2)}>
-              <Typography variant={'overline'}>
-                Драйверы
-              </Typography>
-
-              <AvatarGroup
-                max={10}
-                sx={{ display: 'flex', justifyContent: 'center' }}
-              >
-                {item.drivers.map(driver => (
-                  <ExternalLink
-                    key={driver.name}
-                    href={driver.url}
-                    hrefLang={'en'}
-                    title={driver.name}
-                    sx={{ textDecoration: 'none' }}
-                  >
-                    <Avatar
-                      alt={driver.name}
-                      src={getItemDriverAvatarSrc(driver.src)}
-                    />
-                  </ExternalLink>
-                ))}
-              </AvatarGroup>
-            </Box>
-          )}
-        </Grid>
+        )}
       </Grid>
-    </Container>
+    </Grid>
   );
 };

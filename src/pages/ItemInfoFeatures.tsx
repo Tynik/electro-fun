@@ -10,14 +10,14 @@ import {
 import { Info as InfoIcon } from '@material-ui/icons';
 
 import {
-  ItemFeature,
-  FeatureDefinitionSuffix
+  ItemFeatureT,
+  FeatureDefinitionSuffixT
 } from '../types';
 import { DbContext } from '../context';
 import { useTextProcessor } from '../hooks';
 import { AbbrLink } from '../components';
 
-export const sortItemFeatures = (allFeatures, features: ItemFeature[]) =>
+export const sortItemFeatures = (allFeatures, features: ItemFeatureT[]) =>
   features.sort((featureA, featureB) => {
     const featSecRefIdA = allFeatures[featureA.refId].featSecRefId;
     const featSecRefIdB = allFeatures[featureB.refId].featSecRefId;
@@ -32,7 +32,7 @@ export const sortItemFeatures = (allFeatures, features: ItemFeature[]) =>
   });
 
 export type ItemInfoFeaturesProps = {
-  features: ItemFeature[]
+  features: ItemFeatureT[]
 }
 
 export const ItemInfoFeatures = ({ features }: ItemInfoFeaturesProps) => {
@@ -45,7 +45,7 @@ export const ItemInfoFeatures = ({ features }: ItemInfoFeaturesProps) => {
   const [featureInfo, setFeatureInfo] = React.useState('');
   const [featureInfoAnchorEl, setFeatureInfoAnchorEl] = React.useState(null);
 
-  const insertFeatureSectionName = React.useCallback((features: ItemFeature[], index: number): boolean => {
+  const insertFeatureSectionName = React.useCallback((features: ItemFeatureT[], index: number): boolean => {
     const featSectionRef = db.itemFeatures[features[index].refId].featSecRefId;
 
     if (!index) {
@@ -63,8 +63,8 @@ export const ItemInfoFeatures = ({ features }: ItemInfoFeaturesProps) => {
     setFeatureInfo(featureInfo);
   };
 
-  const getFeatureValue = React.useCallback((feature: ItemFeature) => {
-    const processFeatureValue = (values: any, suffix: FeatureDefinitionSuffix) => {
+  const getFeatureValue = React.useCallback((feature: ItemFeatureT) => {
+    const processFeatureValue = (values: any, suffix: FeatureDefinitionSuffixT) => {
       if (!Array.isArray(values)) {
         return [
           values + (

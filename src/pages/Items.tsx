@@ -9,12 +9,12 @@ import {
 } from '@material-ui/core';
 import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 
-import { Item } from '../types';
+import { ItemT } from '../types';
 import { DbContext } from '../context';
 import { NO_IMAGE } from '../constants';
 import { CCardMedia } from '../components';
 
-export const getItemMainImageSrc = (item: Item) => {
+export const getItemMainImageSrc = (item: ItemT) => {
   if (!item.images || !item.images.length) {
     return NO_IMAGE;
   }
@@ -22,7 +22,7 @@ export const getItemMainImageSrc = (item: Item) => {
 };
 
 export type ItemsProps = {
-  items: Item[]
+  items: ItemT[]
 }
 
 export const Items = ({ items }: ItemsProps) => {
@@ -67,16 +67,18 @@ export const Items = ({ items }: ItemsProps) => {
         </Grid>
       ))}
 
-      <Grid xs={12} sx={{ textAlign: 'center' }} item>
-        <Button
-          onClick={loadNextPage}
-          disabled={!isNextPage()}
-          startIcon={<ExpandMoreIcon/>}
-          variant={'outlined'}
-        >
-          Показать больше
-        </Button>
-      </Grid>
+      {items.length > 0 && (
+        <Grid xs={12} sx={{ textAlign: 'center' }} item>
+          <Button
+            onClick={loadNextPage}
+            disabled={!isNextPage()}
+            startIcon={<ExpandMoreIcon/>}
+            variant={'outlined'}
+          >
+            Показать больше
+          </Button>
+        </Grid>
+      )}
     </Grid>
   );
 };

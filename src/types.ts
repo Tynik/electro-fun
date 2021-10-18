@@ -1,64 +1,64 @@
-export type Article = {}
+export type ArticleT = {}
 
-export type ItemOptionId = string
-export type FeatureSectionId = number
-export type CategoryId = number
-export type FeatureId = number
-export type DatasheetId = string
-export type DocId = string
+export type ItemOptionIdT = string
+export type FeatureSectionIdT = number
+export type CategoryIdT = number
+export type FeatureIdT = number
+export type DatasheetIdT = string
+export type DocIdT = string
 
-export enum ItemFeatureValueType {
+export enum ItemFeatureValueTypeT {
   axis,
   range,
 }
 
-export type Seo = {
+export type SeoT = {
   title: string
   description: string
   keywords: string
 }
 
-export type Category = {
-  id: CategoryId
+export type CategoryT = {
+  id: CategoryIdT
   name: string
   icon?: string
 }
 
-export type ItemFeatureMultiValue = string | {
+export type ItemFeatureMultiValueT = string | {
   value: string | string[]
-  type?: ItemFeatureValueType,
+  type?: ItemFeatureValueTypeT,
   info?: string
 }
 
-export type ItemFeature = {
-  refId: FeatureId
-  value: string | ItemFeatureMultiValue[]
+export type ItemFeatureT = {
+  refId: FeatureIdT
+  value: string | ItemFeatureMultiValueT[]
   info?: string
 }
 
-export type ItemImage = {
+export type ItemImageT = {
   alt: string
   src: string
 }
 
-export type ItemApplication = string
+export type ItemApplicationT = string
 
-export enum ItemDriverSrcSource {
+export enum ItemDriverSrcSourceT {
   GITHUB = 'github',
 }
 
-export type ItemDriverSrc = {
-  source: ItemDriverSrcSource
+export type ItemDriverSrcT = {
+  source: ItemDriverSrcSourceT
   userId: number
 }
 
-export type ItemDriver = {
+export type ItemDriverT = {
   name: string
   url: string
-  src?: ItemDriverSrc
+  src?: ItemDriverSrcT
 }
 
-export type ItemExternalLink = {
+export type ItemExternalLinkT = {
   name: string
   url: string
   lang: string
@@ -66,14 +66,14 @@ export type ItemExternalLink = {
   iconAlt: string
 }
 
-export type ItemOption = {
+export type ItemOptionT = {
   name: string
   default?: boolean
 }
 
-export type ItemOptions = Record<ItemOptionId, ItemOption>
+export type ItemOptionsT = Record<ItemOptionIdT, ItemOptionT>
 
-export type Item = {
+export type ItemT = {
   title: string
   subtitle: string
   lang: string
@@ -81,83 +81,87 @@ export type Item = {
   categoryId?: number
   content?: string
   warningContent?: string
-  seo?: Seo & { title?: string }
+  seo?: SeoT & { title?: string }
   datasheetId?: string
   buyLink?: string
   companyLink?: string
-  options?: ItemOptions
-  features?: ItemFeature[]
-  images?: ItemImage[]
+  options?: ItemOptionsT
+  features?: ItemFeatureT[]
+  images?: ItemImageT[]
   original?: boolean
-  applications?: ItemApplication[]
-  drivers?: ItemDriver[]
-  externalLinks?: ItemExternalLink[]
+  applications?: ItemApplicationT[]
+  drivers?: ItemDriverT[]
+  externalLinks?: ItemExternalLinkT[]
 }
 
-export type FeatureDefinitionSuffix = string | Record<ItemFeatureValueType, string>
+export type FeatureDefinitionSuffixT = string | Record<ItemFeatureValueTypeT, string>
 
-export enum FeatureTypeId {
+export enum FeatureTypeIdT {
   bool
 }
 
-export type FeatureDefinition = {
+export type FeatureDefinitionT = {
   name: string
-  suffix?: FeatureDefinitionSuffix
-  categories?: CategoryId[]
-  featSecRefId?: FeatureSectionId
-  type?: FeatureTypeId
+  suffix?: FeatureDefinitionSuffixT
+  categories?: CategoryIdT[]
+  featSecRefId?: FeatureSectionIdT
+  type?: FeatureTypeIdT
 }
 
-export type DbItemFeatures = Record<FeatureId, FeatureDefinition>
+export type DbItemFeaturesT = Record<FeatureIdT, FeatureDefinitionT>
 
-export type Abbreviations = Record<string, {
+export type AbbreviationsT = Record<string, {
   url: string
   lang: string
 }>
-export type Clarifications = Record<string, {
+export type ClarificationsT = Record<string, {
   url: string
   lang: string
 }>
 
-export type DbMeta = {
+export type DbMetaT = {
   parts: number
 }
 
-export type Datasheet = {
+export type DatasheetT = {
   url: string
   lang: string
   version?: string
   description?: string
 }
 
-export type Doc = {
+export type DatasheetsT = Record<DatasheetIdT, DatasheetT>
+
+export type DocT = {
   name: string
   url: string
 }
 
-export type MenuItem = {
+export type DocsT = Record<DocIdT, DocT>
+
+export type MenuItemT = {
   name: string
   url: string
   icon: string
 }
 
-export type Db = {
+export type DbT = {
   siteName: string
-  seo: Seo
-  abbreviations: Abbreviations
-  clarifications: Clarifications
-  menu: MenuItem[]
-  articles: Article[]
-  categories: Category[]
-  featureSections: Record<FeatureSectionId, string>
-  optionTypes: Record<FeatureTypeId, {
+  seo: SeoT
+  abbreviations: AbbreviationsT
+  clarifications: ClarificationsT
+  menu: MenuItemT[]
+  articles: ArticleT[]
+  categories: CategoryT[]
+  featureSections: Record<FeatureSectionIdT, string>
+  optionTypes: Record<FeatureTypeIdT, {
     y: string
     n: string
   }>
-  itemFeatures: DbItemFeatures
-  items: Item[]
-  datasheets: Record<DatasheetId, Datasheet>
-  docs: Record<DocId, Doc>
+  itemFeatures: DbItemFeaturesT
+  items: ItemT[]
+  datasheets: DatasheetsT
+  docs: DocsT
   footer: {
     bottom: string
   }

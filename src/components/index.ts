@@ -6,6 +6,7 @@ export * from './MenuItem';
 export * from './Breadcrumbs';
 export * from './BreadcrumbItem';
 export * from './Category';
+export * from './Datasheets';
 export * from './CImage';
 export * from './CCardMedia';
 export * from './ImageSlider';

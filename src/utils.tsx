@@ -19,12 +19,12 @@ import {
   Apps as AppsIcon
 } from '@material-ui/icons';
 
-import { Item, Db, ItemDriverSrc, ItemDriverSrcSource } from './types';
+import { ItemT, DbT, ItemDriverSrcT, ItemDriverSrcSourceT } from './types';
 
 export const generateItemId = (itemTitle: string) =>
   itemTitle.replaceAll(' ', '-').toLowerCase();
 
-export const preprocessItems = (items: Item[]) =>
+export const preprocessItems = (items: ItemT[]) =>
   items.map(item => (
     {
       ...item,
@@ -32,7 +32,7 @@ export const preprocessItems = (items: Item[]) =>
     }
   ));
 
-export const preprocessDb = (db: Db) => (
+export const preprocessDb = (db: DbT) => (
   {
     ...db,
     items: preprocessItems(db.items)
@@ -131,14 +131,14 @@ export const wordsWrapper = (
   return wrap(words, text);
 };
 
-export const getItemDriverAvatarSrc = (itemDriverSrc: ItemDriverSrc): string => {
-  if (itemDriverSrc.source === ItemDriverSrcSource.GITHUB) {
+export const getItemDriverAvatarSrc = (itemDriverSrc: ItemDriverSrcT): string => {
+  if (itemDriverSrc.source === ItemDriverSrcSourceT.GITHUB) {
     return `https://avatars.githubusercontent.com/u/${itemDriverSrc.userId}?s=60&v=4`;
   }
   throw new Error('Driver avatar src cannot be found');
 };
 
-export const matchItemKeyword = (item: Item, keyword: string): boolean => {
+export const matchItemKeyword = (item: ItemT, keyword: string): boolean => {
   let keywordMatch = item.title.toLowerCase().includes(keyword) ||
     item.subtitle.toLowerCase().includes(keyword);
 

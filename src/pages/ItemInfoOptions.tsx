@@ -7,10 +7,10 @@ import {
   FormControl
 } from '@material-ui/core';
 
-import { ItemOptions } from '../types';
+import { ItemOptionsT } from '../types';
 
 export type ItemInfoOptionsProps = {
-  options: ItemOptions
+  options: ItemOptionsT
 }
 
 export const ItemInfoOptions = ({ options }: ItemInfoOptionsProps) => {

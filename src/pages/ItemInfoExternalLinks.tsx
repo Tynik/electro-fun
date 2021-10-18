@@ -8,10 +8,10 @@ import {
 
 import { ExternalLink } from '../components';
 import React from 'react';
-import { Item } from '../types';
+import { ItemT } from '../types';
 
 export type ItemInfoExternalLinksProps = {
-  item: Item
+  item: ItemT
 }
 
 export const ItemInfoExternalLinks = ({ item }: ItemInfoExternalLinksProps) => {

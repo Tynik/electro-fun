@@ -1,12 +1,20 @@
 import React from 'react';
-import { Db, Item } from '../types';
+
+import { DbT, ItemT, DatasheetsT } from '../types';
 import { matchItemKeyword } from '../utils';
 
-export const useDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
-  const [id, setId] = React.useState<string>(null);
+export type SearchHandler = {
+  id?: string
+  text?: string
+  categoryId?: number
+}
+
+export const useDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
+  const [itemId, setItemId] = React.useState<string>(null);
   const [keywords, setKeywords] = React.useState<string[]>(null);
   const [categoryId, setCategoryId] = React.useState<number>(null);
-  const [foundItems, setFoundItems] = React.useState<Item[]>(null);
+  const [foundItems, setFoundItems] = React.useState<ItemT[]>(null);
+  const [foundDatasheets, setFoundDatasheets] = React.useState<DatasheetsT>(null);
   const [searchOffset, setSearchOffset] = React.useState<number>(0);
 
   // React.useEffect(() => {
@@ -15,19 +23,20 @@ export const useDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
 
   React.useEffect(() => {
     if ((
-      id === null && keywords === null && categoryId === null
+      itemId === null && keywords === null && categoryId === null
     ) || !db) {
       return;
     }
-    if (id === null && (keywords && !keywords.length) && categoryId === null) {
+    if (itemId === null && (keywords && !keywords.length) && categoryId === null) {
       setFoundItems(null);
+      setFoundDatasheets(null);
       return;
     }
     const foundItems = db.items.filter(item => {
       let matched = true;
 
-      if (id) {
-        return item.id === id;
+      if (itemId) {
+        return item.id === itemId;
       }
       if (keywords && keywords.length) {
         matched &&= keywords.every(keyword => matchItemKeyword(item, keyword));
@@ -37,6 +46,21 @@ export const useDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
       }
       return matched;
     });
+
+    if (keywords && keywords.length) {
+      const foundDatasheets = Object.keys(db.datasheets).reduce((foundDatasheets, datasheetId) => {
+        const matched = keywords.every(keyword =>
+          datasheetId.toLowerCase().includes(keyword)
+        );
+        if (matched) {
+          foundDatasheets[datasheetId] = db.datasheets[datasheetId];
+        }
+        return foundDatasheets;
+      }, {});
+
+      setFoundDatasheets(foundDatasheets);
+    }
+
     // setFoundItems(prevFoundItems => [
     //   ...(
     //     prevFoundItems || []
@@ -44,7 +68,7 @@ export const useDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
     //   ...foundItems
     // ]);
 
-    if (id && foundItems.length) {
+    if (itemId && foundItems.length) {
       setFoundItems(foundItems);
       // if an item by id was found we should not load next db part
       return;
@@ -54,15 +78,11 @@ export const useDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
       // finish
       setFoundItems(foundItems);
     }
-  }, [db, id, keywords, categoryId]);
+  }, [db, itemId, keywords, categoryId]);
 
-  const search = React.useCallback(({ id, text, categoryId }: {
-    id?: string,
-    text?: string,
-    categoryId?: number
-  }) => {
+  const search = React.useCallback(({ id, text, categoryId }: SearchHandler) => {
     if (id !== undefined) {
-      setId(id);
+      setItemId(id);
       return;
     }
     if (text !== undefined) {
@@ -75,6 +95,7 @@ export const useDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
 
   return {
     search,
-    foundItems
+    foundItems,
+    foundDatasheets
   };
 };

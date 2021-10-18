@@ -1,8 +1,5 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import {
-  Container
-} from '@material-ui/core';
 import { Items } from '../pages';
 import { DbContext } from '../context';
 import { useDbSearch } from '../hooks';
@@ -31,7 +28,7 @@ export const Category = () => {
   }
 
   return (
-    <Container>
+    <>
       <Breadcrumbs>
         <BreadcrumbItem icon={getIcon(category.icon)} final>
           {category.name}
@@ -39,6 +36,6 @@ export const Category = () => {
       </Breadcrumbs>
 
       <Items items={foundItems}/>
-    </Container>
+    </>
   );
 };

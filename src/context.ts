@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Db } from './types';
+import { DbT } from './types';
 
 export type DbContextState = {
-  db: Db
+  db: DbT
   isNextDbPart: () => boolean
   loadNextDbPart: () => boolean
   isNextPage: () => boolean

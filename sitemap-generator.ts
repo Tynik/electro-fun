@@ -1,10 +1,10 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { generateItemId } from './src/utils';
-import { Db, DbMeta } from './src/types';
+import { DbT, DbMetaT } from './src/types';
 
 const generateSitemapData = (): string[] => {
   const metadata = readFileSync('./src/db/db.meta.json');
-  const meta: DbMeta = JSON.parse(metadata as any);
+  const meta: DbMetaT = JSON.parse(metadata as any);
 
   let sitemapData = [
     'https://smart-home-tech.com.ua/',
@@ -13,7 +13,7 @@ const generateSitemapData = (): string[] => {
 
   Array.from(new Array(meta.parts)).forEach((_, part) => {
     const dbPartData = readFileSync(`./src/db/db.${part + 1}.json`);
-    const dbPart: Db = JSON.parse(dbPartData as any);
+    const dbPart: DbT = JSON.parse(dbPartData as any);
 
     sitemapData = [
       ...sitemapData,

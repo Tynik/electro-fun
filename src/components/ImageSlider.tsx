@@ -12,7 +12,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 import { Loader } from './Loader';
 import { CImage } from './CImage';
-import { ItemImage } from '../types';
+import { ItemImageT } from '../types';
 
 const CustomCarousel = styled(Carousel)(({ theme }) => (
   {
@@ -35,7 +35,7 @@ const CustomCarousel = styled(Carousel)(({ theme }) => (
 ));
 
 export type ImageSliderProps = {
-  images: ItemImage[]
+  images: ItemImageT[]
   height: string
 }
 
@@ -45,9 +45,9 @@ export const ImageSlider = (props: ImageSliderProps) => {
   const theme = useTheme();
 
   const [inLoading, setInLoading] = React.useState(images.length);
-  const [photo, setPhoto] = React.useState<ItemImage>(null);
+  const [photo, setPhoto] = React.useState<ItemImageT>(null);
 
-  const onImageClick = (image: ItemImage, index: number) => {
+  const onImageClick = (image: ItemImageT, index: number) => {
     setPhoto(image);
   };
 

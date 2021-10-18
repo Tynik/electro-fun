@@ -1335,6 +1335,13 @@
           "lang": "en",
           "icon": "github.com.svg",
           "iconAlt": "github.com"
+        },
+        {
+          "name": "ESPHome APDS-9960 component",
+          "url": "https://esphome.io/components/sensor/apds9960.html",
+          "lang": "en",
+          "icon": "esphome.io.ico",
+          "iconAlt": "esphome.io"
         }
       ]
     },

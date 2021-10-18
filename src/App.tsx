@@ -4,19 +4,21 @@ import {
   Container,
   Box,
   styled,
+  Typography,
+  useTheme,
   LinearProgress
 } from '@material-ui/core';
 
 import {
   Menu,
   DrawerHeader,
+  Datasheets,
   Category,
   Footer
 } from './components';
 import {
   Items,
-  ItemInfo,
-  Datasheets
+  ItemInfo
 } from './pages';
 import { DbContext } from './context';
 import { useDb, useDbSearch } from './hooks';
@@ -50,6 +52,7 @@ const Main = styled('div', {
 export const App = () => {
   const location = useLocation();
   const history = useHistory();
+  const theme = useTheme();
 
   const [isAlreadyMounted, setIsAlreadyMounted] = React.useState(false);
   const [menuIsOpened, setMenuOpen] = React.useState(false);
@@ -62,7 +65,12 @@ export const App = () => {
     isNextPage,
     loadNextPage
   } = useDb();
-  const { search, foundItems } = useDbSearch(db, loadNextDbPart);
+
+  const {
+    search,
+    foundItems,
+    foundDatasheets
+  } = useDbSearch(db, loadNextDbPart);
 
   React.useEffect(() => {
     if (db && !isAlreadyMounted) {
@@ -108,22 +116,33 @@ export const App = () => {
           <Main menuIsOpened={menuIsOpened}>
             <DrawerHeader/>
 
-            <Switch>
-              <Route path="/" exact>
-                <Container>
-                  <Items items={foundItems ? foundItems : db.items}/>
-                </Container>
-              </Route>
-              <Route path="/item/:id">
-                <ItemInfo/>
-              </Route>
-              <Route path="/category/:categoryId">
-                <Category/>
-              </Route>
-              <Route path="/datasheets">
-                <Datasheets/>
-              </Route>
-            </Switch>
+            <Container>
+              <Switch>
+                <Route path="/" exact>
+                  <Box sx={{ marginTop: theme.spacing(2) }}>
+                    <Items items={foundItems ? foundItems : db.items}/>
+                  </Box>
+
+                  {foundDatasheets && Object.keys(foundDatasheets).length > 0 && (
+                    <Box sx={{ marginTop: theme.spacing(2) }}>
+                      <Typography variant={'h5'} role={'heading'} aria-level={2}>
+                        Найденные Datasheets
+                      </Typography>
+                      <Datasheets datasheets={foundDatasheets}/>
+                    </Box>
+                  )}
+                </Route>
+                <Route path="/item/:id">
+                  <ItemInfo/>
+                </Route>
+                <Route path="/category/:categoryId">
+                  <Category/>
+                </Route>
+                <Route path="/datasheets">
+                  <Datasheets datasheets={db.datasheets}/>
+                </Route>
+              </Switch>
+            </Container>
           </Main>
         </Box>
 
