@@ -379,6 +379,9 @@
         }
       ],
       "content": "",
+      "relatedDatasheetIds": [
+        "SD3004"
+      ],
       "externalLinks": [
         {
           "name": "Бюджетный мониторинг электропотребления на PZEM-004T v3 для Home Assistant",
@@ -499,6 +502,9 @@
           "refId": 46,
           "value": "Station/SoftAP/SoftAP+Station"
         }
+      ],
+      "relatedDatasheetIds": [
+        "ESP8266EX"
       ],
       "externalLinks": [
         {

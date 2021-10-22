@@ -182,6 +182,18 @@
     }
   },
   "datasheets": {
+    "SS1x": {
+      "url": "/datasheets/SS1x.pdf",
+      "lang": "en"
+    },
+    "1N4148WS": {
+      "url": "/datasheets/1N4148WS.pdf",
+      "lang": "en"
+    },
+    "1N400x": {
+      "url": "/datasheets/1N400x.pdf",
+      "lang": "en"
+    },
     "ESP-12E": {
       "url": "/datasheets/ESP-12E.pdf",
       "lang": "en"

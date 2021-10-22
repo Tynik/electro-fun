@@ -82,7 +82,7 @@ export type ItemT = {
   content?: string
   warningContent?: string
   seo?: SeoT & { title?: string }
-  datasheetId?: string
+  datasheetId?: DatasheetIdT
   buyLink?: string
   companyLink?: string
   options?: ItemOptionsT
@@ -92,6 +92,7 @@ export type ItemT = {
   applications?: ItemApplicationT[]
   drivers?: ItemDriverT[]
   externalLinks?: ItemExternalLinkT[]
+  relatedDatasheetIds?: DatasheetIdT[]
 }
 
 export type FeatureDefinitionSuffixT = string | Record<ItemFeatureValueTypeT, string>

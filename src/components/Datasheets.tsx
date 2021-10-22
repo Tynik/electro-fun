@@ -15,9 +15,9 @@ export const Datasheets = ({ datasheets }: DatasheetsProps) => {
   const sortedDatasheets = Object.keys(datasheets).sort();
 
   return (
-    <List>
+    <List disablePadding>
       {sortedDatasheets.map(datasheetId => (
-        <ListItem key={datasheetId}>
+        <ListItem key={datasheetId} disablePadding>
           <ExternalLink
             href={datasheets[datasheetId].url}
             hrefLang={datasheets[datasheetId].lang}

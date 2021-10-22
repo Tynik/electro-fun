@@ -125,9 +125,10 @@ export const App = () => {
 
                   {foundDatasheets && Object.keys(foundDatasheets).length > 0 && (
                     <Box sx={{ marginTop: theme.spacing(2) }}>
-                      <Typography variant={'h5'} role={'heading'} aria-level={2}>
+                      <Typography variant={'h6'} role={'heading'} aria-level={2}>
                         Найденные Datasheets
                       </Typography>
+
                       <Datasheets datasheets={foundDatasheets}/>
                     </Box>
                   )}

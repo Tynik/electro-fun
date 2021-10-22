@@ -35,6 +35,7 @@ import { ItemInfoFeatures } from './ItemInfoFeatures';
 import { ItemInfoOptions } from './ItemInfoOptions';
 import { ItemInfoExternalLinks } from './ItemInfoExternalLinks';
 import { getItemDriverAvatarSrc } from '../utils';
+import { Datasheets } from '../components';
 
 export const ItemInfo = () => {
   const theme = useTheme();
@@ -186,6 +187,21 @@ export const ItemInfo = () => {
             >
               {item.warningContent}
             </Alert>
+          </Box>
+        )}
+
+        {item.relatedDatasheetIds && item.relatedDatasheetIds.length > 0 && (
+          <Box marginTop={theme.spacing(2)}>
+            <Typography variant={'overline'}>
+              Связанные datasheets
+            </Typography>
+
+            <Datasheets
+              datasheets={item.relatedDatasheetIds.reduce((datasheets, datasheetId) => ({
+                ...datasheets,
+                [datasheetId]: db.datasheets[datasheetId]
+              }), {})}
+            />
           </Box>
         )}
 
