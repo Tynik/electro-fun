@@ -53,7 +53,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'src/index.ejs'
+      template: 'src/index.ejs',
+      templateParameters: {
+        LOCAL_ENV: true
+      },
     }),
     new CopyPlugin({
       patterns: [
@@ -83,7 +86,7 @@ module.exports = {
     })
   ],
   devServer: {
-    hot: true,
+    hot: false,
     port: 8097,
     historyApiFallback: true,
     static: {

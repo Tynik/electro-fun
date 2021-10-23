@@ -15,11 +15,16 @@ export const useDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
   const [categoryId, setCategoryId] = React.useState<number>(null);
   const [foundItems, setFoundItems] = React.useState<ItemT[]>(null);
   const [foundDatasheets, setFoundDatasheets] = React.useState<DatasheetsT>(null);
+  const [isSearching, setIsSearching] = React.useState(false);
   const [searchOffset, setSearchOffset] = React.useState<number>(0);
 
   // React.useEffect(() => {
   //   setSearchOffset(0);
   // }, [id, text, categoryId]);
+
+  React.useEffect(() => {
+    setIsSearching(false);
+  }, [foundItems]);
 
   React.useEffect(() => {
     if ((
@@ -91,9 +96,11 @@ export const useDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
     if (categoryId !== undefined) {
       setCategoryId(categoryId);
     }
+    setIsSearching(true);
   }, []);
 
   return {
+    isSearching,
     search,
     foundItems,
     foundDatasheets

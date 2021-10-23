@@ -1,10 +1,12 @@
 import React from 'react';
 import { Switch, Route, useLocation, useHistory } from 'react-router-dom';
+import debounce from 'lodash.debounce';
 import {
   Container,
   Box,
   styled,
   Typography,
+  Alert,
   useTheme,
   LinearProgress
 } from '@material-ui/core';
@@ -22,6 +24,7 @@ import {
 } from './pages';
 import { DbContext } from './context';
 import { useDb, useDbSearch } from './hooks';
+import { Loader } from './components';
 
 const drawerWidth = 240;
 
@@ -67,6 +70,7 @@ export const App = () => {
   } = useDb();
 
   const {
+    isSearching,
     search,
     foundItems,
     foundDatasheets
@@ -91,6 +95,10 @@ export const App = () => {
     search({ text });
   };
 
+  const debouncedSearch = React.useMemo(() => {
+    return debounce(onSearch, 750);
+  }, []);
+
   if (errors.length) {
     return printErrors();
   }
@@ -110,7 +118,7 @@ export const App = () => {
           <Menu
             onOpen={setMenuOpen}
             drawerWidth={drawerWidth}
-            onSearch={onSearch}
+            onSearch={debouncedSearch}
           />
 
           <Main menuIsOpened={menuIsOpened}>
@@ -119,18 +127,28 @@ export const App = () => {
             <Container>
               <Switch>
                 <Route path="/" exact>
-                  <Box sx={{ marginTop: theme.spacing(2) }}>
-                    <Items items={foundItems ? foundItems : db.items}/>
-                  </Box>
+                  {isSearching ? (
+                    <Loader label={'Поиск...'}/>
+                  ) : (
+                    <>
+                      {foundItems !== null && !foundItems.length && !Object.keys(foundDatasheets).length && (
+                        <Alert severity={'info'}>Ничего не найдено</Alert>
+                      )}
 
-                  {foundDatasheets && Object.keys(foundDatasheets).length > 0 && (
-                    <Box sx={{ marginTop: theme.spacing(2) }}>
-                      <Typography variant={'h6'} role={'heading'} aria-level={2}>
-                        Найденные Datasheets
-                      </Typography>
+                      <Box sx={{ marginTop: theme.spacing(2) }}>
+                        <Items items={foundItems ? foundItems : db.items}/>
+                      </Box>
 
-                      <Datasheets datasheets={foundDatasheets}/>
-                    </Box>
+                      {foundDatasheets && Object.keys(foundDatasheets).length > 0 && (
+                        <Box sx={{ marginTop: theme.spacing(2) }}>
+                          <Typography variant={'h6'} role={'heading'} aria-level={2}>
+                            Найденные Datasheets
+                          </Typography>
+
+                          <Datasheets datasheets={foundDatasheets}/>
+                        </Box>
+                      )}
+                    </>
                   )}
                 </Route>
                 <Route path="/item/:id">
