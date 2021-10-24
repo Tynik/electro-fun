@@ -8,7 +8,7 @@ export type SearchHandler = {
   id?: string
   text?: string
   categoryId?: number
-  debounce?: number
+  debounce?: boolean
 }
 
 export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
@@ -39,6 +39,8 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
       return;
     }
     let foundItems;
+    let foundItemsDatasheets = {};
+
     if (itemId) {
       foundItems = db.items.find(item => item.id === itemId);
       foundItems = foundItems ? [foundItems] : [];
@@ -52,17 +54,23 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
         if (categoryId) {
           matched &&= item.categoryId === categoryId;
         }
+        if (matched && item.datasheetId) {
+          foundItemsDatasheets[item.datasheetId] = true;
+        }
         return matched;
       });
     }
 
     if (keywords && keywords.length) {
       const foundDatasheets = Object.keys(db.datasheets).reduce((foundDatasheets, datasheetId) => {
-        const matched = keywords.every(keyword =>
+        const matched = foundItemsDatasheets[datasheetId] || keywords.every(keyword =>
           datasheetId.toLowerCase().includes(keyword)
         );
         if (matched) {
-          foundDatasheets[datasheetId] = db.datasheets[datasheetId];
+          foundDatasheets[datasheetId] = { ...db.datasheets[datasheetId] };
+          if (foundItemsDatasheets[datasheetId]) {
+            foundDatasheets[datasheetId].priority = 0;
+          }
         }
         return foundDatasheets;
       }, {});
@@ -104,9 +112,9 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
     }
   }, []);
 
-  const debouncedSearch = React.useCallback(
-    (wait: number) =>
-      debounce(baseSearch, wait),
+  const debouncedSearch = React.useMemo(
+    () =>
+      debounce(baseSearch, 750),
     []
   );
 
@@ -121,7 +129,7 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
     setIsSearching(true);
 
     if (debounce) {
-      debouncedSearch(debounce)({ text, categoryId });
+      debouncedSearch({ text, categoryId });
     } else {
       baseSearch({ text, categoryId });
     }

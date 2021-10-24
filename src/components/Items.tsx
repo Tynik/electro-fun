@@ -9,7 +9,7 @@ import {
 } from '@material-ui/core';
 import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 
-import { ItemT } from '../types';
+import { ItemT, ItemsT } from '../types';
 import { DbContext } from '../context';
 import { NO_IMAGE } from '../constants';
 import { CCardMedia } from '../components';
@@ -22,7 +22,7 @@ export const getItemMainImageSrc = (item: ItemT) => {
 };
 
 export type ItemsProps = {
-  items: ItemT[]
+  items: ItemsT
 }
 
 export const Items = ({ items }: ItemsProps) => {

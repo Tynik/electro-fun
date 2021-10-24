@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Items } from '../pages';
+import { SearchResultsPage } from '../pages';
 import { DbContext } from '../context';
 import { useJsonDbSearch } from '../hooks';
 import { Breadcrumbs } from './Breadcrumbs';
@@ -35,7 +35,7 @@ export const Category = () => {
         </BreadcrumbItem>
       </Breadcrumbs>
 
-      <Items items={foundItems}/>
+      <SearchResultsPage items={foundItems}/>
     </>
   );
 };

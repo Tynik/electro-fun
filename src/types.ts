@@ -95,6 +95,8 @@ export type ItemT = {
   relatedDatasheetIds?: DatasheetIdT[]
 }
 
+export type ItemsT = ItemT[]
+
 export type FeatureDefinitionSuffixT = string | Record<ItemFeatureValueTypeT, string>
 
 export enum FeatureTypeIdT {

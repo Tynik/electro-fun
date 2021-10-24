@@ -5,14 +5,26 @@ import {
 } from '@material-ui/core';
 
 import { ExternalLink } from '../components';
-import { DatasheetsT } from '../types';
+import { DatasheetIdT, DatasheetT } from '../types';
 
 export type DatasheetsProps = {
-  datasheets: DatasheetsT
+  datasheets: Record<DatasheetIdT, DatasheetT & {
+    // for sorting
+    priority?: number
+  }>
 }
 
 export const Datasheets = ({ datasheets }: DatasheetsProps) => {
-  const sortedDatasheets = Object.keys(datasheets).sort();
+  const sortedDatasheets = Object.keys(datasheets)
+    .sort((datasheetIdA, datasheetIdB) => {
+      if (datasheets[datasheetIdA].priority === undefined) {
+        return 1;
+      }
+      if (datasheets[datasheetIdB].priority === undefined) {
+        return -1;
+      }
+      return datasheets[datasheetIdA].priority - datasheets[datasheetIdB].priority;
+    });
 
   return (
     <List disablePadding>
@@ -22,7 +34,11 @@ export const Datasheets = ({ datasheets }: DatasheetsProps) => {
             href={datasheets[datasheetId].url}
             hrefLang={datasheets[datasheetId].lang}
           >
-            {datasheetId}
+            {datasheets[datasheetId].priority !== undefined ? (
+              <strong>{datasheetId}</strong>
+            ) : (
+              <>{datasheetId}</>
+            )}
           </ExternalLink>
         </ListItem>
       ))}

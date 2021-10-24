@@ -4,26 +4,22 @@ import {
   Container,
   Box,
   styled,
-  Typography,
-  Alert,
-  useTheme,
   LinearProgress
 } from '@material-ui/core';
 
 import {
   Menu,
   DrawerHeader,
-  Datasheets,
   Category,
   Footer
 } from './components';
 import {
-  Items,
-  ItemInfo
+  SearchResultsPage,
+  ItemInfoPage,
+  DatasheetsPage
 } from './pages';
 import { DbContext } from './context';
 import { useJsonDb, useJsonDbSearch } from './hooks';
-import { Loader } from './components';
 
 const drawerWidth = 240;
 
@@ -54,7 +50,6 @@ const Main = styled('div', {
 export const App = () => {
   const location = useLocation();
   const history = useHistory();
-  const theme = useTheme();
 
   const [isAlreadyMounted, setIsAlreadyMounted] = React.useState(false);
   const [menuIsOpened, setMenuOpen] = React.useState(false);
@@ -91,7 +86,7 @@ export const App = () => {
     if (location.pathname !== '/') {
       history.push('/');
     }
-    search({ text, debounce: 750 });
+    search({ text, debounce: true });
   };
 
   if (errors.length) {
@@ -122,38 +117,21 @@ export const App = () => {
             <Container>
               <Switch>
                 <Route path="/" exact>
-                  {isSearching ? (
-                    <Loader label={'Поиск...'}/>
-                  ) : (
-                    <>
-                      {foundItems !== null && !foundItems.length && !Object.keys(foundDatasheets).length && (
-                        <Alert severity={'info'}>Ничего не найдено</Alert>
-                      )}
-
-                      <Box sx={{ marginTop: theme.spacing(2) }}>
-                        <Items items={foundItems ? foundItems : db.items}/>
-                      </Box>
-
-                      {foundDatasheets && Object.keys(foundDatasheets).length > 0 && (
-                        <Box sx={{ marginTop: theme.spacing(2) }}>
-                          <Typography variant={'h6'} role={'heading'} aria-level={2}>
-                            Найденные Datasheets
-                          </Typography>
-
-                          <Datasheets datasheets={foundDatasheets}/>
-                        </Box>
-                      )}
-                    </>
-                  )}
+                  <SearchResultsPage
+                    isSearching={isSearching}
+                    items={db.items}
+                    foundItems={foundItems}
+                    foundDatasheets={foundDatasheets}
+                  />
                 </Route>
                 <Route path="/item/:id">
-                  <ItemInfo/>
+                  <ItemInfoPage/>
                 </Route>
                 <Route path="/category/:categoryId">
                   <Category/>
                 </Route>
                 <Route path="/datasheets">
-                  <Datasheets datasheets={db.datasheets}/>
+                  <DatasheetsPage datasheets={db.datasheets}/>
                 </Route>
               </Switch>
             </Container>

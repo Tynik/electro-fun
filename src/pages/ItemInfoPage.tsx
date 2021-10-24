@@ -38,7 +38,7 @@ import { ItemInfoOptions } from './ItemInfoOptions';
 import { ItemInfoExternalLinks } from './ItemInfoExternalLinks';
 import { getItemDriverAvatarSrc } from '../utils';
 
-export const ItemInfo = () => {
+export const ItemInfoPage = () => {
   const theme = useTheme();
 
   const { id } = useParams<any>();
