@@ -14,7 +14,7 @@ module.exports = {
   experiments: {
     asset: true
   },
-  devtool: process.env.NODE_ENV === 'production' ? false : 'eval-source-map',
+  devtool: process.env.NODE_ENV === 'production' ? false : 'source-map',
   module: {
     rules: [
       {

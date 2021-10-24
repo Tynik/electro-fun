@@ -22,20 +22,21 @@ import {
   useTextProcessor,
   useSmoothScroll,
   useStaticErrors,
-  useDbSearch
+  useJsonDbSearch,
+  useSeo
 } from '../hooks';
 import {
   Loader,
   ExternalLink,
   ImageSlider,
   BackButton,
-  ExternalButtonLink
+  ExternalButtonLink,
+  Datasheets
 } from '../components';
 import { ItemInfoFeatures } from './ItemInfoFeatures';
 import { ItemInfoOptions } from './ItemInfoOptions';
 import { ItemInfoExternalLinks } from './ItemInfoExternalLinks';
 import { getItemDriverAvatarSrc } from '../utils';
-import { Datasheets } from '../components';
 
 export const ItemInfo = () => {
   const theme = useTheme();
@@ -45,12 +46,23 @@ export const ItemInfo = () => {
   const [item, setItem] = React.useState<ItemT>(null);
 
   const { db, loadNextDbPart } = React.useContext(DbContext);
-  const { search, foundItems } = useDbSearch(db, loadNextDbPart);
+  const { search, foundItems } = useJsonDbSearch(db, loadNextDbPart);
 
   const { wordsWrapper } = useTextProcessor();
   const { errors, setErrors, printErrors } = useStaticErrors();
 
   useSmoothScroll({ top: 0, left: 0 });
+
+  const seoEntity = React.useMemo(() => ({
+    ...(item && {
+      ...(item.seo || {}),
+      title: item.seo.title
+        ? `${db.seo.title} - ${item.seo.title}`
+        : `${db.seo.title} - ${item.title}`
+    })
+  }), [db, item]);
+
+  useSeo(seoEntity);
 
   React.useEffect(() => {
     search({ id });
@@ -66,44 +78,6 @@ export const ItemInfo = () => {
       setErrors([`"${id}" не найден или был переименован`]);
     }
   }, [foundItems]);
-
-  React.useEffect(() => {
-    if (item === null) {
-      return;
-    }
-    let originalDocumentTitle,
-      originalDescription,
-      originalKeywords,
-      meta;
-
-    originalDocumentTitle = document.title;
-
-    if (item.seo) {
-      if (item.seo.title) {
-        document.title = `${db.seo.title} - ${item.seo.title}`;
-      }
-      setTimeout(() => {
-        meta = document.getElementsByTagName('meta');
-        originalDescription = meta['description'].content;
-        originalKeywords = meta['keywords'].content;
-
-        meta['description'].content = item.seo.description;
-        meta['keywords'].content = item.seo.keywords;
-      });
-    }
-    if (!item.seo || !item.seo.title) {
-      document.title = `${db.seo.title} - ${item.title}`;
-    }
-
-    return () => {
-      document.title = originalDocumentTitle;
-
-      if (meta) {
-        meta['description'].content = originalDescription;
-        meta['keywords'].content = originalKeywords;
-      }
-    };
-  }, [item]);
 
   const clarificationsWrapper = React.useCallback((text: string) =>
     wordsWrapper(Object.keys(db.clarifications), text, (

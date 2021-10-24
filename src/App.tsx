@@ -1,6 +1,5 @@
 import React from 'react';
 import { Switch, Route, useLocation, useHistory } from 'react-router-dom';
-import debounce from 'lodash.debounce';
 import {
   Container,
   Box,
@@ -23,7 +22,7 @@ import {
   ItemInfo
 } from './pages';
 import { DbContext } from './context';
-import { useDb, useDbSearch } from './hooks';
+import { useJsonDb, useJsonDbSearch } from './hooks';
 import { Loader } from './components';
 
 const drawerWidth = 240;
@@ -67,14 +66,14 @@ export const App = () => {
     loadNextDbPart,
     isNextPage,
     loadNextPage
-  } = useDb();
+  } = useJsonDb();
 
   const {
     isSearching,
     search,
     foundItems,
     foundDatasheets
-  } = useDbSearch(db, loadNextDbPart);
+  } = useJsonDbSearch(db, loadNextDbPart);
 
   React.useEffect(() => {
     if (db && !isAlreadyMounted) {
@@ -92,12 +91,8 @@ export const App = () => {
     if (location.pathname !== '/') {
       history.push('/');
     }
-    search({ text });
+    search({ text, debounce: 750 });
   };
-
-  const debouncedSearch = React.useMemo(() => {
-    return debounce(onSearch, 750);
-  }, []);
 
   if (errors.length) {
     return printErrors();
@@ -118,7 +113,7 @@ export const App = () => {
           <Menu
             onOpen={setMenuOpen}
             drawerWidth={drawerWidth}
-            onSearch={debouncedSearch}
+            onSearch={onSearch}
           />
 
           <Main menuIsOpened={menuIsOpened}>

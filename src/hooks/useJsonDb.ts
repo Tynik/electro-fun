@@ -4,17 +4,19 @@ import { mergeDeep, preprocessDb } from '../utils';
 import { fetchDbMeta, fetchDbPart } from '../db-api';
 import { useStaticErrors } from './useStaticErrors';
 
-export type useDbOptions = {
-  partNumber: number
+export type DbPartIdT = string
+export type DbPartsT = Record<DbPartIdT, DbT>
+
+export type UseDbOptions = {
   itemsPerPage: number
 }
 
-export const useDb = (options: useDbOptions = { partNumber: 1, itemsPerPage: 25 }) => {
+export const useJsonDb = (options: UseDbOptions = { itemsPerPage: 25 }) => {
   const [dbMeta, setDbMeta] = React.useState<DbMetaT>(null);
   const [fullDb, setFullDb] = React.useState<DbT>(null);
   const [page, setPage] = React.useState<number>(1);
-  const [dbPartNumber, setDbPartNumber] = React.useState<number>(options.partNumber);
-  const [dbParts, setDbParts] = React.useState<Record<string, DbT>>({});
+  const [dbPartNumber, setDbPartNumber] = React.useState<number>(1);
+  const [dbParts, setDbParts] = React.useState<DbPartsT>({});
 
   const { errors, setErrors, printErrors } = useStaticErrors({ showReturnToMain: false });
 
