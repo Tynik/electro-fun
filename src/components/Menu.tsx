@@ -13,7 +13,7 @@ import {
   styled
 } from '@material-ui/core';
 import { Link as RouterLink } from 'react-router-dom';
-import sortBy from 'lodash.sortby'
+import sortBy from 'lodash.sortby';
 import {
   Menu as MenuIcon,
   ChevronLeft as ChevronLeftIcon,
@@ -128,7 +128,7 @@ export const Menu = (props: MenuProps) => {
   const {
     set: setMenuIsOpenedInitialState,
     initialValue: menuIsOpenedInitialState
-  } = useLocalStorage('menuIsOpened', 'boolean')
+  } = useLocalStorage('menuIsOpened', 'boolean');
 
   const [menuIsOpened, setMenuOpen] = React.useState<boolean>(menuIsOpenedInitialState);
 
@@ -146,6 +146,12 @@ export const Menu = (props: MenuProps) => {
   const onToggleMenuHandler = (state: boolean) => {
     setMenuOpen(state);
     setMenuIsOpenedInitialState(state);
+  };
+
+  const onSearchInputKeyPress = (e) => {
+    if (e.code === 'Enter' && e.target.value) {
+      onSearch(e.target.value);
+    }
   };
 
   return (
@@ -194,6 +200,7 @@ export const Menu = (props: MenuProps) => {
               placeholder={'Найти...'}
               inputProps={{ 'aria-label': 'search' }}
               onChange={(e) => setSearchValue(e.target.value)}
+              onKeyPress={onSearchInputKeyPress}
             />
           </Search>
         </Toolbar>

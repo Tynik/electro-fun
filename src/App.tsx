@@ -122,6 +122,7 @@ export const App = () => {
                     items={db.items}
                     foundItems={foundItems}
                     foundDatasheets={foundDatasheets}
+                    onSearchReset={() => onSearch('')}
                   />
                 </Route>
                 <Route path="/item/:id">

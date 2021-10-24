@@ -182,34 +182,6 @@
     }
   },
   "datasheets": {
-    "SS1x": {
-      "url": "/datasheets/SS1x.pdf",
-      "lang": "en"
-    },
-    "1N4148WS": {
-      "url": "/datasheets/1N4148WS.pdf",
-      "lang": "en"
-    },
-    "1N400x": {
-      "url": "/datasheets/1N400x.pdf",
-      "lang": "en"
-    },
-    "ESP-12E": {
-      "url": "/datasheets/ESP-12E.pdf",
-      "lang": "en"
-    },
-    "ESP-C3-13U-Kit": {
-      "url": "/datasheets/ESP-C3-13U-Kit.pdf",
-      "lang": "en"
-    },
-    "ESP32-C3N": {
-      "url": "/datasheets/ESP32-C3N.pdf",
-      "lang": "en"
-    },
-    "ESP32-C3U": {
-      "url": "/datasheets/ESP32-C3U.pdf",
-      "lang": "en"
-    },
     "ESP32-C3M": {
       "url": "/datasheets/ESP32-C3M.pdf",
       "lang": "en"

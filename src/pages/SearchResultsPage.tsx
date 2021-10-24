@@ -3,8 +3,12 @@ import {
   Alert,
   useTheme,
   Box,
-  Typography
+  Typography,
+  Button,
 } from '@material-ui/core';
+import {
+  Refresh as RefreshIcon
+} from '@material-ui/icons';
 
 import { ItemsT, DatasheetsT } from '../types';
 import { Loader, Items, Datasheets } from '../components';
@@ -14,6 +18,7 @@ export type SearchResultsPageProps = {
   foundDatasheets?: DatasheetsT
   foundItems?: ItemsT
   isSearching?: boolean
+  onSearchReset?: () => void
 }
 
 export const SearchResultsPage = (props: SearchResultsPageProps) => {
@@ -21,7 +26,8 @@ export const SearchResultsPage = (props: SearchResultsPageProps) => {
     items,
     foundItems = null,
     foundDatasheets = null,
-    isSearching = false
+    isSearching = false,
+    onSearchReset = null,
   } = props;
 
   const theme = useTheme();
@@ -32,6 +38,16 @@ export const SearchResultsPage = (props: SearchResultsPageProps) => {
 
   return (
     <>
+      {foundItems && onSearchReset && (
+        <Button
+          size={'small'}
+          startIcon={<RefreshIcon/>}
+          onClick={onSearchReset}
+        >
+          Сбросить поиск
+        </Button>
+      )}
+
       {foundItems !== null && !foundItems.length && !Object.keys(foundDatasheets).length && (
         <Alert severity={'info'}>Ничего не найдено</Alert>
       )}
