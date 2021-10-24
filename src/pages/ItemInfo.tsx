@@ -56,7 +56,7 @@ export const ItemInfo = () => {
   const seoEntity = React.useMemo(() => ({
     ...(item && {
       ...(item.seo || {}),
-      title: item.seo.title
+      title: item.seo && item.seo.title
         ? `${db.seo.title} - ${item.seo.title}`
         : `${db.seo.title} - ${item.title}`
     })
