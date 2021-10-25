@@ -6,7 +6,7 @@ export type useSeoOptions = {
   keywords?: string
 }
 
-export const useSeo = (options: useSeoOptions) => {
+export const useSeo = (options: useSeoOptions | null) => {
   React.useEffect(() => {
     if (options === null) {
       return;

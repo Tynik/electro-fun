@@ -1,13 +1,27 @@
 {
+  "datasheets": {
+    "MOC304x": {
+      "url": "/datasheets/MOC304x.pdf",
+      "lang": "en"
+    },
+    "BT136E": {
+      "url": "/datasheets/BT136E.pdf",
+      "lang": "en"
+    },
+    "2N390x": {
+      "url": "/datasheets/2N390x.pdf",
+      "lang": "en"
+    }
+  },
   "items": [
     {
-      "categoryId": 0,
+      "categoryId": 16,
       "lang": "ru",
       "title": "AMS1117 3.3 В",
       "subtitle": "Стабилизатор напряжения",
       "seo": {
-        "description": "AMS1117 - стабилизатор напряжения 3.3 В",
-        "keywords": "ams1117, 3.3В, стабилизатор, напряжение"
+        "description": "AMS1117 - стабилизатор напряжения 5 В в 3.3 В",
+        "keywords": "ams1117, стабилизатор, напряжение"
       },
       "buyLink": "",
       "datasheetId": "AMS1117",
@@ -21,6 +35,73 @@
           "src": "/photos/AMS1117-3.3V-2.webp",
           "alt": "AMS1117 3.3 В - схема подключения"
         }
+      ],
+      "features": [
+        {
+          "refId": 13,
+          "value": "4.75 - 12 В"
+        },
+        {
+          "refId": 14,
+          "value": "3.235 - 3.365 В"
+        },
+        {
+          "refId": 15,
+          "value": "до 1 А"
+        }
+      ],
+      "relatedDatasheetIds": [
+        "LM1117"
+      ]
+    },
+    {
+      "categoryId": 15,
+      "title": "MOC3021 SOP6",
+      "subtitle": "Оптопара",
+      "seo": {
+        "description": "MOC3021",
+        "keywords": "moc3021, sop6, оптопара, оптоизолятор"
+      },
+      "buyLink": "",
+      "datasheetId": "MOC302x",
+      "images": [
+        {
+          "src": "/photos/MOC3021-SOP6-1.webp",
+          "alt": "MOC3021 SOP6 - внешний вид"
+        },
+        {
+          "src": "/photos/MOC3021-SOP6-2.webp",
+          "alt": "MOC3021 SOP6 - корпус"
+        }
+      ],
+      "features": [
+        {
+          "refId": 13,
+          "value": "1.15 - 1.5 В",
+          "info": "при входном токе 20 мА"
+        },
+        {
+          "refId": 42,
+          "value": "SOP6"
+        },
+        {
+          "refId": 93,
+          "value": "до 50 мА"
+        },
+        {
+          "refId": 92,
+          "value": "до 6 В"
+        },
+        {
+          "refId": 94,
+          "value": "до 10 мкА",
+          "info": "при обратном напряжении в 6 В"
+        }
+      ],
+      "content": "",
+      "relatedDatasheetIds": [
+        "MOC304x",
+        "BT136E"
       ]
     }
   ]

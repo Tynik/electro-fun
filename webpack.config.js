@@ -86,7 +86,7 @@ module.exports = {
     })
   ],
   devServer: {
-    hot: false,
+    hot: true,
     port: 8097,
     historyApiFallback: true,
     static: {

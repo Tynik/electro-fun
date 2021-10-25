@@ -62,7 +62,7 @@ export const ItemInfoPage = () => {
     })
   }), [db, item]);
 
-  useSeo(seoEntity);
+  useSeo(Object.keys(seoEntity).length ? seoEntity : null);
 
   React.useEffect(() => {
     search({ id });

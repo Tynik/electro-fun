@@ -472,6 +472,11 @@
       "id": 15,
       "name": "Оптоизоляторы",
       "icon": "apps"
+    },
+    {
+      "id": 16,
+      "name": "Стабилизаторы",
+      "icon": "apps"
     }
   ],
   "featureSections": {
@@ -583,7 +588,7 @@
       "featSecRefId": 3
     },
     "15": {
-      "name": "Макс. выходной ток",
+      "name": "Выходной",
       "featSecRefId": 4
     },
     "16": {
@@ -890,6 +895,18 @@
     "91": {
       "name": "Мощность",
       "featSecRefId": 1
+    },
+    "92": {
+      "name": "Входное (обратное)",
+      "featSecRefId": 3
+    },
+    "93": {
+      "name": "Входной",
+      "featSecRefId": 4
+    },
+    "94": {
+      "name": "Входной (обратный)",
+      "featSecRefId": 4
     }
   },
   "items": [
@@ -934,7 +951,7 @@
         },
         {
           "refId": 15,
-          "value": "3 A"
+          "value": "до 3 A"
         }
       ],
       "externalLinks": [

@@ -44,6 +44,7 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
     if (itemId) {
       foundItems = db.items.find(item => item.id === itemId);
       foundItems = foundItems ? [foundItems] : [];
+
     } else {
       foundItems = db.items.filter(item => {
         let matched = true;
@@ -54,8 +55,15 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
         if (categoryId) {
           matched &&= item.categoryId === categoryId;
         }
-        if (matched && item.datasheetId) {
-          foundItemsDatasheets[item.datasheetId] = true;
+        if (matched) {
+          if (item.datasheetId) {
+            foundItemsDatasheets[item.datasheetId] = true;
+          }
+          if (item.relatedDatasheetIds) {
+            item.relatedDatasheetIds.forEach(relatedDatasheetId => {
+              foundItemsDatasheets[relatedDatasheetId] = true;
+            });
+          }
         }
         return matched;
       });
