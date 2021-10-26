@@ -1,6 +1,7 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link as RouterLink } from 'react-router-dom';
 import {
+  Link,
   Box,
   Stack,
   Grid,
@@ -36,7 +37,7 @@ import {
 import { ItemInfoFeatures } from './ItemInfoFeatures';
 import { ItemInfoOptions } from './ItemInfoOptions';
 import { ItemInfoExternalLinks } from './ItemInfoExternalLinks';
-import { getItemDriverAvatarSrc } from '../utils';
+import { getIcon, getItemDriverAvatarSrc } from '../utils';
 
 export const ItemInfoPage = () => {
   const theme = useTheme();
@@ -53,14 +54,20 @@ export const ItemInfoPage = () => {
 
   useSmoothScroll({ top: 0, left: 0 });
 
-  const seoEntity = React.useMemo(() => ({
-    ...(item && {
-      ...(item.seo || {}),
-      title: item.seo && item.seo.title
-        ? `${db.seo.title} - ${item.seo.title}`
-        : `${db.seo.title} - ${item.title}`
-    })
-  }), [db, item]);
+  const seoEntity = React.useMemo(() => (
+    {
+      ...(
+        item && {
+          ...(
+            item.seo || {}
+          ),
+          title: item.seo && item.seo.title
+            ? `${db.seo.title} - ${item.seo.title}`
+            : `${db.seo.title} - ${item.title}`
+        }
+      )
+    }
+  ), [db, item]);
 
   useSeo(Object.keys(seoEntity).length ? seoEntity : null);
 
@@ -78,6 +85,12 @@ export const ItemInfoPage = () => {
       setErrors([`"${id}" не найден или был переименован`]);
     }
   }, [foundItems]);
+
+  const category = React.useMemo(
+    () =>
+      item ? db.categories.find(category => category.id === item.categoryId) : null,
+    [item]
+  );
 
   const clarificationsWrapper = React.useCallback((text: string) =>
     wordsWrapper(Object.keys(db.clarifications), text, (
@@ -100,8 +113,8 @@ export const ItemInfoPage = () => {
   if (errors.length) {
     return printErrors();
   }
-  // item is loading in progress
-  if (item === null) {
+  // item loading in progress
+  if (item === null || !category) {
     return <Loader/>;
   }
 
@@ -113,7 +126,31 @@ export const ItemInfoPage = () => {
 
       <Grid xs={12} item>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <Typography variant={'h5'} role={'heading'} aria-level={1}>
+          <Typography variant={'subtitle1'}>
+            <Link
+              underline={'hover'}
+              color={'inherit'}
+              sx={{ display: 'flex', alignItems: 'center' }}
+              component={RouterLink}
+              to={`/category/${category.id}`}
+            >
+              {getIcon(category.icon, { fontSize: 'small' })}
+              {category.name}
+              {getIcon('doubleArrow', {
+                fontSize: 'small',
+                sx: {
+                  marginLeft: theme.spacing(1)
+                }
+              })}
+            </Link>
+          </Typography>
+
+          <Typography
+            variant={'h5'}
+            role={'heading'}
+            aria-level={1}
+            sx={{ marginLeft: theme.spacing(1) }}
+          >
             {item.title}
           </Typography>
 
@@ -171,10 +208,12 @@ export const ItemInfoPage = () => {
             </Typography>
 
             <Datasheets
-              datasheets={item.relatedDatasheetIds.reduce((datasheets, datasheetId) => ({
-                ...datasheets,
-                [datasheetId]: db.datasheets[datasheetId]
-              }), {})}
+              datasheets={item.relatedDatasheetIds.reduce((datasheets, datasheetId) => (
+                {
+                  ...datasheets,
+                  [datasheetId]: db.datasheets[datasheetId]
+                }
+              ), {})}
             />
           </Box>
         )}

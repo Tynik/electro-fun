@@ -40,6 +40,7 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
     }
     let foundItems;
     let foundItemsDatasheets = {};
+    let foundItemsRelatedDatasheets = {};
 
     if (itemId) {
       foundItems = db.items.find(item => item.id === itemId);
@@ -61,7 +62,7 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
           }
           if (item.relatedDatasheetIds) {
             item.relatedDatasheetIds.forEach(relatedDatasheetId => {
-              foundItemsDatasheets[relatedDatasheetId] = true;
+              foundItemsRelatedDatasheets[relatedDatasheetId] = true;
             });
           }
         }
@@ -71,13 +72,18 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
 
     if (keywords && keywords.length) {
       const foundDatasheets = Object.keys(db.datasheets).reduce((foundDatasheets, datasheetId) => {
-        const matched = foundItemsDatasheets[datasheetId] || keywords.every(keyword =>
-          datasheetId.toLowerCase().includes(keyword)
-        );
+        const matched = foundItemsDatasheets[datasheetId]
+          || foundItemsRelatedDatasheets[datasheetId]
+          || keywords.every(keyword =>
+            datasheetId.toLowerCase().includes(keyword)
+          );
         if (matched) {
           foundDatasheets[datasheetId] = { ...db.datasheets[datasheetId] };
           if (foundItemsDatasheets[datasheetId]) {
             foundDatasheets[datasheetId].priority = 0;
+          }
+          if (foundItemsRelatedDatasheets[datasheetId]) {
+            foundDatasheets[datasheetId].priority = 1;
           }
         }
         return foundDatasheets;

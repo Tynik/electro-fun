@@ -34,7 +34,7 @@ export const Datasheets = ({ datasheets }: DatasheetsProps) => {
             href={datasheets[datasheetId].url}
             hrefLang={datasheets[datasheetId].lang}
           >
-            {datasheets[datasheetId].priority !== undefined ? (
+            {datasheets[datasheetId].priority === 0 ? (
               <strong>{datasheetId}</strong>
             ) : (
               <>{datasheetId}</>

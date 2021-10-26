@@ -57,10 +57,10 @@
     {
       "categoryId": 15,
       "title": "MOC3021 SOP6",
-      "subtitle": "Оптопара",
+      "subtitle": "Оптопара до 400 В в пике",
       "seo": {
-        "description": "MOC3021",
-        "keywords": "moc3021, sop6, оптопара, оптоизолятор"
+        "description": "MOC3021 - оптоизолятор",
+        "keywords": "moc3021, sop6, smd, оптопара, оптоизолятор"
       },
       "buyLink": "",
       "datasheetId": "MOC302x",
@@ -72,6 +72,10 @@
         {
           "src": "/photos/MOC3021-SOP6-2.webp",
           "alt": "MOC3021 SOP6 - корпус"
+        },
+        {
+          "src": "/photos/MOC3021-SOP6-3.webp",
+          "alt": "MOC3021 SOP6 - схема подключения"
         }
       ],
       "features": [
@@ -79,6 +83,10 @@
           "refId": 13,
           "value": "1.15 - 1.5 В",
           "info": "при входном токе 20 мА"
+        },
+        {
+          "refId": 15,
+          "value": "до 1 А"
         },
         {
           "refId": 42,
@@ -96,6 +104,11 @@
           "refId": 94,
           "value": "до 10 мкА",
           "info": "при обратном напряжении в 6 В"
+        },
+        {
+          "refId": 95,
+          "value": "до 5 кВ",
+          "info": "Среднее квадратическое. В пике 5 кВ * √2 ≈ 7 кВ"
         }
       ],
       "content": "",

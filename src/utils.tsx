@@ -16,10 +16,12 @@ import {
   WbTwilight as WbTwilightIcon,
   Speed as SpeedIcon,
   Security as SecurityIcon,
-  Apps as AppsIcon
+  Apps as AppsIcon,
+  DoubleArrow as DoubleArrowIcon,
 } from '@material-ui/icons';
 
 import { ItemT, DbT, ItemDriverSrcT, ItemDriverSrcSourceT } from './types';
+import { SvgIconProps } from '@material-ui/core';
 
 export const generateItemId = (itemTitle: string) =>
   itemTitle.replaceAll(' ', '-').toLowerCase();
@@ -72,7 +74,7 @@ export function mergeDeep(target, ...sources) {
   return mergeDeep(target, ...sources);
 }
 
-export const getIcon = (name, props = {}) => {
+export const getIcon = (name, props: SvgIconProps = {}) => {
   return {
     cpu: <MemoryIcon {...props}/>,
     sensor: <SensorsIcon {...props}/>,
@@ -90,7 +92,8 @@ export const getIcon = (name, props = {}) => {
     led: <WbTwilightIcon {...props}/>,
     measure: <SpeedIcon {...props}/>,
     fuse: <SecurityIcon {...props}/>,
-    apps: <AppsIcon {...props}/>
+    apps: <AppsIcon {...props}/>,
+    doubleArrow: <DoubleArrowIcon {...props}/>,
   }[name];
 };
 
