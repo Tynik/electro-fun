@@ -1,7 +1,6 @@
 import React from 'react';
-import { useParams, Link as RouterLink } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import {
-  Link,
   Box,
   Stack,
   Grid,
@@ -28,6 +27,7 @@ import {
 } from '../hooks';
 import {
   Loader,
+  InternalLink,
   ExternalLink,
   ImageSlider,
   BackButton,
@@ -127,22 +127,15 @@ export const ItemInfoPage = () => {
       <Grid xs={12} item>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <Typography variant={'subtitle1'}>
-            <Link
+            <InternalLink
               underline={'hover'}
               color={'inherit'}
-              sx={{ display: 'flex', alignItems: 'center' }}
-              component={RouterLink}
+              startIcon={getIcon(category.icon)}
+              endIcon={getIcon('doubleArrow')}
               to={`/category/${category.id}`}
             >
-              {getIcon(category.icon, { fontSize: 'small' })}
               {category.name}
-              {getIcon('doubleArrow', {
-                fontSize: 'small',
-                sx: {
-                  marginLeft: theme.spacing(1)
-                }
-              })}
-            </Link>
+            </InternalLink>
           </Typography>
 
           <Typography

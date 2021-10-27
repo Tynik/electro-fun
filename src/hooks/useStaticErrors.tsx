@@ -1,11 +1,9 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
 import {
-  Link,
   Container,
   Alert
 } from '@material-ui/core';
-import { Loader } from '../components';
+import { Loader, InternalLink } from '../components';
 
 export const useStaticErrors = ({ showReturnToMain } = { showReturnToMain: true }) => {
   const [errors, setErrors] = React.useState<string[]>([]);
@@ -25,7 +23,7 @@ export const useStaticErrors = ({ showReturnToMain } = { showReturnToMain: true 
         </Alert>
 
         {showReturnToMain && (
-          <Link to={'/'} component={RouterLink}>Вернуться на главную</Link>
+          <InternalLink to={'/'}>Вернуться на главную</InternalLink>
         )}
       </Container>
     );

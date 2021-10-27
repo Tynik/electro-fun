@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
-import { Link, Typography } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
+
+import { InternalLink } from './links';
 
 export type BreadcrumbItemProps = {
   final?: boolean
@@ -24,16 +25,14 @@ export const BreadcrumbItem = (props: BreadcrumbItemProps) => {
   return (
     <>
       {!final && (
-        <Link
+        <InternalLink
           underline={'hover'}
           color={'inherit'}
-          sx={{ display: 'flex', alignItems: 'center' }}
-          component={RouterLink}
+          startIcon={iconElement}
           to={to}
         >
-          {iconElement}
           {children}
-        </Link>
+        </InternalLink>
       )}
 
       {final && (

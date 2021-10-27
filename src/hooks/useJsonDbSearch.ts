@@ -2,7 +2,7 @@ import React from 'react';
 import debounce from 'lodash.debounce';
 
 import { DbT, ItemT, DatasheetsT } from '../types';
-import { matchItemKeyword } from '../utils';
+import { matchItemKeywords, matchDatasheetKeywords } from '../helpers';
 
 export type SearchHandler = {
   id?: string
@@ -51,7 +51,7 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
         let matched = true;
 
         if (keywords && keywords.length) {
-          matched &&= keywords.every(keyword => matchItemKeyword(item, keyword));
+          matched &&= matchItemKeywords(item, keywords);
         }
         if (categoryId) {
           matched &&= item.categoryId === categoryId;
@@ -71,23 +71,24 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
     }
 
     if (keywords && keywords.length) {
-      const foundDatasheets = Object.keys(db.datasheets).reduce((foundDatasheets, datasheetId) => {
-        const matched = foundItemsDatasheets[datasheetId]
-          || foundItemsRelatedDatasheets[datasheetId]
-          || keywords.every(keyword =>
-            datasheetId.toLowerCase().includes(keyword)
-          );
-        if (matched) {
-          foundDatasheets[datasheetId] = { ...db.datasheets[datasheetId] };
-          if (foundItemsDatasheets[datasheetId]) {
-            foundDatasheets[datasheetId].priority = 0;
+      const foundDatasheets = Object.keys(db.datasheets).reduce(
+        (foundDatasheets, datasheetId) => {
+          const matched = foundItemsDatasheets[datasheetId]
+            || foundItemsRelatedDatasheets[datasheetId]
+            || matchDatasheetKeywords(datasheetId, keywords);
+
+          if (matched) {
+            foundDatasheets[datasheetId] = { ...db.datasheets[datasheetId] };
+            if (foundItemsDatasheets[datasheetId]) {
+              foundDatasheets[datasheetId].priority = 0;
+            }
+            if (foundItemsRelatedDatasheets[datasheetId]) {
+              foundDatasheets[datasheetId].priority = 1;
+            }
           }
-          if (foundItemsRelatedDatasheets[datasheetId]) {
-            foundDatasheets[datasheetId].priority = 1;
-          }
-        }
-        return foundDatasheets;
-      }, {});
+          return foundDatasheets;
+        }, {}
+      );
 
       setFoundDatasheets(foundDatasheets);
     }

@@ -198,28 +198,20 @@
       "url": "/datasheets/ESP32-C3.pdf",
       "lang": "en"
     },
-    "ESP32-C3-WROOM-02|ESP32-C3-WROOM-02U": {
-      "url": "/datasheets/ESP32-C3-WROOM-02|ESP32-C3-WROOM-02U.pdf",
+    "ESP32-C3-WROOM-02x": {
+      "url": "/datasheets/ESP32-C3-WROOM-02x.pdf",
       "lang": "en"
     },
-    "ESP32-WROOM-32E|ESP32-WROOM-32UE": {
-      "url": "/datasheets/ESP32-WROOM-32E|ESP32-WROOM-32UE.pdf",
+    "ESP32-WROOM-32xx": {
+      "url": "/datasheets/ESP32-WROOM-32xx.pdf",
       "lang": "en"
     },
-    "ESP32-WROVER-B|ESP32-WROVER-IB": {
-      "url": "/datasheets/ESP32-WROVER-B|ESP32-WROVER-IB.pdf",
+    "ESP32-S2-WROOM-x": {
+      "url": "/datasheets/ESP32-S2-WROOM-x.pdf",
       "lang": "en"
     },
-    "ESP32-WROVER-E|ESP32-WROVER-IE": {
-      "url": "/datasheets/ESP32-WROVER-E|ESP32-WROVER-IE.pdf",
-      "lang": "en"
-    },
-    "ESP32-S2-WROOM|ESP32-S2-WROOM-I": {
-      "url": "/datasheets/ESP32-S2-WROOM|ESP32-S2-WROOM-I.pdf",
-      "lang": "en"
-    },
-    "ESP32-S2-WROVER|ESP32-S2-WROVER-I": {
-      "url": "/datasheets/ESP32-S2-WROVER|ESP32-S2-WROVER-I.pdf",
+    "ESP32-S2-WROVER-x": {
+      "url": "/datasheets/ESP32-S2-WROVER-x.pdf",
       "lang": "en"
     },
     "ESP32-S2 (Technical Reference Manual)": {
@@ -240,10 +232,6 @@
     },
     "TLP281": {
       "url": "/datasheets/TLP281.pdf",
-      "lang": "en"
-    },
-    "CD74HC4051-EP": {
-      "url": "/datasheets/CD74HC4051-EP.pdf",
       "lang": "en"
     },
     "HLK-PM0x": {

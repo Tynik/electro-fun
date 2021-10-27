@@ -1,11 +1,13 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+
 import { SearchResultsPage } from '../pages';
 import { DbContext } from '../context';
 import { useJsonDbSearch } from '../hooks';
 import { Breadcrumbs } from './Breadcrumbs';
 import { BreadcrumbItem } from './BreadcrumbItem';
 import { getIcon } from '../utils';
+import { Loader } from './Loader';
 
 export const Category = () => {
   const { categoryId } = useParams<{ categoryId: string }>();
@@ -23,8 +25,8 @@ export const Category = () => {
     return db.categories.find(category => category.id === convertedCategoryId);
   }, [categoryId]);
 
-  if (!foundItems) {
-    return <></>;
+  if (!foundItems || !category) {
+    return <Loader/>;
   }
 
   return (
