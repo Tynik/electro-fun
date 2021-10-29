@@ -41,7 +41,9 @@ export type ItemImageT = {
   src: string
 }
 
-export type ItemApplicationT = string
+export type ApplicationIdT = string
+export type ApplicationT = string
+export type ApplicationsT = Record<ApplicationIdT, ApplicationT>
 
 export enum ItemDriverSrcSourceT {
   GITHUB = 'github',
@@ -73,12 +75,15 @@ export type ItemOptionT = {
 
 export type ItemOptionsT = Record<ItemOptionIdT, ItemOptionT>
 
+export type ItemIdT = string
+
 export type ItemT = {
   title: string
   subtitle: string
   lang: string
-  id?: string
+  id?: ItemIdT
   categoryId?: number
+  developedBy?: string
   content?: string
   warningContent?: string
   seo?: SeoT & { title?: string }
@@ -89,7 +94,7 @@ export type ItemT = {
   features?: ItemFeatureT[]
   images?: ItemImageT[]
   original?: boolean
-  applications?: ItemApplicationT[]
+  applicationIds?: ApplicationIdT[]
   drivers?: ItemDriverT[]
   externalLinks?: ItemExternalLinkT[]
   relatedDatasheetIds?: DatasheetIdT[]
@@ -133,7 +138,14 @@ export type DatasheetT = {
   description?: string
 }
 
+export type FoundDatasheetT = DatasheetT & {
+  // when datasheets should be sorted
+  priority?: number
+}
+
 export type DatasheetsT = Record<DatasheetIdT, DatasheetT>
+
+export type FoundDatasheetsT = Record<DatasheetIdT, FoundDatasheetT>
 
 export type DocT = {
   name: string
@@ -165,6 +177,7 @@ export type DbT = {
   items: ItemT[]
   datasheets: DatasheetsT
   docs: DocsT
+  applications: ApplicationsT
   footer: {
     bottom: string
   }

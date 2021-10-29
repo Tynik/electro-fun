@@ -2,19 +2,12 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import {
   Box,
-  Stack,
   Grid,
   Typography,
   Chip,
-  AvatarGroup,
-  Avatar,
   Alert,
   useTheme
 } from '@material-ui/core';
-import {
-  Link as LinkIcon,
-  ShoppingCart as ShoppingCartIcon
-} from '@material-ui/icons';
 
 import { ItemT } from '../types';
 import { DbContext } from '../context';
@@ -30,14 +23,16 @@ import {
   InternalLink,
   ExternalLink,
   ImageSlider,
-  BackButton,
-  ExternalButtonLink,
-  Datasheets
+  BackButton
 } from '../components';
 import { ItemInfoFeatures } from './ItemInfoFeatures';
 import { ItemInfoOptions } from './ItemInfoOptions';
 import { ItemInfoExternalLinks } from './ItemInfoExternalLinks';
-import { getIcon, getItemDriverAvatarSrc } from '../utils';
+import { ItemInfoApplications } from './ItemInfoApplications';
+import { ItemInfoActions } from './ItemInfoActions';
+import { ItemInfoDrivers } from './ItemInfoDrivers';
+import { ItemInfoRelatedDatasheets } from './ItemInfoRelatedDatasheets';
+import { getIcon } from '../utils';
 
 export const ItemInfoPage = () => {
   const theme = useTheme();
@@ -196,24 +191,19 @@ export const ItemInfoPage = () => {
 
         {item.relatedDatasheetIds && item.relatedDatasheetIds.length > 0 && (
           <Box marginTop={theme.spacing(2)}>
-            <Typography variant={'overline'}>
-              Связанные datasheets
-            </Typography>
+            <ItemInfoRelatedDatasheets relatedDatasheetIds={item.relatedDatasheetIds}/>
+          </Box>
+        )}
 
-            <Datasheets
-              datasheets={item.relatedDatasheetIds.reduce((datasheets, datasheetId) => (
-                {
-                  ...datasheets,
-                  [datasheetId]: db.datasheets[datasheetId]
-                }
-              ), {})}
-            />
+        {item.applicationIds && item.applicationIds.length > 0 && (
+          <Box marginTop={theme.spacing(2)}>
+            <ItemInfoApplications applicationIds={item.applicationIds}/>
           </Box>
         )}
 
         {item.externalLinks && item.externalLinks.length > 0 && (
           <Box marginTop={theme.spacing(2)}>
-            <ItemInfoExternalLinks item={item}/>
+            <ItemInfoExternalLinks externalLinks={item.externalLinks}/>
           </Box>
         )}
       </Grid>
@@ -226,55 +216,12 @@ export const ItemInfoPage = () => {
         )}
 
         <Box marginTop={theme.spacing(2)}>
-          <Stack direction={'row'} spacing={2}>
-            {Boolean(item.datasheetId) && (
-              <ExternalButtonLink
-                href={db.datasheets[item.datasheetId].url}
-                hrefLang={db.datasheets[item.datasheetId].lang}
-                variant={'outlined'}
-                startIcon={<LinkIcon/>}
-              >
-                Datasheet
-              </ExternalButtonLink>
-            )}
-            {Boolean(item.buyLink) && (
-              <ExternalButtonLink
-                href={item.buyLink}
-                variant={'contained'}
-                color={'success'}
-                startIcon={<ShoppingCartIcon/>}
-              >
-                Купить
-              </ExternalButtonLink>
-            )}
-          </Stack>
+          <ItemInfoActions item={item}/>
         </Box>
 
         {item.drivers && item.drivers.length > 0 && (
           <Box marginTop={theme.spacing(2)}>
-            <Typography variant={'overline'}>
-              Драйверы
-            </Typography>
-
-            <AvatarGroup
-              max={10}
-              sx={{ display: 'flex', justifyContent: 'center' }}
-            >
-              {item.drivers.map(driver => (
-                <ExternalLink
-                  key={driver.name}
-                  href={driver.url}
-                  hrefLang={'en'}
-                  title={driver.name}
-                  sx={{ textDecoration: 'none' }}
-                >
-                  <Avatar
-                    alt={driver.name}
-                    src={getItemDriverAvatarSrc(driver.src)}
-                  />
-                </ExternalLink>
-              ))}
-            </AvatarGroup>
+            <ItemInfoDrivers drivers={item.drivers}/>
           </Box>
         )}
       </Grid>

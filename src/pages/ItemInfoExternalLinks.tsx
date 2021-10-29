@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Typography,
   List,
@@ -7,14 +8,13 @@ import {
 } from '@material-ui/core';
 
 import { ExternalLink } from '../components';
-import React from 'react';
-import { ItemT } from '../types';
+import { ItemExternalLinkT } from '../types';
 
 export type ItemInfoExternalLinksProps = {
-  item: ItemT
+  externalLinks: ItemExternalLinkT[]
 }
 
-export const ItemInfoExternalLinks = ({ item }: ItemInfoExternalLinksProps) => {
+export const ItemInfoExternalLinks = ({ externalLinks }: ItemInfoExternalLinksProps) => {
   return (
     <>
       <Typography variant={'overline'}>
@@ -22,7 +22,7 @@ export const ItemInfoExternalLinks = ({ item }: ItemInfoExternalLinksProps) => {
       </Typography>
 
       <List disablePadding>
-        {item.externalLinks.map(externalResource => (
+        {externalLinks.map(externalResource => (
           <ListItem key={externalResource.name} disablePadding>
             {externalResource.icon && (
               <Icon

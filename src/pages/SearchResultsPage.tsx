@@ -10,12 +10,12 @@ import {
   Refresh as RefreshIcon
 } from '@material-ui/icons';
 
-import { ItemsT, DatasheetsT } from '../types';
+import { ItemsT, FoundDatasheetsT } from '../types';
 import { Loader, Items, Datasheets } from '../components';
 
 export type SearchResultsPageProps = {
   items: ItemsT
-  foundDatasheets?: DatasheetsT
+  foundDatasheets?: FoundDatasheetsT
   foundItems?: ItemsT
   isSearching?: boolean
   onSearchReset?: () => void

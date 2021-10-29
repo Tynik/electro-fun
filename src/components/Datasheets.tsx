@@ -1,17 +1,15 @@
 import React from 'react';
 import {
   List,
-  ListItem
+  ListItem,
+  ListItemText,
 } from '@material-ui/core';
 
+import { FoundDatasheetsT } from '../types';
 import { ExternalLink } from '../components';
-import { DatasheetIdT, DatasheetT } from '../types';
 
 export type DatasheetsProps = {
-  datasheets: Record<DatasheetIdT, DatasheetT & {
-    // for sorting
-    priority?: number
-  }>
+  datasheets: FoundDatasheetsT
 }
 
 export const Datasheets = ({ datasheets }: DatasheetsProps) => {
@@ -30,16 +28,18 @@ export const Datasheets = ({ datasheets }: DatasheetsProps) => {
     <List disablePadding>
       {sortedDatasheets.map(datasheetId => (
         <ListItem key={datasheetId} disablePadding>
-          <ExternalLink
-            href={datasheets[datasheetId].url}
-            hrefLang={datasheets[datasheetId].lang}
-          >
-            {datasheets[datasheetId].priority === 0 ? (
-              <strong>{datasheetId}</strong>
-            ) : (
-              <>{datasheetId}</>
-            )}
-          </ExternalLink>
+          <ListItemText>
+            <ExternalLink
+              href={datasheets[datasheetId].url}
+              hrefLang={datasheets[datasheetId].lang}
+            >
+              {datasheets[datasheetId].priority === 0 ? (
+                <strong>{datasheetId}</strong>
+              ) : (
+                <>{datasheetId}</>
+              )}
+            </ExternalLink>
+          </ListItemText>
         </ListItem>
       ))}
     </List>

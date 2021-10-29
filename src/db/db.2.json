@@ -4,6 +4,10 @@
       "url": "/datasheets/ESP-12E.pdf",
       "lang": "en"
     },
+    "ESP-C3-13U": {
+      "url": "/datasheets/ESP-C3-13U.pdf",
+      "lang": "en"
+    },
     "ESP-C3-13U-Kit": {
       "url": "/datasheets/ESP-C3-13U-Kit.pdf",
       "lang": "en"
@@ -30,6 +34,14 @@
     },
     "AMS1117": {
       "url": "/datasheets/AMS1117.pdf",
+      "lang": "en"
+    },
+    "74HC4051xx": {
+      "url": "/datasheets/74HC4051x.pdf",
+      "lang": "en"
+    },
+    "74HCT4051xx": {
+      "url": "/datasheets/74HC4051x.pdf",
       "lang": "en"
     }
   },
@@ -576,7 +588,39 @@
           "icon": "randomnerdtutorials.com.webp",
           "iconAlt": "randomnerdtutorials.com"
         }
-     ]
+      ]
+    },
+    {
+      "categoryId": 9,
+      "title": "ESP-C3-13U 4M",
+      "subtitle": "Wi-Fi модуль",
+      "datasheetId": "ESP-C3-13U",
+      "developedBy": "Shenzhen Ai-Thinker Technology Co., Ltd",
+      "images": [
+        {
+          "src": "/photos/ESP-C3-13U-1.webp",
+          "alt": "ESP-C3-13U"
+        }
+      ],
+      "content": "",
+      "externalLinks": [
+        {
+          "name": "Официальная страница ESP32-C3 модулей",
+          "url": "https://docs.ai-thinker.com/en/esp32c3",
+          "lang": "en",
+          "icon": "ai-thinker.com.ico",
+          "iconAlt": "ai-thinker.com"
+        }
+      ],
+      "relatedDatasheetIds": [
+        "ESP-C3-13U-Kit"
+      ],
+      "applicationIds": [
+        1,
+        2,
+        3,
+        4
+      ]
     }
   ]
 }

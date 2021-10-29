@@ -1,8 +1,17 @@
 import React from 'react';
 import debounce from 'lodash.debounce';
 
-import { DbT, ItemT, DatasheetsT } from '../types';
-import { matchItemKeywords, matchDatasheetKeywords } from '../helpers';
+import {
+  DbT,
+  ItemIdT,
+  ItemT,
+  DatasheetIdT,
+  FoundDatasheetsT
+} from '../types';
+import {
+  matchItemWithSearch,
+  matchDatasheetWithSearchKeywords
+} from '../helpers';
 
 export type SearchHandler = {
   id?: string
@@ -12,11 +21,11 @@ export type SearchHandler = {
 }
 
 export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
-  const [itemId, setItemId] = React.useState<string>(null);
-  const [keywords, setKeywords] = React.useState<string[]>(null);
+  const [itemId, setItemId] = React.useState<ItemIdT>(null);
+  const [searchKeywords, setSearchKeywords] = React.useState<string[]>(null);
   const [categoryId, setCategoryId] = React.useState<number>(null);
   const [foundItems, setFoundItems] = React.useState<ItemT[]>(null);
-  const [foundDatasheets, setFoundDatasheets] = React.useState<DatasheetsT>(null);
+  const [foundDatasheets, setFoundDatasheets] = React.useState<FoundDatasheetsT>(null);
   const [isSearching, setIsSearching] = React.useState(false);
   const [searchOffset, setSearchOffset] = React.useState<number>(0);
 
@@ -26,37 +35,33 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
 
   React.useEffect(() => {
     if ((
-      itemId === null && keywords === null && categoryId === null
+      itemId === null && searchKeywords === null && categoryId === null
     ) || !db) {
       return;
     }
     if (itemId === null && (
-      keywords && !keywords.length
+      searchKeywords && !searchKeywords.length
     ) && categoryId === null) {
       setIsSearching(false);
       setFoundItems(null);
       setFoundDatasheets(null);
       return;
     }
-    let foundItems;
-    let foundItemsDatasheets = {};
-    let foundItemsRelatedDatasheets = {};
+    let foundItems: ItemT[];
 
     if (itemId) {
-      foundItems = db.items.find(item => item.id === itemId);
-      foundItems = foundItems ? [foundItems] : [];
+      const foundItemById = db.items.find(item => item.id === itemId);
+      foundItems = foundItemById ? [foundItemById] : [];
 
     } else {
-      foundItems = db.items.filter(item => {
-        let matched = true;
+      let foundItemsDatasheets: Record<DatasheetIdT, boolean> = {};
+      let foundItemsRelatedDatasheets: Record<DatasheetIdT, boolean> = {};
 
-        if (keywords && keywords.length) {
-          matched &&= matchItemKeywords(item, keywords);
-        }
-        if (categoryId) {
-          matched &&= item.categoryId === categoryId;
-        }
-        if (matched) {
+      foundItems = db.items.filter(item => {
+        const itemIsMatched = matchItemWithSearch(
+          item, { searchKeywords, categoryId }
+        );
+        if (itemIsMatched) {
           if (item.datasheetId) {
             foundItemsDatasheets[item.datasheetId] = true;
           }
@@ -66,31 +71,32 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
             });
           }
         }
-        return matched;
+        return itemIsMatched;
       });
-    }
 
-    if (keywords && keywords.length) {
-      const foundDatasheets = Object.keys(db.datasheets).reduce(
-        (foundDatasheets, datasheetId) => {
-          const matched = foundItemsDatasheets[datasheetId]
-            || foundItemsRelatedDatasheets[datasheetId]
-            || matchDatasheetKeywords(datasheetId, keywords);
+      if (searchKeywords && searchKeywords.length) {
+        const foundDatasheets = Object.keys(db.datasheets).reduce(
+          (foundDatasheets, datasheetId) => {
+            const datasheetIsMatched = foundItemsDatasheets[datasheetId]
+              || foundItemsRelatedDatasheets[datasheetId]
+              || matchDatasheetWithSearchKeywords(datasheetId, searchKeywords);
 
-          if (matched) {
-            foundDatasheets[datasheetId] = { ...db.datasheets[datasheetId] };
-            if (foundItemsDatasheets[datasheetId]) {
-              foundDatasheets[datasheetId].priority = 0;
+            if (datasheetIsMatched) {
+              foundDatasheets[datasheetId] = { ...db.datasheets[datasheetId] };
+              // assign priorities for datasheets to sort them after
+              if (foundItemsDatasheets[datasheetId]) {
+                foundDatasheets[datasheetId].priority = 0;
+              }
+              if (foundItemsRelatedDatasheets[datasheetId]) {
+                foundDatasheets[datasheetId].priority = 1;
+              }
             }
-            if (foundItemsRelatedDatasheets[datasheetId]) {
-              foundDatasheets[datasheetId].priority = 1;
-            }
-          }
-          return foundDatasheets;
-        }, {}
-      );
+            return foundDatasheets;
+          }, {} as FoundDatasheetsT
+        );
 
-      setFoundDatasheets(foundDatasheets);
+        setFoundDatasheets(foundDatasheets);
+      }
     }
 
     // setFoundItems(prevFoundItems => [
@@ -111,21 +117,26 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
       setIsSearching(false);
       setFoundItems(foundItems);
     }
-  }, [db, itemId, keywords, categoryId]);
+  }, [db, itemId, searchKeywords, categoryId]);
 
-  const baseSearch = React.useCallback(({ id, text, categoryId }: Omit<SearchHandler, 'debounce'>) => {
-    if (id !== undefined) {
-      setItemId(id);
-      return;
-    }
-    if (text !== undefined) {
-      const parsedKeywords = text.toLowerCase().split(' ').filter(keyword => keyword);
-      setKeywords(parsedKeywords);
-    }
-    if (categoryId !== undefined) {
-      setCategoryId(categoryId);
-    }
-  }, []);
+  const baseSearch = React.useCallback(
+    ({ id, text, categoryId }: Omit<SearchHandler, 'debounce'>) => {
+      if (id !== undefined) {
+        setItemId(id);
+        return;
+      }
+      if (text !== undefined) {
+        const searchKeywords = text.toLowerCase()
+          .split(' ')
+          .filter(keyword => keyword);
+
+        setSearchKeywords(searchKeywords);
+      }
+      if (categoryId !== undefined) {
+        setCategoryId(categoryId);
+      }
+    }, []
+  );
 
   const debouncedSearch = React.useMemo(
     () =>
