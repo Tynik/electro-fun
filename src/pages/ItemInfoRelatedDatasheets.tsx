@@ -1,9 +1,9 @@
 import React from 'react';
 import {
-  Typography,
+  Typography
 } from '@material-ui/core';
 
-import { DatasheetIdT } from '../types';
+import { DatasheetIdT, DatasheetsT } from '../types';
 import { DbContext } from '../context';
 import { Datasheets } from '../components';
 
@@ -14,6 +14,18 @@ export type ItemInfoActionsProps = {
 export const ItemInfoRelatedDatasheets = ({ relatedDatasheetIds }: ItemInfoActionsProps) => {
   const { db } = React.useContext(DbContext);
 
+  const datasheets = React.useMemo(
+    () =>
+      relatedDatasheetIds.reduce((datasheets, datasheetId) => (
+          {
+            ...datasheets,
+            [datasheetId]: db.datasheets[datasheetId]
+          }
+        ), {} as DatasheetsT
+      ),
+    [relatedDatasheetIds]
+  );
+
   return (
     <>
       <Typography variant={'overline'}>
@@ -21,12 +33,7 @@ export const ItemInfoRelatedDatasheets = ({ relatedDatasheetIds }: ItemInfoActio
       </Typography>
 
       <Datasheets
-        datasheets={relatedDatasheetIds.reduce((datasheets, datasheetId) => (
-          {
-            ...datasheets,
-            [datasheetId]: db.datasheets[datasheetId]
-          }
-        ), {})}
+        datasheets={datasheets}
       />
     </>
   );

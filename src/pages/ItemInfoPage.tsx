@@ -4,7 +4,6 @@ import {
   Box,
   Grid,
   Typography,
-  Chip,
   Alert,
   useTheme
 } from '@material-ui/core';
@@ -20,7 +19,6 @@ import {
 } from '../hooks';
 import {
   Loader,
-  InternalLink,
   ExternalLink,
   ImageSlider,
   BackButton
@@ -32,7 +30,7 @@ import { ItemInfoApplications } from './ItemInfoApplications';
 import { ItemInfoActions } from './ItemInfoActions';
 import { ItemInfoDrivers } from './ItemInfoDrivers';
 import { ItemInfoRelatedDatasheets } from './ItemInfoRelatedDatasheets';
-import { getIcon } from '../utils';
+import { ItemInfoHeader } from './ItemInfoHeader';
 
 export const ItemInfoPage = () => {
   const theme = useTheme();
@@ -81,12 +79,6 @@ export const ItemInfoPage = () => {
     }
   }, [foundItems]);
 
-  const category = React.useMemo(
-    () =>
-      item ? db.categories.find(category => category.id === item.categoryId) : null,
-    [item]
-  );
-
   const clarificationsWrapper = React.useCallback((text: string) =>
     wordsWrapper(Object.keys(db.clarifications), text, (
       (text, phrase, index) => (
@@ -109,7 +101,7 @@ export const ItemInfoPage = () => {
     return printErrors();
   }
   // item loading in progress
-  if (item === null || !category) {
+  if (item === null) {
     return <Loader/>;
   }
 
@@ -120,40 +112,7 @@ export const ItemInfoPage = () => {
       </Grid>
 
       <Grid xs={12} item>
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <Typography variant={'subtitle1'}>
-            <InternalLink
-              underline={'hover'}
-              color={'inherit'}
-              startIcon={getIcon(category.icon)}
-              endIcon={getIcon('doubleArrow')}
-              to={`/category/${category.id}`}
-            >
-              {category.name}
-            </InternalLink>
-          </Typography>
-
-          <Typography
-            variant={'h5'}
-            role={'heading'}
-            aria-level={1}
-            sx={{ marginLeft: theme.spacing(1) }}
-          >
-            {item.title}
-          </Typography>
-
-          {item.original === false && (
-            <Chip
-              size={'small'}
-              label={'копия'}
-              color={'info'}
-              sx={{ marginLeft: theme.spacing(1) }}
-            />
-          )}
-        </Box>
-        <Typography variant={'subtitle1'} role={'heading'} aria-level={2}>
-          {item.subtitle}
-        </Typography>
+        <ItemInfoHeader item={item}/>
       </Grid>
 
       <Grid xs={12} sm={6} item>

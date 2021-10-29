@@ -1,21 +1,26 @@
 import { ItemT, CategoryIdT } from '../types';
+import { ApplicationIdT } from '../types';
 
-export const matchItemWithSearchKeyword = (item: ItemT, searchKeyword: string): boolean => {
-  let keywordIsMatched = item.title.toLowerCase().includes(searchKeyword);
-  keywordIsMatched ||= item.subtitle.toLowerCase().includes(searchKeyword);
+export const matchItemWithSearchKeyword = (
+  item: ItemT,
+  searchKeyword: string,
+  applicationIds: ApplicationIdT[] = []
+): boolean => {
+  let itemIsMatched = item.title.toLowerCase().includes(searchKeyword);
+  itemIsMatched ||= item.subtitle.toLowerCase().includes(searchKeyword);
 
   if (item.developedBy) {
-    keywordIsMatched ||= item.developedBy.toLowerCase().includes(searchKeyword);
+    itemIsMatched ||= item.developedBy.toLowerCase().includes(searchKeyword);
   }
 
   if (item.content) {
-    keywordIsMatched ||= item.content.toLowerCase().includes(searchKeyword);
+    itemIsMatched ||= item.content.toLowerCase().includes(searchKeyword);
   }
 
   if (item.seo) {
-    keywordIsMatched ||= item.seo.description.toLowerCase().includes(searchKeyword);
+    itemIsMatched ||= item.seo.description.toLowerCase().includes(searchKeyword);
 
-    keywordIsMatched ||= item.seo.keywords.split(',').some(seoKeyword =>
+    itemIsMatched ||= item.seo.keywords.split(',').some(seoKeyword =>
       seoKeyword.trim().toLowerCase().split('-').some(seoKeywordPart =>
         seoKeywordPart.startsWith(searchKeyword)
       )
@@ -23,33 +28,56 @@ export const matchItemWithSearchKeyword = (item: ItemT, searchKeyword: string): 
   }
 
   if (item.externalLinks) {
-    keywordIsMatched ||= item.externalLinks.some(externalLink =>
+    itemIsMatched ||= item.externalLinks.some(externalLink =>
       externalLink.name.toLowerCase().includes(searchKeyword)
     );
   }
-  return keywordIsMatched;
+
+  if (item.drivers) {
+    itemIsMatched ||= item.drivers.some(driver =>
+      driver.name.toLowerCase().includes(searchKeyword)
+    );
+  }
+
+  if (applicationIds.length && item.applicationIds) {
+    itemIsMatched ||= item.applicationIds.some(itemApplicationId =>
+      applicationIds.includes(itemApplicationId)
+    );
+  }
+
+  return itemIsMatched;
 };
 
-export const matchItemWithSearchKeywords = (item: ItemT, searchKeywords: string[]): boolean =>
+export const matchItemWithSearchKeywords = (
+  item: ItemT,
+  searchKeywords: string[],
+  applicationIds: ApplicationIdT[] = []
+): boolean =>
   searchKeywords.every(searchKeyword =>
-    matchItemWithSearchKeyword(item, searchKeyword)
+    matchItemWithSearchKeyword(item, searchKeyword, applicationIds)
   );
 
 export const matchItemWithSearch = (
   item: ItemT,
   {
     searchKeywords,
-    categoryId
+    categoryId,
+    applicationIds
   }: {
     searchKeywords: string[]
     categoryId: CategoryIdT
+    applicationIds: ApplicationIdT[]
   }
 ): boolean => {
   // show all items by default if nothing was passed
   let itemIsMatched = true;
 
   if (searchKeywords && searchKeywords.length) {
-    itemIsMatched &&= matchItemWithSearchKeywords(item, searchKeywords);
+    itemIsMatched &&= matchItemWithSearchKeywords(
+      item,
+      searchKeywords,
+      applicationIds
+    );
   }
   if (categoryId) {
     itemIsMatched &&= item.categoryId === categoryId;

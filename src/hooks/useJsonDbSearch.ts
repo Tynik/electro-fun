@@ -12,6 +12,7 @@ import {
   matchItemWithSearch,
   matchDatasheetWithSearchKeywords
 } from '../helpers';
+import { ApplicationIdT } from '../types';
 
 export type SearchHandler = {
   id?: string
@@ -57,9 +58,24 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
       let foundItemsDatasheets: Record<DatasheetIdT, boolean> = {};
       let foundItemsRelatedDatasheets: Record<DatasheetIdT, boolean> = {};
 
+      let matchedApplicationIds: ApplicationIdT[];
+
+      if (searchKeywords && searchKeywords.length) {
+        matchedApplicationIds = Object.keys(db.applications).filter(applicationId =>
+          searchKeywords.some(searchKeyword =>
+            db.applications[applicationId].toLowerCase().includes(searchKeyword)
+          )
+        );
+      }
+
       foundItems = db.items.filter(item => {
         const itemIsMatched = matchItemWithSearch(
-          item, { searchKeywords, categoryId }
+          item,
+          {
+            applicationIds: matchedApplicationIds,
+            searchKeywords,
+            categoryId
+          }
         );
         if (itemIsMatched) {
           if (item.datasheetId) {
