@@ -603,6 +603,48 @@
         }
       ],
       "content": "",
+      "features": [
+        {
+          "refId": 2,
+          "value": "UART/GPIO/I²C/I²S/PWM/ADC"
+        },
+        {
+          "refId": 3,
+          "value": "3.0 - 3.6 В"
+        },
+        {
+          "refId": 42,
+          "value": "SMD-18"
+        },
+        {
+          "refId": 44,
+          "value": "WEP/WPA-PSK/WPA2-PSK"
+        },
+        {
+          "refId": 56,
+          "value": [
+            "802.11b, CCK 1 Мбит/с, +17 дБм = 280 мА",
+            "802.11g, OFDM 54 Мбит/с, +18 дБм = 290 мА",
+            "802.11n, MCS7, +20 дБм = 350 мА"
+          ]
+        },
+        {
+          "refId": 57,
+          "value": [
+            "802.11b, 1024 бит = 90 мА",
+            "802.11g, 1024 бит = 90 мА",
+            "802.11n, 1024 бит = 93 мА"
+          ]
+        },
+        {
+          "refId": 96,
+          "value": "IPEX"
+        },
+        {
+          "refId": 97,
+          "value": "BLE 5.0"
+        }
+      ],
       "externalLinks": [
         {
           "name": "Официальная страница ESP32-C3 модулей",
