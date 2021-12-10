@@ -1,21 +1,17 @@
 import React from 'react';
 import {
   AppBar as MuiAppBar,
-  Toolbar,
   IconButton,
   Divider,
   List,
-  Typography,
   Drawer,
   useTheme,
   styled
 } from '@material-ui/core';
-import { Link as RouterLink } from 'react-router-dom';
 import sortBy from 'lodash.sortby';
 import {
-  Menu as MenuIcon,
   ChevronLeft as ChevronLeftIcon,
-  ChevronRight as ChevronRightIcon,
+  ChevronRight as ChevronRightIcon
 } from '@material-ui/icons';
 
 import { DbContext } from '../../context';
@@ -23,7 +19,7 @@ import { getIcon } from '../../utils';
 import { useLocalStorage } from '../../hooks';
 
 import MenuItem from './MenuItem';
-import Search from './Search';
+import Toolbar, { ToolbarProps } from './Toolbar';
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) =>
@@ -59,9 +55,8 @@ export const DrawerHeader = styled('div')(({ theme }) => (
   }
 ));
 
-export type MenuProps = {
+export type MenuProps = Pick<ToolbarProps, 'onSearch'> & {
   onOpen: (state: boolean) => void
-  onSearch: (text: string) => void
   drawerWidth: number
 }
 
@@ -96,6 +91,10 @@ const Menu = (props: MenuProps) => {
     onSearch(searchValue);
   }, [searchValue]);
 
+  const categories = React.useMemo(() => {
+    return sortBy(db.categories, 'name');
+  }, []);
+
   const onToggleMenuHandler = (state: boolean) => {
     setMenuOpen(state);
     setMenuIsOpenedInitialState(state);
@@ -108,43 +107,15 @@ const Menu = (props: MenuProps) => {
         open={menuIsOpened}
         drawerWidth={drawerWidth}
       >
-        <Toolbar>
-          <IconButton
-            color={'inherit'}
-            aria-label={'open drawer'}
-            onClick={() => onToggleMenuHandler(true)}
-            edge={'start'}
-            sx={{
-              mr: 2, ...(
-                menuIsOpened && { display: 'none' }
-              )
-            }}
-          >
-            <MenuIcon/>
-          </IconButton>
-
-          <Typography
-            variant={'h6'}
-            component={RouterLink}
-            to={'/'}
-            sx={{
-              display: { xs: 'none', sm: 'block' },
-              whiteSpace: 'nowrap',
-              color: 'white',
-              textDecoration: 'none'
-            }}
-            onClick={() => setSearchValue('')}
-          >
-            {db.siteName}
-          </Typography>
-
-          <Search
-            searchValue={searchValue}
-            setSearchValue={setSearchValue}
-            onSearch={onSearch}
-          />
-        </Toolbar>
+        <Toolbar
+          menuIsOpened={menuIsOpened}
+          searchValue={searchValue}
+          setSearchValue={setSearchValue}
+          onSearch={onSearch}
+          onToggleMenu={onToggleMenuHandler}
+        />
       </AppBar>
+
       <Drawer
         sx={{
           width: drawerWidth,
@@ -163,9 +134,11 @@ const Menu = (props: MenuProps) => {
             {theme.direction === 'ltr' ? <ChevronLeftIcon/> : <ChevronRightIcon/>}
           </IconButton>
         </DrawerHeader>
+
         <Divider/>
+
         <List>
-          {sortBy(db.categories, 'name').map(category => (
+          {categories.map(category => (
             <MenuItem
               key={`category-${category.id}`}
               to={`/category/${category.id}`}
@@ -174,7 +147,9 @@ const Menu = (props: MenuProps) => {
             />
           ))}
         </List>
+
         <Divider/>
+
         <List>
           {db.menu.map(itemMenu => (
             <MenuItem
