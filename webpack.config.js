@@ -11,9 +11,6 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js']
   },
-  experiments: {
-    asset: true
-  },
   devtool: process.env.NODE_ENV === 'production' ? false : 'eval-source-map',
   module: {
     rules: [

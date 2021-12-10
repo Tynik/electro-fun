@@ -6,6 +6,7 @@ import {
 } from '@material-ui/core';
 
 import { FoundDatasheetsT } from '../types';
+import { sortDatasheets } from '../helpers';
 import { ExternalLink } from '../components';
 
 export type DatasheetsProps = {
@@ -13,20 +14,11 @@ export type DatasheetsProps = {
 }
 
 export const Datasheets = ({ datasheets }: DatasheetsProps) => {
-  const sortedDatasheets = Object.keys(datasheets)
-    .sort((datasheetIdA, datasheetIdB) => {
-      if (datasheets[datasheetIdA].priority === undefined) {
-        return 1;
-      }
-      if (datasheets[datasheetIdB].priority === undefined) {
-        return -1;
-      }
-      return datasheets[datasheetIdA].priority - datasheets[datasheetIdB].priority;
-    });
+  const sortedDatasheetIds = sortDatasheets(datasheets);
 
   return (
     <List disablePadding>
-      {sortedDatasheets.map(datasheetId => (
+      {sortedDatasheetIds.map(datasheetId => (
         <ListItem key={datasheetId} disablePadding>
           <ListItemText>
             <ExternalLink

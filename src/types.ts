@@ -82,7 +82,7 @@ export type ItemT = {
   subtitle: string
   lang: string
   id?: ItemIdT
-  categoryId?: number
+  categoryId?: CategoryIdT
   developedBy?: string
   content?: string
   warningContent?: string

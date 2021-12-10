@@ -599,7 +599,19 @@
       "images": [
         {
           "src": "/photos/ESP-C3-13U-1.webp",
-          "alt": "ESP-C3-13U"
+          "alt": "ESP-C3-13U - внешний вид"
+        },
+        {
+          "src": "/photos/ESP-C3-13U-2.webp",
+          "alt": "ESP-C3-13U - распиновка"
+        },
+        {
+          "src": "/photos/ESP-C3-13U-3.webp",
+          "alt": "ESP-C3-13U - таблица пинов"
+        },
+        {
+          "src": "/photos/ESP-C3-13U-4.webp",
+          "alt": "ESP-C3-13U - таблица пинов (продолжение)"
         }
       ],
       "content": "",

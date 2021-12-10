@@ -1,6 +1,21 @@
-import { DatasheetIdT } from '../types';
+import { DatasheetIdT, FoundDatasheetsT } from '../types';
 
-export const matchDatasheetIdWithSearchKeyword = (datasheetId: DatasheetIdT, searchKeyword: string): boolean => {
+export const sortDatasheets = (datasheets: FoundDatasheetsT): DatasheetIdT[] =>
+  Object.keys(datasheets)
+    .sort((datasheetIdA, datasheetIdB) => {
+      if (datasheets[datasheetIdA].priority === undefined) {
+        return 1;
+      }
+      if (datasheets[datasheetIdB].priority === undefined) {
+        return -1;
+      }
+      return datasheets[datasheetIdA].priority - datasheets[datasheetIdB].priority;
+    });
+
+export const matchDatasheetIdWithSearchKeyword = (
+  datasheetId: DatasheetIdT,
+  searchKeyword: string
+): boolean => {
   if (datasheetId.length < searchKeyword.length) {
     return false;
   }
@@ -25,7 +40,10 @@ export const matchDatasheetIdWithSearchKeyword = (datasheetId: DatasheetIdT, sea
   });
 };
 
-export const matchDatasheetWithSearchKeywords = (datasheetId: DatasheetIdT, searchKeywords: string[]): boolean =>
+export const matchDatasheetWithSearchKeywords = (
+  datasheetId: DatasheetIdT,
+  searchKeywords: string[]
+): boolean =>
   searchKeywords.every(searchKeyword =>
     matchDatasheetIdWithSearchKeyword(datasheetId, searchKeyword)
   );
