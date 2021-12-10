@@ -1,6 +1,10 @@
 import React from 'react';
 
-export const useLocalStorage = (key: string, dataType: string, defaultValue: any = null) => {
+export const useLocalStorage = (
+  key: string,
+  dataType: string,
+  defaultValue: any = null
+) => {
   const get = React.useCallback((): boolean => {
     const value = window.localStorage.getItem(key);
 

@@ -82,12 +82,16 @@ export const App = () => {
     }
   }, [db, isAlreadyMounted]);
 
-  const onSearch = (text: string) => {
+  const onSearch = React.useCallback((text: string) => {
     if (location.pathname !== '/') {
       history.push('/');
     }
     search({ text, debounce: true });
-  };
+  }, [location.pathname]);
+
+  const onSearchReset = React.useCallback(() => {
+    onSearch('');
+  }, []);
 
   if (errors.length) {
     return printErrors();
@@ -122,7 +126,7 @@ export const App = () => {
                     items={db.items}
                     foundItems={foundItems}
                     foundDatasheets={foundDatasheets}
-                    onSearchReset={() => onSearch('')}
+                    onSearchReset={onSearchReset}
                   />
                 </Route>
                 <Route path="/item/:id">

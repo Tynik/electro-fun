@@ -5,12 +5,18 @@ import {
 } from '@material-ui/core';
 import { Loader, InternalLink } from '../components';
 
-export const useStaticErrors = ({ showReturnToMain } = { showReturnToMain: true }) => {
+export type UseStaticErrorsProps = {
+  showReturnToMain: boolean
+}
+
+export const useStaticErrors = (
+  { showReturnToMain }: UseStaticErrorsProps = { showReturnToMain: true }
+) => {
   const [errors, setErrors] = React.useState<string[]>([]);
 
   const printErrors = React.useCallback(() => {
     if (!errors.length) {
-      return <Loader/>
+      return <Loader/>;
     }
     return (
       <Container sx={{

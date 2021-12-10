@@ -6,10 +6,8 @@ import {
   Divider,
   List,
   Typography,
-  InputBase,
   Drawer,
   useTheme,
-  alpha,
   styled
 } from '@material-ui/core';
 import { Link as RouterLink } from 'react-router-dom';
@@ -18,59 +16,14 @@ import {
   Menu as MenuIcon,
   ChevronLeft as ChevronLeftIcon,
   ChevronRight as ChevronRightIcon,
-  Search as SearchIcon
 } from '@material-ui/icons';
 
-import { DbContext } from '../context';
-import { getIcon } from '../utils';
-import { MenuItem } from './MenuItem';
-import { useLocalStorage } from '../hooks';
+import { DbContext } from '../../context';
+import { getIcon } from '../../utils';
+import { useLocalStorage } from '../../hooks';
 
-const Search = styled('div')(({ theme }) => (
-  {
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
-    '&:hover': {
-      backgroundColor: alpha(theme.palette.common.white, 0.25)
-    },
-    marginRight: theme.spacing(2),
-    marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(3),
-      width: 'auto'
-    }
-  }
-));
-
-const SearchIconWrapper = styled('div')(({ theme }) => (
-  {
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => (
-  {
-    color: 'inherit',
-    '& .MuiInputBase-input': {
-      padding: theme.spacing(1, 1, 1, 0),
-      // vertical padding + font size from searchIcon
-      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-      transition: theme.transitions.create('width'),
-      width: '100%',
-      [theme.breakpoints.up('md')]: {
-        width: '20ch'
-      }
-    }
-  }
-));
+import MenuItem from './MenuItem';
+import Search from './Search';
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) =>
@@ -107,16 +60,16 @@ export const DrawerHeader = styled('div')(({ theme }) => (
 ));
 
 export type MenuProps = {
-  drawerWidth: number
   onOpen: (state: boolean) => void
   onSearch: (text: string) => void
+  drawerWidth: number
 }
 
-export const Menu = (props: MenuProps) => {
+const Menu = (props: MenuProps) => {
   const {
-    drawerWidth,
     onOpen,
-    onSearch
+    onSearch,
+    drawerWidth
   } = props;
 
   const theme = useTheme();
@@ -146,12 +99,6 @@ export const Menu = (props: MenuProps) => {
   const onToggleMenuHandler = (state: boolean) => {
     setMenuOpen(state);
     setMenuIsOpenedInitialState(state);
-  };
-
-  const onSearchInputKeyPress = (e) => {
-    if (e.code === 'Enter' && e.target.value) {
-      onSearch(e.target.value);
-    }
   };
 
   return (
@@ -191,18 +138,11 @@ export const Menu = (props: MenuProps) => {
             {db.siteName}
           </Typography>
 
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon/>
-            </SearchIconWrapper>
-            <StyledInputBase
-              value={searchValue || ''}
-              placeholder={'Найти...'}
-              inputProps={{ 'aria-label': 'search' }}
-              onChange={(e) => setSearchValue(e.target.value)}
-              onKeyPress={onSearchInputKeyPress}
-            />
-          </Search>
+          <Search
+            searchValue={searchValue}
+            setSearchValue={setSearchValue}
+            onSearch={onSearch}
+          />
         </Toolbar>
       </AppBar>
       <Drawer
@@ -249,3 +189,5 @@ export const Menu = (props: MenuProps) => {
     </>
   );
 };
+
+export default Menu;

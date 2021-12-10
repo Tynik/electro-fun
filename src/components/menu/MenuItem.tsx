@@ -13,7 +13,7 @@ export type MenuItemProps = {
   name: string
 }
 
-export const MenuItem = (props: MenuItemProps) => {
+const MenuItem = (props: MenuItemProps) => {
   const {
     to,
     icon,
@@ -41,3 +41,5 @@ export const MenuItem = (props: MenuItemProps) => {
     </ListItem>
   );
 };
+
+export default MenuItem;

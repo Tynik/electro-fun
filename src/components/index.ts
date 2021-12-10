@@ -1,8 +1,6 @@
 export * from './links';
 export * from './Loader';
 export * from './BackButton';
-export * from './Menu';
-export * from './MenuItem';
 export * from './Breadcrumbs';
 export * from './BreadcrumbItem';
 export * from './Items';
@@ -12,3 +10,4 @@ export * from './CImage';
 export * from './CCardMedia';
 export * from './ImageSlider';
 export * from './Footer';
+export * from './menu';
