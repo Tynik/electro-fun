@@ -4,7 +4,7 @@ import {
   useTheme
 } from '@material-ui/core';
 import { Home as HomeIcon } from '@material-ui/icons';
-import { DbContext } from '../context';
+import { DbContext } from '../contexts';
 import { BreadcrumbItem } from './BreadcrumbItem';
 
 export type BreadcrumbsProps = {

@@ -1,46 +1,31 @@
 import React from 'react';
+import sortBy from 'lodash.sortby';
 import {
-  AppBar as MuiAppBar,
-  IconButton,
   Divider,
   List,
-  Drawer,
+  Drawer as MuiDrawer,
   useTheme,
   styled
 } from '@material-ui/core';
-import sortBy from 'lodash.sortby';
-import {
-  ChevronLeft as ChevronLeftIcon,
-  ChevronRight as ChevronRightIcon
-} from '@material-ui/icons';
 
-import { DbContext } from '../../context';
+import { DbContext } from '../../contexts';
 import { getIcon } from '../../utils';
 import { useLocalStorage } from '../../hooks';
 
+import AppBar, { AppBarProps } from './AppBar';
 import MenuItem from './MenuItem';
-import Toolbar, { ToolbarProps } from './Toolbar';
+import CIconButton from '../CIconButton';
 
-const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) =>
-    ['open', 'drawerWidth'].indexOf(prop as string) === -1
-
-})(({ theme, drawerWidth, open }: any) => (
+export const Drawer = styled(MuiDrawer, {
+  shouldForwardProp: (prop) => 'drawerWidth' !== prop
+})(({ drawerWidth }: any) => (
   {
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen
-    }),
-    ...(
-      open && {
-        width: `calc(100% - ${drawerWidth}px)`,
-        marginLeft: `${drawerWidth}px`,
-        transition: theme.transitions.create(['margin', 'width'], {
-          easing: theme.transitions.easing.easeOut,
-          duration: theme.transitions.duration.enteringScreen
-        })
-      }
-    )
+    width: drawerWidth,
+    flexShrink: 0,
+    '& .MuiDrawer-paper': {
+      width: drawerWidth,
+      boxSizing: 'border-box'
+    }
   }
 ));
 
@@ -55,7 +40,7 @@ export const DrawerHeader = styled('div')(({ theme }) => (
   }
 ));
 
-export type MenuProps = Pick<ToolbarProps, 'onSearch'> & {
+export type MenuProps = Pick<AppBarProps, 'onSearch'> & {
   onOpen: (state: boolean) => void
   drawerWidth: number
 }
@@ -71,8 +56,6 @@ const Menu = (props: MenuProps) => {
 
   const { db } = React.useContext(DbContext);
 
-  const [searchValue, setSearchValue] = React.useState<string>(null);
-
   const {
     set: setMenuIsOpenedInitialState,
     initialValue: menuIsOpenedInitialState
@@ -84,55 +67,44 @@ const Menu = (props: MenuProps) => {
     onOpen(menuIsOpened);
   }, [menuIsOpened]);
 
-  React.useEffect(() => {
-    if (searchValue === null) {
-      return;
-    }
-    onSearch(searchValue);
-  }, [searchValue]);
+  const onToggleMenuHandler = React.useCallback((state: boolean) => {
+    setMenuOpen(state);
+    setMenuIsOpenedInitialState(state);
+  }, []);
+
+  const openMenu = React.useCallback(() => {
+    onToggleMenuHandler(true);
+  }, []);
+
+  const closeMenu = React.useCallback(() => {
+    onToggleMenuHandler(false);
+  }, []);
 
   const categories = React.useMemo(() => {
     return sortBy(db.categories, 'name');
   }, []);
 
-  const onToggleMenuHandler = (state: boolean) => {
-    setMenuOpen(state);
-    setMenuIsOpenedInitialState(state);
-  };
-
   return (
     <>
       <AppBar
-        position={'fixed'}
-        open={menuIsOpened}
+        menuIsOpened={menuIsOpened}
         drawerWidth={drawerWidth}
-      >
-        <Toolbar
-          menuIsOpened={menuIsOpened}
-          searchValue={searchValue}
-          setSearchValue={setSearchValue}
-          onSearch={onSearch}
-          onToggleMenu={onToggleMenuHandler}
-        />
-      </AppBar>
+        onSearch={onSearch}
+        onOpenMenu={openMenu}
+      />
 
       <Drawer
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          '& .MuiDrawer-paper': {
-            width: drawerWidth,
-            boxSizing: 'border-box'
-          }
-        }}
         variant={'persistent'}
         anchor={'left'}
         open={menuIsOpened}
+        drawerWidth={drawerWidth}
       >
         <DrawerHeader>
-          <IconButton onClick={() => onToggleMenuHandler(false)}>
-            {theme.direction === 'ltr' ? <ChevronLeftIcon/> : <ChevronRightIcon/>}
-          </IconButton>
+          <CIconButton
+            onClick={closeMenu}
+            icon={getIcon(theme.direction === 'ltr' ? 'chevronLeft' : 'chevronRight')}
+            aria-label={'Закрыть основное меню'}
+          />
         </DrawerHeader>
 
         <Divider/>

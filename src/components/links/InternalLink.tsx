@@ -3,7 +3,10 @@ import {
   Link as RouterLink,
   LinkProps as RouterLinkProps
 } from 'react-router-dom';
-import { useTheme, Link, LinkProps } from '@material-ui/core';
+
+import type { LinkProps } from '@material-ui/core';
+
+import { useTheme, Link } from '@material-ui/core';
 
 export type InternalLinkProps = Omit<RouterLinkProps & LinkProps, 'component'> & {
   startIcon?: React.ReactElement

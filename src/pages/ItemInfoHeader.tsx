@@ -7,7 +7,7 @@ import {
 } from '@material-ui/core';
 
 import { ItemT } from '../types';
-import { DbContext } from '../context';
+import { DbContext } from '../contexts';
 import { InternalLink } from '../components';
 import { getIcon } from '../utils';
 

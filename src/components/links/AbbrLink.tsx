@@ -1,5 +1,8 @@
 import React from 'react';
-import { ExternalLinkProps, ExternalLink } from './ExternalLink';
+
+import type { ExternalLinkProps } from './ExternalLink';
+
+import { ExternalLink } from './ExternalLink';
 
 export interface AbbrLinkProps extends Omit<ExternalLinkProps, 'children'> {
   children: string

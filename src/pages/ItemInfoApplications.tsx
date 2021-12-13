@@ -10,7 +10,7 @@ import {
 import { ArrowRight as ArrowRightIcon } from '@material-ui/icons';
 
 import { ApplicationIdT } from '../types';
-import { DbContext } from '../context';
+import { DbContext } from '../contexts';
 
 export type ItemInfoApplicationsProps = {
   applicationIds: ApplicationIdT[]

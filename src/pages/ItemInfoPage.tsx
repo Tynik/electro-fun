@@ -9,7 +9,7 @@ import {
 } from '@material-ui/core';
 
 import { ItemT } from '../types';
-import { DbContext } from '../context';
+import { DbContext } from '../contexts';
 import {
   useTextProcessor,
   useSmoothScroll,

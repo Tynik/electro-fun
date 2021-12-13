@@ -1,58 +1,62 @@
 import React from 'react';
-import {
-  Toolbar as MuiToolbar,
-  IconButton,
-  Typography,
-} from '@material-ui/core';
 import { Link as RouterLink } from 'react-router-dom';
-import { Menu as MenuIcon } from '@material-ui/icons';
+import {
+  Box,
+  Toolbar as MuiToolbar,
+  Typography
+} from '@material-ui/core';
+import {
+  Menu as MenuIcon,
+} from '@material-ui/icons';
 
-import { DbContext } from '../../context';
+import { DbContext, UserContext } from '../../contexts';
 
+import { getIcon } from '../../utils';
+import CIconButton from '../CIconButton';
 import Search from './Search';
 
 export type ToolbarProps = {
   menuIsOpened: boolean
-  searchValue: string
-  setSearchValue: (value: string) => void
   onSearch: (text: string) => void
-  onToggleMenu: (state: boolean) => void
+  onOpenMenu: () => void
 }
 
 const Toolbar = (props: ToolbarProps) => {
   const {
     menuIsOpened,
-    searchValue,
-    setSearchValue,
     onSearch,
-    onToggleMenu
+    onOpenMenu
   } = props;
 
   const { db } = React.useContext(DbContext);
+  const { user } = React.useContext(UserContext);
+
+  const [searchValue, setSearchValue] = React.useState<string>(null);
+
+  React.useEffect(() => {
+    if (searchValue === null) {
+      return;
+    }
+    onSearch(searchValue);
+  }, [searchValue]);
 
   const onSiteNameClick = React.useCallback(() => {
     setSearchValue('');
   }, []);
 
-  const onToggleMenuHandler =  React.useCallback(() => {
-    onToggleMenu(true);
-  }, []);
-
   return (
     <MuiToolbar>
-      <IconButton
-        color={'inherit'}
-        aria-label={'open drawer'}
-        onClick={onToggleMenuHandler}
+      <CIconButton
+        onClick={onOpenMenu}
+        icon={getIcon('menu')}
+        aria-label={'Открыть основное меню'}
         edge={'start'}
         sx={{
           mr: 2, ...(
             menuIsOpened && { display: 'none' }
           )
         }}
-      >
-        <MenuIcon/>
-      </IconButton>
+      />
 
       <Typography
         variant={'h6'}
@@ -74,6 +78,16 @@ const Toolbar = (props: ToolbarProps) => {
         setSearchValue={setSearchValue}
         onSearch={onSearch}
       />
+
+      <Box sx={{ flexGrow: 1 }} />
+
+      <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+        <CIconButton
+          badgeContent={user.basket.items.length}
+          icon={getIcon('shoppingBasket')}
+          aria-label={'Открыть корзину'}
+        />
+      </Box>
     </MuiToolbar>
   );
 };

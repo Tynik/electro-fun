@@ -924,7 +924,7 @@
         "description": "LM2596s - понижающий стабилизатор напряжения",
         "keywords": "lm2596s, стабилизатор, понижение, ti"
       },
-      "buyLink": "https://izi.ua/p-19437930-stabilizator-napryazheniya-ponizhayushchiy-lm2596s-dc-dc-3a",
+      "buy": "https://izi.ua/p-19437930-stabilizator-napryazheniya-ponizhayushchiy-lm2596s-dc-dc-3a",
       "datasheetId": "LM2596",
       "images": [
         {
@@ -978,7 +978,7 @@
         "description": "BMP280 - датчик для измерения температуры, давления и влажности",
         "keywords": "bmp280, температура, давление, влажность"
       },
-      "buyLink": "https://izi.ua/p-19665588-bmp280-temperature-pressure-humidity-sensor-for-arduino",
+      "buy": "https://izi.ua/p-19665588-bmp280-temperature-pressure-humidity-sensor-for-arduino",
       "datasheetId": "BMP280",
       "images": [
         {
@@ -1058,7 +1058,7 @@
         "description": "MPU-9250 - гироскоп, акселерометр и магнитометр в одном устройстве",
         "keywords": "mpu-9250, гироскоп, акселерометр, магнитометр, dmp"
       },
-      "buyLink": "https://izi.ua/p-6267920-akselerometr-giroskop-magnitometr-gy-9250-9-dof-na-mpu-9250-i2c",
+      "buy": "https://izi.ua/p-6267920-akselerometr-giroskop-magnitometr-gy-9250-9-dof-na-mpu-9250-i2c",
       "datasheetId": "MPU-9250A-1.1",
       "images": [
         {
@@ -1142,7 +1142,7 @@
         "description": "CP2112 - USB в SMBus",
         "keywords": "cp2112, usb, smbus, конвертер, перепрошивка, батареи"
       },
-      "buyLink": "https://izi.ua/p-5455863-adapter-cp2112-usb-uart-i2c-dlya-proshivki-batarey-noutbukov-i-proch",
+      "buy": "https://izi.ua/p-5455863-adapter-cp2112-usb-uart-i2c-dlya-proshivki-batarey-noutbukov-i-proch",
       "datasheetId": "CP2112",
       "images": [
         {
@@ -1212,7 +1212,7 @@
         "description": "CCS811 - датчик для измерения качества воздуха",
         "keywords": "датчик, co2, качество, воздух, частицы, voc, tvoc"
       },
-      "buyLink": "https://izi.ua/p-11439002-datchik-co2-kachestva-vozdukha-arduino-ccs811-i2c-cjmcu-811",
+      "buy": "https://izi.ua/p-11439002-datchik-co2-kachestva-vozdukha-arduino-ccs811-i2c-cjmcu-811",
       "datasheetId": "CCS811",
       "images": [
         {
@@ -1292,7 +1292,7 @@
         "description": "Датчик цвета RGB и распознавание жестов",
         "keywords": "датчик, жесты, rgb, распознавание"
       },
-      "buyLink": "https://izi.ua/p-5455883-apds-9960-datchik-rgb-i-raspoznavanie-zhestov",
+      "buy": "https://izi.ua/p-5455883-apds-9960-datchik-rgb-i-raspoznavanie-zhestov",
       "datasheetId": "APDS-9960",
       "images": [
         {
@@ -1360,7 +1360,7 @@
         "description": "MAC 35 серия - соленоид на 35A с электромагнитным управлением",
         "keywords": "соленоид, boost, вакуум, давление, управление"
       },
-      "buyLink": "https://izi.ua/p-19438695-mac-3-port-boost-control-solenoid-valve-35a-12v-6mm",
+      "buy": "https://izi.ua/p-19438695-mac-3-port-boost-control-solenoid-valve-35a-12v-6mm",
       "datasheetId": "MAC-35A",
       "images": [
         {
@@ -1423,7 +1423,7 @@
         "keywords": "tec1-12715, пельтье, термопара, охлаждение, нагрев"
       },
       "datasheetId": "TEC1-12715",
-      "buyLink": "https://izi.ua/p-21834878-element-pelte-tec1-12715",
+      "buy": "https://izi.ua/p-21834878-element-pelte-tec1-12715",
       "images": [
         {
           "src": "/photos/TEC1-12715-1.webp",
@@ -1477,7 +1477,7 @@
         "description": "BHI260AP - самообучающийся интеллектуальный датчик",
         "keywords": "bhi260ap, датчик, ai, микроконтроллер, гироскоп, акселерометр, обучение"
       },
-      "buyLink": "https://eu.mouser.com/ProductDetail/Bosch-Sensortec/BHI260AP?qs=T94vaHKWudTEPTnGI%252BTy9w%3D%3D",
+      "buy": "https://eu.mouser.com/ProductDetail/Bosch-Sensortec/BHI260AP?qs=T94vaHKWudTEPTnGI%252BTy9w%3D%3D",
       "datasheetId": "BHI260AP",
       "images": [
         {
@@ -1584,7 +1584,7 @@
         "description": "nRF24L01+ - приемопередатчик 2.4 ГГц",
         "keywords": "nrf24l01, приемопередатчик, трансивер, ресивер"
       },
-      "buyLink": "https://izi.ua/p-19433326-mini-radiomodul-smd-nrf24l01-wireless-mini-2-4-ghz",
+      "buy": "https://izi.ua/p-19433326-mini-radiomodul-smd-nrf24l01-wireless-mini-2-4-ghz",
       "datasheetId": "nRF24L01",
       "images": [
         {
@@ -1728,7 +1728,7 @@
         "keywords": "cc1310, рч, сверхмалопотребляющее, экономичное, simplelink, zigbee, thread, ti, sub-1"
       },
       "datasheetId": "CC1310",
-      "buyLink": "https://www.aliexpress.com/item/4001345191255.html?spm=a2g0o.productlist.0.0.4cb43b0aswX868&algo_pvid=c6d0f977-b439-4238-bf26-1f574b40f4aa&algo_exp_id=c6d0f977-b439-4238-bf26-1f574b40f4aa-5&pdp_ext_f=%7B%22sku_id%22%3A%2210000015755343950%22%7D",
+      "buy": "https://www.aliexpress.com/item/4001345191255.html?spm=a2g0o.productlist.0.0.4cb43b0aswX868&algo_pvid=c6d0f977-b439-4238-bf26-1f574b40f4aa&algo_exp_id=c6d0f977-b439-4238-bf26-1f574b40f4aa-5&pdp_ext_f=%7B%22sku_id%22%3A%2210000015755343950%22%7D",
       "images": [
         {
           "src": "/photos/CC1310-1.webp",
@@ -1826,7 +1826,7 @@
         "keywords": "cc2652p, simplelink, bluetooth, zigbee, thread, ti"
       },
       "datasheetId": "CC2652P",
-      "buyLink": "",
+      "buy": "",
       "images": [
         {
           "src": "/photos/CC2652P-1.webp",
@@ -1956,7 +1956,7 @@
         "keywords": "ch340g, usb, uart, преобразование"
       },
       "datasheetId": "CH340",
-      "buyLink": "",
+      "buy": "",
       "images": [
         {
           "src": "/photos/CH340G-1.webp",
@@ -2006,7 +2006,7 @@
         "description": "",
         "keywords": "pb-irf3205, irf3205pbf, mosfet, мосфет"
       },
-      "buyLink": "",
+      "buy": "",
       "datasheetId": "IRF3205PbF",
       "images": [
         {

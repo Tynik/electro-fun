@@ -9,8 +9,9 @@ import {
 } from '@material-ui/core';
 import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 
-import { ItemT, ItemsT } from '../types';
-import { DbContext } from '../context';
+import type { ItemT, ItemsT } from '../types';
+
+import { DbContext } from '../contexts';
 import { NO_IMAGE } from '../constants';
 import { CCardMedia } from '../components';
 

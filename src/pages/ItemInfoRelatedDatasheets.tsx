@@ -4,7 +4,7 @@ import {
 } from '@material-ui/core';
 
 import { DatasheetIdT, DatasheetsT } from '../types';
-import { DbContext } from '../context';
+import { DbContext } from '../contexts';
 import { Datasheets } from '../components';
 
 export type ItemInfoActionsProps = {

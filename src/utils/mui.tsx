@@ -1,6 +1,7 @@
 import React from 'react';
 import { SvgIconProps } from '@material-ui/core';
 import {
+  Menu as MenuIcon,
   Dashboard as DashboardIcon,
   AcUnit as AcUnitIcon,
   Memory as MemoryIcon,
@@ -18,11 +19,15 @@ import {
   Speed as SpeedIcon,
   Security as SecurityIcon,
   Apps as AppsIcon,
-  DoubleArrow as DoubleArrowIcon
+  DoubleArrow as DoubleArrowIcon,
+  ShoppingBasket as ShoppingBasketIcon,
+  ChevronLeft as ChevronLeftIcon,
+  ChevronRight as ChevronRightIcon,
 } from '@material-ui/icons';
 
 export const getIcon = (name: string, props: SvgIconProps = {}): any => {
   return {
+    menu: <MenuIcon {...props}/>,
     cpu: <MemoryIcon {...props}/>,
     sensor: <SensorsIcon {...props}/>,
     snow: <AcUnitIcon {...props}/>,
@@ -41,5 +46,8 @@ export const getIcon = (name: string, props: SvgIconProps = {}): any => {
     fuse: <SecurityIcon {...props}/>,
     apps: <AppsIcon {...props}/>,
     doubleArrow: <DoubleArrowIcon {...props}/>,
+    shoppingBasket: <ShoppingBasketIcon {...props}/>,
+    chevronLeft: <ChevronLeftIcon {...props}/>,
+    chevronRight: <ChevronRightIcon {...props}/>,
   }[name];
 };

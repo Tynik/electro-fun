@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { DbT } from './types';
+import type { DbT } from '../types';
 
 export type DbContextState = {
   db: DbT

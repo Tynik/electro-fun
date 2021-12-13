@@ -6,7 +6,7 @@ import {
 } from '@material-ui/icons';
 
 import { ItemT } from '../types';
-import { DbContext } from '../context';
+import { DbContext } from '../contexts';
 import { ExternalButtonLink } from '../components';
 
 export type ItemInfoActionsProps = {
@@ -29,9 +29,9 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
             Datasheet
           </ExternalButtonLink>
         )}
-        {Boolean(item.buyLink) && (
+        {typeof item.buy === 'string' && (
           <ExternalButtonLink
-            href={item.buyLink}
+            href={item.buy}
             variant={'contained'}
             color={'success'}
             startIcon={<ShoppingCartIcon/>}

@@ -13,7 +13,7 @@ import {
   ItemFeatureT,
   FeatureDefinitionSuffixT
 } from '../types';
-import { DbContext } from '../context';
+import { DbContext } from '../contexts';
 import { useTextProcessor } from '../hooks';
 import { AbbrLink } from '../components';
 

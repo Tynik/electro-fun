@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 
 import { SearchResultsPage } from '../pages';
-import { DbContext } from '../context';
+import { DbContext } from '../contexts';
 import { useJsonDbSearch } from '../hooks';
 import { Breadcrumbs } from './Breadcrumbs';
 import { BreadcrumbItem } from './BreadcrumbItem';
