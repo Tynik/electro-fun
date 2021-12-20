@@ -21,8 +21,11 @@ import {
   Apps as AppsIcon,
   DoubleArrow as DoubleArrowIcon,
   ShoppingBasket as ShoppingBasketIcon,
+  AddShoppingCart as AddShoppingCartIcon,
   ChevronLeft as ChevronLeftIcon,
   ChevronRight as ChevronRightIcon,
+  DeleteForever as DeleteForeverIcon,
+  AttachMoney as AttachMoneyIcon,
 } from '@material-ui/icons';
 
 export const getIcon = (name: string, props: SvgIconProps = {}): any => {
@@ -47,7 +50,10 @@ export const getIcon = (name: string, props: SvgIconProps = {}): any => {
     apps: <AppsIcon {...props}/>,
     doubleArrow: <DoubleArrowIcon {...props}/>,
     shoppingBasket: <ShoppingBasketIcon {...props}/>,
+    addShoppingCart: <AddShoppingCartIcon {...props}/>,
     chevronLeft: <ChevronLeftIcon {...props}/>,
     chevronRight: <ChevronRightIcon {...props}/>,
+    deleteForever: <DeleteForeverIcon {...props}/>,
+    money: <AttachMoneyIcon {...props}/>,
   }[name];
 };

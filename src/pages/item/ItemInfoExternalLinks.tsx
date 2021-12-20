@@ -7,8 +7,9 @@ import {
   ListItemText
 } from '@material-ui/core';
 
-import { ExternalLink } from '../components';
-import { ItemExternalLinkT } from '../types';
+import type { ItemExternalLinkT } from '../../types';
+
+import { ExternalLink } from '../../components';
 
 export type ItemInfoExternalLinksProps = {
   externalLinks: ItemExternalLinkT[]

@@ -5,9 +5,10 @@ import {
   Avatar
 } from '@material-ui/core';
 
-import { ItemDriverT } from '../types';
-import { ExternalLink } from '../components';
-import { getItemDriverAvatarSrc } from '../utils';
+import type { ItemDriverT } from '../../types';
+
+import { ExternalLink } from '../../components';
+import { getItemDriverAvatarSrc } from '../../utils';
 
 export type ItemInfoDriversProps = {
   drivers: ItemDriverT[]

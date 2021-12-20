@@ -57,9 +57,9 @@ const Menu = (props: MenuProps) => {
   const { db } = React.useContext(DbContext);
 
   const {
-    set: setMenuIsOpenedInitialState,
+    set: saveMenuIsOpenedState,
     initialValue: menuIsOpenedInitialState
-  } = useLocalStorage('menuIsOpened', 'boolean');
+  } = useLocalStorage<boolean>('menuIsOpened');
 
   const [menuIsOpened, setMenuOpen] = React.useState<boolean>(menuIsOpenedInitialState);
 
@@ -69,7 +69,7 @@ const Menu = (props: MenuProps) => {
 
   const onToggleMenuHandler = React.useCallback((state: boolean) => {
     setMenuOpen(state);
-    setMenuIsOpenedInitialState(state);
+    saveMenuIsOpenedState(state);
   }, []);
 
   const openMenu = React.useCallback(() => {

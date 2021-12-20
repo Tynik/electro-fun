@@ -8,21 +8,22 @@ import {
   useTheme
 } from '@material-ui/core';
 
-import { ItemT } from '../types';
-import { DbContext } from '../contexts';
+import type { ItemT } from '../../types';
+
+import { DbContext } from '../../contexts';
 import {
   useTextProcessor,
   useSmoothScroll,
   useStaticErrors,
   useJsonDbSearch,
   useSeo
-} from '../hooks';
+} from '../../hooks';
 import {
   Loader,
   ExternalLink,
   ImageSlider,
   BackButton
-} from '../components';
+} from '../../components';
 import { ItemInfoFeatures } from './ItemInfoFeatures';
 import { ItemInfoOptions } from './ItemInfoOptions';
 import { ItemInfoExternalLinks } from './ItemInfoExternalLinks';
@@ -65,7 +66,7 @@ export const ItemInfoPage = () => {
   useSeo(Object.keys(seoEntity).length ? seoEntity : null);
 
   React.useEffect(() => {
-    search({ id });
+    search({ ids: [id] });
   }, []);
 
   React.useEffect(() => {

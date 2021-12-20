@@ -14,7 +14,12 @@ export type InternalLinkProps = Omit<RouterLinkProps & LinkProps, 'component'> &
 }
 
 export const InternalLink = (props: InternalLinkProps) => {
-  const { children, startIcon, endIcon, ...rest } = props;
+  const {
+    children,
+    startIcon,
+    endIcon,
+    ...rest
+  } = props;
 
   const theme = useTheme();
 
@@ -24,7 +29,7 @@ export const InternalLink = (props: InternalLinkProps) => {
       sx: {
         marginRight: theme.spacing(1)
       }
-    }) : '', [startIcon]);
+    }) : '', []);
 
   const endIconEl = React.useMemo(() =>
     endIcon ? React.cloneElement(endIcon, {
@@ -32,10 +37,11 @@ export const InternalLink = (props: InternalLinkProps) => {
       sx: {
         marginLeft: theme.spacing(1)
       }
-    }) : '', [endIcon]);
+    }) : '', []);
 
   return (
     <Link
+      color={'inherit'}
       {...rest}
       component={RouterLink}
       sx={{ display: 'flex', alignItems: 'center' }}

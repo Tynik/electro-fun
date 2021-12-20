@@ -1,3 +1,4 @@
 export * from './SearchResultsPage';
-export * from './ItemInfoPage';
 export * from './DatasheetsPage';
+export * from './BasketPage';
+export * from './item';

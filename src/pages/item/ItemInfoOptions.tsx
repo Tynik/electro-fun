@@ -7,7 +7,7 @@ import {
   FormControl
 } from '@material-ui/core';
 
-import { ItemOptionsT } from '../types';
+import type { ItemOptionsT } from '../../types';
 
 export type ItemInfoOptionsProps = {
   options: ItemOptionsT

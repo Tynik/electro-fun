@@ -1,33 +1,20 @@
 import React from 'react';
 
-export const useLocalStorage = (
+export const useLocalStorage = <T = any>(
   key: string,
-  dataType: string,
-  defaultValue: any = null
+  defaultValue: T = null
 ) => {
-  const get = React.useCallback((): boolean => {
+  const get = React.useCallback((): T => {
     const value = window.localStorage.getItem(key);
 
-    if (dataType === 'boolean') {
-      return value ? Boolean(Number(value)) : defaultValue || false;
-    }
-    throw new Error('Value cannot be unconverted');
+    return value ? JSON.parse(value) : defaultValue;
   }, []);
 
-  const set = React.useCallback((value: boolean) => {
-    let convertedValue;
-
-    if (dataType === 'boolean') {
-      convertedValue = String(Number(value));
-    } else {
-      throw new Error('Datatype it not supported');
-    }
-    window.localStorage.setItem(key, convertedValue);
+  const set = React.useCallback((value: T) => {
+    window.localStorage.setItem(key, JSON.stringify(value));
   }, []);
 
-  const initialValue = React.useMemo<boolean>(() => {
-    return get();
-  }, []);
+  const initialValue = React.useMemo(() => get(), []);
 
   return {
     get,

@@ -3,9 +3,10 @@ import {
   Typography
 } from '@material-ui/core';
 
-import { DatasheetIdT, DatasheetsT } from '../types';
-import { DbContext } from '../contexts';
-import { Datasheets } from '../components';
+import type { DatasheetIdT, DatasheetsT } from '../../types';
+
+import { DbContext } from '../../contexts';
+import { Datasheets } from '../../components';
 
 export type ItemInfoActionsProps = {
   relatedDatasheetIds: DatasheetIdT[]
@@ -14,14 +15,13 @@ export type ItemInfoActionsProps = {
 export const ItemInfoRelatedDatasheets = ({ relatedDatasheetIds }: ItemInfoActionsProps) => {
   const { db } = React.useContext(DbContext);
 
-  const datasheets = React.useMemo(
-    () =>
-      relatedDatasheetIds.reduce((datasheets, datasheetId) => (
+  const datasheets = React.useMemo(() =>
+      relatedDatasheetIds.reduce<DatasheetsT>((datasheets, datasheetId) => (
           {
             ...datasheets,
             [datasheetId]: db.datasheets[datasheetId]
           }
-        ), {} as DatasheetsT
+        ), {}
       ),
     [relatedDatasheetIds]
   );
@@ -32,9 +32,7 @@ export const ItemInfoRelatedDatasheets = ({ relatedDatasheetIds }: ItemInfoActio
         Связанные datasheets
       </Typography>
 
-      <Datasheets
-        datasheets={datasheets}
-      />
+      <Datasheets datasheets={datasheets}/>
     </>
   );
 };

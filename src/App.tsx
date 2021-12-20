@@ -16,10 +16,11 @@ import {
 import {
   SearchResultsPage,
   ItemInfoPage,
-  DatasheetsPage
+  DatasheetsPage,
+  BasketPage
 } from './pages';
+import { useJsonDbSearch } from './hooks';
 import { DbContext } from './contexts';
-import { useJsonDb, useJsonDbSearch } from './hooks';
 
 const drawerWidth = 240;
 
@@ -53,15 +54,8 @@ export const App = () => {
 
   const [isAlreadyMounted, setIsAlreadyMounted] = React.useState(false);
   const [menuIsOpened, setMenuOpen] = React.useState(false);
-  const {
-    db,
-    errors,
-    printErrors,
-    isNextDbPart,
-    loadNextDbPart,
-    isNextPage,
-    loadNextPage
-  } = useJsonDb();
+
+  const { db, loadNextDbPart } = React.useContext(DbContext);
 
   const {
     isSearching,
@@ -93,58 +87,51 @@ export const App = () => {
     onSearch('');
   }, []);
 
-  if (errors.length) {
-    return printErrors();
-  }
   if (!db) {
     return <LinearProgress/>;
   }
+
   return (
-    <DbContext.Provider value={{
-      db,
-      isNextDbPart,
-      loadNextDbPart,
-      isNextPage,
-      loadNextPage
-    }}>
-      <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-        <Box sx={{ display: 'flex' }}>
-          <Menu
-            onOpen={setMenuOpen}
-            drawerWidth={drawerWidth}
-            onSearch={onSearch}
-          />
+    <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+      <Box sx={{ display: 'flex' }}>
+        <Menu
+          onOpen={setMenuOpen}
+          drawerWidth={drawerWidth}
+          onSearch={onSearch}
+        />
 
-          <Main menuIsOpened={menuIsOpened}>
-            <DrawerHeader/>
+        <Main menuIsOpened={menuIsOpened}>
+          <DrawerHeader/>
 
-            <Container>
-              <Switch>
-                <Route path="/" exact>
-                  <SearchResultsPage
-                    isSearching={isSearching}
-                    items={db.items}
-                    foundItems={foundItems}
-                    foundDatasheets={foundDatasheets}
-                    onSearchReset={onSearchReset}
-                  />
-                </Route>
-                <Route path="/item/:id">
-                  <ItemInfoPage/>
-                </Route>
-                <Route path="/category/:categoryId">
-                  <Category/>
-                </Route>
-                <Route path="/datasheets">
-                  <DatasheetsPage datasheets={db.datasheets}/>
-                </Route>
-              </Switch>
-            </Container>
-          </Main>
-        </Box>
-
-        <Footer/>
+          <Container>
+            <Switch>
+              <Route path="/" exact>
+                <SearchResultsPage
+                  isSearching={isSearching}
+                  items={db.items}
+                  foundItems={foundItems}
+                  foundDatasheets={foundDatasheets}
+                  onSearchReset={onSearchReset}
+                />
+              </Route>
+              <Route path="/item/:id">
+                <ItemInfoPage/>
+              </Route>
+              <Route path="/category/:categoryId">
+                <Category/>
+              </Route>
+              <Route path="/datasheets">
+                <DatasheetsPage datasheets={db.datasheets}/>
+              </Route>
+              <Route path="/basket">
+                <BasketPage/>
+              </Route>
+            </Switch>
+          </Container>
+        </Main>
       </Box>
-    </DbContext.Provider>
+
+      <Footer/>
+    </Box>
   );
 };

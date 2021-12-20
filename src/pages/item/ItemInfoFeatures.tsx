@@ -9,13 +9,14 @@ import {
 } from '@material-ui/core';
 import { Info as InfoIcon } from '@material-ui/icons';
 
-import {
+import type {
   ItemFeatureT,
   FeatureDefinitionSuffixT
-} from '../types';
-import { DbContext } from '../contexts';
-import { useTextProcessor } from '../hooks';
-import { AbbrLink } from '../components';
+} from '../../types';
+
+import { DbContext } from '../../contexts';
+import { useTextProcessor } from '../../hooks';
+import { AbbrLink } from '../../components';
 
 export const sortItemFeatures = (allFeatures, features: ItemFeatureT[]) =>
   features.sort((featureA, featureB) => {
@@ -125,7 +126,9 @@ export const ItemInfoFeatures = ({ features }: ItemInfoFeaturesProps) => {
 
   return (
     <>
-      <Typography variant={'overline'}>Характеристики</Typography>
+      <Typography variant={'overline'}>
+        Характеристики
+      </Typography>
 
       <Box>
         {sortItemFeatures(db.itemFeatures, features || []).map(

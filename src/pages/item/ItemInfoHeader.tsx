@@ -6,10 +6,11 @@ import {
   useTheme
 } from '@material-ui/core';
 
-import { ItemT } from '../types';
-import { DbContext } from '../contexts';
-import { InternalLink } from '../components';
-import { getIcon } from '../utils';
+import type { ItemT } from '../../types';
+
+import { DbContext } from '../../contexts';
+import { InternalLink } from '../../components';
+import { getIcon } from '../../utils';
 
 export type ItemInfoHeaderProps = {
   item: ItemT
@@ -32,7 +33,6 @@ export const ItemInfoHeader = ({ item }: ItemInfoHeaderProps) => {
         <Typography variant={'subtitle1'}>
           <InternalLink
             underline={'hover'}
-            color={'inherit'}
             startIcon={getIcon(category.icon)}
             endIcon={getIcon('doubleArrow')}
             to={`/category/${category.id}`}

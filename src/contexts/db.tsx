@@ -2,6 +2,8 @@ import React from 'react';
 
 import type { DbT } from '../types';
 
+import { useJsonDb } from '../hooks';
+
 export type DbContextState = {
   db: DbT
   isNextDbPart: () => boolean
@@ -19,3 +21,31 @@ const initialDbContextState: DbContextState = {
 }
 
 export const DbContext = React.createContext(initialDbContextState);
+
+export const DbContextProvider = ({ children }) => {
+  const {
+    db,
+    errors,
+    printErrors,
+    isNextDbPart,
+    loadNextDbPart,
+    isNextPage,
+    loadNextPage
+  } = useJsonDb();
+
+  if (errors.length) {
+    return printErrors();
+  }
+
+  return (
+    <DbContext.Provider value={{
+      db,
+      isNextDbPart,
+      loadNextDbPart,
+      isNextPage,
+      loadNextPage
+    }}>
+      {children}
+    </DbContext.Provider>
+  )
+}

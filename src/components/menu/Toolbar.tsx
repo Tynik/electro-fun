@@ -1,13 +1,10 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useHistory } from 'react-router-dom';
 import {
   Box,
   Toolbar as MuiToolbar,
   Typography
 } from '@material-ui/core';
-import {
-  Menu as MenuIcon,
-} from '@material-ui/icons';
 
 import { DbContext, UserContext } from '../../contexts';
 
@@ -28,10 +25,17 @@ const Toolbar = (props: ToolbarProps) => {
     onOpenMenu
   } = props;
 
+  const history = useHistory();
+
   const { db } = React.useContext(DbContext);
   const { user } = React.useContext(UserContext);
 
   const [searchValue, setSearchValue] = React.useState<string>(null);
+
+  const countItemsInBasket = React.useMemo(() =>
+    Object.keys(user.basket.items).length,
+    [user.basket.items]
+  );
 
   React.useEffect(() => {
     if (searchValue === null) {
@@ -44,13 +48,18 @@ const Toolbar = (props: ToolbarProps) => {
     setSearchValue('');
   }, []);
 
+  const onBasketClick = React.useCallback(() => {
+    history.push('/basket');
+  }, []);
+
   return (
     <MuiToolbar>
       <CIconButton
         onClick={onOpenMenu}
         icon={getIcon('menu')}
-        aria-label={'Открыть основное меню'}
         edge={'start'}
+        color={'inherit'}
+        aria-label={'Открыть основное меню'}
         sx={{
           mr: 2, ...(
             menuIsOpened && { display: 'none' }
@@ -79,12 +88,15 @@ const Toolbar = (props: ToolbarProps) => {
         onSearch={onSearch}
       />
 
-      <Box sx={{ flexGrow: 1 }} />
+      <Box sx={{ flexGrow: 1 }}/>
 
       <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
         <CIconButton
-          badgeContent={user.basket.items.length}
+          onClick={onBasketClick}
+          disabled={!countItemsInBasket}
+          badgeContent={countItemsInBasket}
           icon={getIcon('shoppingBasket')}
+          color={'inherit'}
           aria-label={'Открыть корзину'}
         />
       </Box>

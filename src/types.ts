@@ -88,6 +88,7 @@ export type ItemT = {
   warningContent?: string
   seo?: SeoT & { title?: string }
   datasheetId?: DatasheetIdT
+  price?: number
   buy?: string | boolean
   companyLink?: string
   options?: ItemOptionsT
@@ -184,7 +185,7 @@ export type DbT = {
 }
 
 export type UserBasketT = {
-  items: ItemT[]
+  items: Record<ItemIdT, number>
 }
 
 export type UserT = {

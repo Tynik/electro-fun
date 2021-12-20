@@ -8,6 +8,7 @@ export * from './Category';
 export * from './Datasheets';
 export * from './CImage';
 export * from './CCardMedia';
+export { default as CIconButton } from './CIconButton';
 export * from './ImageSlider';
 export * from './Footer';
 export * from './menu';

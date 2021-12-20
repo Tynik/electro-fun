@@ -27,7 +27,6 @@ export const BreadcrumbItem = (props: BreadcrumbItemProps) => {
       {!final && (
         <InternalLink
           underline={'hover'}
-          color={'inherit'}
           startIcon={iconElement}
           to={to}
         >

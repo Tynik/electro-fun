@@ -15,14 +15,14 @@ import {
 import { ApplicationIdT } from '../types';
 
 export type SearchHandler = {
-  id?: string
+  ids?: string[]
   text?: string
   categoryId?: number
   debounce?: boolean
 }
 
 export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
-  const [itemId, setItemId] = React.useState<ItemIdT>(null);
+  const [itemIds, setItemIds] = React.useState<ItemIdT[]>(null);
   const [searchKeywords, setSearchKeywords] = React.useState<string[]>(null);
   const [categoryId, setCategoryId] = React.useState<number>(null);
   const [foundItems, setFoundItems] = React.useState<ItemT[]>(null);
@@ -36,13 +36,14 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
 
   React.useEffect(() => {
     if ((
-      itemId === null && searchKeywords === null && categoryId === null
+      itemIds === null && searchKeywords === null && categoryId === null
     ) || !db) {
       return;
     }
-    if (itemId === null && (
+    if (itemIds === null && (
       searchKeywords && !searchKeywords.length
     ) && categoryId === null) {
+      setItemIds(null);
       setIsSearching(false);
       setFoundItems(null);
       setFoundDatasheets(null);
@@ -50,9 +51,8 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
     }
     let foundItems: ItemT[];
 
-    if (itemId) {
-      const foundItemById = db.items.find(item => item.id === itemId);
-      foundItems = foundItemById ? [foundItemById] : [];
+    if (itemIds) {
+      foundItems = db.items.filter(item => itemIds.includes(item.id));
 
     } else {
       let foundItemsDatasheets: Record<DatasheetIdT, boolean> = {};
@@ -91,7 +91,7 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
       });
 
       if (searchKeywords && searchKeywords.length) {
-        const foundDatasheets = Object.keys(db.datasheets).reduce(
+        const foundDatasheets = Object.keys(db.datasheets).reduce<FoundDatasheetsT>(
           (foundDatasheets, datasheetId) => {
             const datasheetIsMatched = foundItemsDatasheets[datasheetId]
               || foundItemsRelatedDatasheets[datasheetId]
@@ -108,7 +108,7 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
               }
             }
             return foundDatasheets;
-          }, {} as FoundDatasheetsT
+          }, {}
         );
 
         setFoundDatasheets(foundDatasheets);
@@ -122,7 +122,7 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
     //   ...foundItems
     // ]);
 
-    if (itemId && foundItems.length) {
+    if (itemIds && foundItems.length === itemIds.length) {
       setFoundItems(foundItems);
       // if an item by id was found we should not load next db part
       return;
@@ -133,12 +133,12 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
       setIsSearching(false);
       setFoundItems(foundItems);
     }
-  }, [db, itemId, searchKeywords, categoryId]);
+  }, [db, itemIds, searchKeywords, categoryId]);
 
   const baseSearch = React.useCallback(
-    ({ id, text, categoryId }: Omit<SearchHandler, 'debounce'>) => {
-      if (id !== undefined) {
-        setItemId(id);
+    ({ ids, text, categoryId }: Omit<SearchHandler, 'debounce'>) => {
+      if (ids !== undefined) {
+        setItemIds(ids);
         return;
       }
       if (text !== undefined) {
@@ -160,12 +160,12 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
     []
   );
 
-  const search = React.useCallback(({ id, text, categoryId, debounce }: SearchHandler) => {
-    if (id) {
+  const search = React.useCallback(({ ids, text, categoryId, debounce }: SearchHandler) => {
+    if (ids) {
       if (debounce) {
-        throw new Error('Cannot be used id + debounce attribute together');
+        throw new Error('Cannot be used ids + debounce attribute together');
       }
-      baseSearch({ id });
+      baseSearch({ ids });
       return;
     }
     setIsSearching(true);

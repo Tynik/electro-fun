@@ -19,10 +19,7 @@ const CIconButton = (props: CIconButtonProps) => {
   } = props;
 
   return (
-    <IconButton
-      color={'inherit'}
-      {...rest}
-    >
+    <IconButton {...rest}>
       {badgeContent !== undefined ? (
         <Badge
           badgeContent={badgeContent}
