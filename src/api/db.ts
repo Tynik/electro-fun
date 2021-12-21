@@ -1,4 +1,4 @@
-import { DbMetaT, DbT } from './types';
+import type { DbMetaT, DbT } from '../types';
 
 export const fetchDbMeta = async (): Promise<DbMetaT> =>
   (

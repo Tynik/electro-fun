@@ -28,14 +28,9 @@ const Toolbar = (props: ToolbarProps) => {
   const history = useHistory();
 
   const { db } = React.useContext(DbContext);
-  const { user } = React.useContext(UserContext);
+  const { countItemsInBasket } = React.useContext(UserContext);
 
   const [searchValue, setSearchValue] = React.useState<string>(null);
-
-  const countItemsInBasket = React.useMemo(() =>
-    Object.keys(user.basket.items).length,
-    [user.basket.items]
-  );
 
   React.useEffect(() => {
     if (searchValue === null) {

@@ -6,7 +6,8 @@
     "sitemap": "tsc --skipLibCheck --esModuleInterop --jsx react --lib dom,ESNext sitemap-generator.ts && node sitemap-generator.js",
     "build": "NODE_ENV=production webpack",
     "deploy": "yarn run sitemap && yarn run build",
-    "start": "NODE_ENV=development webpack serve",
+    "netflify": "netlify dev",
+    "start": "NETLIFY_SERVER=http://localhost:8888 NODE_ENV=development webpack serve",
     "test": "jest"
   },
   "dependencies": {
@@ -44,6 +45,7 @@
     "ts-node": "10.4.0",
     "typescript": "4.5.3",
     "telegraf": "4.5.2",
+    "netlify-cli": "8.4.1",
     "webpack": "5.65.0",
     "webpack-cli": "4.9.1",
     "webpack-dev-server": "4.6.0"

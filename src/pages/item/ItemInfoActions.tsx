@@ -21,7 +21,7 @@ export type ItemInfoActionsProps = {
 
 export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
   const { db } = React.useContext(DbContext);
-  const { user, buyItem } = React.useContext(UserContext);
+  const { user, addItemToBasket } = React.useContext(UserContext);
 
   const itemInBasket = user.basket.items[item.id];
 
@@ -53,7 +53,7 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
           color={'success'}
         >
           <Button
-            onClick={() => buyItem(item.id)}
+            onClick={() => addItemToBasket(item.id)}
             variant={itemInBasket ? 'outlined' : 'contained'}
             color={itemInBasket ? 'info' : 'success'}
             startIcon={getIcon('addShoppingCart')}

@@ -12,6 +12,7 @@ import {
 } from '@material-ui/core';
 
 import { DbContext, UserContext } from '../contexts';
+import { netlifyMakeOrder } from '../api';
 import { BackButton, CIconButton, Loader } from '../components';
 import { getIcon } from '../utils';
 import { useJsonDbSearch } from '../hooks';
@@ -24,7 +25,7 @@ export const BasketPage = (props: BasketPageProps) => {
 
   const {
     user: { basket },
-    buyItem,
+    addItemToBasket,
     removeItemFromBasket,
     clearBasket
   } = React.useContext(UserContext);
@@ -32,6 +33,23 @@ export const BasketPage = (props: BasketPageProps) => {
   React.useEffect(() => {
     search({ ids: Object.keys(basket.items) });
   }, [basket.items]);
+
+  const totalPrice = React.useMemo(() =>
+      items?.reduce((totalPrice, item) =>
+        totalPrice + item.price * basket.items[item.id], 0) || 0,
+    [items]
+  );
+
+  const makeOrder = async () => {
+    await netlifyMakeOrder({
+      name: '',
+      phone: '',
+      items: items.map(item =>
+        `${basket.items[item.id]} x https://smart-home-tech.com.ua/item/${item.id}`
+      ),
+      totalPrice
+    });
+  };
 
   if (items === null) {
     return <Loader/>;
@@ -105,14 +123,14 @@ export const BasketPage = (props: BasketPageProps) => {
                       -
                     </Button>
                     <Button disabled>{basket.items[item.id]}</Button>
-                    <Button onClick={() => buyItem(item.id)}>+</Button>
+                    <Button onClick={() => addItemToBasket(item.id)}>+</Button>
                   </ButtonGroup>
                 </Box>
 
                 <Box sx={{
                   display: { xs: 'none', sm: 'flex' },
-                  alignItems: 'center' }
-                }>
+                  alignItems: 'center'
+                }}>
                   <CIconButton
                     onClick={() => removeItemFromBasket(item.id, true)}
                     icon={getIcon('deleteForever')}
@@ -131,7 +149,7 @@ export const BasketPage = (props: BasketPageProps) => {
               variant={'subtitle1'}
               component={'div'}
             >
-              Стоимость: {items.reduce((totalPrice, item) => totalPrice + item.price * basket.items[item.id], 0)}
+              Стоимость: {totalPrice}
             </Typography>
           </Grid>
 
@@ -142,6 +160,7 @@ export const BasketPage = (props: BasketPageProps) => {
               spacing={2}
             >
               <Button
+                onClick={makeOrder}
                 disabled={!items.length}
                 startIcon={getIcon('money')}
                 color={'success'}

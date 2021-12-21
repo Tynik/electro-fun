@@ -20,7 +20,7 @@ export const useUser = () => {
     saveBasketState(user.basket);
   }, [user]);
 
-  const buyItem = React.useCallback((itemId: ItemIdT) => {
+  const addItemToBasket = React.useCallback((itemId: ItemIdT) => {
     setUser(user => ({
       ...user,
       basket: {
@@ -66,13 +66,13 @@ export const useUser = () => {
   }, []);
 
   const countItemsInBasket = React.useMemo(() =>
-    Object.keys(user.basket.items).length,
-    []
+      Object.keys(user.basket.items).length,
+    [user.basket.items]
   );
 
   return {
     user,
-    buyItem,
+    addItemToBasket,
     removeItemFromBasket,
     clearBasket,
     countItemsInBasket

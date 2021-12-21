@@ -1,7 +1,7 @@
 import React from 'react';
 import { DbT, DbMetaT } from '../types';
 import { mergeDeep, preprocessDb } from '../utils';
-import { fetchDbMeta, fetchDbPart } from '../db-api';
+import { fetchDbMeta, fetchDbPart } from '../api';
 import { useStaticErrors } from './useStaticErrors';
 
 export type DbPartIdT = string

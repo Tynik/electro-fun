@@ -6,14 +6,16 @@ import { useUser } from '../hooks';
 
 export type UserContextState = {
   user: UserT
-  buyItem: (itemId: ItemIdT) => void
+  countItemsInBasket: number
+  addItemToBasket: (itemId: ItemIdT) => void
   removeItemFromBasket: (itemId: ItemIdT, all?: boolean) => void
   clearBasket: () => void
 }
 
 const initialUserContextState: UserContextState = {
   user: null,
-  buyItem: null,
+  countItemsInBasket: null,
+  addItemToBasket: null,
   removeItemFromBasket: null,
   clearBasket: null,
 }

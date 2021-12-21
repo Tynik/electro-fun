@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
@@ -49,6 +50,9 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NETLIFY_SERVER': JSON.stringify(process.env.NETLIFY_SERVER),
+    }),
     new HtmlWebpackPlugin({
       template: 'src/index.ejs',
       templateParameters: {
