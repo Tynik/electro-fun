@@ -1,7 +1,7 @@
 import { Handler } from '@netlify/functions';
 import { Telegraf } from 'telegraf';
 
-const CHAT_ID = 5033789131;
+const CHAT_ID = 795507995;
 
 const app = new Telegraf(process.env.BOT_TOKEN);
 

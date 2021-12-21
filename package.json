@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "dist/main.js",
   "scripts": {
-    "sitemap": "tsc --esModuleInterop --jsx react --lib dom,ESNext sitemap-generator.ts && node sitemap-generator.js",
+    "sitemap": "tsc --skipLibCheck --esModuleInterop --jsx react --lib dom,ESNext sitemap-generator.ts && node sitemap-generator.js",
     "build": "NODE_ENV=production webpack",
     "deploy": "yarn run sitemap && yarn run build",
     "start": "NODE_ENV=development webpack serve",
