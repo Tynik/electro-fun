@@ -20,3 +20,6 @@ https://smart-home-tech.com.ua/item/j-link-v8
 https://smart-home-tech.com.ua/item/rf-bm-2652p2
 https://smart-home-tech.com.ua/item/pzem-004t-v3.0
 https://smart-home-tech.com.ua/item/lolin-nodemcu-esp8266-4mb-v3
+https://smart-home-tech.com.ua/item/esp-c3-13u-4m
+https://smart-home-tech.com.ua/item/ams1117-3.3-в
+https://smart-home-tech.com.ua/item/moc3021-sop6
