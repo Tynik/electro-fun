@@ -26,6 +26,8 @@ import {
   ChevronRight as ChevronRightIcon,
   DeleteForever as DeleteForeverIcon,
   AttachMoney as AttachMoneyIcon,
+  NavigateBefore as NavigateBeforeIcon,
+  NavigateNext as NavigateNextIcon,
 } from '@material-ui/icons';
 
 export const getIcon = (name: string, props: SvgIconProps = {}): any => {
@@ -55,5 +57,7 @@ export const getIcon = (name: string, props: SvgIconProps = {}): any => {
     chevronRight: <ChevronRightIcon {...props}/>,
     deleteForever: <DeleteForeverIcon {...props}/>,
     money: <AttachMoneyIcon {...props}/>,
+    navigateBefore: <NavigateBeforeIcon {...props}/>,
+    navigateNext: <NavigateNextIcon {...props}/>,
   }[name];
 };

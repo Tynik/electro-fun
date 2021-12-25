@@ -4,10 +4,11 @@ export type NetlifyResponse = {
 }
 
 export type NetlifyMakeOrder = {
-  name: string
+  fullname: string
   phone: string
-  items: string[]
+  comment: string
   totalPrice: number
+  items: string[]
 }
 
 export const netlifyMakeOrder = async (data: NetlifyMakeOrder): Promise<NetlifyResponse> =>

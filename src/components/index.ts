@@ -12,3 +12,4 @@ export { default as CIconButton } from './CIconButton';
 export * from './ImageSlider';
 export * from './Footer';
 export * from './menu';
+export * from './basket';

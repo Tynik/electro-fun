@@ -6,10 +6,11 @@ const CHAT_ID = 795507995;
 const app = new Telegraf(process.env.BOT_TOKEN);
 
 type DataT = {
-  name: string
+  fullname: string
   phone: string
-  items: string[]
+  comment: string
   totalPrice: number
+  items: string[]
 }
 
 const headers = {
@@ -37,8 +38,9 @@ const handler: Handler = async (event, context) => {
   }
   const data: DataT = JSON.parse(event.body);
 
-  let order = `*Name:* ${data.name}\n`;
+  let order = `*Full name:* ${data.fullname}\n`;
   order += `*Ph.:* ${data.phone}\n`;
+  order += `*Comment:* ${data.comment}\n`;
   order += `*Total price:* ${data.totalPrice} UAH\n`;
   order += `*Items:*\n`;
   order += `${data.items.join('\n')}`;
