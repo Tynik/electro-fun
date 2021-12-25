@@ -8,8 +8,9 @@ const app = new Telegraf(process.env.BOT_TOKEN);
 type DataT = {
   fullname: string
   phone: string
-  comment: string
+  address: string
   totalPrice: number
+  comment: string
   items: string[]
 }
 
@@ -40,8 +41,11 @@ const handler: Handler = async (event, context) => {
 
   let order = `*Full name:* ${data.fullname}\n`;
   order += `*Ph.:* ${data.phone}\n`;
-  order += `*Comment:* ${data.comment}\n`;
+  order += `*Address:* ${data.address}\n`;
   order += `*Total price:* ${data.totalPrice} UAH\n`;
+  if (data.comment) {
+    order += `*Comment:* ${data.comment}\n`;
+  }
   order += `*Items:*\n`;
   order += `${data.items.join('\n')}`;
 

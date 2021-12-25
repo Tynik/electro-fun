@@ -6,6 +6,7 @@ export type NetlifyResponse = {
 export type NetlifyMakeOrder = {
   fullname: string
   phone: string
+  address: string
   comment: string
   totalPrice: number
   items: string[]

@@ -13,14 +13,19 @@ import { BasketItem } from '../../components';
 import { getIcon } from '../../utils';
 
 export type BasketStep1Props = {
+  active: boolean
   items: ItemT[]
   onNext: () => void
 }
 
-const BasketStep1 = ({ items, onNext }: BasketStep1Props) => {
+const BasketStep1 = ({ active, items, onNext }: BasketStep1Props) => {
   const {
     clearBasket
   } = React.useContext(UserContext);
+
+  if (!active) {
+    return null;
+  }
 
   return (
     <>

@@ -77,20 +77,18 @@ export const BasketPage = (props: BasketPageProps) => {
             container
             item
           >
-            {step === 0 && (
-              <BasketStep1
-                items={items}
-                onNext={() => setStep(step + 1)}
-              />
-            )}
+            <BasketStep1
+              active={step === 0}
+              items={items}
+              onNext={() => setStep(step + 1)}
+            />
 
-            {step === 1 && (
-              <BasketStep2
-                items={items}
-                totalPrice={totalPrice}
-                onBefore={() => setStep(step - 1)}
-              />
-            )}
+            <BasketStep2
+              active={step === 1}
+              items={items}
+              totalPrice={totalPrice}
+              onBefore={() => setStep(step - 1)}
+            />
           </Grid>
 
           <Grid

@@ -14,12 +14,13 @@ import { netlifyMakeOrder } from '../../api';
 import { getIcon } from '../../utils';
 
 export type BasketStep2Props = {
+  active: boolean
   items: ItemT[]
   totalPrice: number
   onBefore: () => void
 }
 
-const BasketStep2 = ({ items, totalPrice, onBefore }: BasketStep2Props) => {
+const BasketStep2 = ({ active, items, totalPrice, onBefore }: BasketStep2Props) => {
   const {
     user: { basket },
     clearBasket
@@ -29,6 +30,7 @@ const BasketStep2 = ({ items, totalPrice, onBefore }: BasketStep2Props) => {
 
   const [fullname, setFullname] = React.useState<string>(null);
   const [phone, setPhone] = React.useState<string>(null);
+  const [address, setAddress] = React.useState<string>(null);
   const [comment, setComment] = React.useState<string>(null);
 
   const makeOrder = async () => {
@@ -39,6 +41,7 @@ const BasketStep2 = ({ items, totalPrice, onBefore }: BasketStep2Props) => {
         ),
         fullname,
         phone,
+        address,
         comment,
         totalPrice
       });
@@ -51,6 +54,10 @@ const BasketStep2 = ({ items, totalPrice, onBefore }: BasketStep2Props) => {
       });
     }
   };
+
+  if (!active) {
+    return null;
+  }
 
   return (
     <>
@@ -70,6 +77,8 @@ const BasketStep2 = ({ items, totalPrice, onBefore }: BasketStep2Props) => {
               label={'ФИО'}
               variant={'outlined'}
               size={'small'}
+              error={fullname === ''}
+              helperText={fullname === '' && 'ФИО является обязательным'}
               fullWidth
             />
 
@@ -79,6 +88,19 @@ const BasketStep2 = ({ items, totalPrice, onBefore }: BasketStep2Props) => {
               label={'Тел.'}
               variant={'outlined'}
               size={'small'}
+              error={phone === ''}
+              helperText={phone === '' && 'Телефон является обязательным'}
+              fullWidth
+            />
+
+            <TextField
+              value={address || ''}
+              onChange={(e) => setAddress(e.target.value)}
+              label={'Адрес'}
+              variant={'outlined'}
+              size={'small'}
+              error={address === ''}
+              helperText={address === '' && 'Адрес является обязательным'}
               fullWidth
             />
 
@@ -103,7 +125,6 @@ const BasketStep2 = ({ items, totalPrice, onBefore }: BasketStep2Props) => {
         >
           <Button
             onClick={onBefore}
-            disabled={!items.length}
             startIcon={getIcon('navigateBefore')}
             variant={'outlined'}
           >
@@ -112,7 +133,7 @@ const BasketStep2 = ({ items, totalPrice, onBefore }: BasketStep2Props) => {
 
           <Button
             onClick={makeOrder}
-            disabled={!items.length}
+            disabled={!fullname || !phone || !address}
             startIcon={getIcon('money')}
             color={'success'}
             variant={'contained'}
