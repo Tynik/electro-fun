@@ -93,13 +93,27 @@ export const BasketPage = (props: BasketPageProps) => {
             )}
           </Grid>
 
-          <Grid xs={3} justifyContent={'center'} container item>
+          <Grid
+            xs={3}
+            alignContent={'start'}
+            justifyContent={'center'}
+            container
+            item
+          >
             <Grid item>
               <Typography
                 variant={'overline'}
                 component={'div'}
               >
-                Сумма заказа: {totalPrice} UAH
+                Общая сумма заказа:
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography
+                variant={'h5'}
+                component={'div'}
+              >
+                {totalPrice.toFixed(2)} UAH
               </Typography>
             </Grid>
           </Grid>

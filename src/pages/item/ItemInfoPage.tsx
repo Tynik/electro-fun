@@ -175,6 +175,14 @@ export const ItemInfoPage = () => {
           <ItemInfoOptions options={item.options}/>
         )}
 
+        {Boolean(item.price) && (
+          <Box marginTop={theme.spacing(2)} textAlign={'center'}>
+            <Typography variant={'h5'} component={'div'}>
+              {item.price.toFixed(2)} UAH
+            </Typography>
+          </Box>
+        )}
+
         <Box marginTop={theme.spacing(2)}>
           <ItemInfoActions item={item}/>
         </Box>

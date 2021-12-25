@@ -26,7 +26,7 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
   const itemInBasket = user.basket.items[item.id];
 
   return (
-    <Stack direction={'row'} spacing={2}>
+    <Stack spacing={2} direction={'row'} justifyContent={'center'}>
       {Boolean(item.datasheetId) && (
         <ExternalButtonLink
           href={db.datasheets[item.datasheetId].url}

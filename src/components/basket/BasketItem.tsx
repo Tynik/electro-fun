@@ -59,9 +59,14 @@ const BasketItem = ({ item }: BasketItemProps) => {
       <Box sx={{ flexGrow: 1 }}/>
 
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        <Typography variant={'h5'} component={'div'}>
+          {(item.price * basket.items[item.id]).toFixed(2)} UAH
+        </Typography>
+
         <ButtonGroup
           size={'small'}
           aria-label={'Кол-во'}
+          sx={{ marginLeft: 2 }}
         >
           <Button
             disabled={basket.items[item.id] === 1}
