@@ -95,8 +95,9 @@ export const BasketPage = (props: BasketPageProps) => {
 
           <Grid
             xs={3}
-            alignContent={'start'}
-            justifyContent={'center'}
+            alignContent={'center'}
+            alignItems={'center'}
+            flexDirection={'column'}
             container
             item
           >
