@@ -56,7 +56,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.ejs',
       templateParameters: {
-        LOCAL_ENV: true
+        LOCAL_ENV: process.env.LOCAL_ENV || false
       },
     }),
     new CopyPlugin({

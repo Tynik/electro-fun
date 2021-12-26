@@ -47,7 +47,9 @@ const BasketStep2 = ({ active, items, totalPrice, onBefore }: BasketStep2Props) 
       });
       clearBasket();
 
-      addNotification('Вы успешно оформили заказ. Мы Вам перезвоним!');
+      addNotification('Вы успешно оформили заказ. Мы Вам перезвоним!', {
+        timeout: 5000
+      });
     } catch (e) {
       addNotification('Ошибка при оформлении заказа. Попробуйте позже', {
         severity: 'error'

@@ -1212,7 +1212,8 @@
         "description": "CCS811 - датчик для измерения качества воздуха",
         "keywords": "датчик, co2, качество, воздух, частицы, voc, tvoc"
       },
-      "buy": "https://izi.ua/p-11439002-datchik-co2-kachestva-vozdukha-arduino-ccs811-i2c-cjmcu-811",
+      "buy": true,
+      "price": 290,
       "datasheetId": "CCS811",
       "images": [
         {

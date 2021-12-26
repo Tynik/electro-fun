@@ -3,13 +3,13 @@ import {
   AlertColor,
   Alert,
   Stack,
-  SnackbarCloseReason,
-  useTheme,
+  useTheme
 } from '@material-ui/core';
 
 export type Notification = {
   message: string
   severity?: AlertColor
+  timeout?: number
 }
 
 export type AppContextState = {
@@ -34,15 +34,26 @@ export const AppContextProvider = ({ children }) => {
 
   const addNotification = React.useCallback(
     (message: Notification['message'], options?: Omit<Notification, 'message'>) => {
-    setNotifications((notifications) =>
-      [...notifications, { ...options, message }]
-    );
-  }, []);
 
-  const removeNotification = (reason: SnackbarCloseReason, notificationForRemoving: Notification) => {
-    if (reason === 'clickaway') {
-      return;
-    }
+      const newNotification = { ...options, message };
+
+      setNotifications((notifications) =>
+        [...notifications, newNotification]
+      );
+
+      let timeoutId;
+      if (options.timeout) {
+        timeoutId = setTimeout(
+          () => removeNotification(newNotification),
+          options.timeout
+        );
+      }
+      return () => {
+        timeoutId && clearTimeout(timeoutId);
+      };
+    }, []);
+
+  const removeNotification = (notificationForRemoving: Notification) => {
     setNotifications((notifications) =>
       notifications.filter(notification =>
         notification.message !== notificationForRemoving.message
@@ -64,7 +75,7 @@ export const AppContextProvider = ({ children }) => {
         {notifications.map(notification => (
           <Alert
             key={notification.message}
-            onClose={() => removeNotification(null, notification)}
+            onClose={() => removeNotification(notification)}
             severity={notification.severity || 'success'}
             elevation={6}
             variant={'filled'}
