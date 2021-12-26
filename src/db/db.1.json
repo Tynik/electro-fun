@@ -924,7 +924,8 @@
         "description": "LM2596s - понижающий стабилизатор напряжения",
         "keywords": "lm2596s, стабилизатор, понижение, ti"
       },
-      "buy": "https://izi.ua/p-19437930-stabilizator-napryazheniya-ponizhayushchiy-lm2596s-dc-dc-3a",
+      "buy": true,
+      "price": 32,
       "datasheetId": "LM2596",
       "images": [
         {
@@ -978,7 +979,8 @@
         "description": "BMP280 - датчик для измерения температуры, давления и влажности",
         "keywords": "bmp280, температура, давление, влажность"
       },
-      "buy": "https://izi.ua/p-19665588-bmp280-temperature-pressure-humidity-sensor-for-arduino",
+      "buy": true,
+      "price": 23,
       "datasheetId": "BMP280",
       "images": [
         {
@@ -1058,7 +1060,8 @@
         "description": "MPU-9250 - гироскоп, акселерометр и магнитометр в одном устройстве",
         "keywords": "mpu-9250, гироскоп, акселерометр, магнитометр, dmp"
       },
-      "buy": "https://izi.ua/p-6267920-akselerometr-giroskop-magnitometr-gy-9250-9-dof-na-mpu-9250-i2c",
+      "buy": true,
+      "price": 147,
       "datasheetId": "MPU-9250A-1.1",
       "images": [
         {
@@ -1142,7 +1145,8 @@
         "description": "CP2112 - USB в SMBus",
         "keywords": "cp2112, usb, smbus, конвертер, перепрошивка, батареи"
       },
-      "buy": "https://izi.ua/p-5455863-adapter-cp2112-usb-uart-i2c-dlya-proshivki-batarey-noutbukov-i-proch",
+      "buy": true,
+      "price": 140,
       "datasheetId": "CP2112",
       "images": [
         {
@@ -1293,7 +1297,8 @@
         "description": "Датчик цвета RGB и распознавание жестов",
         "keywords": "датчик, жесты, rgb, распознавание"
       },
-      "buy": "https://izi.ua/p-5455883-apds-9960-datchik-rgb-i-raspoznavanie-zhestov",
+      "buy": true,
+      "price": 50,
       "datasheetId": "APDS-9960",
       "images": [
         {
@@ -1361,7 +1366,8 @@
         "description": "MAC 35 серия - соленоид на 35A с электромагнитным управлением",
         "keywords": "соленоид, boost, вакуум, давление, управление"
       },
-      "buy": "https://izi.ua/p-19438695-mac-3-port-boost-control-solenoid-valve-35a-12v-6mm",
+      "buy": true,
+      "price": 530,
       "datasheetId": "MAC-35A",
       "images": [
         {
@@ -1424,7 +1430,8 @@
         "keywords": "tec1-12715, пельтье, термопара, охлаждение, нагрев"
       },
       "datasheetId": "TEC1-12715",
-      "buy": "https://izi.ua/p-21834878-element-pelte-tec1-12715",
+      "buy": true,
+      "price": 130,
       "images": [
         {
           "src": "/photos/TEC1-12715-1.webp",
@@ -1585,7 +1592,8 @@
         "description": "nRF24L01+ - приемопередатчик 2.4 ГГц",
         "keywords": "nrf24l01, приемопередатчик, трансивер, ресивер"
       },
-      "buy": "https://izi.ua/p-19433326-mini-radiomodul-smd-nrf24l01-wireless-mini-2-4-ghz",
+      "buy": true,
+      "price": 33,
       "datasheetId": "nRF24L01",
       "images": [
         {
@@ -2007,7 +2015,8 @@
         "description": "",
         "keywords": "pb-irf3205, irf3205pbf, mosfet, мосфет"
       },
-      "buy": "",
+      "buy": true,
+      "price": 8,
       "datasheetId": "IRF3205PbF",
       "images": [
         {

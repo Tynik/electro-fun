@@ -115,7 +115,8 @@
         "keywords": "программатор, segger, j-link, usb, jtag, arm, cortex-m"
       },
       "original": false,
-      "buy": "",
+      "buy": true,
+      "price": 350,
       "datasheetId": "JLINKUM08001",
       "images": [
         {
@@ -189,6 +190,8 @@
         "keywords": "rf-star, cc2652p, simplelink, bluetooth, zigbee, thread, ti"
       },
       "datasheetId": "RF-BM-2652P2",
+      "buy": true,
+      "price": 270,
       "images": [
         {
           "src": "/photos/RF-BM-2652P2-1.webp",
@@ -322,7 +325,7 @@
       "subtitle": "Измерение напряжения 80 - 260 В и тока 100A",
       "datasheetId": "PZEM-004",
       "buy": true,
-      "price": 230,
+      "price": 215,
       "images": [
         {
           "src": "/photos/PZEM-004T-1.webp",
