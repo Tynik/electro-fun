@@ -172,8 +172,14 @@ export const ItemInfoPage = () => {
       <Grid xs={12} sm={6} item>
         <ItemInfoFeatures features={item.features}/>
 
+        <Divider sx={{ marginTop: theme.spacing(2) }}/>
+
         {item.options && Object.keys(item.options).length > 0 && (
-          <ItemInfoOptions options={item.options}/>
+          <Box sx={{
+            marginTop: theme.spacing(2),
+          }}>
+            <ItemInfoOptions options={item.options}/>
+          </Box>
         )}
 
         {Boolean(item.price) && (
@@ -181,14 +187,7 @@ export const ItemInfoPage = () => {
             marginTop: theme.spacing(2),
             textAlign: 'center'
           }}>
-            <Divider/>
-            <Typography
-              variant={'h5'}
-              component={'div'}
-              sx={{
-                marginTop: theme.spacing(2)
-              }}
-            >
+            <Typography variant={'h5'} component={'div'}>
               {item.price.toFixed(2)} UAH
             </Typography>
           </Box>
