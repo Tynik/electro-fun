@@ -1,23 +1,23 @@
 {
   "datasheets": {
     "MOC304x": {
-      "url": "/datasheets/MOC304x.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/MOC304x.pdf",
       "lang": "en"
     },
     "BT136E": {
-      "url": "/datasheets/BT136E.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/BT136E.pdf",
       "lang": "en"
     },
     "2N390x": {
-      "url": "/datasheets/2N390x.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/2N390x.pdf",
       "lang": "en"
     },
     "CDx4HC405x": {
-      "url": "/datasheets/CDx4HC405x.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/CDx4HC405x.pdf",
       "lang": "en"
     },
     "WS2812B": {
-      "url": "/datasheets/WS2812B.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/WS2812B.pdf",
       "lang": "en"
     }
   },

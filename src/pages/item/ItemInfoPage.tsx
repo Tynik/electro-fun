@@ -5,6 +5,7 @@ import {
   Grid,
   Typography,
   Alert,
+  Divider,
   useTheme
 } from '@material-ui/core';
 
@@ -176,8 +177,18 @@ export const ItemInfoPage = () => {
         )}
 
         {Boolean(item.price) && (
-          <Box marginTop={theme.spacing(2)} textAlign={'center'}>
-            <Typography variant={'h5'} component={'div'}>
+          <Box sx={{
+            marginTop: theme.spacing(2),
+            textAlign: 'center'
+          }}>
+            <Divider/>
+            <Typography
+              variant={'h5'}
+              component={'div'}
+              sx={{
+                marginTop: theme.spacing(2)
+              }}
+            >
               {item.price.toFixed(2)} UAH
             </Typography>
           </Box>

@@ -189,195 +189,195 @@
   },
   "datasheets": {
     "ESP32-C3M": {
-      "url": "/datasheets/ESP32-C3M.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP32-C3M.pdf",
       "lang": "en"
     },
     "ESP32-C3S": {
-      "url": "/datasheets/ESP32-C3S.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP32-C3S.pdf",
       "lang": "en"
     },
     "ESP32-C3F": {
-      "url": "/datasheets/ESP32-C3F.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP32-C3F.pdf",
       "lang": "en"
     },
     "ESP32-C3": {
-      "url": "/datasheets/ESP32-C3.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP32-C3.pdf",
       "lang": "en"
     },
     "ESP32-C3-WROOM-02x": {
-      "url": "/datasheets/ESP32-C3-WROOM-02x.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP32-C3-WROOM-02x.pdf",
       "lang": "en"
     },
     "ESP32-WROOM-32xx": {
-      "url": "/datasheets/ESP32-WROOM-32xx.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP32-WROOM-32xx.pdf",
       "lang": "en"
     },
     "ESP32-S2-WROOM-x": {
-      "url": "/datasheets/ESP32-S2-WROOM-x.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP32-S2-WROOM-x.pdf",
       "lang": "en"
     },
     "ESP32-S2-WROVER-x": {
-      "url": "/datasheets/ESP32-S2-WROVER-x.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP32-S2-WROVER-x.pdf",
       "lang": "en"
     },
     "ESP32-S2 (Technical Reference Manual)": {
-      "url": "/datasheets/ESP32-S2 (Technical Reference Manual).pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP32-S2 (Technical Reference Manual).pdf",
       "lang": "en"
     },
     "ESP32-S3": {
-      "url": "/datasheets/ESP32-S3.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP32-S3.pdf",
       "lang": "en"
     },
     "MOC302x": {
-      "url": "/datasheets/MOC302x.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/MOC302x.pdf",
       "lang": "en"
     },
     "G3MB-202P": {
-      "url": "/datasheets/G3MB-202P.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/G3MB-202P.pdf",
       "lang": "en"
     },
     "TLP281": {
-      "url": "/datasheets/TLP281.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/TLP281.pdf",
       "lang": "en"
     },
     "HLK-PM0x": {
-      "url": "/datasheets/HLK-PM0x.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/HLK-PM0x.pdf",
       "lang": "en"
     },
     "E72-2G4M20S1E": {
-      "url": "/datasheets/E72-2G4M20S1E.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/E72-2G4M20S1E.pdf",
       "lang": "en"
     },
     "PZEM-004": {
-      "url": "/datasheets/PZEM-004.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/PZEM-004.pdf",
       "lang": "en"
     },
     "LP5036": {
-      "url": "/datasheets/LP5036.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/LP5036.pdf",
       "lang": "en"
     },
     "LM2596": {
-      "url": "/datasheets/LM2596.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/LM2596.pdf",
       "lang": "en"
     },
     "LM324N": {
-      "url": "/datasheets/LM324N.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/LM324N.pdf",
       "lang": "en"
     },
     "SD3004": {
-      "url": "/datasheets/SD3004.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/SD3004.pdf",
       "lang": "en"
     },
     "RF-SM-1077B2": {
-      "url": "/datasheets/RF-SM-1077B2.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/RF-SM-1077B2.pdf",
       "lang": "en"
     },
     "RF-BM-2652P2": {
-      "url": "/datasheets/RF-BM-2652P2.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/RF-BM-2652P2.pdf",
       "lang": "en"
     },
     "JLINKUM08001": {
-      "url": "/datasheets/JLINKUM08001.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/JLINKUM08001.pdf",
       "lang": "en"
     },
     "BC847": {
-      "url": "/datasheets/BC847.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/BC847.pdf",
       "lang": "en"
     },
     "CP2112": {
-      "url": "/datasheets/CP2112.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/CP2112.pdf",
       "lang": "en"
     },
     "APDS-9960": {
-      "url": "/datasheets/APDS-9960.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/APDS-9960.pdf",
       "lang": "en"
     },
     "ARM-EM4-EM6": {
-      "url": "/datasheets/ARM-EM4-EM6.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ARM-EM4-EM6.pdf",
       "lang": "en"
     },
     "BHI260AP": {
-      "url": "/datasheets/BHI260AP.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/BHI260AP.pdf",
       "lang": "en"
     },
     "BMG250": {
-      "url": "/datasheets/BMG250.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/BMG250.pdf",
       "lang": "en"
     },
     "BMP280": {
-      "url": "/datasheets/BMP280.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/BMP280.pdf",
       "lang": "en"
     },
     "CC1310": {
-      "url": "/datasheets/CC1310.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/CC1310.pdf",
       "lang": "en"
     },
     "CC1312R": {
-      "url": "/datasheets/CC1312R.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/CC1312R.pdf",
       "lang": "en"
     },
     "CC1352P": {
-      "url": "/datasheets/CC1352P.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/CC1352P.pdf",
       "lang": "en"
     },
     "CC2530": {
-      "url": "/datasheets/CC2530.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/CC2530.pdf",
       "lang": "en"
     },
     "CC2652P": {
-      "url": "/datasheets/CC2652P.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/CC2652P.pdf",
       "lang": "en"
     },
     "CC2652R": {
-      "url": "/datasheets/CC2652R.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/CC2652R.pdf",
       "lang": "en"
     },
     "CCS811": {
-      "url": "/datasheets/CCS811.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/CCS811.pdf",
       "lang": "en"
     },
     "CH340": {
-      "url": "/datasheets/CH340.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/CH340.pdf",
       "lang": "en"
     },
     "ESP8266EX": {
-      "url": "/datasheets/ESP8266EX.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP8266EX.pdf",
       "lang": "en"
     },
     "IRF3205PbF": {
-      "url": "/datasheets/IRF3205PbF.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/IRF3205PbF.pdf",
       "lang": "en"
     },
     "IRLB4030PbF": {
-      "url": "/datasheets/IRLB4030PbF.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/IRLB4030PbF.pdf",
       "lang": "en"
     },
     "LM1117": {
-      "url": "/datasheets/LM1117.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/LM1117.pdf",
       "lang": "en"
     },
     "MAC-35A": {
-      "url": "/datasheets/MAC-35A.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/MAC-35A.pdf",
       "lang": "en"
     },
     "MPU-9250A-1.1": {
-      "url": "/datasheets/MPU-9250A-1.1.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/MPU-9250A-1.1.pdf",
       "lang": "en"
     },
     "nRF24L01": {
-      "url": "/datasheets/nRF24L01.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/nRF24L01.pdf",
       "lang": "en"
     },
     "TEC1-12715": {
-      "url": "/datasheets/TEC1-12715.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/TEC1-12715.pdf",
       "lang": "en"
     },
     "ULN200x": {
-      "url": "/datasheets/ULN200x.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ULN200x.pdf",
       "lang": "en"
     },
     "LED0805BLUE": {
-      "url": "/datasheets/LED0805BLUE.pdf",
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/LED0805BLUE.pdf",
       "lang": "en"
     }
   },
@@ -1367,7 +1367,7 @@
         "keywords": "соленоид, boost, вакуум, давление, управление"
       },
       "buy": true,
-      "price": 530,
+      "price": 420,
       "datasheetId": "MAC-35A",
       "images": [
         {
