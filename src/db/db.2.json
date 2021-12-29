@@ -55,7 +55,6 @@
         "description": "LED SMD 0805 (желтый)",
         "keywords": "led, 0805, 2012, желтый, smd"
       },
-      "buy": "",
       "datasheetId": "LED0805BLUE",
       "images": [
         {
@@ -112,7 +111,7 @@
       "subtitle": "Программатор USB-JTAG",
       "seo": {
         "description": "J-Link - программатор v8 USB-JTAG",
-        "keywords": "программатор, segger, j-link, usb, jtag, arm, cortex-m"
+        "keywords": "программатор, segger, j-link, v8, usb, jtag, arm, cortex-m"
       },
       "original": false,
       "buy": true,
@@ -322,7 +321,11 @@
       "categoryId": 13,
       "lang": "ru",
       "title": "PZEM-004T v3.0",
-      "subtitle": "Измерение напряжения 80 - 260 В и тока 100A",
+      "subtitle": "Измерение напряжения 80 - 260 В и тока до 100A",
+      "seo": {
+        "description": "PZEM-004T v3 - измерение напряжения 80 - 260 В и тока до 100A",
+        "keywords": "pzem, v3, измерение, напряжение, ток, 100а"
+      },
       "datasheetId": "PZEM-004",
       "buy": true,
       "price": 215,
@@ -477,11 +480,11 @@
     {
       "categoryId": 9,
       "lang": "ru",
-      "title": "LoLin NodeMCU ESP8266 4MB v3",
+      "title": "LoLin NodeMCU ESP8266 4 Мб v3",
       "subtitle": "DevKit",
       "seo": {
         "description": "LoLin NodeMCU ESP8266 V3",
-        "keywords": "nodemcu, esp8266, esp-12e, devkit, arduino, wifi"
+        "keywords": "nodemcu, esp8266, esp-12e, devkit, arduino, wifi, iot, 4мб"
       },
       "buy": true,
       "price": 85,
@@ -599,6 +602,10 @@
     {
       "categoryId": 9,
       "title": "ESP-C3-13U 4M",
+      "seo": {
+        "description": "ESP-C3-13U 4M",
+        "keywords": "risc-v, esp32, esp, c3fn4, ai-thinker, wifi, ble, smart-home, wearable"
+      },
       "subtitle": "Wi-Fi модуль",
       "datasheetId": "ESP-C3-13U",
       "developedBy": "Shenzhen Ai-Thinker Technology Co., Ltd",
@@ -631,6 +638,14 @@
         {
           "refId": 3,
           "value": "3.0 - 3.6 В"
+        },
+        {
+          "refId": 38,
+          "value": "1-ядерный 32-бит RISC-V"
+        },
+        {
+          "refId": 98,
+          "value": "80/160 МГц"
         },
         {
           "refId": 42,

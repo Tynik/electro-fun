@@ -912,6 +912,10 @@
     },
     "97": {
       "name": "Bluetooth"
+    },
+    "98": {
+      "name": "Частота",
+      "featSecRefId": 8
     }
   },
   "items": [
@@ -921,8 +925,8 @@
       "title": "LM2596s DC-DC 3 A",
       "subtitle": "Понижающий стабилизатор напряжения",
       "seo": {
-        "description": "LM2596s - понижающий стабилизатор напряжения",
-        "keywords": "lm2596s, стабилизатор, понижение, ti"
+        "description": "LM2596s - понижающий стабилизатор напряжения до 3 А",
+        "keywords": "lm2596s, стабилизатор, понижение, ti, 3а"
       },
       "buy": true,
       "price": 32,
@@ -977,7 +981,7 @@
       "subtitle": "Датчик для измерения температуры и т.д.",
       "seo": {
         "description": "BMP280 - датчик для измерения температуры, давления и влажности",
-        "keywords": "bmp280, температура, давление, влажность"
+        "keywords": "bmp280, bosch, температура, давление, влажность"
       },
       "buy": true,
       "price": 23,
@@ -1058,7 +1062,7 @@
       "subtitle": "Гироскоп/акселерометр/магнитометр",
       "seo": {
         "description": "MPU-9250 - гироскоп, акселерометр и магнитометр в одном устройстве",
-        "keywords": "mpu-9250, гироскоп, акселерометр, магнитометр, dmp"
+        "keywords": "mpu-9250, invensense, гироскоп, акселерометр, магнитометр, dmp"
       },
       "buy": true,
       "price": 147,
@@ -1143,7 +1147,7 @@
       "subtitle": "Модуль-конвертер",
       "seo": {
         "description": "CP2112 - USB в SMBus",
-        "keywords": "cp2112, usb, smbus, конвертер, перепрошивка, батареи"
+        "keywords": "cp2112, usb, smbus, конвертер, перепрошивка, батарея"
       },
       "buy": true,
       "price": 140,
@@ -1587,7 +1591,7 @@
       "categoryId": 8,
       "lang": "ru",
       "title": "nRF24L01+",
-      "subtitle": "Трансивер и аудиостример 2.4 ГГц",
+      "subtitle": "Трансивер и аудио-стример 2.4 ГГц",
       "seo": {
         "description": "nRF24L01+ - приемопередатчик 2.4 ГГц",
         "keywords": "nrf24l01, приемопередатчик, трансивер, ресивер"
@@ -1649,7 +1653,7 @@
       "subtitle": "Wi-Fi микросхема",
       "seo": {
         "description": "ESP8266EX - Wi-Fi микросхема для IoT решений",
-        "keywords": "esp8266, wi-fi, iot"
+        "keywords": "esp8266, wi-fi, wifi, iot"
       },
       "datasheetId": "ESP8266EX",
       "images": [
@@ -1737,7 +1741,6 @@
         "keywords": "cc1310, рч, сверхмалопотребляющее, экономичное, simplelink, zigbee, thread, ti, sub-1"
       },
       "datasheetId": "CC1310",
-      "buy": "https://www.aliexpress.com/item/4001345191255.html?spm=a2g0o.productlist.0.0.4cb43b0aswX868&algo_pvid=c6d0f977-b439-4238-bf26-1f574b40f4aa&algo_exp_id=c6d0f977-b439-4238-bf26-1f574b40f4aa-5&pdp_ext_f=%7B%22sku_id%22%3A%2210000015755343950%22%7D",
       "images": [
         {
           "src": "/photos/CC1310-1.webp",
@@ -1832,10 +1835,9 @@
       "subtitle": "Многопротокольный беспроводной MCU",
       "seo": {
         "description": "CC2652P - многопротокольный беспроводной MCU",
-        "keywords": "cc2652p, simplelink, bluetooth, zigbee, thread, ti"
+        "keywords": "cc2652p, многопротокольный, беспроводной, mcu, simplelink, bluetooth, zigbee, thread, ti"
       },
       "datasheetId": "CC2652P",
-      "buy": "",
       "images": [
         {
           "src": "/photos/CC2652P-1.webp",
@@ -1965,7 +1967,6 @@
         "keywords": "ch340g, usb, uart, преобразование"
       },
       "datasheetId": "CH340",
-      "buy": "",
       "images": [
         {
           "src": "/photos/CH340G-1.webp",
@@ -2013,7 +2014,7 @@
       "subtitle": "MOSFET 55 В, 110 А",
       "seo": {
         "description": "",
-        "keywords": "pb-irf3205, irf3205pbf, mosfet, мосфет"
+        "keywords": "pb-irf3205, irf3205pbf, mosfet, мосфет, 55в, 110а"
       },
       "buy": true,
       "price": 8,
