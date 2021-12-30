@@ -13,17 +13,18 @@ import { BasketItem } from '../../components';
 import { getIcon } from '../../utils';
 
 export type BasketStep1Props = {
-  active: boolean
+  isActive: boolean
   items: ItemT[]
   onNext: () => void
 }
 
-const BasketStep1 = ({ active, items, onNext }: BasketStep1Props) => {
+const BasketStep1 = ({ isActive, items, onNext }: BasketStep1Props) => {
   const {
+    user: { basket },
     clearBasket
   } = React.useContext(UserContext);
 
-  if (!active) {
+  if (!isActive) {
     return null;
   }
 
@@ -37,9 +38,9 @@ const BasketStep1 = ({ active, items, onNext }: BasketStep1Props) => {
         </Grid>
       )}
 
-      {items.map(item => (
-        <Grid key={item.id} item>
-          <BasketItem item={item}/>
+      {items.map(item => Object.keys(basket.items[item.id] || {}).map(optionId =>
+        <Grid key={`${item.id}-${optionId}`} item>
+          <BasketItem item={item} optionId={optionId}/>
         </Grid>
       ))}
 

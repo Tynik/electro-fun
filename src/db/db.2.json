@@ -50,11 +50,14 @@
       "categoryId": 12,
       "lang": "ru",
       "title": "LED SMD 0805 (2012)",
-      "subtitle": "Желтый",
+      "subtitle": "SMD светодиоды 100 шт.",
       "seo": {
-        "description": "LED SMD 0805 (желтый)",
-        "keywords": "led, 0805, 2012, желтый, smd"
+        "description": "LED SMD 0805",
+        "keywords": "светодиод, led, 0805, 2012, желтый, smd"
       },
+      "buy": true,
+      "price": 25,
+      "content": "",
       "datasheetId": "LED0805BLUE",
       "images": [
         {
@@ -321,7 +324,7 @@
       "categoryId": 13,
       "lang": "ru",
       "title": "PZEM-004T v3.0",
-      "subtitle": "Измерение напряжения 80 - 260 В и тока до 100A",
+      "subtitle": "Измерение 80 - 260 В и тока до 100A",
       "seo": {
         "description": "PZEM-004T v3 - измерение напряжения 80 - 260 В и тока до 100A",
         "keywords": "pzem, v3, измерение, напряжение, ток, 100а"

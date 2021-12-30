@@ -13,7 +13,7 @@ import type { ItemT } from '../../types';
 
 import { DbContext, UserContext } from '../../contexts';
 import { ExternalButtonLink } from '../../components';
-import { getIcon } from '../../utils';
+import { getIcon, useQueryParams } from '../../utils';
 
 export type ItemInfoActionsProps = {
   item: ItemT
@@ -23,7 +23,9 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
   const { db } = React.useContext(DbContext);
   const { user, addItemToBasket } = React.useContext(UserContext);
 
-  const itemInBasket = user.basket.items[item.id];
+  const { optionId: selectedOptionId } = useQueryParams();
+
+  const itemInBasket = (user.basket.items[item.id] || {})[selectedOptionId];
 
   return (
     <Stack spacing={2} direction={'row'} justifyContent={'center'}>
@@ -53,7 +55,7 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
           color={'success'}
         >
           <Button
-            onClick={() => addItemToBasket(item.id)}
+            onClick={() => addItemToBasket(item.id, selectedOptionId)}
             variant={itemInBasket ? 'outlined' : 'contained'}
             color={itemInBasket ? 'info' : 'success'}
             startIcon={getIcon('addShoppingCart')}

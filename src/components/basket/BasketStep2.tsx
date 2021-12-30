@@ -14,13 +14,13 @@ import { netlifyMakeOrder } from '../../api';
 import { getIcon } from '../../utils';
 
 export type BasketStep2Props = {
-  active: boolean
+  isActive: boolean
   items: ItemT[]
   totalPrice: number
   onBefore: () => void
 }
 
-const BasketStep2 = ({ active, items, totalPrice, onBefore }: BasketStep2Props) => {
+const BasketStep2 = ({ isActive, items, totalPrice, onBefore }: BasketStep2Props) => {
   const {
     user: { basket },
     clearBasket
@@ -35,10 +35,16 @@ const BasketStep2 = ({ active, items, totalPrice, onBefore }: BasketStep2Props) 
 
   const makeOrder = async () => {
     try {
+      const itemsContent = items.map(item =>
+        Object.keys(basket.items[item.id]).map(optionId =>
+          `${basket.items[item.id][optionId]} x https://smart-home-tech.com.ua/item/${item.id}?${new URLSearchParams({
+            optionId
+          })}`
+        ).join('\n')
+      );
+
       await netlifyMakeOrder({
-        items: items.map(item =>
-          `${basket.items[item.id]} x https://smart-home-tech.com.ua/item/${item.id}`
-        ),
+        items: itemsContent,
         fullname,
         phone,
         address,
@@ -57,7 +63,7 @@ const BasketStep2 = ({ active, items, totalPrice, onBefore }: BasketStep2Props) 
     }
   };
 
-  if (!active) {
+  if (!isActive) {
     return null;
   }
 

@@ -5,25 +5,32 @@ import {
   Button,
   ButtonGroup,
   Paper,
-  Typography
+  Typography,
+  Chip
 } from '@material-ui/core';
 
-import type { ItemT } from '../../types';
+import type { ItemT, ItemOptionIdT } from '../../types';
 
 import { UserContext } from '../../contexts';
 import { CIconButton } from '../../components';
 import { getIcon } from '../../utils';
+import { getItemPrice } from '../../helpers';
 
 export type BasketItemProps = {
   item: ItemT
+  optionId: ItemOptionIdT
 }
 
-const BasketItem = ({ item }: BasketItemProps) => {
+const BasketItem = ({ item, optionId }: BasketItemProps) => {
   const {
     user: { basket },
     addItemToBasket,
     removeItemFromBasket
   } = React.useContext(UserContext);
+
+  const price = (
+    getItemPrice(item, optionId) * basket.items[item.id][optionId]
+  ).toFixed(2);
 
   return (
     <Paper
@@ -45,6 +52,15 @@ const BasketItem = ({ item }: BasketItemProps) => {
       <Box sx={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
         <Typography variant={'subtitle2'} component={'div'}>
           {item.title}
+
+          {optionId !== 'null' && (
+            <Chip
+              size={'small'}
+              color={'info'}
+              label={item.options[optionId].name}
+              sx={{ marginLeft: 1 }}
+            />
+          )}
         </Typography>
 
         <Typography
@@ -60,7 +76,7 @@ const BasketItem = ({ item }: BasketItemProps) => {
 
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
         <Typography variant={'h5'} component={'div'}>
-          {(item.price * basket.items[item.id]).toFixed(2)} UAH
+          {price} UAH
         </Typography>
 
         <ButtonGroup
@@ -69,13 +85,13 @@ const BasketItem = ({ item }: BasketItemProps) => {
           sx={{ marginLeft: 2 }}
         >
           <Button
-            disabled={basket.items[item.id] === 1}
-            onClick={() => removeItemFromBasket(item.id)}
+            disabled={basket.items[item.id][optionId] === 1}
+            onClick={() => removeItemFromBasket(item.id, optionId)}
           >
             -
           </Button>
-          <Button disabled>{basket.items[item.id]}</Button>
-          <Button onClick={() => addItemToBasket(item.id)}>+</Button>
+          <Button disabled>{basket.items[item.id][optionId]}</Button>
+          <Button onClick={() => addItemToBasket(item.id, optionId)}>+</Button>
         </ButtonGroup>
       </Box>
 
@@ -84,7 +100,7 @@ const BasketItem = ({ item }: BasketItemProps) => {
         alignItems: 'center'
       }}>
         <CIconButton
-          onClick={() => removeItemFromBasket(item.id, true)}
+          onClick={() => removeItemFromBasket(item.id, optionId, true)}
           icon={getIcon('deleteForever')}
         />
       </Box>

@@ -1,5 +1,6 @@
 import { ItemT, CategoryIdT } from '../types';
 import { ApplicationIdT } from '../types';
+import { ItemOptionIdT } from '../types';
 
 export const matchItemWithSearchKeyword = (
   item: ItemT,
@@ -84,3 +85,13 @@ export const matchItemWithSearch = (
   }
   return itemIsMatched;
 };
+
+export const getItemPrice = (item: ItemT, optionId: ItemOptionIdT) => {
+  if (typeof item.price === 'number') {
+    return item.price;
+  }
+  optionId = optionId || Object.keys(item.options).find(optionId =>
+    item.options[optionId].default
+  );
+  return item.price[optionId];
+}

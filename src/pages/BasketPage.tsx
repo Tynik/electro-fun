@@ -15,6 +15,7 @@ import {
   BasketStep2
 } from '../components';
 import { useJsonDbSearch } from '../hooks';
+import { getItemPrice } from '../helpers';
 
 export type BasketPageProps = {}
 
@@ -30,12 +31,16 @@ export const BasketPage = (props: BasketPageProps) => {
 
   React.useEffect(() => {
     setStep(0);
+
     search({ ids: Object.keys(basket.items) });
   }, [basket.items]);
 
   const totalPrice = React.useMemo(() =>
-      items?.reduce((totalPrice, item) =>
-        totalPrice + item.price * basket.items[item.id], 0) || 0,
+      items?.reduce((totalPrice, item) => {
+        return totalPrice + Object.keys(basket.items[item.id]).reduce((price, optionId) => {
+          return price + getItemPrice(item, optionId) * basket.items[item.id][optionId];
+        }, 0);
+      }, 0) || 0,
     [items]
   );
 
@@ -78,13 +83,13 @@ export const BasketPage = (props: BasketPageProps) => {
             item
           >
             <BasketStep1
-              active={step === 0}
+              isActive={step === 0}
               items={items}
               onNext={() => setStep(step + 1)}
             />
 
             <BasketStep2
-              active={step === 1}
+              isActive={step === 1}
               items={items}
               totalPrice={totalPrice}
               onBefore={() => setStep(step - 1)}

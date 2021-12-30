@@ -51,7 +51,7 @@ const handler: Handler = async (event, context) => {
 
   await app.telegram.sendMessage(
     CHAT_ID,
-    order.replace(/[-.+?^$[\](){}\\]/g, '\\$&'),
+    order.replace(/[-.+?^$[\](){}\\=]/g, '\\$&'),
     {
       parse_mode: 'MarkdownV2'
     });

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import type { ItemIdT, UserBasketT, UserT } from '../types';
+import type { ItemIdT, ItemOptionIdT, UserBasketT, UserT } from '../types';
 
 import { useLocalStorage } from './useLocalStorage';
 
@@ -20,30 +20,39 @@ export const useUser = () => {
     saveBasketState(user.basket);
   }, [user]);
 
-  const addItemToBasket = React.useCallback((itemId: ItemIdT) => {
-    setUser(user => ({
-      ...user,
-      basket: {
-        items: {
-          ...user.basket.items,
-          [itemId]: ++user.basket.items[itemId] || 1
-        }
-      }
-    }));
-  }, []);
+  const addItemToBasket = React.useCallback(
+    (itemId: ItemIdT, optionId: ItemOptionIdT) => {
+      setUser(user => {
+        const itemOptions = user.basket.items[itemId] || {};
+
+        return {
+          ...user,
+          basket: {
+            items: {
+              ...user.basket.items,
+              [itemId]: {
+                ...itemOptions,
+                [optionId]: ++itemOptions[optionId] || 1
+              }
+            }
+          }
+        };
+      });
+    }, []);
 
   const removeItemFromBasket = React.useCallback(
     (
       itemId: ItemIdT,
+      optionId: ItemOptionIdT,
       all: boolean = false
     ) => {
       setUser(user => {
         let items = { ...user.basket.items };
 
         if (all) {
-          delete items[itemId];
+          delete items[itemId][optionId];
         } else {
-          items[itemId]--;
+          items[itemId][optionId]--;
         }
         return {
           ...user,
