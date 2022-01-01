@@ -55,7 +55,7 @@ const BasketItem = ({ item, optionId }: BasketItemProps) => {
         <Typography variant={'subtitle2'} component={'div'}>
           {item.title}
 
-          {optionId !== 'null' && (
+          {optionId !== 'undefined' && (
             <Chip
               size={'small'}
               color={'info'}

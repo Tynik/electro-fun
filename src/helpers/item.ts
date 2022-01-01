@@ -87,7 +87,7 @@ export const matchItemWithSearch = (
 };
 
 export const getItemDefaultOption = (item: ItemT) =>
-  Object.keys(item.options).find(optionId => item.options[optionId].default);
+  item.options && Object.keys(item.options).find(optionId => item.options[optionId].default);
 
 export const getItemPrice = (item: ItemT, optionId: ItemOptionIdT) => {
   if (typeof item.price === 'number') {
