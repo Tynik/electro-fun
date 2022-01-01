@@ -1,5 +1,9 @@
 {
   "datasheets": {
+    "BMP390": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/BMP390.pdf",
+      "lang": "en"
+    },
     "ESP-12E": {
       "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP-12E.pdf",
       "lang": "en"

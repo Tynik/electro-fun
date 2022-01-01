@@ -126,6 +126,50 @@
         "MOC304x",
         "BT136E"
       ]
+    },
+    {
+      "categoryId": 6,
+      "lang": "ru",
+      "title": "HLK-PM01",
+      "subtitle": "Источник питания 5 В до 600 мА",
+      "seo": {
+        "description": "HLK-PM01 - источник питания 5 В до 600 мА (3 Вт)",
+        "keywords": "hlk-pm01, hi-link, питание, 5в, 3вт, 0.6а"
+      },
+      "buy": true,
+      "price": 75,
+      "content": "",
+      "datasheetId": "HLK-PM0x",
+      "developedBy": "Shenzhen Hi-Link Electronic Co., Ltd",
+      "images": [
+        {
+          "src": "/photos/HLK-PM01-1.webp",
+          "alt": "HLK-PM01 - внешний вид"
+        },
+        {
+          "src": "/photos/HLK-PM01-2.webp",
+          "alt": "HLK-PM01 - вид снизу"
+        }
+      ],
+      "features": [
+        {
+          "refId": 13,
+          "value": "90 - 245 В"
+        },
+        {
+          "refId": 14,
+          "value": "5 В"
+        },
+        {
+          "refId": 15,
+          "value": "до 0.6 А",
+          "info": "до 3 Вт"
+        },
+        {
+          "refId": 95,
+          "value": "до 3 кВ"
+        }
+      ]
     }
   ]
 }
