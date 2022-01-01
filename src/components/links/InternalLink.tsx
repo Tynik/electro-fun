@@ -4,9 +4,9 @@ import {
   LinkProps as RouterLinkProps
 } from 'react-router-dom';
 
-import type { LinkProps } from '@material-ui/core';
+import type { LinkProps } from '@mui/material';
 
-import { useTheme, Link } from '@material-ui/core';
+import { useTheme, Link } from '@mui/material';
 
 export type InternalLinkProps = Omit<RouterLinkProps & LinkProps, 'component'> & {
   startIcon?: React.ReactElement

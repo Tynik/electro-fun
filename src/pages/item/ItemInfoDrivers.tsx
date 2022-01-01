@@ -3,7 +3,7 @@ import {
   Typography,
   AvatarGroup,
   Avatar
-} from '@material-ui/core';
+} from '@mui/material';
 
 import type { ItemDriverT } from '../../types';
 

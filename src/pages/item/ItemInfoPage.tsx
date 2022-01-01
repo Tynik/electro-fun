@@ -7,7 +7,7 @@ import {
   Alert,
   Divider,
   useTheme
-} from '@material-ui/core';
+} from '@mui/material';
 
 import type { ItemT } from '../../types';
 

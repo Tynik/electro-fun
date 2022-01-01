@@ -5,7 +5,7 @@ import {
   ListItem,
   Icon,
   ListItemText
-} from '@material-ui/core';
+} from '@mui/material';
 
 import type { ItemExternalLinkT } from '../../types';
 

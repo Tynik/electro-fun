@@ -6,8 +6,10 @@ import {
   ButtonGroup,
   Paper,
   Typography,
-  Chip
-} from '@material-ui/core';
+  Chip,
+  useTheme,
+  useMediaQuery
+} from '@mui/material';
 
 import type { ItemT, ItemOptionIdT } from '../../types';
 
@@ -27,6 +29,9 @@ const BasketItem = ({ item, optionId }: BasketItemProps) => {
     addItemToBasket,
     removeItemFromBasket
   } = React.useContext(UserContext);
+
+  const theme = useTheme();
+  const smMatch = useMediaQuery(theme.breakpoints.up('sm'));
 
   const price = (
     getItemPrice(item, optionId) * basket.items[item.id][optionId]
@@ -82,6 +87,7 @@ const BasketItem = ({ item, optionId }: BasketItemProps) => {
         <ButtonGroup
           size={'small'}
           aria-label={'Кол-во'}
+          orientation={smMatch ? 'horizontal' : 'vertical'}
           sx={{ marginLeft: 2 }}
         >
           <Button

@@ -7,7 +7,7 @@ import {
   Radio,
   Chip,
   FormControl
-} from '@material-ui/core';
+} from '@mui/material';
 
 import type { ItemT, ItemOptionsT } from '../../types';
 

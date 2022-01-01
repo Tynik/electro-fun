@@ -6,8 +6,8 @@ import {
   Popover,
   Paper,
   useTheme
-} from '@material-ui/core';
-import { Info as InfoIcon } from '@material-ui/icons';
+} from '@mui/material';
+import { Info as InfoIcon } from '@mui/icons-material';
 
 import type {
   ItemFeatureT,

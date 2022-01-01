@@ -3,8 +3,8 @@ import {
   InputBase,
   alpha,
   styled
-} from '@material-ui/core';
-import { Search as SearchIcon } from '@material-ui/icons';
+} from '@mui/material';
+import { Search as SearchIcon } from '@mui/icons-material';
 
 const StyledSearch = styled('div')(({ theme }) => (
   {

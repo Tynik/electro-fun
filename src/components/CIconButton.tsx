@@ -1,8 +1,8 @@
 import React from 'react';
 
-import type { IconButtonProps, BadgeProps } from '@material-ui/core';
+import type { IconButtonProps, BadgeProps } from '@mui/material';
 
-import { IconButton, Badge } from '@material-ui/core';
+import { IconButton, Badge } from '@mui/material';
 
 export type CIconButtonProps = IconButtonProps & {
   badgeContent?: BadgeProps['badgeContent']

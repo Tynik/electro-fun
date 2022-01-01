@@ -5,7 +5,7 @@ import {
   Stack,
   Box,
   TextField
-} from '@material-ui/core';
+} from '@mui/material';
 
 import type { ItemT } from '../../types';
 
@@ -70,7 +70,7 @@ const BasketStep2 = ({ isActive, items, totalPrice, onBefore }: BasketStep2Props
   return (
     <>
       <Grid justifyContent={'center'} container item>
-        <Grid xs={6} item>
+        <Grid xs={12} sm={6} item>
           <Box
             component={'form'}
             autoComplete={'off'}

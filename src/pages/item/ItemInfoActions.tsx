@@ -3,11 +3,11 @@ import {
   Badge,
   Button,
   Stack
-} from '@material-ui/core';
+} from '@mui/material';
 import {
   Link as LinkIcon,
   ShoppingCart as ShoppingCartIcon
-} from '@material-ui/icons';
+} from '@mui/icons-material';
 
 import type { ItemT } from '../../types';
 

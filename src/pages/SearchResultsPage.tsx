@@ -5,10 +5,10 @@ import {
   Box,
   Typography,
   Button,
-} from '@material-ui/core';
+} from '@mui/material';
 import {
   Refresh as RefreshIcon
-} from '@material-ui/icons';
+} from '@mui/icons-material';
 
 import { ItemsT, FoundDatasheetsT } from '../types';
 import { Loader, Items, Datasheets } from '../components';

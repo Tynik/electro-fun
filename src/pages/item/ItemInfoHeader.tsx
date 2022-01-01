@@ -4,7 +4,7 @@ import {
   Box,
   Chip,
   useTheme
-} from '@material-ui/core';
+} from '@mui/material';
 
 import type { ItemT } from '../../types';
 

@@ -6,7 +6,7 @@ import {
   Drawer as MuiDrawer,
   useTheme,
   styled
-} from '@material-ui/core';
+} from '@mui/material';
 
 import { DbContext } from '../../contexts';
 import { getIcon } from '../../utils';
@@ -18,7 +18,9 @@ import CIconButton from '../CIconButton';
 
 export const Drawer = styled(MuiDrawer, {
   shouldForwardProp: (prop) => 'drawerWidth' !== prop
-})(({ drawerWidth }: any) => (
+})<{
+  drawerWidth: number
+}>(({ drawerWidth }) => (
   {
     width: drawerWidth,
     flexShrink: 0,

@@ -5,7 +5,7 @@ import {
   Stepper,
   Step,
   StepLabel
-} from '@material-ui/core';
+} from '@mui/material';
 
 import { DbContext, UserContext } from '../contexts';
 import {
@@ -76,7 +76,7 @@ export const BasketPage = (props: BasketPageProps) => {
 
         <Grid xs={12} spacing={2} container item>
           <Grid
-            xs={9}
+            xs={12} sm={9}
             spacing={2}
             direction={'column'}
             container
@@ -97,7 +97,7 @@ export const BasketPage = (props: BasketPageProps) => {
           </Grid>
 
           <Grid
-            xs={3}
+            xs={12} sm={3}
             alignContent={'center'}
             alignItems={'center'}
             flexDirection={'column'}

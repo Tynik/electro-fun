@@ -1,8 +1,8 @@
 import React from 'react';
 
-import type { LinkProps } from '@material-ui/core';
+import type { LinkProps } from '@mui/material';
 
-import { Link } from '@material-ui/core';
+import { Link } from '@mui/material';
 
 export interface ExternalLinkProps extends Omit<LinkProps, 'target'> {
   href: string

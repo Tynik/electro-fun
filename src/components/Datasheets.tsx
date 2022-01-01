@@ -3,7 +3,7 @@ import {
   List,
   ListItem,
   ListItemText,
-} from '@material-ui/core';
+} from '@mui/material';
 
 import { FoundDatasheetsT } from '../types';
 import { sortDatasheets } from '../helpers';

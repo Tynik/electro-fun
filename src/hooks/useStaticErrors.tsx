@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Container,
   Alert
-} from '@material-ui/core';
+} from '@mui/material';
 import { Loader, InternalLink } from '../components';
 
 export type UseStaticErrorsProps = {

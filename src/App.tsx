@@ -5,7 +5,7 @@ import {
   Box,
   styled,
   LinearProgress
-} from '@material-ui/core';
+} from '@mui/material';
 
 import {
   Menu,
@@ -26,7 +26,9 @@ const drawerWidth = 240;
 
 const Main = styled('div', {
   shouldForwardProp: (prop) => prop !== 'menuIsOpened'
-})(({ theme, menuIsOpened }: any) => (
+})<{
+  menuIsOpened: boolean
+}>(({ theme, menuIsOpened }) => (
     {
       flexGrow: 1,
       padding: theme.spacing(2, 0),

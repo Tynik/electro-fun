@@ -2,8 +2,8 @@ import React from 'react';
 import {
   Breadcrumbs as MuiBreadcrumbs,
   useTheme
-} from '@material-ui/core';
-import { Home as HomeIcon } from '@material-ui/icons';
+} from '@mui/material';
+import { Home as HomeIcon } from '@mui/icons-material';
 import { DbContext } from '../contexts';
 import { BreadcrumbItem } from './BreadcrumbItem';
 

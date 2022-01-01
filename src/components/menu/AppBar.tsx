@@ -3,7 +3,7 @@ import {
   styled,
   AppBar as MuiAppBar,
   Theme
-} from '@material-ui/core';
+} from '@mui/material';
 
 import Toolbar, { ToolbarProps } from './Toolbar';
 

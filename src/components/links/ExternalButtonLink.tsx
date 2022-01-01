@@ -1,8 +1,8 @@
 import React from 'react';
 
-import type { ButtonProps, LinkTypeMap } from '@material-ui/core';
+import type { ButtonProps, LinkTypeMap } from '@mui/material';
 
-import { Button } from '@material-ui/core';
+import { Button } from '@mui/material';
 
 export interface ExternalButtonLinkProps
   extends Omit<ButtonProps<LinkTypeMap['defaultComponent']>, 'target' | 'component'> {

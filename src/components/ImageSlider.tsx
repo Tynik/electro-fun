@@ -5,7 +5,7 @@ import {
   styled,
   Typography,
   useTheme
-} from '@material-ui/core';
+} from '@mui/material';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';

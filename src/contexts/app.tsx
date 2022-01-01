@@ -4,7 +4,7 @@ import {
   Alert,
   Stack,
   useTheme
-} from '@material-ui/core';
+} from '@mui/material';
 
 export type Notification = {
   message: string

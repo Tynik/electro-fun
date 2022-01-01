@@ -1,5 +1,5 @@
 import React from 'react';
-import { SvgIconProps } from '@material-ui/core';
+import { SvgIconProps } from '@mui/material';
 import {
   Menu as MenuIcon,
   Dashboard as DashboardIcon,
@@ -28,7 +28,7 @@ import {
   AttachMoney as AttachMoneyIcon,
   NavigateBefore as NavigateBeforeIcon,
   NavigateNext as NavigateNextIcon,
-} from '@material-ui/icons';
+} from '@mui/icons-material';
 
 export const getIcon = (name: string, props: SvgIconProps = {}): any => {
   return {

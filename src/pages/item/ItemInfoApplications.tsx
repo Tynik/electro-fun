@@ -6,8 +6,8 @@ import {
   ListItemIcon,
   Typography,
   useTheme
-} from '@material-ui/core';
-import { ArrowRight as ArrowRightIcon } from '@material-ui/icons';
+} from '@mui/material';
+import { ArrowRight as ArrowRightIcon } from '@mui/icons-material';
 
 import { ApplicationIdT } from '../../types';
 import { DbContext } from '../../contexts';

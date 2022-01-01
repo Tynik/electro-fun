@@ -6,8 +6,8 @@ import {
   Button,
   CardActionArea,
   CardHeader
-} from '@material-ui/core';
-import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
+} from '@mui/material';
+import { ExpandMore as ExpandMoreIcon } from '@mui/icons-material';
 
 import type { ItemT, ItemsT } from '../types';
 

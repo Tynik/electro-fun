@@ -8,7 +8,7 @@ import {
   List,
   ListItem,
   useTheme
-} from '@material-ui/core';
+} from '@mui/material';
 import { DbContext } from '../contexts';
 
 export const Footer = () => {

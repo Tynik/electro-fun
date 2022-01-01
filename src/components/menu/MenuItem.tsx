@@ -5,7 +5,7 @@ import {
   ListItemIcon,
   ListItemText,
   useTheme
-} from '@material-ui/core';
+} from '@mui/material';
 
 export type MenuItemProps = {
   to: string

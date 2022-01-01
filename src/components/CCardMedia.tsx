@@ -3,7 +3,7 @@ import {
   CardMedia,
   CircularProgress,
   useTheme
-} from '@material-ui/core';
+} from '@mui/material';
 
 export interface CCardMediaProps extends Omit<ImgHTMLAttributes<any>, 'onLoad'> {
 }

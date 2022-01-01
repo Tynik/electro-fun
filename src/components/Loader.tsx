@@ -3,7 +3,7 @@ import {
   CircularProgress,
   Typography,
   useTheme
-} from '@material-ui/core';
+} from '@mui/material';
 
 export type LoaderProps = {
   style?: Omit<React.CSSProperties, 'display' | 'justifyContent'>
