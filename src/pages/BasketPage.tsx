@@ -62,7 +62,7 @@ export const BasketPage = (props: BasketPageProps) => {
 
       <Grid spacing={2} item container>
         <Grid xs={12} item>
-          <Grid xs={9} item>
+          <Grid xs={12} md={9} item>
             <Stepper activeStep={step}>
               <Step>
                 <StepLabel>Товары</StepLabel>
@@ -76,7 +76,7 @@ export const BasketPage = (props: BasketPageProps) => {
 
         <Grid xs={12} spacing={2} container item>
           <Grid
-            xs={12} sm={9}
+            xs={12} md={9}
             spacing={2}
             direction={'column'}
             container
@@ -97,7 +97,7 @@ export const BasketPage = (props: BasketPageProps) => {
           </Grid>
 
           <Grid
-            xs={12} sm={3}
+            xs={12} md={3}
             alignContent={'center'}
             alignItems={'center'}
             flexDirection={'column'}

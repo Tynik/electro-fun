@@ -85,7 +85,7 @@ const Toolbar = (props: ToolbarProps) => {
 
       <Box sx={{ flexGrow: 1 }}/>
 
-      <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+      <Box sx={{ display: 'flex' }}>
         <CIconButton
           onClick={onBasketClick}
           disabled={!countItemsInBasket}

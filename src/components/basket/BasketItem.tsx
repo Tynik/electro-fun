@@ -80,7 +80,7 @@ const BasketItem = ({ item, optionId }: BasketItemProps) => {
       <Box sx={{ flexGrow: 1 }}/>
 
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
-        <Typography variant={'h5'} component={'div'}>
+        <Typography variant={'subtitle1'} component={'div'}>
           {price} UAH
         </Typography>
 
