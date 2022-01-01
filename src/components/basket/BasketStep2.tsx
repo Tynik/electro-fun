@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Grid,
-  Button,
   Stack,
   Box,
   TextField
@@ -12,6 +11,7 @@ import type { ItemT } from '../../types';
 import { AppContext, UserContext } from '../../contexts';
 import { netlifyMakeOrder } from '../../api';
 import { getIcon } from '../../utils';
+import { CButton } from '../../components';
 
 export type BasketStep2Props = {
   isActive: boolean
@@ -129,17 +129,17 @@ const BasketStep2 = ({ isActive, items, totalPrice, onBefore }: BasketStep2Props
         <Stack
           spacing={2}
           direction={'row'}
-          sx={{ justifyContent: 'right' }}
+          justifyContent={'space-between'}
         >
-          <Button
+          <CButton
             onClick={onBefore}
             startIcon={getIcon('navigateBefore')}
             variant={'outlined'}
           >
             Назад
-          </Button>
+          </CButton>
 
-          <Button
+          <CButton
             onClick={makeOrder}
             disabled={!fullname || !phone || !address}
             startIcon={getIcon('money')}
@@ -147,7 +147,7 @@ const BasketStep2 = ({ isActive, items, totalPrice, onBefore }: BasketStep2Props
             variant={'contained'}
           >
             Оформить
-          </Button>
+          </CButton>
         </Stack>
       </Grid>
     </>

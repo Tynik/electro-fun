@@ -6,3 +6,4 @@ export * from './useJsonDbSearch';
 export * from './useLocalStorage';
 export * from './useSeo';
 export * from './useUser';
+export * from './useMediaQuery';

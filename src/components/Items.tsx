@@ -40,7 +40,12 @@ export const Items = ({ items }: ItemsProps) => {
   return (
     <Grid role={'list'} spacing={2} justifyContent={'center'} container>
       {items.map(item => (
-        <Grid key={item.id} role={'listitem'} sx={{ maxWidth: '345px', width: '100%' }} item>
+        <Grid
+          key={item.id}
+          role={'listitem'}
+          sx={{ maxWidth: '345px', width: '100%' }}
+          item
+        >
           <Card
             sx={{ width: '100%' }}
             onKeyPress={(e) =>

@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Badge,
   Button,
-  Stack
+  Stack,
 } from '@mui/material';
 import {
   Link as LinkIcon,
@@ -14,6 +14,8 @@ import type { ItemT } from '../../types';
 import { DbContext, UserContext } from '../../contexts';
 import { ExternalButtonLink } from '../../components';
 import { getIcon, useQueryParams } from '../../utils';
+import { useUpMediaQuery } from '../../hooks';
+import { getItemDefaultOption } from '../../helpers';
 
 export type ItemInfoActionsProps = {
   item: ItemT
@@ -23,9 +25,16 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
   const { db } = React.useContext(DbContext);
   const { user, addItemToBasket } = React.useContext(UserContext);
 
-  const { optionId: selectedOptionId } = useQueryParams();
+  const { optionId: selectedItemOptionId } = useQueryParams();
 
-  const itemInBasket = (user.basket.items[item.id] || {})[selectedOptionId];
+  const itemOptionId = React.useMemo(() =>
+      selectedItemOptionId || getItemDefaultOption(item),
+    [selectedItemOptionId]
+  );
+
+  const smMatch = useUpMediaQuery('sm');
+
+  const itemInBasket = (user.basket.items[item.id] || {})[itemOptionId];
 
   return (
     <Stack spacing={2} direction={'row'} justifyContent={'center'}>
@@ -55,12 +64,13 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
           color={'success'}
         >
           <Button
-            onClick={() => addItemToBasket(item.id, selectedOptionId)}
+            onClick={() => addItemToBasket(item.id, itemOptionId)}
             variant={itemInBasket ? 'outlined' : 'contained'}
             color={itemInBasket ? 'info' : 'success'}
             startIcon={getIcon('addShoppingCart')}
+            size={smMatch ? 'medium' : 'small'}
           >
-            {itemInBasket ? 'В корзине' : 'Купить'}
+            {itemInBasket ? 'В корзине' : 'В корзину'}
           </Button>
         </Badge>
       )}

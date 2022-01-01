@@ -2,21 +2,19 @@ import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import {
   Box,
-  Button,
   ButtonGroup,
   Paper,
   Typography,
   Chip,
-  useTheme,
-  useMediaQuery
 } from '@mui/material';
 
 import type { ItemT, ItemOptionIdT } from '../../types';
 
 import { UserContext } from '../../contexts';
-import { CIconButton } from '../../components';
+import { CIconButton, CButton } from '../../components';
 import { getIcon } from '../../utils';
 import { getItemPrice } from '../../helpers';
+import { useUpMediaQuery } from '../../hooks';
 
 export type BasketItemProps = {
   item: ItemT
@@ -30,8 +28,7 @@ const BasketItem = ({ item, optionId }: BasketItemProps) => {
     removeItemFromBasket
   } = React.useContext(UserContext);
 
-  const theme = useTheme();
-  const smMatch = useMediaQuery(theme.breakpoints.up('sm'));
+  const smMatch = useUpMediaQuery('sm');
 
   const price = (
     getItemPrice(item, optionId) * basket.items[item.id][optionId]
@@ -81,7 +78,7 @@ const BasketItem = ({ item, optionId }: BasketItemProps) => {
 
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
         <Typography variant={'subtitle1'} component={'div'}>
-          {price} UAH
+          {price}
         </Typography>
 
         <ButtonGroup
@@ -90,14 +87,14 @@ const BasketItem = ({ item, optionId }: BasketItemProps) => {
           orientation={smMatch ? 'horizontal' : 'vertical'}
           sx={{ marginLeft: 2 }}
         >
-          <Button
+          <CButton
             disabled={basket.items[item.id][optionId] === 1}
             onClick={() => removeItemFromBasket(item.id, optionId)}
           >
             -
-          </Button>
-          <Button disabled>{basket.items[item.id][optionId]}</Button>
-          <Button onClick={() => addItemToBasket(item.id, optionId)}>+</Button>
+          </CButton>
+          <CButton disabled>{basket.items[item.id][optionId]}</CButton>
+          <CButton onClick={() => addItemToBasket(item.id, optionId)}>+</CButton>
         </ButtonGroup>
       </Box>
 

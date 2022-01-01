@@ -9,6 +9,7 @@ export * from './Datasheets';
 export * from './CImage';
 export * from './CCardMedia';
 export { default as CIconButton } from './CIconButton';
+export { default as CButton } from './CButton';
 export * from './ImageSlider';
 export * from './Footer';
 export * from './menu';

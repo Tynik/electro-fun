@@ -2,9 +2,14 @@ import React from 'react';
 
 import type { IconButtonProps, BadgeProps } from '@mui/material';
 
-import { IconButton, Badge } from '@mui/material';
+import {
+  IconButton,
+  Badge,
+} from '@mui/material';
 
-export type CIconButtonProps = IconButtonProps & {
+import { useUpMediaQuery } from '../hooks';
+
+export type CIconButtonProps = Omit<IconButtonProps, 'size'> & {
   badgeContent?: BadgeProps['badgeContent']
   badgeColor?: BadgeProps['color']
   icon: React.ReactElement
@@ -18,8 +23,10 @@ const CIconButton = (props: CIconButtonProps) => {
     ...rest
   } = props;
 
+  const smMatch = useUpMediaQuery('sm');
+
   return (
-    <IconButton {...rest}>
+    <IconButton {...rest} size={smMatch ? 'medium' : 'small'}>
       {badgeContent !== undefined ? (
         <Badge
           badgeContent={badgeContent}

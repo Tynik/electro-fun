@@ -9,33 +9,29 @@ import {
   FormControl
 } from '@mui/material';
 
-import type { ItemT, ItemOptionsT } from '../../types';
+import type { ItemT } from '../../types';
 
 import { UserContext } from '../../contexts';
 import { useQueryParams } from '../../utils/router';
+import { getItemDefaultOption } from '../../helpers';
 
 export type ItemInfoOptionsProps = {
   item: ItemT
-  options: ItemOptionsT
 }
 
-export const ItemInfoOptions = ({ item, options }: ItemInfoOptionsProps) => {
+export const ItemInfoOptions = ({ item }: ItemInfoOptionsProps) => {
   const history = useHistory();
 
-  const { optionId: selectedOptionId } = useQueryParams();
+  const { optionId: selectedItemOptionId } = useQueryParams();
 
   const {
     user: { basket },
   } = React.useContext(UserContext);
 
-  const itemInBasket = basket.items[item.id] || {};
+  const itemOptionsInBasket = basket.items[item.id] || {};
 
-  const defaultOption = React.useMemo(() =>
-      Object.keys(options).find(optionId =>
-        selectedOptionId
-          ? optionId === selectedOptionId
-          : options[optionId].default
-      ),
+  const itemOptionId = React.useMemo(() =>
+    selectedItemOptionId || getItemDefaultOption(item),
     []
   );
 
@@ -53,22 +49,23 @@ export const ItemInfoOptions = ({ item, options }: ItemInfoOptionsProps) => {
       </FormLabel>
 
       <RadioGroup
-        defaultValue={defaultOption}
+        defaultValue={itemOptionId}
         aria-label={'option'}
         name={'radio-buttons-group'}
         onChange={onSelectOption}
       >
-        {Object.keys(options).map(optionId => (
+        {Object.keys(item.options).map(optionId => (
           <FormControlLabel
             key={optionId}
             value={optionId}
             label={(
               <>
-                {options[optionId].name}
-                {itemInBasket[optionId] && (
+                {item.options[optionId].name}
+
+                {itemOptionsInBasket[optionId] && (
                   <Chip
                     size={'small'}
-                    label={`уже в корзине x${itemInBasket[optionId]}`}
+                    label={`уже в корзине x${itemOptionsInBasket[optionId]}`}
                     color={'info'}
                     sx={{ marginLeft: 1 }}
                   />

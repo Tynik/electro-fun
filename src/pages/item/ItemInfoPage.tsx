@@ -49,7 +49,7 @@ export const ItemInfoPage = () => {
   const { wordsWrapper } = useTextProcessor();
   const { errors, setErrors, printErrors } = useStaticErrors();
 
-  const { optionId: selectedOptionId } = useQueryParams();
+  const { optionId: selectedItemOptionId } = useQueryParams();
 
   useSmoothScroll({ top: 0, left: 0 });
 
@@ -182,7 +182,7 @@ export const ItemInfoPage = () => {
           <Box sx={{
             marginTop: theme.spacing(2),
           }}>
-            <ItemInfoOptions item={item} options={item.options}/>
+            <ItemInfoOptions item={item}/>
           </Box>
         )}
 
@@ -192,7 +192,7 @@ export const ItemInfoPage = () => {
             textAlign: 'center'
           }}>
             <Typography variant={'h5'} component={'div'}>
-              {getItemPrice(item, selectedOptionId).toFixed(2)} UAH
+              {getItemPrice(item, selectedItemOptionId).toFixed(2)} UAH
             </Typography>
           </Box>
         )}
