@@ -28,6 +28,7 @@ import {
   AttachMoney as AttachMoneyIcon,
   NavigateBefore as NavigateBeforeIcon,
   NavigateNext as NavigateNextIcon,
+  Power as PowerIcon,
 } from '@mui/icons-material';
 
 export const getIcon = (name: string, props: SvgIconProps = {}): any => {
@@ -59,5 +60,6 @@ export const getIcon = (name: string, props: SvgIconProps = {}): any => {
     money: <AttachMoneyIcon {...props}/>,
     navigateBefore: <NavigateBeforeIcon {...props}/>,
     navigateNext: <NavigateNextIcon {...props}/>,
+    power: <PowerIcon {...props}/>,
   }[name];
 };

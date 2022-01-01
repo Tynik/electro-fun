@@ -65,7 +65,7 @@ export type ItemExternalLinkT = {
   url: string
   lang: string
   icon?: string
-  iconAlt: string
+  iconAlt?: string
 }
 
 export type ItemOptionT = {

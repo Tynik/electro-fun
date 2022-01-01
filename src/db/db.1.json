@@ -471,6 +471,11 @@
       "id": 16,
       "name": "Стабилизаторы",
       "icon": "apps"
+    },
+    {
+      "id": 17,
+      "name": "AC-DC преобразователи",
+      "icon": "power"
     }
   ],
   "featureSections": {
@@ -916,6 +921,9 @@
     "98": {
       "name": "Частота",
       "featSecRefId": 8
+    },
+    "99": {
+      "name": "Вес"
     }
   },
   "items": [
@@ -983,6 +991,7 @@
         "description": "BMP280 - датчик для измерения температуры, давления и влажности",
         "keywords": "bmp280, bosch, температура, давление, влажность"
       },
+      "developedBy": "Bosch Sensortec",
       "buy": true,
       "price": 23,
       "datasheetId": "BMP280",
@@ -1961,7 +1970,7 @@
       "categoryId": 6,
       "lang": "ru",
       "title": "CH340G",
-      "subtitle": "Преобразование USB в UART",
+      "subtitle": "USB в UART",
       "seo": {
         "description": "CH340G - преобразование шины USB в последовательный интерфейс UART",
         "keywords": "ch340g, usb, uart, преобразование"

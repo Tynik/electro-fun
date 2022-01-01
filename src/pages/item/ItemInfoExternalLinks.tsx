@@ -28,7 +28,11 @@ export const ItemInfoExternalLinks = ({ externalLinks }: ItemInfoExternalLinksPr
             {externalResource.icon && (
               <Icon
                 fontSize={'small'}
-                sx={{ display: 'flex', alignItems: 'center' }}
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  marginRight: 1
+                }}
               >
                 <img
                   src={`/icons/${externalResource.icon}`}
