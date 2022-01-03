@@ -90,7 +90,7 @@ export const ImageSlider = (props: ImageSliderProps) => {
               alt={image.alt}
               style={{
                 height: '100%',
-                objectFit: 'cover'
+                objectFit: 'scale-down'
               }}
               onLoad={() => setInLoading((inLoading) => --inLoading)}
             />

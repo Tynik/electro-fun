@@ -190,6 +190,35 @@
           "iconAlt": "hlktech.com"
         }
       ]
+    },
+    {
+      "categoryId": 13,
+      "lang": "ru",
+      "title": "Трансформатор тока 0 - 100 А",
+      "subtitle": "Измерение переменного тока",
+      "seo": {
+        "description": "Трансформатор для измерения переменного тока",
+        "keywords": "трансформатор, ток, 100а"
+      },
+      "buy": true,
+      "price": 50,
+      "images": [
+        {
+          "src": "/photos/AC-CT-0-100A-1.webp",
+          "alt": "Внешний вид"
+        },
+        {
+          "src": "/photos/AC-CT-0-100A-2.webp",
+          "alt": "Пример использования"
+        }
+      ],
+      "warningContent": "",
+      "features": [
+        {
+          "refId": 100,
+          "value": "15.2 мм"
+        }
+      ]
     }
   ]
 }

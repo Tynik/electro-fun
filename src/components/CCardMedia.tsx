@@ -40,7 +40,7 @@ export const CCardMedia = (props: CCardMediaProps) => {
       <CardMedia
         sx={{
           height: '100%',
-          objectFit: 'cover',
+          objectFit: 'scale-down',
           display: imageIsLoaded ? 'block' : 'none'
         }}
         component={'img'}
