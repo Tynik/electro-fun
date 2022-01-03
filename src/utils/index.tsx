@@ -8,7 +8,7 @@ export * from './text';
 export * from './router';
 
 export const generateItemId = (itemTitle: string) =>
-  itemTitle.replaceAll(' ', '-').toLowerCase();
+  itemTitle.replace(/[ .]/g, '-').toLowerCase();
 
 export const preprocessItems = (items: ItemT[]) =>
   items.map(item => (

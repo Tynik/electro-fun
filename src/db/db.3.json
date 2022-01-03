@@ -57,6 +57,10 @@
         {
           "refId": 15,
           "value": "до 1 А"
+        },
+        {
+          "refId": 42,
+          "value": "SOT-223"
         }
       ],
       "relatedDatasheetIds": [

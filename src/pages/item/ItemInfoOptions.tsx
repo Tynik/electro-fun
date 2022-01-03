@@ -65,7 +65,7 @@ export const ItemInfoOptions = ({ item }: ItemInfoOptionsProps) => {
                 {itemOptionsInBasket[optionId] && (
                   <Chip
                     size={'small'}
-                    label={`уже в корзине x${itemOptionsInBasket[optionId]}`}
+                    label={`в корзине x${itemOptionsInBasket[optionId]}`}
                     color={'info'}
                     sx={{ marginLeft: 1 }}
                   />
