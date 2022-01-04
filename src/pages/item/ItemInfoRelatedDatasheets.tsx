@@ -3,10 +3,10 @@ import {
   Typography
 } from '@mui/material';
 
-import type { DatasheetIdT, DatasheetsT } from '../../types';
+import type { DatasheetIdT, DatasheetsT } from '~/types';
 
-import { DbContext } from '../../contexts';
-import { Datasheets } from '../../components';
+import { DbContext } from '~/contexts';
+import { Datasheets } from '~/components';
 
 export type ItemInfoActionsProps = {
   relatedDatasheetIds: DatasheetIdT[]

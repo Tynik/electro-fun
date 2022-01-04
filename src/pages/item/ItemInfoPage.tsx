@@ -9,24 +9,24 @@ import {
   useTheme
 } from '@mui/material';
 
-import type { ItemT } from '../../types';
+import type { ItemT } from '~/types';
 
-import { DbContext } from '../../contexts';
-import { useQueryParams } from '../../utils';
-import { getItemPrice } from '../../helpers';
+import { DbContext } from '~/contexts';
+import { useQueryParams } from '~/utils';
+import { getItemPrice } from '~/helpers';
 import {
   useTextProcessor,
   useSmoothScroll,
   useStaticErrors,
   useJsonDbSearch,
   useSeo
-} from '../../hooks';
+} from '~/hooks';
 import {
   Loader,
   ExternalLink,
   ImageSlider,
   BackButton
-} from '../../components';
+} from '~/components';
 import { ItemInfoFeatures } from './ItemInfoFeatures';
 import { ItemInfoOptions } from './ItemInfoOptions';
 import { ItemInfoExternalLinks } from './ItemInfoExternalLinks';

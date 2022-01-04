@@ -5,10 +5,10 @@ import {
   Avatar
 } from '@mui/material';
 
-import type { ItemDriverT } from '../../types';
+import type { ItemDriverT } from '~/types';
 
-import { ExternalLink } from '../../components';
-import { getItemDriverAvatarSrc } from '../../utils';
+import { ExternalLink } from '~/components';
+import { getItemDriverAvatarSrc } from '~/utils';
 
 export type ItemInfoDriversProps = {
   drivers: ItemDriverT[]

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import type { DbT } from '../types';
+import type { DbT } from '~/types';
 
-import { useJsonDb } from '../hooks';
+import { useJsonDb } from '~/hooks';
 
 export type DbContextState = {
   db: DbT

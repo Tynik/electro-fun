@@ -10,8 +10,8 @@ import {
   Refresh as RefreshIcon
 } from '@mui/icons-material';
 
-import { ItemsT, FoundDatasheetsT } from '../types';
-import { Loader, Items, Datasheets } from '../components';
+import { ItemsT, FoundDatasheetsT } from '~/types';
+import { Loader, Items, Datasheets } from '~/components';
 
 export type SearchResultsPageProps = {
   items: ItemsT

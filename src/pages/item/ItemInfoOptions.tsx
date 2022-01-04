@@ -9,11 +9,11 @@ import {
   FormControl
 } from '@mui/material';
 
-import type { ItemT } from '../../types';
+import type { ItemT } from '~/types';
 
-import { UserContext } from '../../contexts';
-import { useQueryParams } from '../../utils/router';
-import { getItemDefaultOption } from '../../helpers';
+import { UserContext } from '~/contexts';
+import { useQueryParams } from '~/utils/router';
+import { getItemDefaultOption } from '~/helpers';
 
 export type ItemInfoOptionsProps = {
   item: ItemT

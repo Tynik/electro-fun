@@ -5,9 +5,9 @@ import {
   ListItemText,
 } from '@mui/material';
 
-import { FoundDatasheetsT } from '../types';
-import { sortDatasheets } from '../helpers';
-import { ExternalLink } from '../components';
+import { FoundDatasheetsT } from '~/types';
+import { sortDatasheets } from '~/helpers';
+import { ExternalLink } from '~/components';
 
 export type DatasheetsProps = {
   datasheets: FoundDatasheetsT

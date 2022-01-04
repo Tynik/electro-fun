@@ -1,4 +1,4 @@
-import { wordsWrapper } from '../utils';
+import { wordsWrapper } from '~/utils';
 
 export const useTextProcessor = () => {
   return {

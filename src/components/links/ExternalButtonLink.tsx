@@ -4,7 +4,7 @@ import type { ButtonProps, LinkTypeMap } from '@mui/material';
 
 import { Button } from '@mui/material';
 
-import { useUpMediaQuery } from '../../hooks';
+import { useUpMediaQuery } from '~/hooks';
 
 export interface ExternalButtonLinkProps
   extends Omit<ButtonProps<LinkTypeMap['defaultComponent']>, 'target' | 'component' | 'size'> {

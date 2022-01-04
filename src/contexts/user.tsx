@@ -1,8 +1,8 @@
 import React from 'react';
 
-import type { UserT, ItemIdT, ItemOptionIdT } from '../types';
+import type { UserT, ItemIdT, ItemOptionIdT } from '~/types';
 
-import { useUser } from '../hooks';
+import { useUser } from '~/hooks';
 
 export type UserContextState = {
   user: UserT

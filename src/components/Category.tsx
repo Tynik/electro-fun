@@ -1,12 +1,12 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-import { SearchResultsPage } from '../pages';
-import { DbContext } from '../contexts';
-import { useJsonDbSearch } from '../hooks';
+import { SearchResultsPage } from '~/pages';
+import { DbContext } from '~/contexts';
+import { useJsonDbSearch } from '~/hooks';
 import { Breadcrumbs } from './Breadcrumbs';
 import { BreadcrumbItem } from './BreadcrumbItem';
-import { getIcon } from '../utils';
+import { getIcon } from '~/utils';
 import { Loader } from './Loader';
 
 export const Category = () => {

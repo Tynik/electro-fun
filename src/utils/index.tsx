@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ItemT, DbT, ItemDriverSrcT, ItemDriverSrcSourceT } from '../types';
+import { ItemT, DbT, ItemDriverSrcT, ItemDriverSrcSourceT } from '~/types';
 
 export * from './mui';
 export * from './object';

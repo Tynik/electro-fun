@@ -12,7 +12,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 import { Loader } from './Loader';
 import { CImage } from './CImage';
-import { ItemImageT } from '../types';
+import { ItemImageT } from '~/types';
 
 const CustomCarousel = styled(Carousel)(({ theme }) => (
   {

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { useSmoothScroll } from '../hooks';
-import { DatasheetsProps, Datasheets } from '../components';
+import { useSmoothScroll } from '~/hooks';
+import { DatasheetsProps, Datasheets } from '~/components';
 
 export type DatasheetsPageProps = Pick<DatasheetsProps, 'datasheets'> & {
 

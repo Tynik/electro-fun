@@ -192,6 +192,13 @@
           "lang": "en",
           "icon": "hlktech.com.png",
           "iconAlt": "hlktech.com"
+        },
+        {
+          "name": "Пример схемы конвертации 230 В в 5/3.3 В",
+          "url": "https://oshwlab.com/m.aliynik/HLK_PM01-33b4760fcdff46b6b71784304f89c379",
+          "lang": "en",
+          "icon": "oshwlab.com.ico",
+          "iconAlt": "oshwlab.com"
         }
       ]
     },

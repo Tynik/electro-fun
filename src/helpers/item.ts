@@ -1,6 +1,6 @@
-import { ItemT, CategoryIdT } from '../types';
-import { ApplicationIdT } from '../types';
-import { ItemOptionIdT } from '../types';
+import { ItemT, CategoryIdT } from '~/types';
+import { ApplicationIdT } from '~/types';
+import { ItemOptionIdT } from '~/types';
 
 export const matchItemWithSearchKeyword = (
   item: ItemT,

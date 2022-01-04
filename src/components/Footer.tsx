@@ -9,7 +9,7 @@ import {
   ListItem,
   useTheme
 } from '@mui/material';
-import { DbContext } from '../contexts';
+import { DbContext } from '~/contexts';
 
 export const Footer = () => {
   const theme = useTheme();

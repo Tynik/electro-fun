@@ -7,7 +7,7 @@ import {
   Badge,
 } from '@mui/material';
 
-import { useUpMediaQuery } from '../hooks';
+import { useUpMediaQuery } from '~/hooks';
 
 export type CIconButtonProps = Omit<IconButtonProps, 'size'> & {
   badgeContent?: BadgeProps['badgeContent']

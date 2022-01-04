@@ -3,7 +3,7 @@ import {
   Container,
   Alert
 } from '@mui/material';
-import { Loader, InternalLink } from '../components';
+import { Loader, InternalLink } from '~/components';
 
 export type UseStaticErrorsProps = {
   showReturnToMain: boolean

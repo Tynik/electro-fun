@@ -1,6 +1,6 @@
 import React from 'react';
 
-import type { ItemIdT, ItemOptionIdT, UserBasketT, UserT } from '../types';
+import type { ItemIdT, ItemOptionIdT, UserBasketT, UserT } from '~/types';
 
 import { useLocalStorage } from './useLocalStorage';
 

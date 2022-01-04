@@ -1,11 +1,11 @@
 import React from 'react';
 import { Grid, Alert, Stack } from '@mui/material';
 
-import type { ItemT } from '../../types';
+import type { ItemT } from '~/types';
 
-import { UserContext } from '../../contexts';
-import { BasketItem, CButton } from '../../components';
-import { getIcon } from '../../utils';
+import { UserContext } from '~/contexts';
+import { BasketItem, CButton } from '~/components';
+import { getIcon } from '~/utils';
 
 export type BasketStep1Props = {
   isActive: boolean

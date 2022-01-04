@@ -9,11 +9,11 @@ import {
 } from '@mui/material';
 import { ExpandMore as ExpandMoreIcon } from '@mui/icons-material';
 
-import type { ItemT, ItemsT } from '../types';
+import type { ItemT, ItemsT } from '~/types';
 
-import { DbContext } from '../contexts';
-import { NO_IMAGE } from '../constants';
-import { CCardMedia } from '../components';
+import { DbContext } from '~/contexts';
+import { NO_IMAGE } from '~/constants';
+import { CCardMedia } from '~/components';
 
 export const getItemMainImageSrc = (item: ItemT) => {
   if (!item.images || !item.images.length) {

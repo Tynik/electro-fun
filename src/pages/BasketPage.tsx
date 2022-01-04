@@ -7,15 +7,15 @@ import {
   StepLabel
 } from '@mui/material';
 
-import { DbContext, UserContext } from '../contexts';
+import { DbContext, UserContext } from '~/contexts';
 import {
   BackButton,
   Loader,
   BasketStep1,
   BasketStep2
-} from '../components';
-import { useJsonDbSearch } from '../hooks';
-import { getItemPrice } from '../helpers';
+} from '~/components';
+import { useJsonDbSearch } from '~/hooks';
+import { getItemPrice } from '~/helpers';
 
 export type BasketPageProps = {}
 

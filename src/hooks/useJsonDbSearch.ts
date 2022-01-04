@@ -7,12 +7,12 @@ import {
   ItemT,
   DatasheetIdT,
   FoundDatasheetsT
-} from '../types';
+} from '~/types';
 import {
   matchItemWithSearch,
   matchDatasheetWithSearchKeywords
-} from '../helpers';
-import { ApplicationIdT } from '../types';
+} from '~/helpers';
+import { ApplicationIdT } from '~/types';
 
 export type SearchHandler = {
   ids?: string[]

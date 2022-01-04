@@ -7,9 +7,9 @@ import {
   ListItemText
 } from '@mui/material';
 
-import type { ItemExternalLinkT } from '../../types';
+import type { ItemExternalLinkT } from '~/types';
 
-import { ExternalLink } from '../../components';
+import { ExternalLink } from '~/components';
 
 export type ItemInfoExternalLinksProps = {
   externalLinks: ItemExternalLinkT[]

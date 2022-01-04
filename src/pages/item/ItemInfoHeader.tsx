@@ -6,11 +6,11 @@ import {
   useTheme
 } from '@mui/material';
 
-import type { ItemT } from '../../types';
+import type { ItemT } from '~/types';
 
-import { DbContext } from '../../contexts';
-import { InternalLink } from '../../components';
-import { getIcon } from '../../utils';
+import { DbContext } from '~/contexts';
+import { InternalLink } from '~/components';
+import { getIcon } from '~/utils';
 
 export type ItemInfoHeaderProps = {
   item: ItemT

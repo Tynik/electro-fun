@@ -8,13 +8,13 @@ import {
   styled
 } from '@mui/material';
 
-import { DbContext } from '../../contexts';
-import { getIcon } from '../../utils';
-import { useLocalStorage } from '../../hooks';
+import { DbContext } from '~/contexts';
+import { getIcon } from '~/utils';
+import { useLocalStorage } from '~/hooks';
 
 import AppBar, { AppBarProps } from './AppBar';
 import MenuItem from './MenuItem';
-import CIconButton from '../CIconButton';
+import CIconButton from '~/components/CIconButton';
 
 export const Drawer = styled(MuiDrawer, {
   shouldForwardProp: (prop) => 'drawerWidth' !== prop

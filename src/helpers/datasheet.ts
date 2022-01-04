@@ -1,4 +1,4 @@
-import { DatasheetIdT, FoundDatasheetsT } from '../types';
+import { DatasheetIdT, FoundDatasheetsT } from '~/types';
 
 export const sortDatasheets = (datasheets: FoundDatasheetsT): DatasheetIdT[] =>
   Object.keys(datasheets)

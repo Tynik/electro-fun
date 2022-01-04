@@ -8,13 +8,13 @@ import {
   Chip,
 } from '@mui/material';
 
-import type { ItemT, ItemOptionIdT } from '../../types';
+import type { ItemT, ItemOptionIdT } from '~/types';
 
-import { UserContext } from '../../contexts';
-import { CIconButton, CButton } from '../../components';
-import { getIcon } from '../../utils';
-import { getItemPrice } from '../../helpers';
-import { useUpMediaQuery } from '../../hooks';
+import { UserContext } from '~/contexts';
+import { CIconButton, CButton } from '~/components';
+import { getIcon } from '~/utils';
+import { getItemPrice } from '~/helpers';
+import { useUpMediaQuery } from '~/hooks';
 
 export type BasketItemProps = {
   item: ItemT

@@ -4,7 +4,7 @@ import type { ButtonProps } from '@mui/material';
 
 import { Button } from '@mui/material';
 
-import { useUpMediaQuery } from '../hooks';
+import { useUpMediaQuery } from '~/hooks';
 
 export type CButtonProps = Omit<ButtonProps, 'size'> & {}
 

@@ -6,12 +6,12 @@ import {
   TextField
 } from '@mui/material';
 
-import type { ItemT } from '../../types';
+import type { ItemT } from '~/types';
 
-import { AppContext, UserContext } from '../../contexts';
-import { netlifyMakeOrder } from '../../api';
-import { getIcon } from '../../utils';
-import { CButton } from '../../components';
+import { AppContext, UserContext } from '~/contexts';
+import { netlifyMakeOrder } from '~/api';
+import { getIcon } from '~/utils';
+import { CButton } from '~/components';
 
 export type BasketStep2Props = {
   isActive: boolean

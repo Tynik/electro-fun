@@ -12,11 +12,11 @@ import { Info as InfoIcon } from '@mui/icons-material';
 import type {
   ItemFeatureT,
   FeatureDefinitionSuffixT
-} from '../../types';
+} from '~/types';
 
-import { DbContext } from '../../contexts';
-import { useTextProcessor } from '../../hooks';
-import { AbbrLink } from '../../components';
+import { DbContext } from '~/contexts';
+import { useTextProcessor } from '~/hooks';
+import { AbbrLink } from '~/components';
 
 export const sortItemFeatures = (allFeatures, features: ItemFeatureT[]) =>
   features.sort((featureA, featureB) => {

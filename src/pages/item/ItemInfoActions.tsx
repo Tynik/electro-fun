@@ -9,13 +9,13 @@ import {
   ShoppingCart as ShoppingCartIcon
 } from '@mui/icons-material';
 
-import type { ItemT } from '../../types';
+import type { ItemT } from '~/types';
 
-import { DbContext, UserContext } from '../../contexts';
-import { ExternalButtonLink } from '../../components';
-import { getIcon, useQueryParams } from '../../utils';
-import { useUpMediaQuery } from '../../hooks';
-import { getItemDefaultOption } from '../../helpers';
+import { DbContext, UserContext } from '~/contexts';
+import { ExternalButtonLink } from '~/components';
+import { getIcon, useQueryParams } from '~/utils';
+import { useUpMediaQuery } from '~/hooks';
+import { getItemDefaultOption } from '~/helpers';
 
 export type ItemInfoActionsProps = {
   item: ItemT
