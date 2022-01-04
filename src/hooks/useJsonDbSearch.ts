@@ -6,13 +6,13 @@ import {
   ItemIdT,
   ItemT,
   DatasheetIdT,
-  FoundDatasheetsT
+  FoundDatasheetsT,
+  ApplicationIdT
 } from '~/types';
 import {
   matchItemWithSearch,
   matchDatasheetWithSearchKeywords
 } from '~/helpers';
-import { ApplicationIdT } from '~/types';
 
 export type SearchHandler = {
   ids?: string[]

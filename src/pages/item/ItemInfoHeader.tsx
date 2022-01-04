@@ -45,6 +45,7 @@ export const ItemInfoHeader = ({ item }: ItemInfoHeaderProps) => {
           variant={'h5'}
           role={'heading'}
           aria-level={1}
+          itemProp={'name'}
           sx={{ marginLeft: theme.spacing(1) }}
         >
           {item.title}

@@ -8,17 +8,18 @@ export const matchItemWithSearchKeyword = (
   applicationIds: ApplicationIdT[] = []
 ): boolean => {
   let itemIsMatched = item.title.toLowerCase().includes(searchKeyword);
-  itemIsMatched ||= item.subtitle.toLowerCase().includes(searchKeyword);
+
+  itemIsMatched ||= !itemIsMatched && item.subtitle.toLowerCase().includes(searchKeyword);
 
   if (item.developedBy) {
     itemIsMatched ||= item.developedBy.toLowerCase().includes(searchKeyword);
   }
 
-  if (item.content) {
+  if (!itemIsMatched && item.content) {
     itemIsMatched ||= item.content.toLowerCase().includes(searchKeyword);
   }
 
-  if (item.seo) {
+  if (!itemIsMatched && item.seo) {
     itemIsMatched ||= item.seo.description.toLowerCase().includes(searchKeyword);
 
     itemIsMatched ||= item.seo.keywords.split(',').some(seoKeyword =>
@@ -28,19 +29,25 @@ export const matchItemWithSearchKeyword = (
     );
   }
 
-  if (item.externalLinks) {
+  if (!itemIsMatched && item.externalLinks) {
     itemIsMatched ||= item.externalLinks.some(externalLink =>
       externalLink.name.toLowerCase().includes(searchKeyword)
     );
   }
 
-  if (item.drivers) {
+  if (!itemIsMatched && item.options) {
+    itemIsMatched ||= Object.values(item.options).some(option =>
+      option.name.toLowerCase().includes(searchKeyword)
+    );
+  }
+
+  if (!itemIsMatched && item.drivers) {
     itemIsMatched ||= item.drivers.some(driver =>
       driver.name.toLowerCase().includes(searchKeyword)
     );
   }
 
-  if (applicationIds.length && item.applicationIds) {
+  if (!itemIsMatched && applicationIds.length && item.applicationIds) {
     itemIsMatched ||= item.applicationIds.some(itemApplicationId =>
       applicationIds.includes(itemApplicationId)
     );

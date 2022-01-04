@@ -111,8 +111,16 @@ export const ItemInfoPage = () => {
     return <Loader/>;
   }
 
+  const itemPrice = getItemPrice(item, selectedItemOptionId);
+
   return (
-    <Grid spacing={2} container>
+    <Grid
+      spacing={2}
+      // https://schema.org/Product
+      itemType={'https://schema.org/Product'}
+      itemScope
+      container
+    >
       <Grid xs={12} item>
         <BackButton/>
       </Grid>
@@ -133,6 +141,7 @@ export const ItemInfoPage = () => {
 
             <Typography
               variant={'body1'}
+              itemProp={'description'}
               sx={{ whiteSpace: 'pre-line', textAlign: 'justify' }}
             >
               {processItemContent(item.content)}
@@ -180,19 +189,30 @@ export const ItemInfoPage = () => {
 
         {item.options && Object.keys(item.options).length > 0 && (
           <Box sx={{
-            marginTop: theme.spacing(2),
+            marginTop: theme.spacing(2)
           }}>
             <ItemInfoOptions item={item}/>
           </Box>
         )}
 
         {Boolean(item.price) && (
-          <Box sx={{
-            marginTop: theme.spacing(2),
-            textAlign: 'center'
-          }}>
+          <Box
+            itemProp={'offers'}
+            // https://schema.org/Offer
+            itemType={'https://schema.org/Offer'}
+            sx={{
+              marginTop: theme.spacing(2),
+              textAlign: 'center'
+            }}
+            itemScope
+          >
             <Typography variant={'h5'} component={'div'}>
-              {getItemPrice(item, selectedItemOptionId).toFixed(2)} UAH
+              {/* @ts-expect-error */}
+              <span itemProp={'price'} content={itemPrice}>
+                {itemPrice.toFixed(2)}
+              </span>
+              {/* @ts-expect-error */}
+              &nbsp;<span itemProp={'priceCurrency'} content={'UAH'}>UAH</span>
             </Typography>
           </Box>
         )}
