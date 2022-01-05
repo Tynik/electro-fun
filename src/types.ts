@@ -39,6 +39,7 @@ export type ItemFeatureT = {
 export type ItemImageT = {
   alt: string
   src: string
+  description?: string
 }
 
 export type ApplicationIdT = string
@@ -83,22 +84,23 @@ export type ItemT = {
   lang: string
   id?: ItemIdT
   categoryId?: CategoryIdT
+  seo?: SeoT & { title?: string }
   developedBy?: string
+  companyLink?: string
+  original?: boolean
   content?: string
   warningContent?: string
-  seo?: SeoT & { title?: string }
   datasheetId?: DatasheetIdT
+  relatedDatasheetIds?: DatasheetIdT[]
+  availability?: number
   price?: number | Record<ItemOptionIdT, number>
   buy?: string | boolean
-  companyLink?: string
   options?: ItemOptionsT
   features?: ItemFeatureT[]
   images?: ItemImageT[]
-  original?: boolean
   applicationIds?: ApplicationIdT[]
   drivers?: ItemDriverT[]
   externalLinks?: ItemExternalLinkT[]
-  relatedDatasheetIds?: DatasheetIdT[]
 }
 
 export type ItemsT = ItemT[]

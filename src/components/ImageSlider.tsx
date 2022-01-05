@@ -88,6 +88,7 @@ export const ImageSlider = (props: ImageSliderProps) => {
             <CImage
               src={image.src}
               alt={image.alt}
+              description={image.description}
               style={{
                 height: '100%',
                 objectFit: 'scale-down'
@@ -109,7 +110,7 @@ export const ImageSlider = (props: ImageSliderProps) => {
             top: '50%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
-            bgcolor: 'background.paper',
+            backgroundColor: 'background.paper',
             border: '1px solid #000',
             boxShadow: 24,
             overflow: 'scroll',

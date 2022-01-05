@@ -32,10 +32,17 @@ export const ItemInfoDrivers = ({ drivers }: ItemInfoDriversProps) => {
             hrefLang={'en'}
             title={driver.name}
             sx={{ textDecoration: 'none' }}
+            itemType={'https://schema.org/Person'}
+            itemScope
           >
+            {/* @ts-expect-error */}
+            <span itemProp={'name'} content={driver.name}/>
             <Avatar
               alt={driver.name}
               src={getItemDriverAvatarSrc(driver.src)}
+              imgProps={{
+                itemProp: 'image'
+              }}
             />
           </ExternalLink>
         ))}

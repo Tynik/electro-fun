@@ -21,10 +21,9 @@ export const ItemInfoHeader = ({ item }: ItemInfoHeaderProps) => {
 
   const { db } = React.useContext(DbContext);
 
-  const category = React.useMemo(
-    () =>
-      item ? db.categories.find(category => category.id === item.categoryId) : null,
-    [item]
+  const category = React.useMemo(() =>
+      db.categories.find(category => category.id === item.categoryId),
+    []
   );
 
   return (

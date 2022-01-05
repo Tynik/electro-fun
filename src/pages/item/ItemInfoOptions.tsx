@@ -30,7 +30,7 @@ export const ItemInfoOptions = ({ item }: ItemInfoOptionsProps) => {
 
   const itemOptionsInBasket = basket.items[item.id] || {};
 
-  const itemOptionId = React.useMemo(() =>
+  const defaultItemOptionId = React.useMemo(() =>
     selectedItemOptionId || getItemDefaultOption(item),
     []
   );
@@ -49,7 +49,7 @@ export const ItemInfoOptions = ({ item }: ItemInfoOptionsProps) => {
       </FormLabel>
 
       <RadioGroup
-        defaultValue={itemOptionId}
+        defaultValue={defaultItemOptionId}
         aria-label={'option'}
         name={'radio-buttons-group'}
         onChange={onSelectOption}

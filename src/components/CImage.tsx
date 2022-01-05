@@ -2,7 +2,9 @@ import React from 'react';
 import { ImgHTMLAttributes } from 'react';
 
 export interface ImageProps extends ImgHTMLAttributes<any> {
-  onLoad?: () => void
+  alt: string
+  onLoad?: () => void;
+  description?: string;
 }
 
 export const CImage = ({ onLoad, ...rest }: ImageProps) => {
@@ -12,9 +14,27 @@ export const CImage = ({ onLoad, ...rest }: ImageProps) => {
     if (onLoad && imgRef.current && imgRef.current.complete) {
       onLoad();
     }
-  }
+  };
 
   return (
-    <img alt={''} {...rest} ref={imgRef} onLoad={onLoadHandler}/>
+    <span
+      itemType={'https://schema.org/ImageObject'}
+      itemScope
+    >
+      {/* @ts-expect-error */}
+      <span itemProp={'name'} content={rest.alt}/>
+      {rest.description && (
+        // @ts-expect-error
+        <span itemProp={'description'} content={rest.description}/>
+      )}
+
+      <img
+        alt={''}
+        {...rest}
+        ref={imgRef}
+        onLoad={onLoadHandler}
+        itemProp={'contentUrl'}
+      />
+    </span>
   );
 };

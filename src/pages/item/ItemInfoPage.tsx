@@ -98,10 +98,6 @@ export const ItemInfoPage = () => {
       )
     )), []);
 
-  const processItemContent = (itemContent: string) => {
-    return clarificationsWrapper(itemContent);
-  };
-
   // high priority to show errors
   if (errors.length) {
     return printErrors();
@@ -116,7 +112,6 @@ export const ItemInfoPage = () => {
   return (
     <Grid
       spacing={2}
-      // https://schema.org/Product
       itemType={'https://schema.org/Product'}
       itemScope
       container
@@ -144,7 +139,7 @@ export const ItemInfoPage = () => {
               itemProp={'description'}
               sx={{ whiteSpace: 'pre-line', textAlign: 'justify' }}
             >
-              {processItemContent(item.content)}
+              {clarificationsWrapper(item.content)}
             </Typography>
           </Box>
         )}
@@ -198,7 +193,6 @@ export const ItemInfoPage = () => {
         {Boolean(item.price) && (
           <Box
             itemProp={'offers'}
-            // https://schema.org/Offer
             itemType={'https://schema.org/Offer'}
             sx={{
               marginTop: theme.spacing(2),
