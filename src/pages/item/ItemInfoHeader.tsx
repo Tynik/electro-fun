@@ -47,6 +47,7 @@ export const ItemInfoHeader = ({ item }: ItemInfoHeaderProps) => {
               to={`/category/${category.id}`}
               itemProp={'item'}
               itemType={'https://schema.org/WebPage'}
+              itemID={`/category/${category.id}`}
               itemScope
             >
               <span itemProp={'name'}>{category.name}</span>
