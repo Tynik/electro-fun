@@ -116,6 +116,9 @@ export const ItemInfoPage = () => {
       itemScope
       container
     >
+      {/* @ts-expect-error */}
+      <span itemProp={'name'} content={item.title}/>
+
       <Grid xs={12} item>
         <BackButton/>
       </Grid>
