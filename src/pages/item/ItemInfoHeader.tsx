@@ -49,6 +49,8 @@ export const ItemInfoHeader = ({ item }: ItemInfoHeaderProps) => {
             >
               <span itemProp={'name'}>{category.name}</span>
             </InternalLink>
+            {/* @ts-expect-error */}
+            <meta itemProp={'position'} content={1}/>
           </Typography>
 
           <Typography
@@ -61,6 +63,8 @@ export const ItemInfoHeader = ({ item }: ItemInfoHeaderProps) => {
             itemScope
           >
             <span itemProp={'name'}>{item.title}</span>
+            {/* @ts-expect-error */}
+            <meta itemProp={'position'} content={2}/>
           </Typography>
         </Box>
 
