@@ -29,26 +29,40 @@ export const ItemInfoHeader = ({ item }: ItemInfoHeaderProps) => {
   return (
     <>
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
-        <Typography variant={'subtitle1'}>
-          <InternalLink
-            underline={'hover'}
-            startIcon={getIcon(category.icon)}
-            endIcon={getIcon('doubleArrow')}
-            to={`/category/${category.id}`}
-          >
-            {category.name}
-          </InternalLink>
-        </Typography>
-
-        <Typography
-          variant={'h5'}
-          role={'heading'}
-          aria-level={1}
-          itemProp={'name'}
-          sx={{ marginLeft: theme.spacing(1) }}
+        <Box
+          sx={{ display: 'flex', alignItems: 'center' }}
+          itemType={'https://schema.org/BreadcrumbList'}
+          itemScope
         >
-          {item.title}
-        </Typography>
+          <Typography
+            variant={'subtitle1'}
+            itemProp={'itemListElement'}
+            itemType={'https://schema.org/ListItem'}
+            itemScope
+          >
+            <InternalLink
+              underline={'hover'}
+              startIcon={getIcon(category.icon)}
+              endIcon={getIcon('doubleArrow')}
+              to={`/category/${category.id}`}
+              itemProp={'item'}
+            >
+              <span itemProp={'name'}>{category.name}</span>
+            </InternalLink>
+          </Typography>
+
+          <Typography
+            variant={'h5'}
+            role={'heading'}
+            aria-level={1}
+            sx={{ marginLeft: theme.spacing(1) }}
+            itemProp={'itemListElement'}
+            itemType={'https://schema.org/ListItem'}
+            itemScope
+          >
+            <span itemProp={'name'}>{item.title}</span>
+          </Typography>
+        </Box>
 
         {item.original === false && (
           <Chip
