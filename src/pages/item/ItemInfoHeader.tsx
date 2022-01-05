@@ -46,6 +46,8 @@ export const ItemInfoHeader = ({ item }: ItemInfoHeaderProps) => {
               endIcon={getIcon('doubleArrow')}
               to={`/category/${category.id}`}
               itemProp={'item'}
+              itemType={'https://schema.org/WebPage'}
+              itemScope
             >
               <span itemProp={'name'}>{category.name}</span>
             </InternalLink>
