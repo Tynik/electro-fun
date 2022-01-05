@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "dist/main.js",
   "scripts": {
-    "sitemap": "tsc --project tsconfig.json sitemap-generator.ts && node sitemap-generator.js",
+    "sitemap": "tsc -p tsconfig.sitemap.json && node sitemap-generator.js",
     "build": "NODE_ENV=production webpack",
-    "deploy": "yarn run sitemap && yarn run build",
+    "deploy": "yarn run build",
     "start": "LOCAL_ENV=true NETLIFY_SERVER=http://localhost:8888 NODE_ENV=development webpack serve",
     "test": "jest"
   },
