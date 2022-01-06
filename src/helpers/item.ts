@@ -97,10 +97,23 @@ export const getItemDefaultOption = (item: ItemT) =>
   item.options && Object.keys(item.options).find(optionId => item.options[optionId].default);
 
 export const getItemPrice = (item: ItemT, optionId: ItemOptionIdT) => {
+  if (!item.price) {
+    return;
+  }
   if (typeof item.price === 'number') {
     return item.price;
   }
   optionId = optionId || getItemDefaultOption(item);
 
   return item.price[optionId];
+};
+
+export const getItemAvailabilitySEOSchema = (item: ItemT) => {
+  if (item.availability) {
+    return 'https://schema.org/InStock';
+  }
+  if (item.availability === 0) {
+    return 'https://schema.org/SoldOut';
+  }
+  return 'https://schema.org/OutOfStock';
 };

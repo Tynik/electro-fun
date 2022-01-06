@@ -1,8 +1,10 @@
 import React from 'react';
 import {
+  Box,
   Badge,
   Button,
   Stack,
+  Typography,
 } from '@mui/material';
 import {
   Link as LinkIcon,
@@ -15,7 +17,7 @@ import { DbContext, UserContext } from '~/contexts';
 import { ExternalButtonLink } from '~/components';
 import { getIcon, useQueryParams } from '~/utils';
 import { useUpMediaQuery } from '~/hooks';
-import { getItemDefaultOption } from '~/helpers';
+import { getItemDefaultOption, getItemAvailabilitySEOSchema } from '~/helpers';
 
 export type ItemInfoActionsProps = {
   item: ItemT
@@ -59,20 +61,34 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
         </ExternalButtonLink>
       )}
       {item.buy === true && (
-        <Badge
-          badgeContent={itemInBasket && `x${itemInBasket}`}
-          color={'success'}
-        >
-          <Button
-            onClick={() => addItemToBasket(item.id, itemOptionId)}
-            variant={itemInBasket ? 'outlined' : 'contained'}
-            color={itemInBasket ? 'info' : 'success'}
-            startIcon={getIcon('addShoppingCart')}
-            size={smMatch ? 'medium' : 'small'}
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <Badge
+            badgeContent={itemInBasket && `x${itemInBasket}`}
+            color={'success'}
           >
-            {itemInBasket ? 'В корзине' : 'В корзину'}
-          </Button>
-        </Badge>
+            <Button
+              onClick={() => addItemToBasket(item.id, itemOptionId)}
+              variant={itemInBasket ? 'outlined' : 'contained'}
+              color={itemInBasket ? 'info' : 'success'}
+              startIcon={getIcon('addShoppingCart')}
+              size={smMatch ? 'medium' : 'small'}
+              disabled={!item.availability}
+            >
+              {itemInBasket ? 'В корзине' : 'В корзину'}
+            </Button>
+          </Badge>
+
+          <Typography
+            variant={'body2'}
+            color={'primary.dark'}
+            marginLeft={2}
+          >
+            Доступно: {item.availability || 0}
+
+            {/* @ts-expect-error */}
+            <span itemProp={'availability'} content={getItemAvailabilitySEOSchema(item)}/>
+          </Typography>
+        </Box>
       )}
     </Stack>
   );

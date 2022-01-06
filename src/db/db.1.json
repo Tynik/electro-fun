@@ -941,6 +941,7 @@
       },
       "buy": true,
       "price": 32,
+      "availability": 2,
       "datasheetId": "LM2596",
       "images": [
         {
@@ -997,15 +998,16 @@
       "developedBy": "Bosch Sensortec",
       "buy": true,
       "price": 23,
+      "availability": 9,
       "datasheetId": "BMP280",
       "images": [
         {
           "src": "https://images.izi.ua/84778923",
-          "alt": "BMP280"
+          "alt": "BMP280 - вид сверху"
         },
         {
           "src": "https://images.izi.ua/84778922",
-          "alt": "BMP280"
+          "alt": "BMP280 - вид снизу"
         }
       ],
       "content": "BMP280 - датчик абсолютного барометрического давления, специально разработанный для мобильных приложений. Сенсорный модуль BMP280 размещен в чрезвычайно компактном корпусе. Его небольшие размеры и низкое энергопотребление позволяют использовать его в устройствах с батарейным питанием.",
@@ -1078,6 +1080,7 @@
       },
       "buy": true,
       "price": 147,
+      "availability": 1,
       "datasheetId": "MPU-9250A-1.1",
       "companyLink": "https://invensense.tdk.com",
       "images": [
@@ -1163,6 +1166,7 @@
       },
       "buy": true,
       "price": 140,
+      "availability": 10,
       "datasheetId": "CP2112",
       "images": [
         {
@@ -1234,6 +1238,7 @@
       },
       "buy": true,
       "price": 290,
+      "availability": 2,
       "datasheetId": "CCS811",
       "images": [
         {
@@ -1315,6 +1320,7 @@
       },
       "buy": true,
       "price": 50,
+      "availability": 9,
       "datasheetId": "APDS-9960",
       "images": [
         {
@@ -1384,6 +1390,7 @@
       },
       "buy": true,
       "price": 420,
+      "availability": 2,
       "datasheetId": "MAC-35A",
       "images": [
         {
@@ -1448,6 +1455,7 @@
       "datasheetId": "TEC1-12715",
       "buy": true,
       "price": 130,
+      "availability": 5,
       "images": [
         {
           "src": "/photos/TEC1-12715-1.webp",
@@ -1610,6 +1618,7 @@
       },
       "buy": true,
       "price": 33,
+      "availability": 5,
       "datasheetId": "nRF24L01",
       "images": [
         {
@@ -2023,13 +2032,14 @@
       "categoryId": 10,
       "lang": "ru",
       "title": "IRF3205",
-      "subtitle": "MOSFET 55 В, 110 А",
+      "subtitle": "MOSFET до 55 В и 110 А",
       "seo": {
-        "description": "",
+        "description": "MOSFET IRF3205 до 55 В и 110 А",
         "keywords": "pb-irf3205, irf3205pbf, mosfet, мосфет, 55в, 110а"
       },
       "buy": true,
       "price": 8,
+      "availability": 10,
       "datasheetId": "IRF3205PbF",
       "images": [
         {

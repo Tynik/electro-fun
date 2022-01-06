@@ -193,7 +193,7 @@ export const ItemInfoPage = () => {
           </Box>
         )}
 
-        {Boolean(item.price) && (
+        {Boolean(itemPrice) && (
           <Box
             itemProp={'offers'}
             itemType={'https://schema.org/Offer'}
