@@ -13,7 +13,7 @@ import type { ItemT } from '~/types';
 
 import { DbContext } from '~/contexts';
 import { useQueryParams } from '~/utils';
-import { getItemPrice } from '~/helpers';
+import { getItemPrice, getItemAvailabilitySEOSchema } from '~/helpers';
 import {
   useTextProcessor,
   useSmoothScroll,
@@ -194,20 +194,23 @@ export const ItemInfoPage = () => {
 
         {Boolean(itemPrice) && (
           <Box
-            itemProp={'offers'}
-            itemType={'https://schema.org/Offer'}
             sx={{
               marginTop: theme.spacing(2),
               textAlign: 'center'
             }}
+            itemProp={'offers'}
+            itemType={'https://schema.org/Offer'}
             itemScope
           >
             <Typography variant={'h5'} component={'div'}>
               {itemPrice.toFixed(2)} UAH
-
-              <meta itemProp={'price'} content={itemPrice.toString()}/>
-              <meta itemProp={'priceCurrency'} content={'UAH'}/>
             </Typography>
+
+            <meta itemProp={'url'} content={`/item/${item.id}`}/>
+            <meta itemProp={'price'} content={itemPrice.toString()}/>
+            <meta itemProp={'priceCurrency'} content={'UAH'}/>
+            <meta itemProp={'availability'} content={getItemAvailabilitySEOSchema(item)}/>
+            <meta itemProp={'itemCondition'} content={'https://schema.org/NewCondition'}/>
           </Box>
         )}
 

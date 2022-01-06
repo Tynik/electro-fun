@@ -4,7 +4,7 @@ import {
   Badge,
   Button,
   Stack,
-  Typography,
+  Typography
 } from '@mui/material';
 import {
   Link as LinkIcon,
@@ -25,7 +25,7 @@ export type ItemInfoActionsProps = {
 
 export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
   const { db } = React.useContext(DbContext);
-  const { user, addItemToBasket } = React.useContext(UserContext);
+  const { getNumberItemsInBasket, addItemToBasket } = React.useContext(UserContext);
 
   const { optionId: selectedItemOptionId } = useQueryParams();
 
@@ -36,11 +36,15 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
 
   const smMatch = useUpMediaQuery('sm');
 
-  const countInBasket = (user.basket.items[item.id] || {})[itemOptionId];
+  const numberItemsInBasket = getNumberItemsInBasket(item, itemOptionId);
 
-  const itemAvailability = countInBasket ?
-    item.availability - countInBasket
-    : item.availability;
+  const itemAvailability = item.availability
+    ? (
+      numberItemsInBasket ?
+        item.availability - numberItemsInBasket
+        : item.availability
+    )
+    : 0;
 
   return (
     <Stack spacing={2} direction={'row'} justifyContent={'center'}>
@@ -67,21 +71,19 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
       {item.buy === true && (
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <Badge
-            badgeContent={countInBasket && `x${countInBasket}`}
-            color={'success'}
+            badgeContent={numberItemsInBasket && `x${numberItemsInBasket}`}
+            color={itemAvailability >= 0 ? 'success' : 'error'}
           >
             <Button
               onClick={() => addItemToBasket(item.id, itemOptionId)}
-              variant={countInBasket ? 'outlined' : 'contained'}
-              color={countInBasket ? 'info' : 'success'}
+              variant={numberItemsInBasket ? 'outlined' : 'contained'}
+              color={numberItemsInBasket ? 'info' : 'success'}
               startIcon={getIcon('addShoppingCart')}
               size={smMatch ? 'medium' : 'small'}
               disabled={!itemAvailability}
             >
-              {countInBasket ? 'В корзине' : 'В корзину'}
+              {numberItemsInBasket ? 'В корзине' : 'В корзину'}
             </Button>
-
-            <meta itemProp={'itemCondition'} content={'https://schema.org/NewCondition'}/>
           </Badge>
 
           <Typography
@@ -90,8 +92,6 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
             marginLeft={2}
           >
             Доступно: {itemAvailability}
-
-            <meta itemProp={'availability'} content={getItemAvailabilitySEOSchema(item)}/>
           </Typography>
         </Box>
       )}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import type { ItemIdT, ItemOptionIdT, UserBasketT, UserT } from '~/types';
+import type { ItemT, ItemIdT, ItemOptionIdT, UserBasketT, UserT } from '~/types';
 
 import { useLocalStorage } from './useLocalStorage';
 
@@ -74,7 +74,13 @@ export const useUser = () => {
     }));
   }, []);
 
-  const countItemsInBasket = React.useMemo(() =>
+  const getNumberItemsInBasket = React.useCallback(
+    (item: ItemT, itemOptionId: ItemOptionIdT) =>
+      (user.basket.items[item.id] || {})[itemOptionId] || 0,
+    [user.basket.items]
+  );
+
+  const numberAllItemsInBasket = React.useMemo(() =>
       Object.keys(user.basket.items).length,
     [user.basket.items]
   );
@@ -84,6 +90,7 @@ export const useUser = () => {
     addItemToBasket,
     removeItemFromBasket,
     clearBasket,
-    countItemsInBasket
+    getNumberItemsInBasket,
+    numberAllItemsInBasket
   };
 };

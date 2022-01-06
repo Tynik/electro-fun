@@ -28,7 +28,7 @@ const Toolbar = (props: ToolbarProps) => {
   const history = useHistory();
 
   const { db } = React.useContext(DbContext);
-  const { countItemsInBasket } = React.useContext(UserContext);
+  const { numberAllItemsInBasket } = React.useContext(UserContext);
 
   const [searchValue, setSearchValue] = React.useState<string>(null);
 
@@ -88,8 +88,8 @@ const Toolbar = (props: ToolbarProps) => {
       <Box sx={{ display: 'flex' }}>
         <CIconButton
           onClick={onBasketClick}
-          disabled={!countItemsInBasket}
-          badgeContent={countItemsInBasket}
+          disabled={!numberAllItemsInBasket}
+          badgeContent={numberAllItemsInBasket}
           icon={getIcon('shoppingBasket')}
           color={'inherit'}
           aria-label={'Открыть корзину'}

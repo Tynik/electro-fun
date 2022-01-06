@@ -1,12 +1,13 @@
 import React from 'react';
 
-import type { UserT, ItemIdT, ItemOptionIdT } from '~/types';
+import type { UserT, ItemT, ItemIdT, ItemOptionIdT } from '~/types';
 
 import { useUser } from '~/hooks';
 
 export type UserContextState = {
   user: UserT
-  countItemsInBasket: number
+  numberAllItemsInBasket: number
+  getNumberItemsInBasket: (item: ItemT, optionId: ItemOptionIdT) => number
   addItemToBasket: (itemId: ItemIdT, optionId: ItemOptionIdT) => void
   removeItemFromBasket: (itemId: ItemIdT, optionId: ItemOptionIdT, all?: boolean) => void
   clearBasket: () => void
@@ -14,7 +15,8 @@ export type UserContextState = {
 
 const initialUserContextState: UserContextState = {
   user: null,
-  countItemsInBasket: null,
+  numberAllItemsInBasket: null,
+  getNumberItemsInBasket: null,
   addItemToBasket: null,
   removeItemFromBasket: null,
   clearBasket: null,
