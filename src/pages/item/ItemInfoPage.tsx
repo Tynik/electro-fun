@@ -116,8 +116,7 @@ export const ItemInfoPage = () => {
       itemScope
       container
     >
-      {/* @ts-expect-error */}
-      <span itemProp={'name'} content={item.title}/>
+      <meta itemProp={'name'} content={item.title}/>
 
       <Grid xs={12} item>
         <BackButton/>
@@ -204,12 +203,10 @@ export const ItemInfoPage = () => {
             itemScope
           >
             <Typography variant={'h5'} component={'div'}>
-              {/* @ts-expect-error */}
-              <span itemProp={'price'} content={itemPrice}>
-                {itemPrice.toFixed(2)}
-              </span>
-              {/* @ts-expect-error */}
-              &nbsp;<span itemProp={'priceCurrency'} content={'UAH'}>UAH</span>
+              {itemPrice.toFixed(2)} UAH
+
+              <meta itemProp={'price'} content={itemPrice.toString()}/>
+              <meta itemProp={'priceCurrency'} content={'UAH'}/>
             </Typography>
           </Box>
         )}

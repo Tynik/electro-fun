@@ -33,10 +33,11 @@ export const ItemInfoDrivers = ({ drivers }: ItemInfoDriversProps) => {
             title={driver.name}
             sx={{ textDecoration: 'none' }}
             itemType={'https://schema.org/Person'}
+            itemProp={'contributor'}
             itemScope
           >
-            {/* @ts-expect-error */}
-            <span itemProp={'name'} content={driver.name}/>
+            <meta itemProp={'name'} content={driver.name}/>
+
             <Avatar
               alt={driver.name}
               src={getItemDriverAvatarSrc(driver.src)}

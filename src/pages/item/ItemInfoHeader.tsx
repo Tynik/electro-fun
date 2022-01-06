@@ -62,6 +62,7 @@ export const ItemInfoHeader = ({ item }: ItemInfoHeaderProps) => {
             itemScope
           >
             <span itemProp={'name'}>{item.title}</span>
+
             <meta itemProp={'position'} content={'2'}/>
           </Typography>
         </Box>

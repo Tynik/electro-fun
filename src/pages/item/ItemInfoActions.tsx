@@ -36,7 +36,11 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
 
   const smMatch = useUpMediaQuery('sm');
 
-  const itemInBasket = (user.basket.items[item.id] || {})[itemOptionId];
+  const countInBasket = (user.basket.items[item.id] || {})[itemOptionId];
+
+  const itemAvailability = countInBasket ?
+    item.availability - countInBasket
+    : item.availability;
 
   return (
     <Stack spacing={2} direction={'row'} justifyContent={'center'}>
@@ -63,19 +67,21 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
       {item.buy === true && (
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <Badge
-            badgeContent={itemInBasket && `x${itemInBasket}`}
+            badgeContent={countInBasket && `x${countInBasket}`}
             color={'success'}
           >
             <Button
               onClick={() => addItemToBasket(item.id, itemOptionId)}
-              variant={itemInBasket ? 'outlined' : 'contained'}
-              color={itemInBasket ? 'info' : 'success'}
+              variant={countInBasket ? 'outlined' : 'contained'}
+              color={countInBasket ? 'info' : 'success'}
               startIcon={getIcon('addShoppingCart')}
               size={smMatch ? 'medium' : 'small'}
-              disabled={!item.availability}
+              disabled={!itemAvailability}
             >
-              {itemInBasket ? 'В корзине' : 'В корзину'}
+              {countInBasket ? 'В корзине' : 'В корзину'}
             </Button>
+
+            <meta itemProp={'itemCondition'} content={'https://schema.org/NewCondition'}/>
           </Badge>
 
           <Typography
@@ -83,10 +89,9 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
             color={'primary.dark'}
             marginLeft={2}
           >
-            Доступно: {item.availability || 0}
+            Доступно: {itemAvailability}
 
-            {/* @ts-expect-error */}
-            <span itemProp={'availability'} content={getItemAvailabilitySEOSchema(item)}/>
+            <meta itemProp={'availability'} content={getItemAvailabilitySEOSchema(item)}/>
           </Typography>
         </Box>
       )}

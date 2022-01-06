@@ -21,11 +21,10 @@ export const CImage = ({ onLoad, ...rest }: ImageProps) => {
       itemType={'https://schema.org/ImageObject'}
       itemScope
     >
-      {/* @ts-expect-error */}
-      <span itemProp={'name'} content={rest.alt}/>
+      <meta itemProp={'name'} content={rest.alt}/>
+
       {rest.description && (
-        // @ts-expect-error
-        <span itemProp={'description'} content={rest.description}/>
+        <meta itemProp={'description'} content={rest.description}/>
       )}
 
       <img
