@@ -4,6 +4,7 @@
       "dom",
       "ESNext"
     ],
+    "outDir": "sitemap",
     "jsx": "react",
     "skipLibCheck": true,
     "esModuleInterop": true,

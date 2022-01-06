@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "dist/main.js",
   "scripts": {
-    "sitemap": "tsc -p tsconfig.sitemap.json && node sitemap-generator.js",
+    "sitemap": "tsc -p tsconfig.sitemap.json && tsc-alias -p tsconfig.sitemap.json && node sitemap/sitemap-generator.js",
     "build": "NODE_ENV=production webpack",
-    "deploy": "yarn run build",
+    "deploy": "yarn run sitemap && yarn run build",
     "start": "LOCAL_ENV=true NETLIFY_SERVER=http://localhost:8888 NODE_ENV=development webpack serve",
     "test": "jest"
   },
@@ -43,6 +43,7 @@
     "ts-loader": "9.2.6",
     "ts-node": "10.4.0",
     "typescript": "4.5.4",
+    "tsc-alias": "1.5.0",
     "telegraf": "4.5.2",
     "netlify-cli": "8.6.4",
     "webpack": "5.65.0",
