@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ItemT } from '~/types';
+import type { ItemT } from '~/types';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
 import { DbContext } from '~/contexts';
@@ -39,7 +39,10 @@ export const ProductSEO = ({ item }: ProductSEOProps) => {
         >
           <meta itemProp={'name'} content={manufacturer.name}/>
           <meta itemProp={'url'} content={manufacturer.url}/>
-          <meta itemProp={'logo'} content={manufacturer.logo}/>
+          <meta
+            itemProp={'logo'}
+            content={`${db.siteURL}/logos/${manufacturer.logo}`}
+          />
         </div>
       )}
 

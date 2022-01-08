@@ -494,7 +494,8 @@
       "subtitle": "DevKit",
       "seo": {
         "description": "LoLin NodeMCU ESP8266 V3",
-        "keywords": "nodemcu, esp8266, esp-12e, devkit, arduino, wifi, iot, 4мб"
+        "keywords": "nodemcu, esp8266, esp-12e, devkit, arduino, wifi, iot, 4мб",
+        "measurement": "4 Мб"
       },
       "buy": true,
       "price": 85,

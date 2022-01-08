@@ -9,7 +9,7 @@ import {
 
 import type { ItemT } from '~/types';
 
-import { AppContext, UserContext } from '~/contexts';
+import { AppContext, DbContext, UserContext } from '~/contexts';
 import { netlifyMakeOrder } from '~/api';
 import { getIcon } from '~/utils';
 
@@ -26,6 +26,7 @@ const BasketStep2 = ({ isActive, items, totalPrice, onBefore }: BasketStep2Props
     clearBasket
   } = React.useContext(UserContext);
 
+  const { db } = React.useContext(DbContext);
   const { addNotification } = React.useContext(AppContext);
 
   const [fullname, setFullname] = React.useState<string>(null);
@@ -37,7 +38,7 @@ const BasketStep2 = ({ isActive, items, totalPrice, onBefore }: BasketStep2Props
     try {
       const itemsContent = items.map(item =>
         Object.keys(basket.items[item.id]).map(optionId =>
-          `${basket.items[item.id][optionId]} x https://smart-home-tech.com.ua/item/${item.id}?${new URLSearchParams({
+          `${basket.items[item.id][optionId]} x ${db.siteURL}/item/${item.id}?${new URLSearchParams({
             optionId
           })}`
         ).join('\n')

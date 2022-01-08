@@ -35,6 +35,16 @@ export const OfferSEO = ({ item }: OfferSEOProps) => {
       <meta itemProp={'availability'} content={getItemAvailabilitySEOSchema(item)}/>
       <meta itemProp={'itemCondition'} content={`${SEO_SCHEMA_BASE_URL}/NewCondition`}/>
 
+      {item.seo && item.seo.measurement && (
+        <div
+          itemProp={'hasMeasurement'}
+          itemType={`${SEO_SCHEMA_BASE_URL}/QuantitativeValue`}
+          itemScope
+        >
+          <meta itemProp={'value'} content={item.seo.measurement}/>
+        </div>
+      )}
+
       <OfferShippingDetailsSEO/>
     </div>
   );

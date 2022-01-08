@@ -31,6 +31,11 @@ export type ManufacturerT = {
   logo: string
 }
 
+export type ItemSeoT = SeoT & {
+  title?: string
+  measurement?: string
+}
+
 export type ItemFeatureMultiValueT = string | {
   value: string | string[]
   type?: ItemFeatureValueTypeT,
@@ -91,7 +96,7 @@ export type ItemT = {
   lang: string
   id?: ItemIdT
   categoryId?: CategoryIdT
-  seo?: SeoT & { title?: string }
+  seo?: ItemSeoT
   manufacturerId?: ManufacturerIdT
   companyLink?: string
   original?: boolean
@@ -173,6 +178,7 @@ export type MenuItemT = {
 
 export type DbT = {
   siteName: string
+  siteURL: string
   seo: SeoT
   abbreviations: AbbreviationsT
   clarifications: ClarificationsT
