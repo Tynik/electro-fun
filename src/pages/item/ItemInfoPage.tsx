@@ -217,6 +217,54 @@ export const ItemInfoPage = () => {
             <meta itemProp={'priceCurrency'} content={'UAH'}/>
             <meta itemProp={'availability'} content={getItemAvailabilitySEOSchema(item)}/>
             <meta itemProp={'itemCondition'} content={'https://schema.org/NewCondition'}/>
+
+            <div
+              itemProp={'shippingDetails'}
+              itemType={'https://schema.org/OfferShippingDetails'}
+              itemScope
+            >
+              <div
+                itemProp={'shippingRate'}
+                itemType={'https://schema.org/MonetaryAmount'}
+                itemScope
+              >
+                <meta itemProp={'minValue'} content={'0'}/>
+                <meta itemProp={'maxValue'} content={'60'}/>
+                <meta itemProp={'currency'} content={'UAH'}/>
+              </div>
+
+              <div
+                itemProp={'shippingDestination'}
+                itemType={'https://schema.org/DefinedRegion'}
+                itemScope
+              >
+                <meta itemProp={'addressCountry'} content={'UA'}/>
+              </div>
+
+              <div
+                itemProp={'deliveryTime'}
+                itemType={'https://schema.org/ShippingDeliveryTime'}
+                itemScope
+              >
+                <div
+                  itemProp={'handlingTime'}
+                  itemType={'https://schema.org/QuantitativeValue'}
+                  itemScope
+                >
+                  <meta itemProp={'minValue'} content={'0'}/>
+                  <meta itemProp={'maxValue'} content={'1'}/>
+                </div>
+
+                <div
+                  itemProp={'transitTime'}
+                  itemType={'https://schema.org/QuantitativeValue'}
+                  itemScope
+                >
+                  <meta itemProp={'minValue'} content={'1'}/>
+                  <meta itemProp={'maxValue'} content={'4'}/>
+                </div>
+              </div>
+            </div>
           </Box>
         )}
 
