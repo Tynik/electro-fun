@@ -75,7 +75,7 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
       if (searchKeywords && searchKeywords.length) {
         matchedManufacturerIds = Object.keys(db.manufacturers).filter(manufacturerId =>
           searchKeywords.every(searchKeyword =>
-            checkSearchKeyword(db.manufacturers[manufacturerId], searchKeyword)
+            checkSearchKeyword(db.manufacturers[manufacturerId].name, searchKeyword)
           )
         );
       }

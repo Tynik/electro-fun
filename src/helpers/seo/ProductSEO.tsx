@@ -14,6 +14,8 @@ export type ProductSEOProps = {
 export const ProductSEO = ({ item }: ProductSEOProps) => {
   const { db } = React.useContext(DbContext);
 
+  const manufacturer = item.manufacturerId && db.manufacturers[item.manufacturerId];
+
   return (
     <div
       itemType={`${SEO_SCHEMA_BASE_URL}/Product`}
@@ -29,13 +31,15 @@ export const ProductSEO = ({ item }: ProductSEOProps) => {
         <meta itemProp={'description'} content={item.content}/>
       )}
 
-      {item.manufacturerId && (
+      {manufacturer && (
         <div
           itemProp={'brand'}
           itemType={`${SEO_SCHEMA_BASE_URL}/Brand`}
           itemScope
         >
-          <meta itemProp={'name'} content={db.manufacturers[item.manufacturerId]}/>
+          <meta itemProp={'name'} content={manufacturer.name}/>
+          <meta itemProp={'url'} content={manufacturer.url}/>
+          <meta itemProp={'logo'} content={manufacturer.logo}/>
         </div>
       )}
 

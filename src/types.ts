@@ -25,6 +25,12 @@ export type CategoryT = {
   icon?: string
 }
 
+export type ManufacturerT = {
+  name: string
+  url: string
+  logo: string
+}
+
 export type ItemFeatureMultiValueT = string | {
   value: string | string[]
   type?: ItemFeatureValueTypeT,
@@ -181,7 +187,7 @@ export type DbT = {
   itemFeatures: DbItemFeaturesT
   items: ItemT[]
   datasheets: DatasheetsT
-  manufacturers: Record<ManufacturerIdT, string>
+  manufacturers: Record<ManufacturerIdT, ManufacturerT>
   docs: DocsT
   applications: ApplicationsT
   footer: {

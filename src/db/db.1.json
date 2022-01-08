@@ -24,11 +24,31 @@
     "4": "Носимые электронные устройства (wearable electronics)"
   },
   "manufacturers": {
-    "1": "ROHM Semiconductor",
-    "2": "Shenzhen Hi-Link Electronic Co., Ltd",
-    "3": "Bosch Sensortec",
-    "4": "Shenzhen Ai-Thinker Technology Co., Ltd",
-    "5": "Lite-On Technology Corporation"
+    "1": {
+      "name": "ROHM Semiconductor",
+      "url": "https://www.rohm.com",
+      "logo": "/logos/ROHM Semiconductor.svg"
+    },
+    "2": {
+      "name": "Shenzhen Hi-Link Electronic Co., Ltd",
+      "url": "http://www.hlktech.net",
+      "logo": "/logos/Shenzhen Hi-Link Electronic Co., Ltd.png"
+    },
+    "3": {
+      "name": "Bosch Sensortec",
+      "url": "https://www.bosch-sensortec.com",
+      "logo": "/logos/Bosch Sensortec.png"
+    },
+    "4": {
+      "name": "Shenzhen Ai-Thinker Technology Co., Ltd",
+      "url": "http://www.ai-thinker.com",
+      "logo": "/logos/Shenzhen Ai-Thinker Technology Co., Ltd.png"
+    },
+    "5": {
+      "name": "Lite-On Technology Corporation",
+      "url": "https://www.liteon.com",
+      "logo": "/logos/Lite-On Technology Corporation.svg"
+    }
   },
   "abbreviations": {
     "RISC": {
