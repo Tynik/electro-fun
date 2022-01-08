@@ -21,9 +21,9 @@ export const ProductSEO = ({ item }: ProductSEOProps) => {
     >
       <meta itemProp={'name'} content={item.title}/>
 
-      {(item.images || []).length > 0 && (
-        <meta itemProp={'image'} content={item.images[0].src}/>
-      )}
+      {(item.images || []).map(image => (
+        <meta key={image.src} itemProp={'image'} content={image.src}/>
+      ))}
 
       {item.content && (
         <meta itemProp={'description'} content={item.content}/>
@@ -43,7 +43,7 @@ export const ProductSEO = ({ item }: ProductSEOProps) => {
         <OfferSEO item={item}/>
       )}
 
-      {item.contributors && item.contributors.map(contributor => (
+      {(item.contributors || []).map(contributor => (
         <div
           key={contributor.name}
           itemType={`${SEO_SCHEMA_BASE_URL}/Person`}

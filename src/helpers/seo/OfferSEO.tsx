@@ -3,6 +3,7 @@ import React from 'react';
 import type { ItemT } from '~/types';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
+import { DbContext } from '~/contexts';
 import { useQueryParams } from '~/utils';
 import {
   getItemPrice,
@@ -15,6 +16,8 @@ export type OfferSEOProps = {
 }
 
 export const OfferSEO = ({ item }: OfferSEOProps) => {
+  const { db } = React.useContext(DbContext);
+
   const { optionId: selectedItemOptionId } = useQueryParams();
 
   const itemPrice = getItemPrice(item, selectedItemOptionId);
@@ -26,6 +29,7 @@ export const OfferSEO = ({ item }: OfferSEOProps) => {
       itemScope
     >
       <meta itemProp={'url'} content={`/item/${item.id}`}/>
+      <meta itemProp={'category'} content={db.categories[item.categoryId].name}/>
       <meta itemProp={'price'} content={itemPrice.toString()}/>
       <meta itemProp={'priceCurrency'} content={'UAH'}/>
       <meta itemProp={'availability'} content={getItemAvailabilitySEOSchema(item)}/>
