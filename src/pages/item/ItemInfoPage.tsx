@@ -13,7 +13,7 @@ import type { ItemT } from '~/types';
 
 import { DbContext } from '~/contexts';
 import { useQueryParams } from '~/utils';
-import { getItemPrice, getItemAvailabilitySEOSchema } from '~/helpers';
+import { getItemPrice, ProductSEO } from '~/helpers';
 import {
   useTextProcessor,
   useSmoothScroll,
@@ -110,13 +110,8 @@ export const ItemInfoPage = () => {
   const itemPrice = getItemPrice(item, selectedItemOptionId);
 
   return (
-    <Grid
-      spacing={2}
-      itemType={'https://schema.org/Product'}
-      itemScope
-      container
-    >
-      <meta itemProp={'name'} content={item.title}/>
+    <Grid spacing={2} container>
+      <ProductSEO item={item}/>
 
       <Grid xs={12} item>
         <BackButton/>
@@ -138,7 +133,6 @@ export const ItemInfoPage = () => {
 
             <Typography
               variant={'body1'}
-              itemProp={'description'}
               sx={{ whiteSpace: 'pre-line', textAlign: 'justify' }}
             >
               {clarificationsWrapper(item.content)}
@@ -199,72 +193,13 @@ export const ItemInfoPage = () => {
         )}
 
         {Boolean(itemPrice) && (
-          <Box
-            sx={{
-              marginTop: theme.spacing(2),
-              textAlign: 'center'
-            }}
-            itemProp={'offers'}
-            itemType={'https://schema.org/Offer'}
-            itemScope
-          >
+          <Box sx={{
+            marginTop: theme.spacing(2),
+            textAlign: 'center'
+          }}>
             <Typography variant={'h5'} component={'div'}>
               {itemPrice.toFixed(2)} UAH
             </Typography>
-
-            <meta itemProp={'url'} content={`/item/${item.id}`}/>
-            <meta itemProp={'price'} content={itemPrice.toString()}/>
-            <meta itemProp={'priceCurrency'} content={'UAH'}/>
-            <meta itemProp={'availability'} content={getItemAvailabilitySEOSchema(item)}/>
-            <meta itemProp={'itemCondition'} content={'https://schema.org/NewCondition'}/>
-
-            <div
-              itemProp={'shippingDetails'}
-              itemType={'https://schema.org/OfferShippingDetails'}
-              itemScope
-            >
-              <div
-                itemProp={'shippingRate'}
-                itemType={'https://schema.org/MonetaryAmount'}
-                itemScope
-              >
-                <meta itemProp={'minValue'} content={'0'}/>
-                <meta itemProp={'maxValue'} content={'60'}/>
-                <meta itemProp={'currency'} content={'UAH'}/>
-              </div>
-
-              <div
-                itemProp={'shippingDestination'}
-                itemType={'https://schema.org/DefinedRegion'}
-                itemScope
-              >
-                <meta itemProp={'addressCountry'} content={'UA'}/>
-              </div>
-
-              <div
-                itemProp={'deliveryTime'}
-                itemType={'https://schema.org/ShippingDeliveryTime'}
-                itemScope
-              >
-                <div
-                  itemProp={'handlingTime'}
-                  itemType={'https://schema.org/QuantitativeValue'}
-                  itemScope
-                >
-                  <meta itemProp={'minValue'} content={'0'}/>
-                  <meta itemProp={'maxValue'} content={'1'}/>
-                </div>
-
-                <div
-                  itemProp={'transitTime'}
-                  itemType={'https://schema.org/QuantitativeValue'}
-                  itemScope
-                >
-                  <meta itemProp={'minValue'} content={'1'}/>
-                  <meta itemProp={'maxValue'} content={'4'}/>
-                </div>
-              </div>
-            </div>
           </Box>
         )}
 
