@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import {
+  Button,
   Box,
   ButtonGroup,
   Paper,
@@ -11,7 +12,7 @@ import {
 import type { ItemT, ItemOptionIdT } from '~/types';
 
 import { UserContext } from '~/contexts';
-import { CIconButton, CButton } from '~/components';
+import { CIconButton } from '~/components';
 import { getIcon } from '~/utils';
 import { getItemPrice } from '~/helpers';
 import { useUpMediaQuery } from '~/hooks';
@@ -87,14 +88,14 @@ const BasketItem = ({ item, optionId }: BasketItemProps) => {
           orientation={smMatch ? 'horizontal' : 'vertical'}
           sx={{ marginLeft: 2 }}
         >
-          <CButton
+          <Button
             disabled={basket.items[item.id][optionId] === 1}
             onClick={() => removeItemFromBasket(item.id, optionId)}
           >
             -
-          </CButton>
-          <CButton disabled>{basket.items[item.id][optionId]}</CButton>
-          <CButton onClick={() => addItemToBasket(item.id, optionId)}>+</CButton>
+          </Button>
+          <Button disabled>{basket.items[item.id][optionId]}</Button>
+          <Button onClick={() => addItemToBasket(item.id, optionId)}>+</Button>
         </ButtonGroup>
       </Box>
 

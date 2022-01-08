@@ -6,6 +6,7 @@ export type CategoryIdT = number
 export type FeatureIdT = number
 export type DatasheetIdT = string
 export type DocIdT = string
+export type ManufacturerIdT = string
 
 export enum ItemFeatureValueTypeT {
   axis,
@@ -46,19 +47,19 @@ export type ApplicationIdT = string
 export type ApplicationT = string
 export type ApplicationsT = Record<ApplicationIdT, ApplicationT>
 
-export enum ItemDriverSrcSourceT {
+export enum ItemContributorSrcSourceT {
   GITHUB = 'github',
 }
 
-export type ItemDriverSrcT = {
-  source: ItemDriverSrcSourceT
+export type ItemContributorSrcT = {
+  source: ItemContributorSrcSourceT
   userId: number
 }
 
-export type ItemDriverT = {
+export type ItemContributorT = {
   name: string
   url: string
-  src?: ItemDriverSrcT
+  src?: ItemContributorSrcT
 }
 
 export type ItemExternalLinkT = {
@@ -85,7 +86,7 @@ export type ItemT = {
   id?: ItemIdT
   categoryId?: CategoryIdT
   seo?: SeoT & { title?: string }
-  developedBy?: string
+  manufacturerId?: ManufacturerIdT
   companyLink?: string
   original?: boolean
   content?: string
@@ -99,7 +100,7 @@ export type ItemT = {
   features?: ItemFeatureT[]
   images?: ItemImageT[]
   applicationIds?: ApplicationIdT[]
-  drivers?: ItemDriverT[]
+  contributors?: ItemContributorT[]
   externalLinks?: ItemExternalLinkT[]
 }
 
@@ -137,6 +138,7 @@ export type DbMetaT = {
 export type DatasheetT = {
   url: string
   lang: string
+  manufacturerId?: ManufacturerIdT
   version?: string
   description?: string
 }
@@ -179,6 +181,7 @@ export type DbT = {
   itemFeatures: DbItemFeaturesT
   items: ItemT[]
   datasheets: DatasheetsT
+  manufacturers: Record<ManufacturerIdT, string>
   docs: DocsT
   applications: ApplicationsT
   footer: {

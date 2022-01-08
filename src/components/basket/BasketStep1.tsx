@@ -1,10 +1,10 @@
 import React from 'react';
-import { Grid, Alert, Stack } from '@mui/material';
+import { Button, Grid, Alert, Stack } from '@mui/material';
 
 import type { ItemT } from '~/types';
 
 import { UserContext } from '~/contexts';
-import { BasketItem, CButton } from '~/components';
+import { BasketItem } from '~/components';
 import { getIcon } from '~/utils';
 
 export type BasketStep1Props = {
@@ -45,16 +45,16 @@ const BasketStep1 = ({ isActive, items, onNext }: BasketStep1Props) => {
           direction={'row'}
           sx={{ justifyContent: 'right' }}
         >
-          <CButton
+          <Button
             onClick={clearBasket}
             disabled={!items.length}
             startIcon={getIcon('deleteForever')}
             variant={'outlined'}
           >
             Очистить
-          </CButton>
+          </Button>
 
-          <CButton
+          <Button
             onClick={onNext}
             disabled={!items.length}
             startIcon={getIcon('navigateNext')}
@@ -62,7 +62,7 @@ const BasketStep1 = ({ isActive, items, onNext }: BasketStep1Props) => {
             variant={'contained'}
           >
             Далее
-          </CButton>
+          </Button>
         </Stack>
       </Grid>
     </>

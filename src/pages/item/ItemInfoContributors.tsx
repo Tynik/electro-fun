@@ -5,42 +5,42 @@ import {
   Avatar
 } from '@mui/material';
 
-import type { ItemDriverT } from '~/types';
+import type { ItemContributorT } from '~/types';
 
 import { ExternalLink } from '~/components';
-import { getItemDriverAvatarSrc } from '~/utils';
+import { getItemContributorAvatarSrc } from '~/utils';
 
-export type ItemInfoDriversProps = {
-  drivers: ItemDriverT[]
+export type ItemInfoContributorsProps = {
+  contributors: ItemContributorT[]
 }
 
-export const ItemInfoDrivers = ({ drivers }: ItemInfoDriversProps) => {
+export const ItemInfoContributors = ({ contributors }: ItemInfoContributorsProps) => {
   return (
     <>
       <Typography variant={'overline'}>
-        Драйверы
+        Контрибьюторы
       </Typography>
 
       <AvatarGroup
         max={10}
         sx={{ display: 'flex', justifyContent: 'center' }}
       >
-        {drivers.map(driver => (
+        {contributors.map(contributor => (
           <ExternalLink
-            key={driver.name}
-            href={driver.url}
+            key={contributor.name}
+            href={contributor.url}
             hrefLang={'en'}
-            title={driver.name}
+            title={contributor.name}
             sx={{ textDecoration: 'none' }}
             itemType={'https://schema.org/Person'}
             itemProp={'contributor'}
             itemScope
           >
-            <meta itemProp={'name'} content={driver.name}/>
+            <meta itemProp={'name'} content={contributor.name}/>
 
             <Avatar
-              alt={driver.name}
-              src={getItemDriverAvatarSrc(driver.src)}
+              alt={contributor.name}
+              src={getItemContributorAvatarSrc(contributor.src)}
               imgProps={{
                 itemProp: 'image'
               }}

@@ -7,9 +7,9 @@ import {
 } from '@mui/material';
 
 import { DbContext, UserContext } from '~/contexts';
-
 import { getIcon } from '~/utils';
 import CIconButton from '~/components/CIconButton';
+
 import Search from './Search';
 
 export type ToolbarProps = {

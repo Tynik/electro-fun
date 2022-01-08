@@ -25,9 +25,7 @@ export const BasketPage = (props: BasketPageProps) => {
 
   const [step, setStep] = React.useState<number>(0);
 
-  const {
-    user: { basket }
-  } = React.useContext(UserContext);
+  const { user: { basket } } = React.useContext(UserContext);
 
   React.useEffect(() => {
     setStep(0);
@@ -36,11 +34,13 @@ export const BasketPage = (props: BasketPageProps) => {
   }, [basket.items]);
 
   const totalPrice = React.useMemo(() =>
-      items?.reduce((totalPrice, item) => {
-        return totalPrice + Object.keys(basket.items[item.id]).reduce((price, optionId) => {
-          return price + getItemPrice(item, optionId) * basket.items[item.id][optionId];
-        }, 0);
-      }, 0) || 0,
+      items?.reduce((totalPrice, item) =>
+          totalPrice + Object.keys(basket.items[item.id]).reduce((price, optionId) =>
+              price + getItemPrice(item, optionId) * basket.items[item.id][optionId],
+            0
+          ),
+        0
+      ) || 0,
     [items]
   );
 
@@ -112,6 +112,7 @@ export const BasketPage = (props: BasketPageProps) => {
                 Общая сумма заказа:
               </Typography>
             </Grid>
+
             <Grid item>
               <Typography
                 variant={'h5'}

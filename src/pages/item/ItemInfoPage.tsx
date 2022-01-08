@@ -32,7 +32,7 @@ import { ItemInfoOptions } from './ItemInfoOptions';
 import { ItemInfoExternalLinks } from './ItemInfoExternalLinks';
 import { ItemInfoApplications } from './ItemInfoApplications';
 import { ItemInfoActions } from './ItemInfoActions';
-import { ItemInfoDrivers } from './ItemInfoDrivers';
+import { ItemInfoContributors } from './ItemInfoContributors';
 import { ItemInfoRelatedDatasheets } from './ItemInfoRelatedDatasheets';
 import { ItemInfoHeader } from './ItemInfoHeader';
 
@@ -177,6 +177,12 @@ export const ItemInfoPage = () => {
             <ItemInfoExternalLinks externalLinks={item.externalLinks}/>
           </Box>
         )}
+
+        {item.contributors && item.contributors.length > 0 && (
+          <Box marginTop={theme.spacing(2)}>
+            <ItemInfoContributors contributors={item.contributors}/>
+          </Box>
+        )}
       </Grid>
 
       <Grid xs={12} sm={6} item>
@@ -217,12 +223,6 @@ export const ItemInfoPage = () => {
         <Box marginTop={theme.spacing(2)}>
           <ItemInfoActions item={item}/>
         </Box>
-
-        {item.drivers && item.drivers.length > 0 && (
-          <Box marginTop={theme.spacing(2)}>
-            <ItemInfoDrivers drivers={item.drivers}/>
-          </Box>
-        )}
       </Grid>
     </Grid>
   );

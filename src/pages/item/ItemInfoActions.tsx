@@ -16,8 +16,7 @@ import type { ItemT } from '~/types';
 import { DbContext, UserContext } from '~/contexts';
 import { ExternalButtonLink } from '~/components';
 import { getIcon, useQueryParams } from '~/utils';
-import { useUpMediaQuery } from '~/hooks';
-import { getItemDefaultOption, getItemAvailabilitySEOSchema } from '~/helpers';
+import { getItemDefaultOption } from '~/helpers';
 
 export type ItemInfoActionsProps = {
   item: ItemT
@@ -33,8 +32,6 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
       selectedItemOptionId || getItemDefaultOption(item),
     [selectedItemOptionId]
   );
-
-  const smMatch = useUpMediaQuery('sm');
 
   const numberItemsInBasket = getNumberItemsInBasket(item, itemOptionId);
 
@@ -79,7 +76,6 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
               variant={numberItemsInBasket ? 'outlined' : 'contained'}
               color={numberItemsInBasket ? 'info' : 'success'}
               startIcon={getIcon('addShoppingCart')}
-              size={smMatch ? 'medium' : 'small'}
               disabled={!itemAvailability}
             >
               {numberItemsInBasket ? 'В корзине' : 'В корзину'}

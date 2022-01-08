@@ -23,6 +23,13 @@
     "3": "Умный дом (smart home)",
     "4": "Носимые электронные устройства (wearable electronics)"
   },
+  "manufacturers": {
+    "1": "ROHM Semiconductor",
+    "2": "Shenzhen Hi-Link Electronic Co., Ltd",
+    "3": "Bosch Sensortec",
+    "4": "Shenzhen Ai-Thinker Technology Co., Ltd",
+    "5": "Lite-On Technology Corporation"
+  },
   "abbreviations": {
     "RISC": {
       "url": "https://ru.wikipedia.org/wiki/RISC",
@@ -995,7 +1002,7 @@
         "description": "BMP280 - датчик для измерения температуры, давления и влажности",
         "keywords": "bmp280, bosch, температура, давление, влажность"
       },
-      "developedBy": "Bosch Sensortec",
+      "manufacturerId": "3",
       "buy": true,
       "price": 23,
       "availability": 9,

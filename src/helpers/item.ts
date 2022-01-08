@@ -1,26 +1,29 @@
-import { ItemT, CategoryIdT } from '~/types';
-import { ApplicationIdT } from '~/types';
-import { ItemOptionIdT } from '~/types';
+import type {
+  ItemT,
+  CategoryIdT,
+  ItemOptionIdT,
+  ApplicationIdT,
+  ManufacturerIdT
+} from '~/types';
+import { SEO_SCHEMA_BASE_URL } from '~/constants';
+import { checkSearchKeyword } from '~/helpers';
 
 export const matchItemWithSearchKeyword = (
   item: ItemT,
   searchKeyword: string,
-  applicationIds: ApplicationIdT[] = []
+  applicationIds: ApplicationIdT[],
+  manufacturerIds: ManufacturerIdT[]
 ): boolean => {
-  let itemIsMatched = item.title.toLowerCase().includes(searchKeyword);
+  let itemIsMatched = checkSearchKeyword(item.title, searchKeyword);
 
-  itemIsMatched ||= !itemIsMatched && item.subtitle.toLowerCase().includes(searchKeyword);
-
-  if (item.developedBy) {
-    itemIsMatched ||= item.developedBy.toLowerCase().includes(searchKeyword);
-  }
+  itemIsMatched ||= !itemIsMatched && checkSearchKeyword(item.subtitle, searchKeyword);
 
   if (!itemIsMatched && item.content) {
-    itemIsMatched ||= item.content.toLowerCase().includes(searchKeyword);
+    itemIsMatched ||= checkSearchKeyword(item.content, searchKeyword);
   }
 
   if (!itemIsMatched && item.seo) {
-    itemIsMatched ||= item.seo.description.toLowerCase().includes(searchKeyword);
+    itemIsMatched ||= checkSearchKeyword(item.seo.description, searchKeyword);
 
     itemIsMatched ||= item.seo.keywords.split(',').some(seoKeyword =>
       seoKeyword.trim().toLowerCase().split('-').some(seoKeywordPart =>
@@ -31,19 +34,19 @@ export const matchItemWithSearchKeyword = (
 
   if (!itemIsMatched && item.externalLinks) {
     itemIsMatched ||= item.externalLinks.some(externalLink =>
-      externalLink.name.toLowerCase().includes(searchKeyword)
+      checkSearchKeyword(externalLink.name, searchKeyword)
     );
   }
 
   if (!itemIsMatched && item.options) {
     itemIsMatched ||= Object.values(item.options).some(option =>
-      option.name.toLowerCase().includes(searchKeyword)
+      checkSearchKeyword(option.name, searchKeyword)
     );
   }
 
-  if (!itemIsMatched && item.drivers) {
-    itemIsMatched ||= item.drivers.some(driver =>
-      driver.name.toLowerCase().includes(searchKeyword)
+  if (!itemIsMatched && item.contributors) {
+    itemIsMatched ||= item.contributors.some(contributor =>
+      checkSearchKeyword(contributor.name, searchKeyword)
     );
   }
 
@@ -53,16 +56,23 @@ export const matchItemWithSearchKeyword = (
     );
   }
 
+  if (!itemIsMatched && manufacturerIds.length && item.manufacturerId) {
+    itemIsMatched ||= manufacturerIds.includes(item.manufacturerId);
+  }
+
   return itemIsMatched;
 };
 
 export const matchItemWithSearchKeywords = (
   item: ItemT,
   searchKeywords: string[],
-  applicationIds: ApplicationIdT[] = []
+  applicationIds: ApplicationIdT[],
+  manufacturerIds: ManufacturerIdT[]
 ): boolean =>
   searchKeywords.every(searchKeyword =>
-    matchItemWithSearchKeyword(item, searchKeyword, applicationIds)
+    matchItemWithSearchKeyword(
+      item, searchKeyword, applicationIds, manufacturerIds
+    )
   );
 
 export const matchItemWithSearch = (
@@ -70,11 +80,13 @@ export const matchItemWithSearch = (
   {
     searchKeywords,
     categoryId,
-    applicationIds
+    applicationIds,
+    manufacturerIds
   }: {
     searchKeywords: string[]
     categoryId: CategoryIdT
-    applicationIds: ApplicationIdT[]
+    applicationIds: ApplicationIdT[],
+    manufacturerIds: ManufacturerIdT[],
   }
 ): boolean => {
   // show all items by default if nothing was passed
@@ -84,17 +96,20 @@ export const matchItemWithSearch = (
     itemIsMatched &&= matchItemWithSearchKeywords(
       item,
       searchKeywords,
-      applicationIds
+      applicationIds,
+      manufacturerIds
     );
   }
-  if (categoryId) {
+  if (itemIsMatched && categoryId) {
     itemIsMatched &&= item.categoryId === categoryId;
   }
   return itemIsMatched;
 };
 
 export const getItemDefaultOption = (item: ItemT) =>
-  item.options && Object.keys(item.options).find(optionId => item.options[optionId].default);
+  item.options && Object.keys(item.options).find(optionId =>
+    item.options[optionId].default
+  );
 
 export const getItemPrice = (item: ItemT, optionId: ItemOptionIdT) => {
   if (!item.price) {
@@ -110,10 +125,10 @@ export const getItemPrice = (item: ItemT, optionId: ItemOptionIdT) => {
 
 export const getItemAvailabilitySEOSchema = (item: ItemT) => {
   if (item.availability) {
-    return 'https://schema.org/InStock';
+    return `${SEO_SCHEMA_BASE_URL}/InStock`;
   }
   if (item.availability === 0) {
-    return 'https://schema.org/SoldOut';
+    return `${SEO_SCHEMA_BASE_URL}/SoldOut`;
   }
-  return 'https://schema.org/OutOfStock';
+  return `${SEO_SCHEMA_BASE_URL}/OutOfStock`;
 };

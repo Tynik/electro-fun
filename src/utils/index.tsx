@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ItemT, DbT, ItemDriverSrcT, ItemDriverSrcSourceT } from '~/types';
+import { ItemT, DbT, ItemContributorSrcT, ItemContributorSrcSourceT } from '~/types';
 
 export * from './mui';
 export * from './object';
@@ -25,9 +25,9 @@ export const preprocessDb = (db: DbT) => (
   }
 );
 
-export const getItemDriverAvatarSrc = (itemDriverSrc: ItemDriverSrcT): string => {
-  if (itemDriverSrc.source === ItemDriverSrcSourceT.GITHUB) {
-    return `https://avatars.githubusercontent.com/u/${itemDriverSrc.userId}?s=60&v=4`;
+export const getItemContributorAvatarSrc = (contributorSrc: ItemContributorSrcT): string => {
+  if (contributorSrc.source === ItemContributorSrcSourceT.GITHUB) {
+    return `https://avatars.githubusercontent.com/u/${contributorSrc.userId}?s=60&v=4`;
   }
-  throw new Error('Driver avatar src cannot be found');
+  throw new Error('Contributor avatar src cannot be found');
 };

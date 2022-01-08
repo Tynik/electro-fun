@@ -1,5 +1,10 @@
 {
   "datasheets": {
+    "BH1750FVI": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/BH1750FVI.pdf",
+      "lang": "en",
+      "manufacturerId": "1"
+    },
     "MOC304x": {
       "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/MOC304x.pdf",
       "lang": "en"
@@ -80,6 +85,7 @@
       "price": 7,
       "availability": 10,
       "datasheetId": "MOC302x",
+      "manufacturerId": "5",
       "images": [
         {
           "src": "/photos/MOC3021-SOP6-1.webp",
@@ -147,7 +153,7 @@
       "availability": 3,
       "content": "",
       "datasheetId": "HLK-PM0x",
-      "developedBy": "Shenzhen Hi-Link Electronic Co., Ltd",
+      "manufacturerId": "2",
       "images": [
         {
           "src": "/photos/HLK-PM01-1.webp",

@@ -1,15 +1,17 @@
 import React from 'react';
 import debounce from 'lodash.debounce';
 
-import {
+import type {
   DbT,
   ItemIdT,
   ItemT,
   DatasheetIdT,
   FoundDatasheetsT,
-  ApplicationIdT
+  ApplicationIdT,
+  ManufacturerIdT
 } from '~/types';
 import {
+  checkSearchKeyword,
   matchItemWithSearch,
   matchDatasheetWithSearchKeywords
 } from '~/helpers';
@@ -62,8 +64,18 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
 
       if (searchKeywords && searchKeywords.length) {
         matchedApplicationIds = Object.keys(db.applications).filter(applicationId =>
-          searchKeywords.some(searchKeyword =>
-            db.applications[applicationId].toLowerCase().includes(searchKeyword)
+          searchKeywords.every(searchKeyword =>
+            checkSearchKeyword(db.applications[applicationId], searchKeyword)
+          )
+        );
+      }
+
+      let matchedManufacturerIds: ManufacturerIdT[];
+
+      if (searchKeywords && searchKeywords.length) {
+        matchedManufacturerIds = Object.keys(db.manufacturers).filter(manufacturerId =>
+          searchKeywords.every(searchKeyword =>
+            checkSearchKeyword(db.manufacturers[manufacturerId], searchKeyword)
           )
         );
       }
@@ -73,6 +85,7 @@ export const useJsonDbSearch = (db: DbT, loadNextDbPart: () => boolean) => {
           item,
           {
             applicationIds: matchedApplicationIds,
+            manufacturerIds: matchedManufacturerIds,
             searchKeywords,
             categoryId
           }
