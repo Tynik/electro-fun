@@ -5,6 +5,7 @@ import { ItemT } from '~/types';
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
 import { DbContext } from '~/contexts';
 import { OfferSEO } from '~/helpers';
+import { getItemContributorAvatarSrc } from '~/utils';
 
 export type ProductSEOProps = {
   item: ItemT
@@ -19,6 +20,10 @@ export const ProductSEO = ({ item }: ProductSEOProps) => {
       itemScope
     >
       <meta itemProp={'name'} content={item.title}/>
+
+      {(item.images || []).length > 0 && (
+        <meta itemProp={'image'} content={item.images[0].src}/>
+      )}
 
       {item.content && (
         <meta itemProp={'description'} content={item.content}/>
@@ -37,6 +42,18 @@ export const ProductSEO = ({ item }: ProductSEOProps) => {
       {item.price && (
         <OfferSEO item={item}/>
       )}
+
+      {item.contributors && item.contributors.map(contributor => (
+        <div
+          key={contributor.name}
+          itemType={`${SEO_SCHEMA_BASE_URL}/Person`}
+          itemProp={'contributor'}
+          itemScope
+        >
+          <meta itemProp={'name'} content={contributor.name}/>
+          <meta itemProp={'image'} content={getItemContributorAvatarSrc(contributor.src)}/>
+        </div>
+      ))}
     </div>
   );
 };

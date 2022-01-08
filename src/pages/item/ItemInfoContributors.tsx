@@ -32,18 +32,10 @@ export const ItemInfoContributors = ({ contributors }: ItemInfoContributorsProps
             hrefLang={'en'}
             title={contributor.name}
             sx={{ textDecoration: 'none' }}
-            itemType={'https://schema.org/Person'}
-            itemProp={'contributor'}
-            itemScope
           >
-            <meta itemProp={'name'} content={contributor.name}/>
-
             <Avatar
               alt={contributor.name}
               src={getItemContributorAvatarSrc(contributor.src)}
-              imgProps={{
-                itemProp: 'image'
-              }}
             />
           </ExternalLink>
         ))}
