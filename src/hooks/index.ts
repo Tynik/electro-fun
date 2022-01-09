@@ -7,3 +7,4 @@ export * from './useLocalStorage';
 export * from './useSeo';
 export * from './useUser';
 export * from './useMediaQuery';
+export * from './useCategory';

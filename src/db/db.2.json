@@ -91,7 +91,7 @@
       "features": [
         {
           "refId": 3,
-          "value": "2 В"
+          "value": "2.0 В"
         },
         {
           "refId": 24,
@@ -563,7 +563,7 @@
         },
         {
           "refId": 3,
-          "value": "4.5 - 9 В"
+          "value": "4.5 - 9.0 В"
         },
         {
           "refId": 46,

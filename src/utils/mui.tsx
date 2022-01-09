@@ -29,6 +29,7 @@ import {
   NavigateBefore as NavigateBeforeIcon,
   NavigateNext as NavigateNextIcon,
   Power as PowerIcon,
+  SwitchLeft as SwitchLeftIcon,
 } from '@mui/icons-material';
 
 export const getIcon = (name: string, props: SvgIconProps = {}): any => {
@@ -61,5 +62,6 @@ export const getIcon = (name: string, props: SvgIconProps = {}): any => {
     navigateBefore: <NavigateBeforeIcon {...props}/>,
     navigateNext: <NavigateNextIcon {...props}/>,
     power: <PowerIcon {...props}/>,
+    switch: <SwitchLeftIcon {...props}/>,
   }[name];
 };

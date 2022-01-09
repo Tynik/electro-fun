@@ -8,9 +8,9 @@ import {
 
 import type { ItemT } from '~/types';
 
-import { DbContext } from '~/contexts';
 import { InternalLink } from '~/components';
 import { getIcon } from '~/utils';
+import { useCategory } from '~/hooks';
 
 export type ItemInfoHeaderProps = {
   item: ItemT
@@ -19,12 +19,10 @@ export type ItemInfoHeaderProps = {
 export const ItemInfoHeader = ({ item }: ItemInfoHeaderProps) => {
   const theme = useTheme();
 
-  const { db } = React.useContext(DbContext);
-
-  const category = React.useMemo(() =>
-      db.categories.find(category => category.id === item.categoryId),
-    []
-  );
+  const category = useCategory(item.categoryId);
+  if (!category) {
+    return null;
+  }
 
   return (
     <>

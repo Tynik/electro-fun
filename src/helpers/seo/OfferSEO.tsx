@@ -3,24 +3,29 @@ import React from 'react';
 import type { ItemT } from '~/types';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
-import { DbContext } from '~/contexts';
 import { useQueryParams } from '~/utils';
 import {
   getItemPrice,
   getItemAvailabilitySEOSchema,
-  OfferShippingDetailsSEO
+  OfferShippingDetailsSEO,
+  ItemInventoryLevel,
+  ItemMeasurement
 } from '~/helpers';
+import { useCategory } from '~/hooks';
 
 export type OfferSEOProps = {
   item: ItemT
 }
 
 export const OfferSEO = ({ item }: OfferSEOProps) => {
-  const { db } = React.useContext(DbContext);
-
   const { optionId: selectedItemOptionId } = useQueryParams();
 
   const itemPrice = getItemPrice(item, selectedItemOptionId);
+
+  const category = useCategory(item.categoryId);
+  if (!category) {
+    return null;
+  }
 
   return (
     <div
@@ -29,21 +34,14 @@ export const OfferSEO = ({ item }: OfferSEOProps) => {
       itemScope
     >
       <meta itemProp={'url'} content={`/item/${item.id}`}/>
-      <meta itemProp={'category'} content={db.categories[item.categoryId].name}/>
+      <meta itemProp={'category'} content={category.name}/>
       <meta itemProp={'price'} content={itemPrice.toString()}/>
       <meta itemProp={'priceCurrency'} content={'UAH'}/>
       <meta itemProp={'availability'} content={getItemAvailabilitySEOSchema(item)}/>
       <meta itemProp={'itemCondition'} content={`${SEO_SCHEMA_BASE_URL}/NewCondition`}/>
 
-      {item.seo && item.seo.measurement && (
-        <div
-          itemProp={'hasMeasurement'}
-          itemType={`${SEO_SCHEMA_BASE_URL}/QuantitativeValue`}
-          itemScope
-        >
-          <meta itemProp={'value'} content={item.seo.measurement}/>
-        </div>
-      )}
+      <ItemInventoryLevel item={item}/>
+      <ItemMeasurement item={item}/>
 
       <OfferShippingDetailsSEO/>
     </div>

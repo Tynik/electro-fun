@@ -4,7 +4,7 @@ import type { ItemT } from '~/types';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
 import { DbContext } from '~/contexts';
-import { OfferSEO } from '~/helpers';
+import { OfferSEO, ItemManufacturer } from '~/helpers';
 import { getItemContributorAvatarSrc } from '~/utils';
 
 export type ProductSEOProps = {
@@ -31,20 +31,7 @@ export const ProductSEO = ({ item }: ProductSEOProps) => {
         <meta itemProp={'description'} content={item.content}/>
       )}
 
-      {manufacturer && (
-        <div
-          itemProp={'brand'}
-          itemType={`${SEO_SCHEMA_BASE_URL}/Brand`}
-          itemScope
-        >
-          <meta itemProp={'name'} content={manufacturer.name}/>
-          <meta itemProp={'url'} content={manufacturer.url}/>
-          <meta
-            itemProp={'logo'}
-            content={`${db.siteURL}/logos/${manufacturer.logo}`}
-          />
-        </div>
-      )}
+      <ItemManufacturer item={item}/>
 
       {item.price && (
         <OfferSEO item={item}/>

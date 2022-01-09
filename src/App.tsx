@@ -7,6 +7,7 @@ import {
   LinearProgress
 } from '@mui/material';
 
+import { DbContext } from './contexts';
 import {
   Menu,
   DrawerHeader,
@@ -20,7 +21,6 @@ import {
   BasketPage
 } from './pages';
 import { useJsonDbSearch } from './hooks';
-import { DbContext } from './contexts';
 
 const drawerWidth = 240;
 

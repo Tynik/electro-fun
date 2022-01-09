@@ -1,7 +1,10 @@
 import React from 'react';
-import { DbT, DbMetaT } from '~/types';
+
+import type { DbT, DbMetaT } from '~/types';
+
 import { mergeDeep, preprocessDb } from '~/utils';
 import { fetchDbMeta, fetchDbPart } from '~/api';
+
 import { useStaticErrors } from './useStaticErrors';
 
 export type DbPartIdT = string
@@ -11,7 +14,7 @@ export type UseDbOptions = {
   itemsPerPage: number
 }
 
-export const useJsonDb = (options: UseDbOptions = { itemsPerPage: 25 }) => {
+export const useJsonDb = (options: UseDbOptions = { itemsPerPage: 50 }) => {
   const [dbMeta, setDbMeta] = React.useState<DbMetaT>(null);
   const [fullDb, setFullDb] = React.useState<DbT>(null);
   const [page, setPage] = React.useState<number>(1);
@@ -53,14 +56,14 @@ export const useJsonDb = (options: UseDbOptions = { itemsPerPage: 25 }) => {
 
   }, [dbParts]);
 
-  const db = React.useMemo(() =>  {
+  const db = React.useMemo(() => {
     if (!fullDb) {
       return;
     }
     return {
       ...fullDb,
       items: fullDb.items.slice(0, endOffset)
-    }
+    };
   }, [fullDb, endOffset]);
 
   const loadDbMeta = React.useCallback(async () => {
