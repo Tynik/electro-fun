@@ -19,7 +19,13 @@ export const BreadcrumbItem = (props: BreadcrumbItemProps) => {
   } = props;
 
   const iconElement = icon && (
-    React.cloneElement(icon, { sx: { mr: 0.5 }, fontSize: 'inherit' })
+    React.cloneElement(icon, {
+      sx: {
+        marginRight: 0.5,
+        color: 'text.secondary',
+      },
+      fontSize: 'inherit',
+    })
   );
 
   return (

@@ -15,7 +15,7 @@ import { DbContext } from '~/contexts';
 import { sortItemFeatures } from '~/helpers';
 import { useTextProcessor } from '~/hooks';
 import { AbbrLink } from '~/components';
-import { useSelectedItemOptionId } from '~/hooks';
+import { useItemFeatures } from '~/hooks';
 
 export type ItemInfoFeaturesProps = {
   item: ItemT
@@ -111,14 +111,7 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
       )
     )), []);
 
-  const selectedItemOptionId = useSelectedItemOptionId(item);
-
-  const itemFeatures = React.useMemo(() =>
-      item.features.filter(itemFeature =>
-        !itemFeature.optionId || itemFeature.optionId === selectedItemOptionId
-      ) || [],
-    [selectedItemOptionId]
-  );
+  const itemFeatures = useItemFeatures(item);
 
   return (
     <>

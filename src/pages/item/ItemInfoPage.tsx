@@ -19,7 +19,8 @@ import {
   useStaticErrors,
   useJsonDbSearch,
   useSeo,
-  useSelectedItemOptionId
+  useSelectedItemOptionId,
+  useItemImages
 } from '~/hooks';
 import {
   Loader,
@@ -98,6 +99,8 @@ export const ItemInfoPage = () => {
       )
     )), []);
 
+  const itemImages = useItemImages(item);
+
   // high priority to show errors
   if (errors.length) {
     return printErrors();
@@ -121,9 +124,9 @@ export const ItemInfoPage = () => {
         <ItemInfoHeader item={item}/>
       </Grid>
 
-      <Grid xs={12} sm={6} item>
+      <Grid xs={12} md={6} item>
         <ImageSlider
-          images={item.images || []}
+          images={itemImages}
           height={'300px'}
         />
 
@@ -179,7 +182,7 @@ export const ItemInfoPage = () => {
         )}
       </Grid>
 
-      <Grid xs={12} sm={6} item>
+      <Grid xs={12} md={6} item>
         <ItemInfoFeatures item={item}/>
 
         <Divider sx={{ marginTop: theme.spacing(2) }}/>

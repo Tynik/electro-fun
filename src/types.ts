@@ -53,6 +53,7 @@ export type ItemImageT = {
   alt: string
   src: string
   description?: string
+  optionId?: string
 }
 
 export type ApplicationIdT = string

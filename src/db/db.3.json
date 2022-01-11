@@ -92,23 +92,27 @@
       "images": [
         {
           "src": "/photos/MOC3021-SOP6-1.webp",
-          "alt": "MOC3021 SOP6 - внешний вид"
+          "alt": "MOC3021 SOP6 - внешний вид",
+          "optionId": "1"
         },
         {
           "src": "/photos/MOC3021-DIP6-1.webp",
-          "alt": "MOC3021 DIP6 - внешний вид"
+          "alt": "MOC3021 DIP6 - внешний вид",
+          "optionId": "2"
         },
         {
           "src": "/photos/MOC3021-SOP6-2.webp",
-          "alt": "MOC3021 SOP6 - корпус"
+          "alt": "MOC3021 SOP6 - корпус",
+          "optionId": "1"
         },
         {
           "src": "/photos/MOC3021-DIP6-2.webp",
-          "alt": "MOC3021 DIP6 - корпус"
+          "alt": "MOC3021 DIP6 - корпус",
+          "optionId": "2"
         },
         {
           "src": "/photos/MOC3021-3.webp",
-          "alt": "MOC3021 SOP6 - схема подключения"
+          "alt": "MOC3021 - схема подключения"
         }
       ],
       "features": [

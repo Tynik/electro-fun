@@ -6,6 +6,7 @@ export * from './useJsonDbSearch';
 export * from './useLocalStorage';
 export * from './useSeo';
 export * from './useUser';
-export * from './useMediaQuery';
 export * from './useCategory';
 export * from './useSelectedItemOptionId';
+export * from './useItemFeatures';
+export * from './useItemImages';

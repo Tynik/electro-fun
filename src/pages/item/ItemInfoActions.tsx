@@ -4,7 +4,8 @@ import {
   Badge,
   Button,
   Stack,
-  Typography
+  Typography,
+  useMediaQuery
 } from '@mui/material';
 import {
   Link as LinkIcon,
@@ -30,6 +31,8 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
   const selectedItemOptionId = useSelectedItemOptionId(item);
   const numberItemsInBasket = getNumberItemsInBasket(item, selectedItemOptionId);
 
+  const downSmMatch = useMediaQuery<any>((theme) => theme.breakpoints.down('sm'));
+
   const itemAvailability = item.availability
     ? (
       numberItemsInBasket ?
@@ -39,7 +42,12 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
     : 0;
 
   return (
-    <Stack spacing={2} direction={'row'} justifyContent={'center'}>
+    <Stack
+      spacing={2}
+      direction={downSmMatch ? 'column' : 'row'}
+      alignItems={downSmMatch ? 'center' : 'normal'}
+      justifyContent={'center'}
+    >
       {Boolean(item.datasheetId) && (
         <ExternalButtonLink
           href={db.datasheets[item.datasheetId].url}
@@ -61,7 +69,10 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
         </ExternalButtonLink>
       )}
       {item.buy === true && (
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        <Box sx={{
+          display: 'flex',
+          alignItems: 'center'
+        }}>
           <Badge
             badgeContent={numberItemsInBasket && `x${numberItemsInBasket}`}
             color={itemAvailability >= 0 ? 'success' : 'error'}
@@ -82,7 +93,7 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
             color={'primary.dark'}
             marginLeft={2}
           >
-            Доступно: {itemAvailability}
+            В наличии: {itemAvailability}
           </Typography>
         </Box>
       )}

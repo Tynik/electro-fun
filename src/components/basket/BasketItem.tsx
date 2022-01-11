@@ -7,6 +7,7 @@ import {
   Paper,
   Typography,
   Chip,
+  useMediaQuery
 } from '@mui/material';
 
 import type { ItemT, ItemOptionIdT } from '~/types';
@@ -15,7 +16,6 @@ import { UserContext } from '~/contexts';
 import { CIconButton } from '~/components';
 import { getIcon } from '~/utils';
 import { getItemPrice } from '~/helpers';
-import { useUpMediaQuery } from '~/hooks';
 
 export type BasketItemProps = {
   item: ItemT
@@ -29,7 +29,7 @@ const BasketItem = ({ item, optionId }: BasketItemProps) => {
     removeItemFromBasket
   } = React.useContext(UserContext);
 
-  const smMatch = useUpMediaQuery('sm');
+  const smMatch = useMediaQuery<any>((theme) => theme.breakpoints.up('sm'));
 
   const price = (
     getItemPrice(item, optionId) * basket.items[item.id][optionId]

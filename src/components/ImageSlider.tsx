@@ -10,9 +10,10 @@ import {
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 
+import type { ItemImageT } from '~/types';
+
 import { Loader } from './Loader';
 import { CImage } from './CImage';
-import { ItemImageT } from '~/types';
 
 const CustomCarousel = styled(Carousel)(({ theme }) => (
   {
@@ -45,10 +46,10 @@ export const ImageSlider = (props: ImageSliderProps) => {
   const theme = useTheme();
 
   const [inLoading, setInLoading] = React.useState(images.length);
-  const [photo, setPhoto] = React.useState<ItemImageT>(null);
+  const [zoomedImage, setZoomedImage] = React.useState<ItemImageT>(null);
 
   const onImageClick = (image: ItemImageT, index: number) => {
-    setPhoto(image);
+    setZoomedImage(image);
   };
 
   return (
@@ -99,10 +100,10 @@ export const ImageSlider = (props: ImageSliderProps) => {
         ))}
       </CustomCarousel>
 
-      {photo && (
+      {zoomedImage && (
         <Modal
           open={true}
-          onClose={() => setPhoto(null)}
+          onClose={() => setZoomedImage(null)}
         >
           <Box sx={{
             maxHeight: `calc(100% - ${theme.spacing(4)})`,
@@ -116,12 +117,12 @@ export const ImageSlider = (props: ImageSliderProps) => {
             overflow: 'scroll',
             p: 1
           }}>
-            <Typography variant={'subtitle1'}>{photo.alt}</Typography>
+            <Typography variant={'subtitle1'}>{zoomedImage.alt}</Typography>
 
             <img
-              src={photo.src}
+              src={zoomedImage.src}
               alt={''}
-              onClick={() => setPhoto(null)}
+              onClick={() => setZoomedImage(null)}
               style={{
                 maxWidth: '100%',
                 maxHeight: '100%',
