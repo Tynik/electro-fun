@@ -46,6 +46,7 @@ export type ItemFeatureT = {
   refId: FeatureIdT
   value: string | ItemFeatureMultiValueT[]
   info?: string
+  optionId?: string
 }
 
 export type ItemImageT = {
@@ -104,7 +105,7 @@ export type ItemT = {
   warningContent?: string
   datasheetId?: DatasheetIdT
   relatedDatasheetIds?: DatasheetIdT[]
-  availability?: number
+  availability?: number | Record<ItemOptionIdT, number>
   price?: number | Record<ItemOptionIdT, number>
   buy?: string | boolean
   options?: ItemOptionsT

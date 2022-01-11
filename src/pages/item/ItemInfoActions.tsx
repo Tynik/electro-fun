@@ -15,8 +15,9 @@ import type { ItemT } from '~/types';
 
 import { DbContext, UserContext } from '~/contexts';
 import { ExternalButtonLink } from '~/components';
-import { getIcon, useQueryParams } from '~/utils';
-import { getItemDefaultOption } from '~/helpers';
+import { getIcon } from '~/utils';
+import { useSelectedItemOptionId } from '~/hooks';
+import { getItemAvailability } from '~/helpers';
 
 export type ItemInfoActionsProps = {
   item: ItemT
@@ -26,20 +27,14 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
   const { db } = React.useContext(DbContext);
   const { getNumberItemsInBasket, addItemToBasket } = React.useContext(UserContext);
 
-  const { optionId: selectedItemOptionId } = useQueryParams();
-
-  const itemOptionId = React.useMemo(() =>
-      selectedItemOptionId || getItemDefaultOption(item),
-    [selectedItemOptionId]
-  );
-
-  const numberItemsInBasket = getNumberItemsInBasket(item, itemOptionId);
+  const selectedItemOptionId = useSelectedItemOptionId(item);
+  const numberItemsInBasket = getNumberItemsInBasket(item, selectedItemOptionId);
 
   const itemAvailability = item.availability
     ? (
       numberItemsInBasket ?
-        item.availability - numberItemsInBasket
-        : item.availability
+        getItemAvailability(item, selectedItemOptionId) - numberItemsInBasket
+        : getItemAvailability(item, selectedItemOptionId)
     )
     : 0;
 
@@ -72,7 +67,7 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
             color={itemAvailability >= 0 ? 'success' : 'error'}
           >
             <Button
-              onClick={() => addItemToBasket(item.id, itemOptionId)}
+              onClick={() => addItemToBasket(item.id, selectedItemOptionId)}
               variant={numberItemsInBasket ? 'outlined' : 'contained'}
               color={numberItemsInBasket ? 'info' : 'success'}
               startIcon={getIcon('addShoppingCart')}

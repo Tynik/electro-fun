@@ -3,7 +3,6 @@ import React from 'react';
 import type { ItemT } from '~/types';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
-import { useQueryParams } from '~/utils';
 import {
   getItemPrice,
   getItemAvailabilitySEOSchema,
@@ -11,15 +10,14 @@ import {
   ItemInventoryLevel,
   ItemMeasurement
 } from '~/helpers';
-import { useCategory } from '~/hooks';
+import { useCategory, useSelectedItemOptionId } from '~/hooks';
 
 export type OfferSEOProps = {
   item: ItemT
 }
 
 export const OfferSEO = ({ item }: OfferSEOProps) => {
-  const { optionId: selectedItemOptionId } = useQueryParams();
-
+  const selectedItemOptionId = useSelectedItemOptionId(item);
   const itemPrice = getItemPrice(item, selectedItemOptionId);
 
   const category = useCategory(item.categoryId);

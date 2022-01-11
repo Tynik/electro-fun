@@ -12,14 +12,14 @@ import {
 import type { ItemT } from '~/types';
 
 import { DbContext } from '~/contexts';
-import { useQueryParams } from '~/utils';
 import { getItemPrice, ProductSEO } from '~/helpers';
 import {
   useTextProcessor,
   useSmoothScroll,
   useStaticErrors,
   useJsonDbSearch,
-  useSeo
+  useSeo,
+  useSelectedItemOptionId
 } from '~/hooks';
 import {
   Loader,
@@ -49,7 +49,7 @@ export const ItemInfoPage = () => {
   const { wordsWrapper } = useTextProcessor();
   const { errors, setErrors, printErrors } = useStaticErrors();
 
-  const { optionId: selectedItemOptionId } = useQueryParams();
+  const selectedItemOptionId = useSelectedItemOptionId(item);
 
   useSmoothScroll({ top: 0, left: 0 });
 
@@ -180,7 +180,7 @@ export const ItemInfoPage = () => {
       </Grid>
 
       <Grid xs={12} sm={6} item>
-        <ItemInfoFeatures features={item.features}/>
+        <ItemInfoFeatures item={item}/>
 
         <Divider sx={{ marginTop: theme.spacing(2) }}/>
 

@@ -9,34 +9,19 @@ import {
 } from '@mui/material';
 import { Info as InfoIcon } from '@mui/icons-material';
 
-import type {
-  ItemFeatureT,
-  FeatureDefinitionSuffixT
-} from '~/types';
+import type { ItemT, ItemFeatureT, FeatureDefinitionSuffixT } from '~/types';
 
 import { DbContext } from '~/contexts';
+import { sortItemFeatures } from '~/helpers';
 import { useTextProcessor } from '~/hooks';
 import { AbbrLink } from '~/components';
-
-export const sortItemFeatures = (allFeatures, features: ItemFeatureT[]) =>
-  features.sort((featureA, featureB) => {
-    const featSecRefIdA = allFeatures[featureA.refId].featSecRefId;
-    const featSecRefIdB = allFeatures[featureB.refId].featSecRefId;
-
-    if (!featSecRefIdA) {
-      return -1;
-    }
-    if (!featSecRefIdB) {
-      return 1;
-    }
-    return featSecRefIdA - featSecRefIdB;
-  });
+import { useSelectedItemOptionId } from '~/hooks';
 
 export type ItemInfoFeaturesProps = {
-  features: ItemFeatureT[]
+  item: ItemT
 }
 
-export const ItemInfoFeatures = ({ features }: ItemInfoFeaturesProps) => {
+export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
   const theme = useTheme();
 
   const { db } = React.useContext(DbContext);
@@ -46,25 +31,27 @@ export const ItemInfoFeatures = ({ features }: ItemInfoFeaturesProps) => {
   const [featureInfo, setFeatureInfo] = React.useState('');
   const [featureInfoAnchorEl, setFeatureInfoAnchorEl] = React.useState(null);
 
-  const insertFeatureSectionName = React.useCallback((features: ItemFeatureT[], index: number): boolean => {
-    const featSectionRef = db.itemFeatures[features[index].refId].featSecRefId;
+  const isInsertItemFeatureSectionName = React.useCallback(
+    (features: ItemFeatureT[], index: number): boolean => {
+      const featSectionRef = db.itemFeatures[features[index].refId].featSecRefId;
 
-    if (!index) {
-      return Boolean(featSectionRef);
-    }
-    const prevFeatSectionRef = db.itemFeatures[features[index - 1].refId].featSecRefId;
+      if (!index) {
+        return Boolean(featSectionRef);
+      }
+      const prevFeatSectionRef = db.itemFeatures[features[index - 1].refId].featSecRefId;
 
-    return !prevFeatSectionRef
-      ? Boolean(featSectionRef)
-      : featSectionRef !== prevFeatSectionRef;
-  }, []);
+      return !prevFeatSectionRef
+        ? Boolean(featSectionRef)
+        : featSectionRef !== prevFeatSectionRef;
+    }, []
+  );
 
   const onFeatureInfoClick = (featureInfo: string, e) => {
     setFeatureInfoAnchorEl(e.currentTarget);
     setFeatureInfo(featureInfo);
   };
 
-  const getFeatureValue = React.useCallback((feature: ItemFeatureT) => {
+  const getItemFeatureValue = React.useCallback((feature: ItemFeatureT) => {
     const processFeatureValue = (values: any, suffix: FeatureDefinitionSuffixT) => {
       if (!Array.isArray(values)) {
         return [
@@ -90,7 +77,7 @@ export const ItemInfoFeatures = ({ features }: ItemInfoFeaturesProps) => {
           display: 'flex',
           alignItems: 'center',
           wordBreak: 'break-word',
-          whiteSpace: 'pre-wrap',
+          whiteSpace: 'pre-wrap'
         }}
       >
         {value}
@@ -124,6 +111,15 @@ export const ItemInfoFeatures = ({ features }: ItemInfoFeaturesProps) => {
       )
     )), []);
 
+  const selectedItemOptionId = useSelectedItemOptionId(item);
+
+  const itemFeatures = React.useMemo(() =>
+      item.features.filter(itemFeature =>
+        !itemFeature.optionId || itemFeature.optionId === selectedItemOptionId
+      ) || [],
+    [selectedItemOptionId]
+  );
+
   return (
     <>
       <Typography variant={'overline'}>
@@ -131,8 +127,8 @@ export const ItemInfoFeatures = ({ features }: ItemInfoFeaturesProps) => {
       </Typography>
 
       <Box>
-        {sortItemFeatures(db.itemFeatures, features || []).map(
-          (feature, index, array) => (
+        {sortItemFeatures(db.itemFeatures, itemFeatures).map(
+          (feature, index, features) => (
             <div
               key={`${feature.refId}-${index}-feature`}
               style={{
@@ -140,7 +136,7 @@ export const ItemInfoFeatures = ({ features }: ItemInfoFeaturesProps) => {
                 marginBottom: theme.spacing(1)
               }}
             >
-              {insertFeatureSectionName(array, index) && (
+              {isInsertItemFeatureSectionName(features, index) && (
                 <Typography
                   variant={'subtitle2'}
                   marginTop={theme.spacing(1)}
@@ -156,7 +152,7 @@ export const ItemInfoFeatures = ({ features }: ItemInfoFeaturesProps) => {
                 </Grid>
                 <Grid xs={4} sx={{ display: 'flex', alignItems: 'center' }} item>
                   <Typography variant={'body2'}>
-                    {getFeatureValue(feature)}
+                    {getItemFeatureValue(feature)}
                   </Typography>
                 </Grid>
               </Grid>

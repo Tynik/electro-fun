@@ -75,15 +75,18 @@
     },
     {
       "categoryId": 15,
-      "title": "MOC3021 SOP6",
+      "title": "MOC3021",
       "subtitle": "Оптопара до 400 В в пике",
       "seo": {
-        "description": "MOC3021 - оптоизолятор",
-        "keywords": "moc3021, sop6, smd, оптопара, оптоизолятор"
+        "description": "MOC3021 - оптоизолятор для контроля затемнения или фазы до 400 В",
+        "keywords": "moc3021, sop6, dip6, smd, оптопара, оптоизолятор, dimming, phase"
       },
       "buy": true,
       "price": 7,
-      "availability": 10,
+      "availability": {
+        "1": 9,
+        "2": 10
+      },
       "datasheetId": "MOC302x",
       "manufacturerId": "5",
       "images": [
@@ -92,11 +95,19 @@
           "alt": "MOC3021 SOP6 - внешний вид"
         },
         {
+          "src": "/photos/MOC3021-DIP6-1.webp",
+          "alt": "MOC3021 DIP6 - внешний вид"
+        },
+        {
           "src": "/photos/MOC3021-SOP6-2.webp",
           "alt": "MOC3021 SOP6 - корпус"
         },
         {
-          "src": "/photos/MOC3021-SOP6-3.webp",
+          "src": "/photos/MOC3021-DIP6-2.webp",
+          "alt": "MOC3021 DIP6 - корпус"
+        },
+        {
+          "src": "/photos/MOC3021-3.webp",
           "alt": "MOC3021 SOP6 - схема подключения"
         }
       ],
@@ -112,7 +123,13 @@
         },
         {
           "refId": 42,
-          "value": "SOP6"
+          "value": "SOP6",
+          "optionId": "1"
+        },
+        {
+          "refId": 42,
+          "value": "DIP6",
+          "optionId": "2"
         },
         {
           "refId": 93,
@@ -134,6 +151,15 @@
         }
       ],
       "content": "",
+      "options": {
+        "1": {
+          "name": "SOP6",
+          "default": true
+        },
+        "2": {
+          "name": "DIP6"
+        }
+      },
       "relatedDatasheetIds": [
         "MOC304x",
         "BT136E"
@@ -248,7 +274,7 @@
       "subtitle": "8-канальный му-/дему-льтиплексор",
       "seo": {
         "description": "74HC4051 - 8-канальный аналоговый мультиплексор/демультиплексор",
-        "keywords": "74hc4051, wcmcu-4051, мультиплексор, демультиплексор, 8-каналов, arduino, mux, demux",
+        "keywords": "74hc4051, wcmcu-4051, 4051, мультиплексор, демультиплексор, 8-каналов, arduino, mux, demux",
         "measurement": "8-каналов"
       },
       "buy": true,

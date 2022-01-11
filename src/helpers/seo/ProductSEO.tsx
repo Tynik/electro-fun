@@ -3,7 +3,6 @@ import React from 'react';
 import type { ItemT } from '~/types';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
-import { DbContext } from '~/contexts';
 import { OfferSEO, ItemManufacturer } from '~/helpers';
 import { getItemContributorAvatarSrc } from '~/utils';
 
@@ -12,10 +11,6 @@ export type ProductSEOProps = {
 }
 
 export const ProductSEO = ({ item }: ProductSEOProps) => {
-  const { db } = React.useContext(DbContext);
-
-  const manufacturer = item.manufacturerId && db.manufacturers[item.manufacturerId];
-
   return (
     <div
       itemType={`${SEO_SCHEMA_BASE_URL}/Product`}

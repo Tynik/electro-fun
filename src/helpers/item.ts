@@ -1,5 +1,7 @@
 import type {
   ItemT,
+  ItemFeatureT,
+  DbItemFeaturesT,
   CategoryIdT,
   ItemOptionIdT,
   ApplicationIdT,
@@ -118,9 +120,17 @@ export const getItemPrice = (item: ItemT, optionId: ItemOptionIdT) => {
   if (typeof item.price === 'number') {
     return item.price;
   }
-  optionId = optionId || getItemDefaultOption(item);
-
   return item.price[optionId];
+};
+
+export const getItemAvailability = (item: ItemT, optionId: ItemOptionIdT) => {
+  if (!item.availability) {
+    return 0;
+  }
+  if (typeof item.availability === 'number') {
+    return item.availability;
+  }
+  return item.availability[optionId];
 };
 
 export const getItemAvailabilitySEOSchema = (item: ItemT) => {
@@ -132,3 +142,17 @@ export const getItemAvailabilitySEOSchema = (item: ItemT) => {
   }
   return `${SEO_SCHEMA_BASE_URL}/OutOfStock`;
 };
+
+export const sortItemFeatures = (allFeatures: DbItemFeaturesT, features: ItemFeatureT[]) =>
+  features.sort((featureA, featureB) => {
+    const featSecRefIdA = allFeatures[featureA.refId].featSecRefId;
+    const featSecRefIdB = allFeatures[featureB.refId].featSecRefId;
+
+    if (!featSecRefIdA) {
+      return -1;
+    }
+    if (!featSecRefIdB) {
+      return 1;
+    }
+    return featSecRefIdA - featSecRefIdB;
+  });

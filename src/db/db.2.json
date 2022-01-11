@@ -514,6 +514,10 @@
         {
           "src": "/photos/LoLin-NodeMCU-ESP8266-3.webp",
           "alt": "NodeMCU-ESP8266 - схема"
+        },
+        {
+          "src": "/photos/LoLin-NodeMCU-ESP8266-4.webp",
+          "alt": "NodeMCU-ESP8266 - описание пинов"
         }
       ],
       "features": [
