@@ -49,6 +49,11 @@
       "name": "Lite-On Technology Corporation",
       "url": "https://www.liteon.com",
       "logo": "Lite-On Technology Corporation.svg"
+    },
+    "6": {
+      "name": "Infineon",
+      "url": "https://www.infineon.com",
+      "logo": "Infineon.png"
     }
   },
   "abbreviations": {
@@ -509,6 +514,11 @@
       "id": 18,
       "name": "Переключатели",
       "icon": "switch"
+    },
+    {
+      "id": 19,
+      "name": "Провод",
+      "icon": "power"
     }
   ],
   "featureSections": {
@@ -2077,6 +2087,7 @@
       "price": 8,
       "availability": 10,
       "datasheetId": "IRF3205PbF",
+      "manufacturerId": "6",
       "images": [
         {
           "src": "/photos/IRF3205PbF-1.webp",

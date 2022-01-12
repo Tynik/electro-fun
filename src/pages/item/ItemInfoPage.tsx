@@ -180,12 +180,25 @@ export const ItemInfoPage = () => {
             <ItemInfoContributors contributors={item.contributors}/>
           </Box>
         )}
+
+        {item.codeExamples && item.codeExamples.length > 0 && (
+          <Box marginTop={theme.spacing(2)}>
+            {item.codeExamples.map(codeExample => (
+              <pre key={codeExample.name}>
+                {codeExample.code}
+              </pre>
+            ))}
+          </Box>
+        )}
       </Grid>
 
       <Grid xs={12} md={6} item>
-        <ItemInfoFeatures item={item}/>
-
-        <Divider sx={{ marginTop: theme.spacing(2) }}/>
+        {item.features && item.features.length > 0 && (
+          <>
+            <ItemInfoFeatures item={item}/>
+            <Divider sx={{ marginTop: theme.spacing(2) }}/>
+          </>
+        )}
 
         {item.options && Object.keys(item.options).length > 0 && (
           <Box sx={{
