@@ -93,7 +93,7 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
             color={'primary.dark'}
             marginLeft={2}
           >
-            В наличии: {itemAvailability}
+            Доступно: {itemAvailability}
           </Typography>
         </Box>
       )}

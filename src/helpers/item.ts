@@ -133,11 +133,13 @@ export const getItemAvailability = (item: ItemT, optionId: ItemOptionIdT) => {
   return item.availability[optionId];
 };
 
-export const getItemAvailabilitySEOSchema = (item: ItemT) => {
-  if (item.availability) {
+export const getItemAvailabilitySEOSchema = (item: ItemT, optionId: ItemOptionIdT) => {
+  const availability = getItemAvailability(item, optionId);
+
+  if (availability) {
     return `${SEO_SCHEMA_BASE_URL}/InStock`;
   }
-  if (item.availability === 0) {
+  if (availability === 0) {
     return `${SEO_SCHEMA_BASE_URL}/SoldOut`;
   }
   return `${SEO_SCHEMA_BASE_URL}/OutOfStock`;

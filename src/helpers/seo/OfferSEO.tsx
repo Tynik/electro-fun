@@ -18,7 +18,9 @@ export type OfferSEOProps = {
 
 export const OfferSEO = ({ item }: OfferSEOProps) => {
   const selectedItemOptionId = useSelectedItemOptionId(item);
+
   const itemPrice = getItemPrice(item, selectedItemOptionId);
+  const itemAvailabilitySEOSchema = getItemAvailabilitySEOSchema(item, selectedItemOptionId);
 
   const category = useCategory(item.categoryId);
   if (!category) {
@@ -35,7 +37,7 @@ export const OfferSEO = ({ item }: OfferSEOProps) => {
       <meta itemProp={'category'} content={category.name}/>
       <meta itemProp={'price'} content={itemPrice.toString()}/>
       <meta itemProp={'priceCurrency'} content={'UAH'}/>
-      <meta itemProp={'availability'} content={getItemAvailabilitySEOSchema(item)}/>
+      <meta itemProp={'availability'} content={itemAvailabilitySEOSchema}/>
       <meta itemProp={'itemCondition'} content={`${SEO_SCHEMA_BASE_URL}/NewCondition`}/>
 
       <ItemInventoryLevel item={item}/>
