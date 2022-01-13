@@ -28,7 +28,7 @@ export type ItemFeatureMultiValueT = string | {
 export type ItemFeatureT = {
   refId: FeatureIdT
   value: string | ItemFeatureMultiValueT[]
-  info?: string
+  info?: string | string[]
   optionId?: string
 }
 

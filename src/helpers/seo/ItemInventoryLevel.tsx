@@ -14,10 +14,6 @@ export const ItemInventoryLevel = ({ item }: ItemInventoryLevelProps) => {
   const selectedItemOptionId = useSelectedItemOptionId(item);
   const itemAvailability = getItemAvailability(item, selectedItemOptionId);
 
-  if (!itemAvailability) {
-    return null;
-  }
-
   return (
     <div
       itemProp={'inventoryLevel'}

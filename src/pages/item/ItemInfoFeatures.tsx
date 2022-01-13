@@ -28,7 +28,7 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
 
   const { wordsWrapper } = useTextProcessor();
 
-  const [featureInfo, setFeatureInfo] = React.useState('');
+  const [featureInfo, setFeatureInfo] = React.useState<ItemFeatureT['info']>('');
   const [featureInfoAnchorEl, setFeatureInfoAnchorEl] = React.useState(null);
 
   const isInsertItemFeatureSectionName = React.useCallback(
@@ -46,24 +46,20 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
     }, []
   );
 
-  const onFeatureInfoClick = (featureInfo: string, e) => {
+  const onFeatureInfoClick = (featureInfo: ItemFeatureT['info'], e) => {
     setFeatureInfoAnchorEl(e.currentTarget);
     setFeatureInfo(featureInfo);
   };
 
   const getItemFeatureValue = React.useCallback((feature: ItemFeatureT) => {
-    const processFeatureValue = (values: any, suffix: FeatureDefinitionSuffixT) => {
-      if (!Array.isArray(values)) {
-        return [
-          values + (
-            suffix || ''
-          )
-        ];
+    const processFeatureValue = (featureValue: any, suffix: FeatureDefinitionSuffixT) => {
+      if (!Array.isArray(featureValue)) {
+        return [featureValue + (suffix || '')];
       }
-      return values.map(values =>
-        ['string', 'number'].includes(typeof values)
-          ? processFeatureValue(values, suffix)
-          : processFeatureValue(values.value, suffix && suffix[values.type]).join(', ')
+      return featureValue.map(value =>
+        ['string', 'number'].includes(typeof value)
+          ? processFeatureValue(value, suffix)
+          : processFeatureValue(value.value, suffix && suffix[value.type]).join(', ')
       );
     };
 
@@ -82,7 +78,7 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
       >
         {value}
 
-        {Boolean(feature.info) && (
+        {feature.info && (
           <InfoIcon
             fontSize={'small'}
             color={'info'}
@@ -139,9 +135,12 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
               )}
               <Grid container>
                 <Grid xs={8} item>
-                  <Typography variant={'body1'}>
-                    {abbreviationsWrapper(db.itemFeatures[feature.refId].name)}
-                  </Typography>
+                  <Typography
+                    variant={'body1'}
+                    dangerouslySetInnerHTML={{
+                      __html: abbreviationsWrapper(db.itemFeatures[feature.refId].name).join('<br/>')
+                    }}
+                  />
                 </Grid>
                 <Grid xs={4} sx={{ display: 'flex', alignItems: 'center' }} item>
                   <Typography variant={'body2'}>
@@ -161,7 +160,14 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
         anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
       >
         <Paper sx={{ padding: 1, backgroundColor: '#212121', color: 'white' }}>
-          <Typography variant={'body2'}>{featureInfo}</Typography>
+          <Typography
+            variant={'body2'}
+            dangerouslySetInnerHTML={{
+              __html: Array.isArray(featureInfo)
+                ? featureInfo.join('<br/>')
+                : featureInfo
+          }}
+          />
         </Paper>
       </Popover>
     </>

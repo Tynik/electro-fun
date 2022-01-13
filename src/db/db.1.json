@@ -836,37 +836,31 @@
       "name": "Температура хранения"
     },
     "63": {
-      "name": "Id (25°C) max"
-    },
-    "64": {
-      "name": "Ptot max"
+      "name": "I<sub>D</sub>"
     },
     "65": {
       "name": "Полярность"
     },
     "66": {
-      "name": "Qgd"
+      "name": "Q<sub>gd</sub>"
     },
     "67": {
-      "name": "Qg (typ 10 В)"
+      "name": "Q<sub>g</sub>"
     },
     "68": {
-      "name": "Rds (on) (10 В) max"
+      "name": "R<sub>DS(on)</sub>"
     },
     "69": {
-      "name": "RthJC max"
+      "name": "R<sub>JC</sub>"
     },
     "70": {
-      "name": "Tj max"
+      "name": "T<sub>j</sub>"
     },
     "71": {
-      "name": "Vds max"
+      "name": "V<sub>(BR)DSS</sub"
     },
     "72": {
-      "name": "Vgs(th)"
-    },
-    "73": {
-      "name": "Vgs max"
+      "name": "V<sub>GS(th)</sub>"
     },
     "74": {
       "name": "ОС",
@@ -973,6 +967,12 @@
     },
     "101": {
       "name": "Время переключения"
+    },
+    "102": {
+      "name": "Изоляционный материал"
+    },
+    "103": {
+      "name": "Материал проводника"
     }
   },
   "items": [
@@ -2101,11 +2101,22 @@
         },
         {
           "refId": 63,
-          "value": "110.0 А"
-        },
-        {
-          "refId": 64,
-          "value": "150 Вт"
+          "value": [
+            {
+              "value": "110.0 А",
+              "info": [
+                "V<sub>GS</sub> = 10 В",
+                "T<sub>C</sub> = 25 ºС"
+              ]
+            },
+            {
+              "value": "80.0 А",
+              "info": [
+                "V<sub>GS</sub> = 10 В",
+                "T<sub>C</sub> = 100 ºС"
+              ]
+            }
+          ]
         },
         {
           "refId": 65,
@@ -2113,35 +2124,48 @@
         },
         {
           "refId": 66,
-          "value": "36 нКл"
+          "value": "36.0 нКл"
         },
         {
           "refId": 67,
-          "value": "97.3 нКл"
+          "value": "до 146.0 нКл",
+          "info": [
+            "I<sub>D</sub> = 62.0 А",
+            "V<sub>DS</sub> = 44.0 В",
+            "V<sub>GS</sub> = 10.0 В"
+          ]
         },
         {
           "refId": 68,
-          "value": "8 мОм"
+          "value": "до 8.0 мОм",
+          "info": [
+            "V<sub>GS</sub> = 10.0 В",
+            "I<sub>D</sub> = 62.0 A"
+          ]
         },
         {
           "refId": 69,
-          "value": "1 K/Вт"
+          "value": "0.75 °C/Вт"
         },
         {
           "refId": 70,
-          "value": "175°C"
+          "value": "-55.0 - 175.0 °C"
         },
         {
           "refId": 71,
-          "value": "55 В"
+          "value": "55.0 В",
+          "info": [
+            "V<sub>GS</sub> = 0.0 В",
+            "I<sub>D</sub> = 250.0 мкA"
+          ]
         },
         {
           "refId": 72,
-          "value": "2.0 - 4.0 В"
-        },
-        {
-          "refId": 73,
-          "value": "20 В"
+          "value": "2.0 - 4.0 В",
+          "info": [
+            "V<sub>DS</sub> = V<sub>GS</sub>",
+            "I<sub>D</sub> = 250.0 мкA"
+          ]
         }
       ],
       "content": "",
