@@ -97,13 +97,17 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
   const abbreviationsWrapper = React.useCallback((text: string) =>
     wordsWrapper(Object.keys(db.abbreviations), text, (
       (text, abbr, index) => (
-        <AbbrLink
-          key={`${text}-${abbr}-${index}`}
-          href={db.abbreviations[abbr].url}
-          hrefLang={db.abbreviations[abbr].lang}
-        >
-          {abbr}
-        </AbbrLink>
+        abbr ? (
+          <AbbrLink
+            key={`${text}-${abbr}-${index}`}
+            href={db.abbreviations[abbr].url}
+            hrefLang={db.abbreviations[abbr].lang}
+          >
+            {abbr}
+          </AbbrLink>
+        ) : (
+          <span key={`${text}`} dangerouslySetInnerHTML={{ __html: text }}/>
+        )
       )
     )), []);
 
@@ -135,12 +139,9 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
               )}
               <Grid container>
                 <Grid xs={8} item>
-                  <Typography
-                    variant={'body1'}
-                    dangerouslySetInnerHTML={{
-                      __html: abbreviationsWrapper(db.itemFeatures[feature.refId].name).join('<br/>')
-                    }}
-                  />
+                  <Typography variant={'body1'}>
+                    {abbreviationsWrapper(db.itemFeatures[feature.refId].name)}
+                  </Typography>
                 </Grid>
                 <Grid xs={4} sx={{ display: 'flex', alignItems: 'center' }} item>
                   <Typography variant={'body2'}>

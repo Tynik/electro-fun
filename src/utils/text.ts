@@ -9,7 +9,7 @@ export const wordsWrapper = (
 
     while (1) {
       if (!words.length) {
-        return [text];
+        return wrapper(text, null, null);
       }
       word = words.pop();
 

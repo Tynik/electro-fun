@@ -89,13 +89,17 @@ export const ItemInfoPage = () => {
   const clarificationsWrapper = React.useCallback((text: string) =>
     wordsWrapper(Object.keys(db.clarifications), text, (
       (text, phrase, index) => (
-        <ExternalLink
-          key={`${text}-${phrase}-${index}`}
-          href={db.clarifications[phrase].url}
-          hrefLang={db.clarifications[phrase].lang}
-        >
-          {phrase}
-        </ExternalLink>
+        phrase ? (
+          <ExternalLink
+            key={`${text}-${phrase}-${index}`}
+            href={db.clarifications[phrase].url}
+            hrefLang={db.clarifications[phrase].lang}
+          >
+            {phrase}
+          </ExternalLink>
+        ) : (
+          <span key={`${text}`} dangerouslySetInnerHTML={{ __html: text }}/>
+        )
       )
     )), []);
 
