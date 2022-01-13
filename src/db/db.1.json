@@ -225,6 +225,30 @@
     }
   },
   "datasheets": {
+    "FGH60N60SMD": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/FGH60N60SMD.pdf",
+      "lang": "en"
+    },
+    "IRF640": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/IRF640.pdf",
+      "lang": "en"
+    },
+    "IRF3205": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/IRF3205.pdf",
+      "lang": "en"
+    },
+    "IRF840": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/IRF840.pdf",
+      "lang": "en"
+    },
+    "IRFP450": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/IRFP450.pdf",
+      "lang": "en"
+    },
+    "IRFP460": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/IRFP460.pdf",
+      "lang": "en"
+    },
     "ESP32-C3M": {
       "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP32-C3M.pdf",
       "lang": "en"
@@ -476,7 +500,7 @@
     },
     {
       "id": 10,
-      "name": "MOSFET",
+      "name": "МОП-транзисторы",
       "icon": "mosfet"
     },
     {
@@ -1075,7 +1099,7 @@
         },
         {
           "refId": 4,
-          "value": "-40 - +85°C"
+          "value": "-40 - +85 °C"
         },
         {
           "refId": 5,
@@ -1094,7 +1118,7 @@
         },
         {
           "refId": 8,
-          "value": "1°C"
+          "value": "1 °C"
         },
         {
           "refId": 9,
@@ -1260,7 +1284,7 @@
         },
         {
           "refId": 24,
-          "value": "-40 - +85°C"
+          "value": "-40 - +85 °C"
         },
         {
           "refId": 25,
@@ -1316,7 +1340,7 @@
         },
         {
           "refId": 24,
-          "value": "-40 - +85°C"
+          "value": "-40 - +85 °C"
         },
         {
           "refId": 26,
@@ -1402,7 +1426,7 @@
         },
         {
           "refId": 24,
-          "value": "-40 - +85°C"
+          "value": "-40 - +85 °C"
         }
       ],
       "externalLinks": [
@@ -1480,7 +1504,7 @@
         },
         {
           "refId": 24,
-          "value": "-18 - +50°C"
+          "value": "-18 - +50 °C"
         }
       ],
       "externalLinks": [
@@ -1519,7 +1543,7 @@
         },
         {
           "refId": 30,
-          "value": "60°C"
+          "value": "60 °C"
         },
         {
           "refId": 28,
@@ -1539,7 +1563,7 @@
         }
       ],
       "content": "Элемент Пельтье",
-      "warningContent": "Не допускать нагрев горячей стороны термоэлемента >50°C ибо через 1-2 мин. работы, без отвода тепла, термоэлемент выйдет из строя.",
+      "warningContent": "Не допускать нагрев горячей стороны термоэлемента > 50 °C ибо через 1-2 мин. работы, без отвода тепла, термоэлемент выйдет из строя.",
       "externalLinks": [
         {
           "name": "\uD83E\uDD76Кондиционер на элементах Пельтье. Есть ли смысл?",
@@ -1752,7 +1776,7 @@
         },
         {
           "refId": 24,
-          "value": "-40 - +120°C"
+          "value": "-40 - +120 °C"
         },
         {
           "refId": 29,
@@ -1931,7 +1955,7 @@
         {
           "refId": 3,
           "value": "1.8 - 3.8 В",
-          "info": "3.3 В рекомендуется"
+          "info": "3.3 В (рекомендуемое)"
         },
         {
           "refId": 2,
@@ -2061,11 +2085,11 @@
         },
         {
           "refId": 24,
-          "value": "-40 - +85°C"
+          "value": "-40 - +85 °C"
         },
         {
           "refId": 62,
-          "value": "-55 - +125°C"
+          "value": "-55 - +125 °C"
         },
         {
           "refId": 28,
@@ -2082,15 +2106,15 @@
       "categoryId": 10,
       "lang": "ru",
       "title": "IRF3205",
-      "subtitle": "MOSFET до 55 В и 110 А",
+      "subtitle": "МОП-транзистор до 55 В и 110 А",
       "seo": {
-        "description": "MOSFET IRF3205 до 55 В и 110 А",
-        "keywords": "pb-irf3205, irf3205pbf, mosfet, мосфет, 55в, 110а"
+        "description": "МОП-транзистор IRF3205 до 55 В и 110 А",
+        "keywords": "irf3205, mosfet, мосфет, транзистор, 55в, 110а"
       },
       "buy": true,
       "price": 8,
       "availability": 10,
-      "datasheetId": "IRF3205PbF",
+      "datasheetId": "IRF3205",
       "manufacturerId": "6",
       "images": [
         {
@@ -2109,15 +2133,15 @@
             {
               "value": "110.0 А",
               "info": [
-                "V<sub>GS</sub> = 10 В",
-                "T<sub>C</sub> = 25 ºС"
+                "V<sub>GS</sub> = 10.0 В",
+                "T<sub>C</sub> = 25.0 ºС"
               ]
             },
             {
               "value": "80.0 А",
               "info": [
-                "V<sub>GS</sub> = 10 В",
-                "T<sub>C</sub> = 100 ºС"
+                "V<sub>GS</sub> = 10.0 В",
+                "T<sub>C</sub> = 100.0 ºС"
               ]
             }
           ]

@@ -21,15 +21,18 @@ const CustomCarousel = styled(Carousel)(({ theme }) => (
       pointerEvents: 'auto'
     },
     '& > .carousel .thumbs-wrapper': {
-      margin: theme.spacing(1),
+      margin: 0,
       '& > ul': {
         margin: 0,
         padding: 0,
         display: 'flex',
         alignItems: 'center',
         '& > li': {
-          cursor: 'pointer'
-        }
+          cursor: 'pointer',
+          '&:last-child': {
+            marginRight: 0
+          }
+        },
       }
     }
   }
