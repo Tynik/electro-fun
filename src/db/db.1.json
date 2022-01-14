@@ -54,6 +54,10 @@
       "name": "Infineon",
       "url": "https://www.infineon.com",
       "logo": "Infineon.png"
+    },
+    "7": {
+      "name": "Kaisi",
+      "url": "https://kaisitool.aliexpress.com/store/3152011?spm=a2g0o.store_pc_home.pcShopHead_6331311.14"
     }
   },
   "abbreviations": {
@@ -547,6 +551,11 @@
       "id": 19,
       "name": "Провод",
       "icon": "power"
+    },
+    {
+      "id": 20,
+      "name": "Инструменты",
+      "icon": "tools"
     }
   ],
   "featureSections": {
@@ -1001,6 +1010,20 @@
     },
     "103": {
       "name": "Материал проводника"
+    },
+    "104": {
+      "name": "Кол-во"
+    },
+    "105": {
+      "name": "Материал"
+    },
+    "106": {
+      "name": "Термостойкие",
+      "type": "bool"
+    },
+    "107": {
+      "name": "Антистатические",
+      "type": "bool"
     }
   },
   "items": [
@@ -2204,6 +2227,58 @@
           "lang": "en",
           "icon": "infineon.com.ico",
           "iconAlt": "infineon.com"
+        }
+      ]
+    },
+    {
+      "categoryId": 20,
+      "lang": "ru",
+      "title": "Набор пинцетов в чехле 14 шт",
+      "subtitle": "Для пайки, ремонта плат, телефонов и т.д.",
+      "seo": {
+        "description": "Набор пинцетов в чехле 14 шт",
+        "keywords": "пинцеты, набор, чехол, 14, ремонт, пайка, подарок, kaisi",
+        "measurement": "14"
+      },
+      "manufacturerId": "7",
+      "buy": true,
+      "price": 650,
+      "availability": 1,
+      "content": "<p>Профессиональный набор пинцетов из нержавеющей стали 14 шт. отличного качества исполнения для любых нужд.</p><p>Антистатическое лакокрасочное покрытие обеспечивает превосходную защиту от электростатического разряда.</p><p>В чехле.</p>",
+      "images": [
+        {
+          "src": "/photos/tweezers-set-14-1.webp",
+          "alt": "Набор пинцетов 14 шт - внешний вид в чехле"
+        },
+        {
+          "src": "/photos/tweezers-set-14-2.webp",
+          "alt": "Набор пинцетов 14 шт"
+        },
+        {
+          "src": "/photos/tweezers-set-14-3.webp",
+          "alt": "Набор пинцетов 14 шт"
+        },
+        {
+          "src": "/photos/tweezers-set-14-4.webp",
+          "alt": "Набор пинцетов 14 шт"
+        }
+      ],
+      "features": [
+        {
+          "refId": 104,
+          "value": "14 шт."
+        },
+        {
+          "refId": 105,
+          "value": "Нержавеющая сталь"
+        },
+        {
+          "refId": 106,
+          "value": "Да"
+        },
+        {
+          "refId": 107,
+          "value": "Да"
         }
       ]
     }

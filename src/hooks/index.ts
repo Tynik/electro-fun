@@ -12,3 +12,4 @@ export * from './useCurrentCategory';
 export * from './useSelectedItemOptionId';
 export * from './useItemFeatures';
 export * from './useItemImages';
+export * from './useItemManufacturer';

@@ -30,8 +30,8 @@ export type CategoryT = {
 
 export type ManufacturerT = {
   name: string
-  url: string
-  logo: string
+  url?: string
+  logo?: string
 }
 
 export type ApplicationT = string
