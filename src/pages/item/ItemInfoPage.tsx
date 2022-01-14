@@ -20,7 +20,8 @@ import {
   useJsonDbSearch,
   useSeo,
   useSelectedItemOptionId,
-  useItemImages
+  useItemImages,
+  useCurrentItem,
 } from '~/hooks';
 import {
   Loader,
@@ -40,51 +41,21 @@ import { ItemInfoHeader } from './ItemInfoHeader';
 export const ItemInfoPage = () => {
   const theme = useTheme();
 
-  const { id } = useParams<any>();
-
-  const [item, setItem] = React.useState<ItemT>(null);
-
-  const { db, loadNextDbPart } = React.useContext(DbContext);
-  const { search, foundItems } = useJsonDbSearch(db, loadNextDbPart);
+  const {
+    db,
+    item,
+    price,
+    images,
+    seo,
+    errors,
+    printErrors
+  } = useCurrentItem();
 
   const { wordsWrapper } = useTextProcessor();
-  const { errors, setErrors, printErrors } = useStaticErrors();
-
-  const selectedItemOptionId = useSelectedItemOptionId(item);
 
   useSmoothScroll({ top: 0, left: 0 });
 
-  const seoEntity = React.useMemo(() => (
-    {
-      ...(
-        item && {
-          ...(
-            item.seo || {}
-          ),
-          title: item.seo && item.seo.title
-            ? `${db.seo.title} - ${item.seo.title}`
-            : `${db.seo.title} - ${item.title}`
-        }
-      )
-    }
-  ), [db, item]);
-
-  useSeo(Object.keys(seoEntity).length ? seoEntity : null);
-
-  React.useEffect(() => {
-    search({ ids: [id] });
-  }, []);
-
-  React.useEffect(() => {
-    if (!foundItems) {
-      return;
-    }
-    if (foundItems.length) {
-      setItem(foundItems[0]);
-    } else {
-      setErrors([`"${id}" не найден или был переименован`]);
-    }
-  }, [foundItems]);
+  useSeo(Object.keys(seo).length ? seo : null);
 
   const clarificationsWrapper = React.useCallback((text: string) =>
     wordsWrapper(Object.keys(db.clarifications), text, (
@@ -103,18 +74,13 @@ export const ItemInfoPage = () => {
       )
     )), []);
 
-  const itemImages = useItemImages(item);
-
   // high priority to show errors
   if (errors.length) {
     return printErrors();
   }
-  // item loading in progress
   if (item === null) {
     return <Loader/>;
   }
-
-  const itemPrice = getItemPrice(item, selectedItemOptionId);
 
   return (
     <Grid spacing={2} container>
@@ -130,7 +96,7 @@ export const ItemInfoPage = () => {
 
       <Grid xs={12} md={6} item>
         <ImageSlider
-          images={itemImages}
+          images={images}
           height={'300px'}
         />
 
@@ -212,13 +178,13 @@ export const ItemInfoPage = () => {
           </Box>
         )}
 
-        {Boolean(itemPrice) && (
+        {Boolean(price) && (
           <Box sx={{
             marginTop: theme.spacing(2),
             textAlign: 'center'
           }}>
             <Typography variant={'h5'} component={'div'}>
-              {itemPrice.toFixed(2)} UAH
+              {price.toFixed(2)} UAH
             </Typography>
           </Box>
         )}

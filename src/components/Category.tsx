@@ -1,9 +1,8 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 
 import { SearchResultsPage } from '~/pages';
 import { DbContext } from '~/contexts';
-import { useJsonDbSearch, useCategory } from '~/hooks';
+import { useJsonDbSearch, useCurrentCategory } from '~/hooks';
 import { getIcon } from '~/utils';
 
 import { Loader } from './Loader';
@@ -11,16 +10,16 @@ import { Breadcrumbs } from './Breadcrumbs';
 import { BreadcrumbItem } from './BreadcrumbItem';
 
 export const Category = () => {
-  const { categoryId } = useParams<{ categoryId: string }>();
-
   const { db, loadNextDbPart } = React.useContext(DbContext);
   const { search, foundItems } = useJsonDbSearch(db, loadNextDbPart);
 
-  const category = useCategory(+categoryId);
+  const category = useCurrentCategory();
 
   React.useEffect(() => {
-    search({ categoryId: +categoryId });
-  }, [categoryId]);
+    if (category) {
+      search({ categoryId: category.id })
+    }
+  }, [category]);
 
   if (!foundItems || !category) {
     return <Loader/>;
