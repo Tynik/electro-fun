@@ -33,6 +33,7 @@ import { ItemInfoFeatures } from './ItemInfoFeatures';
 import { ItemInfoOptions } from './ItemInfoOptions';
 import { ItemInfoExternalLinks } from './ItemInfoExternalLinks';
 import { ItemInfoApplications } from './ItemInfoApplications';
+import { ItemInfoAccessories } from './ItemInfoAccessories';
 import { ItemInfoActions } from './ItemInfoActions';
 import { ItemInfoContributors } from './ItemInfoContributors';
 import { ItemInfoRelatedDatasheets } from './ItemInfoRelatedDatasheets';
@@ -139,6 +140,12 @@ export const ItemInfoPage = () => {
         {item.applicationIds && item.applicationIds.length > 0 && (
           <Box marginTop={theme.spacing(2)}>
             <ItemInfoApplications applicationIds={item.applicationIds}/>
+          </Box>
+        )}
+
+        {item.accessories && item.accessories.length > 0 && (
+          <Box marginTop={theme.spacing(2)}>
+            <ItemInfoAccessories accessories={item.accessories}/>
           </Box>
         )}
 

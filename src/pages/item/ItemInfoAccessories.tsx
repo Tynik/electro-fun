@@ -9,31 +9,28 @@ import {
 } from '@mui/material';
 import { ArrowRight as ArrowRightIcon } from '@mui/icons-material';
 
-import type { ApplicationIdT } from '~/types';
-import { DbContext } from '~/contexts';
+import type { ItemAccessory } from '~/types';
 
-export type ItemInfoApplicationsProps = {
-  applicationIds: ApplicationIdT[]
+export type ItemInfoAccessoriesProps = {
+  accessories: ItemAccessory[]
 }
 
-export const ItemInfoApplications = ({ applicationIds }: ItemInfoApplicationsProps) => {
+export const ItemInfoAccessories = ({ accessories }: ItemInfoAccessoriesProps) => {
   const theme = useTheme();
-
-  const { db } = React.useContext(DbContext);
 
   return (
     <>
       <Typography variant={'overline'}>
-        Области применения
+        Комплектация
       </Typography>
 
       <List disablePadding>
-        {applicationIds.map(applicationId => (
-          <ListItem key={applicationId} disablePadding>
+        {accessories.map(accessory => (
+          <ListItem key={accessory.name} disablePadding>
             <ListItemIcon sx={{ minWidth: theme.spacing(1) }}>
               <ArrowRightIcon/>
             </ListItemIcon>
-            <ListItemText>{db.applications[applicationId]}</ListItemText>
+            <ListItemText>{accessory.count}x {accessory.name}</ListItemText>
           </ListItem>
         ))}
       </List>

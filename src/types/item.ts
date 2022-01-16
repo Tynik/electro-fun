@@ -80,6 +80,11 @@ export type ItemOptionT = {
 
 export type ItemOptionsT = Record<ItemOptionIdT, ItemOptionT>
 
+export type ItemAccessory = {
+  name: string
+  count: number
+}
+
 export type ItemT = {
   title: string
   subtitle: string
@@ -102,6 +107,7 @@ export type ItemT = {
   features?: ItemFeatureT[]
   images?: ItemImageT[]
   applicationIds?: ApplicationIdT[]
+  accessories?: ItemAccessory[]
   contributors?: ItemContributorT[]
   externalLinks?: ItemExternalLinkT[]
   codeExamples?: ItemCodeExampleT[]

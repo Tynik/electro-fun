@@ -31,6 +31,7 @@ import {
   Power as PowerIcon,
   SwitchLeft as SwitchLeftIcon,
   Handyman as HandymanIcon,
+  Computer as ComputerIcon,
 } from '@mui/icons-material';
 
 export const getIcon = (name: string, props: SvgIconProps = {}): any => {
@@ -65,5 +66,6 @@ export const getIcon = (name: string, props: SvgIconProps = {}): any => {
     power: <PowerIcon {...props}/>,
     switch: <SwitchLeftIcon {...props}/>,
     tools: <HandymanIcon {...props}/>,
+    computer: <ComputerIcon {...props}/>,
   }[name];
 };
