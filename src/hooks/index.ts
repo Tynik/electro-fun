@@ -9,6 +9,7 @@ export * from './useUser';
 export * from './useCurrentItem';
 export * from './useCategory';
 export * from './useCurrentCategory';
+export * from './useCurrentCategoryItems';
 export * from './useSelectedItemOptionId';
 export * from './useItemFeatures';
 export * from './useItemImages';

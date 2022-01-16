@@ -6,14 +6,11 @@ import {
   Link,
   Typography,
   List,
-  ListItem,
-  useTheme
+  ListItem
 } from '@mui/material';
 import { DbContext } from '~/contexts';
 
 export const Footer = () => {
-  const theme = useTheme();
-
   const { db } = React.useContext(DbContext);
 
   return (
@@ -21,9 +18,9 @@ export const Footer = () => {
       component={'footer'}
       sx={{
         marginTop: 'auto',
-        backgroundColor: theme.palette.info.main,
+        backgroundColor: 'info.main',
         color: 'white',
-        padding: theme.spacing(1)
+        padding: 1
       }}
     >
       <Container maxWidth={'lg'}>

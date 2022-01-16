@@ -114,15 +114,18 @@ export const ItemInfoPage = () => {
         )}
 
         {item.warningContent && (
-          <Box marginTop={theme.spacing(2)}>
+          <Box marginTop={2}>
             <Alert
               severity={'warning'}
               sx={{
                 whiteSpace: 'pre-line',
-                marginTop: theme.spacing(2)
+                marginTop: 2,
+                paddingTop: 0,
+                paddingBottom: 0,
+                alignItems: 'center'
               }}
             >
-              {item.warningContent}
+              <span dangerouslySetInnerHTML={{ __html: item.warningContent }}/>
             </Alert>
           </Box>
         )}

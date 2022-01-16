@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Alert,
-  useTheme,
   Box,
   Typography,
   Button,
@@ -10,7 +9,8 @@ import {
   Refresh as RefreshIcon
 } from '@mui/icons-material';
 
-import { ItemsT, FoundDatasheetsT } from '~/types';
+import type { ItemsT, FoundDatasheetsT } from '~/types';
+
 import { Loader, Items, Datasheets } from '~/components';
 
 export type SearchResultsPageProps = {
@@ -29,8 +29,6 @@ export const SearchResultsPage = (props: SearchResultsPageProps) => {
     isSearching = false,
     onSearchReset = null,
   } = props;
-
-  const theme = useTheme();
 
   if (isSearching) {
     return <Loader label={'Поиск...'}/>;
@@ -52,12 +50,12 @@ export const SearchResultsPage = (props: SearchResultsPageProps) => {
         <Alert severity={'info'}>Ничего не найдено</Alert>
       )}
 
-      <Box sx={{ marginTop: theme.spacing(2) }}>
+      <Box sx={{ marginTop: 2 }}>
         <Items items={foundItems ? foundItems : items}/>
       </Box>
 
       {foundDatasheets && Object.keys(foundDatasheets).length > 0 && (
-        <Box sx={{ marginTop: theme.spacing(2) }}>
+        <Box sx={{ marginTop: 2 }}>
           <Typography variant={'h6'} role={'heading'} aria-level={2}>
             Найденные Datasheets
           </Typography>

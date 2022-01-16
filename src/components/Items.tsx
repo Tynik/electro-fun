@@ -67,7 +67,8 @@ export const Items = ({ items }: ItemsProps) => {
 
               <CCardMedia
                 src={getItemMainImageSrc(item)}
-                alt={item.title}/>
+                alt={item.title}
+              />
             </CardActionArea>
           </Card>
         </Grid>
