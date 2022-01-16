@@ -38,6 +38,7 @@ import { ItemInfoActions } from './ItemInfoActions';
 import { ItemInfoContributors } from './ItemInfoContributors';
 import { ItemInfoRelatedDatasheets } from './ItemInfoRelatedDatasheets';
 import { ItemInfoHeader } from './ItemInfoHeader';
+import { ItemInfoPeculiarities } from './ItemInfoPeculiarities';
 
 export const ItemInfoPage = () => {
   const theme = useTheme();
@@ -134,6 +135,12 @@ export const ItemInfoPage = () => {
         {item.relatedDatasheetIds && item.relatedDatasheetIds.length > 0 && (
           <Box marginTop={theme.spacing(2)}>
             <ItemInfoRelatedDatasheets relatedDatasheetIds={item.relatedDatasheetIds}/>
+          </Box>
+        )}
+
+        {item.peculiarities && item.peculiarities.length > 0 && (
+          <Box marginTop={theme.spacing(2)}>
+            <ItemInfoPeculiarities peculiarities={item.peculiarities}/>
           </Box>
         )}
 
