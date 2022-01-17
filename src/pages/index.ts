@@ -1,3 +1,4 @@
+export * from './HomePage';
 export * from './SearchResultsPage';
 export * from './DatasheetsPage';
 export * from './BasketPage';

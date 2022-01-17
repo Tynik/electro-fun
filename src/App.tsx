@@ -15,7 +15,7 @@ import {
   Footer
 } from './components';
 import {
-  SearchResultsPage,
+  HomePage,
   ItemInfoPage,
   DatasheetsPage,
   BasketPage
@@ -108,7 +108,7 @@ export const App = () => {
           <Container>
             <Switch>
               <Route path="/" exact>
-                <SearchResultsPage
+                <HomePage
                   isSearching={isSearching}
                   items={db.items}
                   foundItems={foundItems}

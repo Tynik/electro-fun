@@ -32,6 +32,7 @@ import {
   SwitchLeft as SwitchLeftIcon,
   Handyman as HandymanIcon,
   Computer as ComputerIcon,
+  KeyboardDoubleArrowDown as KeyboardDoubleArrowDownIcon,
 } from '@mui/icons-material';
 
 export const getIcon = (name: string, props: SvgIconProps = {}): any => {
@@ -55,6 +56,7 @@ export const getIcon = (name: string, props: SvgIconProps = {}): any => {
     fuse: <SecurityIcon {...props}/>,
     apps: <AppsIcon {...props}/>,
     doubleArrow: <DoubleArrowIcon {...props}/>,
+    doubleArrowDown: <KeyboardDoubleArrowDownIcon {...props}/>,
     shoppingBasket: <ShoppingBasketIcon {...props}/>,
     addShoppingCart: <AddShoppingCartIcon {...props}/>,
     chevronLeft: <ChevronLeftIcon {...props}/>,
