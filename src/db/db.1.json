@@ -445,6 +445,10 @@
     "LED0805BLUE": {
       "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/LED0805BLUE.pdf",
       "lang": "en"
+    },
+    "PMS5003": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/PMS5003.pdf",
+      "lang": "en"
     }
   },
   "docs": [
@@ -1152,7 +1156,7 @@
       "subtitle": "Датчик для измерения температуры и т.д.",
       "seo": {
         "description": "BMP280 - датчик для измерения температуры, давления и влажности",
-        "keywords": "bmp280, bosch, температура, давление, влажность"
+        "keywords": "датчик, bmp280, bosch, температура, давление, влажность"
       },
       "manufacturerId": "3",
       "buy": true,
@@ -1325,7 +1329,7 @@
       },
       "buy": true,
       "price": 140,
-      "availability": 10,
+      "availability": 8,
       "datasheetId": "CP2112",
       "images": [
         {
@@ -1668,7 +1672,7 @@
         "description": "BHI260AP - самообучающийся интеллектуальный датчик",
         "keywords": "bhi260ap, датчик, ai, микроконтроллер, гироскоп, акселерометр, обучение"
       },
-      "buy": "https://eu.mouser.com/ProductDetail/Bosch-Sensortec/BHI260AP?qs=T94vaHKWudTEPTnGI%252BTy9w%3D%3D",
+      "buy": false,
       "datasheetId": "BHI260AP",
       "images": [
         {

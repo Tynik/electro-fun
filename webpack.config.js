@@ -65,6 +65,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         'CNAME',
+        'favicon.png',
         'sitemap.txt',
         {
           from: 'src/db',
