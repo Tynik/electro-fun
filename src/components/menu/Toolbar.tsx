@@ -61,6 +61,7 @@ const Toolbar = (props: ToolbarProps) => {
           )
         }}
       />
+      {/*<img src={'/favicon.png'} width={'48px'} height={'48px'}/>*/}
 
       <Typography
         variant={'h6'}
