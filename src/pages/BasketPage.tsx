@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import {
   Grid,
   Typography,
@@ -16,20 +17,26 @@ import {
 } from '~/components';
 import { useJsonDbSearch } from '~/hooks';
 import { getItemPrice } from '~/helpers';
+import { useQueryParams } from '~/utils';
 
 export type BasketPageProps = {}
 
 export const BasketPage = (props: BasketPageProps) => {
+  const history = useHistory();
+  const { step: queryStep } = useQueryParams();
+
   const { db, loadNextDbPart } = React.useContext(DbContext);
   const { search, foundItems: items } = useJsonDbSearch(db, loadNextDbPart);
 
-  const [step, setStep] = React.useState<number>(0);
+  const [step, setStep] = React.useState<number>(+queryStep || 0);
 
   const { user: { basket } } = React.useContext(UserContext);
 
   React.useEffect(() => {
-    setStep(0);
+    history.replace(`?step=${step}`);
+  }, [step]);
 
+  React.useEffect(() => {
     search({ ids: Object.keys(basket.items) });
   }, [basket.items]);
 
