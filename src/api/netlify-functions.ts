@@ -1,4 +1,3 @@
-
 export type NetlifyResponse = {
   status: string
 }
@@ -6,7 +5,7 @@ export type NetlifyResponse = {
 export type NetlifyMakeOrder = {
   fullname: string
   phone: string
-  address: string
+  deliveryAddress: string
   comment: string
   totalPrice: number
   items: string[]

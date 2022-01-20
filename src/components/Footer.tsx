@@ -56,7 +56,7 @@ export const Footer = () => {
                     textAlign: { xs: 'center', sm: 'left' }
                   }}
                 >
-                  Украина, Киев
+                  Украина, г. Буча
                 </Typography>
               </ListItem>
               <ListItem disablePadding>

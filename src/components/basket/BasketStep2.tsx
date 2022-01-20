@@ -4,6 +4,7 @@ import {
   Grid,
   Stack,
   Box,
+  Alert,
   TextField
 } from '@mui/material';
 
@@ -31,7 +32,7 @@ const BasketStep2 = ({ isActive, items, totalPrice, onBefore }: BasketStep2Props
 
   const [fullname, setFullname] = React.useState<string>(null);
   const [phone, setPhone] = React.useState<string>(null);
-  const [address, setAddress] = React.useState<string>(null);
+  const [deliveryAddress, setDeliveryAddress] = React.useState<string>(null);
   const [comment, setComment] = React.useState<string>(null);
 
   const makeOrder = async () => {
@@ -48,7 +49,7 @@ const BasketStep2 = ({ isActive, items, totalPrice, onBefore }: BasketStep2Props
         items: itemsContent,
         fullname,
         phone,
-        address,
+        deliveryAddress,
         comment,
         totalPrice
       });
@@ -94,7 +95,7 @@ const BasketStep2 = ({ isActive, items, totalPrice, onBefore }: BasketStep2Props
             <TextField
               value={phone || ''}
               onChange={(e) => setPhone(e.target.value)}
-              label={'Тел.'}
+              label={'Тел. (0XX)-XX-XXX-XX'}
               variant={'outlined'}
               size={'small'}
               error={phone === ''}
@@ -103,13 +104,13 @@ const BasketStep2 = ({ isActive, items, totalPrice, onBefore }: BasketStep2Props
             />
 
             <TextField
-              value={address || ''}
-              onChange={(e) => setAddress(e.target.value)}
-              label={'Адрес'}
+              value={deliveryAddress || ''}
+              onChange={(e) => setDeliveryAddress(e.target.value)}
+              label={'Адрес доставки'}
               variant={'outlined'}
               size={'small'}
-              error={address === ''}
-              helperText={address === '' && 'Адрес является обязательным'}
+              error={deliveryAddress === ''}
+              helperText={deliveryAddress === '' && 'Адрес доставки является обязательным'}
               fullWidth
             />
 
@@ -124,6 +125,16 @@ const BasketStep2 = ({ isActive, items, totalPrice, onBefore }: BasketStep2Props
             />
           </Box>
         </Grid>
+      </Grid>
+
+      <Grid item>
+        <Alert severity={'info'}>
+          Доставка осуществляется службами доставки: Новая Почта или Meest Express.<br/>
+          Мы можете заказать наложенным платежом или сразу оплатить полную стоимость на карту.<br/>
+          Не важно какой способ доставки Вы выберете - Вам нужно будет сделать предоплату по доставке в размере 50 грн.<br/>
+          Иногда, Meest Express проводит акцию "доставка за 1 грн." - в этом случае доставка будет бесплатной.<br/>
+          Также Вы можете забрать заказ сами по адресу: г. Буча, ул. Героев Майдана 17.
+        </Alert>
       </Grid>
 
       <Grid item>
@@ -142,7 +153,7 @@ const BasketStep2 = ({ isActive, items, totalPrice, onBefore }: BasketStep2Props
 
           <Button
             onClick={makeOrder}
-            disabled={!fullname || !phone || !address}
+            disabled={!fullname || !phone || !deliveryAddress}
             startIcon={getIcon('money')}
             color={'success'}
             variant={'contained'}

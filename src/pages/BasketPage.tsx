@@ -105,19 +105,13 @@ export const BasketPage = (props: BasketPageProps) => {
             item
           >
             <Grid item>
-              <Typography
-                variant={'overline'}
-                component={'div'}
-              >
+              <Typography variant={'overline'} component={'div'}>
                 Общая сумма заказа:
               </Typography>
             </Grid>
 
             <Grid item>
-              <Typography
-                variant={'h5'}
-                component={'div'}
-              >
+              <Typography variant={'h5'} component={'div'}>
                 {totalPrice.toFixed(2)} UAH
               </Typography>
             </Grid>
