@@ -1,5 +1,15 @@
 {
   "datasheets": {
+    "ADS111x": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ADS111x.pdf",
+      "lang": "en",
+      "manufacturerId": "8"
+    },
+    "ADS101x": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ADS101x.pdf",
+      "lang": "en",
+      "manufacturerId": "8"
+    },
     "BH1750FVI": {
       "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/BH1750FVI.pdf",
       "lang": "en",
@@ -697,6 +707,79 @@
         "Точные данные",
         "Улавливание очень мелких частиц",
         "Высокая защита от помех благодаря запатентованной структуре экранирования с 6 сторон"
+      ]
+    },
+    {
+      "categoryId": 6,
+      "lang": "ru",
+      "title": "ADS1015 (модуль)",
+      "subtitle": "АЦП 12 бит 4 канала I²C",
+      "seo": {
+        "description": "ADS1015 - модуль АЦП 12 бит",
+        "keywords": "ads1115, ацп, ads, i2c, модуль, 12-бит",
+        "measurement": "12 бит"
+      },
+      "buy": true,
+      "price": 65,
+      "availability": 3,
+      "datasheetId": "ADS101x",
+      "images": [
+        {
+          "src": "/photos/ADS1015-1.webp",
+          "alt": "ADS1015 - вид сверху"
+        },
+        {
+          "src": "/photos/ADS1015-2.webp",
+          "alt": "ADS1015 - вид снизу"
+        }
+      ],
+      "content": "",
+      "features": [
+        {
+          "refId": 2,
+          "value": "I²C"
+        },
+        {
+          "refId": 24,
+          "value": "-40 - +125 °C"
+        },
+        {
+          "refId": 13,
+          "value": "2 - 5.5 В"
+        },
+        {
+          "refId": 28,
+          "value": "150 мкА"
+        },
+        {
+          "refId": 127,
+          "value": "12 бит"
+        },
+        {
+          "refId": 128,
+          "value": "4"
+        },
+        {
+          "refId": 129,
+          "value": "128 - 3300 выб/с"
+        },
+        {
+          "refId": 130,
+          "value": "Есть"
+        }
+      ],
+      "applicationIds": [
+        "11",
+        "12"
+      ],
+      "externalLinks": [
+        {
+          "name": "Официальная страница ADS1015",
+          "url": "https://www.ti.com/product/ADS1015",
+          "lang": "en",
+          "icon": "ti.com.ico",
+          "iconAlt": "ti.com"
+        }
       ]
     }
   ]

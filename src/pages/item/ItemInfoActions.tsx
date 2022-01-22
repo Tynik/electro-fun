@@ -50,7 +50,11 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
     >
       {Boolean(item.datasheetId) && (
         <ExternalButtonLink
-          href={db.datasheets[item.datasheetId].url}
+          href={
+            process.env.LOCAL_ENV
+              ? `/datasheets/${item.datasheetId}.pdf`
+              : db.datasheets[item.datasheetId].url
+          }
           hrefLang={db.datasheets[item.datasheetId].lang}
           variant={'outlined'}
           startIcon={<LinkIcon/>}

@@ -54,6 +54,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
+      'process.env.LOCAL_ENV': JSON.stringify(process.env.LOCAL_ENV),
       'process.env.NETLIFY_SERVER': JSON.stringify(process.env.NETLIFY_SERVER),
     }),
     new HtmlWebpackPlugin({
