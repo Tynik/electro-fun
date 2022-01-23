@@ -22,7 +22,11 @@ export const Datasheets = ({ datasheets }: DatasheetsProps) => {
         <ListItem key={datasheetId} disablePadding>
           <ListItemText>
             <ExternalLink
-              href={datasheets[datasheetId].url}
+              href={
+                process.env.LOCAL_ENV
+                  ? `/datasheets/${datasheetId}.pdf`
+                  : datasheets[datasheetId].url
+              }
               hrefLang={datasheets[datasheetId].lang}
             >
               {datasheets[datasheetId].priority === 0 ? (

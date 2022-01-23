@@ -109,9 +109,8 @@ export const ItemInfoPage = () => {
             <Typography
               variant={'body1'}
               sx={{ whiteSpace: 'pre-line', textAlign: 'justify' }}
-            >
-              {clarificationsWrapper(item.content)}
-            </Typography>
+              dangerouslySetInnerHTML={{ __html: item.content }}
+            />
           </Box>
         )}
 

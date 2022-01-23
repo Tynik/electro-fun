@@ -1,5 +1,20 @@
 {
   "datasheets": {
+    "TJA1050": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/TJA1050.pdf",
+      "lang": "en",
+      "manufacturerId": "10"
+    },
+    "MCP2515": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/MCP2515.pdf",
+      "lang": "en",
+      "manufacturerId": "9"
+    },
+    "ADS1018": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ADS1018.pdf",
+      "lang": "en",
+      "manufacturerId": "8"
+    },
     "ADS111x": {
       "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ADS111x.pdf",
       "lang": "en",
@@ -720,7 +735,7 @@
         "measurement": "12 бит"
       },
       "buy": true,
-      "price": 65,
+      "price": 125,
       "availability": 3,
       "datasheetId": "ADS101x",
       "images": [
@@ -740,12 +755,16 @@
           "value": "I²C"
         },
         {
-          "refId": 24,
-          "value": "-40 - +125 °C"
+          "refId": 3,
+          "value": "2 - 5.5 В"
         },
         {
           "refId": 13,
-          "value": "2 - 5.5 В"
+          "value": "±256 мВ - ±6.144 В"
+        },
+        {
+          "refId": 24,
+          "value": "-40 - +125 °C"
         },
         {
           "refId": 28,
@@ -780,6 +799,81 @@
           "icon": "ti.com.ico",
           "iconAlt": "ti.com"
         }
+      ]
+    },
+    {
+      "categoryId": 6,
+      "lang": "ru",
+      "title": "MCP2515 (модуль)",
+      "subtitle": "Подключение к CAN 2.0B, SPI",
+      "seo": {
+        "description": "MCP2515 - Модуль CAN контроллера",
+        "keywords": "mcp2515, tja1050, модуль, can, шина, spi, obd, obd2, obdii, arduino"
+      },
+      "manufacturerId": "9",
+      "datasheetId": "MCP2515",
+      "relatedDatasheetIds": [
+        "TJA1050"
+      ],
+      "buy": true,
+      "price": 90,
+      "availability": 1,
+      "content": "<p>MCP2515 модуль — это автономный CAN контроллер, реализующий спецификацию CAN версии 2.0B для подключения микроконтроллеров к шине CAN с помощью SPI.</p>",
+      "features": [
+        {
+          "refId": 2,
+          "value": "SPI (до 10 МГц)"
+        },
+        {
+          "refId": 3,
+          "value": "5 В"
+        },
+        {
+          "refId": 24,
+          "value": "-40 - +85 °C"
+        },
+        {
+          "refId": 29,
+          "value": "5 мА"
+        },
+        {
+          "refId": 36,
+          "value": "1 мкА"
+        },
+        {
+          "refId": 76,
+          "value": "40 x 28 x 13 мм"
+        },
+        {
+          "refId": 131,
+          "value": "до 1 Мб/с"
+        }
+      ],
+      "images": [
+        {
+          "src": "/photos/MCP2515-module-1.webp",
+          "alt": "MCP2515 (модуль) - вид сверху"
+        },
+        {
+          "src": "/photos/MCP2515-module-2.webp",
+          "alt": "MCP2515 (модуль) - вид сбоку"
+        },
+        {
+          "src": "/photos/MCP2515-module-3.webp",
+          "alt": "MCP2515 (модуль) - вид сбоку"
+        },
+        {
+          "src": "/photos/MCP2515-module-4.webp",
+          "alt": "MCP2515 (модуль) - вид снизу"
+        },
+        {
+          "src": "/photos/MCP2515-module-5.webp",
+          "alt": "MCP2515 (модуль) - схема модуля"
+        }
+      ],
+      "applicationIds": [
+        "3",
+        "13"
       ]
     }
   ]
