@@ -1,5 +1,20 @@
 {
   "datasheets": {
+    "MCP2561FD": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/MCP2561FD.pdf",
+      "lang": "en",
+      "manufacturerId": "9"
+    },
+    "MCP2561": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/MCP2561.pdf",
+      "lang": "en",
+      "manufacturerId": "9"
+    },
+    "MCP2551": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/MCP2551.pdf",
+      "lang": "en",
+      "manufacturerId": "9"
+    },
     "TJA1050": {
       "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/TJA1050.pdf",
       "lang": "en",
@@ -869,11 +884,64 @@
         {
           "src": "/photos/MCP2515-module-5.webp",
           "alt": "MCP2515 (модуль) - схема модуля"
+        },
+        {
+          "src": "/photos/MCP2515-module-6.webp",
+          "alt": "MCP2515 (модуль) - Распиновка OBDII"
         }
       ],
       "applicationIds": [
-        "3",
         "13"
+      ]
+    },
+    {
+      "categoryId": 8,
+      "lang": "ru",
+      "title": "MCP2551 (модуль)",
+      "subtitle": "CAN приемопередатчик",
+      "seo": {
+        "description": "MCP2551 — Модуль высокоскоростного CAN",
+        "keywords": "mcp2551, can, шина, obd2, obdii, модуль, высокоскоростной, приемопередатчик"
+      },
+      "datasheetId": "MCP2551",
+      "buy": true,
+      "price": 65,
+      "availability": 2,
+      "content": "<p>MCP2551 — это высокоскоростное отказоустойчивое устройство CAN, которое служит интерфейсом между контроллером протокола CAN и физической шиной.</p>",
+      "images": [
+        {
+          "src": "/photos/MCP2551-module-1.webp",
+          "alt": "MCP2551 (модуль) - вид сверху 1"
+        },
+        {
+          "src": "/photos/MCP2551-module-2.webp",
+          "alt": "MCP2551 (модуль) - вид сверху 2"
+        }
+      ],
+      "features": [
+        {
+          "refId": 24,
+          "value": "-40 - +85 °C"
+        },
+        {
+          "refId": 76,
+          "value": "19 x 16.2 мм"
+        },
+        {
+          "refId": 131,
+          "value": "до 1 Мб/с"
+        },
+        {
+          "refId": 132,
+          "value": "до 112"
+        }
+      ],
+      "applicationIds": [
+        "13"
+      ],
+      "relatedDatasheetIds": [
+        "MCP2561",
+        "MCP2561FD"
       ]
     }
   ]
