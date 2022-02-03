@@ -943,6 +943,72 @@
         "MCP2561",
         "MCP2561FD"
       ]
+    },
+    {
+      "categoryId": 8,
+      "lang": "ru",
+      "title": "SIM800 (модуль)",
+      "subtitle": "GSM/GPRS 850/900/1800/1900 МГц",
+      "seo": {
+        "description": "SIM800 - GSM/GPRS модуль, работающий на частотах GSM850MHz, EGSM900MHz, DCS1800MHz и PCS1900MHz",
+        "keywords": "sim, sim800, sim800l, gsm, gprs, ttl, модуль"
+      },
+      "buy": true,
+      "price": {
+        "1": 130,
+        "2": 190
+      },
+      "availability": {
+        "1": 1,
+        "2": 0
+      },
+      "manufacturerId": "11",
+      "images": [
+        {
+          "src": "/photos/SIM800L-module-1.webp",
+          "alt": "SIM800L (модуль) - вид сверху",
+          "optionId": "1"
+        },
+        {
+          "src": "/photos/SIM800L-module-2.webp",
+          "alt": "SIM800L (модуль) - вид снизу",
+          "optionId": "1"
+        },
+        {
+          "src": "/photos/SIM800H-module-1.webp",
+          "alt": "SIM800H (чип) - вид сверху/снизу",
+          "optionId": "2"
+        }
+      ],
+      "options": {
+        "1": {
+          "name": "SIM800L",
+          "default": true
+        },
+        "2": {
+          "name": "SIM800H"
+        }
+      },
+      "features": [
+        {
+          "refId": 24,
+          "value": "-40 - +85 °C"
+        },
+        {
+          "refId": 76,
+          "value": "25.1 x 23 мм"
+        },
+        {
+          "refId": 133,
+          "value": "Нету",
+          "optionId": "1"
+        },
+        {
+          "refId": 133,
+          "value": "Есть",
+          "optionId": "2"
+        }
+      ]
     }
   ]
 }

@@ -79,6 +79,10 @@
     "10": {
       "name": "NXP Semiconductors",
       "url": "https://www.nxp.com"
+    },
+    "11": {
+      "name": "SIMCom",
+      "url": "https://www.simcom.com"
     }
   },
   "abbreviations": {
@@ -1167,6 +1171,10 @@
     },
     "132": {
       "name": "Узлов"
+    },
+    "133": {
+      "name": "Поддержка Bluetooth",
+      "type": "bool"
     }
   },
   "items": [
