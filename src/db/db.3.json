@@ -963,6 +963,7 @@
         "2": 0
       },
       "manufacturerId": "11",
+      "content": "<p>SIM800H & SIM800L - 4-диапазонный GSM/GPRS модуль, который работает на частотах GSM850MHZ, EGSM900MHZ, DCS1800MHZ и PCS1900MHZ.<p/>",
       "images": [
         {
           "src": "/photos/SIM800L-module-1.webp",
@@ -1008,6 +1009,9 @@
           "value": "Есть",
           "optionId": "2"
         }
+      ],
+      "applicationIds": [
+        "1", "2", "3"
       ]
     }
   ]
