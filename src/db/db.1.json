@@ -1406,7 +1406,7 @@
       },
       "buy": true,
       "price": 180,
-      "availability": 7,
+      "availability": 5,
       "datasheetId": "CP2112",
       "images": [
         {
@@ -2228,13 +2228,22 @@
     {
       "categoryId": 6,
       "lang": "ru",
-      "title": "CH340G",
+      "title": "CH340",
       "subtitle": "USB в UART",
       "seo": {
-        "description": "CH340G - преобразование шины USB в последовательный интерфейс UART",
-        "keywords": "ch340g, usb, uart, преобразование"
+        "description": "CH340 - преобразование шины USB в последовательный интерфейс UART",
+        "keywords": "CH340, usb, uart, преобразование"
       },
       "datasheetId": "CH340",
+      "buy": true,
+      "price": {
+        "1": 25,
+        "2": 30
+      },
+      "availability": {
+        "1": 0,
+        "2": 0
+      },
       "images": [
         {
           "src": "/photos/CH340G-1.webp",
@@ -2273,6 +2282,15 @@
           "value": "7 мА"
         }
       ],
+      "options": {
+        "1": {
+          "name": "CH340G",
+          "default": true
+        },
+        "2": {
+          "name": "CH340C"
+        }
+      },
       "content": "<p>CH340 - это микросхема преобразователя шины USB, которая преобразует USB в последовательный интерфейс UART или интерфейс принтера. В последовательном режиме UART CH340 обеспечивает общий сигнал MODEM, чтобы расширить интерфейс UART.</p>"
     },
     {
