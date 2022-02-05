@@ -1012,6 +1012,15 @@
       ],
       "applicationIds": [
         "1", "2", "3"
+      ],
+      "externalLinks": [
+        {
+          "name": "Официальная страница SIM800H",
+          "url": "https://www.simcom.com/product/SIM800H.html",
+          "lang": "en",
+          "icon": "www.simcom.com.ico",
+          "iconAlt": "www.simcom.com"
+        }
       ]
     }
   ]
