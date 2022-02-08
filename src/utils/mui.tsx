@@ -33,6 +33,9 @@ import {
   Handyman as HandymanIcon,
   Computer as ComputerIcon,
   KeyboardDoubleArrowDown as KeyboardDoubleArrowDownIcon,
+  Star as StarIcon,
+  StarBorder as StarBorderIcon,
+  StarHalf as StarHalfIcon,
 } from '@mui/icons-material';
 
 export const getIcon = (name: string, props: SvgIconProps = {}): any => {
@@ -69,5 +72,8 @@ export const getIcon = (name: string, props: SvgIconProps = {}): any => {
     switch: <SwitchLeftIcon {...props}/>,
     tools: <HandymanIcon {...props}/>,
     computer: <ComputerIcon {...props}/>,
+    star: <StarIcon {...props}/>,
+    starBorder: <StarBorderIcon {...props}/>,
+    starHalf: <StarHalfIcon {...props}/>,
   }[name];
 };

@@ -75,6 +75,16 @@ export const ItemInfoHeader = ({ item }: ItemInfoHeaderProps) => {
         )}
       </Box>
 
+      {/*{item.rating >= 0 && (*/}
+      {/*  <Box sx={{ marginLeft: 1, display: 'flex' }}>*/}
+      {/*    {[...(new Array(5))].map((value, index) => (*/}
+      {/*      <span key={index} style={{ display: 'flex' }}>*/}
+      {/*      {getIcon(getItemRatingIconName(item, index))}*/}
+      {/*    </span>*/}
+      {/*    ))}*/}
+      {/*  </Box>*/}
+      {/*)}*/}
+
       <Typography
         variant={'subtitle1'}
         role={'heading'}

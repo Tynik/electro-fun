@@ -103,6 +103,7 @@ export type ItemT = {
   relatedDatasheetIds?: DatasheetIdT[]
   availability?: number | Record<ItemOptionIdT, number>
   price?: number | Record<ItemOptionIdT, number>
+  rating?: number
   // link where is to buy or true/false
   buy?: string | boolean
   options?: ItemOptionsT

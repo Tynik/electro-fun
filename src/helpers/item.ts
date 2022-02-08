@@ -158,3 +158,10 @@ export const sortItemFeatures = (allFeatures: DbItemFeaturesT, features: ItemFea
     }
     return featSecRefIdA - featSecRefIdB;
   });
+
+export const getItemRatingIconName = (item: ItemT, iconNumber: number) => {
+  const diff = item.rating - (iconNumber + 1);
+  return diff >= 0
+    ? 'star'
+    : (diff >= -0.5 ? 'starHalf' : 'starBorder');
+};
