@@ -947,7 +947,7 @@
     {
       "categoryId": 8,
       "lang": "ru",
-      "title": "SIM800 (модуль)",
+      "title": "SIM800",
       "subtitle": "GSM/GPRS 850/900/1800/1900 МГц",
       "seo": {
         "description": "SIM800 - GSM/GPRS модуль, работающий на частотах GSM850MHz, EGSM900MHz, DCS1800MHz и PCS1900MHz",
@@ -983,7 +983,7 @@
       ],
       "options": {
         "1": {
-          "name": "SIM800L",
+          "name": "SIM800L (модуль)",
           "default": true
         },
         "2": {
