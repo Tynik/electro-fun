@@ -17,11 +17,21 @@
       "images": [
         {
           "src": "/photos/breadboard-jumpers-140-1.webp",
-          "alt": "Набор перемычек"
+          "alt": "Набор перемычек - открытая коробка"
         },
         {
           "src": "/photos/breadboard-jumpers-140-2.webp",
-          "alt": "Набор перемычек"
+          "alt": "Набор перемычек - закрытая коробка"
+        }
+      ],
+      "features": [
+        {
+          "refId": 104,
+          "value": "140"
+        },
+        {
+          "refId": 134,
+          "value": "14"
         }
       ]
     }

@@ -1060,7 +1060,8 @@
       "name": "Материал проводника"
     },
     "104": {
-      "name": "Кол-во"
+      "name": "Кол-во",
+      "suffix": " шт."
     },
     "105": {
       "name": "Материал"
@@ -1175,6 +1176,9 @@
     "133": {
       "name": "Поддержка Bluetooth",
       "type": "bool"
+    },
+    "134": {
+      "name": "Разновидностей"
     }
   },
   "items": [
@@ -1410,7 +1414,7 @@
       "subtitle": "Модуль-конвертер",
       "seo": {
         "description": "CP2112 - USB в SMBus",
-        "keywords": "cp2112, usb, smbus, конвертер, перепрошивка, батарея"
+        "keywords": "cp2112, usb, smbus, конвертер, перепрошивка, модуль"
       },
       "buy": true,
       "price": 180,
@@ -1418,16 +1422,16 @@
       "datasheetId": "CP2112",
       "images": [
         {
-          "src": "https://images.izi.ua/25804009",
-          "alt": "CP2112"
+          "src": "/photos/CP2112-module-1.webp",
+          "alt": "CP2112 (модуль) - Вид сверху"
         },
         {
-          "src": "https://images.izi.ua/25804008",
-          "alt": "CP2112"
+          "src": "/photos/CP2112-module-2.webp",
+          "alt": "CP2112 (модуль) - Размеры"
         },
         {
-          "src": "https://images.izi.ua/25804007",
-          "alt": "CP2112"
+          "src": "/photos/CP2112-module-3.webp",
+          "alt": "CP2112 (модуль) - Вид снизу"
         }
       ],
       "content": "<p>Модуль USB в SMBus построенный чипе Silabs С2112.\nВ основном требуется для прошивки контроллера батареи ноутбука. Поддерживается программой BE2WORKS.\n\nПоставляется в упаковке.</p>",
@@ -2442,7 +2446,7 @@
       "features": [
         {
           "refId": 104,
-          "value": "14 шт."
+          "value": "14"
         },
         {
           "refId": 105,
