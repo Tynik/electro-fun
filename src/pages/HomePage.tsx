@@ -3,7 +3,8 @@ import {
   Box,
   Typography,
   IconButton,
-  useTheme
+  useTheme,
+  Alert
 } from '@mui/material';
 
 import type { ItemsT, FoundDatasheetsT } from '~/types';
@@ -48,6 +49,10 @@ export const HomePage = (props: HomePageProps) => {
 
   return (
     <>
+      <Alert severity={'info'}>
+        <Typography>Вибачте за незручності але ми зараз тимчасово не працюемо</Typography>
+      </Alert>
+
       {!foundItems && !isSearching && (
         <>
           <Box sx={{
