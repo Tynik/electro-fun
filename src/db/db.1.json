@@ -1418,7 +1418,7 @@
       },
       "buy": true,
       "price": 270,
-      "availability": 2,
+      "availability": 0,
       "datasheetId": "CP2112",
       "images": [
         {
