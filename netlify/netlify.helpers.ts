@@ -75,6 +75,8 @@ export const createHandler = <Payload = unknown>(
         allowMethods: options?.allowMethods,
       });
     } catch (e) {
+      console.error(e);
+
       return createResponse(
         { status: 'error' },
         {
