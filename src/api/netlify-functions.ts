@@ -1,10 +1,7 @@
 import { netlifyRequest } from '~/api/api-client';
 
 export type CheckoutResponse = {
-  status: string;
-  data: {
-    url: string;
-  };
+  url: string;
 };
 
 type Item = {

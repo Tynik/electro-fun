@@ -40,7 +40,7 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
         return result;
       }, []);
 
-      const { data } = await checkoutRequest({
+      const checkoutResponse = await checkoutRequest({
         items: checkoutItems,
         fullName,
         phone,
@@ -50,7 +50,7 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
 
       clearBasket();
 
-      window.open(data.url);
+      window.open(checkoutResponse.url);
 
       addNotification('You have successfully placed an order.', {
         timeout: 5000,
