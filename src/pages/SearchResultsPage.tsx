@@ -24,7 +24,7 @@ export const SearchResultsPage = (props: SearchResultsPageProps) => {
   } = props;
 
   if (isSearching) {
-    return <Loader label={'Поиск...'} />;
+    return <Loader label={'Searching...'} />;
   }
 
   return (
