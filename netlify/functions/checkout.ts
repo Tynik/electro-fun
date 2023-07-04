@@ -4,7 +4,7 @@ import Stripe from 'stripe';
 
 const stripe = new Stripe(
   process.env.STRIPE_API_KEY ??
-    'pk_test_51NDw9MARhMwSarZXoUzqXkP8893DqdhtZafZNBkjEHz2lWW3nZDHbvBHQ2VkSAFXGAIz1fjnCwVa72SC1J1sb8a600DX0JfptS',
+    'sk_test_51NDw9MARhMwSarZX5RFCidCIKsrec9HdO3gMDT3zBc1COtGyVrV5x93jKzXPDqUveYdWt9lcHm1YiVWxgQarpt1j006wO8q0eR',
   {}
 );
 
@@ -26,6 +26,14 @@ export const handler = createHandler<Payload>({ allowMethods: ['POST'] }, async 
       quantity: item.quantity,
     })),
     mode: 'payment',
+    shipping_options: [
+      {
+        shipping_rate: 'shr_1NQ8dDARhMwSarZXn5GIt4kx',
+      },
+      {
+        shipping_rate: 'shr_1NQ8flARhMwSarZXBBTINVJt',
+      },
+    ],
     success_url: `${SITE_DOMAIN}?success=true`,
     cancel_url: `${SITE_DOMAIN}?canceled=true`,
   });

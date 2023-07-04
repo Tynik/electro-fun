@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Grid, Stack, Box, Alert, TextField } from '@mui/material';
+import { Button, Grid, Stack, Box, TextField } from '@mui/material';
 
 import type { Item } from '~/types';
 
@@ -47,6 +47,8 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
         deliveryAddress,
         note,
       });
+
+      history.replaceState({}, '', '/');
 
       clearBasket();
 
