@@ -1,18 +1,18 @@
 import React from 'react';
 
-import type { ItemT } from '~/types';
+import type { Item } from '~/types';
 
 import { useQueryParams } from '~/utils';
 import { getItemDefaultOption } from '~/helpers';
 
 export const useSelectedItemOptionId = (
-  item: ItemT,
+  item: Item,
   applyDefault: boolean = true
 ): string | null => {
   const { optionId: selectedItemOptionId } = useQueryParams();
 
-  return React.useMemo(() =>
-      item && (selectedItemOptionId || (applyDefault && getItemDefaultOption(item))),
+  return React.useMemo(
+    () => item && (selectedItemOptionId || (applyDefault && getItemDefaultOption(item))),
     [item, selectedItemOptionId]
   );
 };

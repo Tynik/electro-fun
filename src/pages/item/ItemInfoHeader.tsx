@@ -1,20 +1,15 @@
 import React from 'react';
-import {
-  Typography,
-  Box,
-  Chip,
-  useTheme
-} from '@mui/material';
+import { Typography, Box, Chip, useTheme } from '@mui/material';
 
-import type { ItemT } from '~/types';
+import type { Item } from '~/types';
 
 import { InternalLink } from '~/components';
 import { getIcon } from '~/utils';
 import { useCategory } from '~/hooks';
 
 export type ItemInfoHeaderProps = {
-  item: ItemT
-}
+  item: Item;
+};
 
 export const ItemInfoHeader = ({ item }: ItemInfoHeaderProps) => {
   const theme = useTheme();
@@ -47,7 +42,7 @@ export const ItemInfoHeader = ({ item }: ItemInfoHeaderProps) => {
             >
               <span itemProp={'name'}>{category.name}</span>
             </InternalLink>
-            <meta itemProp={'position'} content={'1'}/>
+            <meta itemProp={'position'} content={'1'} />
           </Typography>
 
           <Typography
@@ -61,14 +56,14 @@ export const ItemInfoHeader = ({ item }: ItemInfoHeaderProps) => {
           >
             <span itemProp={'name'}>{item.title}</span>
 
-            <meta itemProp={'position'} content={'2'}/>
+            <meta itemProp={'position'} content={'2'} />
           </Typography>
         </Box>
 
         {item.original === false && (
           <Chip
             size={'small'}
-            label={'копия'}
+            label={'not original'}
             color={'info'}
             sx={{ marginLeft: theme.spacing(1) }}
           />

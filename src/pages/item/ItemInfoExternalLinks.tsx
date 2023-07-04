@@ -1,26 +1,18 @@
 import React from 'react';
-import {
-  Typography,
-  List,
-  ListItem,
-  Icon,
-  ListItemText
-} from '@mui/material';
+import { Typography, List, ListItem, Icon, ListItemText } from '@mui/material';
 
-import type { ItemExternalLinkT } from '~/types';
+import type { ItemExternalLink } from '~/types';
 
 import { ExternalLink } from '~/components';
 
 export type ItemInfoExternalLinksProps = {
-  externalLinks: ItemExternalLinkT[]
-}
+  externalLinks: ItemExternalLink[];
+};
 
 export const ItemInfoExternalLinks = ({ externalLinks }: ItemInfoExternalLinksProps) => {
   return (
     <>
-      <Typography variant={'overline'}>
-        Ссылки на внешние ресурсы
-      </Typography>
+      <Typography variant={'overline'}>Links to external resources</Typography>
 
       <List disablePadding>
         {externalLinks.map(externalResource => (
@@ -31,7 +23,7 @@ export const ItemInfoExternalLinks = ({ externalLinks }: ItemInfoExternalLinksPr
                 sx={{
                   display: 'flex',
                   alignItems: 'center',
-                  marginRight: 1
+                  marginRight: 1,
                 }}
               >
                 <img
@@ -39,14 +31,12 @@ export const ItemInfoExternalLinks = ({ externalLinks }: ItemInfoExternalLinksPr
                   alt={externalResource.iconAlt}
                   title={externalResource.iconAlt}
                   width={16}
-                  height={16}/>
+                  height={16}
+                />
               </Icon>
             )}
             <ListItemText>
-              <ExternalLink
-                href={externalResource.url}
-                hrefLang={externalResource.lang}
-              >
+              <ExternalLink href={externalResource.url} hrefLang={externalResource.lang}>
                 {externalResource.name}
               </ExternalLink>
             </ListItemText>

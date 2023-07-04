@@ -1,13 +1,13 @@
 {
-  "siteName": "Smart Home Tech",
-  "siteURL": "https://smart-home-tech.com.ua",
+  "siteName": "SmartStream Electronics",
+  "siteURL": "https://smartstream-electronics.uk",
   "seo": {
-    "title": "Smart Home Tech",
-    "description": "Решения для создания умного дома своими руками",
-    "keywords": "smart-home, умный-дом, радиокомпоненты, радиомодули, микросхемы, датчики, iot, arduino"
+    "title": "SmartStream Electronics",
+    "description": "Discover a wide range of high-quality electronic components and accessories at our online store. Find everything you need for your DIY electronics projects. Fast shipping and reliable service.",
+    "keywords": "electronics components, electronic parts, DIY electronics, electronic accessories, online store, electronic components shop, reliable service, fast shipping, high-quality electronics, DIY projects"
   },
   "footer": {
-    "bottom": "Smart Home Tech 2021"
+    "bottom": "SmartStream Electronics 2023"
   },
   "menu": [
     {
@@ -20,18 +20,18 @@
   ],
   "applications": {
     "1": "IoT",
-    "2": "Мобильные устройства",
-    "3": "Умный дом",
-    "4": "Носимые электронные устройства",
-    "5": "Для майнинга",
-    "6": "Бесконтактные измерения",
-    "7": "Замена механических выключателей",
-    "8": "Измерение интенсивности рассеянного света",
-    "9": "Определение цвета",
-    "10": "Датчики движения",
-    "11": "Контроль напряжения и тока",
-    "12": "Системы измерения температуры",
-    "13": "Автомобилестроение"
+    "2": "Mobile Devices",
+    "3": "Smart Home",
+    "4": "Wearable Electronic Devices",
+    "5": "Mining",
+    "6": "Contactless Measurements",
+    "7": "Replacement of Mechanical Switches",
+    "8": "Measurement of Diffuse Light Intensity",
+    "9": "Color Detection",
+    "10": "Motion Sensors",
+    "11": "Voltage and Current Monitoring",
+    "12": "Temperature Measurement Systems",
+    "13": "Automotive Industry"
   },
   "manufacturers": {
     "1": {
@@ -87,84 +87,84 @@
   },
   "abbreviations": {
     "RISC": {
-      "url": "https://ru.wikipedia.org/wiki/RISC",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/RISC",
+      "lang": "en"
     },
     "RISC-V": {
-      "url": "https://ru.wikipedia.org/wiki/RISC-V",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/RISC-V",
+      "lang": "en"
     },
     "MQTT": {
-      "url": "https://ru.wikipedia.org/wiki/MQTT",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/MQTT",
+      "lang": "en"
     },
     "QFN": {
-      "url": "https://ru.wikipedia.org/wiki/QFN",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/QFN",
+      "lang": "en"
     },
     "RAM": {
-      "url": "https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%BF%D0%BE%D0%BC%D0%B8%D0%BD%D0%B0%D1%8E%D1%89%D0%B5%D0%B5_%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE_%D1%81_%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%BC_%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%BE%D0%BC",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/%D0%97%D0%B0%D0%BF%D0%BE%D0%BC%D0%B8%D0%BD%D0%B0%D1%8E%D1%89%D0%B5%D0%B5_%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE_%D1%81_%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%BC_%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%BE%D0%BC",
+      "lang": "en"
     },
     "SRAM": {
-      "url": "https://ru.wikipedia.org/wiki/SRAM_(%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D1%8C)",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/SRAM_(%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D1%8C)",
+      "lang": "en"
     },
     "ISP": {
-      "url": "https://ru.wikipedia.org/wiki/%D0%92%D0%BD%D1%83%D1%82%D1%80%D0%B8%D1%81%D1%85%D0%B5%D0%BC%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/%D0%92%D0%BD%D1%83%D1%82%D1%80%D0%B8%D1%81%D1%85%D0%B5%D0%BC%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5",
+      "lang": "en"
     },
     "ROM": {
-      "url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B7%D0%B0%D0%BF%D0%BE%D0%BC%D0%B8%D0%BD%D0%B0%D1%8E%D1%89%D0%B5%D0%B5_%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/%D0%9F%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B7%D0%B0%D0%BF%D0%BE%D0%BC%D0%B8%D0%BD%D0%B0%D1%8E%D1%89%D0%B5%D0%B5_%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE",
+      "lang": "en"
     },
     "PROM": {
-      "url": "https://ru.wikipedia.org/wiki/PROM",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/PROM",
+      "lang": "en"
     },
     "EPROM": {
-      "url": "https://ru.wikipedia.org/wiki/EPROM",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/EPROM",
+      "lang": "en"
     },
     "EEPROM": {
-      "url": "https://ru.wikipedia.org/wiki/EEPROM",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/EEPROM",
+      "lang": "en"
     },
     "OTA": {
-      "url": "https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BF%D0%BE_%D0%B2%D0%BE%D0%B7%D0%B4%D1%83%D1%85%D1%83",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/%D0%9E%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BF%D0%BE_%D0%B2%D0%BE%D0%B7%D0%B4%D1%83%D1%85%D1%83",
+      "lang": "en"
     },
     "SoC": {
-      "url": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D0%BD%D0%B0_%D0%BA%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BB%D0%BB%D0%B5",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D0%BD%D0%B0_%D0%BA%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BB%D0%BB%D0%B5",
+      "lang": "en"
     },
     "FPU": {
-      "url": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D1%80",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D1%80",
+      "lang": "en"
     },
     "MPU": {
       "url": "https://en.wikipedia.org/wiki/Memory_protection_unit",
       "lang": "en"
     },
     "DMA": {
-      "url": "https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D1%8F%D0%BC%D0%BE%D0%B9_%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF_%D0%BA_%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/%D0%9F%D1%80%D1%8F%D0%BC%D0%BE%D0%B9_%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF_%D0%BA_%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8",
+      "lang": "en"
     },
     "DMM": {
       "url": "/datasheets/DMM.pdf",
       "lang": "en"
     },
     "SMBus": {
-      "url": "https://ru.wikipedia.org/wiki/SMBus",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/SMBus",
+      "lang": "en"
     },
     "ARM": {
-      "url": "https://ru.wikipedia.org/wiki/ARM_(%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0)",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/ARM_(%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0)",
+      "lang": "en"
     },
     "JTAG": {
-      "url": "https://ru.wikipedia.org/wiki/JTAG",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/JTAG",
+      "lang": "en"
     }
   },
   "clarifications": {
@@ -181,12 +181,12 @@
       "lang": "en"
     },
     "Wi-Fi®": {
-      "url": "https://ru.wikipedia.org/wiki/Wi-Fi",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/Wi-Fi",
+      "lang": "en"
     },
     "Ethernet": {
-      "url": "https://ru.wikipedia.org/wiki/Ethernet",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/Ethernet",
+      "lang": "en"
     },
     "Sub-1 GHz": {
       "url": "/datasheets/Sub-1GHz.pdf",
@@ -197,44 +197,44 @@
       "lang": "en"
     },
     "6LoWPAN": {
-      "url": "https://ru.wikipedia.org/wiki/6LoWPAN",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/6LoWPAN",
+      "lang": "en"
     },
     "Thread": {
       "url": "https://en.wikipedia.org/wiki/Thread_(network_protocol)",
       "lang": "en"
     },
     "IEEE 802.15.4": {
-      "url": "https://ru.wikipedia.org/wiki/IEEE_802.15.4",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/IEEE_802.15.4",
+      "lang": "en"
     },
     "RTOS": {
-      "url": "https://ru.wikipedia.org/wiki/%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%80%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%80%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8",
+      "lang": "en"
     },
     "TI-RTOS": {
       "url": "https://en.wikipedia.org/wiki/TI-RTOS",
       "lang": "en"
     },
     "Bluetooth® Low Energy": {
-      "url": "https://ru.wikipedia.org/wiki/Bluetooth_%D1%81_%D0%BD%D0%B8%D0%B7%D0%BA%D0%B8%D0%BC_%D1%8D%D0%BD%D0%B5%D1%80%D0%B3%D0%BE%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/Bluetooth_%D1%81_%D0%BD%D0%B8%D0%B7%D0%BA%D0%B8%D0%BC_%D1%8D%D0%BD%D0%B5%D1%80%D0%B3%D0%BE%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC",
+      "lang": "en"
     },
     "Bluetooth® 5.1 Low Energy": {
-      "url": "https://ru.wikipedia.org/wiki/Bluetooth_%D1%81_%D0%BD%D0%B8%D0%B7%D0%BA%D0%B8%D0%BC_%D1%8D%D0%BD%D0%B5%D1%80%D0%B3%D0%BE%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/Bluetooth_%D1%81_%D0%BD%D0%B8%D0%B7%D0%BA%D0%B8%D0%BC_%D1%8D%D0%BD%D0%B5%D1%80%D0%B3%D0%BE%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC",
+      "lang": "en"
     },
     "Bluetooth® 5.2 Low Energy": {
-      "url": "https://ru.wikipedia.org/wiki/Bluetooth_%D1%81_%D0%BD%D0%B8%D0%B7%D0%BA%D0%B8%D0%BC_%D1%8D%D0%BD%D0%B5%D1%80%D0%B3%D0%BE%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/Bluetooth_%D1%81_%D0%BD%D0%B8%D0%B7%D0%BA%D0%B8%D0%BC_%D1%8D%D0%BD%D0%B5%D1%80%D0%B3%D0%BE%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC",
+      "lang": "en"
     },
     "SimpleLink™": {
       "url": "/datasheets/SimpleLink™.pdf",
       "lang": "en"
     },
     "Zigbee®": {
-      "url": "https://ru.wikipedia.org/wiki/Zigbee",
-      "lang": "ru"
+      "url": "https://en.wikipedia.org/wiki/Zigbee",
+      "lang": "en"
     },
     "ARC® EM4": {
       "url": "/datasheets/ARM-EM4-EM6.pdf",
@@ -488,135 +488,135 @@
   "categories": [
     {
       "id": 1,
-      "name": "Датчики",
+      "name": "Sensors",
       "icon": "sensor"
     },
     {
       "id": 2,
-      "name": "Микропроцессоры",
+      "name": "Microprocessors",
       "icon": "cpu"
     },
     {
       "id": 3,
-      "name": "Элементы Пельтье",
+      "name": "Peltier Elements",
       "icon": "snow"
     },
     {
       "id": 4,
-      "name": "DC-DC преобразователи",
+      "name": "DC-DC Converters",
       "icon": "flash"
     },
     {
       "id": 5,
-      "name": "Гироскопы",
+      "name": "Gyroscopes",
       "icon": "compass"
     },
     {
       "id": 6,
-      "name": "Преобразователи",
+      "name": "Converters",
       "icon": "convertors"
     },
     {
       "id": 7,
-      "name": "Соленоиды",
+      "name": "Solenoids",
       "icon": "coil"
     },
     {
       "id": 8,
-      "name": "Приемопередатчики",
+      "name": "Transceivers",
       "icon": "antenna"
     },
     {
       "id": 9,
-      "name": "Wi-Fi устройства",
+      "name": "Wi-Fi Devices",
       "icon": "wifi"
     },
     {
       "id": 10,
-      "name": "МОП-транзисторы",
+      "name": "MOSFET Transistors",
       "icon": "mosfet"
     },
     {
       "id": 11,
-      "name": "Программаторы",
+      "name": "Programmers",
       "icon": "keyboard"
     },
     {
       "id": 12,
-      "name": "LED(s)",
+      "name": "LEDs",
       "icon": "led"
     },
     {
       "id": 13,
-      "name": "Измерители",
+      "name": "Measuring Instruments",
       "icon": "measure"
     },
     {
       "id": 14,
-      "name": "Предохранители",
+      "name": "Fuses",
       "icon": "fuse"
     },
     {
       "id": 15,
-      "name": "Оптоизоляторы",
+      "name": "Optoisolators",
       "icon": "apps"
     },
     {
       "id": 16,
-      "name": "Стабилизаторы",
+      "name": "Stabilizers",
       "icon": "apps"
     },
     {
       "id": 17,
-      "name": "AC-DC преобразователи",
+      "name": "AC-DC Converters",
       "icon": "power"
     },
     {
       "id": 18,
-      "name": "Переключатели",
+      "name": "Switches",
       "icon": "switch"
     },
     {
       "id": 19,
-      "name": "Провод",
+      "name": "Wires",
       "icon": "power"
     },
     {
       "id": 20,
-      "name": "Инструменты",
+      "name": "Tools",
       "icon": "tools"
     },
     {
       "id": 21,
-      "name": "Расходники",
+      "name": "Consumables",
       "icon": "apps"
     },
     {
       "id": 22,
-      "name": "Комп. комплектующие",
+      "name": "Computer Components",
       "icon": "computer"
     }
   ],
   "featureSections": {
-    "1": "Точность измерения",
-    "2": "Разрешающая способность",
-    "3": "Напряжение",
-    "4": "Ток",
-    "5": "Измерение",
+    "1": "Measurement Accuracy",
+    "2": "Resolution",
+    "3": "Voltage",
+    "4": "Current",
+    "5": "Measurement",
     "6": "GPIOs",
-    "7": "Потребление тока",
+    "7": "Current Consumption",
     "8": "CPU",
-    "9": "Программное обеспечения",
+    "9": "Software",
     "10": "MCU",
-    "11": "Поддержка",
-    "12": "Защита",
-    "13": "Эксплуатация",
-    "14": "Размеры"
+    "11": "Support",
+    "12": "Protection",
+    "13": "Operation",
+    "14": "Dimensions"
   },
   "optionTypes": {
     "bool": {
-      "y": "Есть",
-      "n": "Нету"
+      "y": "Yes",
+      "n": "No"
     }
   },
   "itemFeatures": {
@@ -627,248 +627,248 @@
       ]
     },
     "2": {
-      "name": "Интерфейс",
+      "name": "Interface",
       "categories": [
         1
       ]
     },
     "3": {
-      "name": "Питание",
+      "name": "Power",
       "categories": [
         1
       ],
       "featSecRefId": 3
     },
     "4": {
-      "name": "Температура",
+      "name": "Temperature",
       "categories": [
         1
       ],
       "featSecRefId": 5
     },
     "5": {
-      "name": "Влажность",
+      "name": "Humidity",
       "categories": [
         1
       ],
       "featSecRefId": 5
     },
     "6": {
-      "name": "Давление",
+      "name": "Pressure",
       "categories": [
         1
       ],
       "featSecRefId": 5
     },
     "7": {
-      "name": "I²C адрес",
+      "name": "I²C Address",
       "categories": [
         1
       ]
     },
     "8": {
-      "name": "Температура",
+      "name": "Temperature",
       "categories": [
         1
       ],
       "featSecRefId": 1
     },
     "9": {
-      "name": "Давление",
+      "name": "Pressure",
       "categories": [
         1
       ],
       "featSecRefId": 1
     },
     "10": {
-      "name": "Влажность",
+      "name": "Humidity",
       "categories": [
         1
       ],
       "featSecRefId": 1
     },
     "11": {
-      "name": "Влажность",
+      "name": "Humidity",
       "categories": [
         1
       ],
       "featSecRefId": 2
     },
     "12": {
-      "name": "Давление",
+      "name": "Pressure",
       "categories": [
         1
       ],
       "featSecRefId": 2
     },
     "13": {
-      "name": "Входное",
+      "name": "Input",
       "featSecRefId": 3
     },
     "14": {
-      "name": "Выходное",
+      "name": "Output",
       "featSecRefId": 3
     },
     "15": {
-      "name": "Выходной",
+      "name": "Output",
       "featSecRefId": 4
     },
     "16": {
-      "name": "Гироскоп",
+      "name": "Gyroscope",
       "suffix": {
-        "axis": "-x осевой",
-        "range": "º/с"
+        "axis": "-axis",
+        "range": "º/s"
       },
       "categories": [
         1
       ]
     },
     "17": {
-      "name": "Акселерометр",
+      "name": "Accelerometer",
       "suffix": {
-        "axis": "-x осевой"
+        "axis": "-axis"
       },
       "categories": [
         1
       ]
     },
     "18": {
-      "name": "Mагнитометр",
+      "name": "Magnetometer",
       "suffix": {
-        "axis": "-x осевой"
+        "axis": "-axis"
       },
       "categories": [
         1
       ]
     },
     "19": {
-      "name": "USB питание",
+      "name": "USB Power",
       "categories": [
         1
       ]
     },
     "20": {
-      "name": "Кол-во",
+      "name": "Quantity",
       "featSecRefId": 6
     },
     "21": {
-      "name": "Тактовый выход для внешних устройств",
+      "name": "Clock Output for External Devices",
       "featSecRefId": 6
     },
     "22": {
-      "name": "Вкл. LED во время чтения/записи SMBus",
+      "name": "Enable LED During SMBus Read/Write",
       "featSecRefId": 6,
       "type": "bool"
     },
     "23": {
-      "name": "Исп. в качестве входов, выходов с открытым стоком или двухтактных выходов",
+      "name": "Use as Open-Drain or Push-Pull Inputs/Outputs",
       "featSecRefId": 6,
       "type": "bool"
     },
     "24": {
-      "name": "Рабочая температура",
+      "name": "Operating Temperature",
       "featSecRefId": 13
     },
     "25": {
-      "name": "SMBus буфер"
+      "name": "SMBus Buffer"
     },
     "26": {
-      "name": "Влажность воздуха",
+      "name": "Air Humidity",
       "featSecRefId": 13
     },
     "27": {
-      "name": "Потребляемая мощность"
+      "name": "Power Consumption"
     },
     "28": {
-      "name": "Максимальное",
+      "name": "Maximum",
       "featSecRefId": 7
     },
     "29": {
-      "name": "Среднее",
+      "name": "Average",
       "featSecRefId": 7
     },
     "30": {
-      "name": "Разница температур между сторонами",
+      "name": "Temperature Difference Between Sides",
       "categories": [
         3
       ],
       "featSecRefId": 13
     },
     "31": {
-      "name": "Мощность охлаждения",
+      "name": "Cooling Power",
       "categories": [
         3
       ],
       "featSecRefId": 13
     },
     "32": {
-      "name": "Кол-во термопар",
+      "name": "Number of Thermocouples",
       "categories": [
         3
       ]
     },
     "33": {
-      "name": "Сопротивление",
+      "name": "Resistance",
       "categories": [
         3
       ]
     },
     "34": {
-      "name": "Самообучение (25 Гц)",
+      "name": "Self-Learning (25 Hz)",
       "featSecRefId": 7
     },
     "35": {
-      "name": "Самообучение (50 Гц)",
+      "name": "Self-Learning (50 Hz)",
       "featSecRefId": 7
     },
     "36": {
-      "name": "Режим ожидания",
+      "name": "Standby Mode",
       "featSecRefId": 7
     },
     "37": {
-      "name": "Регулятор напряжения",
+      "name": "Voltage Regulator",
       "type": "bool"
     },
     "38": {
-      "name": "Тип",
+      "name": "Type",
       "featSecRefId": 8
     },
     "39": {
-      "name": "Модуль с плавающей запятой (FPU)",
+      "name": "Floating-Point Unit (FPU)",
       "featSecRefId": 8,
       "type": "bool"
     },
     "40": {
-      "name": "Блок защиты памяти (MPU)",
+      "name": "Memory Protection Unit (MPU)",
       "featSecRefId": 8,
       "type": "bool"
     },
     "41": {
-      "name": "Прямой доступ к памяти (DMA)",
+      "name": "Direct Memory Access (DMA)",
       "featSecRefId": 8,
-      "suffix": " канала"
+      "suffix": " channel"
     },
     "42": {
-      "name": "Корпус"
+      "name": "Enclosure"
     },
     "43": {
-      "name": "Сетевой протокол",
+      "name": "Network Protocol",
       "featSecRefId": 9
     },
     "44": {
-      "name": "Шифрование",
+      "name": "Encryption",
       "featSecRefId": 9
     },
     "45": {
-      "name": "Безопасность",
+      "name": "Security",
       "featSecRefId": 9
     },
     "46": {
-      "name": "Wi-Fi режим",
+      "name": "Wi-Fi Mode",
       "featSecRefId": 9
     },
     "50": {
-      "name": "Тип",
+      "name": "Type",
       "featSecRefId": 10
     },
     "51": {
@@ -880,27 +880,27 @@
       "featSecRefId": 10
     },
     "53": {
-      "name": "Тактовая частота",
+      "name": "Clock Frequency",
       "featSecRefId": 10
     },
     "54": {
-      "name": "Флэш-память",
+      "name": "Flash Memory",
       "featSecRefId": 10
     },
     "55": {
-      "name": "Обновление по воздуху (OTA)",
+      "name": "Over-the-Air (OTA) Update",
       "featSecRefId": 10
     },
     "56": {
-      "name": "Передача данных",
+      "name": "Data Transmission",
       "featSecRefId": 7
     },
     "57": {
-      "name": "Получение данных",
+      "name": "Data Acquisition",
       "featSecRefId": 7
     },
     "58": {
-      "name": "В выкл. состоянии",
+      "name": "Power Off State",
       "featSecRefId": 7
     },
     "59": {
@@ -916,14 +916,14 @@
       "featSecRefId": 10
     },
     "62": {
-      "name": "Температура хранения",
+      "name": "Storage Temperature",
       "featSecRefId": 13
     },
     "63": {
       "name": "I<sub>D</sub>"
     },
     "65": {
-      "name": "Полярность"
+      "name": "Polarity"
     },
     "66": {
       "name": "Q<sub>gd</sub>"
@@ -947,7 +947,7 @@
       "name": "V<sub>GS(th)</sub>"
     },
     "74": {
-      "name": "ОС",
+      "name": "Operating System",
       "featSecRefId": 11
     },
     "75": {
@@ -955,244 +955,245 @@
       "featSecRefId": 11
     },
     "76": {
-      "name": "Габариты"
+      "name": "Dimensions"
     },
     "77": {
-      "name": "Напряжение",
+      "name": "Voltage",
       "featSecRefId": 5
     },
     "78": {
-      "name": "Напряжение",
+      "name": "Voltage",
       "featSecRefId": 2
     },
     "79": {
-      "name": "Напряжение",
+      "name": "Voltage",
       "featSecRefId": 1
     },
     "80": {
-      "name": "Ток",
+      "name": "Current",
       "featSecRefId": 5
     },
     "81": {
-      "name": "Ток",
+      "name": "Current",
       "featSecRefId": 2
     },
     "82": {
-      "name": "Ток",
+      "name": "Current",
       "featSecRefId": 1
     },
     "83": {
-      "name": "Частота",
+      "name": "Frequency",
       "featSecRefId": 5
     },
     "84": {
-      "name": "Частота",
+      "name": "Frequency",
       "featSecRefId": 2
     },
     "85": {
-      "name": "Частота",
+      "name": "Frequency",
       "featSecRefId": 1
     },
     "86": {
-      "name": "Коэффициент мощности",
+      "name": "Power Factor",
       "featSecRefId": 5
     },
     "87": {
-      "name": "Коэффициент мощности",
+      "name": "Power Factor",
       "featSecRefId": 2
     },
     "88": {
-      "name": "Коэффициент мощности",
+      "name": "Power Factor",
       "featSecRefId": 1
     },
     "89": {
-      "name": "Мощность",
+      "name": "Power",
       "featSecRefId": 5
     },
     "90": {
-      "name": "Мощность",
+      "name": "Power",
       "featSecRefId": 2
     },
     "91": {
-      "name": "Мощность",
+      "name": "Power",
       "featSecRefId": 1
     },
     "92": {
-      "name": "Входное (обратное)",
+      "name": "Input (Reverse)",
       "featSecRefId": 3
     },
     "93": {
-      "name": "Входной",
+      "name": "Input",
       "featSecRefId": 4
     },
     "94": {
-      "name": "Входной (обратный)",
+      "name": "Input (Reverse)",
       "featSecRefId": 4
     },
     "95": {
-      "name": "Изоляция",
+      "name": "Isolation",
       "featSecRefId": 3
     },
     "96": {
-      "name": "Антенна"
+      "name": "Antenna"
     },
     "97": {
       "name": "Bluetooth"
     },
     "98": {
-      "name": "Частота",
+      "name": "Frequency",
       "featSecRefId": 8
     },
     "99": {
-      "name": "Вес"
+      "name": "Weight"
     },
     "100": {
-      "name": "Внутренний диаметр",
+      "name": "Inner Diameter",
       "featSecRefId": 14
     },
     "101": {
-      "name": "Время переключения"
+      "name": "Switching Time"
     },
     "102": {
-      "name": "Изоляционный материал"
+      "name": "Insulation Material"
     },
     "103": {
-      "name": "Материал проводника"
+      "name": "Conductor Material"
     },
     "104": {
-      "name": "Кол-во",
-      "suffix": " шт."
+      "name": "Quantity",
+      "suffix": " pcs."
     },
     "105": {
-      "name": "Материал"
+      "name": "Material"
     },
     "106": {
-      "name": "Термостойкие",
+      "name": "Heat Resistant",
       "type": "bool"
     },
     "107": {
-      "name": "Антистатические",
+      "name": "Antistatic",
       "type": "bool"
     },
     "108": {
-      "name": "Длина",
+      "name": "Length",
       "featSecRefId": 14
     },
     "109": {
-      "name": "Ширина",
+      "name": "Width",
       "featSecRefId": 14
     },
     "110": {
-      "name": "Толщина",
+      "name": "Thickness",
       "featSecRefId": 14
     },
     "111": {
-      "name": "Макс. температура",
+      "name": "Max. Temperature",
       "featSecRefId": 13
     },
     "112": {
-      "name": "Сила адгезии",
+      "name": "Adhesive Strength",
       "featSecRefId": 13
     },
     "113": {
-      "name": "Коэфф. расширения",
+      "name": "Expansion Coefficient",
       "featSecRefId": 13
     },
     "114": {
-      "name": "Предел прочности",
+      "name": "Tensile Strength",
       "featSecRefId": 13
     },
     "115": {
-      "name": "Выходная мощность"
+      "name": "Output Power"
     },
     "116": {
-      "name": "Рабочая частота"
+      "name": "Operating Frequency"
     },
     "117": {
-      "name": "Эфф. преобразования"
+      "name": "Efficiency"
     },
     "118": {
-      "name": "От короткого замыкания",
+      "name": "Short Circuit Protection",
       "type": "bool",
       "featSecRefId": 12
     },
     "119": {
-      "name": "От перегрузки по току",
+      "name": "Overcurrent Protection",
       "type": "bool",
       "featSecRefId": 12
     },
     "120": {
-      "name": "От перенапряжения",
+      "name": "Overvoltage Protection",
       "type": "bool",
       "featSecRefId": 12
     },
     "121": {
-      "name": "От обратной полярности на входе",
+      "name": "Reverse Polarity Protection",
       "type": "bool",
       "featSecRefId": 12
     },
     "122": {
-      "name": "Срок эксплуатации",
+      "name": "Service Life",
       "featSecRefId": 13
     },
     "123": {
-      "name": "Эффективный диапазон",
+      "name": "Effective Range",
       "featSecRefId": 5
     },
     "124": {
-      "name": "Предельный диапазон",
+      "name": "Operating Range",
       "featSecRefId": 5
     },
     "125": {
-      "name": "Разрешение",
+      "name": "Resolution",
       "featSecRefId": 5
     },
     "126": {
-      "name": "Точность",
+      "name": "Accuracy",
       "featSecRefId": 5
     },
     "127": {
-      "name": "Разрядность",
+      "name": "Bit Depth",
       "featSecRefId": 5
     },
     "128": {
-      "name": "Входных каналов",
+      "name": "Input Channels",
       "featSecRefId": 5
     },
     "129": {
-      "name": "Частота дискретизации",
+      "name": "Sampling Frequency",
       "featSecRefId": 5
     },
     "130": {
-      "name": "Программируемый компаратор",
+      "name": "Programmable Comparator",
       "type": "bool"
     },
     "131": {
-      "name": "Скорость передачи данных"
+      "name": "Data Transfer Rate"
     },
     "132": {
-      "name": "Узлов"
+      "name": "Nodes"
     },
     "133": {
-      "name": "Поддержка Bluetooth",
+      "name": "Bluetooth Support",
       "type": "bool"
     },
     "134": {
-      "name": "Разновидностей"
+      "name": "Varieties"
     }
   },
   "items": [
     {
       "categoryId": 4,
-      "lang": "ru",
-      "title": "LM2596s DC-DC 3 A",
-      "subtitle": "Понижающий стабилизатор напряжения",
+      "lang": "en",
+      "title": "LM2596s DC-DC 3A",
+      "subtitle": "Step-Down Voltage Regulator",
       "seo": {
-        "description": "LM2596s - понижающий стабилизатор напряжения до 3 А",
-        "keywords": "lm2596s, стабилизатор, понижение, ti, 3а"
+        "description": "LM2596s - Step-Down Voltage Regulator up to 3A",
+        "keywords": "lm2596s, regulator, step-down, ti, 3a"
       },
       "buy": true,
       "price": 32,
+      "priceId": "price_1NEIPVARhMwSarZXZb8vq9rt",
       "availability": 2,
       "datasheetId": "LM2596",
       "images": [
@@ -1213,24 +1214,24 @@
           "alt": "LM2596s"
         }
       ],
-      "content": "<p>Стабилизатор напряжения LM2596s предназначен для понижения напряжения путем регулировки подстраиваемым резистором.</p>",
+      "content": "<p>The LM2596s voltage regulator is designed to step down voltage by adjusting with an adjustable resistor.</p>",
       "features": [
         {
           "refId": 13,
-          "value": "4.5 - 28 В"
+          "value": "4.5 - 28V"
         },
         {
           "refId": 14,
-          "value": "0.8 - 20 В"
+          "value": "0.8 - 20V"
         },
         {
           "refId": 15,
-          "value": "до 3 A"
+          "value": "up to 3A"
         }
       ],
       "externalLinks": [
         {
-          "name": "Официальная страница LM2596",
+          "name": "Official LM2596 Page",
           "url": "https://www.ti.com/product/LM2596",
           "lang": "en",
           "icon": "ti.com.ico",
@@ -1240,12 +1241,12 @@
     },
     {
       "categoryId": 1,
-      "lang": "ru",
+      "lang": "en",
       "title": "BMP280",
-      "subtitle": "Датчик для измерения температуры и т.д.",
+      "subtitle": "Sensor for Temperature Measurement, etc.",
       "seo": {
-        "description": "BMP280 - датчик для измерения температуры, давления и влажности",
-        "keywords": "датчик, bmp280, bosch, температура, давление, влажность"
+        "description": "BMP280 - Sensor for Temperature, Pressure, and Humidity Measurement",
+        "keywords": "sensor, bmp280, bosch, temperature, pressure, humidity"
       },
       "manufacturerId": "3",
       "buy": true,
@@ -1255,25 +1256,25 @@
       "images": [
         {
           "src": "https://images.izi.ua/84778923",
-          "alt": "BMP280 - вид сверху"
+          "alt": "BMP280 - Top View"
         },
         {
           "src": "https://images.izi.ua/84778922",
-          "alt": "BMP280 - вид снизу"
+          "alt": "BMP280 - Bottom View"
         }
       ],
-      "content": "<p>BMP280 - датчик абсолютного барометрического давления, специально разработанный для мобильных приложений. Сенсорный модуль BMP280 размещен в чрезвычайно компактном корпусе. Его небольшие размеры и низкое энергопотребление позволяют использовать его в устройствах с батарейным питанием.</p>",
+      "content": "<p>BMP280 is an absolute barometric pressure sensor specially designed for mobile applications. The BMP280 sensor module is housed in an extremely compact package. Its small size and low power consumption make it suitable for battery-powered devices.</p>",
       "features": [
         {
           "refId": 2,
           "value": [
-            "I²C (до 3.4 МГц)",
-            "SPI (3 и 4 провода, до 10 МГц)"
+            "I²C (up to 3.4 MHz)",
+            "SPI (3-wire and 4-wire, up to 10 MHz)"
           ]
         },
         {
           "refId": 3,
-          "value": "1.8 - 5 В"
+          "value": "1.8 - 5V"
         },
         {
           "refId": 4,
@@ -1285,7 +1286,7 @@
         },
         {
           "refId": 6,
-          "value": "300 - 1100 гПа"
+          "value": "300 - 1100 hPa"
         },
         {
           "refId": 7,
@@ -1300,20 +1301,20 @@
         },
         {
           "refId": 9,
-          "value": "1 Па"
+          "value": "1 Pa"
         },
         {
           "refId": 11,
-          "value": "0.008 %"
+          "value": "0.008%"
         },
         {
           "refId": 12,
-          "value": "0.18 Па"
+          "value": "0.18 Pa"
         }
       ],
       "externalLinks": [
         {
-          "name": "Официальная страница BMP280",
+          "name": "Official BMP280 Page",
           "url": "https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp280/",
           "lang": "en",
           "icon": "bosch-sensortec.com.ico",
@@ -1323,12 +1324,12 @@
     },
     {
       "categoryId": 5,
-      "lang": "ru",
+      "lang": "en",
       "title": "MPU-9250",
-      "subtitle": "Гироскоп/акселерометр/магнитометр",
+      "subtitle": "Gyroscope/Accelerometer/Magnetometer",
       "seo": {
-        "description": "MPU-9250 - гироскоп, акселерометр и магнитометр в одном устройстве",
-        "keywords": "mpu-9250, invensense, гироскоп, акселерометр, магнитометр, dmp, i2c"
+        "description": "MPU-9250 - Gyroscope, Accelerometer, and Magnetometer in One Device",
+        "keywords": "mpu-9250, invensense, gyroscope, accelerometer, magnetometer, dmp, i2c"
       },
       "buy": true,
       "price": 147,
@@ -1349,13 +1350,13 @@
           "alt": "MPU-9250"
         }
       ],
-      "content": "<p>MPU-9250 - это 9-осевое устройство отслеживания движения, которое сочетает в себе 3-x осевой гироскоп, 3-x осевой акселерометр, 3-x осевой магнитометр и Digital Motion Processor ™ (DMP), все в небольшом корпусе 3x3x1 мм, доступном в качестве совместимого с выводами обновления. от MPU-6515.</p><p>Благодаря специальной шине датчиков I²C, MPU-9250 напрямую обеспечивает полный 9-ти осевой вывод MotionFusion™. Устройство отслеживания движения MPU-9250 с его 9-ти осевой интеграцией, встроенной системой MotionFusion™ и встроенным программным обеспечением для калибровки во время выполнения.</p>",
+      "content": "<p>MPU-9250 is a 9-axis motion tracking device that combines a 3-axis gyroscope, a 3-axis accelerometer, a 3-axis magnetometer, and a Digital Motion Processor™ (DMP), all in a small 3x3x1mm package, available as a pin-compatible upgrade from the MPU-6515.</p><p>With its dedicated I²C sensor bus, the MPU-9250 directly provides full 9-axis MotionFusion™ output. The MPU-9250 motion tracking device with its 9-axis integration, built-in MotionFusion™ engine, and runtime calibration firmware enables manufacturers to eliminate the costly and complex selection, qualification, and system level integration of discrete devices in motion-enabled products.</p>",
       "features": [
         {
           "refId": 2,
           "value": [
-            "I²C (400 кГц)",
-            "SPI (1 МГц, 20 МГц)"
+            "I²C (400 kHz)",
+            "SPI (1 MHz, 20 MHz)"
           ]
         },
         {
@@ -1396,7 +1397,7 @@
         },
         {
           "refId": 13,
-          "value": "2.4 - 3.6 В"
+          "value": "2.4 - 3.6V"
         },
         {
           "refId": 7,
@@ -1408,87 +1409,15 @@
       ]
     },
     {
-      "categoryId": 6,
-      "lang": "ru",
-      "title": "USB в SMBus CP2112",
-      "subtitle": "Модуль-конвертер",
-      "seo": {
-        "description": "CP2112 - USB в SMBus",
-        "keywords": "cp2112, usb, smbus, конвертер, перепрошивка, модуль"
-      },
-      "buy": true,
-      "price": 270,
-      "availability": 0,
-      "datasheetId": "CP2112",
-      "images": [
-        {
-          "src": "/photos/CP2112-module-1.webp",
-          "alt": "CP2112 (модуль) - Вид сверху"
-        },
-        {
-          "src": "/photos/CP2112-module-2.webp",
-          "alt": "CP2112 (модуль) - Размеры"
-        },
-        {
-          "src": "/photos/CP2112-module-3.webp",
-          "alt": "CP2112 (модуль) - Вид снизу"
-        }
-      ],
-      "content": "<p>Модуль USB в SMBus построенный чипе Silabs С2112.\nВ основном требуется для прошивки контроллера батареи ноутбука. Поддерживается программой BE2WORKS.\n\nПоставляется в упаковке.</p>",
-      "features": [
-        {
-          "refId": 3,
-          "value": "3 - 3.6 В"
-        },
-        {
-          "refId": 19,
-          "value": "4 - 5.25 В"
-        },
-        {
-          "refId": 20,
-          "value": 8
-        },
-        {
-          "refId": 21,
-          "value": "8 МГц - 94 кГц"
-        },
-        {
-          "refId": 22,
-          "value": "Да"
-        },
-        {
-          "refId": 23,
-          "value": "Да"
-        },
-        {
-          "refId": 24,
-          "value": "-40 - +85 °C"
-        },
-        {
-          "refId": 25,
-          "value": "512 байт"
-        }
-      ],
-      "externalLinks": [
-        {
-          "name": "Подключение и разблокировка батареи ноутбука (адаптер и Be2works) / Laptop battery unlock",
-          "url": "https://youtu.be/Urs0xgfHKpY",
-          "lang": "ru",
-          "icon": "youtube.com.png",
-          "iconAlt": "youtube.com"
-        }
-      ]
-    },
-    {
       "categoryId": 1,
-      "lang": "ru",
+      "lang": "en",
       "title": "CCS811",
-      "subtitle": "Датчик для измерения качества воздуха",
+      "subtitle": "Air Quality Sensor",
       "seo": {
-        "description": "CCS811 - датчик для измерения качества воздуха",
-        "keywords": "датчик, co2, качество, воздух, частицы, voc, tvoc"
+        "description": "CCS811 - Air Quality Sensor",
+        "keywords": "sensor, co2, air quality, particles, voc, tvoc"
       },
-      "buy": true,
+      "buy": false,
       "price": 290,
       "availability": 2,
       "datasheetId": "CCS811",
@@ -1506,15 +1435,15 @@
           "alt": "CCS811"
         }
       ],
-      "content": "<p>CCS811 - это маломощный цифровой датчик газа для обнаружения низких уровней VOCs, обычно обнаруживаемых в помещении, с блоком микроконтроллера (MCU) и аналого-цифровым преобразователем (ADC) для мониторинга локальной среды и обеспечения индикация качества воздуха в помещении через эквивалентный выход CO2 или TVOC через стандартный цифровой интерфейс I²C.</p>",
+      "content": "<p>CCS811 is an ultra-low-power digital gas sensor solution for detecting low levels of VOCs typically found indoors, with a microcontroller (MCU) and an analog-to-digital converter (ADC) to monitor the local environment and provide an indication of indoor air quality via an equivalent CO2 or TVOC output over a standard digital I²C interface.</p>",
       "features": [
         {
           "refId": 2,
-          "value": "I²C (до 400 кГц)"
+          "value": "I²C (up to 400 kHz)"
         },
         {
           "refId": 3,
-          "value": "1.8 - 3.6 В"
+          "value": "1.8 - 3.6V"
         },
         {
           "refId": 24,
@@ -1522,31 +1451,31 @@
         },
         {
           "refId": 26,
-          "value": "10 - 95 %"
+          "value": "10 - 95%"
         },
         {
           "refId": 27,
-          "value": "1.2 - 46 мВт"
+          "value": "1.2 - 46 mW"
         },
         {
           "refId": 28,
-          "value": "54 мА"
+          "value": "54 mA"
         },
         {
           "refId": 29,
-          "value": "30 мА"
+          "value": "30 mA"
         }
       ],
       "externalLinks": [
         {
-          "name": "Официальная страница CCS811",
+          "name": "Official CCS811 Page",
           "url": "https://www.sciosense.com/products/environmental-sensors/ccs811-gas-sensor-solution/",
           "lang": "en",
           "icon": "sciosense.com.png",
           "iconAlt": "sciosense.com"
         },
         {
-          "name": "ESPHome CCS811 CO2 and volatile organic compound sensor component",
+          "name": "ESPHome CCS811 CO2 and Volatile Organic Compound Sensor Component",
           "url": "https://esphome.io/components/sensor/ccs811.html",
           "lang": "en",
           "icon": "esphome.io.ico",
@@ -1563,12 +1492,12 @@
     },
     {
       "categoryId": 1,
-      "lang": "ru",
+      "lang": "en",
       "title": "APDS-9960",
-      "subtitle": "Датчик RGB и распознавание жестов",
+      "subtitle": "RGB Color Sensor and Gesture Recognition",
       "seo": {
-        "description": "Датчик цвета RGB и распознавание жестов",
-        "keywords": "датчик, жесты, rgb, распознавание, i2c"
+        "description": "RGB Color Sensor and Gesture Recognition",
+        "keywords": "sensor, gestures, rgb, recognition, i2c"
       },
       "buy": true,
       "price": 50,
@@ -1592,7 +1521,7 @@
           "alt": "APDS-9960"
         }
       ],
-      "content": "<p>С помощью этого датчика можно управлять любым устройством, где можно применить жестикуляцию или реакцию на цвет.\n\nДатчик используют красный, зеленый, синий и прозрачный сенсор приближения и жестов с ИК-светодиодом. Измерения RGB и окружающего света определяет интенсивность света при различных условиях освещения и материалах. Встроенный блочный UV-IR фильтр обеспечивает точное измерение интенсивности света и соответствующую ему цветовую температуру.\n\nДля обнаружение жестов используется 4 направленных фото-диода, интегрированные с видимым фильтром, для точного определения простых жестов вверх/вниз/вправо/влево или чуть сложных.\n\nДобавлены микро-оптические линзы в модуль обеспечивающие высокую эффективность передачи и приема ИК излучения. Внутренний контроллер переводит датчик в режим пониженного энергопотребления между измерениями RGBC, приближения и жестов, обеспечивая очень низкое энергопотребление.\n\nНастройка перемычек:\n\n- PS - эта перемычка соединяет источники питания датчика и ИК-светодиода. Когда перемычка запаяна, вам нужно только подать питание на вывод VCC для питания как датчика, так и инфракрасного светодиода. Если перемычка разомкнута, вам необходимо подавать питание на контакты VCC (2,4-3,6 В) и VL (3,0-4,5 В) по отдельности. Эта перемычка запаяна по умолчанию;\n\n- I²C PU - это 3-x позиционная перемычка для пайки, которая используется для подключения и отключения нагрузочных резисторов I²C. По умолчанию эта перемычка запаяна, что означает, что линии SDA и SCL имеют подключенные нагрузочные резисторы на плате коммутации. Используйте фитиль припоя, чтобы разомкнуть перемычку, если вам не нужны подтягивающие резисторы (например, у вас есть подтягивающие резисторы, которые расположены на шине I²C где-то еще).</p>",
+      "content": "<p>With this sensor, you can control any device where gesture or color reaction can be applied.\n\nThe sensor uses red, green, blue, and clear sensors with an IR LED for proximity and gesture sensing. The RGB and ambient light sensing measurements detect light intensity under various lighting conditions and materials. A built-in UV-IR filter provides precise measurements of light intensity and its corresponding color temperature.\n\nFor gesture detection, it uses 4 directional photodiodes integrated with a visible light filter to accurately sense simple gestures up, down, right, left, or slightly complex ones.\n\nMicro-optical lenses have been added to the module to provide high-efficiency transmission and reception of IR radiation. An internal controller puts the sensor into a low-power mode between RGBC, proximity, and gesture measurements, resulting in very low power consumption.\n\nJumper Settings:\n\n- PS - This jumper connects the power sources of the sensor and IR LED. When soldered, you only need to provide power to the VCC pin to power both the sensor and the IR LED. If unsoldered, you need to provide power to the VCC (2.4-3.6V) and VL (3.0-4.5V) pins separately. This jumper is soldered by default;\n\n- I²C PU - This is a 3-position solder jumper used to connect or disconnect the I²C pull-up resistors. By default, this jumper is soldered, which means the SDA and SCL lines have pull-up resistors connected on the breakout board. Use a solder wick to desolder the jumper if you do not need the pull-up resistors (e.g., you have pull-up resistors located on the I²C bus somewhere else).</p>",
       "applicationIds": [
         "6",
         "7",
@@ -1603,11 +1532,11 @@
       "features": [
         {
           "refId": 2,
-          "value": "I²C (до 400 кГц)"
+          "value": "I²C (up to 400 kHz)"
         },
         {
           "refId": 3,
-          "value": "2.4 - 3.8 В"
+          "value": "2.4 - 3.8V"
         },
         {
           "refId": 24,
@@ -1616,7 +1545,7 @@
       ],
       "externalLinks": [
         {
-          "name": "Официальная страница APDS-9960",
+          "name": "Official APDS-9960 Page",
           "url": "https://www.broadcom.com/products/optical-sensors/integrated-ambient-light-and-proximity-sensors/apds-9960",
           "lang": "en",
           "icon": "broadcom.com.ico",
@@ -1630,7 +1559,7 @@
           "iconAlt": "github.com"
         },
         {
-          "name": "ESPHome APDS-9960 component",
+          "name": "ESPHome APDS-9960 Component",
           "url": "https://esphome.io/components/sensor/apds9960.html",
           "lang": "en",
           "icon": "esphome.io.ico",
@@ -1640,12 +1569,12 @@
     },
     {
       "categoryId": 7,
-      "lang": "ru",
-      "title": "MAC Серия 35",
-      "subtitle": "Соленоид с электромагнитным управ.",
+      "lang": "en",
+      "title": "MAC Series 35",
+      "subtitle": "Electromagnetically Controlled Solenoid",
       "seo": {
-        "description": "MAC 35 серия - соленоид на 35A с электромагнитным управлением",
-        "keywords": "mac, соленоид, boost, вакуум, давление, управление, электромагнит"
+        "description": "MAC 35 series - 35A solenoid with electromagnetically controlled operation",
+        "keywords": "mac, solenoid, boost, vacuum, pressure, control, electromagnet"
       },
       "buy": true,
       "price": 420,
@@ -1677,15 +1606,15 @@
           "alt": "MAC 3 - 35A"
         }
       ],
-      "content": "<p>Model: 35A-ACA-DDBA-1BA\nPort: 1/8BSP\nFittings Dia: 6mm\n\nВ комплект входит:\n- 1x Solenoid valve\n- 2x Pagoda Fitting\n- 1x Muffler</p>",
+      "content": "<p>Model: 35A-ACA-DDBA-1BA\nPort: 1/8BSP\nFittings Dia: 6mm\n\nThe kit includes:\n- 1x Solenoid valve\n- 2x Pagoda Fitting\n- 1x Muffler</p>",
       "features": [
         {
           "refId": 3,
-          "value": "12 В"
+          "value": "12V"
         },
         {
           "refId": 27,
-          "value": "5.4 Вт"
+          "value": "5.4W"
         },
         {
           "refId": 24,
@@ -1694,7 +1623,7 @@
       ],
       "externalLinks": [
         {
-          "name": "Официальная страница MAC 35-й серии",
+          "name": "Official MAC 35 Series Page",
           "url": "https://www.macvalves.com/product/35-series",
           "lang": "en",
           "icon": "macvalves.com.png",
@@ -1704,12 +1633,12 @@
     },
     {
       "categoryId": 3,
-      "lang": "ru",
+      "lang": "en",
       "title": "TEC1-12715",
-      "subtitle": "Элемент Пельтье 40x40x4 мм, до 136 Вт",
+      "subtitle": "Peltier Element 40x40x4mm, up to 136W",
       "seo": {
-        "description": "TEC1-12715 - элемент Пельтье мощностью до 136 Вт",
-        "keywords": "tec1-12715, пельтье, термопара, охлаждение, нагрев"
+        "description": "TEC1-12715 - Peltier element with a power of up to 136W",
+        "keywords": "tec1-12715, peltier, thermocouple, cooling, heating"
       },
       "datasheetId": "TEC1-12715",
       "buy": true,
@@ -1724,19 +1653,19 @@
       "features": [
         {
           "refId": 31,
-          "value": "до 136 Вт"
+          "value": "up to 136W"
         },
         {
           "refId": 30,
-          "value": "до 60 °C"
+          "value": "up to 60 °C"
         },
         {
           "refId": 28,
-          "value": "15 А"
+          "value": "15A"
         },
         {
           "refId": 3,
-          "value": "12 - 15.4 В"
+          "value": "12 - 15.4V"
         },
         {
           "refId": 32,
@@ -1744,29 +1673,20 @@
         },
         {
           "refId": 33,
-          "value": "0.75 Ом"
+          "value": "0.75Ω"
         }
       ],
       "content": "",
-      "warningContent": "<p>Не допускать нагрев горячей стороны термоэлемента > 50 °C ибо через 1-2 мин. работы, без отвода тепла, термоэлемент выйдет из строя.</p>",
-      "externalLinks": [
-        {
-          "name": "\uD83E\uDD76Кондиционер на элементах Пельтье. Есть ли смысл?",
-          "url": "https://youtu.be/rgcXLqzjtK8",
-          "lang": "ru",
-          "icon": "youtube.com.png",
-          "iconAlt": "youtube.com"
-        }
-      ]
+      "warningContent": "<p>Do not allow the hot side of the thermoelectric element to exceed 50 °C, as the thermoelectric element will fail within 1-2 minutes of operation without heat dissipation.</p>"
     },
     {
       "categoryId": 1,
-      "lang": "ru",
+      "lang": "en",
       "title": "BHI260AP",
-      "subtitle": "Интеллектуальный датчик",
+      "subtitle": "Intelligent Sensor",
       "seo": {
-        "description": "BHI260AP - самообучающийся интеллектуальный датчик",
-        "keywords": "bhi260ap, датчик, ai, микроконтроллер, гироскоп, акселерометр, обучение"
+        "description": "BHI260AP - self-learning intelligent sensor",
+        "keywords": "bhi260ap, sensor, ai, microcontroller, gyroscope, accelerometer, machine learning"
       },
       "buy": false,
       "datasheetId": "BHI260AP",
@@ -1777,28 +1697,28 @@
         },
         {
           "src": "/photos/BHI260AP-2.webp",
-          "alt": "Контактные площадки BHI260AP"
+          "alt": "BHI260AP Contact Pads"
         },
         {
           "src": "/photos/BHI260AP-3.webp",
-          "alt": "Распиновка BHI260AP"
+          "alt": "BHI260AP Pinout"
         },
         {
           "src": "/photos/BHI260AP-4.webp",
-          "alt": "Диаграмма BHI260AP"
+          "alt": "BHI260AP Diagram"
         }
       ],
       "features": [
         {
           "refId": 2,
           "value": [
-            "I²C (3.4 МГц)",
-            "SPI and GPIOs (50 МГц)"
+            "I²C (3.4 MHz)",
+            "SPI and GPIOs (50 MHz)"
           ]
         },
         {
           "refId": 3,
-          "value": "1.8 В"
+          "value": "1.8 V"
         },
         {
           "refId": 20,
@@ -1806,15 +1726,15 @@
         },
         {
           "refId": 34,
-          "value": "249 мкА"
+          "value": "249 µA"
         },
         {
           "refId": 35,
-          "value": "386 мкА"
+          "value": "386 µA"
         },
         {
           "refId": 36,
-          "value": "8 мкА"
+          "value": "8 µA"
         },
         {
           "refId": 16,
@@ -1836,29 +1756,29 @@
         },
         {
           "refId": 37,
-          "value": "Есть"
+          "value": "Yes"
         },
         {
           "refId": 38,
-          "value": "ARC® EM4 CPU (≤ 3.6 CoreMark/Мгц) "
+          "value": "ARC® EM4 CPU (≤ 3.6 CoreMark/MHz)"
         },
         {
           "refId": 39,
-          "value": "Есть"
+          "value": "Yes"
         },
         {
           "refId": 40,
-          "value": "Есть"
+          "value": "Yes"
         },
         {
           "refId": 41,
           "value": 4
         }
       ],
-      "content": "<p>BHI260AP представляет собой идеальное комплексное решение для постоянно включенных сенсорных устройств, таких как отслеживание физической формы, определение местоположения пешеходов, аналитика машинного обучения и оценка ориентации.\n\nBHI260AP - это интеллектуальный датчик, который включает в себя широкий спектр программных функций, 32-разрядный программируемый микроконтроллер и 6-осевой IMU в одном корпусе.</p>",
+      "content": "<p>BHI260AP is an ideal comprehensive solution for always-on sensor devices, such as physical activity tracking, pedestrian position tracking, machine learning analytics, and orientation estimation.\n\nBHI260AP is an intelligent sensor that incorporates a wide range of software functions, a 32-bit programmable microcontroller, and a 6-axis IMU in a single package.</p>",
       "externalLinks": [
         {
-          "name": "Официальная страница BHI260AP",
+          "name": "Official BHI260AP Page",
           "url": "https://www.bosch-sensortec.com/products/smart-sensors/bhi260ap",
           "lang": "en",
           "icon": "bosch-sensortec.com.ico",
@@ -1868,12 +1788,12 @@
     },
     {
       "categoryId": 8,
-      "lang": "ru",
+      "lang": "en",
       "title": "nRF24L01+",
-      "subtitle": "Трансивер и аудио-стример 2.4 ГГц",
+      "subtitle": "2.4 GHz Transceiver and Audio Streamer",
       "seo": {
-        "description": "nRF24L01+ - приемопередатчик 2.4 ГГц",
-        "keywords": "nrf24l01, приемопередатчик, трансивер, ресивер"
+        "description": "nRF24L01+ - 2.4 GHz transceiver",
+        "keywords": "nrf24l01, transceiver, receiver"
       },
       "buy": true,
       "price": 33,
@@ -1882,43 +1802,43 @@
       "images": [
         {
           "src": "https://images.izi.ua/83841527",
-          "alt": "nRF24L01+ - вид сверху"
+          "alt": "nRF24L01+ - Top View"
         },
         {
           "src": "https://images.izi.ua/83841526",
-          "alt": "nRF24L01+ - размеры"
+          "alt": "nRF24L01+ - Dimensions"
         },
         {
           "src": "/photos/nRF24L01+-1.webp",
-          "alt": "nRF24L01+ - блочная диаграмма"
+          "alt": "nRF24L01+ - Block Diagram"
         },
         {
           "src": "/photos/nRF24L01+-2.webp",
-          "alt": "nRF24L01+ - пример подключения"
+          "alt": "nRF24L01+ - Connection Example"
         }
       ],
       "features": [
         {
           "refId": 2,
-          "value": "SPI (4 провода, до 10 Мбит/с)"
+          "value": "SPI (4-wire, up to 10 Mbps)"
         },
         {
           "refId": 3,
-          "value": "1.9 - 3.6 В"
+          "value": "1.9 - 3.6 V"
         },
         {
           "refId": 29,
-          "value": "26 мкА - standby-I"
+          "value": "26 µA - Standby-I"
         },
         {
           "refId": 29,
-          "value": "320 мкА - standby-II"
+          "value": "320 µA - Standby-II"
         }
       ],
-      "content": "<p>NRF24L01+ - это однокристальный приемопередатчик 2.4 ГГц со встроенным механизмом протокола основной полосы частот Enhanced ShockBurst™, подходящий для беспроводных приложений со сверхнизким энергопотреблением.\n\nNRF24L01+ разработан для работы во всемирном диапазоне частот ISM от 2.4 до 2.4835 ГГц.</p>",
+      "content": "<p>nRF24L01+ is a single-chip 2.4 GHz transceiver with a built-in Enhanced ShockBurst™ protocol engine, suitable for ultra-low-power wireless applications.\n\nnRF24L01+ is designed to operate in the worldwide ISM frequency band from 2.4 to 2.4835 GHz.</p>",
       "externalLinks": [
         {
-          "name": "Официальная страница BHI260AP",
+          "name": "Official nRF24L01+ Page",
           "url": "https://www.nordicsemi.com/Products/nRF24-series",
           "lang": "en",
           "icon": "nordicsemi.com.png",
@@ -1928,11 +1848,11 @@
     },
     {
       "categoryId": 9,
-      "lang": "ru",
+      "lang": "en",
       "title": "ESP8266EX",
-      "subtitle": "Wi-Fi микросхема",
+      "subtitle": "Wi-Fi Chip",
       "seo": {
-        "description": "ESP8266EX - Wi-Fi микросхема для IoT решений",
+        "description": "ESP8266EX - Wi-Fi chip for IoT solutions",
         "keywords": "esp8266, wi-fi, wifi, iot"
       },
       "datasheetId": "ESP8266EX",
@@ -1943,11 +1863,11 @@
         },
         {
           "src": "/photos/ESP8266EX-2.webp",
-          "alt": "ESP8266EX - блочная диаграмма"
+          "alt": "ESP8266EX - Block Diagram"
         },
         {
           "src": "/photos/ESP8266EX-3.webp",
-          "alt": "ESP8266EX - расположение контактов"
+          "alt": "ESP8266EX - Pinout"
         }
       ],
       "features": [
@@ -1957,7 +1877,7 @@
         },
         {
           "refId": 3,
-          "value": "2.5 - 3.6 В"
+          "value": "2.5 - 3.6 V"
         },
         {
           "refId": 24,
@@ -1965,19 +1885,19 @@
         },
         {
           "refId": 29,
-          "value": "80 мА"
+          "value": "80 mA"
         },
         {
           "refId": 42,
-          "value": "QFN32 (5 x 5 мм)"
+          "value": "QFN32 (5 x 5 mm)"
         },
         {
           "refId": 38,
-          "value": "Tensilica L106 32-бит RISC"
+          "value": "Tensilica L106 32-bit RISC"
         },
         {
           "refId": 53,
-          "value": "80/160 МГц"
+          "value": "80/160 MHz"
         },
         {
           "refId": 43,
@@ -2000,10 +1920,10 @@
           "value": 17
         }
       ],
-      "content": "<p>Espressif ESP8266EX представляет собой высокоинтегрированное решение Wi-Fi SoC, которое удовлетворяет постоянные потребности пользователей в эффективном энергопотреблении, компактном дизайне и надежной производительности в индустрии IoT.\n\nОбладая полными и автономными сетевыми возможностями Wi-Fi, ESP8266EX может работать либо как автономное приложение, либо как подчиненное устройство для главного MCU. Когда ESP8266EX размещает приложение, оно сразу загружается с флэш-памяти. Встроенный высокоскоростной кэш помогает повысить производительность системы и оптимизировать системную память.\n\nКроме того, ESP8266EX может быть применен к любой конструкции микроконтроллера в качестве адаптера Wi-Fi через Интерфейсы SPI/SDIO или UART.\n\nESP8266EX объединяет антенные переключатели, RF Balun, усилитель мощности, малошумящий усилитель приема, фильтры и модули управления питанием.\n\nКомпактный дизайн минимизирует размер печатной платы и требует минимального количества внешних схем.</p>",
+      "content": "<p>Espressif ESP8266EX is a highly integrated Wi-Fi SoC solution that meets the constant needs of users in efficient power usage, compact design, and reliable performance in the IoT industry.\n\nWith complete and autonomous Wi-Fi networking capabilities, ESP8266EX can operate either as a standalone application or as a slave to a host MCU. When ESP8266EX hosts the application, it boots directly from an external flash. The built-in high-speed cache helps to increase system performance and optimize system memory.\n\nAdditionally, ESP8266EX can be applied to any microcontroller-based design as a Wi-Fi adapter through SPI/SDIO or UART interfaces.\n\nESP8266EX integrates antenna switches, RF Balun, power amplifiers, low-noise amplifiers, filters, and power management modules.\n\nIts compact design minimizes the PCB size and requires minimal external circuitry.</p>",
       "externalLinks": [
         {
-          "name": "Официальная страница ESP8266EX",
+          "name": "Official ESP8266EX Page",
           "url": "https://www.espressif.com/en/products/socs",
           "lang": "en",
           "icon": "espressif.com.ico",
@@ -2013,40 +1933,40 @@
     },
     {
       "categoryId": 8,
-      "lang": "ru",
+      "lang": "en",
       "title": "CC1310",
-      "subtitle": "РЧ устройство с поддержкой Sub-1 GHz",
+      "subtitle": "Sub-1 GHz RF Device",
       "seo": {
-        "description": "CC1310 - сверхмалопотребляющее РЧ устройство с поддержкой Sub-1 GHz",
-        "keywords": "cc1310, рч, сверхмалопотребляющее, экономичное, simplelink, zigbee, thread, ti, sub-1"
+        "description": "CC1310 - Ultra-low power Sub-1 GHz RF device",
+        "keywords": "cc1310, rf, ultra-low power, economical, simplelink, zigbee, thread, ti, sub-1"
       },
       "datasheetId": "CC1310",
       "images": [
         {
           "src": "/photos/CC1310-1.webp",
-          "alt": "CC1310 - RHB 5 x 5 мм"
+          "alt": "CC1310 - 5 x 5 mm RHB"
         },
         {
           "src": "/photos/CC1310-2.webp",
-          "alt": "CC1310 - блок диаграмма"
+          "alt": "CC1310 - Block Diagram"
         },
         {
           "src": "/photos/CC1310-3.webp",
-          "alt": "CC1310 - распиновка RSM 4 x 4 мм"
+          "alt": "CC1310 - 4 x 4 mm RSM Pinout"
         },
         {
           "src": "/photos/CC1310-4.webp",
-          "alt": "CC1310 - распиновка RHB 5 x 5 мм"
+          "alt": "CC1310 - 5 x 5 mm RHB Pinout"
         },
         {
           "src": "/photos/CC1310-5.webp",
-          "alt": "CC1310 - распиновка RGZ 7 x 7 мм"
+          "alt": "CC1310 - 7 x 7 mm RGZ Pinout"
         }
       ],
       "features": [
         {
           "refId": 3,
-          "value": "1.8 - 3.8 В"
+          "value": "1.8 - 3.8 V"
         },
         {
           "refId": 50,
@@ -2062,45 +1982,45 @@
         },
         {
           "refId": 53,
-          "value": "48 МГц"
+          "value": "48 MHz"
         },
         {
           "refId": 54,
-          "value": "2/64/128 КБ"
+          "value": "2/64/128 KB"
         },
         {
           "refId": 55,
-          "value": "Да"
+          "value": "Yes"
         },
         {
           "refId": 42,
           "value": [
-            "7 x 7 мм RGZ VQFN48 (30 GPIOs)",
-            "5 x 5 мм RHB VQFN32 (15 GPIOs)",
-            "4 x 4 мм RSM VQFN32 (10 GPIOs)"
+            "7 x 7 mm RGZ VQFN48 (30 GPIOs)",
+            "5 x 5 mm RHB VQFN32 (15 GPIOs)",
+            "4 x 4 mm RSM VQFN32 (10 GPIOs)"
           ]
         },
         {
           "refId": 36,
-          "value": "0.7 мкА"
+          "value": "0.7 µA"
         },
         {
           "refId": 56,
-          "value": "+10 дБм = 13.4 мА"
+          "value": "+10 dBm = 13.4 mA"
         },
         {
           "refId": 57,
-          "value": "5.4 мА"
+          "value": "5.4 mA"
         },
         {
           "refId": 58,
-          "value": "185 нА (пробуждение по внешним событиям)"
+          "value": "185 nA (wake-on external events)"
         }
       ],
-      "content": "<p>CC1310 - это экономичное, сверхмалопотребляющее РЧ устройство Sub-1 GHz от Texas Instruments™, которое является частью платформы микроконтроллеров SimpleLink™ (MCU).</p><p>Платформа состоит из Wi-Fi®, Bluetooth® Low Energy, Sub-1 GHz, Ethernet, Zigbee®, Thread и хост-микроконтроллеров. Все эти устройства используют общую, простую в использовании среду разработки с одноядерным комплектом разработки программного обеспечения (SDK) и богатым набором инструментов.</p><p>Единовременная интеграция платформы SimpleLink позволяет пользователям добавлять в свой дизайн любую комбинацию устройств из коробки, обеспечивая 100-процентное повторное использование кода при изменении требований к дизайну.</p><p>Благодаря очень низкому активному потреблению тока РЧ и микроконтроллера, в дополнение к гибким режимам низкого энергопотребления, устройство CC1310 обеспечивает отличное время автономной работы и позволяет использовать плоские батареи.</p>",
+      "content": "<p>CC1310 is an economical, ultra-low power Sub-1 GHz RF device from Texas Instruments™, which is part of the SimpleLink™ microcontroller (MCU) platform.</p><p>The platform consists of Wi-Fi®, Bluetooth® Low Energy, Sub-1 GHz, Ethernet, Zigbee®, Thread, and host MCUs. All of these devices use a common, easy-to-use development environment with a single-core software development kit (SDK) and a rich set of tools.</p><p>The one-time integration of the SimpleLink platform allows users to add any combination of devices to their design out of the box, providing 100% code reuse when design requirements change.</p><p>With very low RF and MCU active current consumption, along with flexible low-power modes, the CC1310 device provides excellent battery life and enables the use of flat batteries.</p>",
       "externalLinks": [
         {
-          "name": "Официальная страница CC1310",
+          "name": "Official CC1310 Page",
           "url": "https://www.ti.com/product/CC1310",
           "lang": "en",
           "icon": "ti.com.ico",
@@ -2110,41 +2030,41 @@
     },
     {
       "categoryId": 8,
-      "lang": "ru",
+      "lang": "en",
       "title": "CC2652P",
-      "subtitle": "Многопротокольный беспроводной MCU",
+      "subtitle": "Multi-Protocol Wireless MCU",
       "seo": {
-        "description": "CC2652P - многопротокольный беспроводной MCU",
-        "keywords": "cc2652p, многопротокольный, беспроводной, mcu, simplelink, bluetooth, zigbee, thread, ti"
+        "description": "CC2652P - Multi-Protocol Wireless MCU",
+        "keywords": "cc2652p, multi-protocol, wireless, mcu, simplelink, bluetooth, zigbee, thread, ti"
       },
       "datasheetId": "CC2652P",
       "images": [
         {
           "src": "/photos/CC2652P-1.webp",
-          "alt": "CC2652P - RGZ 48 7 x 7 мм"
+          "alt": "CC2652P - RGZ 48 7 x 7 mm"
         },
         {
           "src": "/photos/CC2652P-2.webp",
-          "alt": "CC2652P - блок диаграмма"
+          "alt": "CC2652P - block diagram"
         },
         {
           "src": "/photos/CC2652P-3.webp",
-          "alt": "CC2652P - распиновка RGZ 7 x 7 мм"
+          "alt": "CC2652P - pinout RGZ 7 x 7 mm"
         },
         {
           "src": "/photos/CC2652P-4.webp",
-          "alt": "CC2652P - обзор семейства устройств"
+          "alt": "CC2652P - family overview"
         }
       ],
       "features": [
         {
           "refId": 3,
-          "value": "1.8 - 3.8 В",
-          "info": "3.3 В (рекомендуемое)"
+          "value": "1.8 - 3.8 V",
+          "info": "3.3 V (recommended)"
         },
         {
           "refId": 2,
-          "value": "2 x UART/2 x SSI/SPI/Microwire/TI/I²C/I²S/RTC/GPIO/12-бит ADC"
+          "value": "2 x UART/2 x SSI/SPI/Microwire/TI/I²C/I²S/RTC/GPIO/12-bit ADC"
         },
         {
           "refId": 50,
@@ -2156,80 +2076,80 @@
         },
         {
           "refId": 42,
-          "value": "7 x 7 мм RGZ VQFN48 (26 GPIOs)"
+          "value": "7 x 7 mm RGZ VQFN48 (26 GPIOs)"
         },
         {
           "refId": 53,
-          "value": "48 МГц"
+          "value": "48 MHz"
         },
         {
           "refId": 36,
-          "value": "0.94 мкА (вкл. RTC, 80 КБ RAM и CPU retention)"
+          "value": "0.94 μA (including RTC, 80 KB RAM, and CPU retention)"
         },
         {
           "refId": 54,
-          "value": "352 КБ"
+          "value": "352 KB"
         },
         {
           "refId": 55,
-          "value": "Да"
+          "value": "Yes"
         },
         {
           "refId": 56,
           "value": [
-            "0 дБм = 7.3 мА",
-            "+5 дБм = 9.6 мА",
-            "+10 дБм = 22 мА",
-            "+20 дБм = 85 мА"
+            "0 dBm = 7.3 mA",
+            "+5 dBm = 9.6 mA",
+            "+10 dBm = 22 mA",
+            "+20 dBm = 85 mA"
           ]
         },
         {
           "refId": 57,
-          "value": "6.9 мА"
+          "value": "6.9 mA"
         },
         {
           "refId": 58,
-          "value": "150 нА",
-          "info": "Пробуждение по внешним событиям"
+          "value": "150 nA",
+          "info": "Wake-on external events"
         },
         {
           "refId": 59,
-          "value": "256 КБ"
+          "value": "256 KB"
         },
         {
           "refId": 60,
-          "value": "8 КБ"
+          "value": "8 KB"
         },
         {
           "refId": 61,
-          "value": "80 КБ"
+          "value": "80 KB"
         }
       ],
-      "content": "<p>SimpleLink™ CC2652P представляет собой многопротокольный беспроводной микроконтроллер (MCU) с частотой 2.4 ГГц, поддерживающий Thread, Zigbee®, Bluetooth® 5.2 Low Energy, IEEE 802.15.4, интеллектуальные объекты с поддержкой IPv6 (6LoWPAN), проприетарные системы, включая TI 15.4-Stack (2.4 ГГц) и параллельный мультипротокол через драйвер DMM.</p>",
+      "content": "<p>SimpleLink™ CC2652P is a multi-protocol wireless microcontroller (MCU) operating at 2.4 GHz, supporting Thread, Zigbee®, Bluetooth® 5.2 Low Energy, IEEE 802.15.4, IPv6-enabled smart objects (6LoWPAN), proprietary systems including TI 15.4-Stack (2.4 GHz), and parallel multi-protocol through DMM driver.</p>",
       "externalLinks": [
         {
-          "name": "Официальная страница CC2652P",
+          "name": "Official CC2652P page",
           "url": "https://www.ti.com/product/CC2652P",
           "lang": "en",
           "icon": "ti.com.ico",
           "iconAlt": "ti.com"
         },
         {
-          "name": "ZigBee стик v4 (модули RF-STAR)",
+          "name": "ZigBee Stick v4 (RF-STAR modules)",
           "url": "https://github.com/egony/cc2652p_cc1352p_RF-STAR/wiki",
           "lang": "en",
           "icon": "github.com.svg",
           "iconAlt": "github.com"
         },
         {
-          "name": "Прошивка для ZigBee координатора RF-STAR RF-BM-2652P2",
+          "name": "Firmware for ZigBee Coordinator RF-STAR RF-BM-2652P2",
           "url": "https://github.com/egony/cc2652p_cc1352p_RF-STAR/tree/9a099573659901c416ee2b3b657210ce16b8d19b/firmware/coordinator",
           "lang": "en",
           "icon": "github.com.svg",
           "iconAlt": "github.com"
         },
         {
-          "name": "Zigbee в MQTT",
+          "name": "Zigbee to MQTT",
           "url": "https://www.zigbee2mqtt.io",
           "lang": "en",
           "icon": "zigbee2mqtt.io.ico",
@@ -2239,12 +2159,12 @@
     },
     {
       "categoryId": 6,
-      "lang": "ru",
+      "lang": "en",
       "title": "CH340",
-      "subtitle": "USB в UART",
+      "subtitle": "USB to UART Converter",
       "seo": {
-        "description": "CH340 - преобразование шины USB в последовательный интерфейс UART",
-        "keywords": "CH340, usb, uart, преобразование"
+        "description": "CH340 - USB to UART converter",
+        "keywords": "CH340, usb, uart, converter"
       },
       "datasheetId": "CH340",
       "buy": true,
@@ -2265,12 +2185,12 @@
       "features": [
         {
           "refId": 3,
-          "value": "2.8 - 3.6 В",
+          "value": "2.8 - 3.6 V",
           "info": "V3 -> VCC"
         },
         {
           "refId": 3,
-          "value": "4 - 5.3 В",
+          "value": "4 - 5.3 V",
           "info": "V3 ≠ VCC"
         },
         {
@@ -2287,11 +2207,11 @@
         },
         {
           "refId": 28,
-          "value": "20 мА"
+          "value": "20 mA"
         },
         {
           "refId": 29,
-          "value": "7 мА"
+          "value": "7 mA"
         }
       ],
       "options": {
@@ -2303,16 +2223,16 @@
           "name": "CH340C"
         }
       },
-      "content": "<p>CH340 - это микросхема преобразователя шины USB, которая преобразует USB в последовательный интерфейс UART или интерфейс принтера. В последовательном режиме UART CH340 обеспечивает общий сигнал MODEM, чтобы расширить интерфейс UART.</p>"
+      "content": "<p>CH340 is a USB to UART converter chip that transforms USB into a serial UART interface or printer interface. In UART mode, CH340 provides a common MODEM signal to expand the UART interface.</p>"
     },
     {
       "categoryId": 10,
-      "lang": "ru",
+      "lang": "en",
       "title": "IRF3205",
-      "subtitle": "МОП-транзистор до 55 В и 110 А",
+      "subtitle": "MOSFET Transistor up to 55 V and 110 A",
       "seo": {
-        "description": "МОП-транзистор IRF3205 до 55 В и 110 А",
-        "keywords": "irf3205, mosfet, мосфет, транзистор, 55в, 110а"
+        "description": "IRF3205 MOSFET transistor up to 55 V and 110 A",
+        "keywords": "irf3205, mosfet, transistor, 55v, 110a"
       },
       "buy": true,
       "price": 8,
@@ -2334,17 +2254,17 @@
           "refId": 63,
           "value": [
             {
-              "value": "110 А",
+              "value": "110 A",
               "info": [
-                "V<sub>GS</sub> = 10 В",
-                "T<sub>C</sub> = 25 ºС"
+                "V<sub>GS</sub> = 10 V",
+                "T<sub>C</sub> = 25 ºC"
               ]
             },
             {
-              "value": "80 А",
+              "value": "80 A",
               "info": [
-                "V<sub>GS</sub> = 10 В",
-                "T<sub>C</sub> = 100 ºС"
+                "V<sub>GS</sub> = 10 V",
+                "T<sub>C</sub> = 100 ºC"
               ]
             }
           ]
@@ -2355,28 +2275,28 @@
         },
         {
           "refId": 66,
-          "value": "36 нКл"
+          "value": "36 nC"
         },
         {
           "refId": 67,
-          "value": "до 146 нКл",
+          "value": "up to 146 nC",
           "info": [
-            "I<sub>D</sub> = 62 А",
-            "V<sub>DS</sub> = 44 В",
-            "V<sub>GS</sub> = 10 В"
+            "I<sub>D</sub> = 62 A",
+            "V<sub>DS</sub> = 44 V",
+            "V<sub>GS</sub> = 10 V"
           ]
         },
         {
           "refId": 68,
-          "value": "до 8 мОм",
+          "value": "up to 8 mΩ",
           "info": [
-            "V<sub>GS</sub> = 10 В",
+            "V<sub>GS</sub> = 10 V",
             "I<sub>D</sub> = 62 A"
           ]
         },
         {
           "refId": 69,
-          "value": "0.75 °C/Вт"
+          "value": "0.75 °C/W"
         },
         {
           "refId": 70,
@@ -2384,25 +2304,25 @@
         },
         {
           "refId": 71,
-          "value": "55 В",
+          "value": "55 V",
           "info": [
-            "V<sub>GS</sub> = 0 В",
-            "I<sub>D</sub> = 250 мкA"
+            "V<sub>GS</sub> = 0 V",
+            "I<sub>D</sub> = 250 µA"
           ]
         },
         {
           "refId": 72,
-          "value": "2 - 4 В",
+          "value": "2 - 4 V",
           "info": [
             "V<sub>DS</sub> = V<sub>GS</sub>",
-            "I<sub>D</sub> = 250 мкA"
+            "I<sub>D</sub> = 250 µA"
           ]
         }
       ],
       "content": "",
       "externalLinks": [
         {
-          "name": "Официальная страница IRF3205",
+          "name": "Official IRF3205 Page",
           "url": "https://www.infineon.com/cms/en/product/power/mosfet/12v-300v-n-channel-power-mosfet/irf3205/",
           "lang": "en",
           "icon": "infineon.com.ico",
@@ -2412,35 +2332,35 @@
     },
     {
       "categoryId": 20,
-      "lang": "ru",
-      "title": "Набор пинцетов в чехле 14 шт",
-      "subtitle": "Для пайки, ремонта плат, телефонов и т.д.",
+      "lang": "en",
+      "title": "14-Piece Tweezers Set with Case",
+      "subtitle": "For Soldering, PCB Repair, Phones, etc.",
       "seo": {
-        "description": "Набор пинцетов в чехле 14 шт",
-        "keywords": "пинцеты, набор, чехол, 14, ремонт, пайка, подарок, kaisi",
+        "description": "14-Piece Tweezers Set with Case",
+        "keywords": "tweezers, set, case, 14, repair, soldering, gift, kaisi",
         "measurement": "14"
       },
       "manufacturerId": "7",
       "buy": true,
       "price": 650,
       "availability": 1,
-      "content": "<p>Профессиональный набор пинцетов из нержавеющей стали 14 шт. отличного качества исполнения для любых нужд.</p><p>Антистатическое лакокрасочное покрытие обеспечивает превосходную защиту от электростатического разряда.</p>",
+      "content": "<p>Professional 14-piece tweezers set made of stainless steel with excellent quality for various needs.</p><p>The anti-static coating provides superior protection against electrostatic discharge.</p>",
       "images": [
         {
           "src": "/photos/tweezers-set-14-1.webp",
-          "alt": "Набор пинцетов 14 шт - внешний вид в чехле"
+          "alt": "14-Piece Tweezers Set - Exterior View with Case"
         },
         {
           "src": "/photos/tweezers-set-14-2.webp",
-          "alt": "Набор пинцетов 14 шт"
+          "alt": "14-Piece Tweezers Set"
         },
         {
           "src": "/photos/tweezers-set-14-3.webp",
-          "alt": "Набор пинцетов 14 шт"
+          "alt": "14-Piece Tweezers Set"
         },
         {
           "src": "/photos/tweezers-set-14-4.webp",
-          "alt": "Набор пинцетов 14 шт"
+          "alt": "14-Piece Tweezers Set"
         }
       ],
       "features": [
@@ -2450,15 +2370,15 @@
         },
         {
           "refId": 105,
-          "value": "Нержавеющая сталь"
+          "value": "Stainless Steel"
         },
         {
           "refId": 106,
-          "value": "Да"
+          "value": "Yes"
         },
         {
           "refId": 107,
-          "value": "Да"
+          "value": "Yes"
         }
       ]
     }

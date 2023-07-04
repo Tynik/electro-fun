@@ -1,21 +1,24 @@
-export type NetlifyResponse = {
-  status: string
-}
+import { netlifyRequest } from '~/api/api-client';
 
-export type NetlifyMakeOrder = {
-  fullname: string
-  phone: string
-  deliveryAddress: string
-  comment: string
-  totalPrice: number
-  items: string[]
-}
+export type CheckoutResponse = {
+  status: string;
+  data: {
+    url: string;
+  };
+};
 
-export const netlifyMakeOrder = async (data: NetlifyMakeOrder): Promise<NetlifyResponse> =>
-  (
-    await fetch(`${process.env.NETLIFY_SERVER || ''}/.netlify/functions/make-order`,
-      {
-        method: 'POST',
-        body: JSON.stringify(data)
-      })
-  ).json();
+type Item = {
+  priceId: string;
+  quantity: 1;
+};
+
+export type CheckoutPayload = {
+  fullName: string;
+  phone: string;
+  deliveryAddress: string;
+  note: string;
+  items: Item[];
+};
+
+export const checkoutRequest = async (payload: CheckoutPayload) =>
+  (await netlifyRequest<CheckoutResponse>('checkout', { payload, method: 'POST' })).data;

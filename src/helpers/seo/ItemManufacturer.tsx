@@ -1,14 +1,14 @@
 import React from 'react';
 
-import type { ItemT } from '~/types';
+import type { Item } from '~/types';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
 import { DbContext } from '~/contexts';
 import { useItemManufacturer } from '~/hooks';
 
 export type ItemManufacturerProps = {
-  item: ItemT
-}
+  item: Item;
+};
 
 export const ItemManufacturer = ({ item }: ItemManufacturerProps) => {
   const { db } = React.useContext(DbContext);
@@ -19,22 +19,13 @@ export const ItemManufacturer = ({ item }: ItemManufacturerProps) => {
   }
 
   return (
-    <div
-      itemProp={'brand'}
-      itemType={`${SEO_SCHEMA_BASE_URL}/Brand`}
-      itemScope
-    >
-      <meta itemProp={'name'} content={manufacturer.name}/>
+    <div itemProp={'brand'} itemType={`${SEO_SCHEMA_BASE_URL}/Brand`} itemScope>
+      <meta itemProp={'name'} content={manufacturer.name} />
 
-      {manufacturer.url && (
-        <meta itemProp={'url'} content={manufacturer.url}/>
-      )}
+      {manufacturer.url && <meta itemProp={'url'} content={manufacturer.url} />}
 
       {manufacturer.logo && (
-        <meta
-          itemProp={'logo'}
-          content={`${db.siteURL}/logos/${manufacturer.logo}`}
-        />
+        <meta itemProp={'logo'} content={`${db.siteURL}/logos/${manufacturer.logo}`} />
       )}
     </div>
   );

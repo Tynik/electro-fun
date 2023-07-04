@@ -7,12 +7,8 @@ export const BackButton = () => {
   const history = useHistory();
 
   return (
-    <Button
-      size={'small'}
-      startIcon={<ArrowBackIcon/>}
-      onClick={() => history.goBack()}
-    >
-      Назад
+    <Button size={'small'} startIcon={<ArrowBackIcon />} onClick={() => history.goBack()}>
+      Back
     </Button>
   );
 };

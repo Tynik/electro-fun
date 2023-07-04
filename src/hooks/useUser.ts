@@ -1,51 +1,46 @@
 import React from 'react';
 
-import type { ItemT, ItemIdT, ItemOptionIdT, UserBasketT, UserT } from '~/types';
+import type { Item, ItemId, ItemOptionId, UserBasket, UserT } from '~/types';
 
 import { useLocalStorage } from './useLocalStorage';
 
 export const useUser = () => {
-  const {
-    set: saveBasketState,
-    initialValue: basketInitialValue
-  } = useLocalStorage<UserBasketT>('basket', {
-    items: {}
-  });
+  const { set: saveBasketState, initialValue: basketInitialValue } = useLocalStorage<UserBasket>(
+    'basket',
+    {
+      items: {},
+    }
+  );
 
   const [user, setUser] = React.useState<UserT>({
-    basket: { ...basketInitialValue }
+    basket: { ...basketInitialValue },
   });
 
   React.useEffect(() => {
     saveBasketState(user.basket);
   }, [user]);
 
-  const addItemToBasket = React.useCallback(
-    (itemId: ItemIdT, optionId: ItemOptionIdT) => {
-      setUser(user => {
-        const itemOptions = user.basket.items[itemId] || {};
+  const addItemToBasket = React.useCallback((itemId: ItemId, optionId: ItemOptionId) => {
+    setUser(user => {
+      const itemOptions = user.basket.items[itemId] || {};
 
-        return {
-          ...user,
-          basket: {
-            items: {
-              ...user.basket.items,
-              [itemId]: {
-                ...itemOptions,
-                [optionId]: ++itemOptions[optionId] || 1
-              }
-            }
-          }
-        };
-      });
-    }, []);
+      return {
+        ...user,
+        basket: {
+          items: {
+            ...user.basket.items,
+            [itemId]: {
+              ...itemOptions,
+              [optionId]: ++itemOptions[optionId] || 1,
+            },
+          },
+        },
+      };
+    });
+  }, []);
 
   const removeItemFromBasket = React.useCallback(
-    (
-      itemId: ItemIdT,
-      optionId: ItemOptionIdT,
-      all: boolean = false
-    ) => {
+    (itemId: ItemId, optionId: ItemOptionId, all: boolean = false) => {
       setUser(user => {
         let items = { ...user.basket.items };
 
@@ -58,30 +53,32 @@ export const useUser = () => {
           ...user,
           basket: {
             ...user.basket,
-            items
-          }
+            items,
+          },
         };
       });
-    }, []);
+    },
+    []
+  );
 
   const clearBasket = React.useCallback(() => {
     setUser(user => ({
       ...user,
       basket: {
         ...user.basket,
-        items: {}
-      }
+        items: {},
+      },
     }));
   }, []);
 
   const getNumberItemsInBasket = React.useCallback(
-    (item: ItemT, itemOptionId: ItemOptionIdT) =>
+    (item: Item, itemOptionId: ItemOptionId) =>
       (user.basket.items[item.id] || {})[itemOptionId] || 0,
     [user.basket.items]
   );
 
-  const numberAllItemsInBasket = React.useMemo(() =>
-      Object.keys(user.basket.items).length,
+  const numberAllItemsInBasket = React.useMemo(
+    () => Object.keys(user.basket.items).length,
     [user.basket.items]
   );
 
@@ -91,6 +88,6 @@ export const useUser = () => {
     removeItemFromBasket,
     clearBasket,
     getNumberItemsInBasket,
-    numberAllItemsInBasket
+    numberAllItemsInBasket,
   };
 };

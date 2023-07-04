@@ -52,12 +52,11 @@
   "items": [
     {
       "categoryId": 12,
-      "lang": "ru",
       "title": "LED SMD 0805 (2012)",
-      "subtitle": "SMD светодиоды 100 шт.",
+      "subtitle": "SMD LEDs 100 pcs.",
       "seo": {
         "description": "LED SMD 0805",
-        "keywords": "светодиод, led, 0805, 2012, желтый, smd"
+        "keywords": "LED, SMD, 0805, 2012, yellow"
       },
       "buy": true,
       "price": 25,
@@ -70,28 +69,28 @@
         },
         {
           "src": "/photos/LED0805-2.webp",
-          "alt": "LED0805 - Рекомендуемый профиль пайки оплавлением"
+          "alt": "LED0805 - Recommended reflow soldering profile"
         }
       ],
       "options": {
         "1": {
-          "name": "Желтый",
+          "name": "Yellow",
           "default": true
         },
         "2": {
-          "name": "Красный"
+          "name": "Red"
         },
         "3": {
-          "name": "Синий"
+          "name": "Blue"
         },
         "4": {
-          "name": "Зелёный"
+          "name": "Green"
         }
       },
       "features": [
         {
           "refId": 3,
-          "value": "2 В"
+          "value": "2 V"
         },
         {
           "refId": 24,
@@ -99,7 +98,7 @@
         },
         {
           "refId": 29,
-          "value": "25 мА"
+          "value": "25 mA"
         },
         {
           "refId": 42,
@@ -113,34 +112,33 @@
     },
     {
       "categoryId": 11,
-      "lang": "ru",
       "title": "J-Link v8",
-      "subtitle": "Программатор USB-JTAG",
+      "subtitle": "USB-JTAG Programmer",
       "seo": {
-        "description": "J-Link - программатор v8 USB-JTAG",
-        "keywords": "программатор, segger, j-link, v8, usb, jtag, arm, cortex-m"
+        "description": "J-Link - USB-JTAG programmer v8",
+        "keywords": "programmer, segger, j-link, v8, usb, jtag, arm, cortex-m"
       },
       "original": false,
-      "buy": true,
+      "buy": false,
       "price": 350,
       "availability": 1,
       "datasheetId": "JLINKUM08001",
       "images": [
         {
           "src": "/photos/J-Link-1.webp",
-          "alt": "J-Link v8 - комплектация"
+          "alt": "J-Link v8 - Packaging"
         },
         {
           "src": "/photos/J-Link-2.webp",
-          "alt": "J-Link v8 - размеры"
+          "alt": "J-Link v8 - Dimensions"
         },
         {
           "src": "/photos/J-Link-3.webp",
-          "alt": "J-Link v8 - с разных сторон"
+          "alt": "J-Link v8 - Different Views"
         },
         {
           "src": "/photos/J-Link-4.webp",
-          "alt": "J-Link v8 - JTAG распиновка"
+          "alt": "J-Link v8 - JTAG Pinout"
         }
       ],
       "features": [
@@ -148,8 +146,8 @@
           "refId": 74,
           "value": [
             "Linux",
-            "Windows 2000 и выше",
-            "macOS 10.5 и выше"
+            "Windows 2000 and above",
+            "macOS 10.5 and above"
           ]
         },
         {
@@ -165,25 +163,18 @@
       "content": "",
       "externalLinks": [
         {
-          "name": "Официальная страница J-Link",
+          "name": "Official J-Link Page",
           "url": "https://www.segger.com/products/debug-probes/j-link/",
           "lang": "en",
           "icon": "segger.com.ico",
           "iconAlt": "segger.com"
         },
         {
-          "name": "Среда разработки J-Link",
+          "name": "J-Link Development Environment",
           "url": "https://www.segger.com/downloads/jlink/",
           "lang": "en",
           "icon": "segger.com.ico",
           "iconAlt": "segger.com"
-        },
-        {
-          "name": "Прошивка CC2652p для Zigbee используя BSL и JTAG JLink",
-          "url": "https://www.youtube.com/watch?v=xmpBBz5_7E4",
-          "lang": "ru",
-          "icon": "youtube.com.png",
-          "iconAlt": "youtube.com"
         }
       ]
     },
@@ -191,9 +182,9 @@
       "categoryId": 8,
       "lang": "ru",
       "title": "RF-BM-2652P2",
-      "subtitle": "Многопротокольный беспроводной модуль",
+      "subtitle": "Multi-Protocol Wireless Module",
       "seo": {
-        "description": "RF-BM-2652P2 - многопротокольный беспроводной модуль",
+        "description": "RF-BM-2652P2 - multi-protocol wireless module",
         "keywords": "rf-star, cc2652p, simplelink, bluetooth, zigbee, thread, ti"
       },
       "datasheetId": "RF-BM-2652P2",
@@ -203,19 +194,19 @@
       "images": [
         {
           "src": "/photos/RF-BM-2652P2-1.webp",
-          "alt": "RF-BM-2652P2 - внешний вид"
+          "alt": "RF-BM-2652P2 - Exterior View"
         },
         {
           "src": "/photos/RF-BM-2652P2-2.webp",
-          "alt": "RF-BM-2652P2 - распиновка"
+          "alt": "RF-BM-2652P2 - Pinout"
         },
         {
           "src": "/photos/RF-BM-2652P2-3.webp",
-          "alt": "RF-BM-2652P2 - список возможных модулей"
+          "alt": "RF-BM-2652P2 - List of Possible Modules"
         },
         {
           "src": "/photos/RF-BM-2652P2-4.webp",
-          "alt": "RF-BM-2652P2 - список возможных модулей (продолжение)"
+          "alt": "RF-BM-2652P2 - List of Possible Modules (Continued)"
         }
       ],
       "features": [
@@ -225,12 +216,12 @@
         },
         {
           "refId": 3,
-          "value": "1.8 - 3.8 В",
-          "info": "3.3 В (рекомендуемое)"
+          "value": "1.8 - 3.8 V",
+          "info": "3.3 V (recommended)"
         },
         {
           "refId": 36,
-          "value": "0.94 мкА (вкл. RTC, 80 КБ RAM и CPU retention)"
+          "value": "0.94 μA (including RTC, 80 KB RAM, and CPU retention)"
         },
         {
           "refId": 50,
@@ -238,31 +229,31 @@
         },
         {
           "refId": 53,
-          "value": "48 МГц"
+          "value": "48 MHz"
         },
         {
           "refId": 56,
           "value": [
-            "0 дБм = 7.3 мА",
-            "+5 дБм = 9.6 мА",
-            "+10 дБм = 22 мА",
-            "+20 дБм = 85 мА"
+            "0 dBm = 7.3 mA",
+            "+5 dBm = 9.6 mA",
+            "+10 dBm = 22 mA",
+            "+20 dBm = 85 mA"
           ]
         },
         {
           "refId": 57,
-          "value": "6.9 мА"
+          "value": "6.9 mA"
         },
         {
           "refId": 58,
-          "value": "150 нА (пробуждение по внешним событиям)"
+          "value": "150 nA (external event wakeup)"
         },
         {
           "refId": 76,
-          "value": "30 x 16.4 x (2.2 ± 0.1) мм"
+          "value": "30 x 16.4 x (2.2 ± 0.1) mm"
         }
       ],
-      "content": "<p>RF-BM-2652P2 - это радиочастотный модуль на основе CC2652P, который представляет собой многопротокольный беспроводной модуль 2.4 ГГц, поддерживающий Thread, Zigbee®, Bluetooth® 5.1 Low Energy, IEEE 802.15.4, smart объекты с поддержкой IPv6 (6LoWPAN), проприетарные системы, включая TI 15.4-Stack (2.4 ГГц), и параллельный мультипротокол через драйвер DMM.\n\nОн объединяет кристаллы 48 МГц и 32.768 кГц, 352 КБ встроенной программируемой флэш-памяти, 256 КБ ПЗУ, 8 КБ кэш-памяти SRAM, 80 КБ SRAM со сверхнизкой утечкой.\n\nЕго основной прикладной процессор ARM® Cortex®-M4F может работать при чрезвычайно низком токе в гибких режимах питания. Кроме того, модуль позволяет использовать приложения с большим радиусом действия и с низким энергопотреблением с использованием встроенного мощного усилителя +20 дБм с лучшим в своем классе потребляемым током передачи на уровне 85 мА.\n\nОн отличается небольшими размерами, большим расстоянием подключения и высокой надежностью.</p>",
+      "content": "<p>RF-BM-2652P2 is a radio frequency module based on CC2652P, which is a multi-protocol wireless module supporting Thread, Zigbee®, Bluetooth® 5.1 Low Energy, IEEE 802.15.4, smart objects with IPv6 (6LoWPAN) support, proprietary systems including TI 15.4-Stack (2.4 GHz), and parallel multi-protocol through DMM driver.\n\nIt combines 48 MHz and 32.768 kHz crystals, 352 KB of on-chip programmable flash memory, 256 KB of ROM, 8 KB of cache SRAM, and 80 KB of ultra-low-leakage SRAM.\n\nIts main application processor, ARM® Cortex®-M4F, can operate at an extremely low current in flexible power modes. Additionally, the module enables long-range and low-power applications using the built-in powerful +20 dBm amplifier with best-in-class transmit current at 85 mA.\n\nIt features small size, long-range connectivity, and high reliability.</p>",
       "contributors": [
         {
           "name": "Koen Kanters",
@@ -283,14 +274,14 @@
       ],
       "externalLinks": [
         {
-          "name": "Официальная страница RF-BM-2652P2",
+          "name": "Official RF-BM-2652P2 Page",
           "url": "https://www.szrfstar.com/product/237-en.html",
           "lang": "en",
           "icon": "szrfstar.com.ico",
           "iconAlt": "szrfstar.com"
         },
         {
-          "name": "Официальная страница CC2652P",
+          "name": "Official CC2652P Page",
           "url": "https://www.ti.com/product/CC2652P",
           "lang": "en",
           "icon": "ti.com.ico",
@@ -304,21 +295,21 @@
           "iconAlt": "ti.com"
         },
         {
-          "name": "ZigBee стик v4 (модули RF-STAR)",
+          "name": "ZigBee Stick v4 (RF-STAR Modules)",
           "url": "https://github.com/egony/cc2652p_cc1352p_RF-STAR/wiki",
-          "lang": "en",
+          "lang": "ru",
           "icon": "github.com.svg",
           "iconAlt": "github.com"
         },
         {
-          "name": "Инструкции по компиляции и скомпилированные прошивки Z-Stack",
+          "name": "Compilation Instructions and Compiled Z-Stack Firmware",
           "url": "https://github.com/Koenkk/Z-Stack-firmware",
           "lang": "en",
           "icon": "github.com.svg",
           "iconAlt": "github.com"
         },
         {
-          "name": "Zigbee в MQTT",
+          "name": "Zigbee to MQTT",
           "url": "https://www.zigbee2mqtt.io",
           "lang": "en",
           "icon": "zigbee2mqtt.io.ico",
@@ -328,12 +319,12 @@
     },
     {
       "categoryId": 13,
-      "lang": "ru",
+      "lang": "en",
       "title": "PZEM-004T v3.0",
-      "subtitle": "Измерение 80 - 260 В и тока до 100A",
+      "subtitle": "Measurement of 80 - 260V and current up to 100A",
       "seo": {
-        "description": "PZEM-004T v3 - измерение напряжения 80 - 260 В и тока до 100A",
-        "keywords": "pzem, v3, измерение, напряжение, ток, 100а"
+        "description": "PZEM-004T v3 - measurement of voltage 80 - 260V and current up to 100A",
+        "keywords": "pzem, v3, measurement, voltage, current, 100A"
       },
       "datasheetId": "PZEM-004",
       "buy": true,
@@ -342,11 +333,11 @@
       "images": [
         {
           "src": "/photos/PZEM-004T-1.webp",
-          "alt": "PZEM-004T - вид сверху"
+          "alt": "PZEM-004T - top view"
         },
         {
           "src": "/photos/PZEM-004T-2.webp",
-          "alt": "PZEM-004T - вид снизу"
+          "alt": "PZEM-004T - bottom view"
         }
       ],
       "features": [
@@ -360,52 +351,52 @@
         },
         {
           "refId": 76,
-          "value": "30.1 x 73.7 x 14.3 мм"
+          "value": "30.1 x 73.7 x 14.3 mm"
         },
         {
           "refId": 77,
-          "value": "80 - 260 В"
+          "value": "80 - 260V"
         },
         {
           "refId": 78,
-          "value": "0.1 В"
+          "value": "0.1V"
         },
         {
           "refId": 79,
-          "value": "0.5 %"
+          "value": "0.5%"
         },
         {
           "refId": 80,
           "value": [
             {
-              "value": "0 - 10 А",
-              "info": "От 0.01 А"
+              "value": "0 - 10A",
+              "info": "From 0.01A"
             },
             {
-              "value": "0 - 100 А",
-              "info": "От 0.02 А"
+              "value": "0 - 100A",
+              "info": "From 0.02A"
             }
           ]
         },
         {
           "refId": 81,
-          "value": "0.001 А"
+          "value": "0.001A"
         },
         {
           "refId": 82,
-          "value": "0.5 %"
+          "value": "0.5%"
         },
         {
           "refId": 83,
-          "value": "45 - 65 Гц"
+          "value": "45 - 65 Hz"
         },
         {
           "refId": 84,
-          "value": "0.1 Гц"
+          "value": "0.1 Hz"
         },
         {
           "refId": 85,
-          "value": "0.5 %"
+          "value": "0.5%"
         },
         {
           "refId": 86,
@@ -417,29 +408,29 @@
         },
         {
           "refId": 88,
-          "value": "1 %"
+          "value": "1%"
         },
         {
           "refId": 89,
           "value": [
             {
-              "value": "0 - 2.3 кВт",
+              "value": "0 - 2.3 kW",
               "info": "PZEM-004T-10A"
             },
             {
-              "value": "0 - 23 кВт",
+              "value": "0 - 23 kW",
               "info": "PZEM-004T-100A"
             }
           ],
-          "info": "От 0.4 Вт"
+          "info": "From 0.4W"
         },
         {
           "refId": 90,
-          "value": "0.1 Вт"
+          "value": "0.1W"
         },
         {
           "refId": 91,
-          "value": "0.5 %"
+          "value": "0.5%"
         }
       ],
       "content": "",
@@ -448,14 +439,14 @@
       ],
       "externalLinks": [
         {
-          "name": "Бюджетный мониторинг электропотребления на PZEM-004T v3 для Home Assistant",
+          "name": "Budget power consumption monitoring on PZEM-004T v3 for Home Assistant",
           "url": "https://youtu.be/YlDBzXpbWfI",
-          "lang": "ru",
+          "lang": "en",
           "icon": "youtube.com.png",
           "iconAlt": "youtube.com"
         },
         {
-          "name": "Библиотека Arduino для PZEM-004T v3.0",
+          "name": "Arduino library for PZEM-004T v3.0",
           "url": "https://github.com/mandulaj/PZEM-004T-v30",
           "lang": "en",
           "icon": "github.com.svg",
@@ -489,19 +480,19 @@
     },
     {
       "categoryId": 9,
-      "lang": "ru",
-      "title": "LoLin NodeMCU ESP8266 4 Мб v3",
+      "lang": "en",
+      "title": "LoLin NodeMCU ESP8266 4MB v3",
       "subtitle": "DevKit",
       "seo": {
         "description": "LoLin NodeMCU ESP8266 V3",
         "keywords": "nodemcu, esp8266, esp-12e, devkit, arduino, wifi, iot, i2c, spi, uart, pwm, adc",
-        "measurement": "4 Мб"
+        "measurement": "4MB"
       },
       "buy": true,
       "price": 85,
       "availability": 5,
       "datasheetId": "ESP-12E",
-      "content": "<p>LoLin NodeMCU V3 на базе ESP8266 Wi-Fi / ESP-12E / CH340 – это платформа которая используется для программирования и управления различными устройствами.\n\nESP8266 Wi-Fi - программируемый модуль который позволяет подключаться к сети по Wi-Fi. На данную плату ESP8266 можно загружать прошивку NodeMCU (Lua) / Micropython (Python) / Arduino файлы, создавать файлы во Flash памяти и запускать их.\n\nМодуль имеет 11 портов ввода / вывода, некоторые из них мультилексированы с интерфейсами UART, I²C, SPI, PWM и ADC. Все выводы платы выполнены с шагом 2,54 мм. Питание платы, а так же загрузка кода, осуществляется через MicroUSB разъем. Прошивка NodeMCU позволяет отправлять модуль в режим глубокого сна для снижения энергопотребления и открывает доступ к широким возможностям модуля, недоступным в стандартной прошивке.\n\nНа плате есть регулятор напряжения, позволяющий подавать питание на плату через USB.\n\nWiFi модуль ESP-12E построен на базе процессора с ядром ESP8266, отличие в радио-интерфейсе Wi-Fi. Ядро ESP8266 интегрировано в Tensilica L106 – 32-битный микроконтроллер с ультра-низким энергопотреблением.\n\nПоддержка тактовых частот 80 или 160 МГц, поддержка RTOS, встроенные Wi-Fi MAC/BB/RF/PA/LNA, микро-антенна на плате модуля. Модуль поддерживает стандарт IEEE802.11 b/g/n, полный стек TCP/IP протоколов.</p>",
+      "content": "<p>LoLin NodeMCU V3 based on ESP8266 Wi-Fi / ESP-12E / CH340 is a platform used for programming and controlling various devices.\n\nESP8266 Wi-Fi is a programmable module that allows connecting to Wi-Fi networks. NodeMCU (Lua) / Micropython (Python) / Arduino firmware files can be loaded onto this ESP8266 board, creating files in the Flash memory, and running them.\n\nThe module has 11 input/output ports, some of which are multiplexed with UART, I²C, SPI, PWM, and ADC interfaces. All board pins are spaced at 2.54 mm intervals. Powering the board and code uploading are done through the MicroUSB connector. The NodeMCU firmware allows putting the module into deep sleep mode to reduce power consumption and provides access to the module's extensive capabilities not available in standard firmware.\n\nThe board has a voltage regulator for supplying power via USB.\n\nThe ESP-12E Wi-Fi module is based on the ESP8266 core with a different Wi-Fi radio interface. The ESP8266 core is integrated into the Tensilica L106, a 32-bit microcontroller with ultra-low power consumption.\n\nSupport for clock frequencies of 80 or 160 MHz, support for RTOS, built-in Wi-Fi MAC/BB/RF/PA/LNA, micro-antenna on the module board. The module supports the IEEE802.11 b/g/n standard and a full stack of TCP/IP protocols.</p>",
       "images": [
         {
           "src": "/photos/LoLin-NodeMCU-ESP8266-1.webp",
@@ -509,15 +500,15 @@
         },
         {
           "src": "/photos/LoLin-NodeMCU-ESP8266-2.webp",
-          "alt": "NodeMCU-ESP8266 - распиновка"
+          "alt": "NodeMCU-ESP8266 - pinout"
         },
         {
           "src": "/photos/LoLin-NodeMCU-ESP8266-3.webp",
-          "alt": "NodeMCU-ESP8266 - схема"
+          "alt": "NodeMCU-ESP8266 - schematic"
         },
         {
           "src": "/photos/LoLin-NodeMCU-ESP8266-4.webp",
-          "alt": "NodeMCU-ESP8266 - описание пинов"
+          "alt": "NodeMCU-ESP8266 - pin description"
         }
       ],
       "features": [
@@ -527,7 +518,7 @@
         },
         {
           "refId": 15,
-          "value": "15 мА"
+          "value": "15 mA"
         },
         {
           "refId": 20,
@@ -539,35 +530,35 @@
         },
         {
           "refId": 28,
-          "value": "200 мА"
+          "value": "200 mA"
         },
         {
           "refId": 29,
-          "value": "70 мА"
+          "value": "70 mA"
         },
         {
           "refId": 36,
-          "value": "до 200 мкА"
+          "value": "up to 200 µA"
         },
         {
           "refId": 38,
-          "value": "Tensilica Xtensa Diamond 32-бит RISC"
+          "value": "Tensilica Xtensa Diamond 32-bit RISC"
         },
         {
           "refId": 53,
-          "value": "80/160 МГц"
+          "value": "80/160 MHz"
         },
         {
           "refId": 54,
-          "value": "4 МБ"
+          "value": "4MB"
         },
         {
           "refId": 55,
-          "value": "Да"
+          "value": "Yes"
         },
         {
           "refId": 3,
-          "value": "4.5 - 9 В"
+          "value": "4.5 - 9 V"
         },
         {
           "refId": 46,
@@ -624,36 +615,36 @@
     },
     {
       "categoryId": 9,
+      "lang": "en",
       "title": "ESP-C3-13U 4M",
+      "subtitle": "Wi-Fi module",
       "seo": {
         "description": "ESP-C3-13U 4M",
         "keywords": "risc-v, esp32, esp, c3fn4, ai-thinker, wifi, ble, smart-home, wearable"
       },
-      "subtitle": "Wi-Fi модуль",
-      "datasheetId": "ESP-C3-13U",
-      "manufacturerId": "4",
-      "buy": true,
+      "buy": false,
       "price": 95,
       "availability": 2,
+      "datasheetId": "ESP-C3-13U",
+      "content": "<p></p>",
       "images": [
         {
           "src": "/photos/ESP-C3-13U-1.webp",
-          "alt": "ESP-C3-13U - внешний вид"
+          "alt": "ESP-C3-13U - external view"
         },
         {
           "src": "/photos/ESP-C3-13U-2.webp",
-          "alt": "ESP-C3-13U - распиновка"
+          "alt": "ESP-C3-13U - pinout"
         },
         {
           "src": "/photos/ESP-C3-13U-3.webp",
-          "alt": "ESP-C3-13U - таблица пинов"
+          "alt": "ESP-C3-13U - pin table"
         },
         {
           "src": "/photos/ESP-C3-13U-4.webp",
-          "alt": "ESP-C3-13U - таблица пинов (продолжение)"
+          "alt": "ESP-C3-13U - pin table (continued)"
         }
       ],
-      "content": "",
       "features": [
         {
           "refId": 2,
@@ -661,15 +652,15 @@
         },
         {
           "refId": 3,
-          "value": "3 - 3.6 В"
+          "value": "3 - 3.6 V"
         },
         {
           "refId": 38,
-          "value": "1-ядерный 32-бит RISC-V"
+          "value": "1-core 32-bit RISC-V"
         },
         {
           "refId": 98,
-          "value": "80/160 МГц"
+          "value": "80/160 MHz"
         },
         {
           "refId": 42,
@@ -682,17 +673,17 @@
         {
           "refId": 56,
           "value": [
-            "802.11b, CCK 1 Мбит/с, +17 дБм = 280 мА",
-            "802.11g, OFDM 54 Мбит/с, +18 дБм = 290 мА",
-            "802.11n, MCS7, +20 дБм = 350 мА"
+            "802.11b, CCK 1 Mbps, +17 dBm = 280 mA",
+            "802.11g, OFDM 54 Mbps, +18 dBm = 290 mA",
+            "802.11n, MCS7, +20 dBm = 350 mA"
           ]
         },
         {
           "refId": 57,
           "value": [
-            "802.11b, 1024 бит = 90 мА",
-            "802.11g, 1024 бит = 90 мА",
-            "802.11n, 1024 бит = 93 мА"
+            "802.11b, 1024 bytes = 90 mA",
+            "802.11g, 1024 bytes = 90 mA",
+            "802.11n, 1024 bytes = 93 mA"
           ]
         },
         {
@@ -704,23 +695,17 @@
           "value": "BLE 5.0"
         }
       ],
+      "relatedDatasheetIds": [
+        "ESP-C3-13U-Kit"
+      ],
       "externalLinks": [
         {
-          "name": "Официальная страница ESP32-C3 модулей",
+          "name": "Official ESP32-C3 Module Page",
           "url": "https://docs.ai-thinker.com/en/esp32c3",
           "lang": "en",
           "icon": "ai-thinker.com.ico",
           "iconAlt": "ai-thinker.com"
         }
-      ],
-      "relatedDatasheetIds": [
-        "ESP-C3-13U-Kit"
-      ],
-      "applicationIds": [
-        "1",
-        "2",
-        "3",
-        "4"
       ]
     }
   ]

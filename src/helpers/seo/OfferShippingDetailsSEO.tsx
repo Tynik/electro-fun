@@ -9,14 +9,10 @@ export const OfferShippingDetailsSEO = () => {
       itemType={`${SEO_SCHEMA_BASE_URL}/OfferShippingDetails`}
       itemScope
     >
-      <div
-        itemProp={'shippingRate'}
-        itemType={`${SEO_SCHEMA_BASE_URL}/MonetaryAmount`}
-        itemScope
-      >
-        <meta itemProp={'minValue'} content={'0'}/>
-        <meta itemProp={'maxValue'} content={'60'}/>
-        <meta itemProp={'currency'} content={'UAH'}/>
+      <div itemProp={'shippingRate'} itemType={`${SEO_SCHEMA_BASE_URL}/MonetaryAmount`} itemScope>
+        <meta itemProp={'minValue'} content={'0'} />
+        <meta itemProp={'maxValue'} content={'8'} />
+        <meta itemProp={'currency'} content={'GPB'} />
       </div>
 
       <div
@@ -24,7 +20,7 @@ export const OfferShippingDetailsSEO = () => {
         itemType={`${SEO_SCHEMA_BASE_URL}/DefinedRegion`}
         itemScope
       >
-        <meta itemProp={'addressCountry'} content={'UA'}/>
+        <meta itemProp={'addressCountry'} content={'UA'} />
       </div>
 
       <div
@@ -37,8 +33,8 @@ export const OfferShippingDetailsSEO = () => {
           itemType={`${SEO_SCHEMA_BASE_URL}/QuantitativeValue`}
           itemScope
         >
-          <meta itemProp={'minValue'} content={'0'}/>
-          <meta itemProp={'maxValue'} content={'1'}/>
+          <meta itemProp={'minValue'} content={'0'} />
+          <meta itemProp={'maxValue'} content={'1'} />
         </div>
 
         <div
@@ -46,22 +42,22 @@ export const OfferShippingDetailsSEO = () => {
           itemType={`${SEO_SCHEMA_BASE_URL}/QuantitativeValue`}
           itemScope
         >
-          <meta itemProp={'minValue'} content={'1'}/>
-          <meta itemProp={'maxValue'} content={'4'}/>
+          <meta itemProp={'minValue'} content={'1'} />
+          <meta itemProp={'maxValue'} content={'4'} />
         </div>
 
-        <meta itemProp={'cutOffTime'} content={'19:00-09:00'}/>
+        <meta itemProp={'cutOffTime'} content={'19:00-09:00'} />
 
         <div
           itemProp={'businessDays'}
           itemType={`${SEO_SCHEMA_BASE_URL}/OpeningHoursSpecification`}
           itemScope
         >
-          <meta itemProp={'dayOfWeek'} content={`${SEO_SCHEMA_BASE_URL}/Monday`}/>
-          <meta itemProp={'dayOfWeek'} content={`${SEO_SCHEMA_BASE_URL}/Tuesday`}/>
-          <meta itemProp={'dayOfWeek'} content={`${SEO_SCHEMA_BASE_URL}/Wednesday`}/>
-          <meta itemProp={'dayOfWeek'} content={`${SEO_SCHEMA_BASE_URL}/Thursday`}/>
-          <meta itemProp={'dayOfWeek'} content={`${SEO_SCHEMA_BASE_URL}/Friday`}/>
+          <meta itemProp={'dayOfWeek'} content={`${SEO_SCHEMA_BASE_URL}/Monday`} />
+          <meta itemProp={'dayOfWeek'} content={`${SEO_SCHEMA_BASE_URL}/Tuesday`} />
+          <meta itemProp={'dayOfWeek'} content={`${SEO_SCHEMA_BASE_URL}/Wednesday`} />
+          <meta itemProp={'dayOfWeek'} content={`${SEO_SCHEMA_BASE_URL}/Thursday`} />
+          <meta itemProp={'dayOfWeek'} content={`${SEO_SCHEMA_BASE_URL}/Friday`} />
         </div>
       </div>
     </div>

@@ -1,15 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import {
-  Box,
-  Grid,
-  Typography,
-  Alert,
-  Divider,
-  useTheme
-} from '@mui/material';
+import { Box, Grid, Typography, Alert, Divider, useTheme } from '@mui/material';
 
-import type { ItemT } from '~/types';
+import type { Item } from '~/types';
 
 import { DbContext } from '~/contexts';
 import { getItemPrice, ProductSEO } from '~/helpers';
@@ -23,12 +16,7 @@ import {
   useItemImages,
   useCurrentItem,
 } from '~/hooks';
-import {
-  Loader,
-  ExternalLink,
-  ImageSlider,
-  BackButton
-} from '~/components';
+import { Loader, ExternalLink, ImageSlider, BackButton } from '~/components';
 import { ItemInfoFeatures } from './ItemInfoFeatures';
 import { ItemInfoOptions } from './ItemInfoOptions';
 import { ItemInfoExternalLinks } from './ItemInfoExternalLinks';
@@ -43,15 +31,7 @@ import { ItemInfoPeculiarities } from './ItemInfoPeculiarities';
 export const ItemInfoPage = () => {
   const theme = useTheme();
 
-  const {
-    db,
-    item,
-    price,
-    images,
-    seo,
-    errors,
-    printErrors
-  } = useCurrentItem();
+  const { db, item, price, images, seo, errors, printErrors } = useCurrentItem();
 
   const { wordsWrapper } = useTextProcessor();
 
@@ -59,9 +39,9 @@ export const ItemInfoPage = () => {
 
   useSeo(Object.keys(seo).length ? seo : null);
 
-  const clarificationsWrapper = React.useCallback((text: string) =>
-    wordsWrapper(Object.keys(db.clarifications), text, (
-      (text, phrase, index) => (
+  const clarificationsWrapper = React.useCallback(
+    (text: string) =>
+      wordsWrapper(Object.keys(db.clarifications), text, (text, phrase, index) =>
         phrase ? (
           <ExternalLink
             key={`${text}-${phrase}-${index}`}
@@ -71,40 +51,38 @@ export const ItemInfoPage = () => {
             {phrase}
           </ExternalLink>
         ) : (
-          <span key={`${text}`} dangerouslySetInnerHTML={{ __html: text }}/>
+          <span key={`${text}`} dangerouslySetInnerHTML={{ __html: text }} />
         )
-      )
-    )), []);
+      ),
+    []
+  );
 
   // high priority to show errors
   if (errors.length) {
     return printErrors();
   }
   if (item === null) {
-    return <Loader/>;
+    return <Loader />;
   }
 
   return (
     <Grid spacing={2} container>
-      <ProductSEO item={item}/>
+      <ProductSEO item={item} />
 
       <Grid xs={12} item>
-        <BackButton/>
+        <BackButton />
       </Grid>
 
       <Grid xs={12} item>
-        <ItemInfoHeader item={item}/>
+        <ItemInfoHeader item={item} />
       </Grid>
 
       <Grid xs={12} md={6} item>
-        <ImageSlider
-          images={images}
-          height={'300px'}
-        />
+        <ImageSlider images={images} height={'300px'} />
 
         {item.content && (
           <Box component={'main'} marginTop={theme.spacing(2)}>
-            <Typography variant={'overline'}>Описание</Typography>
+            <Typography variant={'overline'}>Description</Typography>
 
             <Typography
               variant={'body1'}
@@ -123,56 +101,54 @@ export const ItemInfoPage = () => {
                 marginTop: 2,
                 paddingTop: 0,
                 paddingBottom: 0,
-                alignItems: 'center'
+                alignItems: 'center',
               }}
             >
-              <span dangerouslySetInnerHTML={{ __html: item.warningContent }}/>
+              <span dangerouslySetInnerHTML={{ __html: item.warningContent }} />
             </Alert>
           </Box>
         )}
 
         {item.relatedDatasheetIds && item.relatedDatasheetIds.length > 0 && (
           <Box marginTop={theme.spacing(2)}>
-            <ItemInfoRelatedDatasheets relatedDatasheetIds={item.relatedDatasheetIds}/>
+            <ItemInfoRelatedDatasheets relatedDatasheetIds={item.relatedDatasheetIds} />
           </Box>
         )}
 
         {item.peculiarities && item.peculiarities.length > 0 && (
           <Box marginTop={theme.spacing(2)}>
-            <ItemInfoPeculiarities peculiarities={item.peculiarities}/>
+            <ItemInfoPeculiarities peculiarities={item.peculiarities} />
           </Box>
         )}
 
         {item.applicationIds && item.applicationIds.length > 0 && (
           <Box marginTop={theme.spacing(2)}>
-            <ItemInfoApplications applicationIds={item.applicationIds}/>
+            <ItemInfoApplications applicationIds={item.applicationIds} />
           </Box>
         )}
 
         {item.accessories && item.accessories.length > 0 && (
           <Box marginTop={theme.spacing(2)}>
-            <ItemInfoAccessories accessories={item.accessories}/>
+            <ItemInfoAccessories accessories={item.accessories} />
           </Box>
         )}
 
         {item.externalLinks && item.externalLinks.length > 0 && (
           <Box marginTop={theme.spacing(2)}>
-            <ItemInfoExternalLinks externalLinks={item.externalLinks}/>
+            <ItemInfoExternalLinks externalLinks={item.externalLinks} />
           </Box>
         )}
 
         {item.contributors && item.contributors.length > 0 && (
           <Box marginTop={theme.spacing(2)}>
-            <ItemInfoContributors contributors={item.contributors}/>
+            <ItemInfoContributors contributors={item.contributors} />
           </Box>
         )}
 
         {item.codeExamples && item.codeExamples.length > 0 && (
           <Box marginTop={theme.spacing(2)}>
             {item.codeExamples.map(codeExample => (
-              <pre key={codeExample.name}>
-                {codeExample.code}
-              </pre>
+              <pre key={codeExample.name}>{codeExample.code}</pre>
             ))}
           </Box>
         )}
@@ -181,32 +157,36 @@ export const ItemInfoPage = () => {
       <Grid xs={12} md={6} item>
         {item.features && item.features.length > 0 && (
           <>
-            <ItemInfoFeatures item={item}/>
-            <Divider sx={{ marginTop: theme.spacing(2) }}/>
+            <ItemInfoFeatures item={item} />
+            <Divider sx={{ marginTop: theme.spacing(2) }} />
           </>
         )}
 
         {item.options && Object.keys(item.options).length > 0 && (
-          <Box sx={{
-            marginTop: theme.spacing(2)
-          }}>
-            <ItemInfoOptions item={item}/>
+          <Box
+            sx={{
+              marginTop: theme.spacing(2),
+            }}
+          >
+            <ItemInfoOptions item={item} />
           </Box>
         )}
 
         {Boolean(price) && (
-          <Box sx={{
-            marginTop: theme.spacing(2),
-            textAlign: 'center'
-          }}>
+          <Box
+            sx={{
+              marginTop: theme.spacing(2),
+              textAlign: 'center',
+            }}
+          >
             <Typography variant={'h5'} component={'div'}>
-              {price.toFixed(2)} UAH
+              {price.toFixed(2)} £
             </Typography>
           </Box>
         )}
 
         <Box marginTop={theme.spacing(2)}>
-          <ItemInfoActions item={item}/>
+          <ItemInfoActions item={item} />
         </Box>
       </Grid>
     </Grid>

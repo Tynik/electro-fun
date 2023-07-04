@@ -5,7 +5,7 @@ export * from './Breadcrumbs';
 export * from './BreadcrumbItem';
 export * from './Items';
 export * from './Category';
-export * from './Datasheets';
+export * from './DatasheetsList';
 export * from './CImage';
 export * from './CCardMedia';
 export { default as CIconButton } from './CIconButton';

@@ -1,25 +1,22 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { generateItemId } from './src/utils';
-import { DbT, DbMetaT } from './src/types';
+import type { Db, DbMeta } from './src/types';
+
+const SITE_DOMAIN = 'https://smartstream-electronics.uk';
 
 const generateSitemapData = (): string[] => {
   const metadata = readFileSync('./src/db/db.meta.json');
-  const meta: DbMetaT = JSON.parse(metadata as any);
+  const meta: DbMeta = JSON.parse(metadata as any);
 
-  let sitemapData = [
-    'https://smart-home-tech.com.ua/',
-    'https://smart-home-tech.com.ua/datasheets'
-  ];
+  let sitemapData = [SITE_DOMAIN, `${SITE_DOMAIN}/datasheets`];
 
   Array.from(new Array(meta.parts)).forEach((_, part) => {
     const dbPartData = readFileSync(`./src/db/db.${part + 1}.json`);
-    const dbPart: DbT = JSON.parse(dbPartData as any);
+    const dbPart: Db = JSON.parse(dbPartData as any);
 
     sitemapData = [
       ...sitemapData,
-      ...dbPart.items.map((item) =>
-        'https://smart-home-tech.com.ua/item/' + generateItemId(item.title)
-      )
+      ...dbPart.items.map(item => `${SITE_DOMAIN}/item/` + generateItemId(item.title)),
     ];
   });
   return sitemapData;

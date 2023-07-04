@@ -1,18 +1,8 @@
 import React from 'react';
-import {
-  Box,
-  Badge,
-  Button,
-  Stack,
-  Typography,
-  useMediaQuery
-} from '@mui/material';
-import {
-  Link as LinkIcon,
-  ShoppingCart as ShoppingCartIcon
-} from '@mui/icons-material';
+import { Box, Badge, Button, Stack, Typography, useMediaQuery } from '@mui/material';
+import { Link as LinkIcon, ShoppingCart as ShoppingCartIcon } from '@mui/icons-material';
 
-import type { ItemT } from '~/types';
+import type { Item } from '~/types';
 
 import { DbContext, UserContext } from '~/contexts';
 import { ExternalButtonLink } from '~/components';
@@ -21,8 +11,8 @@ import { useSelectedItemOptionId } from '~/hooks';
 import { getItemAvailability } from '~/helpers';
 
 export type ItemInfoActionsProps = {
-  item: ItemT
-}
+  item: Item;
+};
 
 export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
   const { db } = React.useContext(DbContext);
@@ -31,14 +21,12 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
   const selectedItemOptionId = useSelectedItemOptionId(item);
   const numberItemsInBasket = getNumberItemsInBasket(item, selectedItemOptionId);
 
-  const downSmMatch = useMediaQuery<any>((theme) => theme.breakpoints.down('sm'));
+  const downSmMatch = useMediaQuery<any>(theme => theme.breakpoints.down('sm'));
 
   const itemAvailability = item.availability
-    ? (
-      numberItemsInBasket ?
-        getItemAvailability(item, selectedItemOptionId) - numberItemsInBasket
-        : getItemAvailability(item, selectedItemOptionId)
-    )
+    ? numberItemsInBasket
+      ? getItemAvailability(item, selectedItemOptionId) - numberItemsInBasket
+      : getItemAvailability(item, selectedItemOptionId)
     : 0;
 
   return (
@@ -57,7 +45,7 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
           }
           hrefLang={db.datasheets[item.datasheetId].lang}
           variant={'outlined'}
-          startIcon={<LinkIcon/>}
+          startIcon={<LinkIcon />}
         >
           Datasheet
         </ExternalButtonLink>
@@ -67,16 +55,18 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
           href={item.buy}
           variant={'contained'}
           color={'success'}
-          startIcon={<ShoppingCartIcon/>}
+          startIcon={<ShoppingCartIcon />}
         >
-          Купить
+          Buy
         </ExternalButtonLink>
       )}
       {item.buy === true && (
-        <Box sx={{
-          display: 'flex',
-          alignItems: 'center'
-        }}>
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
           <Badge
             badgeContent={numberItemsInBasket && `x${numberItemsInBasket}`}
             color={itemAvailability >= 0 ? 'success' : 'error'}
@@ -88,16 +78,12 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
               startIcon={getIcon('addShoppingCart')}
               disabled={!itemAvailability}
             >
-              {numberItemsInBasket ? 'В корзине' : 'В корзину'}
+              {numberItemsInBasket ? 'In cart' : 'Add to cart'}
             </Button>
           </Badge>
 
-          <Typography
-            variant={'body2'}
-            color={'primary.dark'}
-            marginLeft={2}
-          >
-            Доступно: {itemAvailability}
+          <Typography variant={'body2'} color={'primary.dark'} marginLeft={2}>
+            In Stock: {itemAvailability}
           </Typography>
         </Box>
       )}

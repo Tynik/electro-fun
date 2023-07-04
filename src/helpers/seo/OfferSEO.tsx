@@ -1,6 +1,6 @@
 import React from 'react';
 
-import type { ItemT } from '~/types';
+import type { Item } from '~/types';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
 import {
@@ -8,13 +8,13 @@ import {
   getItemAvailabilitySEOSchema,
   OfferShippingDetailsSEO,
   ItemInventoryLevel,
-  ItemMeasurement
+  ItemMeasurement,
 } from '~/helpers';
 import { useCategory, useSelectedItemOptionId } from '~/hooks';
 
 export type OfferSEOProps = {
-  item: ItemT
-}
+  item: Item;
+};
 
 export const OfferSEO = ({ item }: OfferSEOProps) => {
   const selectedItemOptionId = useSelectedItemOptionId(item);
@@ -28,22 +28,18 @@ export const OfferSEO = ({ item }: OfferSEOProps) => {
   }
 
   return (
-    <div
-      itemProp={'offers'}
-      itemType={`${SEO_SCHEMA_BASE_URL}/Offer`}
-      itemScope
-    >
-      <meta itemProp={'url'} content={`/item/${item.id}`}/>
-      <meta itemProp={'category'} content={category.name}/>
-      <meta itemProp={'price'} content={itemPrice.toString()}/>
-      <meta itemProp={'priceCurrency'} content={'UAH'}/>
-      <meta itemProp={'availability'} content={itemAvailabilitySEOSchema}/>
-      <meta itemProp={'itemCondition'} content={`${SEO_SCHEMA_BASE_URL}/NewCondition`}/>
+    <div itemProp={'offers'} itemType={`${SEO_SCHEMA_BASE_URL}/Offer`} itemScope>
+      <meta itemProp={'url'} content={`/item/${item.id}`} />
+      <meta itemProp={'category'} content={category.name} />
+      <meta itemProp={'price'} content={itemPrice.toString()} />
+      <meta itemProp={'priceCurrency'} content={'GBP'} />
+      <meta itemProp={'availability'} content={itemAvailabilitySEOSchema} />
+      <meta itemProp={'itemCondition'} content={`${SEO_SCHEMA_BASE_URL}/NewCondition`} />
 
-      <ItemInventoryLevel item={item}/>
-      <ItemMeasurement item={item}/>
+      <ItemInventoryLevel item={item} />
+      <ItemMeasurement item={item} />
 
-      <OfferShippingDetailsSEO/>
+      <OfferShippingDetailsSEO />
     </div>
   );
 };

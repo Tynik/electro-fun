@@ -1,19 +1,18 @@
-import { DatasheetIdT, FoundDatasheetsT } from '~/types';
+import { DatasheetId, FoundDatasheets } from '~/types';
 
-export const sortDatasheets = (datasheets: FoundDatasheetsT): DatasheetIdT[] =>
-  Object.keys(datasheets)
-    .sort((datasheetIdA, datasheetIdB) => {
-      if (datasheets[datasheetIdA].priority === undefined) {
-        return 1;
-      }
-      if (datasheets[datasheetIdB].priority === undefined) {
-        return -1;
-      }
-      return datasheets[datasheetIdA].priority - datasheets[datasheetIdB].priority;
-    });
+export const sortDatasheets = (datasheets: FoundDatasheets): DatasheetId[] =>
+  Object.keys(datasheets).sort((datasheetIdA, datasheetIdB) => {
+    if (datasheets[datasheetIdA].priority === undefined) {
+      return 1;
+    }
+    if (datasheets[datasheetIdB].priority === undefined) {
+      return -1;
+    }
+    return datasheets[datasheetIdA].priority - datasheets[datasheetIdB].priority;
+  });
 
 export const matchDatasheetIdWithSearchKeyword = (
-  datasheetId: DatasheetIdT,
+  datasheetId: DatasheetId,
   searchKeyword: string
 ): boolean => {
   if (datasheetId.length < searchKeyword.length) {
@@ -23,25 +22,23 @@ export const matchDatasheetIdWithSearchKeyword = (
   let keywordFrameLen = searchKeyword.length;
 
   while (keywordFrameLen && keywordCharIndexOffset === -1) {
-    keywordCharIndexOffset = datasheetId.toLowerCase().indexOf(
-      searchKeyword.substring(0, keywordFrameLen)
-    );
+    keywordCharIndexOffset = datasheetId
+      .toLowerCase()
+      .indexOf(searchKeyword.substring(0, keywordFrameLen));
     keywordFrameLen--;
   }
-  keywordCharIndexOffset = keywordCharIndexOffset === -1
-    ? 0
-    : keywordCharIndexOffset;
+  keywordCharIndexOffset = keywordCharIndexOffset === -1 ? 0 : keywordCharIndexOffset;
 
   return searchKeyword.split('').every((keywordChar, keywordCharIndex) => {
     const datasheetIdChar = datasheetId[keywordCharIndexOffset + keywordCharIndex];
-    return datasheetIdChar && (
-      datasheetIdChar === 'x' || keywordChar === datasheetIdChar.toLowerCase()
+    return (
+      datasheetIdChar && (datasheetIdChar === 'x' || keywordChar === datasheetIdChar.toLowerCase())
     );
   });
 };
 
 export const matchDatasheetWithSearchKeywords = (
-  datasheetId: DatasheetIdT,
+  datasheetId: DatasheetId,
   searchKeywords: string[]
 ): boolean =>
   searchKeywords.every(searchKeyword =>

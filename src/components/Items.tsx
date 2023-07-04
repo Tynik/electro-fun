@@ -1,32 +1,26 @@
 import React from 'react';
 import { Link as RouterLink, useHistory } from 'react-router-dom';
-import {
-  Grid,
-  Card,
-  Button,
-  CardActionArea,
-  CardHeader
-} from '@mui/material';
+import { Grid, Card, Button, CardActionArea, CardHeader } from '@mui/material';
 import { ExpandMore as ExpandMoreIcon } from '@mui/icons-material';
 
-import type { ItemT, ItemsT } from '~/types';
+import type { Item, Items } from '~/types';
 
 import { DbContext } from '~/contexts';
 import { NO_IMAGE } from '~/constants';
 import { CCardMedia } from '~/components';
 
-export const getItemMainImageSrc = (item: ItemT) => {
+export const getItemMainImageSrc = (item: Item) => {
   if (!item.images || !item.images.length) {
     return NO_IMAGE;
   }
   return item.images[0].src;
 };
 
-export type ItemsProps = {
-  items: ItemsT
-}
+export type ItemsListProps = {
+  items: Items;
+};
 
-export const Items = ({ items }: ItemsProps) => {
+export const ItemsList = ({ items }: ItemsListProps) => {
   const history = useHistory();
 
   const { isNextPage, loadNextPage } = React.useContext(DbContext);
@@ -40,24 +34,13 @@ export const Items = ({ items }: ItemsProps) => {
   return (
     <Grid role={'list'} spacing={2} justifyContent={'center'} container>
       {items.map(item => (
-        <Grid
-          key={item.id}
-          role={'listitem'}
-          sx={{ maxWidth: '345px', width: '100%' }}
-          item
-        >
+        <Grid key={item.id} role={'listitem'} sx={{ maxWidth: '345px', width: '100%' }} item>
           <Card
             sx={{ width: '100%' }}
-            onKeyPress={(e) =>
-              onItemKeyPress(`/item/${item.id}`, e)
-            }
+            onKeyPress={e => onItemKeyPress(`/item/${item.id}`, e)}
             tabIndex={0}
           >
-            <CardActionArea
-              component={RouterLink}
-              to={`/item/${item.id}`}
-              hrefLang={item.lang}
-            >
+            <CardActionArea component={RouterLink} to={`/item/${item.id}`} hrefLang={item.lang}>
               <CardHeader
                 title={item.title}
                 subheader={item.subtitle}
@@ -65,10 +48,7 @@ export const Items = ({ items }: ItemsProps) => {
                 subheaderTypographyProps={{ variant: 'subtitle2' }}
               />
 
-              <CCardMedia
-                src={getItemMainImageSrc(item)}
-                alt={item.title}
-              />
+              <CCardMedia src={getItemMainImageSrc(item)} alt={item.title} />
             </CardActionArea>
           </Card>
         </Grid>
@@ -79,10 +59,10 @@ export const Items = ({ items }: ItemsProps) => {
           <Button
             onClick={loadNextPage}
             disabled={!isNextPage()}
-            startIcon={<ExpandMoreIcon/>}
+            startIcon={<ExpandMoreIcon />}
             variant={'outlined'}
           >
-            Показать больше
+            Show More
           </Button>
         </Grid>
       )}

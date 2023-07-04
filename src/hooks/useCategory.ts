@@ -1,14 +1,14 @@
 import React from 'react';
 
-import type { CategoryIdT } from '~/types';
+import type { CategoryId } from '~/types';
 
 import { DbContext } from '~/contexts';
 
-export const useCategory = (categoryId: CategoryIdT) => {
+export const useCategory = (categoryId: CategoryId) => {
   const { db } = React.useContext(DbContext);
 
-  return React.useMemo(() =>
-      db.categories.find(category => category.id === categoryId),
+  return React.useMemo(
+    () => db.categories.find(category => category.id === categoryId),
     [db, categoryId]
   );
-}
+};

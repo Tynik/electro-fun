@@ -1,23 +1,16 @@
 import React from 'react';
 import { useHistory } from 'react-router';
-import {
-  FormLabel,
-  RadioGroup,
-  FormControlLabel,
-  Radio,
-  Chip,
-  FormControl
-} from '@mui/material';
+import { FormLabel, RadioGroup, FormControlLabel, Radio, Chip, FormControl } from '@mui/material';
 
-import type { ItemT } from '~/types';
+import type { Item } from '~/types';
 
 import { UserContext } from '~/contexts';
 import { useQueryParams } from '~/utils/router';
 import { getItemDefaultOption } from '~/helpers';
 
 export type ItemInfoOptionsProps = {
-  item: ItemT
-}
+  item: Item;
+};
 
 export const ItemInfoOptions = ({ item }: ItemInfoOptionsProps) => {
   const history = useHistory();
@@ -30,23 +23,21 @@ export const ItemInfoOptions = ({ item }: ItemInfoOptionsProps) => {
 
   const itemOptionsInBasket = basket.items[item.id] || {};
 
-  const defaultItemOptionId = React.useMemo(() =>
-    selectedItemOptionId || getItemDefaultOption(item),
+  const defaultItemOptionId = React.useMemo(
+    () => selectedItemOptionId || getItemDefaultOption(item),
     []
   );
 
   const onSelectOption = (e: React.ChangeEvent<HTMLInputElement>) => {
     const queryParams = new URLSearchParams({
-      optionId: (e.target as HTMLInputElement).value
+      optionId: (e.target as HTMLInputElement).value,
     });
     history.replace(`?${queryParams}`);
   };
 
   return (
     <FormControl component={'fieldset'}>
-      <FormLabel component={'legend'}>
-        Варианты
-      </FormLabel>
+      <FormLabel component={'legend'}>Options</FormLabel>
 
       <RadioGroup
         defaultValue={defaultItemOptionId}
@@ -58,7 +49,7 @@ export const ItemInfoOptions = ({ item }: ItemInfoOptionsProps) => {
           <FormControlLabel
             key={optionId}
             value={optionId}
-            label={(
+            label={
               <>
                 {item.options[optionId].name}
 
@@ -71,8 +62,8 @@ export const ItemInfoOptions = ({ item }: ItemInfoOptionsProps) => {
                   />
                 )}
               </>
-            )}
-            control={<Radio size={'small'} sx={{ padding: 1 }}/>}
+            }
+            control={<Radio size={'small'} sx={{ padding: 1 }} />}
           />
         ))}
       </RadioGroup>

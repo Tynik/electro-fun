@@ -1,20 +1,20 @@
 import type {
-  ItemT,
-  ItemFeatureT,
-  DbItemFeaturesT,
-  CategoryIdT,
-  ItemOptionIdT,
-  ApplicationIdT,
-  ManufacturerIdT
+  Item,
+  ItemFeature,
+  DbItemFeatures,
+  CategoryId,
+  ItemOptionId,
+  ApplicationId,
+  ManufacturerId,
 } from '~/types';
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
 import { checkSearchKeyword } from '~/helpers';
 
 export const matchItemWithSearchKeyword = (
-  item: ItemT,
+  item: Item,
   searchKeyword: string,
-  applicationIds: ApplicationIdT[],
-  manufacturerIds: ManufacturerIdT[]
+  applicationIds: ApplicationId[],
+  manufacturerIds: ManufacturerId[]
 ): boolean => {
   let itemIsMatched = checkSearchKeyword(item.title, searchKeyword);
 
@@ -28,9 +28,11 @@ export const matchItemWithSearchKeyword = (
     itemIsMatched ||= checkSearchKeyword(item.seo.description, searchKeyword);
 
     itemIsMatched ||= item.seo.keywords.split(',').some(seoKeyword =>
-      seoKeyword.trim().toLowerCase().split('-').some(seoKeywordPart =>
-        seoKeywordPart.startsWith(searchKeyword)
-      )
+      seoKeyword
+        .trim()
+        .toLowerCase()
+        .split('-')
+        .some(seoKeywordPart => seoKeywordPart.startsWith(searchKeyword))
     );
   }
 
@@ -66,29 +68,27 @@ export const matchItemWithSearchKeyword = (
 };
 
 export const matchItemWithSearchKeywords = (
-  item: ItemT,
+  item: Item,
   searchKeywords: string[],
-  applicationIds: ApplicationIdT[],
-  manufacturerIds: ManufacturerIdT[]
+  applicationIds: ApplicationId[],
+  manufacturerIds: ManufacturerId[]
 ): boolean =>
   searchKeywords.every(searchKeyword =>
-    matchItemWithSearchKeyword(
-      item, searchKeyword, applicationIds, manufacturerIds
-    )
+    matchItemWithSearchKeyword(item, searchKeyword, applicationIds, manufacturerIds)
   );
 
 export const matchItemWithSearch = (
-  item: ItemT,
+  item: Item,
   {
     searchKeywords,
     categoryId,
     applicationIds,
-    manufacturerIds
+    manufacturerIds,
   }: {
-    searchKeywords: string[]
-    categoryId: CategoryIdT
-    applicationIds: ApplicationIdT[],
-    manufacturerIds: ManufacturerIdT[],
+    searchKeywords: string[];
+    categoryId: CategoryId;
+    applicationIds: ApplicationId[];
+    manufacturerIds: ManufacturerId[];
   }
 ): boolean => {
   // show all items by default if nothing was passed
@@ -108,12 +108,10 @@ export const matchItemWithSearch = (
   return itemIsMatched;
 };
 
-export const getItemDefaultOption = (item: ItemT) =>
-  item.options && Object.keys(item.options).find(optionId =>
-    item.options[optionId].default
-  );
+export const getItemDefaultOption = (item: Item) =>
+  item.options && Object.keys(item.options).find(optionId => item.options[optionId].default);
 
-export const getItemPrice = (item: ItemT, optionId: ItemOptionIdT) => {
+export const getItemPrice = (item: Item, optionId: ItemOptionId) => {
   if (!item.price) {
     return;
   }
@@ -123,7 +121,7 @@ export const getItemPrice = (item: ItemT, optionId: ItemOptionIdT) => {
   return item.price[optionId];
 };
 
-export const getItemAvailability = (item: ItemT, optionId: ItemOptionIdT) => {
+export const getItemAvailability = (item: Item, optionId: ItemOptionId) => {
   if (!item.availability) {
     return 0;
   }
@@ -133,7 +131,7 @@ export const getItemAvailability = (item: ItemT, optionId: ItemOptionIdT) => {
   return item.availability[optionId];
 };
 
-export const getItemAvailabilitySEOSchema = (item: ItemT, optionId: ItemOptionIdT) => {
+export const getItemAvailabilitySEOSchema = (item: Item, optionId: ItemOptionId) => {
   const availability = getItemAvailability(item, optionId);
 
   if (availability) {
@@ -145,7 +143,7 @@ export const getItemAvailabilitySEOSchema = (item: ItemT, optionId: ItemOptionId
   return `${SEO_SCHEMA_BASE_URL}/OutOfStock`;
 };
 
-export const sortItemFeatures = (allFeatures: DbItemFeaturesT, features: ItemFeatureT[]) =>
+export const sortItemFeatures = (allFeatures: DbItemFeatures, features: ItemFeature[]) =>
   features.sort((featureA, featureB) => {
     const featSecRefIdA = allFeatures[featureA.refId].featSecRefId;
     const featSecRefIdB = allFeatures[featureB.refId].featSecRefId;
@@ -159,9 +157,7 @@ export const sortItemFeatures = (allFeatures: DbItemFeaturesT, features: ItemFea
     return featSecRefIdA - featSecRefIdB;
   });
 
-export const getItemRatingIconName = (item: ItemT, iconNumber: number) => {
+export const getItemRatingIconName = (item: Item, iconNumber: number) => {
   const diff = item.rating - (iconNumber + 1);
-  return diff >= 0
-    ? 'star'
-    : (diff >= -0.5 ? 'starHalf' : 'starBorder');
+  return diff >= 0 ? 'star' : diff >= -0.5 ? 'starHalf' : 'starBorder';
 };

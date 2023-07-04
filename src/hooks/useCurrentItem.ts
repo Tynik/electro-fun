@@ -1,16 +1,11 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-import type { ItemT } from '~/types';
+import type { Item } from '~/types';
 
 import { DbContext } from '~/contexts';
 import { getItemPrice } from '~/helpers';
-import {
-  useJsonDbSearch,
-  useStaticErrors,
-  useSelectedItemOptionId,
-  useItemImages
-} from '~/hooks';
+import { useJsonDbSearch, useStaticErrors, useSelectedItemOptionId, useItemImages } from '~/hooks';
 
 export const useCurrentItem = () => {
   const { id } = useParams<{ id: string }>();
@@ -18,7 +13,7 @@ export const useCurrentItem = () => {
   const { db, loadNextDbPart } = React.useContext(DbContext);
   const { search, foundItems } = useJsonDbSearch(db, loadNextDbPart);
 
-  const [item, setItem] = React.useState<ItemT>(null);
+  const [item, setItem] = React.useState<Item>(null);
   const { errors, setErrors, printErrors } = useStaticErrors();
 
   const selectedItemOptionId = useSelectedItemOptionId(item);
@@ -40,20 +35,18 @@ export const useCurrentItem = () => {
     }
   }, [foundItems]);
 
-  const seo = React.useMemo(() => (
-    {
-      ...(
-        item && {
-          ...(
-            item.seo || {}
-          ),
-          title: item.seo && item.seo.title
+  const seo = React.useMemo(
+    () => ({
+      ...(item && {
+        ...(item.seo || {}),
+        title:
+          item.seo && item.seo.title
             ? `${db.seo.title} - ${item.seo.title}`
-            : `${db.seo.title} - ${item.title}`
-        }
-      )
-    }
-  ), [db, item]);
+            : `${db.seo.title} - ${item.title}`,
+      }),
+    }),
+    [db, item]
+  );
 
   const price = item && getItemPrice(item, selectedItemOptionId);
 
@@ -66,6 +59,6 @@ export const useCurrentItem = () => {
     images,
     seo,
     errors,
-    printErrors
+    printErrors,
   };
 };

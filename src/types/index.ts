@@ -1,127 +1,136 @@
 import {
-  ApplicationIdT,
-  DatasheetIdT,
-  DocIdT,
-  FeatureSectionIdT,
-  FeatureIdT,
-  CategoryIdT,
-  ManufacturerIdT
-} from './ids';
+  ApplicationId,
+  DatasheetId,
+  DocId,
+  FeatureSectionId,
+  FeatureId,
+  CategoryId,
+  ManufacturerId,
+} from './ids.types';
 
-import { ItemT, ItemFeatureValueTypeT } from './item';
+import { Item, ItemFeatureValueType } from './item.types';
 
-export * from './ids';
-export * from './item';
-export * from './user';
+export * from './ids.types';
+export * from './item.types';
+export * from './user.types';
 
-export type ArticleT = {}
+export type Article = {};
 
-export type SeoT = {
-  title: string
-  description: string
-  keywords: string
+export type Seo = {
+  title: string;
+  description: string;
+  keywords: string;
+};
+
+export type Category = {
+  id: CategoryId;
+  name: string;
+  icon: string;
+};
+
+export type Manufacturer = {
+  name: string;
+  url?: string;
+  logo?: string;
+};
+
+export type Application = string;
+export type Applications = Record<ApplicationId, Application>;
+
+export type FeatureDefinitionSuffix = string | Record<ItemFeatureValueType, string>;
+
+export enum FeatureTypeId {
+  bool,
 }
 
-export type CategoryT = {
-  id: CategoryIdT
-  name: string
-  icon: string
-}
+export type FeatureDefinition = {
+  name: string;
+  suffix?: FeatureDefinitionSuffix;
+  categories?: CategoryId[];
+  featSecRefId?: FeatureSectionId;
+  type?: FeatureTypeId;
+};
 
-export type ManufacturerT = {
-  name: string
-  url?: string
-  logo?: string
-}
+export type DbItemFeatures = Record<FeatureId, FeatureDefinition>;
 
-export type ApplicationT = string
-export type ApplicationsT = Record<ApplicationIdT, ApplicationT>
+export type AbbreviationName = string;
 
-export type FeatureDefinitionSuffixT = string | Record<ItemFeatureValueTypeT, string>
+export type Abbreviations = Record<
+  AbbreviationName,
+  {
+    url: string;
+    lang: string;
+  }
+>;
 
-export enum FeatureTypeIdT {
-  bool
-}
+export type ClarificationName = string;
 
-export type FeatureDefinitionT = {
-  name: string
-  suffix?: FeatureDefinitionSuffixT
-  categories?: CategoryIdT[]
-  featSecRefId?: FeatureSectionIdT
-  type?: FeatureTypeIdT
-}
+export type Clarifications = Record<
+  ClarificationName,
+  {
+    url: string;
+    lang: string;
+  }
+>;
 
-export type DbItemFeaturesT = Record<FeatureIdT, FeatureDefinitionT>
+export type DbMeta = {
+  parts: number;
+};
 
-export type AbbreviationNameT = string
+export type Datasheet = {
+  url: string;
+  lang: string;
+  manufacturerId?: ManufacturerId;
+  version?: string;
+  description?: string;
+};
 
-export type AbbreviationsT = Record<AbbreviationNameT, {
-  url: string
-  lang: string
-}>
+export type Datasheets = Record<DatasheetId, Datasheet>;
 
-export type ClarificationNameT = string
-
-export type ClarificationsT = Record<ClarificationNameT, {
-  url: string
-  lang: string
-}>
-
-export type DbMetaT = {
-  parts: number
-}
-
-export type DatasheetT = {
-  url: string
-  lang: string
-  manufacturerId?: ManufacturerIdT
-  version?: string
-  description?: string
-}
-
-export type FoundDatasheetT = DatasheetT & {
+export type FoundDatasheet = Datasheet & {
   // when datasheets should be sorted
-  priority?: number
-}
+  priority?: number;
+};
 
-export type DatasheetsT = Record<DatasheetIdT, DatasheetT>
+export type FoundDatasheets = Record<DatasheetId, FoundDatasheet>;
 
-export type FoundDatasheetsT = Record<DatasheetIdT, FoundDatasheetT>
+export type Doc = {
+  name: string;
+  url: string;
+};
 
-export type DocT = {
-  name: string
-  url: string
-}
-
-export type DocsT = Record<DocIdT, DocT>
+export type Docs = Record<DocId, Doc>;
 
 export type MenuItemT = {
-  name: string
-  url: string
-  icon: string
-}
+  name: string;
+  url: string;
+  icon: string;
+};
 
-export type DbT = {
-  siteName: string
-  siteURL: string
-  seo: SeoT
-  abbreviations: AbbreviationsT
-  clarifications: ClarificationsT
-  menu: MenuItemT[]
-  articles: ArticleT[]
-  categories: CategoryT[]
-  featureSections: Record<FeatureSectionIdT, string>
-  optionTypes: Record<FeatureTypeIdT, {
-    y: string
-    n: string
-  }>
-  itemFeatures: DbItemFeaturesT
-  items: ItemT[]
-  datasheets: DatasheetsT
-  manufacturers: Record<ManufacturerIdT, ManufacturerT>
-  docs: DocsT
-  applications: ApplicationsT
+export type Db = {
+  siteName: string;
+  siteURL: string;
+  seo: Seo;
+  abbreviations: Abbreviations;
+  clarifications: Clarifications;
+  menu: MenuItemT[];
+  articles: Article[];
+  categories: Category[];
+  featureSections: Record<FeatureSectionId, string>;
+  optionTypes: Record<
+    FeatureTypeId,
+    {
+      y: string;
+      n: string;
+    }
+  >;
+  itemFeatures: DbItemFeatures;
+  items: Item[];
+  datasheets: Datasheets;
+  manufacturers: Record<ManufacturerId, Manufacturer>;
+  docs: Docs;
+  applications: Applications;
   footer: {
-    bottom: string
-  }
-}
+    bottom: string;
+  };
+};

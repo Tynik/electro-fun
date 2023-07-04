@@ -1,30 +1,21 @@
 import React from 'react';
-import {
-  Typography,
-  AvatarGroup,
-  Avatar
-} from '@mui/material';
+import { Typography, AvatarGroup, Avatar } from '@mui/material';
 
-import type { ItemContributorT } from '~/types';
+import type { ItemContributor } from '~/types';
 
 import { ExternalLink } from '~/components';
 import { getItemContributorAvatarSrc } from '~/utils';
 
 export type ItemInfoContributorsProps = {
-  contributors: ItemContributorT[]
-}
+  contributors: ItemContributor[];
+};
 
 export const ItemInfoContributors = ({ contributors }: ItemInfoContributorsProps) => {
   return (
     <>
-      <Typography variant={'overline'}>
-        Контрибьюторы
-      </Typography>
+      <Typography variant={'overline'}>Contributors</Typography>
 
-      <AvatarGroup
-        max={10}
-        sx={{ display: 'flex', justifyContent: 'center' }}
-      >
+      <AvatarGroup max={10} sx={{ display: 'flex', justifyContent: 'center' }}>
         {contributors.map(contributor => (
           <ExternalLink
             key={contributor.name}
@@ -33,10 +24,7 @@ export const ItemInfoContributors = ({ contributors }: ItemInfoContributorsProps
             title={contributor.name}
             sx={{ textDecoration: 'none' }}
           >
-            <Avatar
-              alt={contributor.name}
-              src={getItemContributorAvatarSrc(contributor.src)}
-            />
+            <Avatar alt={contributor.name} src={getItemContributorAvatarSrc(contributor.src)} />
           </ExternalLink>
         ))}
       </AvatarGroup>

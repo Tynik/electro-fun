@@ -1,25 +1,18 @@
 import React from 'react';
-import {
-  Alert,
-  Box,
-  Typography,
-  Button,
-} from '@mui/material';
-import {
-  Refresh as RefreshIcon
-} from '@mui/icons-material';
+import { Alert, Box, Typography, Button } from '@mui/material';
+import { Refresh as RefreshIcon } from '@mui/icons-material';
 
-import type { ItemsT, FoundDatasheetsT } from '~/types';
+import type { Items, FoundDatasheets } from '~/types';
 
-import { Loader, Items, Datasheets } from '~/components';
+import { Loader, ItemsList, DatasheetsList } from '~/components';
 
 export type SearchResultsPageProps = {
-  items: ItemsT
-  foundDatasheets?: FoundDatasheetsT
-  foundItems?: ItemsT
-  isSearching?: boolean
-  onSearchReset?: () => void
-}
+  items: Items;
+  foundDatasheets?: FoundDatasheets;
+  foundItems?: Items;
+  isSearching?: boolean;
+  onSearchReset?: () => void;
+};
 
 export const SearchResultsPage = (props: SearchResultsPageProps) => {
   const {
@@ -31,36 +24,32 @@ export const SearchResultsPage = (props: SearchResultsPageProps) => {
   } = props;
 
   if (isSearching) {
-    return <Loader label={'Поиск...'}/>;
+    return <Loader label={'Поиск...'} />;
   }
 
   return (
     <>
       {foundItems && onSearchReset && (
-        <Button
-          size={'small'}
-          startIcon={<RefreshIcon/>}
-          onClick={onSearchReset}
-        >
-          Сбросить поиск
+        <Button size={'small'} startIcon={<RefreshIcon />} onClick={onSearchReset}>
+          Reset search
         </Button>
       )}
 
       {foundItems !== null && !foundItems.length && !Object.keys(foundDatasheets).length && (
-        <Alert severity={'info'}>Ничего не найдено</Alert>
+        <Alert severity={'info'}>Nothing found</Alert>
       )}
 
       <Box sx={{ marginTop: 2 }}>
-        <Items items={foundItems ? foundItems : items}/>
+        <ItemsList items={foundItems ? foundItems : items} />
       </Box>
 
       {foundDatasheets && Object.keys(foundDatasheets).length > 0 && (
         <Box sx={{ marginTop: 2 }}>
           <Typography variant={'h6'} role={'heading'} aria-level={2}>
-            Найденные Datasheets
+            Found Datasheets
           </Typography>
 
-          <Datasheets datasheets={foundDatasheets}/>
+          <DatasheetsList datasheets={foundDatasheets} />
         </Box>
       )}
     </>

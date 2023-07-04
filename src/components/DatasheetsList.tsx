@@ -1,19 +1,15 @@
 import React from 'react';
-import {
-  List,
-  ListItem,
-  ListItemText,
-} from '@mui/material';
+import { List, ListItem, ListItemText } from '@mui/material';
 
-import { FoundDatasheetsT } from '~/types';
+import { FoundDatasheets } from '~/types';
 import { sortDatasheets } from '~/helpers';
 import { ExternalLink } from '~/components';
 
-export type DatasheetsProps = {
-  datasheets: FoundDatasheetsT
-}
+export type DatasheetsListProps = {
+  datasheets: FoundDatasheets;
+};
 
-export const Datasheets = ({ datasheets }: DatasheetsProps) => {
+export const DatasheetsList = ({ datasheets }: DatasheetsListProps) => {
   const sortedDatasheetIds = sortDatasheets(datasheets);
 
   return (
@@ -39,5 +35,5 @@ export const Datasheets = ({ datasheets }: DatasheetsProps) => {
         </ListItem>
       ))}
     </List>
-  )
+  );
 };

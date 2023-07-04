@@ -1,36 +1,29 @@
 import React from 'react';
 
-import type { ItemT } from '~/types';
+import type { Item } from '~/types';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
 import { OfferSEO, ItemManufacturer } from '~/helpers';
 import { getItemContributorAvatarSrc } from '~/utils';
 
 export type ProductSEOProps = {
-  item: ItemT
-}
+  item: Item;
+};
 
 export const ProductSEO = ({ item }: ProductSEOProps) => {
   return (
-    <div
-      itemType={`${SEO_SCHEMA_BASE_URL}/Product`}
-      itemScope
-    >
-      <meta itemProp={'name'} content={item.title}/>
+    <div itemType={`${SEO_SCHEMA_BASE_URL}/Product`} itemScope>
+      <meta itemProp={'name'} content={item.title} />
 
       {(item.images || []).map(image => (
-        <meta key={image.src} itemProp={'image'} content={image.src}/>
+        <meta key={image.src} itemProp={'image'} content={image.src} />
       ))}
 
-      {item.content && (
-        <meta itemProp={'description'} content={item.content}/>
-      )}
+      {item.content && <meta itemProp={'description'} content={item.content} />}
 
-      <ItemManufacturer item={item}/>
+      <ItemManufacturer item={item} />
 
-      {item.price && (
-        <OfferSEO item={item}/>
-      )}
+      {item.price && <OfferSEO item={item} />}
 
       {(item.contributors || []).map(contributor => (
         <div
@@ -39,8 +32,8 @@ export const ProductSEO = ({ item }: ProductSEOProps) => {
           itemProp={'contributor'}
           itemScope
         >
-          <meta itemProp={'name'} content={contributor.name}/>
-          <meta itemProp={'image'} content={getItemContributorAvatarSrc(contributor.src)}/>
+          <meta itemProp={'name'} content={contributor.name} />
+          <meta itemProp={'image'} content={getItemContributorAvatarSrc(contributor.src)} />
         </div>
       ))}
     </div>

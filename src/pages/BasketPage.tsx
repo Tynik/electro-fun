@@ -1,25 +1,14 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import {
-  Grid,
-  Typography,
-  Stepper,
-  Step,
-  StepLabel
-} from '@mui/material';
+import { Grid, Typography, Stepper, Step, StepLabel } from '@mui/material';
 
 import { DbContext, UserContext } from '~/contexts';
-import {
-  BackButton,
-  Loader,
-  BasketStep1,
-  BasketStep2
-} from '~/components';
+import { BackButton, Loader, BasketStep1, BasketStep2 } from '~/components';
 import { useJsonDbSearch } from '~/hooks';
 import { getItemPrice } from '~/helpers';
 import { useQueryParams } from '~/utils';
 
-export type BasketPageProps = {}
+export type BasketPageProps = {};
 
 export const BasketPage = (props: BasketPageProps) => {
   const history = useHistory();
@@ -30,7 +19,9 @@ export const BasketPage = (props: BasketPageProps) => {
 
   const [step, setStep] = React.useState<number>(+queryStep || 0);
 
-  const { user: { basket } } = React.useContext(UserContext);
+  const {
+    user: { basket },
+  } = React.useContext(UserContext);
 
   React.useEffect(() => {
     history.replace(`?step=${step}`);
@@ -40,9 +31,13 @@ export const BasketPage = (props: BasketPageProps) => {
     search({ ids: Object.keys(basket.items) });
   }, [basket.items]);
 
-  const totalPrice = React.useMemo(() =>
-      items?.reduce((totalPrice, item) =>
-          totalPrice + Object.keys(basket.items[item.id]).reduce((price, optionId) =>
+  const totalPrice = React.useMemo(
+    () =>
+      items?.reduce(
+        (totalPrice, item) =>
+          totalPrice +
+          Object.keys(basket.items[item.id]).reduce(
+            (price, optionId) =>
               price + getItemPrice(item, optionId) * basket.items[item.id][optionId],
             0
           ),
@@ -52,19 +47,17 @@ export const BasketPage = (props: BasketPageProps) => {
   );
 
   if (items === null) {
-    return <Loader/>;
+    return <Loader />;
   }
 
   return (
     <Grid spacing={2} container>
       <Grid xs={12} item>
-        <BackButton/>
+        <BackButton />
       </Grid>
 
       <Grid xs={12} item>
-        <Typography variant={'h5'}>
-          Корзина
-        </Typography>
+        <Typography variant={'h5'}>Cart</Typography>
       </Grid>
 
       <Grid spacing={2} item container>
@@ -72,28 +65,18 @@ export const BasketPage = (props: BasketPageProps) => {
           <Grid xs={12} md={9} item>
             <Stepper activeStep={step}>
               <Step>
-                <StepLabel>Товары</StepLabel>
+                <StepLabel>Items</StepLabel>
               </Step>
               <Step>
-                <StepLabel>Детали доставки</StepLabel>
+                <StepLabel>Shipping Details</StepLabel>
               </Step>
             </Stepper>
           </Grid>
         </Grid>
 
         <Grid xs={12} spacing={2} container item>
-          <Grid
-            xs={12} md={9}
-            spacing={2}
-            direction={'column'}
-            container
-            item
-          >
-            <BasketStep1
-              isActive={step === 0}
-              items={items}
-              onNext={() => setStep(step + 1)}
-            />
+          <Grid xs={12} md={9} spacing={2} direction={'column'} container item>
+            <BasketStep1 isActive={step === 0} items={items} onNext={() => setStep(step + 1)} />
 
             <BasketStep2
               isActive={step === 1}
@@ -104,7 +87,8 @@ export const BasketPage = (props: BasketPageProps) => {
           </Grid>
 
           <Grid
-            xs={12} md={3}
+            xs={12}
+            md={3}
             alignContent={'center'}
             alignItems={'center'}
             flexDirection={'column'}
@@ -113,13 +97,13 @@ export const BasketPage = (props: BasketPageProps) => {
           >
             <Grid item>
               <Typography variant={'overline'} component={'div'}>
-                Общая сумма заказа:
+                Total Amount:
               </Typography>
             </Grid>
 
             <Grid item>
               <Typography variant={'h5'} component={'div'}>
-                {totalPrice.toFixed(2)} UAH
+                {totalPrice.toFixed(2)} £
               </Typography>
             </Grid>
           </Grid>

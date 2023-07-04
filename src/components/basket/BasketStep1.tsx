@@ -1,22 +1,22 @@
 import React from 'react';
 import { Button, Grid, Alert, Stack } from '@mui/material';
 
-import type { ItemT } from '~/types';
+import type { Item } from '~/types';
 
 import { UserContext } from '~/contexts';
 import { BasketItem } from '~/components';
 import { getIcon } from '~/utils';
 
 export type BasketStep1Props = {
-  isActive: boolean
-  items: ItemT[]
-  onNext: () => void
-}
+  isActive: boolean;
+  items: Item[];
+  onNext: () => void;
+};
 
 const BasketStep1 = ({ isActive, items, onNext }: BasketStep1Props) => {
   const {
     user: { basket },
-    clearBasket
+    clearBasket,
   } = React.useContext(UserContext);
 
   if (!isActive) {
@@ -27,31 +27,27 @@ const BasketStep1 = ({ isActive, items, onNext }: BasketStep1Props) => {
     <>
       {!items.length && (
         <Grid item>
-          <Alert severity={'info'}>
-            Корзина пуста
-          </Alert>
+          <Alert severity={'info'}>Cart is empty</Alert>
         </Grid>
       )}
 
-      {items.map(item => Object.keys(basket.items[item.id] || {}).map(optionId =>
-        <Grid key={`${item.id}-${optionId}`} item>
-          <BasketItem item={item} optionId={optionId}/>
-        </Grid>
-      ))}
+      {items.map(item =>
+        Object.keys(basket.items[item.id] || {}).map(optionId => (
+          <Grid key={`${item.id}-${optionId}`} item>
+            <BasketItem item={item} optionId={optionId} />
+          </Grid>
+        ))
+      )}
 
       <Grid item>
-        <Stack
-          spacing={2}
-          direction={'row'}
-          sx={{ justifyContent: 'right' }}
-        >
+        <Stack spacing={2} direction={'row'} sx={{ justifyContent: 'right' }}>
           <Button
             onClick={clearBasket}
             disabled={!items.length}
             startIcon={getIcon('deleteForever')}
             variant={'outlined'}
           >
-            Очистить
+            Clear
           </Button>
 
           <Button
@@ -61,7 +57,7 @@ const BasketStep1 = ({ isActive, items, onNext }: BasketStep1Props) => {
             color={'success'}
             variant={'contained'}
           >
-            Далее
+            Next
           </Button>
         </Stack>
       </Grid>

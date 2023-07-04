@@ -69,40 +69,40 @@
   "items": [
     {
       "categoryId": 16,
-      "lang": "ru",
-      "title": "AMS1117 3.3 В",
-      "subtitle": "Стабилизатор напряжения",
+      "lang": "en",
+      "title": "AMS1117 3.3V",
+      "subtitle": "Voltage Regulator",
       "seo": {
-        "description": "AMS1117 - стабилизатор напряжения 5 В в 3.3 В",
-        "keywords": "ams1117, стабилизатор, 5в, 3.3в"
+        "description": "AMS1117 - 5V to 3.3V Voltage Regulator",
+        "keywords": "ams1117, voltage regulator, 5v, 3.3v"
       },
       "buy": true,
       "price": 3,
       "availability": 9,
       "datasheetId": "AMS1117",
-      "content": "<p>Регулируемые и фиксированные стабилизаторы напряжения серии AMS1117 предназначены для обеспечения выходного тока до 1 А и работы до 1 В между входами и выходами. Падение напряжения устройства гарантировано до 1.3 В при максимальном выходном токе и уменьшается при более низких токах нагрузки.\n\nПодстройка на кристалле регулирует опорное напряжение до 1%. Ограничение по току также подстраивается, сводя к минимуму нагрузку в условиях перегрузки как на стабилизатор, так и на схему источника питания.\n\nУстройства AMS1117 совместимы по выводам с другими 3-x контактными регуляторами SCSI и предлагаются в низкопрофильном корпусе SOT-223 для поверхностного монтажа, в корпусе SOIC 8L и в пластиковом корпусе TO-252 (DPAK).</p>",
+      "content": "<p>The adjustable and fixed voltage regulators of the AMS1117 series are designed to provide an output current of up to 1A and operate up to 1V between inputs and outputs. The device's dropout voltage is guaranteed to be as low as 1.3V at maximum output current and decreases at lower load currents.\n\nOn-chip trimming adjusts the reference voltage to within 1%. Current limit is also trimmed, minimizing the stress on both the regulator and the power source circuitry under overload conditions.\n\nAMS1117 devices are pin-compatible with other 3-pin SCSI regulators and are offered in a low-profile SOT-223 surface-mount package, SOIC 8L package, and a plastic TO-252 (DPAK) package.</p>",
       "images": [
         {
           "src": "/photos/AMS1117-3.3V-1.webp",
-          "alt": "AMS1117 3.3 В - внешний вид"
+          "alt": "AMS1117 3.3V - Exterior View"
         },
         {
           "src": "/photos/AMS1117-3.3V-2.webp",
-          "alt": "AMS1117 3.3 В - схема подключения"
+          "alt": "AMS1117 3.3V - Connection Diagram"
         }
       ],
       "features": [
         {
           "refId": 13,
-          "value": "4.75 - 12 В"
+          "value": "4.75 - 12V"
         },
         {
           "refId": 14,
-          "value": "3.235 - 3.365 В"
+          "value": "3.235 - 3.365V"
         },
         {
           "refId": 15,
-          "value": "до 1 А"
+          "value": "Up to 1A"
         },
         {
           "refId": 42,
@@ -116,10 +116,10 @@
     {
       "categoryId": 15,
       "title": "MOC3021",
-      "subtitle": "Оптопара до 400 В в пике",
+      "subtitle": "Optoisolator up to 400V peak",
       "seo": {
-        "description": "MOC3021 - оптоизолятор для контроля затемнения или фазы до 400 В в пике",
-        "keywords": "moc3021, sop6, dip6, smd, оптопара, оптоизолятор, dimming, phase"
+        "description": "MOC3021 - Optoisolator for Dimming or Phase Control up to 400V peak",
+        "keywords": "moc3021, sop6, dip6, smd, optocoupler, optoisolator, dimming, phase"
       },
       "buy": true,
       "price": 7,
@@ -132,38 +132,38 @@
       "images": [
         {
           "src": "/photos/MOC3021-SOP6-1.webp",
-          "alt": "MOC3021 SOP6 - внешний вид",
+          "alt": "MOC3021 SOP6 - Exterior View",
           "optionId": "1"
         },
         {
           "src": "/photos/MOC3021-DIP6-1.webp",
-          "alt": "MOC3021 DIP6 - внешний вид",
+          "alt": "MOC3021 DIP6 - Exterior View",
           "optionId": "2"
         },
         {
           "src": "/photos/MOC3021-SOP6-2.webp",
-          "alt": "MOC3021 SOP6 - корпус",
+          "alt": "MOC3021 SOP6 - Package",
           "optionId": "1"
         },
         {
           "src": "/photos/MOC3021-DIP6-2.webp",
-          "alt": "MOC3021 DIP6 - корпус",
+          "alt": "MOC3021 DIP6 - Package",
           "optionId": "2"
         },
         {
           "src": "/photos/MOC3021-3.webp",
-          "alt": "MOC3021 - схема подключения"
+          "alt": "MOC3021 - Connection Diagram"
         }
       ],
       "features": [
         {
           "refId": 13,
-          "value": "1.15 - 1.5 В",
-          "info": "При входном токе 20 мА"
+          "value": "1.15 - 1.5V",
+          "info": "At 20mA input current"
         },
         {
           "refId": 15,
-          "value": "до 1 А"
+          "value": "Up to 1A"
         },
         {
           "refId": 42,
@@ -177,22 +177,22 @@
         },
         {
           "refId": 93,
-          "value": "15 мА",
-          "info": "До 50 мА в пике"
+          "value": "15mA",
+          "info": "Up to 50mA peak"
         },
         {
           "refId": 92,
-          "value": "до 6 В"
+          "value": "Up to 6V"
         },
         {
           "refId": 94,
-          "value": "до 10 мкА",
-          "info": "При обратном напряжении в 6 В"
+          "value": "Up to 10µA",
+          "info": "At reverse voltage of 6V"
         },
         {
           "refId": 95,
-          "value": "до 5 кВ",
-          "info": "Среднее квадратическое. В пике 5 кВ * √2 ≈ 7 кВ"
+          "value": "Up to 5kV",
+          "info": "RMS. Peak value: 5kV * √2 ≈ 7kV"
         }
       ],
       "content": "",
@@ -212,12 +212,12 @@
     },
     {
       "categoryId": 17,
-      "lang": "ru",
+      "lang": "en",
       "title": "HLK-PM01",
-      "subtitle": "220 В в 5 В до 600 мА",
+      "subtitle": "220V to 5V at 600mA",
       "seo": {
-        "description": "HLK-PM01 - источник питания 5 В до 600 мА (3 Вт)",
-        "keywords": "hlk-pm01, hi-link, преобразование, 220в, 5в, 3вт, ac-dc, 600ма"
+        "description": "HLK-PM01 - power supply 5V at 600mA (3W)",
+        "keywords": "hlk-pm01, hi-link, conversion, 220V, 5V, 3W, ac-dc, 600mA"
       },
       "buy": true,
       "price": 75,
@@ -228,53 +228,53 @@
       "images": [
         {
           "src": "/photos/HLK-PM01-1.webp",
-          "alt": "HLK-PM01 - вид сверху"
+          "alt": "HLK-PM01 - top view"
         },
         {
           "src": "/photos/HLK-PM01-2.webp",
-          "alt": "HLK-PM01 - вид снизу"
+          "alt": "HLK-PM01 - bottom view"
         }
       ],
       "features": [
         {
           "refId": 13,
-          "value": "90 - 245 В",
-          "info": "Переменный ток"
+          "value": "90 - 245V",
+          "info": "AC input"
         },
         {
           "refId": 14,
-          "value": "5 В",
-          "info": "Постоянный ток"
+          "value": "5V",
+          "info": "DC output"
         },
         {
           "refId": 15,
-          "value": "до 0.6 А",
-          "info": "До 3 Вт"
+          "value": "up to 0.6A",
+          "info": "Up to 3W"
         },
         {
           "refId": 76,
-          "value": "34 x 20 x 15 мм",
-          "info": "+5 мм выводы"
+          "value": "34 x 20 x 15mm",
+          "info": "+5mm leads"
         },
         {
           "refId": 95,
-          "value": "до 3 кВ"
+          "value": "up to 3kV"
         },
         {
           "refId": 99,
-          "value": "20 г"
+          "value": "20g"
         }
       ],
       "externalLinks": [
         {
-          "name": "Официальная страница HLK-PM01",
+          "name": "Official HLK-PM01 Page",
           "url": "https://www.hlktech.com/en/Goods-12.html",
           "lang": "en",
           "icon": "hlktech.com.png",
           "iconAlt": "hlktech.com"
         },
         {
-          "name": "Пример схемы конвертации 230 В в 5/3.3 В",
+          "name": "Example of 230V to 5/3.3V Conversion Circuit",
           "url": "https://oshwlab.com/m.aliynik/HLK_PM01-33b4760fcdff46b6b71784304f89c379",
           "lang": "en",
           "icon": "oshwlab.com.ico",
@@ -284,12 +284,12 @@
     },
     {
       "categoryId": 13,
-      "lang": "ru",
-      "title": "AC-CT 0-100А 1:1000",
-      "subtitle": "Измерение переменного тока",
+      "lang": "en",
+      "title": "AC-CT 0-100A 1:1000",
+      "subtitle": "Measurement of Alternating Current",
       "seo": {
-        "description": "Трансформатор для измерения переменного тока",
-        "keywords": "трансформатор, ток, измерение, 100а"
+        "description": "Transformer for measuring alternating current",
+        "keywords": "transformer, current, measurement, 100A"
       },
       "buy": true,
       "price": 50,
@@ -297,103 +297,103 @@
       "images": [
         {
           "src": "/photos/AC-CT-0-100A-1.webp",
-          "alt": "AC-CT 0-100А - Внешний вид"
+          "alt": "AC-CT 0-100A - Exterior View"
         },
         {
           "src": "/photos/AC-CT-0-100A-2.webp",
-          "alt": "AC-CT 0-100А - Пример использования"
+          "alt": "AC-CT 0-100A - Example of Use"
         }
       ],
-      "warningContent": "<p>Измерение можно делать только по одной жиле провода</p>",
+      "warningContent": "<p>Measurement can only be done on one wire</p>",
       "features": [
         {
           "refId": 100,
-          "value": "15.2 мм"
+          "value": "15.2mm"
         }
       ]
     },
     {
       "categoryId": 18,
-      "lang": "ru",
-      "title": "74HC4051 (модуль)",
-      "subtitle": "8-канальный му-/дему-льтиплексор",
+      "lang": "en",
+      "title": "74HC4051 (Module)",
+      "subtitle": "8-Channel Analog Mux/Demux",
       "seo": {
-        "description": "74HC4051 - 8-канальный аналоговый мультиплексор/демультиплексор",
-        "keywords": "74hc4051, wcmcu-4051, 4051, мультиплексор, демультиплексор, 8-каналов, arduino, mux, demux",
-        "measurement": "8-каналов"
+        "description": "74HC4051 - 8-channel analog multiplexer/demultiplexer",
+        "keywords": "74hc4051, wcmcu-4051, 4051, multiplexer, demultiplexer, 8 channels, arduino, mux, demux",
+        "measurement": "8 channels"
       },
       "buy": true,
       "price": 25,
       "availability": 9,
       "datasheetId": "74HC4051xx",
-      "content": "<p>8-канальный модуль аналогового мультиплексора 74HC4051 можно использовать, когда в цепи имеется много аналоговых входов/выходов и в данном случае для выбора одного из 8 входов/выходов и перенаправление его сигнала на один вход/выход.</p>",
-      "warningContent": "<p>Напряжение на пинах входах/выходах или пинах выбора номера входа/выхода не должно превышать напряжения питания схемы.</p>",
+      "content": "<p>The 8-channel analog multiplexer module 74HC4051 can be used when there are multiple analog inputs/outputs in a circuit. In this case, it allows you to select one of the 8 inputs/outputs and route its signal to a single input/output.</p>",
+      "warningContent": "<p>The voltage on the input/output pins or the input/output selection pins should not exceed the power supply voltage of the circuit.</p>",
       "images": [
         {
           "src": "/photos/74HC4051-1.webp",
-          "alt": "74HC4051 - вид сверху"
+          "alt": "74HC4051 - Top View"
         },
         {
           "src": "/photos/74HC4051-2.webp",
-          "alt": "74HC4051 - вид снизу"
+          "alt": "74HC4051 - Bottom View"
         },
         {
           "src": "/photos/74HC4051-3.webp",
-          "alt": "74HC4051 - таблица истинности"
+          "alt": "74HC4051 - Truth Table"
         },
         {
           "src": "/photos/74HC4051-4.webp",
-          "alt": "74HC4051 - описание входов/выходов"
+          "alt": "74HC4051 - Input/Output Description"
         }
       ],
       "features": [
         {
           "refId": 3,
-          "value": "2 - 10 В",
-          "info": "5 В (рекомендуемое)"
+          "value": "2 - 10V",
+          "info": "5V (recommended)"
         },
         {
           "refId": 28,
-          "value": "50 мА"
+          "value": "50mA"
         },
         {
           "refId": 76,
-          "value": "29.4 x 18.6 мм"
+          "value": "29.4 x 18.6mm"
         },
         {
           "refId": 101,
           "value": [
-            "Vcc 2 В = до 625 нс/В",
-            "Vcc 4.5 В = от 1.67 до 139 нс/В",
-            "Vcc 6 В = до 83 нс/В",
-            "Vcc 10 В = до 31 нс/В"
+            "Vcc 2V = up to 625 ns/V",
+            "Vcc 4.5V = from 1.67 to 139 ns/V",
+            "Vcc 6V = up to 83 ns/V",
+            "Vcc 10V = up to 31 ns/V"
           ]
         }
       ]
     },
     {
       "categoryId": 19,
-      "lang": "ru",
-      "title": "Медный провод",
-      "subtitle": "Диаметр 0.2/0.5/0.6/0.9 мм",
+      "lang": "en",
+      "title": "Copper Wire",
+      "subtitle": "Diameter 0.2/0.5/0.6/0.9mm",
       "seo": {
-        "description": "Катушка медного провода разного диаметра и длины",
-        "keywords": "медь, провод, катушка, обмотка, проволока",
-        "measurement": "0.9 мм / 10 м"
+        "description": "Coil of copper wire with different diameters and lengths",
+        "keywords": "copper, wire, coil, winding, cable",
+        "measurement": "0.9mm / 10m"
       },
       "options": {
         "1": {
-          "name": "0.9 мм / 10 м",
+          "name": "0.9mm / 10m",
           "default": true
         },
         "2": {
-          "name": "0.2 мм / 20 м"
+          "name": "0.2mm / 20m"
         },
         "3": {
-          "name": "0.5 мм / 10 м"
+          "name": "0.5mm / 10m"
         },
         "4": {
-          "name": "0.6 мм / 10 м"
+          "name": "0.6mm / 10m"
         }
       },
       "buy": true,
@@ -412,44 +412,44 @@
       "images": [
         {
           "src": "/photos/copper-wire-0.9-10m.webp",
-          "alt": "Медный провод 0.9 мм / 10 м",
+          "alt": "Copper Wire 0.9mm / 10m",
           "optionId": "1"
         },
         {
           "src": "/photos/copper-wire-0.2-20m.webp",
-          "alt": "Медный провод 0.2 мм / 20 м",
+          "alt": "Copper Wire 0.2mm / 20m",
           "optionId": "2"
         },
         {
           "src": "/photos/copper-wire-0.5-10m.webp",
-          "alt": "Медный провод 0.5 мм / 10 м",
+          "alt": "Copper Wire 0.5mm / 10m",
           "optionId": "3"
         },
         {
           "src": "/photos/copper-wire-0.6-10m.webp",
-          "alt": "Медный провод 0.6 мм / 10 м",
+          "alt": "Copper Wire 0.6mm / 10m",
           "optionId": "4"
         }
       ],
       "features": [
         {
           "refId": 102,
-          "value": "Полиэфиримид"
+          "value": "Polyimide"
         },
         {
           "refId": 103,
-          "value": "Медь"
+          "value": "Copper"
         }
       ]
     },
     {
       "categoryId": 21,
-      "lang": "ru",
-      "title": "Термоскотч",
-      "subtitle": "Полиимидная клейкая лента 30 м",
+      "lang": "en",
+      "title": "Thermal Insulation Tape",
+      "subtitle": "Polyimide adhesive tape, 30m",
       "seo": {
-        "description": "Полиимидная клейкая лента 30 м",
-        "keywords": "полиимид, лента, термоскотч, изоляция, защита, клейкий"
+        "description": "Polyimide adhesive tape, 30m",
+        "keywords": "polyimide, tape, thermal insulation, insulation, protection, adhesive"
       },
       "buy": true,
       "price": {
@@ -459,175 +459,175 @@
       "content": "",
       "options": {
         "1": {
-          "name": "20 мм",
+          "name": "20mm",
           "default": true
         }
       },
       "images": [
         {
           "src": "/photos/Thermal-insulation-tape-1.webp",
-          "alt": "Полиимидная лента - внешний вид",
+          "alt": "Polyimide Tape - Exterior View",
           "optionId": "1"
         }
       ],
       "features": [
         {
           "refId": 105,
-          "value": "Полиимид + PET"
+          "value": "Polyimide + PET"
         },
         {
           "refId": 108,
-          "value": "30 м"
+          "value": "30m"
         },
         {
           "refId": 109,
-          "value": "20 мм"
+          "value": "20mm"
         },
         {
           "refId": 110,
-          "value": "0.05 мм"
+          "value": "0.05mm"
         },
         {
           "refId": 111,
-          "value": "до 280 ºC",
-          "info": "150 ºC (постоянная)"
+          "value": "up to 280ºC",
+          "info": "150ºC (continuous)"
         },
         {
           "refId": 112,
-          "value": "7.5 Н / 25 мм"
+          "value": "7.5N / 25mm"
         },
         {
           "refId": 113,
-          "value": "55 %"
+          "value": "55%"
         },
         {
           "refId": 114,
-          "value": "115 Н / 25 мм"
+          "value": "115N / 25mm"
         }
       ]
     },
     {
       "categoryId": 4,
-      "lang": "ru",
-      "title": "ZVS зарядка конденсаторов",
-      "subtitle": "от 8 - 32 В в 45 - 390 В",
+      "lang": "en",
+      "title": "ZVS Capacitor Charging",
+      "subtitle": "from 8 - 32V to 45 - 390V",
       "seo": {
-        "description": "ZVS драйвер для зарядки конденсаторов от 8 - 32 В в 45 - 390 В",
-        "keywords": "dc-dc, преобразователь, zvs, драйвер, конденсатор, зарядка"
+        "description": "ZVS driver for capacitor charging from 8 - 32V to 45 - 390V",
+        "keywords": "dc-dc, converter, zvs, driver, capacitor, charging"
       },
-      "buy": true,
+      "buy": false,
       "price": 140,
       "availability": {
         "1": 1
       },
-      "content": "<p>Приблизительное время заряда конденсаторов:</p>470 мкФ 390 В = 2 сек.<br/>1000 мкФ 390 В = 4 сек.<br/>2200 мкФ 390 В = 8 сек.<br/>4700 мкФ 390 В = 18 сек.</p>",
+      "content": "<p>Approximate charging time for capacitors:</p><p>470μF 390V = 2 seconds<br/>1000μF 390V = 4 seconds<br/>2200μF 390V = 8 seconds<br/>4700μF 390V = 18 seconds</p>",
       "options": {
         "1": {
-          "name": "Двойной выход",
+          "name": "Dual Output",
           "default": true
         }
       },
       "images": [
         {
           "src": "/photos/ZVS-capacitor-charging-1.webp",
-          "alt": "ZVS - вид сверху"
+          "alt": "ZVS - Top View"
         },
         {
           "src": "/photos/ZVS-capacitor-charging-2.webp",
-          "alt": "ZVS - вид снизу"
+          "alt": "ZVS - Bottom View"
         },
         {
           "src": "/photos/ZVS-capacitor-charging-3.webp",
-          "alt": "ZVS - размеры и описание подключения"
+          "alt": "ZVS - Dimensions and Connection Description"
         }
       ],
       "features": [
         {
           "refId": 13,
-          "value": "8 - 32 В"
+          "value": "8 - 32V"
         },
         {
           "refId": 14,
-          "value": "45 - 390 В"
+          "value": "45 - 390V"
         },
         {
           "refId": 15,
-          "value": "до 0.2 A",
-          "info": "Чем больше выходное напряжение тем меньше выходной ток"
+          "value": "up to 0.2A",
+          "info": "The higher the output voltage, the lower the output current"
         },
         {
           "refId": 93,
-          "value": "до 5 A"
+          "value": "up to 5A"
         },
         {
           "refId": 115,
-          "value": "40 Вт",
-          "info": "до 70 Вт в пике"
+          "value": "40W",
+          "info": "up to 70W peak"
         },
         {
           "refId": 116,
-          "value": "75 кГц"
+          "value": "75kHz"
         },
         {
           "refId": 117,
-          "value": "до 88 %"
+          "value": "up to 88%"
         },
         {
           "refId": 118,
-          "value": "Есть"
+          "value": "Available"
         },
         {
           "refId": 119,
-          "value": "Есть",
-          "info": "> 4.5 А"
+          "value": "Available",
+          "info": "> 4.5A"
         },
         {
           "refId": 120,
-          "value": "Есть",
-          "info": " > 410 В"
+          "value": "Available",
+          "info": "> 410V"
         },
         {
           "refId": 121,
-          "value": "Есть",
-          "info": "Потребуется замена предохранителя"
+          "value": "Available",
+          "info": "Fuse replacement required"
         }
       ]
     },
     {
       "categoryId": 22,
-      "lang": "ru",
+      "lang": "en",
       "title": "PCI-E Riser 009S USB 3.0",
-      "subtitle": "Совместим с PCI-E 1x 4x 8x 16x",
+      "subtitle": "Compatible with PCI-E 1x 4x 8x 16x",
       "seo": {
-        "description": "PCI-E райзер нового поколения 009S USB 3.0 для майнинга",
-        "keywords": "009s, адаптер, riser, райзер, mining, майнинг, bitcoin, crypto"
+        "description": "New generation PCI-E riser 009S USB 3.0 for mining",
+        "keywords": "009s, adapter, riser, mining, bitcoin, crypto"
       },
       "buy": true,
       "price": 190,
       "availability": 6,
-      "content": "<p>Райзер позволяет подключить видеокарту к материнской плате на расстоянии.</p><p>Совместим с любым слотом PCI-E от 1x до 16x.</p>",
-      "warningContent": "<p>Molex 4-контактный или 6-контактный интерфейс питания PCI-E интегрирован на плате. Нужно подключить только один вход питания. Не пытайтесь подключить 2 или 3 интерфейса питания одновременно.</p>",
+      "content": "<p>The riser allows you to connect the graphics card to the motherboard at a distance.</p><p>Compatible with any PCI-E slot from 1x to 16x.</p>",
+      "warningContent": "<p>Molex 4-pin or 6-pin PCI-E power interface is integrated on the board. Only one power input needs to be connected. Do not attempt to connect 2 or 3 power interfaces simultaneously.</p>",
       "peculiarities": [
-        "Интегрированы 4-x контактные и два 6-контактных порта питания платы для большей совместимости.",
-        "Плата основана на твердотельных конденсаторах в кол-ве 4 шт. серии FP, что делает питание графики более стабильным и безопасным.",
-        "Разработана специальная конструкция с функцией автоматической защиты платы от помех.",
-        "Позолоченные контакты для лучшей связи и длительного срока службы."
+        "Integrated 4-pin and two 6-pin power ports on the board for greater compatibility.",
+        "The board is based on 4 pieces of FP series solid-state capacitors, which make the graphics power more stable and safe.",
+        "Special design with automatic protection function to protect the board from interference.",
+        "Gold-plated contacts for better connectivity and longer service life."
       ],
       "accessories": [
         {
-          "name": "PCI-E 16x Riser плата версии 009S",
+          "name": "PCI-E 16x Riser Board version 009S",
           "count": 1
         },
         {
-          "name": "Кабель питания SATA с 15 на 6 контактов",
+          "name": "SATA Power Cable with 15 to 6 Contacts",
           "count": 1
         },
         {
-          "name": "USB 3.0 кабель - 60 см",
+          "name": "USB 3.0 Cable - 60cm",
           "count": 1
         },
         {
-          "name": "PCI-E 1x адаптер",
+          "name": "PCI-E 1x Adapter",
           "count": 1
         }
       ],
@@ -637,40 +637,40 @@
       "images": [
         {
           "src": "/photos/PCI-E-raiser-009S-1.webp",
-          "alt": "PCI-E Raiser 009S - Весь комплект"
+          "alt": "PCI-E Riser 009S - Complete Set"
         },
         {
           "src": "/photos/PCI-E-raiser-009S-2.webp",
-          "alt": "PCI-E Raiser 009S - Райзер"
+          "alt": "PCI-E Riser 009S - Riser"
         },
         {
           "src": "/photos/PCI-E-raiser-009S-3.webp",
-          "alt": "PCI-E Raiser 009S - Адаптер для PCI-E 16x"
+          "alt": "PCI-E Riser 009S - PCI-E 16x Adapter"
         },
         {
           "src": "/photos/PCI-E-raiser-009S-4.webp",
-          "alt": "PCI-E Raiser 009S - USB 3.0 кабель"
+          "alt": "PCI-E Riser 009S - USB 3.0 Cable"
         },
         {
           "src": "/photos/PCI-E-raiser-009S-5.webp",
-          "alt": "PCI-E Raiser 009S - SATA кабель 15 в 6 контактов"
+          "alt": "PCI-E Riser 009S - SATA Cable 15 to 6 Contacts"
         }
       ],
       "features": [
         {
           "refId": 76,
-          "value": "122 x 45 x 13 мм"
+          "value": "122 x 45 x 13mm"
         }
       ]
     },
     {
       "categoryId": 1,
-      "lang": "ru",
-      "title": "Датчик пыли PM2.5/PMS5003",
-      "subtitle": "Захват частиц пыли от 1 до 2.5 мкм",
+      "lang": "en",
+      "title": "PM2.5/PMS5003 Dust Sensor",
+      "subtitle": "Detection of dust particles from 1 to 2.5 μm",
       "seo": {
-        "description": "PMS5003 - датчик концентрации частиц в воздухе",
-        "keywords": "pms5003, pm2.5, датчик, пыль, загрязнение, частицы, воздух"
+        "description": "PMS5003 - air particle concentration sensor",
+        "keywords": "pms5003, pm2.5, sensor, dust, pollution, particles, air"
       },
       "buy": true,
       "price": 450,
@@ -690,12 +690,12 @@
           "alt": "PM2.5"
         }
       ],
-      "content": "<p>PMS5003 — цифровой датчик концентрации частиц в воздухе. Его можно использовать для получения количества взвешенных частиц в воздухе.</p><p>Этот датчик может быть интегрирован в устройства, связанные с определением концентрации взвешенных частиц в воздухе, или подобные устройства для улучшения состояния окружающей среды, чтобы своевременно предоставлять правильные данные о частицах.</p>",
+      "content": "<p>PMS5003 is a digital dust particle concentration sensor. It can be used to obtain the number of suspended particles in the air.</p><p>This sensor can be integrated into devices related to the determination of suspended particle concentration in the air or similar devices to improve the environmental condition by providing timely and accurate particle data.</p>",
       "features": [
         {
           "refId": 3,
-          "value": "4.5 - 5.5 В",
-          "info": "5 В (рекомендуемое)"
+          "value": "4.5 - 5.5 V",
+          "info": "5 V (recommended)"
         },
         {
           "refId": 26,
@@ -707,47 +707,47 @@
         },
         {
           "refId": 76,
-          "value": "50 x 38 x 21 мм"
+          "value": "50 x 38 x 21 mm"
         },
         {
           "refId": 122,
-          "value": "≥ 3 лет"
+          "value": "≥ 3 years"
         },
         {
           "refId": 123,
-          "value": "0 - 500 мкг/м³"
+          "value": "0 - 500 μg/m³"
         },
         {
           "refId": 124,
-          "value": "0 - 1000 мкг/м³"
+          "value": "0 - 1000 μg/m³"
         },
         {
           "refId": 125,
-          "value": "1 мкг/м³"
+          "value": "1 μg/m³"
         },
         {
           "refId": 126,
-          "value": "до ±10%",
-          "info": "100 - 500 мкг/м³"
+          "value": "up to ±10%",
+          "info": "100 - 500 μg/m³"
         }
       ],
       "peculiarities": [
-        "Нулевой процент ложных срабатываний",
-        "Быстрый ответ",
-        "Точные данные",
-        "Улавливание очень мелких частиц",
-        "Высокая защита от помех благодаря запатентованной структуре экранирования с 6 сторон"
+        "Zero false positives",
+        "Fast response",
+        "Accurate data",
+        "Detection of very small particles",
+        "High immunity to interference due to patented 6-sided shielding structure"
       ]
     },
     {
       "categoryId": 6,
-      "lang": "ru",
-      "title": "ADS1015 (модуль)",
-      "subtitle": "АЦП 12 бит 4 канала I²C",
+      "lang": "en",
+      "title": "ADS1015 Module",
+      "subtitle": "12-bit ADC 4-Channel I²C",
       "seo": {
-        "description": "ADS1015 - модуль АЦП 12 бит",
-        "keywords": "ads1115, ацп, ads, i2c, модуль, 12-бит",
-        "measurement": "12 бит"
+        "description": "ADS1015 - 12-bit ADC module",
+        "keywords": "ads1115, adc, ads, i2c, module, 12-bit",
+        "measurement": "12-bit"
       },
       "buy": true,
       "price": 125,
@@ -756,11 +756,11 @@
       "images": [
         {
           "src": "/photos/ADS1015-1.webp",
-          "alt": "ADS1015 - вид сверху"
+          "alt": "ADS1015 - top view"
         },
         {
           "src": "/photos/ADS1015-2.webp",
-          "alt": "ADS1015 - вид снизу"
+          "alt": "ADS1015 - bottom view"
         }
       ],
       "content": "",
@@ -771,11 +771,11 @@
         },
         {
           "refId": 3,
-          "value": "2 - 5.5 В"
+          "value": "2 - 5.5 V"
         },
         {
           "refId": 13,
-          "value": "±256 мВ - ±6.144 В"
+          "value": "±256 mV - ±6.144 V"
         },
         {
           "refId": 24,
@@ -783,11 +783,11 @@
         },
         {
           "refId": 28,
-          "value": "150 мкА"
+          "value": "150 µA"
         },
         {
           "refId": 127,
-          "value": "12 бит"
+          "value": "12-bit"
         },
         {
           "refId": 128,
@@ -795,11 +795,11 @@
         },
         {
           "refId": 129,
-          "value": "128 - 3300 выб/с"
+          "value": "128 - 3300 samples/s"
         },
         {
           "refId": 130,
-          "value": "Есть"
+          "value": "Yes"
         }
       ],
       "applicationIds": [
@@ -808,7 +808,7 @@
       ],
       "externalLinks": [
         {
-          "name": "Официальная страница ADS1015",
+          "name": "Official ADS1015 Page",
           "url": "https://www.ti.com/product/ADS1015",
           "lang": "en",
           "icon": "ti.com.ico",
@@ -818,12 +818,12 @@
     },
     {
       "categoryId": 6,
-      "lang": "ru",
-      "title": "MCP2515 (модуль)",
-      "subtitle": "Подключение к CAN 2.0B, SPI",
+      "lang": "en",
+      "title": "MCP2515 Module",
+      "subtitle": "CAN Controller Module, SPI",
       "seo": {
-        "description": "MCP2515 - Модуль CAN контроллера",
-        "keywords": "mcp2515, tja1050, модуль, can, шина, spi, obd, obd2, obdii, arduino"
+        "description": "MCP2515 - CAN Controller module",
+        "keywords": "mcp2515, tja1050, module, can, bus, spi, obd, obd2, obdii, arduino"
       },
       "manufacturerId": "9",
       "datasheetId": "MCP2515",
@@ -833,15 +833,15 @@
       "buy": true,
       "price": 90,
       "availability": 0,
-      "content": "<p>MCP2515 модуль — это автономный CAN контроллер, реализующий спецификацию CAN версии 2.0B для подключения микроконтроллеров к шине CAN с помощью SPI.</p>",
+      "content": "<p>The MCP2515 module is a standalone CAN controller that implements the CAN 2.0B specification for connecting microcontrollers to the CAN bus using SPI.</p>",
       "features": [
         {
           "refId": 2,
-          "value": "SPI (до 10 МГц)"
+          "value": "SPI (up to 10 MHz)"
         },
         {
           "refId": 3,
-          "value": "5 В"
+          "value": "5 V"
         },
         {
           "refId": 24,
@@ -849,45 +849,45 @@
         },
         {
           "refId": 29,
-          "value": "5 мА"
+          "value": "5 mA"
         },
         {
           "refId": 36,
-          "value": "1 мкА"
+          "value": "1 µA"
         },
         {
           "refId": 76,
-          "value": "40 x 28 x 13 мм"
+          "value": "40 x 28 x 13 mm"
         },
         {
           "refId": 131,
-          "value": "до 1 Мб/с"
+          "value": "Up to 1 Mbps"
         }
       ],
       "images": [
         {
           "src": "/photos/MCP2515-module-1.webp",
-          "alt": "MCP2515 (модуль) - вид сверху"
+          "alt": "MCP2515 Module - top view"
         },
         {
           "src": "/photos/MCP2515-module-2.webp",
-          "alt": "MCP2515 (модуль) - вид сбоку"
+          "alt": "MCP2515 Module - side view"
         },
         {
           "src": "/photos/MCP2515-module-3.webp",
-          "alt": "MCP2515 (модуль) - вид сбоку"
+          "alt": "MCP2515 Module - side view"
         },
         {
           "src": "/photos/MCP2515-module-4.webp",
-          "alt": "MCP2515 (модуль) - вид снизу"
+          "alt": "MCP2515 Module - bottom view"
         },
         {
           "src": "/photos/MCP2515-module-5.webp",
-          "alt": "MCP2515 (модуль) - схема модуля"
+          "alt": "MCP2515 Module - module schematic"
         },
         {
           "src": "/photos/MCP2515-module-6.webp",
-          "alt": "MCP2515 (модуль) - Распиновка OBDII"
+          "alt": "MCP2515 Module - OBDII pinout"
         }
       ],
       "applicationIds": [
@@ -896,26 +896,26 @@
     },
     {
       "categoryId": 8,
-      "lang": "ru",
-      "title": "MCP2551 (модуль)",
-      "subtitle": "CAN приемопередатчик",
+      "lang": "en",
+      "title": "MCP2551 Module",
+      "subtitle": "CAN Transceiver",
       "seo": {
-        "description": "MCP2551 — Модуль высокоскоростного CAN",
-        "keywords": "mcp2551, can, шина, obd2, obdii, модуль, высокоскоростной, приемопередатчик"
+        "description": "MCP2551 - High-Speed CAN module",
+        "keywords": "mcp2551, can, bus, obd2, obdii, module, high-speed, transceiver"
       },
       "datasheetId": "MCP2551",
       "buy": true,
       "price": 65,
       "availability": 0,
-      "content": "<p>MCP2551 — это высокоскоростное отказоустойчивое устройство CAN, которое служит интерфейсом между контроллером протокола CAN и физической шиной.</p>",
+      "content": "<p>The MCP2551 is a high-speed fault-tolerant CAN device that serves as an interface between the CAN protocol controller and the physical bus.</p>",
       "images": [
         {
           "src": "/photos/MCP2551-module-1.webp",
-          "alt": "MCP2551 (модуль) - вид сверху 1"
+          "alt": "MCP2551 Module - top view 1"
         },
         {
           "src": "/photos/MCP2551-module-2.webp",
-          "alt": "MCP2551 (модуль) - вид сверху 2"
+          "alt": "MCP2551 Module - top view 2"
         }
       ],
       "features": [
@@ -925,15 +925,15 @@
         },
         {
           "refId": 76,
-          "value": "19 x 16.2 мм"
+          "value": "19 x 16.2 mm"
         },
         {
           "refId": 131,
-          "value": "до 1 Мб/с"
+          "value": "Up to 1 Mbps"
         },
         {
           "refId": 132,
-          "value": "до 112"
+          "value": "Up to 112"
         }
       ],
       "applicationIds": [
@@ -946,12 +946,12 @@
     },
     {
       "categoryId": 8,
-      "lang": "ru",
+      "lang": "en",
       "title": "SIM800",
-      "subtitle": "GSM/GPRS 850/900/1800/1900 МГц",
+      "subtitle": "GSM/GPRS 850/900/1800/1900 MHz",
       "seo": {
-        "description": "SIM800 - GSM/GPRS модуль, работающий на частотах GSM850MHz, EGSM900MHz, DCS1800MHz и PCS1900MHz",
-        "keywords": "sim, sim800, sim800l, gsm, gprs, ttl, модуль"
+        "description": "SIM800 - GSM/GPRS module operating on GSM850MHz, EGSM900MHz, DCS1800MHz, and PCS1900MHz frequencies",
+        "keywords": "sim, sim800, sim800l, gsm, gprs, ttl, module"
       },
       "buy": true,
       "price": {
@@ -963,27 +963,27 @@
         "2": 0
       },
       "manufacturerId": "11",
-      "content": "<p>SIM800H & SIM800L - 4-диапазонный GSM/GPRS модуль, который работает на частотах GSM850MHZ, EGSM900MHZ, DCS1800MHZ и PCS1900MHZ.<p/>",
+      "content": "<p>SIM800H & SIM800L - 4-band GSM/GPRS module operating on GSM850MHz, EGSM900MHz, DCS1800MHz, and PCS1900MHz frequencies.<p/>",
       "images": [
         {
           "src": "/photos/SIM800L-module-1.webp",
-          "alt": "SIM800L (модуль) - вид сверху",
+          "alt": "SIM800L Module - top view",
           "optionId": "1"
         },
         {
           "src": "/photos/SIM800L-module-2.webp",
-          "alt": "SIM800L (модуль) - вид снизу",
+          "alt": "SIM800L Module - bottom view",
           "optionId": "1"
         },
         {
           "src": "/photos/SIM800H-module-1.webp",
-          "alt": "SIM800H (чип) - вид сверху/снизу",
+          "alt": "SIM800H Chip - top/bottom view",
           "optionId": "2"
         }
       ],
       "options": {
         "1": {
-          "name": "SIM800L (модуль)",
+          "name": "SIM800L Module",
           "default": true
         },
         "2": {
@@ -997,25 +997,27 @@
         },
         {
           "refId": 76,
-          "value": "25.1 x 23 мм"
+          "value": "25.1 x 23 mm"
         },
         {
           "refId": 133,
-          "value": "Нету",
+          "value": "Not available",
           "optionId": "1"
         },
         {
           "refId": 133,
-          "value": "Есть",
+          "value": "Available",
           "optionId": "2"
         }
       ],
       "applicationIds": [
-        "1", "2", "3"
+        "1",
+        "2",
+        "3"
       ],
       "externalLinks": [
         {
-          "name": "Официальная страница SIM800H",
+          "name": "Official SIM800H Page",
           "url": "https://www.simcom.com/product/SIM800H.html",
           "lang": "en",
           "icon": "www.simcom.com.ico",

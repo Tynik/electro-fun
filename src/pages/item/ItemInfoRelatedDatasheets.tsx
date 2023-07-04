@@ -1,36 +1,37 @@
 import React from 'react';
 import { Typography } from '@mui/material';
 
-import type { DatasheetIdT, DatasheetsT } from '~/types';
+import type { DatasheetId, Datasheets } from '~/types';
 
 import { DbContext } from '~/contexts';
-import { Datasheets } from '~/components';
+import { DatasheetsList } from '~/components';
 
-export type ItemInfoActionsProps = {
-  relatedDatasheetIds: DatasheetIdT[]
-}
+export type ItemInfoRelatedDatasheetsProps = {
+  relatedDatasheetIds: DatasheetId[];
+};
 
-export const ItemInfoRelatedDatasheets = ({ relatedDatasheetIds }: ItemInfoActionsProps) => {
+export const ItemInfoRelatedDatasheets = ({
+  relatedDatasheetIds,
+}: ItemInfoRelatedDatasheetsProps) => {
   const { db } = React.useContext(DbContext);
 
-  const datasheets = React.useMemo(() =>
-      relatedDatasheetIds.reduce<DatasheetsT>((datasheets, datasheetId) => (
-          {
-            ...datasheets,
-            [datasheetId]: db.datasheets[datasheetId]
-          }
-        ), {}
+  const datasheets = React.useMemo(
+    () =>
+      relatedDatasheetIds.reduce<Datasheets>(
+        (datasheets, datasheetId) => ({
+          ...datasheets,
+          [datasheetId]: db.datasheets[datasheetId],
+        }),
+        {}
       ),
     [relatedDatasheetIds]
   );
 
   return (
     <>
-      <Typography variant={'overline'}>
-        Связанные datasheets
-      </Typography>
+      <Typography variant={'overline'}>Related Datasheets</Typography>
 
-      <Datasheets datasheets={datasheets}/>
+      <DatasheetsList datasheets={datasheets} />
     </>
   );
 };

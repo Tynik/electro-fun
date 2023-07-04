@@ -2,26 +2,26 @@
   "items": [
     {
       "categoryId": 21,
-      "lang": "ru",
-      "title": "Набор перемычек",
-      "subtitle": "140 шт.",
+      "lang": "en",
+      "title": "Jumper Wire Set",
+      "subtitle": "140 pcs.",
       "seo": {
-        "description": "Набор перемычек для макетной платы 140 шт.",
-        "keywords": "arduino, jumpers, провода, перемычки, прототипирование",
-        "measurement": "140 шт."
+        "description": "Set of 140 jumper wires for breadboard prototyping",
+        "keywords": "arduino, jumpers, wires, jumper wires, prototyping",
+        "measurement": "140 pcs."
       },
       "buy": true,
       "price": 65,
       "availability": 10,
-      "content": "<p>Набор состоит из 140 перемычек (14 видов) разных цветов: красный, зеленый, желтый, оранжевый, серый, белый, синий) и размерами: 2, 5, 7, 10, 12, 15, 17, 20, 22, 25, 50, 75, 100, 125 мм.</p>",
+      "content": "<p>The set includes 140 jumper wires (14 types) of various colors: red, green, yellow, orange, gray, white, blue) and sizes: 2, 5, 7, 10, 12, 15, 17, 20, 22, 25, 50, 75, 100, 125 mm.</p>",
       "images": [
         {
           "src": "/photos/breadboard-jumpers-140-1.webp",
-          "alt": "Набор перемычек - открытая коробка"
+          "alt": "Jumper Wire Set - open box"
         },
         {
           "src": "/photos/breadboard-jumpers-140-2.webp",
-          "alt": "Набор перемычек - закрытая коробка"
+          "alt": "Jumper Wire Set - closed box"
         }
       ],
       "features": [
