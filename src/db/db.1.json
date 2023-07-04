@@ -1192,8 +1192,8 @@
         "keywords": "lm2596s, regulator, step-down, ti, 3a"
       },
       "buy": true,
-      "price": 32,
-      "priceId": "price_1NEIPVARhMwSarZXZb8vq9rt",
+      "price": 2.9,
+      "priceId": "price_1NQ5uUARhMwSarZXeichshFk",
       "availability": 2,
       "datasheetId": "LM2596",
       "images": [
@@ -1250,7 +1250,8 @@
       },
       "manufacturerId": "3",
       "buy": true,
-      "price": 23,
+      "price": 1.50,
+      "priceId": "price_1NQ5xzARhMwSarZXhmGQXjAM",
       "availability": 9,
       "datasheetId": "BMP280",
       "images": [
@@ -1332,7 +1333,8 @@
         "keywords": "mpu-9250, invensense, gyroscope, accelerometer, magnetometer, dmp, i2c"
       },
       "buy": true,
-      "price": 147,
+      "price": 3.9,
+      "priceId": "price_1NQ61SARhMwSarZX2WLk7jKd",
       "availability": 1,
       "datasheetId": "MPU-9250A-1.1",
       "companyLink": "https://invensense.tdk.com",
@@ -1418,8 +1420,8 @@
         "keywords": "sensor, co2, air quality, particles, voc, tvoc"
       },
       "buy": false,
-      "price": 290,
-      "availability": 2,
+      "price": 0,
+      "availability": 0,
       "datasheetId": "CCS811",
       "images": [
         {
@@ -1500,7 +1502,8 @@
         "keywords": "sensor, gestures, rgb, recognition, i2c"
       },
       "buy": true,
-      "price": 50,
+      "price": 3.3,
+      "priceId": "price_1NQ64TARhMwSarZXA5VfFuPI",
       "availability": 9,
       "datasheetId": "APDS-9960",
       "images": [
@@ -1577,7 +1580,8 @@
         "keywords": "mac, solenoid, boost, vacuum, pressure, control, electromagnet"
       },
       "buy": true,
-      "price": 420,
+      "price": 12.9,
+      "priceId": "price_1NQ674ARhMwSarZX8ZkzOS8m",
       "availability": 2,
       "datasheetId": "MAC-35A",
       "images": [
@@ -1642,7 +1646,8 @@
       },
       "datasheetId": "TEC1-12715",
       "buy": true,
-      "price": 130,
+      "price": 4,
+      "priceId": "price_1NQ69FARhMwSarZXRNj9MqxP",
       "availability": 5,
       "images": [
         {
@@ -1796,7 +1801,8 @@
         "keywords": "nrf24l01, transceiver, receiver"
       },
       "buy": true,
-      "price": 33,
+      "price": 0.8,
+      "priceId": "price_1NQ6CGARhMwSarZXFBeaxMs1",
       "availability": 5,
       "datasheetId": "nRF24L01",
       "images": [
@@ -2167,10 +2173,10 @@
         "keywords": "CH340, usb, uart, converter"
       },
       "datasheetId": "CH340",
-      "buy": true,
+      "buy": false,
       "price": {
-        "1": 25,
-        "2": 30
+        "1": 0,
+        "2": 0
       },
       "availability": {
         "1": 0,
@@ -2235,7 +2241,8 @@
         "keywords": "irf3205, mosfet, transistor, 55v, 110a"
       },
       "buy": true,
-      "price": 8,
+      "price": 0.45,
+      "priceId": "price_1NQ6GNARhMwSarZXTdfD5iTx",
       "availability": 10,
       "datasheetId": "IRF3205",
       "manufacturerId": "6",
@@ -2342,7 +2349,8 @@
       },
       "manufacturerId": "7",
       "buy": true,
-      "price": 650,
+      "price": 17,
+      "priceId": "price_1NQ6IeARhMwSarZX80cgsarK",
       "availability": 1,
       "content": "<p>Professional 14-piece tweezers set made of stainless steel with excellent quality for various needs.</p><p>The anti-static coating provides superior protection against electrostatic discharge.</p>",
       "images": [
