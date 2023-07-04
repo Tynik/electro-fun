@@ -445,15 +445,18 @@
     {
       "categoryId": 21,
       "lang": "en",
-      "title": "Thermal Insulation Tape",
-      "subtitle": "Polyimide adhesive tape, 30m",
+      "title": "Thermal Polyimide Insulation Tape",
+      "subtitle": "Length is 30m",
       "seo": {
         "description": "Polyimide adhesive tape, 30m",
         "keywords": "polyimide, tape, thermal insulation, insulation, protection, adhesive"
       },
       "buy": true,
       "price": {
-        "1": 105
+        "1": {
+          "price": 3,
+          "priceId": "price_1NQ78fARhMwSarZXH3TngrKx"
+        }
       },
       "availability": 1,
       "content": "",
@@ -516,7 +519,7 @@
         "keywords": "dc-dc, converter, zvs, driver, capacitor, charging"
       },
       "buy": false,
-      "price": 140,
+      "price": 0,
       "availability": {
         "1": 1
       },
@@ -603,7 +606,8 @@
         "keywords": "009s, adapter, riser, mining, bitcoin, crypto"
       },
       "buy": true,
-      "price": 190,
+      "price": 5,
+      "priceId": "price_1NQ73hARhMwSarZXFMpg3tXl",
       "availability": 6,
       "content": "<p>The riser allows you to connect the graphics card to the motherboard at a distance.</p><p>Compatible with any PCI-E slot from 1x to 16x.</p>",
       "warningContent": "<p>Molex 4-pin or 6-pin PCI-E power interface is integrated on the board. Only one power input needs to be connected. Do not attempt to connect 2 or 3 power interfaces simultaneously.</p>",
@@ -673,7 +677,8 @@
         "keywords": "pms5003, pm2.5, sensor, dust, pollution, particles, air"
       },
       "buy": true,
-      "price": 450,
+      "price": 17,
+      "priceId": "price_1NQ70GARhMwSarZXz2gXHYEt",
       "availability": 2,
       "datasheetId": "PMS5003",
       "images": [
@@ -749,9 +754,10 @@
         "keywords": "ads1115, adc, ads, i2c, module, 12-bit",
         "measurement": "12-bit"
       },
-      "buy": true,
-      "price": 125,
-      "availability": 3,
+      "buy": false,
+      "price": 0,
+      "priceId": "price_1NQ6xYARhMwSarZXKaiy7dtj",
+      "availability": 0,
       "datasheetId": "ADS101x",
       "images": [
         {
@@ -830,8 +836,9 @@
       "relatedDatasheetIds": [
         "TJA1050"
       ],
-      "buy": true,
-      "price": 90,
+      "buy": false,
+      "price": 0,
+      "priceId": "price_1NQ6rHARhMwSarZXaqFFQBTR",
       "availability": 0,
       "content": "<p>The MCP2515 module is a standalone CAN controller that implements the CAN 2.0B specification for connecting microcontrollers to the CAN bus using SPI.</p>",
       "features": [
@@ -904,8 +911,9 @@
         "keywords": "mcp2551, can, bus, obd2, obdii, module, high-speed, transceiver"
       },
       "datasheetId": "MCP2551",
-      "buy": true,
-      "price": 65,
+      "buy": false,
+      "price": 0,
+      "priceId": "price_1NQ6pQARhMwSarZX56Y1W0Ap",
       "availability": 0,
       "content": "<p>The MCP2551 is a high-speed fault-tolerant CAN device that serves as an interface between the CAN protocol controller and the physical bus.</p>",
       "images": [
@@ -953,10 +961,10 @@
         "description": "SIM800 - GSM/GPRS module operating on GSM850MHz, EGSM900MHz, DCS1800MHz, and PCS1900MHz frequencies",
         "keywords": "sim, sim800, sim800l, gsm, gprs, ttl, module"
       },
-      "buy": true,
+      "buy": false,
       "price": {
-        "1": 130,
-        "2": 190
+        "1": 0,
+        "2": 0
       },
       "availability": {
         "1": 1,

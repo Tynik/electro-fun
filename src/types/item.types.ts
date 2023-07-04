@@ -91,6 +91,11 @@ export type ItemAccessory = {
 
 type PriceId = string;
 
+type PriceConfig = {
+  price: number;
+  priceId?: PriceId;
+};
+
 export type Item = {
   title: string;
   subtitle: string;
@@ -106,7 +111,7 @@ export type Item = {
   datasheetId?: DatasheetId;
   relatedDatasheetIds?: DatasheetId[];
   availability?: number | Record<ItemOptionId, number>;
-  price?: number | Record<ItemOptionId, number>;
+  price?: number | Record<ItemOptionId, number | PriceConfig>;
   priceId?: PriceId;
   rating?: number;
   // link where is to buy or true/false

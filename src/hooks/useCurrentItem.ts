@@ -31,7 +31,7 @@ export const useCurrentItem = () => {
     if (foundItems.length) {
       setItem(foundItems[0]);
     } else {
-      setErrors([`"${id}" не найден или был переименован`]);
+      setErrors([`"${id}" was not found`]);
     }
   }, [foundItems]);
 

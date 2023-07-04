@@ -3,9 +3,9 @@ import { Button, Grid, Stack, Box, Alert, TextField } from '@mui/material';
 
 import type { Item } from '~/types';
 
-import { AppContext, DbContext, UserContext } from '~/contexts';
-import { checkoutRequest } from '~/api';
+import { AppContext, UserContext } from '~/contexts';
 import { getIcon } from '~/utils';
+import { checkoutRequest } from '~/api';
 
 export type BasketStep2Props = {
   isActive: boolean;
@@ -20,7 +20,6 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
     clearBasket,
   } = React.useContext(UserContext);
 
-  const { db } = React.useContext(DbContext);
   const { addNotification } = React.useContext(AppContext);
 
   const [fullName, setFullName] = React.useState<string>(null);
@@ -30,31 +29,32 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
 
   const makeOrder = async () => {
     try {
-      // const itemsContent = items.map(item =>
-      //     Object.keys(basket.items[item.id]).map(optionId =>
-      //         `${basket.items[item.id][optionId]} x ${db.siteURL}/item/${item.id}?${new URLSearchParams({
-      //           optionId
-      //         })}`
-      //     ).join('\n')
-      // );
+      const checkoutItems = items.reduce((result, item) => {
+        Object.keys(basket.items[item.id]).map(optionId => {
+          result.push({
+            priceId: optionId === 'undefined' ? item.priceId : item.price[optionId].priceId,
+            quantity: basket.items[item.id][optionId],
+          });
+        });
+
+        return result;
+      }, []);
 
       const { data } = await checkoutRequest({
-        items: Object.keys(basket.items).map(itemId => ({
-          priceId: items[itemId].priceId,
-          quantity: 1,
-        })),
+        items: checkoutItems,
         fullName,
         phone,
         deliveryAddress,
         note,
       });
-      // clearBasket();
+
+      clearBasket();
 
       window.open(data.url);
 
-      // addNotification('You have successfully placed an order.', {
-      //   timeout: 5000,
-      // });
+      addNotification('You have successfully placed an order.', {
+        timeout: 5000,
+      });
     } catch (e) {
       console.log(e);
 
@@ -94,7 +94,7 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
             <TextField
               value={phone || ''}
               onChange={e => setPhone(e.target.value)}
-              label={'Ph. 079XXXXXXXX'}
+              label={'Ph. XXXXXXXXXXX'}
               variant={'outlined'}
               size={'small'}
               error={phone === ''}
@@ -126,18 +126,18 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
         </Grid>
       </Grid>
 
-      <Grid item>
-        <Alert
-          severity={'info'}
-          sx={{
-            alignItems: 'center',
-            paddingTop: 0,
-            paddingBottom: 0,
-          }}
-        >
-          <p>...</p>
-        </Alert>
-      </Grid>
+      {/*<Grid item>*/}
+      {/*  <Alert*/}
+      {/*    severity={'info'}*/}
+      {/*    sx={{*/}
+      {/*      alignItems: 'center',*/}
+      {/*      paddingTop: 0,*/}
+      {/*      paddingBottom: 0,*/}
+      {/*    }}*/}
+      {/*  >*/}
+      {/*    <p>...</p>*/}
+      {/*  </Alert>*/}
+      {/*</Grid>*/}
 
       <Grid item>
         <Stack spacing={2} direction={'row'} justifyContent={'space-between'}>

@@ -23,7 +23,7 @@ export const ProductSEO = ({ item }: ProductSEOProps) => {
 
       <ItemManufacturer item={item} />
 
-      {item.price && <OfferSEO item={item} />}
+      {Boolean(item.price) && <OfferSEO item={item} />}
 
       {(item.contributors || []).map(contributor => (
         <div

@@ -118,7 +118,9 @@ export const getItemPrice = (item: Item, optionId: ItemOptionId) => {
   if (typeof item.price === 'number') {
     return item.price;
   }
-  return item.price[optionId];
+  const priceConfig = item.price[optionId];
+
+  return typeof priceConfig === 'number' ? priceConfig : priceConfig.price;
 };
 
 export const getItemAvailability = (item: Item, optionId: ItemOptionId) => {

@@ -1,54 +1,34 @@
 import React from 'react';
-import { Switch, Route, useLocation, useHistory } from 'react-router-dom';
-import {
-  Container,
-  Box,
-  styled,
-  LinearProgress
-} from '@mui/material';
+import { Switch, Route, useLocation, useHistory, Redirect } from 'react-router-dom';
+import { Container, Box, styled, LinearProgress } from '@mui/material';
 
 import { DbContext } from './contexts';
-import {
-  Menu,
-  DrawerHeader,
-  Category,
-  Footer
-} from './components';
-import {
-  HomePage,
-  ItemInfoPage,
-  DatasheetsPage,
-  BasketPage
-} from './pages';
+import { Menu, DrawerHeader, Category, Footer } from './components';
+import { HomePage, ItemInfoPage, DatasheetsPage, BasketPage } from './pages';
 import { useJsonDbSearch } from './hooks';
 
 const drawerWidth = 240;
 
 const Main = styled('div', {
-  shouldForwardProp: (prop) => prop !== 'menuIsOpened'
+  shouldForwardProp: prop => prop !== 'menuIsOpened',
 })<{
-  menuIsOpened: boolean
-}>(({ theme, menuIsOpened }) => (
-    {
-      flexGrow: 1,
-      padding: theme.spacing(2, 0),
-      transition: theme.transitions.create('margin', {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.leavingScreen
-      }),
-      marginLeft: `-${drawerWidth}px`,
-      ...(
-        menuIsOpened && {
-          transition: theme.transitions.create('margin', {
-            easing: theme.transitions.easing.easeOut,
-            duration: theme.transitions.duration.enteringScreen
-          }),
-          marginLeft: 0
-        }
-      )
-    }
-  )
-);
+  menuIsOpened: boolean;
+}>(({ theme, menuIsOpened }) => ({
+  flexGrow: 1,
+  padding: theme.spacing(2, 0),
+  transition: theme.transitions.create('margin', {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.leavingScreen,
+  }),
+  marginLeft: `-${drawerWidth}px`,
+  ...(menuIsOpened && {
+    transition: theme.transitions.create('margin', {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+    marginLeft: 0,
+  }),
+}));
 
 export const App = () => {
   const location = useLocation();
@@ -59,12 +39,7 @@ export const App = () => {
 
   const { db, loadNextDbPart } = React.useContext(DbContext);
 
-  const {
-    isSearching,
-    search,
-    foundItems,
-    foundDatasheets
-  } = useJsonDbSearch(db, loadNextDbPart);
+  const { isSearching, search, foundItems, foundDatasheets } = useJsonDbSearch(db, loadNextDbPart);
 
   React.useEffect(() => {
     if (db && !isAlreadyMounted) {
@@ -78,32 +53,31 @@ export const App = () => {
     }
   }, [db, isAlreadyMounted]);
 
-  const onSearch = React.useCallback((text: string) => {
-    if (location.pathname !== '/') {
-      history.push('/');
-    }
-    search({ text, debounce: true });
-  }, [location.pathname]);
+  const onSearch = React.useCallback(
+    (text: string) => {
+      if (location.pathname !== '/') {
+        history.push('/');
+      }
+      search({ text, debounce: true });
+    },
+    [location.pathname]
+  );
 
   const onSearchReset = React.useCallback(() => {
     onSearch('');
   }, []);
 
   if (!db) {
-    return <LinearProgress/>;
+    return <LinearProgress />;
   }
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
       <Box sx={{ display: 'flex' }}>
-        <Menu
-          onOpen={setMenuOpen}
-          drawerWidth={drawerWidth}
-          onSearch={onSearch}
-        />
+        <Menu onOpen={setMenuOpen} drawerWidth={drawerWidth} onSearch={onSearch} />
 
         <Main menuIsOpened={menuIsOpened}>
-          <DrawerHeader/>
+          <DrawerHeader />
 
           <Container>
             <Switch>
@@ -116,24 +90,32 @@ export const App = () => {
                   onSearchReset={onSearchReset}
                 />
               </Route>
+
               <Route path="/item/:id">
-                <ItemInfoPage/>
+                <ItemInfoPage />
               </Route>
+
               <Route path="/category/:categoryId">
-                <Category/>
+                <Category />
               </Route>
+
               <Route path="/datasheets">
-                <DatasheetsPage datasheets={db.datasheets}/>
+                <DatasheetsPage datasheets={db.datasheets} />
               </Route>
+
               <Route path="/basket">
-                <BasketPage/>
+                <BasketPage />
+              </Route>
+
+              <Route path="*">
+                <Redirect to="/" />
               </Route>
             </Switch>
           </Container>
         </Main>
       </Box>
 
-      <Footer/>
+      <Footer />
     </Box>
   );
 };

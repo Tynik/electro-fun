@@ -1,13 +1,10 @@
 import React from 'react';
-import {
-  Container,
-  Alert
-} from '@mui/material';
+import { Container, Alert } from '@mui/material';
 import { Loader, InternalLink } from '~/components';
 
 export type UseStaticErrorsProps = {
-  showReturnToMain: boolean
-}
+  showReturnToMain: boolean;
+};
 
 export const useStaticErrors = (
   { showReturnToMain }: UseStaticErrorsProps = { showReturnToMain: true }
@@ -16,21 +13,23 @@ export const useStaticErrors = (
 
   const printErrors = React.useCallback(() => {
     if (!errors.length) {
-      return <Loader/>;
+      return <Loader />;
     }
     return (
-      <Container sx={{
-        display: 'flex',
-        alignItems: 'center',
-        flexDirection: 'column'
-      }}>
+      <Container
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          flexDirection: 'column',
+        }}
+      >
         <Alert severity={'error'}>
-          {errors.map(error => <div key={error}>{error}</div>)}
+          {errors.map(error => (
+            <div key={error}>{error}</div>
+          ))}
         </Alert>
 
-        {showReturnToMain && (
-          <InternalLink to={'/'}>Вернуться на главную</InternalLink>
-        )}
+        {showReturnToMain && <InternalLink to={'/'}>Back to home page</InternalLink>}
       </Container>
     );
   }, [errors]);
@@ -38,6 +37,6 @@ export const useStaticErrors = (
   return {
     errors,
     setErrors,
-    printErrors
+    printErrors,
   };
 };
