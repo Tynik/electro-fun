@@ -85,7 +85,7 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
               </Badge>
 
               <Typography variant={'body2'} color={'primary.dark'} marginLeft={2}>
-                In Stock: ${itemAvailability}
+                In Stock: {itemAvailability}
               </Typography>
             </>
           ) : (

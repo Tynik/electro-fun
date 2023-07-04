@@ -35,7 +35,7 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
       const checkoutItems = items.reduce<CheckoutItem[]>((result, item) => {
         Object.keys(basket.items[item.id]).map(optionId => {
           result.push({
-            priceId: optionId === 'undefined' ? item.priceId : item.price[optionId].priceId,
+            priceId: item.priceId ?? item.price[optionId].priceId,
             weight: item.weight ?? 0,
             quantity: basket.items[item.id][optionId],
           });
