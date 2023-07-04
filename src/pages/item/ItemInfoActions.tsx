@@ -67,24 +67,32 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
             alignItems: 'center',
           }}
         >
-          <Badge
-            badgeContent={numberItemsInBasket && `x${numberItemsInBasket}`}
-            color={itemAvailability >= 0 ? 'success' : 'error'}
-          >
-            <Button
-              onClick={() => addItemToBasket(item.id, selectedItemOptionId)}
-              variant={numberItemsInBasket ? 'outlined' : 'contained'}
-              color={numberItemsInBasket ? 'info' : 'success'}
-              startIcon={getIcon('addShoppingCart')}
-              disabled={!itemAvailability}
-            >
-              {numberItemsInBasket ? 'In cart' : 'Add to cart'}
-            </Button>
-          </Badge>
+          {itemAvailability ? (
+            <>
+              <Badge
+                badgeContent={numberItemsInBasket && `x${numberItemsInBasket}`}
+                color={itemAvailability >= 0 ? 'success' : 'error'}
+              >
+                <Button
+                  onClick={() => addItemToBasket(item.id, selectedItemOptionId)}
+                  variant={numberItemsInBasket ? 'outlined' : 'contained'}
+                  color={numberItemsInBasket ? 'info' : 'success'}
+                  startIcon={getIcon('addShoppingCart')}
+                  disabled={!itemAvailability}
+                >
+                  {numberItemsInBasket ? 'In cart' : 'Add to cart'}
+                </Button>
+              </Badge>
 
-          <Typography variant={'body2'} color={'primary.dark'} marginLeft={2}>
-            In Stock: {itemAvailability}
-          </Typography>
+              <Typography variant={'body2'} color={'primary.dark'} marginLeft={2}>
+                In Stock: ${itemAvailability}
+              </Typography>
+            </>
+          ) : (
+            <Typography variant={'body2'} color={'primary.dark'} marginLeft={2}>
+              Out of Stock
+            </Typography>
+          )}
         </Box>
       )}
     </Stack>

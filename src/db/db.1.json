@@ -1194,6 +1194,7 @@
       "buy": true,
       "price": 2.9,
       "priceId": "price_1NQ5uUARhMwSarZXeichshFk",
+      "weight": 25,
       "availability": 2,
       "datasheetId": "LM2596",
       "images": [
@@ -1252,6 +1253,7 @@
       "buy": true,
       "price": 1.50,
       "priceId": "price_1NQ5xzARhMwSarZXhmGQXjAM",
+      "weight": 5,
       "availability": 9,
       "datasheetId": "BMP280",
       "images": [
@@ -1335,6 +1337,7 @@
       "buy": true,
       "price": 3.9,
       "priceId": "price_1NQ61SARhMwSarZX2WLk7jKd",
+      "weight": 5,
       "availability": 1,
       "datasheetId": "MPU-9250A-1.1",
       "companyLink": "https://invensense.tdk.com",
@@ -1421,6 +1424,7 @@
       },
       "buy": false,
       "price": 0,
+      "weight": 10,
       "availability": 0,
       "datasheetId": "CCS811",
       "images": [
@@ -1504,6 +1508,7 @@
       "buy": true,
       "price": 3.3,
       "priceId": "price_1NQ64TARhMwSarZXA5VfFuPI",
+      "weight": 5,
       "availability": 9,
       "datasheetId": "APDS-9960",
       "images": [
@@ -1582,6 +1587,7 @@
       "buy": true,
       "price": 12.9,
       "priceId": "price_1NQ674ARhMwSarZX8ZkzOS8m",
+      "weight": 150,
       "availability": 2,
       "datasheetId": "MAC-35A",
       "images": [
@@ -1648,6 +1654,7 @@
       "buy": true,
       "price": 4,
       "priceId": "price_1NQ69FARhMwSarZXRNj9MqxP",
+      "weight": 25,
       "availability": 5,
       "images": [
         {
@@ -1694,6 +1701,7 @@
         "keywords": "bhi260ap, sensor, ai, microcontroller, gyroscope, accelerometer, machine learning"
       },
       "buy": false,
+      "weight": 5,
       "datasheetId": "BHI260AP",
       "images": [
         {
@@ -1803,6 +1811,7 @@
       "buy": true,
       "price": 0.8,
       "priceId": "price_1NQ6CGARhMwSarZXFBeaxMs1",
+      "weight": 5,
       "availability": 5,
       "datasheetId": "nRF24L01",
       "images": [
@@ -2173,14 +2182,21 @@
         "keywords": "CH340, usb, uart, converter"
       },
       "datasheetId": "CH340",
-      "buy": false,
+      "buy": true,
+      "weight": 2,
       "price": {
-        "1": 0,
-        "2": 0
+        "1": {
+          "price": 0,
+          "priceId": "price_1NQFLzARhMwSarZXUJRR4Jju"
+        },
+        "2": {
+          "price": 0.7,
+          "priceId": "price_1NQFLZARhMwSarZXz71iQVfm"
+        }
       },
       "availability": {
         "1": 0,
-        "2": 0
+        "2": 9
       },
       "images": [
         {
@@ -2243,6 +2259,7 @@
       "buy": true,
       "price": 0.45,
       "priceId": "price_1NQ6GNARhMwSarZXTdfD5iTx",
+      "weight": 3,
       "availability": 10,
       "datasheetId": "IRF3205",
       "manufacturerId": "6",
@@ -2351,6 +2368,7 @@
       "buy": true,
       "price": 17,
       "priceId": "price_1NQ6IeARhMwSarZX80cgsarK",
+      "weight": 700,
       "availability": 1,
       "content": "<p>Professional 14-piece tweezers set made of stainless steel with excellent quality for various needs.</p><p>The anti-static coating provides superior protection against electrostatic discharge.</p>",
       "images": [

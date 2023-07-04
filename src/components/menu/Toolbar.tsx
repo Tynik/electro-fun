@@ -1,10 +1,6 @@
 import React from 'react';
-import { Link as RouterLink, useHistory } from 'react-router-dom';
-import {
-  Box,
-  Toolbar as MuiToolbar,
-  Typography
-} from '@mui/material';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
+import { Box, Toolbar as MuiToolbar, Typography } from '@mui/material';
 
 import { DbContext, UserContext } from '~/contexts';
 import { getIcon } from '~/utils';
@@ -13,19 +9,13 @@ import CIconButton from '~/components/CIconButton';
 import Search from './Search';
 
 export type ToolbarProps = {
-  menuIsOpened: boolean
-  onSearch: (text: string) => void
-  onOpenMenu: () => void
-}
+  menuIsOpened: boolean;
+  onSearch: (text: string) => void;
+  onOpenMenu: () => void;
+};
 
-const Toolbar = (props: ToolbarProps) => {
-  const {
-    menuIsOpened,
-    onSearch,
-    onOpenMenu
-  } = props;
-
-  const history = useHistory();
+const Toolbar = ({ menuIsOpened, onSearch, onOpenMenu }: ToolbarProps) => {
+  const navigate = useNavigate();
 
   const { db } = React.useContext(DbContext);
   const { numberAllItemsInBasket } = React.useContext(UserContext);
@@ -44,7 +34,7 @@ const Toolbar = (props: ToolbarProps) => {
   }, []);
 
   const onBasketClick = React.useCallback(() => {
-    history.push('/basket');
+    navigate('/basket');
   }, []);
 
   return (
@@ -56,9 +46,8 @@ const Toolbar = (props: ToolbarProps) => {
         color={'inherit'}
         aria-label={'Открыть основное меню'}
         sx={{
-          mr: 2, ...(
-            menuIsOpened && { display: 'none' }
-          )
+          mr: 2,
+          ...(menuIsOpened && { display: 'none' }),
         }}
       />
       {/*<img src={'/favicon.png'} width={'48px'} height={'48px'}/>*/}
@@ -72,19 +61,15 @@ const Toolbar = (props: ToolbarProps) => {
           display: { xs: 'none', sm: 'block' },
           whiteSpace: 'nowrap',
           color: 'white',
-          textDecoration: 'none'
+          textDecoration: 'none',
         }}
       >
         {db.siteName}
       </Typography>
 
-      <Search
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-        onSearch={onSearch}
-      />
+      <Search searchValue={searchValue} setSearchValue={setSearchValue} onSearch={onSearch} />
 
-      <Box sx={{ flexGrow: 1 }}/>
+      <Box sx={{ flexGrow: 1 }} />
 
       <Box sx={{ display: 'flex' }}>
         <CIconButton

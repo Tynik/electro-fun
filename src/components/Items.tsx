@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as RouterLink, useHistory } from 'react-router-dom';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import { Grid, Card, Button, CardActionArea, CardHeader } from '@mui/material';
 import { ExpandMore as ExpandMoreIcon } from '@mui/icons-material';
 
@@ -21,13 +21,13 @@ export type ItemsListProps = {
 };
 
 export const ItemsList = ({ items }: ItemsListProps) => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const { isNextPage, loadNextPage } = React.useContext(DbContext);
 
   const onItemKeyPress = (url: string, e: React.KeyboardEvent) => {
     if (e.key === ' ' || e.key === 'Enter') {
-      history.push(url);
+      navigate(url);
     }
   };
 

@@ -4,9 +4,10 @@ export type CheckoutResponse = {
   url: string;
 };
 
-type Item = {
+export type CheckoutItem = {
+  weight: number;
   priceId: string;
-  quantity: 1;
+  quantity: number;
 };
 
 export type CheckoutPayload = {
@@ -14,7 +15,7 @@ export type CheckoutPayload = {
   phone: string;
   deliveryAddress: string;
   note: string;
-  items: Item[];
+  items: CheckoutItem[];
 };
 
 export const checkoutRequest = async (payload: CheckoutPayload) =>

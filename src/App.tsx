@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, useLocation, useHistory, Redirect } from 'react-router-dom';
+import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { Container, Box, styled, LinearProgress } from '@mui/material';
 
 import { DbContext } from './contexts';
@@ -32,7 +32,7 @@ const Main = styled('div', {
 
 export const App = () => {
   const location = useLocation();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const [isAlreadyMounted, setIsAlreadyMounted] = React.useState(false);
   const [menuIsOpened, setMenuOpen] = React.useState(false);
@@ -56,7 +56,7 @@ export const App = () => {
   const onSearch = React.useCallback(
     (text: string) => {
       if (location.pathname !== '/') {
-        history.push('/');
+        navigate('/');
       }
       search({ text, debounce: true });
     },
@@ -80,37 +80,30 @@ export const App = () => {
           <DrawerHeader />
 
           <Container>
-            <Switch>
-              <Route path="/" exact>
-                <HomePage
-                  isSearching={isSearching}
-                  items={db.items}
-                  foundItems={foundItems}
-                  foundDatasheets={foundDatasheets}
-                  onSearchReset={onSearchReset}
-                />
-              </Route>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <HomePage
+                    isSearching={isSearching}
+                    items={db.items}
+                    foundItems={foundItems}
+                    foundDatasheets={foundDatasheets}
+                    onSearchReset={onSearchReset}
+                  />
+                }
+              />
 
-              <Route path="/item/:id">
-                <ItemInfoPage />
-              </Route>
+              <Route path="/item/:id" element={<ItemInfoPage />} />
 
-              <Route path="/category/:categoryId">
-                <Category />
-              </Route>
+              <Route path="/category/:categoryId" element={<Category />} />
 
-              <Route path="/datasheets">
-                <DatasheetsPage datasheets={db.datasheets} />
-              </Route>
+              <Route path="/datasheets" element={<DatasheetsPage datasheets={db.datasheets} />} />
 
-              <Route path="/basket">
-                <BasketPage />
-              </Route>
+              <Route path="/basket" element={<BasketPage />} />
 
-              <Route path="*">
-                <Redirect to="/" />
-              </Route>
-            </Switch>
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
           </Container>
         </Main>
       </Box>

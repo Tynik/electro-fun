@@ -1,9 +1,9 @@
 import type { ItemId, ItemOptionId } from './ids.types';
 
-export type UserBasketItemT = Record<ItemOptionId, number>;
+export type UserBasketItem = Record<ItemOptionId, number>;
 
 export type UserBasket = {
-  items: Record<ItemId, UserBasketItemT>;
+  items: Record<ItemId, UserBasketItem>;
 };
 
 export type UserT = {

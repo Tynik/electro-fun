@@ -10,21 +10,17 @@ import '@fontsource/roboto/700.css';
 
 import { App } from './App';
 import theme from './theme';
-import {
-  AppContextProvider,
-  UserContextProvider,
-  DbContextProvider
-} from './contexts';
+import { AppContextProvider, UserContextProvider, DbContextProvider } from './contexts';
 
 ReactDOM.render(
   <BrowserRouter>
     <ThemeProvider theme={theme}>
-      <CssBaseline/>
+      <CssBaseline />
 
       <AppContextProvider>
         <UserContextProvider>
           <DbContextProvider>
-            <App/>
+            <App />
           </DbContextProvider>
         </UserContextProvider>
       </AppContextProvider>

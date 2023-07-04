@@ -12,6 +12,7 @@ const SITE_DOMAIN = process.env.SITE_DOMAIN ?? 'http://localhost:8097';
 
 type Item = {
   priceId: string;
+  weight: number;
   quantity: number;
 };
 
@@ -19,29 +20,57 @@ type Payload = {
   items: Item[];
 };
 
-export const handler = createHandler<Payload>({ allowMethods: ['POST'] }, async ({ payload }) => {
-  const session = await stripe.checkout.sessions.create({
-    line_items: payload.items.map(item => ({
-      price: item.priceId,
-      quantity: item.quantity,
-    })),
-    mode: 'payment',
-    shipping_options: [
-      {
-        shipping_rate: 'shr_1NQ8dDARhMwSarZXn5GIt4kx',
-      },
-      {
-        shipping_rate: 'shr_1NQ8flARhMwSarZXBBTINVJt',
-      },
-    ],
-    success_url: `${SITE_DOMAIN}?success=true`,
-    cancel_url: `${SITE_DOMAIN}?canceled=true`,
+type ShippingRatesListOptions = {
+  minimumWeightThreshold: number;
+};
+
+const getShippingRatesList = async ({ minimumWeightThreshold }: ShippingRatesListOptions) => {
+  const { data: shippingRates } = await stripe.shippingRates.list({
+    active: true,
+    limit: 100,
   });
 
-  return {
-    status: 'ok',
-    data: {
-      url: session.url,
-    },
-  };
-});
+  return shippingRates.filter(
+    shippingRate => +shippingRate.metadata.maxWeight >= minimumWeightThreshold
+  );
+};
+
+const getProductsList = async () => {
+  const { data: products } = await stripe.products.list({
+    active: true,
+    limit: 100,
+  });
+
+  return products;
+};
+
+export const handler = createHandler<Payload>(
+  { allowMethods: ['POST'] },
+  async ({ payload: { items } }) => {
+    const totalItemsWeight = items.reduce((totalWeight, item) => totalWeight + item.weight, 0);
+
+    const shippingRates = await getShippingRatesList({
+      minimumWeightThreshold: totalItemsWeight,
+    });
+
+    const session = await stripe.checkout.sessions.create({
+      line_items: items.map(item => ({
+        price: item.priceId,
+        quantity: item.quantity,
+      })),
+      mode: 'payment',
+      shipping_options: shippingRates.map(shippingRate => ({
+        shipping_rate: shippingRate.id,
+      })),
+      success_url: `${SITE_DOMAIN}?success=true`,
+      cancel_url: `${SITE_DOMAIN}?canceled=true`,
+    });
+
+    return {
+      status: 'ok',
+      data: {
+        url: session.url,
+      },
+    };
+  }
+);

@@ -61,6 +61,7 @@
       "buy": true,
       "price": 2,
       "priceId": "price_1NQ6k9ARhMwSarZXPPnOeLwN",
+      "weight": 10,
       "availability": 1,
       "content": "",
       "datasheetId": "LED0805BLUE",
@@ -123,6 +124,7 @@
       "original": false,
       "buy": false,
       "price": 0,
+      "weight": 300,
       "availability": 1,
       "datasheetId": "JLINKUM08001",
       "images": [
@@ -192,6 +194,7 @@
       "datasheetId": "RF-BM-2652P2",
       "buy": false,
       "price": 0,
+      "weight": 15,
       "availability": 2,
       "images": [
         {
@@ -332,6 +335,7 @@
       "buy": true,
       "price": 6,
       "priceId": "price_1NQ6PkARhMwSarZX4L2iaW95",
+      "weight": 70,
       "availability": 2,
       "images": [
         {
@@ -494,6 +498,7 @@
       "buy": true,
       "price": 4,
       "priceId": "price_1NQ6XqARhMwSarZXlIqahLlB",
+      "weight": 30,
       "availability": 3,
       "datasheetId": "ESP-12E",
       "content": "<p>LoLin NodeMCU V3 based on ESP8266 Wi-Fi / ESP-12E / CH340 is a platform used for programming and controlling various devices.\n\nESP8266 Wi-Fi is a programmable module that allows connecting to Wi-Fi networks. NodeMCU (Lua) / Micropython (Python) / Arduino firmware files can be loaded onto this ESP8266 board, creating files in the Flash memory, and running them.\n\nThe module has 11 input/output ports, some of which are multiplexed with UART, I²C, SPI, PWM, and ADC interfaces. All board pins are spaced at 2.54 mm intervals. Powering the board and code uploading are done through the MicroUSB connector. The NodeMCU firmware allows putting the module into deep sleep mode to reduce power consumption and provides access to the module's extensive capabilities not available in standard firmware.\n\nThe board has a voltage regulator for supplying power via USB.\n\nThe ESP-12E Wi-Fi module is based on the ESP8266 core with a different Wi-Fi radio interface. The ESP8266 core is integrated into the Tensilica L106, a 32-bit microcontroller with ultra-low power consumption.\n\nSupport for clock frequencies of 80 or 160 MHz, support for RTOS, built-in Wi-Fi MAC/BB/RF/PA/LNA, micro-antenna on the module board. The module supports the IEEE802.11 b/g/n standard and a full stack of TCP/IP protocols.</p>",
@@ -628,6 +633,7 @@
       },
       "buy": false,
       "price": 0,
+      "weight": 15,
       "availability": 0,
       "datasheetId": "ESP-C3-13U",
       "content": "<p></p>",

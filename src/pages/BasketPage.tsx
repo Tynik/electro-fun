@@ -1,7 +1,7 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
-import { Grid, Typography, Stepper, Step, StepLabel } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
+import { Grid, Typography, Stepper, Step, StepLabel } from '@mui/material';
 import { DbContext, UserContext } from '~/contexts';
 import { BackButton, Loader, BasketStep1, BasketStep2 } from '~/components';
 import { useJsonDbSearch } from '~/hooks';
@@ -11,7 +11,7 @@ import { useQueryParams } from '~/utils';
 export type BasketPageProps = {};
 
 export const BasketPage = (props: BasketPageProps) => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const { step: queryStep } = useQueryParams();
 
   const { db, loadNextDbPart } = React.useContext(DbContext);
@@ -24,7 +24,7 @@ export const BasketPage = (props: BasketPageProps) => {
   } = React.useContext(UserContext);
 
   React.useEffect(() => {
-    history.replace(`?step=${step}`);
+    navigate(`?step=${step}`, { replace: true });
   }, [step]);
 
   React.useEffect(() => {

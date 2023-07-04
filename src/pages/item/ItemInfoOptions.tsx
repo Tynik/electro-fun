@@ -1,5 +1,4 @@
 import React from 'react';
-import { useHistory } from 'react-router';
 import { FormLabel, RadioGroup, FormControlLabel, Radio, Chip, FormControl } from '@mui/material';
 
 import type { Item } from '~/types';
@@ -7,13 +6,14 @@ import type { Item } from '~/types';
 import { UserContext } from '~/contexts';
 import { useQueryParams } from '~/utils/router';
 import { getItemDefaultOption } from '~/helpers';
+import { useNavigate } from 'react-router-dom';
 
 export type ItemInfoOptionsProps = {
   item: Item;
 };
 
 export const ItemInfoOptions = ({ item }: ItemInfoOptionsProps) => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const { optionId: selectedItemOptionId } = useQueryParams();
 
@@ -32,7 +32,8 @@ export const ItemInfoOptions = ({ item }: ItemInfoOptionsProps) => {
     const queryParams = new URLSearchParams({
       optionId: (e.target as HTMLInputElement).value,
     });
-    history.replace(`?${queryParams}`);
+
+    navigate(`?${queryParams}`, { replace: true });
   };
 
   return (
