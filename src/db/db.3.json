@@ -782,7 +782,7 @@
         "keywords": "ads1115, adc, ads, i2c, module, 12-bit",
         "measurement": "12-bit"
       },
-      "buy": false,
+      "buy": true,
       "price": 0,
       "priceId": "price_1NQ6xYARhMwSarZXKaiy7dtj",
       "weight": 10,

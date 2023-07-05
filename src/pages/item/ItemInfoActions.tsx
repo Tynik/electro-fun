@@ -23,10 +23,12 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
 
   const downSmMatch = useMediaQuery<any>(theme => theme.breakpoints.down('sm'));
 
+  const initialItemAvailability = getItemAvailability(item, selectedItemOptionId);
+
   const itemAvailability = item.availability
     ? numberItemsInBasket
-      ? getItemAvailability(item, selectedItemOptionId) - numberItemsInBasket
-      : getItemAvailability(item, selectedItemOptionId)
+      ? initialItemAvailability - numberItemsInBasket
+      : initialItemAvailability
     : 0;
 
   return (
@@ -67,7 +69,7 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
             alignItems: 'center',
           }}
         >
-          {itemAvailability ? (
+          {initialItemAvailability ? (
             <>
               <Badge
                 badgeContent={numberItemsInBasket && `x${numberItemsInBasket}`}
