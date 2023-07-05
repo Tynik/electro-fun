@@ -1,14 +1,4 @@
-import { createHandler } from '../netlify.helpers';
-
-import Stripe from 'stripe';
-
-const stripe = new Stripe(
-  process.env.STRIPE_API_KEY ??
-    'sk_test_51NDw9MARhMwSarZX5RFCidCIKsrec9HdO3gMDT3zBc1COtGyVrV5x93jKzXPDqUveYdWt9lcHm1YiVWxgQarpt1j006wO8q0eR',
-  {}
-);
-
-const SITE_DOMAIN = process.env.SITE_DOMAIN ?? 'http://localhost:8097';
+import { createHandler, getStripeShippingRatesList, initStripeClient } from '../netlify.helpers';
 
 type Item = {
   priceId: string;
@@ -20,36 +10,16 @@ type Payload = {
   items: Item[];
 };
 
-type ShippingRatesListOptions = {
-  minimumWeightThreshold: number;
-};
-
-const getShippingRatesList = async ({ minimumWeightThreshold }: ShippingRatesListOptions) => {
-  const { data: shippingRates } = await stripe.shippingRates.list({
-    active: true,
-    limit: 100,
-  });
-
-  return shippingRates.filter(
-    shippingRate => +shippingRate.metadata.maxWeight >= minimumWeightThreshold
-  );
-};
-
-const getProductsList = async () => {
-  const { data: products } = await stripe.products.list({
-    active: true,
-    limit: 100,
-  });
-
-  return products;
-};
+const SITE_DOMAIN = process.env.SITE_DOMAIN ?? 'http://localhost:8097';
 
 export const handler = createHandler<Payload>(
   { allowMethods: ['POST'] },
   async ({ payload: { items } }) => {
+    const stripe = initStripeClient();
+
     const totalItemsWeight = items.reduce((totalWeight, item) => totalWeight + item.weight, 0);
 
-    const shippingRates = await getShippingRatesList({
+    const shippingRates = await getStripeShippingRatesList(stripe, {
       minimumWeightThreshold: totalItemsWeight,
     });
 

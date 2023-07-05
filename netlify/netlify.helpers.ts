@@ -1,4 +1,5 @@
 import type { Handler, HandlerResponse, HandlerEvent, HandlerContext } from '@netlify/functions';
+import Stripe from 'stripe';
 
 type HTTPMethod = 'POST' | 'GET' | 'OPTIONS' | 'PUT' | 'UPDATE' | 'DELETE';
 
@@ -86,4 +87,43 @@ export const createHandler = <Payload = unknown>(
       );
     }
   };
+};
+
+export const initStripeClient = () => {
+  return new Stripe(
+    process.env.STRIPE_API_KEY ??
+      'sk_test_51NDw9MARhMwSarZX5RFCidCIKsrec9HdO3gMDT3zBc1COtGyVrV5x93jKzXPDqUveYdWt9lcHm1YiVWxgQarpt1j006wO8q0eR',
+    {
+      apiVersion: '2022-11-15',
+    }
+  );
+};
+
+type ShippingRatesListOptions = {
+  minimumWeightThreshold: number;
+};
+
+export const getStripeShippingRatesList = async (
+  stripe: Stripe,
+  { minimumWeightThreshold }: ShippingRatesListOptions
+) => {
+  const { data: shippingRates } = await stripe.shippingRates.list({
+    active: true,
+    limit: 100,
+  });
+
+  return shippingRates.filter(
+    shippingRate =>
+      +shippingRate.metadata.minWeight <= minimumWeightThreshold &&
+      +shippingRate.metadata.maxWeight >= minimumWeightThreshold
+  );
+};
+
+export const getStripeProductsList = async (stripe: Stripe) => {
+  const { data: products } = await stripe.products.list({
+    active: true,
+    limit: 100,
+  });
+
+  return products;
 };

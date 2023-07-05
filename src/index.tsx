@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 
@@ -9,10 +9,12 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 import { App } from './App';
-import theme from './theme';
 import { AppContextProvider, UserContextProvider, DbContextProvider } from './contexts';
+import theme from './theme';
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('app'));
+
+root.render(
   <BrowserRouter>
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -25,6 +27,5 @@ ReactDOM.render(
         </UserContextProvider>
       </AppContextProvider>
     </ThemeProvider>
-  </BrowserRouter>,
-  document.getElementById('app')
+  </BrowserRouter>
 );

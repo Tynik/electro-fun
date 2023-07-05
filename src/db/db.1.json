@@ -1422,7 +1422,7 @@
         "description": "CCS811 - Air Quality Sensor",
         "keywords": "sensor, co2, air quality, particles, voc, tvoc"
       },
-      "buy": false,
+      "buy": true,
       "price": 0,
       "weight": 10,
       "availability": 0,

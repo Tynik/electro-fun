@@ -146,7 +146,7 @@ export const getItemAvailabilitySEOSchema = (item: Item, optionId: ItemOptionId)
 };
 
 export const sortItemFeatures = (allFeatures: DbItemFeatures, features: ItemFeature[]) =>
-  features.sort((featureA, featureB) => {
+  [...features].sort((featureA, featureB) => {
     const featSecRefIdA = allFeatures[featureA.refId].featSecRefId;
     const featSecRefIdB = allFeatures[featureB.refId].featSecRefId;
 

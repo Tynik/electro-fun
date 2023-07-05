@@ -24,26 +24,23 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
   const [featureInfo, setFeatureInfo] = React.useState<ItemFeature['info']>('');
   const [featureInfoAnchorEl, setFeatureInfoAnchorEl] = React.useState(null);
 
-  const isInsertItemFeatureSectionName = React.useCallback(
-    (features: ItemFeature[], index: number): boolean => {
-      const featSectionRef = db.itemFeatures[features[index].refId].featSecRefId;
+  const isInsertItemFeatureSectionName = (features: ItemFeature[], index: number): boolean => {
+    const featSectionRef = db.itemFeatures[features[index].refId].featSecRefId;
 
-      if (!index) {
-        return Boolean(featSectionRef);
-      }
-      const prevFeatSectionRef = db.itemFeatures[features[index - 1].refId].featSecRefId;
+    if (!index) {
+      return Boolean(featSectionRef);
+    }
+    const prevFeatSectionRef = db.itemFeatures[features[index - 1].refId].featSecRefId;
 
-      return !prevFeatSectionRef ? Boolean(featSectionRef) : featSectionRef !== prevFeatSectionRef;
-    },
-    []
-  );
+    return !prevFeatSectionRef ? Boolean(featSectionRef) : featSectionRef !== prevFeatSectionRef;
+  };
 
   const onFeatureInfoClick = (featureInfo: ItemFeature['info'], e) => {
     setFeatureInfoAnchorEl(e.currentTarget);
     setFeatureInfo(featureInfo);
   };
 
-  const getItemFeatureValue = React.useCallback((feature: ItemFeature) => {
+  const getItemFeatureValue = (feature: ItemFeature) => {
     const processFeatureValue = (featureValue: any, suffix: FeatureDefinitionSuffix) => {
       if (!Array.isArray(featureValue)) {
         return [featureValue + (suffix || '')];
@@ -72,7 +69,7 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
             <InfoIcon
               fontSize={'small'}
               color={'info'}
-              sx={{ marginLeft: theme.spacing(1) }}
+              sx={{ marginLeft: theme.spacing(1), cursor: 'pointer' }}
               onClick={e => onFeatureInfoClick(feature.info, e)}
               aria-owns={featureInfo ? 'mouse-feature-info-click-popover' : undefined}
               aria-haspopup
@@ -81,7 +78,7 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
         </span>
       )
     );
-  }, []);
+  };
 
   const abbreviationsWrapper = React.useCallback(
     (text: string) =>
@@ -112,7 +109,6 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
           <div
             key={`${feature.refId}-${index}-feature`}
             style={{
-              position: 'relative',
               marginBottom: theme.spacing(1),
             }}
           >
