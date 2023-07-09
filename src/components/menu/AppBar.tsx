@@ -1,65 +1,42 @@
 import React from 'react';
-import {
-  styled,
-  AppBar as MuiAppBar,
-  Theme
-} from '@mui/material';
+import { styled, AppBar as MuiAppBar, Theme } from '@mui/material';
 
-import Toolbar, { ToolbarProps } from './Toolbar';
+import MainToolbar, { ToolbarProps } from './MainToolbar';
 
 export type StyledAppBarProps = {
-  drawerWidth: number
-  open: boolean
-  theme?: Theme
-}
+  drawerWidth: number;
+  open: boolean;
+  theme?: Theme;
+};
 
 const StyledAppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) =>
-    ['open', 'drawerWidth'].indexOf(prop as string) === -1
-
-})(({ theme, drawerWidth, open }: StyledAppBarProps) => (
-  {
+  shouldForwardProp: prop => ['open', 'drawerWidth'].indexOf(prop as string) === -1,
+})(({ theme, drawerWidth, open }: StyledAppBarProps) => ({
+  transition: theme.transitions.create(['margin', 'width'], {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.leavingScreen,
+  }),
+  ...(open && {
+    width: `calc(100% - ${drawerWidth}px)`,
+    marginLeft: `${drawerWidth}px`,
     transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
     }),
-    ...(
-      open && {
-        width: `calc(100% - ${drawerWidth}px)`,
-        marginLeft: `${drawerWidth}px`,
-        transition: theme.transitions.create(['margin', 'width'], {
-          easing: theme.transitions.easing.easeOut,
-          duration: theme.transitions.duration.enteringScreen
-        })
-      }
-    )
-  }
-));
+  }),
+}));
 
 export type AppBarProps = Pick<ToolbarProps, 'onSearch' | 'onOpenMenu'> & {
-  menuIsOpened: boolean
-  drawerWidth: number
-}
+  menuIsOpened: boolean;
+  drawerWidth: number;
+};
 
 const AppBar = (props: AppBarProps) => {
-  const {
-    menuIsOpened,
-    drawerWidth,
-    onSearch,
-    onOpenMenu
-  } = props;
+  const { menuIsOpened, drawerWidth, onSearch, onOpenMenu } = props;
 
   return (
-    <StyledAppBar
-      position={'fixed'}
-      open={menuIsOpened}
-      drawerWidth={drawerWidth}
-    >
-      <Toolbar
-        menuIsOpened={menuIsOpened}
-        onSearch={onSearch}
-        onOpenMenu={onOpenMenu}
-      />
+    <StyledAppBar position={'fixed'} open={menuIsOpened} drawerWidth={drawerWidth}>
+      <MainToolbar menuIsOpened={menuIsOpened} onSearch={onSearch} onOpenMenu={onOpenMenu} />
     </StyledAppBar>
   );
 };

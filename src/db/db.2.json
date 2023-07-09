@@ -122,10 +122,11 @@
         "keywords": "programmer, segger, j-link, v8, usb, jtag, arm, cortex-m"
       },
       "original": false,
-      "buy": false,
+      "buy": true,
       "price": 0,
+      "priceId": "",
       "weight": 300,
-      "availability": 1,
+      "availability": 0,
       "datasheetId": "JLINKUM08001",
       "images": [
         {
@@ -192,10 +193,11 @@
         "keywords": "rf-star, cc2652p, simplelink, bluetooth, zigbee, thread, ti"
       },
       "datasheetId": "RF-BM-2652P2",
-      "buy": false,
+      "buy": true,
       "price": 0,
+      "priceId": "price_1NQc2eARhMwSarZXf8L4jMvH",
       "weight": 15,
-      "availability": 2,
+      "availability": 0,
       "images": [
         {
           "src": "/photos/RF-BM-2652P2-1.webp",
@@ -266,14 +268,6 @@
           "src": {
             "source": "github",
             "userId": 2892853
-          }
-        },
-        {
-          "name": "Alex Egony",
-          "url": "https://github.com/egony",
-          "src": {
-            "source": "github",
-            "userId": 52287546
           }
         }
       ],
@@ -446,13 +440,6 @@
       ],
       "externalLinks": [
         {
-          "name": "Budget power consumption monitoring on PZEM-004T v3 for Home Assistant",
-          "url": "https://youtu.be/YlDBzXpbWfI",
-          "lang": "en",
-          "icon": "youtube.com.png",
-          "iconAlt": "youtube.com"
-        },
-        {
           "name": "Arduino library for PZEM-004T v3.0",
           "url": "https://github.com/mandulaj/PZEM-004T-v30",
           "lang": "en",
@@ -486,7 +473,7 @@
       ]
     },
     {
-      "categoryId": 9,
+      "categoryId": 23,
       "lang": "en",
       "title": "LoLin NodeMCU ESP8266 4MB v3",
       "subtitle": "DevKit",
@@ -559,7 +546,7 @@
         },
         {
           "refId": 54,
-          "value": "4MB"
+          "value": "4 MB"
         },
         {
           "refId": 55,
@@ -631,8 +618,9 @@
         "description": "ESP-C3-13U 4M",
         "keywords": "risc-v, esp32, esp, c3fn4, ai-thinker, wifi, ble, smart-home, wearable"
       },
-      "buy": false,
+      "buy": true,
       "price": 0,
+      "priceId": "price_1NQc4QARhMwSarZX82odK6mC",
       "weight": 15,
       "availability": 0,
       "datasheetId": "ESP-C3-13U",
@@ -716,6 +704,61 @@
           "icon": "ai-thinker.com.ico",
           "iconAlt": "ai-thinker.com"
         }
+      ]
+    },
+    {
+      "categoryId": 23,
+      "lang": "en",
+      "title": "Raspberry PI RP2040-Zero",
+      "subtitle": "Mini",
+      "buy": true,
+      "price": 4.90,
+      "priceId": "price_1NS3vMARhMwSarZXXPWONfnI",
+      "weight": 15,
+      "availability": 10,
+      "content": "<p>The RP2040-Zero is a powerful development board featuring the RP2040 microcontroller. It offers a compact and versatile platform for various electronics projects. The RP2040-Zero is equipped with a dual-core ARM Cortex-M0+ processor, running at up to 133MHz, providing excellent performance and efficiency.</p><p>The RP2040 microcontroller, which is used in the RP2040-Zero board, has a total of 4 channels for DMA (Direct Memory Access). DMA allows for efficient data transfer between peripherals and memory without the need for CPU intervention. The DMA channels can be utilized to offload data transfer tasks from the CPU, freeing up processing power for other tasks. With 4 channels, the RP2040-Zero provides flexibility in managing data transfers for various peripherals and applications.</p><p>The RP2040-Zero is perfect for prototyping, IoT applications, robotics, and more. With its powerful processor, ample memory, and various built-in peripherals, it provides a solid foundation for your electronic projects.</p>",
+      "images": [
+        {
+          "src": "/photos/RP2040-Zero-1.webp",
+          "alt": "RP2040-Zero - external view"
+        }
+      ],
+      "features": [
+        {
+          "refId": 2,
+          "value": "UART/GPIO/I²C/PWM/ADC/DAC"
+        },
+        {
+          "refId": 38,
+          "value": "2-core ARM Cortex-M0+"
+        },
+        {
+          "refId": 41,
+          "value": 4
+        },
+        {
+          "refId": 98,
+          "value": "up to 133 MHz"
+        },
+        {
+          "refId": 54,
+          "value": "2 MB"
+        },
+        {
+          "refId": 60,
+          "value": "264 KB"
+        }
+      ],
+      "options": {
+        "1": {
+          "name": "Unsoldered",
+          "default": true
+        }
+      },
+      "applicationIds": [
+        "1",
+        "3",
+        "14"
       ]
     }
   ]

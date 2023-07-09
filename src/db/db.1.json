@@ -4,7 +4,7 @@
   "seo": {
     "title": "SmartStream Electronics",
     "description": "Discover a wide range of high-quality electronic components and accessories at our online store. Find everything you need for your DIY electronics projects. Fast shipping and reliable service.",
-    "keywords": "electronics components, electronic parts, DIY electronics, electronic accessories, online store, electronic components shop, reliable service, fast shipping, high-quality electronics, DIY projects"
+    "keywords": "electronics components, electronic parts, DIY electronics, electronic accessories, fast shipping, high-quality, DIY"
   },
   "footer": {
     "bottom": "SmartStream Electronics 2023"
@@ -31,7 +31,8 @@
     "10": "Motion Sensors",
     "11": "Voltage and Current Monitoring",
     "12": "Temperature Measurement Systems",
-    "13": "Automotive Industry"
+    "13": "Automotive Industry",
+    "14": "Robotics"
   },
   "manufacturers": {
     "1": {
@@ -85,88 +86,7 @@
       "url": "https://www.simcom.com"
     }
   },
-  "abbreviations": {
-    "RISC": {
-      "url": "https://en.wikipedia.org/wiki/RISC",
-      "lang": "en"
-    },
-    "RISC-V": {
-      "url": "https://en.wikipedia.org/wiki/RISC-V",
-      "lang": "en"
-    },
-    "MQTT": {
-      "url": "https://en.wikipedia.org/wiki/MQTT",
-      "lang": "en"
-    },
-    "QFN": {
-      "url": "https://en.wikipedia.org/wiki/QFN",
-      "lang": "en"
-    },
-    "RAM": {
-      "url": "https://en.wikipedia.org/wiki/%D0%97%D0%B0%D0%BF%D0%BE%D0%BC%D0%B8%D0%BD%D0%B0%D1%8E%D1%89%D0%B5%D0%B5_%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE_%D1%81_%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%BC_%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%BE%D0%BC",
-      "lang": "en"
-    },
-    "SRAM": {
-      "url": "https://en.wikipedia.org/wiki/SRAM_(%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D1%8C)",
-      "lang": "en"
-    },
-    "ISP": {
-      "url": "https://en.wikipedia.org/wiki/%D0%92%D0%BD%D1%83%D1%82%D1%80%D0%B8%D1%81%D1%85%D0%B5%D0%BC%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5",
-      "lang": "en"
-    },
-    "ROM": {
-      "url": "https://en.wikipedia.org/wiki/%D0%9F%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B7%D0%B0%D0%BF%D0%BE%D0%BC%D0%B8%D0%BD%D0%B0%D1%8E%D1%89%D0%B5%D0%B5_%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE",
-      "lang": "en"
-    },
-    "PROM": {
-      "url": "https://en.wikipedia.org/wiki/PROM",
-      "lang": "en"
-    },
-    "EPROM": {
-      "url": "https://en.wikipedia.org/wiki/EPROM",
-      "lang": "en"
-    },
-    "EEPROM": {
-      "url": "https://en.wikipedia.org/wiki/EEPROM",
-      "lang": "en"
-    },
-    "OTA": {
-      "url": "https://en.wikipedia.org/wiki/%D0%9E%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BF%D0%BE_%D0%B2%D0%BE%D0%B7%D0%B4%D1%83%D1%85%D1%83",
-      "lang": "en"
-    },
-    "SoC": {
-      "url": "https://en.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D0%BD%D0%B0_%D0%BA%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BB%D0%BB%D0%B5",
-      "lang": "en"
-    },
-    "FPU": {
-      "url": "https://en.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D1%80",
-      "lang": "en"
-    },
-    "MPU": {
-      "url": "https://en.wikipedia.org/wiki/Memory_protection_unit",
-      "lang": "en"
-    },
-    "DMA": {
-      "url": "https://en.wikipedia.org/wiki/%D0%9F%D1%80%D1%8F%D0%BC%D0%BE%D0%B9_%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF_%D0%BA_%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8",
-      "lang": "en"
-    },
-    "DMM": {
-      "url": "/datasheets/DMM.pdf",
-      "lang": "en"
-    },
-    "SMBus": {
-      "url": "https://en.wikipedia.org/wiki/SMBus",
-      "lang": "en"
-    },
-    "ARM": {
-      "url": "https://en.wikipedia.org/wiki/ARM_(%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0)",
-      "lang": "en"
-    },
-    "JTAG": {
-      "url": "https://en.wikipedia.org/wiki/JTAG",
-      "lang": "en"
-    }
-  },
+  "abbreviations": {},
   "clarifications": {
     "Cortex®-M4": {
       "url": "https://en.wikipedia.org/wiki/ARM_Cortex-M#Cortex-M4",
@@ -595,6 +515,11 @@
       "id": 22,
       "name": "Computer Components",
       "icon": "computer"
+    },
+    {
+      "id": 23,
+      "name": "Development Boards",
+      "icon": "cpu"
     }
   ],
   "featureSections": {
@@ -603,14 +528,14 @@
     "3": "Voltage",
     "4": "Current",
     "5": "Measurement",
-    "6": "GPIOs",
+    "6": "GPIO(s)",
     "7": "Current Consumption",
     "8": "CPU",
     "9": "Software",
     "10": "MCU",
     "11": "Support",
     "12": "Protection",
-    "13": "Operation",
+    "13": "Exploitation",
     "14": "Dimensions"
   },
   "optionTypes": {
@@ -849,7 +774,7 @@
       "suffix": " channel"
     },
     "42": {
-      "name": "Enclosure"
+      "name": "Package"
     },
     "43": {
       "name": "Network Protocol",
@@ -1726,7 +1651,7 @@
           "refId": 2,
           "value": [
             "I²C (3.4 MHz)",
-            "SPI and GPIOs (50 MHz)"
+            "SPI and GPIO(s) (50 MHz)"
           ]
         },
         {

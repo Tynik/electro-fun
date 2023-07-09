@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
-import { Box, Toolbar as MuiToolbar, Typography } from '@mui/material';
+import { Box, Toolbar, Typography } from '@mui/material';
 
 import { DbContext, UserContext } from '~/contexts';
 import { getIcon } from '~/utils';
@@ -14,7 +14,7 @@ export type ToolbarProps = {
   onOpenMenu: () => void;
 };
 
-const Toolbar = ({ menuIsOpened, onSearch, onOpenMenu }: ToolbarProps) => {
+const MainToolbar = ({ menuIsOpened, onSearch, onOpenMenu }: ToolbarProps) => {
   const navigate = useNavigate();
 
   const { db } = React.useContext(DbContext);
@@ -38,19 +38,19 @@ const Toolbar = ({ menuIsOpened, onSearch, onOpenMenu }: ToolbarProps) => {
   }, []);
 
   return (
-    <MuiToolbar>
+    <Toolbar>
       <CIconButton
         onClick={onOpenMenu}
         icon={getIcon('menu')}
         edge={'start'}
         color={'inherit'}
-        aria-label={'Открыть основное меню'}
+        aria-label={'Open main menu'}
         sx={{
           mr: 2,
           ...(menuIsOpened && { display: 'none' }),
         }}
       />
-      {/*<img src={'/favicon.png'} width={'48px'} height={'48px'}/>*/}
+      <img src={'/logo_128.png'} width="64px" />
 
       <Typography
         variant={'h6'}
@@ -59,6 +59,7 @@ const Toolbar = ({ menuIsOpened, onSearch, onOpenMenu }: ToolbarProps) => {
         onClick={onSiteNameClick}
         sx={{
           display: { xs: 'none', sm: 'block' },
+          marginLeft: 2,
           whiteSpace: 'nowrap',
           color: 'white',
           textDecoration: 'none',
@@ -78,11 +79,11 @@ const Toolbar = ({ menuIsOpened, onSearch, onOpenMenu }: ToolbarProps) => {
           badgeContent={numberAllItemsInBasket}
           icon={getIcon('shoppingBasket')}
           color={'inherit'}
-          aria-label={'Открыть корзину'}
+          aria-label={'Open cart'}
         />
       </Box>
-    </MuiToolbar>
+    </Toolbar>
   );
 };
 
-export default Toolbar;
+export default MainToolbar;
