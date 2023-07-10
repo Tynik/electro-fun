@@ -1,12 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button, Grid, Stack, Box, TextField } from '@mui/material';
 
 import type { Item } from '~/types';
 
 import { AppContext, UserContext } from '~/contexts';
 import { getIcon } from '~/utils';
-import { CheckoutItem, checkoutRequest } from '~/api';
-import { useNavigate } from 'react-router-dom';
+import { type CheckoutItem, checkoutRequest } from '~/api';
+import { getItemPriceId, getItemWeight } from '~/helpers';
 
 export type BasketStep2Props = {
   isActive: boolean;
@@ -35,8 +36,8 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
       const checkoutItems = items.reduce<CheckoutItem[]>((result, item) => {
         Object.keys(basket.items[item.id]).map(optionId => {
           result.push({
-            priceId: item.priceId ?? item.price[optionId].priceId,
-            weight: item.weight ?? 0,
+            priceId: getItemPriceId(item, optionId),
+            weight: getItemWeight(item, optionId),
             quantity: basket.items[item.id][optionId],
           });
         });

@@ -123,14 +123,29 @@ export const getItemPrice = (item: Item, optionId: ItemOptionId) => {
   return typeof priceConfig === 'number' ? priceConfig : priceConfig.price;
 };
 
+export const getItemPriceId = (item: Item, optionId: ItemOptionId) => {
+  if (item.priceId) {
+    return item.priceId;
+  }
+  const priceConfig = item.price[optionId];
+
+  return typeof priceConfig === 'number' ? priceConfig : priceConfig.priceId;
+};
+
 export const getItemAvailability = (item: Item, optionId: ItemOptionId) => {
   if (!item.availability) {
     return 0;
   }
-  if (typeof item.availability === 'number') {
-    return item.availability;
+
+  return typeof item.availability === 'number' ? item.availability : item.availability[optionId];
+};
+
+export const getItemWeight = (item: Item, optionId: ItemOptionId) => {
+  if (!item.weight) {
+    return 0;
   }
-  return item.availability[optionId];
+
+  return typeof item.weight === 'number' ? item.weight : item.weight[optionId];
 };
 
 export const getItemAvailabilitySEOSchema = (item: Item, optionId: ItemOptionId) => {

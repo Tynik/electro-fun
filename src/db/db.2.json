@@ -728,6 +728,65 @@
         "3",
         "14"
       ]
+    },
+    {
+      "categoryId": 19,
+      "title": "USB-A to Type-C / Type-C to Type-C",
+      "subtitle": "60/100 W",
+      "seo": {
+        "description": "USB-A to Type-C / Type-C to Type-C",
+        "keywords": "usb, type-c, cable, data"
+      },
+      "buy": true,
+      "price": {
+        "1": {
+          "price": 2.9,
+          "priceId": "price_1NSGPhARhMwSarZXUb4KxShR"
+        },
+        "2": {
+          "price": 2.7,
+          "priceId": "price_1NSGQVARhMwSarZXfwxVlcVY"
+        }
+      },
+      "weight": 55,
+      "availability": {
+        "1": 1,
+        "2": 2
+      },
+      "content": "<p>The USB-A to Type-C / Type-C to Type-C 60/100W cable is a versatile and high-performance charging and data transfer solution. With its USB-A to Type-C and Type-C to Type-C connectors, it allows you to connect and charge a wide range of devices, including smartphones, tablets, laptops, and more.</p><p>This cable supports fast charging with power delivery up to 60/100W, providing efficient and quick charging for your devices. It is also capable of high-speed data transfer, allowing you to sync and transfer files between devices with ease.</p><p>The cable is built with durable materials to ensure long-lasting performance and reliability. Its compact and tangle-free design makes it convenient for travel and everyday use. Whether you need to charge your device or transfer data, the USB-A to Type-C / Type-C to Type-C 60/100W cable is a reliable and efficient choice.</p>",
+      "images": [
+        {
+          "src": "/photos/USB-to-TypeC-1.webp",
+          "alt": "USB-A to Type-C (100 W)",
+          "optionId": "1"
+        },
+        {
+          "src": "/photos/TypeC-to-TypeC-1.webp",
+          "alt": "Type-C to Type-C (60 W)",
+          "optionId": "2"
+        }
+      ],
+      "features": [
+        {
+          "refId": 15,
+          "value": "up to 6 A",
+          "optionId": "1"
+        },
+        {
+          "refId": 15,
+          "value": "up to 3 A",
+          "optionId": "2"
+        }
+      ],
+      "options": {
+        "1": {
+          "name": "USB-A to Type-C (0.5 m)",
+          "default": true
+        },
+        "2": {
+          "name": "Type-C to Type-C (0.5 m)"
+        }
+      }
     }
   ]
 }

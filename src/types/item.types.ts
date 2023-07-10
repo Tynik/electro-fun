@@ -111,7 +111,7 @@ export type Item = {
   datasheetId?: DatasheetId;
   relatedDatasheetIds?: DatasheetId[];
   availability?: number | Record<ItemOptionId, number>;
-  weight?: number;
+  weight?: number | Record<ItemOptionId, number>;
   price?: number | Record<ItemOptionId, number | PriceConfig>;
   priceId?: PriceId;
   rating?: number;
