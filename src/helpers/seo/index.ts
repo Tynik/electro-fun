@@ -4,3 +4,4 @@ export * from './ProductSEO';
 export * from './ItemInventoryLevel';
 export * from './ItemMeasurement';
 export * from './ItemManufacturer';
+export * from './MerchantReturnPolicy';

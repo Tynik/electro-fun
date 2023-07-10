@@ -7,8 +7,9 @@ import {
   getItemPrice,
   getItemAvailabilitySEOSchema,
   OfferShippingDetailsSEO,
-  ItemInventoryLevel,
   ItemMeasurement,
+  MerchantReturnPolicy,
+  ItemInventoryLevel,
 } from '~/helpers';
 import { useCategory, useSelectedItemOptionId } from '~/hooks';
 
@@ -35,6 +36,8 @@ export const OfferSEO = ({ item }: OfferSEOProps) => {
       <meta itemProp={'priceCurrency'} content={'GBP'} />
       <meta itemProp={'availability'} content={itemAvailabilitySEOSchema} />
       <meta itemProp={'itemCondition'} content={`${SEO_SCHEMA_BASE_URL}/NewCondition`} />
+
+      <MerchantReturnPolicy />
 
       <ItemInventoryLevel item={item} />
       <ItemMeasurement item={item} />

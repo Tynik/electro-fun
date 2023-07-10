@@ -10,9 +10,9 @@ export const OfferShippingDetailsSEO = () => {
       itemScope
     >
       <div itemProp={'shippingRate'} itemType={`${SEO_SCHEMA_BASE_URL}/MonetaryAmount`} itemScope>
-        <meta itemProp={'minValue'} content={'0'} />
-        <meta itemProp={'maxValue'} content={'8'} />
-        <meta itemProp={'currency'} content={'GPB'} />
+        <meta itemProp={'minValue'} content={'1.35'} />
+        <meta itemProp={'maxValue'} content={'7.00'} />
+        <meta itemProp={'currency'} content={'GBP'} />
       </div>
 
       <div
@@ -20,7 +20,7 @@ export const OfferShippingDetailsSEO = () => {
         itemType={`${SEO_SCHEMA_BASE_URL}/DefinedRegion`}
         itemScope
       >
-        <meta itemProp={'addressCountry'} content={'UA'} />
+        <meta itemProp={'addressCountry'} content={'UK'} />
       </div>
 
       <div
@@ -35,6 +35,7 @@ export const OfferShippingDetailsSEO = () => {
         >
           <meta itemProp={'minValue'} content={'0'} />
           <meta itemProp={'maxValue'} content={'1'} />
+          <meta itemProp={'unitCode'} content={'d'} />
         </div>
 
         <div
@@ -44,6 +45,7 @@ export const OfferShippingDetailsSEO = () => {
         >
           <meta itemProp={'minValue'} content={'1'} />
           <meta itemProp={'maxValue'} content={'4'} />
+          <meta itemProp={'unitCode'} content={'d'} />
         </div>
 
         <meta itemProp={'cutOffTime'} content={'19:00-09:00'} />
