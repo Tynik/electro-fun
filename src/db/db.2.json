@@ -1,54 +1,5 @@
 {
-  "datasheets": {
-    "BMP390": {
-      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/BMP390.pdf",
-      "lang": "en"
-    },
-    "ESP-12E": {
-      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP-12E.pdf",
-      "lang": "en"
-    },
-    "ESP-C3-13U": {
-      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP-C3-13U.pdf",
-      "lang": "en"
-    },
-    "ESP-C3-13U-Kit": {
-      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP-C3-13U-Kit.pdf",
-      "lang": "en"
-    },
-    "ESP32-C3N": {
-      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP32-C3N.pdf",
-      "lang": "en"
-    },
-    "ESP32-C3U": {
-      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP32-C3U.pdf",
-      "lang": "en"
-    },
-    "SS1x": {
-      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/SS1x.pdf",
-      "lang": "en"
-    },
-    "1N4148WS": {
-      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/1N4148WS.pdf",
-      "lang": "en"
-    },
-    "1N400x": {
-      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/1N400x.pdf",
-      "lang": "en"
-    },
-    "AMS1117": {
-      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/AMS1117.pdf",
-      "lang": "en"
-    },
-    "74HC4051xx": {
-      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/74HC4051x.pdf",
-      "lang": "en"
-    },
-    "74HCT4051xx": {
-      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/74HC4051x.pdf",
-      "lang": "en"
-    }
-  },
+  "datasheets": {},
   "items": [
     {
       "categoryId": 12,
@@ -711,11 +662,16 @@
       "lang": "en",
       "title": "Raspberry PI RP2040-Zero",
       "subtitle": "Mini",
+      "seo": {
+        "description": "Raspberry PI RP2040-Zero",
+        "keywords": "rp2040, raspberry, mini, microcontroller"
+      },
       "buy": true,
       "price": 4.90,
       "priceId": "price_1NS3vMARhMwSarZXXPWONfnI",
       "weight": 15,
       "availability": 10,
+      "datasheetId": "RP2040",
       "content": "<p>The RP2040-Zero is a powerful development board featuring the RP2040 microcontroller. It offers a compact and versatile platform for various electronics projects. The RP2040-Zero is equipped with a dual-core ARM Cortex-M0+ processor, running at up to 133MHz, providing excellent performance and efficiency.</p><p>The RP2040 microcontroller, which is used in the RP2040-Zero board, has a total of 4 channels for DMA (Direct Memory Access). DMA allows for efficient data transfer between peripherals and memory without the need for CPU intervention. The DMA channels can be utilized to offload data transfer tasks from the CPU, freeing up processing power for other tasks. With 4 channels, the RP2040-Zero provides flexibility in managing data transfers for various peripherals and applications.</p><p>The RP2040-Zero is perfect for prototyping, IoT applications, robotics, and more. With its powerful processor, ample memory, and various built-in peripherals, it provides a solid foundation for your electronic projects.</p>",
       "images": [
         {
@@ -729,12 +685,20 @@
           "value": "UART/GPIO/I²C/PWM/ADC/DAC"
         },
         {
+          "refId": 19,
+          "value": "3.3 - 5.0 V"
+        },
+        {
           "refId": 38,
           "value": "2-core ARM Cortex-M0+"
         },
         {
           "refId": 41,
           "value": 4
+        },
+        {
+          "refId": 76,
+          "value": "18 x 23.5 mm"
         },
         {
           "refId": 98,
@@ -747,6 +711,10 @@
         {
           "refId": 60,
           "value": "264 KB"
+        },
+        {
+          "refId": 135,
+          "value": "12 bit"
         }
       ],
       "options": {

@@ -174,6 +174,10 @@
     }
   },
   "datasheets": {
+    "RP2040": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/RP2040.pdf",
+      "lang": "en"
+    },
     "FGH60N60SMD": {
       "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/FGH60N60SMD.pdf",
       "lang": "en"
@@ -228,6 +232,54 @@
     },
     "ESP32-S2-WROVER-x": {
       "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP32-S2-WROVER-x.pdf",
+      "lang": "en"
+    },
+    "BMP390": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/BMP390.pdf",
+      "lang": "en"
+    },
+    "ESP-12E": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP-12E.pdf",
+      "lang": "en"
+    },
+    "ESP-C3-13U": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP-C3-13U.pdf",
+      "lang": "en"
+    },
+    "ESP-C3-13U-Kit": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP-C3-13U-Kit.pdf",
+      "lang": "en"
+    },
+    "ESP32-C3N": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP32-C3N.pdf",
+      "lang": "en"
+    },
+    "ESP32-C3U": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP32-C3U.pdf",
+      "lang": "en"
+    },
+    "SS1x": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/SS1x.pdf",
+      "lang": "en"
+    },
+    "1N4148WS": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/1N4148WS.pdf",
+      "lang": "en"
+    },
+    "1N400x": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/1N400x.pdf",
+      "lang": "en"
+    },
+    "AMS1117": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/AMS1117.pdf",
+      "lang": "en"
+    },
+    "74HC4051xx": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/74HC4051x.pdf",
+      "lang": "en"
+    },
+    "74HCT4051xx": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/74HC4051x.pdf",
       "lang": "en"
     },
     "ESP32-S2 (Technical Reference Manual)": {
@@ -536,7 +588,8 @@
     "11": "Support",
     "12": "Protection",
     "13": "Exploitation",
-    "14": "Dimensions"
+    "14": "Dimensions",
+    "15": "Analog Input"
   },
   "optionTypes": {
     "bool": {
@@ -667,7 +720,8 @@
       ]
     },
     "19": {
-      "name": "USB Power",
+      "name": "USB",
+      "featSecRefId": 3,
       "categories": [
         1
       ]
@@ -1104,6 +1158,10 @@
     },
     "134": {
       "name": "Varieties"
+    },
+    "135": {
+      "name": "ADC",
+      "featSecRefId": 15
     }
   },
   "items": [
