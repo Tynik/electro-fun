@@ -6,11 +6,11 @@ import { SEO_SCHEMA_BASE_URL } from '~/constants';
 import { DbContext } from '~/contexts';
 import { useItemManufacturer } from '~/hooks';
 
-export type ItemManufacturerProps = {
+export type ItemBrandMicrodataProps = {
   item: Item;
 };
 
-export const ItemManufacturer = ({ item }: ItemManufacturerProps) => {
+export const ItemBrandMicrodata = ({ item }: ItemBrandMicrodataProps) => {
   const { db } = React.useContext(DbContext);
 
   const manufacturer = useItemManufacturer(item);

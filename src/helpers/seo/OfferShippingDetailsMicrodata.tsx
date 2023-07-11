@@ -2,7 +2,11 @@ import React from 'react';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
 
-export const OfferShippingDetailsSEO = () => {
+type OfferShippingDetailsMicrodataProps = {
+  //
+};
+
+export const OfferShippingDetailsMicrodata = (props: OfferShippingDetailsMicrodataProps) => {
   return (
     <div
       itemProp={'shippingDetails'}

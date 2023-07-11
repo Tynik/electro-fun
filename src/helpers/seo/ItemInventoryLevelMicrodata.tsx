@@ -4,13 +4,13 @@ import type { Item } from '~/types';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
 import { useSelectedItemOptionId } from '~/hooks';
-import { getItemAvailability } from '~/helpers';
+import { getItemAvailability, MerchantReturnPolicyMicrodata } from '~/helpers';
 
-export type ItemInventoryLevelProps = {
+export type ItemInventoryLevelMicrodataProps = {
   item: Item;
 };
 
-export const ItemInventoryLevel = ({ item }: ItemInventoryLevelProps) => {
+export const ItemInventoryLevelMicrodata = ({ item }: ItemInventoryLevelMicrodataProps) => {
   const selectedItemOptionId = useSelectedItemOptionId(item);
   const itemAvailability = getItemAvailability(item, selectedItemOptionId);
 

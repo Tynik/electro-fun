@@ -3,14 +3,14 @@ import React from 'react';
 import type { Item } from '~/types';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
-import { OfferSEO, ItemManufacturer } from '~/helpers';
+import { OfferMicrodata, ItemBrandMicrodata } from '~/helpers';
 import { getItemContributorAvatarSrc } from '~/utils';
 
-export type ProductSEOProps = {
+export type ProductMicrodataProps = {
   item: Item;
 };
 
-export const ProductSEO = ({ item }: ProductSEOProps) => {
+export const ProductMicrodata = ({ item }: ProductMicrodataProps) => {
   return (
     <div itemType={`${SEO_SCHEMA_BASE_URL}/Product`} itemScope>
       <meta itemProp={'name'} content={item.title} />
@@ -21,9 +21,9 @@ export const ProductSEO = ({ item }: ProductSEOProps) => {
 
       {item.content && <meta itemProp={'description'} content={item.content} />}
 
-      <ItemManufacturer item={item} />
+      <ItemBrandMicrodata item={item} />
 
-      {Boolean(item.price) && <OfferSEO item={item} />}
+      {Boolean(item.price) && <OfferMicrodata item={item} />}
 
       {(item.contributors || []).map(contributor => (
         <div

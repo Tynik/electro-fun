@@ -6,18 +6,18 @@ import { SEO_SCHEMA_BASE_URL } from '~/constants';
 import {
   getItemPrice,
   getItemAvailabilitySEOSchema,
-  OfferShippingDetailsSEO,
-  ItemMeasurement,
-  MerchantReturnPolicy,
-  ItemInventoryLevel,
+  OfferShippingDetailsMicrodata,
+  ItemMeasurementMicrodata,
+  MerchantReturnPolicyMicrodata,
+  ItemInventoryLevelMicrodata,
 } from '~/helpers';
 import { useCategory, useSelectedItemOptionId } from '~/hooks';
 
-export type OfferSEOProps = {
+export type OfferMicrodataProps = {
   item: Item;
 };
 
-export const OfferSEO = ({ item }: OfferSEOProps) => {
+export const OfferMicrodata = ({ item }: OfferMicrodataProps) => {
   const selectedItemOptionId = useSelectedItemOptionId(item);
 
   const itemPrice = getItemPrice(item, selectedItemOptionId);
@@ -37,12 +37,12 @@ export const OfferSEO = ({ item }: OfferSEOProps) => {
       <meta itemProp={'availability'} content={itemAvailabilitySEOSchema} />
       <meta itemProp={'itemCondition'} content={`${SEO_SCHEMA_BASE_URL}/NewCondition`} />
 
-      <MerchantReturnPolicy />
+      <MerchantReturnPolicyMicrodata />
 
-      <ItemInventoryLevel item={item} />
-      <ItemMeasurement item={item} />
+      <ItemInventoryLevelMicrodata item={item} />
+      <ItemMeasurementMicrodata item={item} />
 
-      <OfferShippingDetailsSEO />
+      <OfferShippingDetailsMicrodata />
     </div>
   );
 };

@@ -4,11 +4,11 @@ import type { Item } from '~/types';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
 
-export type ItemMeasurementProps = {
+export type ItemMeasurementMicrodataProps = {
   item: Item;
 };
 
-export const ItemMeasurement = ({ item }: ItemMeasurementProps) => {
+export const ItemMeasurementMicrodata = ({ item }: ItemMeasurementMicrodataProps) => {
   if (!item.seo || !item.seo.measurement) {
     return null;
   }

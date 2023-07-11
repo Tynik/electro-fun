@@ -5,7 +5,7 @@ import { Box, Grid, Typography, Alert, Divider, useTheme } from '@mui/material';
 import type { Item } from '~/types';
 
 import { DbContext } from '~/contexts';
-import { getItemPrice, ProductSEO } from '~/helpers';
+import { getItemPrice, ProductMicrodata } from '~/helpers';
 import {
   useTextProcessor,
   useSmoothScroll,
@@ -67,7 +67,7 @@ export const ItemInfoPage = () => {
 
   return (
     <Grid spacing={2} container>
-      <ProductSEO item={item} />
+      <ProductMicrodata item={item} />
 
       <Grid xs={12} item>
         <BackButton />

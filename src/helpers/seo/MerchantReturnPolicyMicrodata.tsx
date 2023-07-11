@@ -2,7 +2,7 @@ import React from 'react';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
 
-export const MerchantReturnPolicy = () => {
+export const MerchantReturnPolicyMicrodata = () => {
   return (
     <div
       itemProp={'hasMerchantReturnPolicy'}
