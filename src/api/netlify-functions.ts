@@ -12,6 +12,7 @@ export type CheckoutItem = {
 
 export type CheckoutPayload = {
   fullName: string;
+  phone: string;
   email: string;
   shippingCity: string;
   shippingAddress1: string;

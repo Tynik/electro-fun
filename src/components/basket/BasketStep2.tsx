@@ -12,6 +12,7 @@ import { getItemPriceId, getItemWeight } from '~/helpers';
 
 type CheckoutFormData = {
   fullName: string;
+  phone: string;
   email: string;
   shippingCity: string;
   shippingAddress1: string;
@@ -41,6 +42,9 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
     fields: {
       fullName: {
         required: true,
+        value: '',
+      },
+      phone: {
         value: '',
       },
       email: {
@@ -84,6 +88,7 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
       const checkoutResponse = await checkoutRequest({
         items: checkoutItems,
         fullName: formData.fullName,
+        phone: formData.phone,
         email: formData.email,
         shippingCity: formData.shippingCity,
         shippingAddress1: formData.shippingAddress1,
@@ -131,6 +136,17 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
               label={'Full Name'}
               variant={'outlined'}
               size={'small'}
+              required
+              fullWidth
+            />
+
+            <TextField
+              {...formFields.phone.props}
+              error={formFields.phone.errors.length > 0}
+              helperText={formFields.phone.errors[0]?.message}
+              label={'Phone'}
+              variant={'outlined'}
+              size={'small'}
               fullWidth
             />
 
@@ -141,6 +157,7 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
               label={'E-mail'}
               variant={'outlined'}
               size={'small'}
+              required
               fullWidth
             />
 
@@ -149,6 +166,7 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
               label={'Country'}
               variant={'outlined'}
               size={'small'}
+              required
               disabled
               fullWidth
             />
@@ -160,6 +178,7 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
               label={'City'}
               variant={'outlined'}
               size={'small'}
+              required
               fullWidth
             />
 
@@ -170,6 +189,7 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
               label={'Address 1'}
               variant={'outlined'}
               size={'small'}
+              required
               fullWidth
             />
 
@@ -190,6 +210,7 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
               label={'Postcode'}
               variant={'outlined'}
               size={'small'}
+              required
               fullWidth
             />
 

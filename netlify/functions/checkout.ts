@@ -8,6 +8,7 @@ type Item = {
 
 type Payload = {
   fullName: string;
+  phone: string;
   email: string;
   shippingCity: string;
   shippingAddress1: string;
@@ -38,6 +39,7 @@ export const handler = createHandler<Payload>({ allowMethods: ['POST'] }, async 
       description: payload.note,
       shipping: {
         name: payload.fullName,
+        phone: payload.phone,
         address: {
           country: 'GB',
           city: payload.shippingCity,
