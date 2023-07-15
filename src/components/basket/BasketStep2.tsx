@@ -15,6 +15,7 @@ type CheckoutFormData = {
   email: string;
   shippingCity: string;
   shippingAddress1: string;
+  shippingAddress2: string;
   shippingPostcode: string;
   note: string;
 };
@@ -36,7 +37,7 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
 
   const { addNotification } = React.useContext(AppContext);
 
-  const { formFields, formErrors, submitForm } = useHoneyForm<CheckoutFormData>({
+  const { formFields, formErrors, isFormSubmitting, submitForm } = useHoneyForm<CheckoutFormData>({
     fields: {
       fullName: {
         required: true,
@@ -53,6 +54,9 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
       },
       shippingAddress1: {
         required: true,
+        value: '',
+      },
+      shippingAddress2: {
         value: '',
       },
       shippingPostcode: {
@@ -83,6 +87,7 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
         email: formData.email,
         shippingCity: formData.shippingCity,
         shippingAddress1: formData.shippingAddress1,
+        shippingAddress2: formData.shippingAddress2,
         shippingPostcode: formData.shippingPostcode,
         note: formData.note,
       });
@@ -169,6 +174,16 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
             />
 
             <TextField
+              {...formFields.shippingAddress2.props}
+              error={formFields.shippingAddress2.errors.length > 0}
+              helperText={formFields.shippingAddress2.errors[0]?.message}
+              label={'Address 2'}
+              variant={'outlined'}
+              size={'small'}
+              fullWidth
+            />
+
+            <TextField
               {...formFields.shippingPostcode.props}
               error={formFields.shippingPostcode.errors.length > 0}
               helperText={formFields.shippingPostcode.errors[0]?.message}
@@ -213,7 +228,7 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
           </Button>
 
           <Button
-            disabled={Object.keys(formErrors).length > 0}
+            disabled={isFormSubmitting || Object.keys(formErrors).length > 0}
             onClick={() => submitForm(makeOrder)}
             startIcon={getIcon('money')}
             color={'success'}

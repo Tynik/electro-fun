@@ -15,6 +15,7 @@ export type CheckoutPayload = {
   email: string;
   shippingCity: string;
   shippingAddress1: string;
+  shippingAddress2: string;
   shippingPostcode: string;
   note: string;
   items: CheckoutItem[];

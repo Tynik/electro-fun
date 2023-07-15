@@ -11,6 +11,7 @@ type Payload = {
   email: string;
   shippingCity: string;
   shippingAddress1: string;
+  shippingAddress2: string;
   shippingPostcode: string;
   note: string;
   items: Item[];
@@ -31,6 +32,7 @@ export const handler = createHandler<Payload>({ allowMethods: ['POST'] }, async 
   });
 
   const session = await stripe.checkout.sessions.create({
+    mode: 'payment',
     payment_intent_data: {
       receipt_email: payload.email,
       description: payload.note,
@@ -40,17 +42,22 @@ export const handler = createHandler<Payload>({ allowMethods: ['POST'] }, async 
           country: 'GB',
           city: payload.shippingCity,
           line1: payload.shippingAddress1,
+          line2: payload.shippingAddress2,
           postal_code: payload.shippingPostcode,
         },
       },
     },
+    customer_creation: 'always',
+    customer_email: payload.email,
+    shipping_address_collection: {
+      allowed_countries: ['GB'],
+    },
+    shipping_options: shippingRates.map(shippingRate => ({
+      shipping_rate: shippingRate.id,
+    })),
     line_items: payload.items.map(item => ({
       price: item.priceId,
       quantity: item.quantity,
-    })),
-    mode: 'payment',
-    shipping_options: shippingRates.map(shippingRate => ({
-      shipping_rate: shippingRate.id,
     })),
     success_url: `${SITE_DOMAIN}?success=true`,
     cancel_url: `${SITE_DOMAIN}?canceled=true`,
