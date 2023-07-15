@@ -49,9 +49,6 @@ export const handler = createHandler<Payload>({ allowMethods: ['POST'] }, async 
     },
     customer_creation: 'always',
     customer_email: payload.email,
-    shipping_address_collection: {
-      allowed_countries: ['GB'],
-    },
     shipping_options: shippingRates.map(shippingRate => ({
       shipping_rate: shippingRate.id,
     })),
