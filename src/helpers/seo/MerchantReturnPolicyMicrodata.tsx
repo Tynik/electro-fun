@@ -11,7 +11,7 @@ export const MerchantReturnPolicyMicrodata = () => {
     >
       <meta
         itemProp={'description'}
-        content={`Our return policy allows you to return eligible products within 30 days of purchase for a refund or exchange. Please note that certain restrictions and conditions may apply.`}
+        content={`Our return policy allows you to return eligible products within 30 days of delivery for a refund or exchange. Please note that certain restrictions and conditions may apply.`}
       />
       <meta itemProp={'applicableCountry'} content={`UK`} />
       <meta

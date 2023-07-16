@@ -1,22 +1,10 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import { Box, Grid, Typography, Alert, Divider, useTheme } from '@mui/material';
 
-import type { Item } from '~/types';
-
-import { DbContext } from '~/contexts';
-import { getItemPrice, ProductMicrodata } from '~/helpers';
-import {
-  useTextProcessor,
-  useSmoothScroll,
-  useStaticErrors,
-  useJsonDbSearch,
-  useSeo,
-  useSelectedItemOptionId,
-  useItemImages,
-  useCurrentItem,
-} from '~/hooks';
+import { ProductMicrodata } from '~/helpers';
+import { useTextProcessor, useSmoothScroll, useSeo, useCurrentItem } from '~/hooks';
 import { Loader, ExternalLink, ImageSlider, BackButton } from '~/components';
+
 import { ItemInfoFeatures } from './ItemInfoFeatures';
 import { ItemInfoOptions } from './ItemInfoOptions';
 import { ItemInfoExternalLinks } from './ItemInfoExternalLinks';
