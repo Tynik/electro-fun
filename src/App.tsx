@@ -4,7 +4,14 @@ import { Container, Box, styled, LinearProgress } from '@mui/material';
 
 import { DbContext } from './contexts';
 import { Menu, DrawerHeader, Category, Footer } from './components';
-import { HomePage, ItemInfoPage, DatasheetsPage, BasketPage, ReturnPolicyPage } from './pages';
+import {
+  HomePage,
+  ItemInfoPage,
+  DatasheetsPage,
+  BasketPage,
+  ReturnPolicyPage,
+  PrivacyPolicyPage,
+} from './pages';
 import { useJsonDbSearch } from './hooks';
 
 const drawerWidth = 240;
@@ -101,6 +108,8 @@ export const App = () => {
               <Route path="/datasheets" element={<DatasheetsPage datasheets={db.datasheets} />} />
 
               <Route path="/basket" element={<BasketPage />} />
+
+              <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
 
               <Route path="/return-policy" element={<ReturnPolicyPage />} />
 

@@ -37,15 +37,33 @@ export const Footer = () => {
 
               <ListItem disablePadding>
                 <Typography
+                  to="return-policy"
                   variant={'body2'}
-                  component={'div'}
+                  component={InternalLink}
                   color={'white'}
                   sx={{
+                    display: 'inline-block',
                     width: { xs: '100%' },
                     textAlign: { xs: 'center', sm: 'left' },
                   }}
                 >
-                  <InternalLink to="return-policy">Return Policy</InternalLink>
+                  Return Policy
+                </Typography>
+              </ListItem>
+
+              <ListItem disablePadding>
+                <Typography
+                  to="privacy-policy"
+                  variant={'body2'}
+                  component={InternalLink}
+                  color={'white'}
+                  sx={{
+                    display: 'inline-block',
+                    width: { xs: '100%' },
+                    textAlign: { xs: 'center', sm: 'left' },
+                  }}
+                >
+                  Privacy Policy
                 </Typography>
               </ListItem>
             </List>
