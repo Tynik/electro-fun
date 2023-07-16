@@ -540,7 +540,7 @@
     },
     {
       "id": 17,
-      "name": "AC-DC Converters",
+      "name": "Power Supplies",
       "icon": "power"
     },
     {
@@ -1162,6 +1162,16 @@
     "135": {
       "name": "ADC",
       "featSecRefId": 15
+    },
+    "136": {
+      "name": "Safety Standards"
+    },
+    "137": {
+      "name": "EMC Standards"
+    },
+    "138": {
+      "name": "Air Colling",
+      "type": "bool"
     }
   },
   "items": [

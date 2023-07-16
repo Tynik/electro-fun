@@ -603,21 +603,21 @@
         },
         {
           "refId": 118,
-          "value": "Available"
+          "value": "Yes"
         },
         {
           "refId": 119,
-          "value": "Available",
+          "value": "Yes",
           "info": "> 4.5A"
         },
         {
           "refId": 120,
-          "value": "Available",
+          "value": "Yes",
           "info": "> 410V"
         },
         {
           "refId": 121,
-          "value": "Available",
+          "value": "Yes",
           "info": "Fuse replacement required"
         }
       ]
@@ -1052,7 +1052,7 @@
         },
         {
           "refId": 133,
-          "value": "Available",
+          "value": "Yes",
           "optionId": "2"
         }
       ],

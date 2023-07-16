@@ -787,6 +787,103 @@
           "name": "Type-C to Type-C (0.5 m)"
         }
       }
+    },
+    {
+      "categoryId": 17,
+      "title": "Power Supply",
+      "subtitle": "24V/350W",
+      "seo": {
+        "description": "Power Supply 24V/350W",
+        "keywords": "power-supply, 24V, 350W, 115V, 230V, GB4943, EN60950, UL60950, >88%"
+      },
+      "buy": true,
+      "price": {
+        "1": {
+          "price": 42,
+          "priceId": "price_1NUOuIARhMwSarZXC0GEVyvn"
+        }
+      },
+      "weight": 1500,
+      "availability": {
+        "1": 1
+      },
+      "images": [
+        {
+          "src": "/photos/power-supply-24-350-1.webp",
+          "alt": "Power Supply 24V/350W"
+        },
+        {
+          "src": "/photos/power-supply-24-350-2.webp",
+          "alt": "Power Supply 24V/350W"
+        },
+        {
+          "src": "/photos/power-supply-24-350-3.webp",
+          "alt": "Power Supply 24V/350W"
+        },
+        {
+          "src": "/photos/power-supply-24-350-4.webp",
+          "alt": "Power Supply 24V/350W"
+        },
+        {
+          "src": "/photos/power-supply-24-350-5.webp",
+          "alt": "Power Supply 24V/350W"
+        },
+        {
+          "src": "/photos/power-supply-24-350-6.webp",
+          "alt": "Power Supply 24V/350W"
+        }
+      ],
+      "options": {
+        "1": {
+          "name": "24V/350W",
+          "default": true
+        }
+      },
+      "features": [
+        {
+          "refId": 13,
+          "value": "115/230V ±20%"
+        },
+        {
+          "refId": 14,
+          "value": "24V",
+          "info": " ±10% (adjustable)",
+          "optionId": "1"
+        },
+        {
+          "refId": 76,
+          "value": "215 x 115 x 30 mm"
+        },
+        {
+          "refId": 117,
+          "value": "≥88%"
+        },
+        {
+          "refId": 118,
+          "value": "Yes"
+        },
+        {
+          "refId": 119,
+          "value": "Yes"
+        },
+        {
+          "refId": 120,
+          "value": "Yes"
+        },
+        {
+          "refId": 136,
+          "value": "GB4943, EN60950, UL60950"
+        },
+        {
+          "refId": 137,
+          "value": "EN55022, Class C"
+        },
+        {
+          "refId": 138,
+          "value": "Yes"
+        }
+      ],
+      "content": ""
     }
   ]
 }
