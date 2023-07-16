@@ -25,7 +25,7 @@ export const ItemsList = ({ items }: ItemsListProps) => {
 
   const { isNextPage, loadNextPage } = React.useContext(DbContext);
 
-  const onItemKeyPress = (url: string, e: React.KeyboardEvent) => {
+  const onItemKeyDown = (url: string, e: React.KeyboardEvent) => {
     if (e.key === ' ' || e.key === 'Enter') {
       navigate(url);
     }
@@ -37,7 +37,7 @@ export const ItemsList = ({ items }: ItemsListProps) => {
         <Grid key={item.id} role={'listitem'} sx={{ maxWidth: '345px', width: '100%' }} item>
           <Card
             sx={{ width: '100%' }}
-            onKeyPress={e => onItemKeyPress(`/item/${item.id}`, e)}
+            onKeyDown={e => onItemKeyDown(`/item/${item.id}`, e)}
             tabIndex={0}
           >
             <CardActionArea component={RouterLink} to={`/item/${item.id}`} hrefLang={item.lang}>
