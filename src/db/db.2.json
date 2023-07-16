@@ -884,6 +884,81 @@
         }
       ],
       "content": ""
+    },
+    {
+      "categoryId": 24,
+      "title": "Stepper Motor NEMA 17 (40mm)",
+      "subtitle": "17CS04A-170E",
+      "seo": {
+        "description": "Stepper Motor NEMA 17 (40mm) 17CS04A-170E",
+        "keywords": "stepper-motor, nema, 40mm, 17cs04a-170e"
+      },
+      "buy": true,
+      "price": 9.9,
+      "priceId": "price_1NUaOaARhMwSarZXzogbIweA",
+      "weight": 290,
+      "availability": 3,
+      "images": [
+        {
+          "src": "/photos/stepper-motor-nema-17-40-1.webp",
+          "alt": "Stepper Motor NEMA 17 (40mm)"
+        },
+        {
+          "src": "/photos/stepper-motor-nema-17-40-2.webp",
+          "alt": "Stepper Motor NEMA 17 (40mm)"
+        },
+        {
+          "src": "/photos/stepper-motor-nema-17-40-3.webp",
+          "alt": "Stepper Motor NEMA 17 (40mm)"
+        },
+        {
+          "src": "/photos/stepper-motor-nema-17-40-4.webp",
+          "alt": "Stepper Motor NEMA 17 (40mm)"
+        },
+        {
+          "src": "/photos/stepper-motor-nema-17-40-5.webp",
+          "alt": "Stepper Motor NEMA 17 (40mm)"
+        }
+      ],
+      "features": [
+        {
+          "refId": 29,
+          "value": "1.7A"
+        },
+        {
+          "refId": 139,
+          "value": "1.8º ±5%"
+        },
+        {
+          "refId": 140,
+          "value": "0.42N⋅m"
+        },
+        {
+          "refId": 141,
+          "value": "5mm"
+        },
+        {
+          "refId": 142,
+          "value": "2"
+        },
+        {
+          "refId": 143,
+          "value": "5.1mH ±20%"
+        },
+        {
+          "refId": 144,
+          "value": "2.6ohm ±10%"
+        },
+        {
+          "refId": 145,
+          "value": "57g⋅cm²"
+        },
+        {
+          "refId": 146,
+          "value": "4"
+        }
+      ],
+      "content": "<p>The 17CS04A-170E stepper motor from Cloudray is a high-performance Nema 17 stepper motor with a compact size of 40mm. It is designed to provide precise and reliable motion control in various applications, including 3D printers, CNC machines, robotics, and automation systems.</p><p>This stepper motor features a rated current of 1.7A, providing sufficient power for smooth and accurate movement. Its 2-phase design ensures excellent torque and step resolution, making it ideal for applications requiring precise positioning and control.</p><p>The 17CS04A-170E is built with high-quality materials and advanced manufacturing techniques, ensuring durability and long-lasting performance. It comes with standard 4-wire leads, making it easy to integrate into your existing setup.</p><p>Whether you are a hobbyist or a professional engineer, the Cloudray 17CS04A-170E stepper motor is a reliable and cost-effective choice for your motion control needs. Experience seamless and efficient operation with this versatile and high-performance stepper motor from Cloudray.</p>"
     }
   ]
 }

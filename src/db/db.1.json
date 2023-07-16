@@ -531,7 +531,7 @@
     {
       "id": 15,
       "name": "Optoisolators",
-      "icon": "apps"
+      "icon": "fluorescent"
     },
     {
       "id": 16,
@@ -572,6 +572,11 @@
       "id": 23,
       "name": "Development Boards",
       "icon": "cpu"
+    },
+    {
+      "id": 24,
+      "name": "Motion Control Devices",
+      "icon": "apps"
     }
   ],
   "featureSections": {
@@ -589,7 +594,8 @@
     "12": "Protection",
     "13": "Exploitation",
     "14": "Dimensions",
-    "15": "Analog Input"
+    "15": "Analog Input",
+    "16": "Phase"
   },
   "optionTypes": {
     "bool": {
@@ -763,7 +769,7 @@
       "featSecRefId": 7
     },
     "29": {
-      "name": "Average",
+      "name": "Rated",
       "featSecRefId": 7
     },
     "30": {
@@ -1172,6 +1178,33 @@
     "138": {
       "name": "Air Colling",
       "type": "bool"
+    },
+    "139": {
+      "name": "Step Angle"
+    },
+    "140": {
+      "name": "Holding Torque"
+    },
+    "141": {
+      "name": "Shaft Dia"
+    },
+    "142": {
+      "name": "Number",
+      "featSecRefId": 16
+    },
+    "143": {
+      "name": "Inductance",
+      "featSecRefId": 16
+    },
+    "144": {
+      "name": "Resistance",
+      "featSecRefId": 16
+    },
+    "145": {
+      "name": "Rotor Inertia"
+    },
+    "146": {
+      "name": "Number of Lead"
     }
   },
   "items": [
