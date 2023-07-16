@@ -67,7 +67,6 @@ module.exports = {
       patterns: [
         'CNAME',
         'favicon.png',
-        'logo_128.png',
         'sitemap.txt',
         {
           from: 'src/db',

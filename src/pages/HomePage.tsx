@@ -29,18 +29,42 @@ export const HomePage = (props: HomePageProps) => {
               xs: theme.spacing(5, 0, 5),
               md: theme.spacing(10, 0, 20),
             },
-            position: 'relative',
             display: 'flex',
             justifyContent: 'center',
             flexDirection: 'column',
             textAlign: 'center',
           }}
         >
-          <Typography variant={'h1'} fontWeight="bold">
+          <Box
+            sx={{
+              position: 'absolute',
+              backgroundImage: 'url(images/home-page-back.webp)',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              height: '500px',
+              top: 0,
+              left: 0,
+              right: 0,
+              zIndex: -1,
+            }}
+          />
+
+          <Typography
+            variant={'h1'}
+            fontWeight={'bold'}
+            color={'white'}
+            sx={{ textShadow: '4px 4px 8px rgba(0, 0, 0, 0.7)' }}
+          >
             {db.siteName}
           </Typography>
 
-          <Typography variant={'h5'} alignSelf={'end'}>
+          <Typography
+            variant={'h5'}
+            alignSelf={'end'}
+            color={'white'}
+            sx={{ textShadow: '4px 4px 8px rgba(0, 0, 0, 0.7)' }}
+          >
             Electronic Parts Store
           </Typography>
 
