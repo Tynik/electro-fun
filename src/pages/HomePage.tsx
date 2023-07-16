@@ -25,7 +25,10 @@ export const HomePage = (props: HomePageProps) => {
       {!foundItems && !isSearching && (
         <Box
           sx={{
-            margin: theme.spacing(10, 0, 20),
+            margin: {
+              xs: theme.spacing(5, 0, 5),
+              md: theme.spacing(10, 0, 20),
+            },
             position: 'relative',
             display: 'flex',
             justifyContent: 'center',
@@ -41,7 +44,7 @@ export const HomePage = (props: HomePageProps) => {
             Electronic Parts Store
           </Typography>
 
-          <Box marginTop={10} padding={theme.spacing(0, 12)}>
+          <Box sx={{ padding: { md: theme.spacing(0, 12) }, marginTop: { xs: 2, md: 10 } }}>
             <Alert color="info">
               🚚 Don't miss out on our incredible shipping rates starting from just{' '}
               <strong>£1.35</strong>! 📦 Shop now and enjoy fast and affordable delivery to your
