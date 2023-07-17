@@ -1,6 +1,11 @@
 export const checkSearchKeyword = (content: string, searchKeyword: string) => {
-  const loweredContent = content.toLowerCase();
+  const loweredContentWords = content
+    .toLowerCase()
+    .replace(/<[^>]*>/g, '')
+    .split(/\s+|\n/)
+    .filter(word => word && !/^\W$/.test(word));
 
-  return loweredContent.includes(searchKeyword)
-    || loweredContent.replace(/-|'|"/g, '').includes(searchKeyword);
+  return loweredContentWords.some(
+    word => word.startsWith(searchKeyword) || word.replace(/-|'|"/g, '').startsWith(searchKeyword)
+  );
 };
