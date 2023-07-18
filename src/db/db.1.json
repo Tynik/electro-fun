@@ -174,6 +174,71 @@
     }
   },
   "datasheets": {
+    "MCP2561FD": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/MCP2561FD.pdf",
+      "lang": "en",
+      "manufacturerId": "9"
+    },
+    "MCP2561": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/MCP2561.pdf",
+      "lang": "en",
+      "manufacturerId": "9"
+    },
+    "MCP2551": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/MCP2551.pdf",
+      "lang": "en",
+      "manufacturerId": "9"
+    },
+    "TJA1050": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/TJA1050.pdf",
+      "lang": "en",
+      "manufacturerId": "10"
+    },
+    "MCP2515": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/MCP2515.pdf",
+      "lang": "en",
+      "manufacturerId": "9"
+    },
+    "ADS1018": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ADS1018.pdf",
+      "lang": "en",
+      "manufacturerId": "8"
+    },
+    "ADS111x": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ADS111x.pdf",
+      "lang": "en",
+      "manufacturerId": "8"
+    },
+    "ADS101x": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ADS101x.pdf",
+      "lang": "en",
+      "manufacturerId": "8"
+    },
+    "BH1750FVI": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/BH1750FVI.pdf",
+      "lang": "en",
+      "manufacturerId": "1"
+    },
+    "MOC304x": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/MOC304x.pdf",
+      "lang": "en"
+    },
+    "BT136E": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/BT136E.pdf",
+      "lang": "en"
+    },
+    "2N390x": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/2N390x.pdf",
+      "lang": "en"
+    },
+    "CDx4HC405x": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/CDx4HC405x.pdf",
+      "lang": "en"
+    },
+    "WS2812B": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/WS2812B.pdf",
+      "lang": "en"
+    },
     "RP2040": {
       "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/RP2040.pdf",
       "lang": "en"
@@ -576,6 +641,11 @@
     {
       "id": 24,
       "name": "Motion Control Devices",
+      "icon": "apps"
+    },
+    {
+      "id": 25,
+      "name": "Measurement Tools",
       "icon": "apps"
     }
   ],
@@ -1205,6 +1275,25 @@
     },
     "146": {
       "name": "Number of Lead"
+    },
+    "147": {
+      "name": "True RMS",
+      "type": "bool"
+    },
+    "148": {
+      "name": "Batteries",
+      "featSecRefId": 3
+    },
+    "149": {
+      "name": "Backlight",
+      "type": "bool"
+    },
+    "150": {
+      "name": "Rate"
+    },
+    "151": {
+      "name": "Auto Power Off",
+      "type": "bool"
     }
   },
   "items": [
