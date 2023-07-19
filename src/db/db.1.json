@@ -1288,12 +1288,21 @@
       "name": "Backlight",
       "type": "bool"
     },
-    "150": {
-      "name": "Rate"
-    },
     "151": {
       "name": "Auto Power Off",
       "type": "bool"
+    },
+    "152": {
+      "name": "AC/DC Voltage",
+      "featSecRefId": 5
+    },
+    "153": {
+      "name": "AC/DC Current",
+      "featSecRefId": 5
+    },
+    "154": {
+      "name": "Capacitance",
+      "featSecRefId": 5
     }
   },
   "items": [

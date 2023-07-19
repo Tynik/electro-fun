@@ -994,7 +994,15 @@
       "features": [
         {
           "refId": 4,
-          "value": "-20 - +1000 °C ±(2.5% - 5.0%)"
+          "value": "-20°C - +1000°C ±(2.5% - 5.0%)"
+        },
+        {
+          "refId": 76,
+          "value": "146 x 74 x 34 mm"
+        },
+        {
+          "refId": 83,
+          "value": "40Hz - 1KHz"
         },
         {
           "refId": 147,
@@ -1009,12 +1017,24 @@
           "value": "Yes"
         },
         {
-          "refId": 150,
+          "refId": 129,
           "value": "3/s"
         },
         {
           "refId": 151,
           "value": "Yes"
+        },
+        {
+          "refId": 152,
+          "value": ["999.9mV", "9.999V", "99.99V", "999.9V"]
+        },
+        {
+          "refId": 153,
+          "value": ["999.9uA", "99.99uA", "999.9mA", "10A"]
+        },
+        {
+          "refId": 154,
+          "value": ["9.99nF", "99.99nF", "999.9nF", "9.99uF", "99.99uF", "999.9uF", "9.999MF"]
         }
       ],
       "content": "<p>ANENG Q1 Red Pro Digital Multimeter is equipped with True RMS (Root Mean Square) capability. True RMS is a measurement method used to accurately measure the AC voltage or current of a waveform, even if it is not a perfect sinusoidal waveform. It provides more accurate readings for AC signals with various shapes and frequencies, making it a valuable feature in electronics testing and troubleshooting.</p>"
