@@ -669,7 +669,11 @@
       "images": [
         {
           "src": "/photos/RP2040-Zero-1.webp",
-          "alt": "RP2040-Zero - external view"
+          "alt": "RP2040-Zero - External view"
+        },
+        {
+          "src": "/photos/RP2040-Zero-2.webp",
+          "alt": "RP2040-Zero - Pinouts"
         }
       ],
       "features": [
@@ -721,6 +725,60 @@
         "3",
         "14"
       ]
+    },
+    {
+      "categoryId": 23,
+      "lang": "en",
+      "title": "ESP32-C3",
+      "subtitle": "Super mini",
+      "buy": true,
+      "price": 3.30,
+      "priceId": "price_1OYE9DARhMwSarZXAIev6qy5",
+      "weight": 25,
+      "availability": 9,
+      "datasheetId": "ESP32-C3-SuperMini",
+      "images": [
+        {
+          "src": "/photos/ESP32-C3-1.webp",
+          "alt": "ESP32-C3 - External view"
+        },
+        {
+          "src": "/photos/ESP32-C3-2.webp",
+          "alt": "ESP32-C3 - Top and bottom view"
+        }
+      ],
+      "features": [
+        {
+          "refId": 2,
+          "value": "UART/GPIO/I²C/PWM/ADC/SPI"
+        },
+        {
+          "refId": 38,
+          "value": "32-bit RISC-V"
+        },
+        {
+          "refId": 54,
+          "value": "4 MB"
+        },
+        {
+          "refId": 60,
+          "value": "400 KB"
+        },
+        {
+          "refId": 76,
+          "value": "18 x 22.5 mm"
+        },
+        {
+          "refId": 98,
+          "value": "up to 160 MHz"
+        }
+      ],
+      "options": {
+        "1": {
+          "name": "Unsoldered",
+          "default": true
+        }
+      }
     },
     {
       "categoryId": 19,
@@ -1019,15 +1077,33 @@
         },
         {
           "refId": 152,
-          "value": ["999.9mV", "9.999V", "99.99V", "999.9V"]
+          "value": [
+            "999.9mV",
+            "9.999V",
+            "99.99V",
+            "999.9V"
+          ]
         },
         {
           "refId": 153,
-          "value": ["999.9uA", "99.99uA", "999.9mA", "10A"]
+          "value": [
+            "999.9uA",
+            "99.99uA",
+            "999.9mA",
+            "10A"
+          ]
         },
         {
           "refId": 154,
-          "value": ["9.99nF", "99.99nF", "999.9nF", "9.99uF", "99.99uF", "999.9uF", "9.999MF"]
+          "value": [
+            "9.99nF",
+            "99.99nF",
+            "999.9nF",
+            "9.99uF",
+            "99.99uF",
+            "999.9uF",
+            "9.999MF"
+          ]
         }
       ],
       "content": "<p>ANENG Q1 Red Pro Digital Multimeter is equipped with True RMS (Root Mean Square) capability. True RMS is a measurement method used to accurately measure the AC voltage or current of a waveform, even if it is not a perfect sinusoidal waveform. It provides more accurate readings for AC signals with various shapes and frequencies, making it a valuable feature in electronics testing and troubleshooting.</p>"

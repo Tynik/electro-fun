@@ -167,11 +167,11 @@
       "images": [
         {
           "src": "/photos/HLK-PM01-1.webp",
-          "alt": "HLK-PM01 - top view"
+          "alt": "HLK-PM01 - Top view"
         },
         {
           "src": "/photos/HLK-PM01-2.webp",
-          "alt": "HLK-PM01 - bottom view"
+          "alt": "HLK-PM01 - Bottom view"
         }
       ],
       "features": [
@@ -637,10 +637,10 @@
         "keywords": "pms5003, pm2.5, sensor, dust, pollution, particles, air"
       },
       "buy": true,
-      "price": 17,
+      "price": 14,
       "priceId": "price_1NQ70GARhMwSarZXz2gXHYEt",
       "weight": 55,
-      "availability": 2,
+      "availability": 1,
       "datasheetId": "PMS5003",
       "images": [
         {
