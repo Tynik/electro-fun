@@ -41,33 +41,42 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
   const { formFields, formErrors, isFormSubmitting, submitForm } = useHoneyForm<CheckoutFormData>({
     fields: {
       fullName: {
+        type: 'string',
         required: true,
-        value: '',
+        defaultValue: '',
       },
       phone: {
-        value: '',
+        type: 'string',
+        defaultValue: '',
       },
       email: {
         type: 'email',
         required: true,
-        value: '',
+        defaultValue: '',
       },
       shippingCity: {
+        type: 'string',
         required: true,
-        value: '',
+        defaultValue: '',
       },
       shippingAddress1: {
+        type: 'string',
         required: true,
-        value: '',
+        defaultValue: '',
       },
       shippingAddress2: {
-        value: '',
+        type: 'string',
+        defaultValue: '',
       },
       shippingPostcode: {
+        type: 'string',
         required: true,
-        value: '',
+        defaultValue: '',
       },
-      note: {},
+      note: {
+        type: 'string',
+        defaultValue: '',
+      },
     },
   });
 
