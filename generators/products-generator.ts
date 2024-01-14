@@ -2,12 +2,16 @@ import { writeFileSync, appendFileSync } from 'fs';
 import { getProductLink, readDb } from './helpers';
 import { generateItemId } from '../src/utils';
 import { SITE_DOMAIN } from './constants';
+import type { ItemImage } from '../src/types';
 
 const wrapInDoubleQuotes = (value: string) => `"${value}"`;
 
+const getProductImageSrc = (itemImage: ItemImage) =>
+  itemImage.src.startsWith('http') ? itemImage.src : SITE_DOMAIN + itemImage.src;
+
 const PRODUCTS_FILENAME = 'products.txt';
 
-const MAX_PRODUCT_ADDITIONAL_IMAGES = 5;
+const MAX_PRODUCT_ADDITIONAL_IMAGES = 10;
 
 const COLUMNS = [
   'id',
@@ -18,6 +22,7 @@ const COLUMNS = [
   'condition',
   'age_group',
   'image_link',
+  'additional_image_link',
   'link',
 ];
 
@@ -33,16 +38,16 @@ const run = () => {
       }
 
       if (!item.images.length) {
-        console.warn(`Images are missing for item "${item.title}"`);
+        console.warn(`Images are missing for product "${item.title}"`);
         return;
       }
 
       if (item.seo) {
         const productId = generateItemId(item.title);
 
-        const images = item.images
-          .slice(0, MAX_PRODUCT_ADDITIONAL_IMAGES)
-          .map(image => (image.src.startsWith('http') ? image.src : SITE_DOMAIN + image.src));
+        const additionalImages = item.images
+          .slice(1, MAX_PRODUCT_ADDITIONAL_IMAGES)
+          .map(getProductImageSrc);
 
         productsData.push([
           productId,
@@ -52,7 +57,8 @@ const run = () => {
           item.availability ? 'in_stock' : 'out_of_stock',
           'new',
           'adult',
-          images.join(','),
+          getProductImageSrc(item.images[0]),
+          additionalImages.join(','),
           getProductLink(item),
         ]);
       }
