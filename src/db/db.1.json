@@ -34,6 +34,11 @@
     "13": "Automotive Industry",
     "14": "Robotics"
   },
+  "brands": {
+    "1": {
+      "name": "TENSTAR ROBOT"
+    }
+  },
   "manufacturers": {
     "1": {
       "name": "ROHM Semiconductor",
@@ -1321,7 +1326,7 @@
       "subtitle": "Step-Down Voltage Regulator",
       "seo": {
         "description": "LM2596s - Step-Down Voltage Regulator up to 3A",
-        "keywords": "lm2596s, regulator, step-down, ti, 3a"
+        "keywords": "lm2596s, voltage-regulator, step-down"
       },
       "buy": true,
       "price": 2.9,

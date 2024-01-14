@@ -55,6 +55,7 @@ export const App = () => {
       document.title = db.seo.title;
 
       const meta = document.getElementsByTagName('meta');
+
       meta['description'].content = db.seo.description;
       meta['keywords'].content = db.seo.keywords;
     }
@@ -67,7 +68,7 @@ export const App = () => {
       }
       search({ text, debounce: true });
     },
-    [location.pathname]
+    [location.pathname],
   );
 
   const onSearchReset = React.useCallback(() => {

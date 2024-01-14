@@ -5,5 +5,6 @@ export type CategoryId = number;
 export type FeatureId = number;
 export type DatasheetId = string;
 export type DocId = string;
+export type BrandId = string;
 export type ManufacturerId = string;
 export type ApplicationId = string;

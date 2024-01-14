@@ -1,4 +1,4 @@
-import { DatasheetId, FoundDatasheets } from '~/types';
+import type { DatasheetId, FoundDatasheets } from '~/types';
 
 export const sortDatasheets = (datasheets: FoundDatasheets): DatasheetId[] =>
   Object.keys(datasheets).sort((datasheetIdA, datasheetIdB) => {
@@ -13,7 +13,7 @@ export const sortDatasheets = (datasheets: FoundDatasheets): DatasheetId[] =>
 
 export const matchDatasheetIdWithSearchKeyword = (
   datasheetId: DatasheetId,
-  searchKeyword: string
+  searchKeyword: string,
 ): boolean => {
   if (datasheetId.length < searchKeyword.length) {
     return false;
@@ -39,8 +39,8 @@ export const matchDatasheetIdWithSearchKeyword = (
 
 export const matchDatasheetWithSearchKeywords = (
   datasheetId: DatasheetId,
-  searchKeywords: string[]
+  searchKeywords: string[],
 ): boolean =>
   searchKeywords.every(searchKeyword =>
-    matchDatasheetIdWithSearchKeyword(datasheetId, searchKeyword)
+    matchDatasheetIdWithSearchKeyword(datasheetId, searchKeyword),
   );

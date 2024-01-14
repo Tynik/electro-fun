@@ -729,10 +729,11 @@
     {
       "categoryId": 23,
       "lang": "en",
-      "title": "ESP32-C3",
+      "title": "ESP32-C3 development board",
       "subtitle": "Super mini",
+      "brandId": "1",
       "seo": {
-        "description": "ESP32-C3 Super mini development board",
+        "description": "ESP32-C3 - super mini development board",
         "keywords": "esp32c3, mini, wifi, iot, arduino, ble, development-board, espressif"
       },
       "buy": true,

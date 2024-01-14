@@ -6,6 +6,7 @@ import type {
   FeatureId,
   CategoryId,
   ManufacturerId,
+  BrandId,
 } from './ids.types';
 import type { Seo } from '.';
 
@@ -56,12 +57,12 @@ export type ItemContributor = {
   src?: ItemContributorSrc;
 };
 
-export type ItemCodeExampleLib = {
+type ItemCodeExampleLib = {
   name: string;
   url: string;
 };
 
-export type ItemCodeExample = {
+type ItemCodeExample = {
   name: string;
   code: string;
   libs?: ItemCodeExampleLib[];
@@ -75,7 +76,7 @@ export type ItemExternalLink = {
   iconAlt?: string;
 };
 
-export type ItemOption = {
+type ItemOption = {
   name: string;
   default?: boolean;
 };
@@ -103,6 +104,7 @@ export type Item = {
   id?: ItemId;
   categoryId?: CategoryId;
   seo?: ItemSeo;
+  brandId?: BrandId;
   manufacturerId?: ManufacturerId;
   companyLink?: string;
   original?: boolean;

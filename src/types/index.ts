@@ -1,4 +1,4 @@
-import {
+import type {
   ApplicationId,
   DatasheetId,
   DocId,
@@ -6,9 +6,10 @@ import {
   FeatureId,
   CategoryId,
   ManufacturerId,
+  BrandId,
 } from './ids.types';
 
-import { Item, ItemFeatureValueType } from './item.types';
+import type { Item, ItemFeatureValueType } from './item.types';
 
 export * from './ids.types';
 export * from './item.types';
@@ -26,6 +27,10 @@ export type Category = {
   id: CategoryId;
   name: string;
   icon: string;
+};
+
+type Brand = {
+  name: string;
 };
 
 export type Manufacturer = {
@@ -127,6 +132,7 @@ export type Db = {
   itemFeatures: DbItemFeatures;
   items: Item[];
   datasheets: Datasheets;
+  brands: Record<BrandId, Brand>;
   manufacturers: Record<ManufacturerId, Manufacturer>;
   docs: Docs;
   applications: Applications;
