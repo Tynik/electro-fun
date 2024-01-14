@@ -423,7 +423,7 @@
       "subtitle": "DevKit",
       "seo": {
         "description": "LoLin NodeMCU ESP8266 V3",
-        "keywords": "nodemcu, esp8266, esp-12e, devkit, arduino, wifi, iot, i2c, spi, uart, pwm, adc",
+        "keywords": "nodemcu, esp8266, esp-12e, devkit, arduino, wifi, iot, i2c, spi, uart, pwm, adc, espressif",
         "measurement": "4MB"
       },
       "buy": true,
@@ -634,7 +634,7 @@
         },
         {
           "refId": 97,
-          "value": "BLE 5.0"
+          "value": "LE 5.0"
         }
       ],
       "relatedDatasheetIds": [
@@ -731,12 +731,26 @@
       "lang": "en",
       "title": "ESP32-C3",
       "subtitle": "Super mini",
+      "seo": {
+        "description": "ESP32-C3 Super mini development board",
+        "keywords": "esp32c3, mini, wifi, iot, arduino, ble, development-board, espressif"
+      },
       "buy": true,
       "price": 3.30,
       "priceId": "price_1OYE9DARhMwSarZXAIev6qy5",
       "weight": 25,
       "availability": 9,
       "datasheetId": "ESP32-C3-SuperMini",
+      "content": "ESP32-C3 Super Mini Development Board – a powerful and compact solution for your embedded projects. Packed with the latest ESP32-C3 microcontroller, this development board offers an exceptional blend of performance, versatility, and size efficiency.",
+      "peculiarities": [
+        "Powered by the cutting-edge ESP32-C3 chip, this development board ensures high-performance computing, low power consumption, and enhanced connectivity.",
+        "Designed with space efficiency in mind, the super mini form factor makes it ideal for projects where size is a crucial factor. Fit it into tight spaces without compromising on functionality.",
+        "The ESP32-C3 comes equipped with Wi-Fi and Bluetooth connectivity, opening up a world of possibilities for IoT and wireless applications. Seamlessly connect and communicate with other devices in your network.",
+        "Despite its compact size, the development board provides GPIO pins for customization, enabling you to interface with various sensors, actuators, and peripherals tailored to your project's needs.",
+        "Compatible with popular development environments like the Arduino IDE and PlatformIO, getting started with your project is a breeze. Take advantage of the vast ESP32 community and resources available for quick and efficient development.",
+        "The board includes a built-in antenna, simplifying your hardware setup and ensuring reliable wireless communication.",
+        "Benefit from the power of the ESP32-C3 microcontroller while maintaining energy efficiency – crucial for battery-powered and energy-conscious applications."
+      ],
       "images": [
         {
           "src": "/photos/ESP32-C3-1.webp",
@@ -753,24 +767,48 @@
           "value": "UART/GPIO/I²C/PWM/ADC/SPI"
         },
         {
-          "refId": 38,
-          "value": "32-bit RISC-V"
+          "refId": 27,
+          "value": "~ 43 uA (deep sleep)"
+        },
+        {
+          "refId": 46,
+          "value": "Station/SoftAP/SoftAP+Station/Hybrid"
+        },
+        {
+          "refId": 50,
+          "value": "32-bit RISC-V single-core"
+        },
+        {
+          "refId": 51,
+          "value": "407.22 (2.55 MHz)"
+        },
+        {
+          "refId": 53,
+          "value": "up to 160 MHz"
         },
         {
           "refId": 54,
           "value": "4 MB"
         },
         {
+          "refId": 55,
+          "value": "Yes"
+        },
+        {
+          "refId": 59,
+          "value": "384 KB"
+        },
+        {
           "refId": 60,
-          "value": "400 KB"
+          "value": "400 KB (16 KB for cache)"
         },
         {
           "refId": 76,
           "value": "18 x 22.5 mm"
         },
         {
-          "refId": 98,
-          "value": "up to 160 MHz"
+          "refId": 97,
+          "value": "LE 5.0"
         }
       ],
       "options": {
