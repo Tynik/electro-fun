@@ -2,7 +2,6 @@
   "items": [
     {
       "categoryId": 16,
-      "lang": "en",
       "title": "AMS1117 3.3V",
       "subtitle": "Voltage Regulator",
       "seo": {
@@ -149,7 +148,6 @@
     },
     {
       "categoryId": 17,
-      "lang": "en",
       "title": "HLK-PM01",
       "subtitle": "220V to 5V at 600mA",
       "seo": {
@@ -223,7 +221,6 @@
     },
     {
       "categoryId": 13,
-      "lang": "en",
       "title": "AC-CT 0-100A 1:1000",
       "subtitle": "Measurement of Alternating Current",
       "seo": {
@@ -255,7 +252,6 @@
     },
     {
       "categoryId": 18,
-      "lang": "en",
       "title": "74HC4051 (Module)",
       "subtitle": "8-Channel Analog Mux/Demux",
       "seo": {
@@ -316,7 +312,6 @@
     },
     {
       "categoryId": 19,
-      "lang": "en",
       "title": "Copper Wire",
       "subtitle": "Diameter 0.2/0.5/0.6/0.9mm",
       "seo": {
@@ -400,7 +395,6 @@
     },
     {
       "categoryId": 21,
-      "lang": "en",
       "title": "Thermal Polyimide Insulation Tape",
       "subtitle": "Length is 30m",
       "seo": {
@@ -468,7 +462,6 @@
     },
     {
       "categoryId": 4,
-      "lang": "en",
       "title": "ZVS Capacitor Charging",
       "subtitle": "from 8 - 32V to 45 - 390V",
       "seo": {
@@ -557,7 +550,6 @@
     },
     {
       "categoryId": 22,
-      "lang": "en",
       "title": "PCI-E Riser 009S USB 3.0",
       "subtitle": "Compatible with PCI-E 1x 4x 8x 16x",
       "seo": {
@@ -629,7 +621,6 @@
     },
     {
       "categoryId": 1,
-      "lang": "en",
       "title": "PM2.5/PMS5003 Dust Sensor",
       "subtitle": "Detection of dust particles from 1 to 2.5 μm",
       "seo": {
@@ -786,7 +777,6 @@
     },
     {
       "categoryId": 6,
-      "lang": "en",
       "title": "MCP2515 Module",
       "subtitle": "CAN Controller Module, SPI",
       "seo": {
@@ -866,7 +856,6 @@
     },
     {
       "categoryId": 8,
-      "lang": "en",
       "title": "MCP2551 Module",
       "subtitle": "CAN Transceiver",
       "seo": {
@@ -918,7 +907,6 @@
     },
     {
       "categoryId": 8,
-      "lang": "en",
       "title": "SIM800",
       "subtitle": "GSM/GPRS 850/900/1800/1900 MHz",
       "seo": {

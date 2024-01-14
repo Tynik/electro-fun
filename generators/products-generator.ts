@@ -40,7 +40,12 @@ const run = () => {
   });
 
   db.items.forEach(item => {
-    if (!item.buy || typeof item.price !== 'number') {
+    if (!item.buy) {
+      return;
+    }
+
+    if (typeof item.price !== 'number') {
+      console.warn(`The price is not a number for product "${item.title}"`);
       return;
     }
 
@@ -49,29 +54,43 @@ const run = () => {
       return;
     }
 
-    if (item.seo) {
-      const productId = generateItemId(item);
-
-      const additionalImages = item.images
-        .slice(1, MAX_PRODUCT_ADDITIONAL_IMAGES)
-        .map(getProductImageSrc);
-
-      productsData.push([
-        productId,
-        wrapInDoubleQuotes(item.title),
-        wrapInDoubleQuotes(db.brands[item.brandId]?.name ?? ''),
-        item.mpn,
-        wrapInDoubleQuotes(item.seo.description),
-        item.price,
-        item.availability ? 'in_stock' : 'out_of_stock',
-        'new',
-        `${item.weight ?? 0} g`,
-        'adult',
-        getProductImageSrc(item.images[0]),
-        additionalImages.join(','),
-        getProductLink(item),
-      ]);
+    if (!item.seo) {
+      console.warn(`SEO is missing for product "${item.title}"`);
+      return;
     }
+
+    if (!item.price) {
+      console.warn(`The price is "0" for product "${item.title}"`);
+      return;
+    }
+
+    const productId = generateItemId(item);
+
+    const brand = wrapInDoubleQuotes(
+      db.manufacturers[item.manufacturerId]?.name ?? db.brands[item.brandId]?.name ?? '',
+    );
+
+    const availability = item.availability ? 'in_stock' : 'out_of_stock';
+
+    const additionalImages = item.images
+      .slice(1, MAX_PRODUCT_ADDITIONAL_IMAGES)
+      .map(getProductImageSrc);
+
+    productsData.push([
+      productId,
+      wrapInDoubleQuotes(item.title),
+      brand,
+      item.mpn,
+      wrapInDoubleQuotes(item.seo.description),
+      item.price,
+      availability,
+      'new',
+      `${item.weight ?? 0} g`,
+      'adult',
+      getProductImageSrc(item.images[0]),
+      additionalImages.join(','),
+      getProductLink(item),
+    ]);
   });
 
   writeFileSync(PRODUCTS_FILENAME, `${COLUMNS.join('\t')}\n`);

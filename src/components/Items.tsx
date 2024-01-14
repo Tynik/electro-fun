@@ -40,7 +40,7 @@ export const ItemsList = ({ items }: ItemsListProps) => {
             onKeyDown={e => onItemKeyDown(`/item/${item.id}`, e)}
             tabIndex={0}
           >
-            <CardActionArea component={RouterLink} to={`/item/${item.id}`} hrefLang={item.lang}>
+            <CardActionArea component={RouterLink} to={`/item/${item.id}`} hrefLang="en">
               <CardHeader
                 title={item.title}
                 subheader={item.subtitle}

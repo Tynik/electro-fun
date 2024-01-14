@@ -262,7 +262,6 @@
     },
     {
       "categoryId": 13,
-      "lang": "en",
       "title": "PZEM-004T v3.0",
       "subtitle": "80 - 260V and current up to 100A",
       "seo": {
@@ -418,7 +417,6 @@
     },
     {
       "categoryId": 23,
-      "lang": "en",
       "title": "LoLin NodeMCU ESP8266 4MB v3",
       "subtitle": "DevKit",
       "seo": {
@@ -555,7 +553,6 @@
     },
     {
       "categoryId": 9,
-      "lang": "en",
       "title": "ESP-C3-13U 4M",
       "subtitle": "Wi-Fi module",
       "seo": {
@@ -652,7 +649,6 @@
     },
     {
       "categoryId": 23,
-      "lang": "en",
       "title": "Raspberry PI RP2040-Zero",
       "subtitle": "Mini",
       "seo": {
@@ -728,10 +724,11 @@
     },
     {
       "categoryId": 23,
-      "lang": "en",
-      "title": "ESP32-C3 development board",
+      "title": "ESP32-C3 Development Board",
       "subtitle": "Super mini",
       "brandId": "1",
+      "manufacturerId": "12",
+      "mpu": "735355003680",
       "seo": {
         "description": "ESP32-C3 - super mini development board",
         "keywords": "esp32c3, mini, wifi, iot, arduino, ble, development-board, espressif"
@@ -811,13 +808,7 @@
           "refId": 97,
           "value": "LE 5.0"
         }
-      ],
-      "options": {
-        "1": {
-          "name": "Unsoldered",
-          "default": true
-        }
-      }
+      ]
     },
     {
       "categoryId": 19,
@@ -889,16 +880,10 @@
         "keywords": "power-supply, CRS-350-24, 24V, 350W, cloudray"
       },
       "buy": true,
-      "price": {
-        "1": {
-          "price": 42,
-          "priceId": "price_1NUOuIARhMwSarZXC0GEVyvn"
-        }
-      },
+      "price": 42,
+      "priceId": "price_1NUOuIARhMwSarZXC0GEVyvn",
       "weight": 1500,
-      "availability": {
-        "1": 1
-      },
+      "availability": 1,
       "images": [
         {
           "src": "/photos/power-supply-24-350-1.webp",
@@ -925,12 +910,6 @@
           "alt": "Power Supply 24V/350W"
         }
       ],
-      "options": {
-        "1": {
-          "name": "24V/350W",
-          "default": true
-        }
-      },
       "features": [
         {
           "refId": 13,

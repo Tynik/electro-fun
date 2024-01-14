@@ -102,7 +102,6 @@ export type MPN = string;
 export type Item = {
   title: string;
   subtitle: string;
-  lang: string;
   id?: ItemId;
   categoryId?: CategoryId;
   seo?: ItemSeo;

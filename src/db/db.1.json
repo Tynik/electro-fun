@@ -92,6 +92,10 @@
     "11": {
       "name": "SIMCom",
       "url": "https://www.simcom.com"
+    },
+    "12": {
+      "name": "Shenzhen Tianqi Star Electronics Co.",
+      "url": "https://www.sztqhardware.com/about/"
     }
   },
   "abbreviations": {},
@@ -1324,7 +1328,6 @@
   "items": [
     {
       "categoryId": 4,
-      "lang": "en",
       "title": "LM2596s DC-DC 3A",
       "subtitle": "Step-Down Voltage Regulator",
       "seo": {
@@ -1382,7 +1385,6 @@
     },
     {
       "categoryId": 1,
-      "lang": "en",
       "title": "BMP280",
       "subtitle": "Sensor for Temperature Measurement, etc.",
       "seo": {
@@ -1467,7 +1469,6 @@
     },
     {
       "categoryId": 5,
-      "lang": "en",
       "title": "MPU-9250",
       "subtitle": "Gyroscope/Accelerometer/Magnetometer",
       "seo": {
@@ -1555,7 +1556,6 @@
     },
     {
       "categoryId": 1,
-      "lang": "en",
       "title": "CCS811",
       "subtitle": "Air Quality Sensor",
       "seo": {
@@ -1638,11 +1638,10 @@
     },
     {
       "categoryId": 1,
-      "lang": "en",
       "title": "APDS-9960",
       "subtitle": "RGB Color Sensor and Gesture Recognition",
       "seo": {
-        "description": "RGB Color Sensor and Gesture Recognition",
+        "description": "APDS-9960 RGB color sensor and gesture recognition",
         "keywords": "sensor, gestures, rgb, recognition, i2c"
       },
       "buy": true,
@@ -1717,7 +1716,6 @@
     },
     {
       "categoryId": 7,
-      "lang": "en",
       "title": "MAC Series 35",
       "subtitle": "Electromagnetically Controlled Solenoid",
       "seo": {
@@ -1783,7 +1781,6 @@
     },
     {
       "categoryId": 3,
-      "lang": "en",
       "title": "TEC1-12715",
       "subtitle": "Peltier Element 40x40x4mm, up to 136W",
       "seo": {
@@ -1833,7 +1830,6 @@
     },
     {
       "categoryId": 1,
-      "lang": "en",
       "title": "BHI260AP",
       "subtitle": "Intelligent Sensor",
       "seo": {
@@ -1941,12 +1937,11 @@
     },
     {
       "categoryId": 8,
-      "lang": "en",
       "title": "nRF24L01+",
       "subtitle": "2.4 GHz Transceiver and Audio Streamer",
       "seo": {
-        "description": "nRF24L01+ - 2.4 GHz transceiver",
-        "keywords": "nrf24l01, transceiver, receiver"
+        "description": "nRF24L01+ - 2.4 GHz transceiver and audio streamer",
+        "keywords": "nrf24l01, transceiver, receiver, audio-streamer"
       },
       "buy": true,
       "price": 0.8,
@@ -2003,7 +1998,6 @@
     },
     {
       "categoryId": 9,
-      "lang": "en",
       "title": "ESP8266EX",
       "subtitle": "Wi-Fi Chip",
       "seo": {
@@ -2088,7 +2082,6 @@
     },
     {
       "categoryId": 8,
-      "lang": "en",
       "title": "CC1310",
       "subtitle": "Sub-1 GHz RF Device",
       "seo": {
@@ -2185,11 +2178,10 @@
     },
     {
       "categoryId": 8,
-      "lang": "en",
       "title": "CC2652P",
       "subtitle": "Multi-Protocol Wireless MCU",
       "seo": {
-        "description": "CC2652P - Multi-Protocol Wireless MCU",
+        "description": "CC2652P - Multi-protocol wireless MCU",
         "keywords": "cc2652p, multi-protocol, wireless, mcu, simplelink, bluetooth, zigbee, thread, ti"
       },
       "datasheetId": "CC2652P",
@@ -2314,7 +2306,6 @@
     },
     {
       "categoryId": 6,
-      "lang": "en",
       "title": "CH340",
       "subtitle": "USB to UART Converter",
       "seo": {
@@ -2389,7 +2380,6 @@
     },
     {
       "categoryId": 10,
-      "lang": "en",
       "title": "IRF3205",
       "subtitle": "MOSFET Transistor up to 55 V and 110 A",
       "seo": {
@@ -2496,11 +2486,10 @@
     },
     {
       "categoryId": 20,
-      "lang": "en",
       "title": "14-Piece Tweezers Set with Case",
       "subtitle": "For Soldering, PCB Repair, Phones, etc.",
       "seo": {
-        "description": "14-Piece Tweezers Set with Case",
+        "description": "14-Piece tweezers set with case",
         "keywords": "tweezers, set, case, 14, repair, soldering, gift, kaisi",
         "measurement": "14"
       },
