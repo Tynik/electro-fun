@@ -15,4 +15,4 @@ export const readDb = (callback: (dbPart: Db) => void) => {
   });
 };
 
-export const getProductLink = (item: Item) => `${SITE_DOMAIN}/item/` + generateItemId(item.title);
+export const getProductLink = (item: Item) => `${SITE_DOMAIN}/item/` + generateItemId(item);

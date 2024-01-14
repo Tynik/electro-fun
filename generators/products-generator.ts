@@ -17,6 +17,7 @@ const COLUMNS = [
   'id',
   'title',
   'brand',
+  'mpn',
   'description',
   'price',
   'availability',
@@ -49,7 +50,7 @@ const run = () => {
     }
 
     if (item.seo) {
-      const productId = generateItemId(item.title);
+      const productId = generateItemId(item);
 
       const additionalImages = item.images
         .slice(1, MAX_PRODUCT_ADDITIONAL_IMAGES)
@@ -59,6 +60,7 @@ const run = () => {
         productId,
         wrapInDoubleQuotes(item.title),
         wrapInDoubleQuotes(db.brands[item.brandId]?.name ?? ''),
+        item.mpn,
         wrapInDoubleQuotes(item.seo.description),
         item.price,
         item.availability ? 'in_stock' : 'out_of_stock',

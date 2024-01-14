@@ -14,7 +14,7 @@
       "priceId": "price_1NQ6k9ARhMwSarZXPPnOeLwN",
       "weight": 10,
       "availability": 1,
-      "content": "",
+      "content": "<p><p/>",
       "datasheetId": "LED0805BLUE",
       "images": [
         {
@@ -116,7 +116,7 @@
           ]
         }
       ],
-      "content": "",
+      "content": "<p><p/>",
       "externalLinks": [
         {
           "name": "Official J-Link Page",
@@ -378,7 +378,7 @@
           "value": "0.5%"
         }
       ],
-      "content": "",
+      "content": "<p><p/>",
       "relatedDatasheetIds": [
         "SD3004"
       ],
@@ -742,7 +742,7 @@
       "weight": 25,
       "availability": 9,
       "datasheetId": "ESP32-C3-SuperMini",
-      "content": "ESP32-C3 Super Mini Development Board – a powerful and compact solution for your embedded projects. Packed with the latest ESP32-C3 microcontroller, this development board offers an exceptional blend of performance, versatility, and size efficiency.",
+      "content": "<p>ESP32-C3 Super Mini Development Board – a powerful and compact solution for your embedded projects. Packed with the latest ESP32-C3 microcontroller, this development board offers an exceptional blend of performance, versatility, and size efficiency.<p/>",
       "peculiarities": [
         "Powered by the cutting-edge ESP32-C3 chip, this development board ensures high-performance computing, low power consumption, and enhanced connectivity.",
         "Designed with space efficiency in mind, the super mini form factor makes it ideal for projects where size is a crucial factor. Fit it into tight spaces without compromising on functionality.",
@@ -880,11 +880,13 @@
     },
     {
       "categoryId": 17,
-      "title": "Power Supply",
+      "title": "Power Supply CRS-350-24",
       "subtitle": "24V/350W",
+      "brandId": "2",
+      "mpn": "SPS61CRS35024",
       "seo": {
-        "description": "Power Supply 24V/350W",
-        "keywords": "power-supply, 24V, 350W, 115V, 230V, GB4943, EN60950, UL60950, >88%"
+        "description": "Power Supply CRS-350-24 24V/350W",
+        "keywords": "power-supply, CRS-350-24, 24V, 350W, cloudray"
       },
       "buy": true,
       "price": {
@@ -973,12 +975,20 @@
           "value": "Yes"
         }
       ],
-      "content": ""
+      "content": "<p>Introducing the CRS-350-24 24V/350W Power Supply – your dependable energy source for a multitude of electronic and industrial applications. Designed with precision and reliability in mind, this power supply unit delivers a constant and efficient 24 volts at 350 watts, making it an essential component for your projects.</p>",
+      "peculiarities": [
+        "The CRS-350-24 ensures a consistent 24-volt output, offering a reliable power solution for your devices, circuits, or systems.",
+        "Equipped with built-in protection mechanisms such as overvoltage, overcurrent, and short circuit protection, the CRS-350-24 prioritizes the safety of your connected equipment.",
+        "With a robust power delivery of 350 watts, this power supply is capable of handling demanding loads, providing ample power for a wide range of applications.",
+        "The power supply accommodates a wide input voltage range, providing flexibility in various power input scenarios.",
+        "Ideal for industrial automation, LED lighting, robotics, and various electronic projects requiring a 24V power source."
+      ]
     },
     {
       "categoryId": 24,
       "title": "Stepper Motor NEMA 17 (40mm)",
       "subtitle": "17CS04A-170E",
+      "brandId": "2",
       "seo": {
         "description": "Stepper Motor NEMA 17 (40mm) 17CS04A-170E",
         "keywords": "stepper-motor, nema, 40mm, 17cs04a-170e"

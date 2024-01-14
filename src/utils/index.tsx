@@ -6,12 +6,12 @@ export * from './object';
 export * from './text';
 export * from './router';
 
-export const generateItemId = (itemTitle: string) => itemTitle.replace(/[ ./]/g, '-').toLowerCase();
+export const generateItemId = (item: Item) => item.title.replace(/[ ./]/g, '-').toLowerCase();
 
 export const preprocessItems = (items: Item[]) =>
   items.map(item => ({
     ...item,
-    id: generateItemId(item.title),
+    id: generateItemId(item),
   }));
 
 export const preprocessDb = (db: Db) => ({

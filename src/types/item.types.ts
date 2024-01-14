@@ -97,6 +97,8 @@ type PriceConfig = {
   priceId?: PriceId;
 };
 
+export type MPN = string;
+
 export type Item = {
   title: string;
   subtitle: string;
@@ -105,6 +107,7 @@ export type Item = {
   categoryId?: CategoryId;
   seo?: ItemSeo;
   brandId?: BrandId;
+  mpn?: MPN;
   manufacturerId?: ManufacturerId;
   companyLink?: string;
   original?: boolean;
