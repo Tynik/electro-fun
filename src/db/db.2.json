@@ -479,7 +479,7 @@
           "value": "up to 200 µA"
         },
         {
-          "refId": 38,
+          "refId": 50,
           "value": "Tensilica Xtensa Diamond 32-bit RISC"
         },
         {
@@ -682,20 +682,20 @@
           "value": "3.3 - 5.0 V"
         },
         {
-          "refId": 38,
-          "value": "2-core ARM Cortex-M0+"
-        },
-        {
           "refId": 41,
           "value": 4
         },
         {
-          "refId": 76,
-          "value": "18 x 23.5 mm"
+          "refId": 50,
+          "value": "2-core ARM Cortex-M0+"
         },
         {
-          "refId": 98,
+          "refId": 53,
           "value": "up to 133 MHz"
+        },
+        {
+          "refId": 76,
+          "value": "18 x 23.5 mm"
         },
         {
           "refId": 54,
@@ -728,7 +728,7 @@
       "subtitle": "Super mini",
       "brandId": "1",
       "manufacturerId": "12",
-      "mpu": "735355003680",
+      "mpn": "735355003680",
       "seo": {
         "description": "ESP32-C3 - super mini development board",
         "keywords": "esp32c3, mini, wifi, iot, arduino, ble, development-board, espressif"
@@ -808,7 +808,13 @@
           "refId": 97,
           "value": "LE 5.0"
         }
-      ]
+      ],
+      "options": {
+        "1": {
+          "name": "Unsoldered",
+          "default": true
+        }
+      }
     },
     {
       "categoryId": 19,
