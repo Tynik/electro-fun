@@ -7,9 +7,19 @@ const wrapInDoubleQuotes = (value: string) => `"${value}"`;
 
 const PRODUCTS_FILENAME = 'products.txt';
 
-const MAX_PRODUCT_ADDITIONAL_IMAGES = 10;
+const MAX_PRODUCT_ADDITIONAL_IMAGES = 5;
 
-const COLUMNS = ['id', 'title', 'description', 'price', 'availability', 'image_link', 'link'];
+const COLUMNS = [
+  'id',
+  'title',
+  'description',
+  'price',
+  'availability',
+  'condition',
+  'age_group',
+  'image_link',
+  'link',
+];
 
 type Products = (string | number)[][];
 
@@ -18,7 +28,7 @@ const run = () => {
 
   readDb(dbPart => {
     dbPart.items.forEach(item => {
-      if (typeof item.price !== 'number') {
+      if (!item.buy || typeof item.price !== 'number') {
         return;
       }
 
@@ -42,6 +52,8 @@ const run = () => {
           wrapInDoubleQuotes(item.seo.description),
           item.price,
           item.availability ? 'in_stock' : 'out_of_stock',
+          'new',
+          'adult',
           images.join(','),
           getProductLink(item),
         ]);
