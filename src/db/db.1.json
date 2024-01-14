@@ -40,6 +40,9 @@
     },
     "2": {
       "name": "CLOUDRAY"
+    },
+    "3": {
+      "name": "ANENG"
     }
   },
   "manufacturers": {
@@ -2490,7 +2493,7 @@
       "subtitle": "For Soldering, PCB Repair, Phones, etc.",
       "seo": {
         "description": "14-Piece tweezers set with case",
-        "keywords": "tweezers, set, case, 14, repair, soldering, gift, kaisi",
+        "keywords": "tweezers, repair, soldering",
         "measurement": "14"
       },
       "manufacturerId": "7",

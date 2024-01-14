@@ -21,6 +21,7 @@ const COLUMNS = [
   'description',
   'price',
   'availability',
+  'quantity',
   'condition',
   'shipping_weight',
   'age_group',
@@ -46,6 +47,11 @@ const run = () => {
 
     if (typeof item.price !== 'number') {
       console.warn(`The price is not a number for product "${item.title}"`);
+      return;
+    }
+
+    if (typeof item.availability !== 'number') {
+      console.warn(`The availability is not a number for product "${item.title}"`);
       return;
     }
 
@@ -84,6 +90,7 @@ const run = () => {
       wrapInDoubleQuotes(item.seo.description),
       item.price,
       availability,
+      item.availability,
       'new',
       `${item.weight ?? 0} g`,
       'adult',
