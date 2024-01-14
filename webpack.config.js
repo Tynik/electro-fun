@@ -68,6 +68,7 @@ module.exports = {
         'CNAME',
         'favicon.png',
         'sitemap.txt',
+        'products.txt',
         {
           from: 'src/db',
           to: 'db',

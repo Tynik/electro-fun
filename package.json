@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "dist/main.js",
   "scripts": {
-    "sitemap": "tsc -p tsconfig.sitemap.json && tsc-alias -p tsconfig.sitemap.json && node sitemap/sitemap-generator.js",
+    "sitemap": "tsc -p tsconfig.generators.json && tsc-alias -p tsconfig.generators.json && node generators/dist/generators/sitemap-generator.js",
+    "products": "tsc -p tsconfig.generators.json && tsc-alias -p tsconfig.generators.json && node generators/dist/generators/products-generator.js",
     "build": "NODE_ENV=production webpack",
-    "deploy": "yarn run sitemap && yarn run build",
+    "deploy": "yarn run sitemap && yyarn run products && yarn run build",
     "start": "LOCAL_ENV=true NETLIFY_SERVER=http://localhost:9999 NODE_ENV=development webpack serve",
     "test": "jest"
   },

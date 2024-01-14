@@ -243,10 +243,6 @@
       "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/RP2040.pdf",
       "lang": "en"
     },
-    "ESP32-C3-SuperMini": {
-      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP32-C3-SuperMini.pdf",
-      "lang": "en"
-    },
     "FGH60N60SMD": {
       "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/FGH60N60SMD.pdf",
       "lang": "en"
@@ -285,6 +281,14 @@
     },
     "ESP32-C3": {
       "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP32-C3.pdf",
+      "lang": "en"
+    },
+    "ESP32-C3-MINI-1": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP32-C3-MINI-1.pdf",
+      "lang": "en"
+    },
+    "ESP32-C3-SuperMini": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ESP32-C3-SuperMini.pdf",
       "lang": "en"
     },
     "ESP32-C3-WROOM-02x": {

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Item, Db, ItemContributorSrc, ItemContributorSrcSource } from '~/types';
 
 export * from './mui';
