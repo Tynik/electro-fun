@@ -3,9 +3,22 @@ import { getProductLink, readDb } from './helpers';
 import { generateItemId } from '../src/utils';
 import { SITE_DOMAIN } from './constants';
 
+const wrapInDoubleQuotes = (value: string) => `"${value}"`;
+
 const PRODUCTS_FILENAME = 'products.txt';
 
-const COLUMNS = ['id', 'title', 'description', 'price', 'availability', 'image_link', 'link'];
+const MAX_PRODUCT_ADDITIONAL_IMAGES = 10;
+
+const COLUMNS = [
+  'id',
+  'title',
+  'description',
+  'price',
+  'availability',
+  'image_link',
+  ...Array.from(new Array(MAX_PRODUCT_ADDITIONAL_IMAGES)).map(() => 'additional_image_link'),
+  'link',
+];
 
 type Products = (string | number)[][];
 
@@ -24,15 +37,23 @@ const run = () => {
       }
 
       if (item.seo) {
+        const productId = generateItemId(item.title);
+
+        const images = Array.from(new Array(MAX_PRODUCT_ADDITIONAL_IMAGES)).map((_, imageIndex) =>
+          item.images[imageIndex]
+            ? item.images[imageIndex].src.startsWith('http')
+              ? item.images[imageIndex].src
+              : `${SITE_DOMAIN}/item` + item.images[imageIndex].src
+            : '',
+        );
+
         productsData.push([
-          generateItemId(item.title),
-          `"${item.title}"`,
-          `"${item.seo.description}"`,
+          productId,
+          wrapInDoubleQuotes(item.title),
+          wrapInDoubleQuotes(item.seo.description),
           item.price,
           item.availability ? 'in_stock' : 'out_of_stock',
-          item.images[0].src.startsWith('http')
-            ? item.images[0].src
-            : `${SITE_DOMAIN}/item` + item.images[0].src,
+          ...images,
           getProductLink(item),
         ]);
       }
