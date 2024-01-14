@@ -42,9 +42,7 @@ const run = () => {
 
         const images = item.images
           .slice(0, MAX_PRODUCT_ADDITIONAL_IMAGES)
-          .map(image =>
-            image.src.startsWith('http') ? image.src : `${SITE_DOMAIN}/item` + image.src,
-          );
+          .map(image => (image.src.startsWith('http') ? image.src : SITE_DOMAIN + image.src));
 
         productsData.push([
           productId,
