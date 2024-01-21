@@ -17,7 +17,9 @@ const COLUMNS = [
   'id',
   'title',
   'brand',
+  'gtin',
   'mpn',
+  'identifier_exists',
   'description',
   'price',
   'availability',
@@ -30,7 +32,7 @@ const COLUMNS = [
   'link',
 ];
 
-type Products = (string | number)[][];
+type Products = (string | number | boolean)[][];
 
 const run = () => {
   const productsData: Products = [];
@@ -86,12 +88,18 @@ const run = () => {
       productId,
       wrapInDoubleQuotes(item.title),
       brand,
+      item.gtin,
       item.mpn,
+      // identifier_exists
+      Boolean(item.gtin || item.mpn),
       wrapInDoubleQuotes(item.seo.description),
       item.price,
       availability,
+      // quantity
       item.availability,
+      // condition
       'new',
+      // weight
       `${item.weight ?? 0} g`,
       'adult',
       getProductImageSrc(item.images[0]),

@@ -43,6 +43,12 @@
     },
     "3": {
       "name": "ANENG"
+    },
+    "4": {
+      "name": "WCMCU"
+    },
+    "5": {
+      "name": "BIG TREE TECH"
     }
   },
   "manufacturers": {
@@ -98,7 +104,11 @@
     },
     "12": {
       "name": "Shenzhen Tianqi Star Electronics Co.",
-      "url": "https://www.sztqhardware.com/about/"
+      "url": "https://www.sztqhardware.com/about"
+    },
+    "13": {
+      "name": "Big Tree Technology Co., Ltd.",
+      "url": "https://bigtree-tech.com"
     }
   },
   "abbreviations": {},
@@ -189,6 +199,14 @@
     }
   },
   "datasheets": {
+    "ILI9488": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ILI9488.pdf",
+      "lang": "en"
+    },
+    "NS2009": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/NS2009.pdf",
+      "lang": "en"
+    },
     "MCP2561FD": {
       "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/MCP2561FD.pdf",
       "lang": "en",
@@ -670,6 +688,11 @@
       "id": 25,
       "name": "Measurement Tools",
       "icon": "apps"
+    },
+    {
+      "id": 26,
+      "name": "Displays",
+      "icon": "apps"
     }
   ],
   "featureSections": {
@@ -688,7 +711,9 @@
     "13": "Exploitation",
     "14": "Dimensions",
     "15": "Analog Input",
-    "16": "Phase"
+    "16": "Phase",
+    "17": "Display",
+    "18": "Touch Screen"
   },
   "optionTypes": {
     "bool": {
@@ -826,7 +851,7 @@
       ]
     },
     "20": {
-      "name": "Quantity",
+      "name": "Total",
       "featSecRefId": 6
     },
     "21": {
@@ -1326,6 +1351,31 @@
     "154": {
       "name": "Capacitance",
       "featSecRefId": 5
+    },
+    "155": {
+      "name": "Analog",
+      "featSecRefId": 6
+    },
+    "156": {
+      "name": "Size",
+      "featSecRefId": 17
+    },
+    "157": {
+      "name": "Resolution",
+      "featSecRefId": 17
+    },
+    "158": {
+      "name": "Touch Screen",
+      "type": "bool",
+      "featSecRefId": 17
+    },
+    "159": {
+      "name": "Driver",
+      "featSecRefId": 17
+    },
+    "160": {
+      "name": "Controller",
+      "featSecRefId": 18
     }
   },
   "items": [

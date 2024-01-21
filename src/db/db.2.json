@@ -651,6 +651,7 @@
       "categoryId": 23,
       "title": "Raspberry PI RP2040-Zero",
       "subtitle": "Mini",
+      "brandId": "4",
       "seo": {
         "description": "Raspberry PI RP2040-Zero",
         "keywords": "rp2040, raspberry, mini, microcontroller"
@@ -680,6 +681,14 @@
         {
           "refId": 19,
           "value": "3.3 - 5.0 V"
+        },
+        {
+          "refId": 20,
+          "value": 30
+        },
+        {
+          "refId": 155,
+          "value": 4
         },
         {
           "refId": 41,
@@ -815,6 +824,77 @@
           "default": true
         }
       }
+    },
+    {
+      "categoryId": 26,
+      "title": "TFT35 SPI V2.1 3.5-inch 480x320",
+      "subtitle": "For CB1 M8P 3D-printer motherboards",
+      "brandId": "5",
+      "manufacturerId": "13",
+      "mpn": "1040000035",
+      "seo": {
+        "description": "Display TFT35 SPI V2.1 3.5 inch 480x320 with touch screen",
+        "keywords": "TFT, display, touch-screen, TFT35, SPI, 3d-printer, BIGTREETECH"
+      },
+      "buy": true,
+      "price": 19.9,
+      "priceId": "price_1Ob06DARhMwSarZXeXrlBm1U",
+      "weight": 150,
+      "availability": 1,
+      "content": "<p>Introducing the BIGTREETECH TFT35 SPI V2.1, a versatile and crystal-clear 3D printer display meticulously crafted by the innovative 3D printing team at Shenzhen Big Tree Technology Co., Ltd.</p><p>This medium-sized display features a seamless integration of SPI for LCD display and I2C for touch functionality. The touch screen, efficiently controlled by the onboard chip, not only ensures precise responsiveness but also contributes to cost-effectiveness. The connection to the motherboard is effortlessly established through the FPC cable, offering simplicity and convenience in setup.</p><p>Crafted with the user in mind, the TFT35 SPI V2.1 comes equipped with a XH2.54 terminal, facilitating seamless communication with the printer board. Elevate your 3D printing experience with this thoughtfully designed display unit, perfectly balancing functionality and user-friendly design.</p>",
+      "warningContent": "<p>TFT 35 SPI can directly work with Manta M4P/M5P/M8P+CB1 v2.2 without the need for additional modules. Due to the absence of an FPC IPS interface on the PI4B Adapter, when using TFT 35 SPI with the PI4B Adapter + CB1 v2.2, it still requires an IO2CAN module for interface conversion.</p>",
+      "features": [
+        {
+          "refId": 13,
+          "value": "5.0 V"
+        },
+        {
+          "refId": 76,
+          "value": "98 x 56 mm"
+        },
+        {
+          "refId": 156,
+          "value": "3.5''"
+        },
+        {
+          "refId": 157,
+          "value": "480 x 320"
+        },
+        {
+          "refId": 158,
+          "value": "Yes"
+        },
+        {
+          "refId": 159,
+          "value": "ILI9488"
+        },
+        {
+          "refId": 160,
+          "value": "NS2009"
+        }
+      ],
+      "images": [
+        {
+          "src": "/photos/TFT35-SPI-V2.1-1.webp",
+          "alt": "TFT35 SPI V2.1"
+        },
+        {
+          "src": "/photos/TFT35-SPI-V2.1-2.webp",
+          "alt": "TFT35 SPI V2.1"
+        },
+        {
+          "src": "/photos/TFT35-SPI-V2.1-3.webp",
+          "alt": "TFT35 SPI V2.1"
+        },
+        {
+          "src": "/photos/TFT35-SPI-V2.1-4.webp",
+          "alt": "TFT35 SPI V2.1"
+        }
+      ],
+      "relatedDatasheetIds": [
+        "ILI9488",
+        "NS2009"
+      ]
     },
     {
       "categoryId": 19,

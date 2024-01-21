@@ -97,6 +97,8 @@ type PriceConfig = {
   priceId?: PriceId;
 };
 
+export type GTIN = string;
+
 export type MPN = string;
 
 export type Item = {
@@ -106,6 +108,7 @@ export type Item = {
   categoryId?: CategoryId;
   seo?: ItemSeo;
   brandId?: BrandId;
+  gtin?: GTIN;
   mpn?: MPN;
   manufacturerId?: ManufacturerId;
   companyLink?: string;
