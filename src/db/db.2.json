@@ -842,7 +842,7 @@
       "weight": 150,
       "availability": 1,
       "content": "<p>Introducing the BIGTREETECH TFT35 SPI V2.1, a versatile and crystal-clear 3D printer display meticulously crafted by the innovative 3D printing team at Shenzhen Big Tree Technology Co., Ltd.</p><p>This medium-sized display features a seamless integration of SPI for LCD display and I2C for touch functionality. The touch screen, efficiently controlled by the onboard chip, not only ensures precise responsiveness but also contributes to cost-effectiveness. The connection to the motherboard is effortlessly established through the FPC cable, offering simplicity and convenience in setup.</p><p>Crafted with the user in mind, the TFT35 SPI V2.1 comes equipped with a XH2.54 terminal, facilitating seamless communication with the printer board. Elevate your 3D printing experience with this thoughtfully designed display unit, perfectly balancing functionality and user-friendly design.</p>",
-      "warningContent": "<p>TFT 35 SPI can directly work with Manta M4P/M5P/M8P+CB1 v2.2 without the need for additional modules. Due to the absence of an FPC IPS interface on the PI4B Adapter, when using TFT 35 SPI with the PI4B Adapter + CB1 v2.2, it still requires an IO2CAN module for interface conversion.</p>",
+      "warningContent": "<p>TFT35 SPI can directly work with Manta M4P/M5P/M8P+CB1 v2.2 without the need for additional modules. Due to the absence of an FPC IPS interface on the PI4B Adapter, when using TFT 35 SPI with the PI4B Adapter + CB1 v2.2, it still requires an IO2CAN module for interface conversion.</p>",
       "features": [
         {
           "refId": 13,
@@ -890,6 +890,9 @@
           "src": "/photos/TFT35-SPI-V2.1-4.webp",
           "alt": "TFT35 SPI V2.1"
         }
+      ],
+      "applicationIds": [
+        "15"
       ],
       "relatedDatasheetIds": [
         "ILI9488",

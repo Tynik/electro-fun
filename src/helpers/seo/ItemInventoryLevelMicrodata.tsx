@@ -4,7 +4,7 @@ import type { Item } from '~/types';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
 import { useSelectedItemOptionId } from '~/hooks';
-import { getItemAvailability, MerchantReturnPolicyMicrodata } from '~/helpers';
+import { getItemAvailability } from '~/helpers';
 
 export type ItemInventoryLevelMicrodataProps = {
   item: Item;

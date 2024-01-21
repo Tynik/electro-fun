@@ -6,7 +6,7 @@ import { SEO_SCHEMA_BASE_URL } from '~/constants';
 import { DbContext } from '~/contexts';
 import { useItemManufacturer } from '~/hooks';
 
-export type ItemBrandMicrodataProps = {
+type ItemBrandMicrodataProps = {
   item: Item;
 };
 

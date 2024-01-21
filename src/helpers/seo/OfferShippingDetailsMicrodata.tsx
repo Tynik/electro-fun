@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
+import { MonetaryAmountMicrodata } from '~/helpers';
 
 type OfferShippingDetailsMicrodataProps = {
   //
@@ -13,11 +14,7 @@ export const OfferShippingDetailsMicrodata = (props: OfferShippingDetailsMicroda
       itemType={`${SEO_SCHEMA_BASE_URL}/OfferShippingDetails`}
       itemScope
     >
-      <div itemProp={'shippingRate'} itemType={`${SEO_SCHEMA_BASE_URL}/MonetaryAmount`} itemScope>
-        <meta itemProp={'minValue'} content={'1.35'} />
-        <meta itemProp={'maxValue'} content={'7.00'} />
-        <meta itemProp={'currency'} content={'GBP'} />
-      </div>
+      <MonetaryAmountMicrodata property="shippingRate" minValue="1.35" maxValue="7.00" />
 
       <div
         itemProp={'shippingDestination'}

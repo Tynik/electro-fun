@@ -32,7 +32,8 @@
     "11": "Voltage and Current Monitoring",
     "12": "Temperature Measurement Systems",
     "13": "Automotive Industry",
-    "14": "Robotics"
+    "14": "Robotics",
+    "15": "3D-printing"
   },
   "brands": {
     "1": {
@@ -692,7 +693,7 @@
     {
       "id": 26,
       "name": "Displays",
-      "icon": "apps"
+      "icon": "tv"
     }
   ],
   "featureSections": {

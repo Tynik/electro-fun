@@ -5,3 +5,4 @@ export * from './ItemInventoryLevelMicrodata';
 export * from './ItemMeasurementMicrodata';
 export * from './ItemBrandMicrodata';
 export * from './MerchantReturnPolicyMicrodata';
+export * from './MonetaryAmountMicrodata';

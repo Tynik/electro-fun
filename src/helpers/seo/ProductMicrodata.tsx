@@ -13,17 +13,20 @@ export type ProductMicrodataProps = {
 export const ProductMicrodata = ({ item }: ProductMicrodataProps) => {
   return (
     <div itemType={`${SEO_SCHEMA_BASE_URL}/Product`} itemScope>
-      <meta itemProp={'name'} content={item.title} />
-
-      {(item.images || []).map(image => (
-        <meta key={image.src} itemProp={'image'} content={image.src} />
-      ))}
-
-      {item.content && <meta itemProp={'description'} content={item.content} />}
-
       <ItemBrandMicrodata item={item} />
 
       {Boolean(item.price) && <OfferMicrodata item={item} />}
+
+      <meta itemProp="name" content={item.title} />
+
+      {item.content && <meta itemProp="description" content={item.content} />}
+
+      {item.gtin && <meta itemProp="gtin" content={item.gtin} />}
+      {item.mpn && <meta itemProp="mpn" content={item.mpn} />}
+
+      {(item.images || []).map(image => (
+        <meta key={image.src} itemProp="image" content={image.src} />
+      ))}
 
       {(item.contributors || []).map(contributor => (
         <div
@@ -32,8 +35,8 @@ export const ProductMicrodata = ({ item }: ProductMicrodataProps) => {
           itemProp={'contributor'}
           itemScope
         >
-          <meta itemProp={'name'} content={contributor.name} />
-          <meta itemProp={'image'} content={getItemContributorAvatarSrc(contributor.src)} />
+          <meta itemProp="name" content={contributor.name} />
+          <meta itemProp="image" content={getItemContributorAvatarSrc(contributor.src)} />
         </div>
       ))}
     </div>

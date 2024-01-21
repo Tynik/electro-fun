@@ -37,6 +37,7 @@ import {
   StarBorder as StarBorderIcon,
   StarHalf as StarHalfIcon,
   Fluorescent as FluorescentIcon,
+  Tv as TvIcon,
 } from '@mui/icons-material';
 
 export const getIcon = (name: string, props: SvgIconProps = {}): any => {
@@ -77,5 +78,6 @@ export const getIcon = (name: string, props: SvgIconProps = {}): any => {
     starBorder: <StarBorderIcon {...props} />,
     starHalf: <StarHalfIcon {...props} />,
     fluorescent: <FluorescentIcon {...props} />,
+    tv: <TvIcon {...props} />,
   }[name];
 };
