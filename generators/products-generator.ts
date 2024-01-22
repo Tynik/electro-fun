@@ -113,7 +113,7 @@ const run = () => {
       additionalImages.join(','),
       getProductLink(item),
       // store_code
-      '16018585405181878693',
+      'SSE01',
       // pickup_method
       'buy',
       // pickup_sla
