@@ -106,6 +106,7 @@ export type Item = {
   subtitle: string;
   id?: ItemId;
   categoryId?: CategoryId;
+  googleCategoryId?: number;
   seo?: ItemSeo;
   brandId?: BrandId;
   gtin?: GTIN;

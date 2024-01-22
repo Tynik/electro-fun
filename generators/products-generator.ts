@@ -15,6 +15,7 @@ const MAX_PRODUCT_ADDITIONAL_IMAGES = 10;
 
 const COLUMNS = [
   'id',
+  'google_product_category',
   'title',
   'brand',
   'gtin',
@@ -90,6 +91,8 @@ const run = () => {
 
     productsData.push([
       productId,
+      // google_product_category
+      item.googleCategoryId,
       wrapInDoubleQuotes(item.title),
       brand,
       item.gtin,
