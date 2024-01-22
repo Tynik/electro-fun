@@ -15,6 +15,7 @@ const MAX_PRODUCT_ADDITIONAL_IMAGES = 10;
 
 const COLUMNS = [
   'id',
+  'store_code',
   'title',
   'brand',
   'gtin',
@@ -86,6 +87,8 @@ const run = () => {
 
     productsData.push([
       productId,
+      // store_code
+      '16018585405181878693',
       wrapInDoubleQuotes(item.title),
       brand,
       item.gtin,

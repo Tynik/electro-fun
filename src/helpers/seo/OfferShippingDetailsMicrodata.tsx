@@ -34,8 +34,8 @@ export const OfferShippingDetailsMicrodata = (props: OfferShippingDetailsMicroda
           itemType={`${SEO_SCHEMA_BASE_URL}/QuantitativeValue`}
           itemScope
         >
-          <meta itemProp={'minValue'} content={'0'} />
-          <meta itemProp={'maxValue'} content={'1'} />
+          <meta itemProp={'minValue'} content={'1'} />
+          <meta itemProp={'maxValue'} content={'2'} />
           <meta itemProp={'unitCode'} content={'d'} />
         </div>
 
