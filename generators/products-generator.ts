@@ -15,7 +15,6 @@ const MAX_PRODUCT_ADDITIONAL_IMAGES = 10;
 
 const COLUMNS = [
   'id',
-  'store_code',
   'title',
   'brand',
   'gtin',
@@ -31,6 +30,10 @@ const COLUMNS = [
   'image_link',
   'additional_image_link',
   'link',
+  'store_code',
+  'pickup_method',
+  'pickup_sla',
+  'local_shipping_label',
 ];
 
 type Products = (string | number | boolean)[][];
@@ -87,8 +90,6 @@ const run = () => {
 
     productsData.push([
       productId,
-      // store_code
-      '16018585405181878693',
       wrapInDoubleQuotes(item.title),
       brand,
       item.gtin,
@@ -108,6 +109,14 @@ const run = () => {
       getProductImageSrc(item.images[0]),
       additionalImages.join(','),
       getProductLink(item),
+      // store_code
+      '16018585405181878693',
+      // pickup_method
+      'buy',
+      // pickup_sla
+      'same day',
+      // local_shipping_label
+      'same_day_delivery',
     ]);
   });
 
