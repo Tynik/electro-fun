@@ -1,6 +1,6 @@
 import React from 'react';
 
-import type { Item, ItemId, ItemOptionId, UserBasket, UserT } from '~/types';
+import type { Item, ItemId, ItemOptionId, UserBasket, UserInfo } from '~/types';
 
 import { useLocalStorage } from './useLocalStorage';
 
@@ -9,12 +9,12 @@ export const useUser = () => {
     'basket',
     {
       items: {},
-    }
+    },
   );
 
-  const [user, setUser] = React.useState<UserT>({
+  const [user, setUser] = React.useState<UserInfo>(() => ({
     basket: { ...basketInitialValue },
-  });
+  }));
 
   React.useEffect(() => {
     saveBasketState(user.basket);
@@ -40,7 +40,7 @@ export const useUser = () => {
   }, []);
 
   const removeItemFromBasket = React.useCallback(
-    (itemId: ItemId, optionId: ItemOptionId, all: boolean = false) => {
+    (itemId: ItemId, optionId: ItemOptionId, all = false) => {
       setUser(user => {
         let items = { ...user.basket.items };
 
@@ -58,7 +58,7 @@ export const useUser = () => {
         };
       });
     },
-    []
+    [],
   );
 
   const clearBasket = React.useCallback(() => {
@@ -74,13 +74,10 @@ export const useUser = () => {
   const getNumberItemsInBasket = React.useCallback(
     (item: Item, itemOptionId: ItemOptionId) =>
       (user.basket.items[item.id] || {})[itemOptionId] || 0,
-    [user.basket.items]
+    [user.basket.items],
   );
 
-  const numberAllItemsInBasket = React.useMemo(
-    () => Object.keys(user.basket.items).length,
-    [user.basket.items]
-  );
+  const totalNumberItemsInBasket = Object.keys(user.basket.items).length;
 
   return {
     user,
@@ -88,6 +85,6 @@ export const useUser = () => {
     removeItemFromBasket,
     clearBasket,
     getNumberItemsInBasket,
-    numberAllItemsInBasket,
+    totalNumberItemsInBasket,
   };
 };

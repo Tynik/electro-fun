@@ -9,7 +9,7 @@ import { DbContext, UserContext } from '~/contexts';
 import { ExternalButtonLink } from '~/components';
 import { getIcon } from '~/utils';
 import { useSelectedItemOptionId } from '~/hooks';
-import { getItemAvailability } from '~/helpers';
+import { getItemAllowedQuantity } from '~/helpers';
 
 export type ItemInfoActionsProps = {
   item: Item;
@@ -26,9 +26,9 @@ export const ItemInfoActions = ({ item, stripeProduct }: ItemInfoActionsProps) =
   const downSmMatch = useMediaQuery<any>(theme => theme.breakpoints.down('sm'));
 
   const initialItemAvailability =
-    stripeProduct?.quantity ?? getItemAvailability(item, selectedItemOptionId);
+    stripeProduct?.quantity ?? getItemAllowedQuantity(item, selectedItemOptionId);
 
-  const itemAvailability = item.availability
+  const itemAvailability = item.quantity
     ? numberItemsInBasket
       ? initialItemAvailability - numberItemsInBasket
       : initialItemAvailability

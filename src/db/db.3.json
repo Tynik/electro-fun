@@ -12,7 +12,7 @@
       "price": 0.2,
       "stripePriceId": "price_1NQFSfARhMwSarZXa4Fk8FcR",
       "weight": 1,
-      "availability": 9,
+      "quantity": 9,
       "datasheetId": "AMS1117",
       "content": "<p>The adjustable and fixed voltage regulators of the AMS1117 series are designed to provide an output current of up to 1A and operate up to 1V between inputs and outputs. The device's dropout voltage is guaranteed to be as low as 1.3V at maximum output current and decreases at lower load currents.\n\nOn-chip trimming adjusts the reference voltage to within 1%. Current limit is also trimmed, minimizing the stress on both the regulator and the power source circuitry under overload conditions.\n\nAMS1117 devices are pin-compatible with other 3-pin SCSI regulators and are offered in a low-profile SOT-223 surface-mount package, SOIC 8L package, and a plastic TO-252 (DPAK) package.</p>",
       "images": [
@@ -59,7 +59,7 @@
       "price": 0.35,
       "stripePriceId": "price_1NQFUSARhMwSarZXwGIH3gvR",
       "weight": 2,
-      "availability": {
+      "quantity": {
         "1": 9,
         "2": 10
       },
@@ -158,7 +158,7 @@
       "price": 3,
       "stripePriceId": "price_1NQFY3ARhMwSarZXdxixmprI",
       "weight": 55,
-      "availability": 3,
+      "quantity": 3,
       "content": "",
       "datasheetId": "HLK-PM0x",
       "manufacturerId": "2",
@@ -231,7 +231,7 @@
       "price": 1.2,
       "stripePriceId": "price_1NQFaqARhMwSarZXmcbfkzYJ",
       "weight": 15,
-      "availability": 10,
+      "quantity": 10,
       "images": [
         {
           "src": "/photos/AC-CT-0-100A-1.webp",
@@ -263,7 +263,7 @@
       "price": 0.8,
       "stripePriceId": "price_1NQFdkARhMwSarZXqQemcab1",
       "weight": 10,
-      "availability": 9,
+      "quantity": 9,
       "datasheetId": "74HC4051xx",
       "content": "<p>The 8-channel analog multiplexer module 74HC4051 can be used when there are multiple analog inputs/outputs in a circuit. In this case, it allows you to select one of the 8 inputs/outputs and route its signal to a single input/output.</p>",
       "warningContent": "<p>The voltage on the input/output pins or the input/output selection pins should not exceed the power supply voltage of the circuit.</p>",
@@ -354,7 +354,7 @@
           "stripePriceId": "price_1NQFlAARhMwSarZXPDDyI0Zk"
         }
       },
-      "availability": {
+      "quantity": {
         "1": 1,
         "2": 1,
         "3": 1,
@@ -409,7 +409,7 @@
           "stripePriceId": "price_1NQ78fARhMwSarZXH3TngrKx"
         }
       },
-      "availability": 1,
+      "quantity": 1,
       "content": "",
       "options": {
         "1": {
@@ -472,7 +472,7 @@
       "price": 0,
       "stripePriceId": "price_1NQFnxARhMwSarZXSNzYogaD",
       "weight": 150,
-      "availability": {
+      "quantity": {
         "1": 0
       },
       "content": "<p>Approximate charging time for capacitors:</p><p>470μF 390V = 2 seconds<br/>1000μF 390V = 4 seconds<br/>2200μF 390V = 8 seconds<br/>4700μF 390V = 18 seconds</p>",
@@ -560,7 +560,7 @@
       "price": 5,
       "stripePriceId": "price_1NQ73hARhMwSarZXFMpg3tXl",
       "weight": 250,
-      "availability": 6,
+      "quantity": 6,
       "content": "<p>The riser allows you to connect the graphics card to the motherboard at a distance.</p><p>Compatible with any PCI-E slot from 1x to 16x.</p>",
       "warningContent": "<p>Molex 4-pin or 6-pin PCI-E power interface is integrated on the board. Only one power input needs to be connected. Do not attempt to connect 2 or 3 power interfaces simultaneously.</p>",
       "peculiarities": [
@@ -631,7 +631,7 @@
       "price": 14,
       "stripePriceId": "price_1NQ70GARhMwSarZXz2gXHYEt",
       "weight": 55,
-      "availability": 1,
+      "quantity": 1,
       "datasheetId": "PMS5003",
       "images": [
         {
@@ -710,7 +710,7 @@
       "price": 0,
       "stripePriceId": "price_1NQ6xYARhMwSarZXKaiy7dtj",
       "weight": 10,
-      "availability": 0,
+      "quantity": 0,
       "datasheetId": "ADS101x",
       "images": [
         {
@@ -792,7 +792,7 @@
       "price": 0,
       "stripePriceId": "price_1NQ6rHARhMwSarZXaqFFQBTR",
       "weight": 55,
-      "availability": 0,
+      "quantity": 0,
       "content": "<p>The MCP2515 module is a standalone CAN controller that implements the CAN 2.0B specification for connecting microcontrollers to the CAN bus using SPI.</p>",
       "features": [
         {
@@ -867,7 +867,7 @@
       "price": 0,
       "stripePriceId": "price_1NQ6pQARhMwSarZX56Y1W0Ap",
       "weight": 10,
-      "availability": 0,
+      "quantity": 0,
       "content": "<p>The MCP2551 is a high-speed fault-tolerant CAN device that serves as an interface between the CAN protocol controller and the physical bus.</p>",
       "images": [
         {
@@ -925,7 +925,7 @@
           "stripePriceId": "price_1NQFuZARhMwSarZXYi99iz7R"
         }
       },
-      "availability": {
+      "quantity": {
         "1": 0,
         "2": 0
       },

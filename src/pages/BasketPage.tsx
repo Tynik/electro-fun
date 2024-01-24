@@ -1,27 +1,40 @@
-import React from 'react';
+import React, { useMemo } from 'react';
+import { useQuery } from 'react-query';
+import { Grid, Typography, Stepper, Step, StepLabel } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-import { Grid, Typography, Stepper, Step, StepLabel } from '@mui/material';
+import { getStripeProducts } from '~/api';
 import { DbContext, UserContext } from '~/contexts';
 import { BackButton, Loader, BasketStep1, BasketStep2 } from '~/components';
 import { useJsonDbSearch } from '~/hooks';
 import { getItemPrice } from '~/helpers';
 import { useQueryParams } from '~/utils';
 
-export type BasketPageProps = {};
-
-export const BasketPage = (props: BasketPageProps) => {
+export const BasketPage = () => {
   const navigate = useNavigate();
   const { step: queryStep } = useQueryParams();
 
   const { db, loadNextDbPart } = React.useContext(DbContext);
   const { search, foundItems: items } = useJsonDbSearch(db, loadNextDbPart);
 
-  const [step, setStep] = React.useState<number>(+queryStep || 0);
-
   const {
     user: { basket },
   } = React.useContext(UserContext);
+
+  const [step, setStep] = React.useState(+queryStep || 0);
+
+  const stripeProductIds = useMemo(
+    () => items?.map(item => item.stripeProductId).filter(stripeProductId => stripeProductId),
+    [items],
+  );
+
+  const { data: stripeProducts, isFetching: isStripeProductsFetching } = useQuery(
+    ['stripe-products'],
+    () => getStripeProducts(stripeProductIds!),
+    {
+      enabled: stripeProductIds?.length > 0,
+    },
+  );
 
   React.useEffect(() => {
     navigate(`?step=${step}`, { replace: true });
@@ -33,20 +46,20 @@ export const BasketPage = (props: BasketPageProps) => {
 
   const totalPrice = React.useMemo(
     () =>
-      items?.reduce(
-        (totalPrice, item) =>
-          totalPrice +
-          Object.keys(basket.items[item.id]).reduce(
-            (price, optionId) =>
-              price + getItemPrice(item, optionId) * basket.items[item.id][optionId],
-            0
-          ),
-        0
-      ) || 0,
-    [items]
+      items?.reduce((totalPrice, item) => {
+        const basketItem = basket.items[item.id];
+
+        const itemsPrice = Object.keys(basketItem).reduce(
+          (price, optionId) => price + getItemPrice(item, optionId) * basketItem[optionId],
+          0,
+        );
+
+        return totalPrice + itemsPrice;
+      }, 0) ?? 0,
+    [items],
   );
 
-  if (items === null) {
+  if (items === null || isStripeProductsFetching) {
     return <Loader />;
   }
 
@@ -76,7 +89,12 @@ export const BasketPage = (props: BasketPageProps) => {
 
         <Grid xs={12} spacing={2} container item>
           <Grid xs={12} md={9} spacing={2} direction={'column'} container item>
-            <BasketStep1 isActive={step === 0} items={items} onNext={() => setStep(step + 1)} />
+            <BasketStep1
+              isActive={step === 0}
+              items={items}
+              stripeProducts={stripeProducts}
+              onNext={() => setStep(step + 1)}
+            />
 
             <BasketStep2
               isActive={step === 1}

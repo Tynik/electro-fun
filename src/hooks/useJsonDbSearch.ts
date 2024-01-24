@@ -40,6 +40,7 @@ export const useJsonDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
     if ((itemIds === null && searchKeywords === null && categoryId === null) || !db) {
       return;
     }
+
     if (itemIds === null && searchKeywords && !searchKeywords.length && categoryId === null) {
       setItemIds(null);
       setIsSearching(false);
@@ -47,6 +48,7 @@ export const useJsonDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
       setFoundDatasheets(null);
       return;
     }
+
     let foundItems: Item[];
 
     if (itemIds) {
@@ -60,8 +62,8 @@ export const useJsonDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
       if (searchKeywords && searchKeywords.length) {
         matchedApplicationIds = Object.keys(db.applications).filter(applicationId =>
           searchKeywords.every(searchKeyword =>
-            checkSearchKeyword(db.applications[applicationId], searchKeyword)
-          )
+            checkSearchKeyword(db.applications[applicationId], searchKeyword),
+          ),
         );
       }
 
@@ -70,29 +72,32 @@ export const useJsonDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
       if (searchKeywords && searchKeywords.length) {
         matchedManufacturerIds = Object.keys(db.manufacturers).filter(manufacturerId =>
           searchKeywords.every(searchKeyword =>
-            checkSearchKeyword(db.manufacturers[manufacturerId].name, searchKeyword)
-          )
+            checkSearchKeyword(db.manufacturers[manufacturerId].name, searchKeyword),
+          ),
         );
       }
 
       foundItems = db.items.filter(item => {
-        const itemIsMatched = matchItemWithSearch(item, {
+        const isItemMatched = matchItemWithSearch(item, {
           applicationIds: matchedApplicationIds,
           manufacturerIds: matchedManufacturerIds,
           searchKeywords,
           categoryId,
         });
-        if (itemIsMatched) {
+
+        if (isItemMatched) {
           if (item.datasheetId) {
             foundItemsDatasheets[item.datasheetId] = true;
           }
+
           if (item.relatedDatasheetIds) {
             item.relatedDatasheetIds.forEach(relatedDatasheetId => {
               foundItemsRelatedDatasheets[relatedDatasheetId] = true;
             });
           }
         }
-        return itemIsMatched;
+
+        return isItemMatched;
       });
 
       if (searchKeywords && searchKeywords.length) {
@@ -109,13 +114,15 @@ export const useJsonDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
               if (foundItemsDatasheets[datasheetId]) {
                 foundDatasheets[datasheetId].priority = 0;
               }
+
               if (foundItemsRelatedDatasheets[datasheetId]) {
                 foundDatasheets[datasheetId].priority = 1;
               }
             }
+
             return foundDatasheets;
           },
-          {}
+          {},
         );
 
         setFoundDatasheets(foundDatasheets);
@@ -148,6 +155,7 @@ export const useJsonDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
         setItemIds(ids);
         return;
       }
+
       if (text !== undefined) {
         const searchKeywords = text
           .toLowerCase()
@@ -156,11 +164,12 @@ export const useJsonDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
 
         setSearchKeywords(searchKeywords);
       }
+
       if (categoryId !== undefined) {
         setCategoryId(categoryId);
       }
     },
-    []
+    [],
   );
 
   const debouncedSearch = React.useMemo(() => debounce(baseSearch, 750), []);
@@ -170,9 +179,11 @@ export const useJsonDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
       if (debounce) {
         throw new Error('Cannot be used ids + debounce attribute together');
       }
+
       baseSearch({ ids });
       return;
     }
+
     setIsSearching(true);
 
     if (debounce) {

@@ -5,7 +5,7 @@ import type { Item } from '~/types';
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
 import {
   getItemPrice,
-  getItemAvailabilitySEOSchema,
+  getItemAvailabilitySeoSchema,
   OfferShippingDetailsMicrodata,
   ItemMeasurementMicrodata,
   MerchantReturnPolicyMicrodata,
@@ -21,7 +21,7 @@ export const OfferMicrodata = ({ item }: OfferMicrodataProps) => {
   const selectedItemOptionId = useSelectedItemOptionId(item);
 
   const itemPrice = getItemPrice(item, selectedItemOptionId);
-  const itemAvailabilitySEOSchema = getItemAvailabilitySEOSchema(item, selectedItemOptionId);
+  const itemAvailabilitySEOSchema = getItemAvailabilitySeoSchema(item, selectedItemOptionId);
 
   const category = useCategory(item.categoryId);
   if (!category) {

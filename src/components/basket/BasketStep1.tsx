@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Grid, Alert, Stack } from '@mui/material';
 
 import type { Item } from '~/types';
+import type { StripeProduct } from '~/api';
 
 import { UserContext } from '~/contexts';
 import { BasketItem } from '~/components';
@@ -10,10 +11,11 @@ import { getIcon } from '~/utils';
 export type BasketStep1Props = {
   isActive: boolean;
   items: Item[];
+  stripeProducts: StripeProduct[] | undefined;
   onNext: () => void;
 };
 
-const BasketStep1 = ({ isActive, items, onNext }: BasketStep1Props) => {
+const BasketStep1 = ({ isActive, items, stripeProducts, onNext }: BasketStep1Props) => {
   const {
     user: { basket },
     clearBasket,
@@ -34,9 +36,15 @@ const BasketStep1 = ({ isActive, items, onNext }: BasketStep1Props) => {
       {items.map(item =>
         Object.keys(basket.items[item.id] || {}).map(optionId => (
           <Grid key={`${item.id}-${optionId}`} item>
-            <BasketItem item={item} optionId={optionId} />
+            <BasketItem
+              item={item}
+              stripeProduct={stripeProducts?.find(
+                stripeProduct => stripeProduct.id === item.stripeProductId,
+              )}
+              optionId={optionId}
+            />
           </Grid>
-        ))
+        )),
       )}
 
       <Grid item>

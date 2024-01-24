@@ -1,17 +1,20 @@
 import { createHandler, initStripeClient } from '../helpers';
 
 export const handler = createHandler({ allowMethods: ['GET'] }, async ({ event }) => {
-  const productId = event.queryStringParameters.productId;
+  const productIds = event.queryStringParameters.ids.split(',');
 
   const stripe = initStripeClient();
 
-  const product = await stripe.products.retrieve(productId);
+  const products = await stripe.products.list({
+    ids: productIds,
+    limit: 100,
+  });
 
   return {
     status: 'ok',
-    data: {
+    data: products.data.map(product => ({
       id: product.id,
       quantity: +product.metadata.quantity,
-    },
+    })),
   };
 });

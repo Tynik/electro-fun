@@ -6,6 +6,6 @@ export type UserBasket = {
   items: Record<ItemId, UserBasketItem>;
 };
 
-export type UserT = {
+export type UserInfo = {
   basket: UserBasket;
 };

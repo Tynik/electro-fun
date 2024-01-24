@@ -1,4 +1,4 @@
-export type NetlifyFunction = 'get-product' | 'checkout' | 'confirm-order';
+export type NetlifyFunction = 'get-product' | 'get-products' | 'checkout' | 'confirm-order';
 
 export type NetlifyResponse<Response> = {
   status: string;

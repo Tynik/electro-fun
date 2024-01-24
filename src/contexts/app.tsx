@@ -1,31 +1,26 @@
 import React from 'react';
-import {
-  AlertColor,
-  Alert,
-  Stack,
-  useTheme
-} from '@mui/material';
+import { AlertColor, Alert, Stack, useTheme } from '@mui/material';
 
 export type Notification = {
-  message: string
-  severity?: AlertColor
-  timeout?: number
-}
-
-export type AppContextState = {
-  notifications: Notification[]
-  addNotification: (
-    message: Notification['message'],
-    options?: Omit<Notification, 'message'>
-  ) => void
-}
-
-const initialAppContextState: AppContextState = {
-  notifications: null,
-  addNotification: null
+  message: string;
+  severity?: AlertColor;
+  timeout?: number;
 };
 
-export const AppContext = React.createContext(initialAppContextState);
+export type AppContextValue = {
+  notifications: Notification[];
+  addNotification: (
+    message: Notification['message'],
+    options?: Omit<Notification, 'message'>,
+  ) => void;
+};
+
+const initialAppContextValue: AppContextValue = {
+  notifications: null,
+  addNotification: null,
+};
+
+export const AppContext = React.createContext(initialAppContextValue);
 
 export const AppContextProvider = ({ children }) => {
   const theme = useTheme();
@@ -34,44 +29,46 @@ export const AppContextProvider = ({ children }) => {
 
   const addNotification = React.useCallback(
     (message: Notification['message'], options?: Omit<Notification, 'message'>) => {
-
       const newNotification = { ...options, message };
 
-      setNotifications((notifications) =>
-        [...notifications, newNotification]
-      );
+      setNotifications(notifications => [...notifications, newNotification]);
 
       let timeoutId;
       if (options.timeout) {
-        timeoutId = setTimeout(
-          () => removeNotification(newNotification),
-          options.timeout
-        );
+        timeoutId = setTimeout(() => removeNotification(newNotification), options.timeout);
       }
       return () => {
         timeoutId && clearTimeout(timeoutId);
       };
-    }, []);
+    },
+    [],
+  );
 
   const removeNotification = (notificationForRemoving: Notification) => {
-    setNotifications((notifications) =>
-      notifications.filter(notification =>
-        notification.message !== notificationForRemoving.message
-      ));
+    setNotifications(notifications =>
+      notifications.filter(
+        notification => notification.message !== notificationForRemoving.message,
+      ),
+    );
   };
 
   return (
-    <AppContext.Provider value={{
-      notifications,
-      addNotification
-    }}>
+    <AppContext.Provider
+      value={{
+        notifications,
+        addNotification,
+      }}
+    >
       {children}
 
-      <Stack spacing={2} sx={{
-        position: 'fixed',
-        top: theme.spacing(11),
-        right: theme.spacing(2)
-      }}>
+      <Stack
+        spacing={2}
+        sx={{
+          position: 'fixed',
+          top: theme.spacing(11),
+          right: theme.spacing(2),
+        }}
+      >
         {notifications.map(notification => (
           <Alert
             key={notification.message}

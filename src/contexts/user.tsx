@@ -1,28 +1,28 @@
 import React from 'react';
 
-import type { UserT, Item, ItemId, ItemOptionId } from '~/types';
+import type { UserInfo, Item, ItemId, ItemOptionId } from '~/types';
 
 import { useUser } from '~/hooks';
 
-export type UserContextState = {
-  user: UserT;
-  numberAllItemsInBasket: number;
+export type UserContextValue = {
+  user: UserInfo;
+  totalNumberItemsInBasket: number;
   getNumberItemsInBasket: (item: Item, optionId: ItemOptionId) => number;
   addItemToBasket: (itemId: ItemId, optionId: ItemOptionId) => void;
   removeItemFromBasket: (itemId: ItemId, optionId: ItemOptionId, all?: boolean) => void;
   clearBasket: () => void;
 };
 
-const initialUserContextState: UserContextState = {
+const initialUserContextState: UserContextValue = {
   user: null,
-  numberAllItemsInBasket: null,
+  totalNumberItemsInBasket: null,
   getNumberItemsInBasket: null,
   addItemToBasket: null,
   removeItemFromBasket: null,
   clearBasket: null,
 };
 
-export const UserContext = React.createContext(initialUserContextState);
+export const UserContext = React.createContext<UserContextValue>(initialUserContextState);
 
 export const UserContextProvider = ({ children }) => {
   const user = useUser();

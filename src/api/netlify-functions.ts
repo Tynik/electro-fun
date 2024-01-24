@@ -2,6 +2,7 @@ import { netlifyRequest } from '~/api/api-client';
 import type { StripeProductId, StripeSessionId } from '~/types';
 
 export type StripeProduct = {
+  id: StripeProductId;
   quantity: number;
 };
 
@@ -11,6 +12,16 @@ export const getStripeProduct = async (productId: StripeProductId) =>
       method: 'GET',
       params: {
         productId,
+      },
+    })
+  ).data;
+
+export const getStripeProducts = async (productIds: StripeProductId[]) =>
+  (
+    await netlifyRequest<StripeProduct[]>('get-products', {
+      method: 'GET',
+      params: {
+        ids: productIds.join(','),
       },
     })
   ).data;

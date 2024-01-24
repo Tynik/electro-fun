@@ -1,11 +1,15 @@
+import type { ReactElement } from 'react';
+
+type Wrapper = (text: string, word: string | null, index: number | null) => any;
+
 export const wordsWrapper = (
   words: string[],
   text: string,
-  wrapper: (text: string, word: string, index: number) => any
-): (string | JSX.Element)[] => {
-
+  wrapper: Wrapper,
+): (string | ReactElement)[] => {
   const wrap = (words: string[], text: string) => {
-    let textParts, word;
+    let textParts: string[] = [];
+    let word: string | undefined;
 
     while (1) {
       if (!words.length) {
@@ -13,7 +17,7 @@ export const wordsWrapper = (
       }
       word = words.pop();
 
-      textParts = text.split(word);
+      textParts = text.split(word ?? '');
       if (textParts.length > 1) {
         break;
       }
@@ -25,9 +29,11 @@ export const wordsWrapper = (
 
         result.push(wrap(leftAbbreviations, textPart));
       }
+
       if (index !== textParts.length - 1) {
         result.push(wrapper(text, word, index));
       }
+
       return result;
     }, []);
   };

@@ -1392,7 +1392,7 @@
       "price": 2.9,
       "stripePriceId": "price_1NQ5uUARhMwSarZXeichshFk",
       "weight": 25,
-      "availability": 2,
+      "quantity": 2,
       "datasheetId": "LM2596",
       "images": [
         {
@@ -1450,7 +1450,7 @@
       "price": 1.50,
       "stripePriceId": "price_1NQ5xzARhMwSarZXhmGQXjAM",
       "weight": 5,
-      "availability": 9,
+      "quantity": 9,
       "datasheetId": "BMP280",
       "images": [
         {
@@ -1533,7 +1533,7 @@
       "price": 3.9,
       "stripePriceId": "price_1NQ61SARhMwSarZX2WLk7jKd",
       "weight": 5,
-      "availability": 1,
+      "quantity": 1,
       "datasheetId": "MPU-9250A-1.1",
       "companyLink": "https://invensense.tdk.com",
       "images": [
@@ -1619,7 +1619,7 @@
       "buy": true,
       "price": 0,
       "weight": 10,
-      "availability": 0,
+      "quantity": 0,
       "datasheetId": "CCS811",
       "images": [
         {
@@ -1702,7 +1702,7 @@
       "price": 3.3,
       "stripePriceId": "price_1NQ64TARhMwSarZXA5VfFuPI",
       "weight": 5,
-      "availability": 9,
+      "quantity": 9,
       "datasheetId": "APDS-9960",
       "images": [
         {
@@ -1780,7 +1780,7 @@
       "price": 12.9,
       "stripePriceId": "price_1NQ674ARhMwSarZX8ZkzOS8m",
       "weight": 150,
-      "availability": 2,
+      "quantity": 2,
       "datasheetId": "MAC-35A",
       "images": [
         {
@@ -1846,7 +1846,7 @@
       "price": 4,
       "stripePriceId": "price_1NQ69FARhMwSarZXRNj9MqxP",
       "weight": 25,
-      "availability": 5,
+      "quantity": 5,
       "images": [
         {
           "src": "/photos/TEC1-12715-1.webp",
@@ -2001,7 +2001,7 @@
       "price": 0.8,
       "stripePriceId": "price_1NQ6CGARhMwSarZXFBeaxMs1",
       "weight": 5,
-      "availability": 5,
+      "quantity": 5,
       "datasheetId": "nRF24L01",
       "images": [
         {
@@ -2379,7 +2379,7 @@
           "stripePriceId": "price_1NQFLZARhMwSarZXz71iQVfm"
         }
       },
-      "availability": {
+      "quantity": {
         "1": 0,
         "2": 9
       },
@@ -2444,7 +2444,7 @@
       "price": 0.45,
       "stripePriceId": "price_1NQ6GNARhMwSarZXTdfD5iTx",
       "weight": 3,
-      "availability": 10,
+      "quantity": 10,
       "datasheetId": "IRF3205",
       "manufacturerId": "6",
       "images": [
@@ -2552,7 +2552,7 @@
       "price": 17,
       "stripePriceId": "price_1NQ6IeARhMwSarZX80cgsarK",
       "weight": 700,
-      "availability": 1,
+      "quantity": 1,
       "content": "<p>Professional 14-piece tweezers set made of stainless steel with excellent quality for various needs.</p><p>The anti-static coating provides superior protection against electrostatic discharge.</p>",
       "images": [
         {

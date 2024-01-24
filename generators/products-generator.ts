@@ -57,7 +57,7 @@ const run = () => {
       return;
     }
 
-    if (typeof item.availability !== 'number') {
+    if (typeof item.quantity !== 'number') {
       console.warn(`The availability is not a number for product "${item.title}"`);
       return;
     }
@@ -83,7 +83,7 @@ const run = () => {
       db.manufacturers[item.manufacturerId]?.name ?? db.brands[item.brandId]?.name ?? '',
     );
 
-    const availability = item.availability ? 'in_stock' : 'out_of_stock';
+    const availability = item.quantity ? 'in_stock' : 'out_of_stock';
 
     const additionalImages = item.images
       .slice(1, MAX_PRODUCT_ADDITIONAL_IMAGES)
@@ -103,7 +103,7 @@ const run = () => {
       item.price,
       availability,
       // quantity
-      item.availability,
+      item.quantity,
       // condition
       'new',
       // weight

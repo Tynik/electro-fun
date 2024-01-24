@@ -4,7 +4,7 @@ import type { Item } from '~/types';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
 import { useSelectedItemOptionId } from '~/hooks';
-import { getItemAvailability } from '~/helpers';
+import { getItemAllowedQuantity } from '~/helpers';
 
 export type ItemInventoryLevelMicrodataProps = {
   item: Item;
@@ -12,7 +12,7 @@ export type ItemInventoryLevelMicrodataProps = {
 
 export const ItemInventoryLevelMicrodata = ({ item }: ItemInventoryLevelMicrodataProps) => {
   const selectedItemOptionId = useSelectedItemOptionId(item);
-  const itemAvailability = getItemAvailability(item, selectedItemOptionId);
+  const itemAvailability = getItemAllowedQuantity(item, selectedItemOptionId);
 
   return (
     <div

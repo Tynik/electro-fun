@@ -34,7 +34,6 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
 
   const {
     user: { basket },
-    clearBasket,
   } = React.useContext(UserContext);
 
   const { addNotification } = React.useContext(AppContext);
@@ -44,39 +43,31 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
       fullName: {
         type: 'string',
         required: true,
-        defaultValue: '',
       },
       phone: {
         type: 'string',
-        defaultValue: '',
       },
       email: {
         type: 'email',
         required: true,
-        defaultValue: '',
       },
       shippingCity: {
         type: 'string',
         required: true,
-        defaultValue: '',
       },
       shippingAddress1: {
         type: 'string',
         required: true,
-        defaultValue: '',
       },
       shippingAddress2: {
         type: 'string',
-        defaultValue: '',
       },
       shippingPostcode: {
         type: 'string',
         required: true,
-        defaultValue: '',
       },
       note: {
         type: 'string',
-        defaultValue: '',
       },
     },
   });
@@ -107,15 +98,7 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
         note: formData.note,
       });
 
-      navigate('/');
-
-      clearBasket();
-
       window.open(checkoutResponse.url);
-
-      addNotification('You have successfully placed an order.', {
-        timeout: 5000,
-      });
     } catch (e) {
       addNotification('Error when placing an order. Please, try later.', {
         severity: 'error',

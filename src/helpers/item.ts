@@ -132,12 +132,12 @@ export const getItemPriceId = (item: Item, optionId: ItemOptionId) => {
   return typeof priceConfig === 'number' ? priceConfig : priceConfig.stripePriceId;
 };
 
-export const getItemAvailability = (item: Item, optionId: ItemOptionId) => {
-  if (!item.availability) {
+export const getItemAllowedQuantity = (item: Item, optionId: ItemOptionId) => {
+  if (!item.quantity) {
     return 0;
   }
 
-  return typeof item.availability === 'number' ? item.availability : item.availability[optionId];
+  return typeof item.quantity === 'number' ? item.quantity : item.quantity[optionId];
 };
 
 export const getItemWeight = (item: Item, optionId: ItemOptionId) => {
@@ -148,15 +148,17 @@ export const getItemWeight = (item: Item, optionId: ItemOptionId) => {
   return typeof item.weight === 'number' ? item.weight : item.weight[optionId];
 };
 
-export const getItemAvailabilitySEOSchema = (item: Item, optionId: ItemOptionId) => {
-  const availability = getItemAvailability(item, optionId);
+export const getItemAvailabilitySeoSchema = (item: Item, optionId: ItemOptionId) => {
+  const quantity = getItemAllowedQuantity(item, optionId);
 
-  if (availability) {
+  if (quantity) {
     return `${SEO_SCHEMA_BASE_URL}/InStock`;
   }
-  if (availability === 0) {
+
+  if (quantity === 0) {
     return `${SEO_SCHEMA_BASE_URL}/SoldOut`;
   }
+
   return `${SEO_SCHEMA_BASE_URL}/OutOfStock`;
 };
 

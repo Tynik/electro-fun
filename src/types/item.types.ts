@@ -119,7 +119,7 @@ export type Item = {
   warningContent?: string;
   datasheetId?: DatasheetId;
   relatedDatasheetIds?: DatasheetId[];
-  availability?: number | Record<ItemOptionId, number>;
+  quantity?: number | Record<ItemOptionId, number>;
   weight?: number | Record<ItemOptionId, number>;
   price?: number | Record<ItemOptionId, number | PriceConfig>;
   stripePriceId?: StripePriceId;

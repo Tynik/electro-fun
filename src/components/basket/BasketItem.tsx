@@ -1,29 +1,32 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import { Button, Box, ButtonGroup, Paper, Typography, Chip, useMediaQuery } from '@mui/material';
+import { Button, Box, ButtonGroup, Paper, Typography, Chip, Stack } from '@mui/material';
 
 import type { Item, ItemOptionId } from '~/types';
+import type { StripeProduct } from '~/api';
 
 import { UserContext } from '~/contexts';
 import { CIconButton } from '~/components';
 import { getIcon } from '~/utils';
-import { getItemPrice } from '~/helpers';
+import { getItemAllowedQuantity, getItemPrice } from '~/helpers';
 
 export type BasketItemProps = {
   item: Item;
+  stripeProduct: StripeProduct | undefined;
   optionId: ItemOptionId;
 };
 
-const BasketItem = ({ item, optionId }: BasketItemProps) => {
+const BasketItem = ({ item, stripeProduct, optionId }: BasketItemProps) => {
   const {
     user: { basket },
     addItemToBasket,
     removeItemFromBasket,
   } = React.useContext(UserContext);
 
-  const smMatch = useMediaQuery<any>(theme => theme.breakpoints.up('sm'));
+  const basketItem = basket.items[item.id];
 
-  const price = (getItemPrice(item, optionId) * basket.items[item.id][optionId]).toFixed(2);
+  const itemAllowedQuantity = stripeProduct?.quantity ?? getItemAllowedQuantity(item, optionId);
+  const itemPrice = (getItemPrice(item, optionId) * basketItem[optionId]).toFixed(2);
 
   return (
     <Paper
@@ -32,6 +35,7 @@ const BasketItem = ({ item, optionId }: BasketItemProps) => {
         padding: 2,
         height: '100px',
         display: 'flex',
+        alignItems: 'center',
         gap: 2,
       }}
     >
@@ -43,7 +47,7 @@ const BasketItem = ({ item, optionId }: BasketItemProps) => {
         />
       </RouterLink>
 
-      <Box sx={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
+      <Box flexGrow={1} sx={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
         <Typography variant={'subtitle2'} component={'div'}>
           {item.title}
 
@@ -57,36 +61,49 @@ const BasketItem = ({ item, optionId }: BasketItemProps) => {
           )}
         </Typography>
 
-        <Typography variant={'body2'} component={'div'} display={{ xs: 'none', sm: 'block' }}>
+        <Typography variant={'body2'} display={{ xs: 'none', sm: 'block' }}>
           {item.subtitle}
         </Typography>
       </Box>
 
-      <Box sx={{ flexGrow: 1 }} />
+      <Typography variant="subtitle1" flexShrink={0}>
+        {itemPrice} £
+      </Typography>
 
-      <Box sx={{ display: 'flex', alignItems: 'center' }}>
-        <Typography variant={'subtitle1'} component={'div'}>
-          {price}
-        </Typography>
-
-        <ButtonGroup
-          size={'small'}
-          aria-label={'Count'}
-          orientation={smMatch ? 'horizontal' : 'vertical'}
-          sx={{ marginLeft: 2 }}
-        >
+      <Stack
+        direction={{ xs: 'column', sm: 'row' }}
+        alignItems="center"
+        justifyContent="center"
+        spacing={1}
+        flexShrink={0}
+      >
+        <ButtonGroup size="small" aria-label="Count">
           <Button
-            disabled={basket.items[item.id][optionId] === 1}
+            disabled={basketItem[optionId] === 1}
             onClick={() => removeItemFromBasket(item.id, optionId)}
           >
             -
           </Button>
 
-          <Button disabled>{basket.items[item.id][optionId]}</Button>
+          <Button disabled>{basketItem[optionId]}</Button>
 
-          <Button onClick={() => addItemToBasket(item.id, optionId)}>+</Button>
+          <Button
+            disabled={basketItem[optionId] >= itemAllowedQuantity}
+            onClick={() => addItemToBasket(item.id, optionId)}
+          >
+            +
+          </Button>
         </ButtonGroup>
-      </Box>
+
+        <Typography
+          variant="caption"
+          color="primary.dark"
+          fontWeight="500"
+          sx={{ userSelect: 'none' }}
+        >
+          In Stock: {itemAllowedQuantity}
+        </Typography>
+      </Stack>
 
       <Box
         sx={{

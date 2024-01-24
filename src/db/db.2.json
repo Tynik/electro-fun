@@ -13,7 +13,7 @@
       "price": 2,
       "stripePriceId": "price_1NQ6k9ARhMwSarZXPPnOeLwN",
       "weight": 10,
-      "availability": 1,
+      "quantity": 1,
       "content": "<p><p/>",
       "datasheetId": "LED0805BLUE",
       "images": [
@@ -76,7 +76,7 @@
       "buy": true,
       "price": 0,
       "weight": 300,
-      "availability": 0,
+      "quantity": 0,
       "datasheetId": "JLINKUM08001",
       "images": [
         {
@@ -147,7 +147,7 @@
       "price": 12.90,
       "stripePriceId": "price_1NQc2eARhMwSarZXf8L4jMvH",
       "weight": 15,
-      "availability": 2,
+      "quantity": 2,
       "images": [
         {
           "src": "/photos/RF-BM-2652P2-1.webp",
@@ -272,7 +272,7 @@
       "price": 6,
       "stripePriceId": "price_1NQ6PkARhMwSarZX4L2iaW95",
       "weight": 70,
-      "availability": 2,
+      "quantity": 2,
       "images": [
         {
           "src": "/photos/PZEM-004T-1.webp",
@@ -427,7 +427,7 @@
       "price": 4,
       "stripePriceId": "price_1NQ6XqARhMwSarZXlIqahLlB",
       "weight": 30,
-      "availability": 3,
+      "quantity": 3,
       "datasheetId": "ESP-12E",
       "content": "<p>LoLin NodeMCU V3 based on ESP8266 Wi-Fi / ESP-12E / CH340 is a platform used for programming and controlling various devices.\n\nESP8266 Wi-Fi is a programmable module that allows connecting to Wi-Fi networks. NodeMCU (Lua) / Micropython (Python) / Arduino firmware files can be loaded onto this ESP8266 board, creating files in the Flash memory, and running them.\n\nThe module has 11 input/output ports, some of which are multiplexed with UART, I²C, SPI, PWM, and ADC interfaces. All board pins are spaced at 2.54mm intervals. Powering the board and code uploading are done through the MicroUSB connector. The NodeMCU firmware allows putting the module into deep sleep mode to reduce power consumption and provides access to the module's extensive capabilities not available in standard firmware.\n\nThe board has a voltage regulator for supplying power via USB.\n\nThe ESP-12E Wi-Fi module is based on the ESP8266 core with a different Wi-Fi radio interface. The ESP8266 core is integrated into the Tensilica L106, a 32-bit microcontroller with ultra-low power consumption.\n\nSupport for clock frequencies of 80 or 160 MHz, support for RTOS, built-in Wi-Fi MAC/BB/RF/PA/LNA, micro-antenna on the module board. The module supports the IEEE802.11 b/g/n standard and a full stack of TCP/IP protocols.</p>",
       "images": [
@@ -562,7 +562,7 @@
       "price": 0,
       "stripePriceId": "price_1NQc4QARhMwSarZX82odK6mC",
       "weight": 15,
-      "availability": 0,
+      "quantity": 0,
       "datasheetId": "ESP-C3-13U",
       "content": "<p></p>",
       "images": [
@@ -659,7 +659,7 @@
       "price": 4.90,
       "stripePriceId": "price_1NS3vMARhMwSarZXXPWONfnI",
       "weight": 25,
-      "availability": 10,
+      "quantity": 10,
       "datasheetId": "RP2040",
       "content": "<p>The RP2040-Zero is a powerful development board featuring the RP2040 microcontroller. It offers a compact and versatile platform for various electronics projects. The RP2040-Zero is equipped with a dual-core ARM Cortex-M0+ processor, running at up to 133MHz, providing excellent performance and efficiency.</p><p>The RP2040 microcontroller, which is used in the RP2040-Zero board, has a total of 4 channels for DMA (Direct Memory Access). DMA allows for efficient data transfer between peripherals and memory without the need for CPU intervention. The DMA channels can be utilized to offload data transfer tasks from the CPU, freeing up processing power for other tasks. With 4 channels, the RP2040-Zero provides flexibility in managing data transfers for various peripherals and applications.</p><p>The RP2040-Zero is perfect for prototyping, IoT applications, robotics, and more. With its powerful processor, ample memory, and various built-in peripherals, it provides a solid foundation for your electronic projects.</p>",
       "images": [
@@ -746,7 +746,7 @@
       "price": 3.30,
       "stripePriceId": "price_1OYE9DARhMwSarZXAIev6qy5",
       "weight": 25,
-      "availability": 9,
+      "quantity": 9,
       "datasheetId": "ESP32-C3-SuperMini",
       "content": "<p>ESP32-C3 Super Mini Development Board – a powerful and compact solution for your embedded projects. Packed with the latest ESP32-C3 microcontroller, this development board offers an exceptional blend of performance, versatility, and size efficiency.<p/>",
       "peculiarities": [
@@ -842,7 +842,7 @@
       "price": 19.9,
       "stripePriceId": "price_1Ob06DARhMwSarZXeXrlBm1U",
       "weight": 150,
-      "availability": 1,
+      "quantity": 1,
       "content": "<p>Introducing the BIGTREETECH TFT35 SPI V2.1, a versatile and crystal-clear 3D printer display meticulously crafted by the innovative 3D printing team at Shenzhen Big Tree Technology Co., Ltd.</p><p>This medium-sized display features a seamless integration of SPI for LCD display and I2C for touch functionality. The touch screen, efficiently controlled by the onboard chip, not only ensures precise responsiveness but also contributes to cost-effectiveness. The connection to the motherboard is effortlessly established through the FPC cable, offering simplicity and convenience in setup.</p><p>Crafted with the user in mind, the TFT35 SPI V2.1 comes equipped with a XH2.54 terminal, facilitating seamless communication with the printer board. Elevate your 3D printing experience with this thoughtfully designed display unit, perfectly balancing functionality and user-friendly design.</p>",
       "warningContent": "<p>TFT35 SPI can directly work with Manta M4P/M5P/M8P+CB1 v2.2 without the need for additional modules. Due to the absence of an FPC IPS interface on the PI4B Adapter, when using TFT 35 SPI with the PI4B Adapter + CB1 v2.2, it still requires an IO2CAN module for interface conversion.</p>",
       "features": [
@@ -921,7 +921,7 @@
         }
       },
       "weight": 55,
-      "availability": {
+      "quantity": {
         "1": 1,
         "2": 2
       },
@@ -974,7 +974,7 @@
       "price": 42,
       "stripePriceId": "price_1NUOuIARhMwSarZXC0GEVyvn",
       "weight": 1500,
-      "availability": 1,
+      "quantity": 1,
       "images": [
         {
           "src": "/photos/power-supply-24-350-1.webp",
@@ -1067,7 +1067,7 @@
       "price": 9.9,
       "stripePriceId": "price_1NUaOaARhMwSarZXzogbIweA",
       "weight": 290,
-      "availability": 3,
+      "quantity": 3,
       "images": [
         {
           "src": "/photos/stepper-motor-nema-17-40-1.webp",
@@ -1143,7 +1143,7 @@
       "price": 34.90,
       "stripePriceId": "price_1NUxwJARhMwSarZXJ3jTDYaW",
       "weight": 300,
-      "availability": 1,
+      "quantity": 1,
       "images": [
         {
           "src": "/photos/digital-multimeter-9999-aneng-q1-1.webp",
