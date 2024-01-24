@@ -9,6 +9,8 @@ export const handler = createHandler({ allowMethods: ['GET'] }, async ({ event }
 
   return {
     status: 'ok',
-    data: product.metadata,
+    data: {
+      quantity: +product.metadata.quantity,
+    },
   };
 });

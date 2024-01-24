@@ -81,7 +81,9 @@ const BasketItem = ({ item, optionId }: BasketItemProps) => {
           >
             -
           </Button>
+
           <Button disabled>{basket.items[item.id][optionId]}</Button>
+
           <Button onClick={() => addItemToBasket(item.id, optionId)}>+</Button>
         </ButtonGroup>
       </Box>
