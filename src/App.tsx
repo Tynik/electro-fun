@@ -11,6 +11,7 @@ import {
   BasketPage,
   ReturnPolicyPage,
   PrivacyPolicyPage,
+  OrderConfirmationPage,
 } from './pages';
 import { useJsonDbSearch } from './hooks';
 
@@ -109,6 +110,8 @@ export const App = () => {
               <Route path="/datasheets" element={<DatasheetsPage datasheets={db.datasheets} />} />
 
               <Route path="/basket" element={<BasketPage />} />
+
+              <Route path="/order-confirmation" element={<OrderConfirmationPage />} />
 
               <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
 

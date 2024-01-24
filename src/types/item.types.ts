@@ -7,6 +7,8 @@ import type {
   CategoryId,
   ManufacturerId,
   BrandId,
+  StripePriceId,
+  StripeProductId,
 } from './ids.types';
 import type { Seo } from '.';
 
@@ -90,11 +92,9 @@ export type ItemAccessory = {
   count: number;
 };
 
-type PriceId = string;
-
 type PriceConfig = {
   price: number;
-  priceId?: PriceId;
+  stripePriceId?: StripePriceId;
 };
 
 export type GTIN = string;
@@ -105,6 +105,7 @@ export type Item = {
   title: string;
   subtitle: string;
   id?: ItemId;
+  stripeProductId?: StripeProductId;
   categoryId?: CategoryId;
   googleCategoryId?: number;
   seo?: ItemSeo;
@@ -121,7 +122,7 @@ export type Item = {
   availability?: number | Record<ItemOptionId, number>;
   weight?: number | Record<ItemOptionId, number>;
   price?: number | Record<ItemOptionId, number | PriceConfig>;
-  priceId?: PriceId;
+  stripePriceId?: StripePriceId;
   rating?: number;
   // link where is to buy or true/false
   buy?: string | boolean;

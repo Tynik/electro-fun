@@ -10,7 +10,7 @@
       },
       "buy": true,
       "price": 0.2,
-      "priceId": "price_1NQFSfARhMwSarZXa4Fk8FcR",
+      "stripePriceId": "price_1NQFSfARhMwSarZXa4Fk8FcR",
       "weight": 1,
       "availability": 9,
       "datasheetId": "AMS1117",
@@ -57,7 +57,7 @@
       },
       "buy": true,
       "price": 0.35,
-      "priceId": "price_1NQFUSARhMwSarZXwGIH3gvR",
+      "stripePriceId": "price_1NQFUSARhMwSarZXwGIH3gvR",
       "weight": 2,
       "availability": {
         "1": 9,
@@ -156,7 +156,7 @@
       },
       "buy": true,
       "price": 3,
-      "priceId": "price_1NQFY3ARhMwSarZXdxixmprI",
+      "stripePriceId": "price_1NQFY3ARhMwSarZXdxixmprI",
       "weight": 55,
       "availability": 3,
       "content": "",
@@ -229,7 +229,7 @@
       },
       "buy": true,
       "price": 1.2,
-      "priceId": "price_1NQFaqARhMwSarZXmcbfkzYJ",
+      "stripePriceId": "price_1NQFaqARhMwSarZXmcbfkzYJ",
       "weight": 15,
       "availability": 10,
       "images": [
@@ -261,7 +261,7 @@
       },
       "buy": true,
       "price": 0.8,
-      "priceId": "price_1NQFdkARhMwSarZXqQemcab1",
+      "stripePriceId": "price_1NQFdkARhMwSarZXqQemcab1",
       "weight": 10,
       "availability": 9,
       "datasheetId": "74HC4051xx",
@@ -339,19 +339,19 @@
       "price": {
         "1": {
           "price": 4,
-          "priceId": "price_1NQFioARhMwSarZXgkYGmWjp"
+          "stripePriceId": "price_1NQFioARhMwSarZXgkYGmWjp"
         },
         "2": {
           "price": 3.5,
-          "priceId": "price_1NQFjfARhMwSarZX6xtFDmf1"
+          "stripePriceId": "price_1NQFjfARhMwSarZX6xtFDmf1"
         },
         "3": {
           "price": 3.9,
-          "priceId": "price_1NQFkXARhMwSarZXSAtpfSDi"
+          "stripePriceId": "price_1NQFkXARhMwSarZXSAtpfSDi"
         },
         "4": {
           "price": 3.9,
-          "priceId": "price_1NQFlAARhMwSarZXPDDyI0Zk"
+          "stripePriceId": "price_1NQFlAARhMwSarZXPDDyI0Zk"
         }
       },
       "availability": {
@@ -406,7 +406,7 @@
       "price": {
         "1": {
           "price": 3,
-          "priceId": "price_1NQ78fARhMwSarZXH3TngrKx"
+          "stripePriceId": "price_1NQ78fARhMwSarZXH3TngrKx"
         }
       },
       "availability": 1,
@@ -470,7 +470,7 @@
       },
       "buy": true,
       "price": 0,
-      "priceId": "price_1NQFnxARhMwSarZXSNzYogaD",
+      "stripePriceId": "price_1NQFnxARhMwSarZXSNzYogaD",
       "weight": 150,
       "availability": {
         "1": 0
@@ -558,7 +558,7 @@
       },
       "buy": true,
       "price": 5,
-      "priceId": "price_1NQ73hARhMwSarZXFMpg3tXl",
+      "stripePriceId": "price_1NQ73hARhMwSarZXFMpg3tXl",
       "weight": 250,
       "availability": 6,
       "content": "<p>The riser allows you to connect the graphics card to the motherboard at a distance.</p><p>Compatible with any PCI-E slot from 1x to 16x.</p>",
@@ -629,7 +629,7 @@
       },
       "buy": true,
       "price": 14,
-      "priceId": "price_1NQ70GARhMwSarZXz2gXHYEt",
+      "stripePriceId": "price_1NQ70GARhMwSarZXz2gXHYEt",
       "weight": 55,
       "availability": 1,
       "datasheetId": "PMS5003",
@@ -708,7 +708,7 @@
       },
       "buy": true,
       "price": 0,
-      "priceId": "price_1NQ6xYARhMwSarZXKaiy7dtj",
+      "stripePriceId": "price_1NQ6xYARhMwSarZXKaiy7dtj",
       "weight": 10,
       "availability": 0,
       "datasheetId": "ADS101x",
@@ -790,7 +790,7 @@
       ],
       "buy": true,
       "price": 0,
-      "priceId": "price_1NQ6rHARhMwSarZXaqFFQBTR",
+      "stripePriceId": "price_1NQ6rHARhMwSarZXaqFFQBTR",
       "weight": 55,
       "availability": 0,
       "content": "<p>The MCP2515 module is a standalone CAN controller that implements the CAN 2.0B specification for connecting microcontrollers to the CAN bus using SPI.</p>",
@@ -865,7 +865,7 @@
       "datasheetId": "MCP2551",
       "buy": true,
       "price": 0,
-      "priceId": "price_1NQ6pQARhMwSarZX56Y1W0Ap",
+      "stripePriceId": "price_1NQ6pQARhMwSarZX56Y1W0Ap",
       "weight": 10,
       "availability": 0,
       "content": "<p>The MCP2551 is a high-speed fault-tolerant CAN device that serves as an interface between the CAN protocol controller and the physical bus.</p>",
@@ -918,11 +918,11 @@
       "price": {
         "1": {
           "price": 0,
-          "priceId": "price_1NQFu1ARhMwSarZX34TzO0E1"
+          "stripePriceId": "price_1NQFu1ARhMwSarZX34TzO0E1"
         },
         "2": {
           "price": 0,
-          "priceId": "price_1NQFuZARhMwSarZXYi99iz7R"
+          "stripePriceId": "price_1NQFuZARhMwSarZXYi99iz7R"
         }
       },
       "availability": {

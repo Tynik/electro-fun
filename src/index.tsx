@@ -1,4 +1,5 @@
 import React from 'react';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider, CssBaseline } from '@mui/material';
@@ -14,18 +15,30 @@ import theme from './theme';
 
 const root = createRoot(document.getElementById('app'));
 
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 0,
+      retryOnMount: false,
+      refetchOnWindowFocus: false,
+    },
+  },
+});
+
 root.render(
   <BrowserRouter>
     <ThemeProvider theme={theme}>
       <CssBaseline />
 
-      <AppContextProvider>
-        <UserContextProvider>
-          <DbContextProvider>
-            <App />
-          </DbContextProvider>
-        </UserContextProvider>
-      </AppContextProvider>
+      <QueryClientProvider client={queryClient}>
+        <AppContextProvider>
+          <UserContextProvider>
+            <DbContextProvider>
+              <App />
+            </DbContextProvider>
+          </UserContextProvider>
+        </AppContextProvider>
+      </QueryClientProvider>
     </ThemeProvider>
-  </BrowserRouter>
+  </BrowserRouter>,
 );

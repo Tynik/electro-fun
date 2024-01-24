@@ -1,3 +1,7 @@
+export type StripeProductId = string;
+export type StripePriceId = string;
+export type StripeSessionId = string;
+
 export type ItemId = string;
 export type ItemOptionId = string;
 export type FeatureSectionId = number;

@@ -1,6 +1,8 @@
 import React from 'react';
+import { useQuery } from 'react-query';
 import { Box, Grid, Typography, Alert, Divider, useTheme } from '@mui/material';
 
+import { getStripeProduct } from '~/api';
 import { ProductMicrodata } from '~/helpers';
 import { useTextProcessor, useSmoothScroll, useSeo, useCurrentItem } from '~/hooks';
 import { Loader, ExternalLink, ImageSlider, BackButton } from '~/components';
@@ -27,6 +29,14 @@ export const ItemInfoPage = () => {
 
   useSeo(Object.keys(seo).length ? seo : null);
 
+  const { data: stripeProduct, isFetching: isStripeProductFetching } = useQuery(
+    ['stripe-product', item?.id],
+    () => getStripeProduct(item!.stripeProductId),
+    {
+      enabled: Boolean(item?.stripeProductId),
+    },
+  );
+
   const clarificationsWrapper = React.useCallback(
     (text: string) =>
       wordsWrapper(Object.keys(db.clarifications), text, (text, phrase, index) =>
@@ -40,16 +50,17 @@ export const ItemInfoPage = () => {
           </ExternalLink>
         ) : (
           <span key={`${text}`} dangerouslySetInnerHTML={{ __html: text }} />
-        )
+        ),
       ),
-    []
+    [],
   );
 
   // high priority to show errors
   if (errors.length) {
     return printErrors();
   }
-  if (item === null) {
+
+  if (item === null || isStripeProductFetching) {
     return <Loader />;
   }
 
@@ -174,7 +185,7 @@ export const ItemInfoPage = () => {
         )}
 
         <Box marginTop={theme.spacing(2)}>
-          <ItemInfoActions item={item} />
+          <ItemInfoActions item={item} stripeProduct={stripeProduct} />
         </Box>
       </Grid>
     </Grid>

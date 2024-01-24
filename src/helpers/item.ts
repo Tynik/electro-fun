@@ -14,7 +14,7 @@ export const matchItemWithSearchKeyword = (
   item: Item,
   searchKeyword: string,
   applicationIds: ApplicationId[],
-  manufacturerIds: ManufacturerId[]
+  manufacturerIds: ManufacturerId[],
 ): boolean => {
   let itemIsMatched = checkSearchKeyword(item.title, searchKeyword);
 
@@ -32,31 +32,31 @@ export const matchItemWithSearchKeyword = (
         .trim()
         .toLowerCase()
         .split('-')
-        .some(seoKeywordPart => seoKeywordPart.startsWith(searchKeyword))
+        .some(seoKeywordPart => seoKeywordPart.startsWith(searchKeyword)),
     );
   }
 
   if (!itemIsMatched && item.externalLinks) {
     itemIsMatched ||= item.externalLinks.some(externalLink =>
-      checkSearchKeyword(externalLink.name, searchKeyword)
+      checkSearchKeyword(externalLink.name, searchKeyword),
     );
   }
 
   if (!itemIsMatched && item.options) {
     itemIsMatched ||= Object.values(item.options).some(option =>
-      checkSearchKeyword(option.name, searchKeyword)
+      checkSearchKeyword(option.name, searchKeyword),
     );
   }
 
   if (!itemIsMatched && item.contributors) {
     itemIsMatched ||= item.contributors.some(contributor =>
-      checkSearchKeyword(contributor.name, searchKeyword)
+      checkSearchKeyword(contributor.name, searchKeyword),
     );
   }
 
   if (!itemIsMatched && applicationIds.length && item.applicationIds) {
     itemIsMatched ||= item.applicationIds.some(itemApplicationId =>
-      applicationIds.includes(itemApplicationId)
+      applicationIds.includes(itemApplicationId),
     );
   }
 
@@ -71,10 +71,10 @@ export const matchItemWithSearchKeywords = (
   item: Item,
   searchKeywords: string[],
   applicationIds: ApplicationId[],
-  manufacturerIds: ManufacturerId[]
+  manufacturerIds: ManufacturerId[],
 ): boolean =>
   searchKeywords.every(searchKeyword =>
-    matchItemWithSearchKeyword(item, searchKeyword, applicationIds, manufacturerIds)
+    matchItemWithSearchKeyword(item, searchKeyword, applicationIds, manufacturerIds),
   );
 
 export const matchItemWithSearch = (
@@ -89,7 +89,7 @@ export const matchItemWithSearch = (
     categoryId: CategoryId;
     applicationIds: ApplicationId[];
     manufacturerIds: ManufacturerId[];
-  }
+  },
 ): boolean => {
   // show all items by default if nothing was passed
   let itemIsMatched = true;
@@ -99,7 +99,7 @@ export const matchItemWithSearch = (
       item,
       searchKeywords,
       applicationIds,
-      manufacturerIds
+      manufacturerIds,
     );
   }
   if (itemIsMatched && categoryId) {
@@ -124,12 +124,12 @@ export const getItemPrice = (item: Item, optionId: ItemOptionId) => {
 };
 
 export const getItemPriceId = (item: Item, optionId: ItemOptionId) => {
-  if (item.priceId) {
-    return item.priceId;
+  if (item.stripePriceId) {
+    return item.stripePriceId;
   }
   const priceConfig = item.price[optionId];
 
-  return typeof priceConfig === 'number' ? priceConfig : priceConfig.priceId;
+  return typeof priceConfig === 'number' ? priceConfig : priceConfig.stripePriceId;
 };
 
 export const getItemAvailability = (item: Item, optionId: ItemOptionId) => {

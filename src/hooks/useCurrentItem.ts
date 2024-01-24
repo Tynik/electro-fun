@@ -13,7 +13,7 @@ export const useCurrentItem = () => {
   const { db, loadNextDbPart } = React.useContext(DbContext);
   const { search, foundItems } = useJsonDbSearch(db, loadNextDbPart);
 
-  const [item, setItem] = React.useState<Item>(null);
+  const [item, setItem] = React.useState<Item | null>(null);
   const { errors, setErrors, printErrors } = useStaticErrors();
 
   const selectedItemOptionId = useSelectedItemOptionId(item);
@@ -45,7 +45,7 @@ export const useCurrentItem = () => {
             : `${db.seo.title} - ${item.title}`,
       }),
     }),
-    [db, item]
+    [db, item],
   );
 
   const price = item && getItemPrice(item, selectedItemOptionId);

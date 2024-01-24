@@ -1,4 +1,7 @@
-import { createHandler, getStripeShippingRatesList, initStripeClient } from '../netlify.helpers';
+import { createHandler, getStripeShippingRatesList, initStripeClient } from '../helpers';
+import { SITE_DOMAIN } from '../constants';
+
+const ORDER_CONFIRMATION_PAGE_URL = `${SITE_DOMAIN}/order-confirmation?sessionId={CHECKOUT_SESSION_ID}`;
 
 type Item = {
   priceId: string;
@@ -18,14 +21,12 @@ type Payload = {
   items: Item[];
 };
 
-const SITE_DOMAIN = process.env.SITE_DOMAIN ?? 'http://localhost:8097';
-
 export const handler = createHandler<Payload>({ allowMethods: ['POST'] }, async ({ payload }) => {
   const stripe = initStripeClient();
 
   const totalItemsWeight = payload.items.reduce(
     (totalWeight, item) => totalWeight + item.weight,
-    0
+    0,
   );
 
   const shippingRates = await getStripeShippingRatesList(stripe, {
@@ -58,8 +59,8 @@ export const handler = createHandler<Payload>({ allowMethods: ['POST'] }, async 
       price: item.priceId,
       quantity: item.quantity,
     })),
-    success_url: `${SITE_DOMAIN}?success=true`,
-    cancel_url: `${SITE_DOMAIN}?canceled=true`,
+    success_url: ORDER_CONFIRMATION_PAGE_URL,
+    cancel_url: ORDER_CONFIRMATION_PAGE_URL,
   });
 
   return {

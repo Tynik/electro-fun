@@ -1,4 +1,4 @@
-export type NetlifyFunction = 'checkout';
+export type NetlifyFunction = 'get-product' | 'checkout' | 'confirm-order';
 
 export type NetlifyResponse<Response> = {
   status: string;
@@ -7,13 +7,13 @@ export type NetlifyResponse<Response> = {
 
 type NetlifyRequestOptions<Payload> = {
   payload?: Payload;
-  method?: 'POST' | 'GET' | 'UPDATE' | 'PUT' | 'DELETE';
+  method?: 'POST' | 'GET' | 'PATCH' | 'PUT' | 'DELETE';
   params?: Record<string, string>;
 };
 
 export const netlifyRequest = async <Response, Payload = any>(
   funcName: NetlifyFunction,
-  { payload, method = 'GET', params = {} }: NetlifyRequestOptions<Payload> = {}
+  { payload, method = 'GET', params = {} }: NetlifyRequestOptions<Payload> = {},
 ) => {
   let body: BodyInit | null = null;
 
@@ -26,12 +26,12 @@ export const netlifyRequest = async <Response, Payload = any>(
 
   const response = await fetch(
     `${process.env.NETLIFY_SERVER || ''}/.netlify/functions/${funcName}?${new URLSearchParams(
-      params
+      params,
     ).toString()}`,
     {
       method,
       body,
-    }
+    },
   );
 
   if (!response.ok) {

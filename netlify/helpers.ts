@@ -1,7 +1,9 @@
-import type { Handler, HandlerResponse, HandlerEvent, HandlerContext } from '@netlify/functions';
 import Stripe from 'stripe';
+import type { Handler, HandlerResponse, HandlerEvent, HandlerContext } from '@netlify/functions';
 
-type HTTPMethod = 'POST' | 'GET' | 'OPTIONS' | 'PUT' | 'UPDATE' | 'DELETE';
+import { STRIPE_API_KEY } from './constants';
+
+type HTTPMethod = 'POST' | 'GET' | 'OPTIONS' | 'PUT' | 'PATCH' | 'DELETE';
 
 type CreateResponseOptions = {
   statusCode?: number;
@@ -11,7 +13,7 @@ type CreateResponseOptions = {
 
 export const createResponse = (
   data: any,
-  { statusCode = 200, allowMethods = null, headers = {} }: CreateResponseOptions = {}
+  { statusCode = 200, allowMethods = null, headers = {} }: CreateResponseOptions = {},
 ): HandlerResponse => {
   return {
     statusCode,
@@ -36,7 +38,7 @@ type CreateHandlerOptions = {
 } | null;
 
 type CreateHandlerFunction<Payload = unknown, Response = unknown> = (
-  options: CreateHandlerFunctionOptions<Payload>
+  options: CreateHandlerFunctionOptions<Payload>,
 ) => Promise<{
   status: 'ok' | 'error';
   // TODO: not implemented
@@ -47,13 +49,13 @@ type CreateHandlerFunction<Payload = unknown, Response = unknown> = (
 
 export const createHandler = <Payload = unknown>(
   options: CreateHandlerOptions,
-  func: CreateHandlerFunction<Payload>
+  func: CreateHandlerFunction<Payload>,
 ): Handler => {
   return async (event, context) => {
     if (event.httpMethod === 'OPTIONS') {
       return createResponse(
         { message: 'Successful preflight call.' },
-        { allowMethods: options?.allowMethods }
+        { allowMethods: options?.allowMethods },
       );
     }
 
@@ -83,20 +85,16 @@ export const createHandler = <Payload = unknown>(
         {
           statusCode: 500,
           allowMethods: options?.allowMethods,
-        }
+        },
       );
     }
   };
 };
 
 export const initStripeClient = () => {
-  return new Stripe(
-    process.env.STRIPE_API_KEY ??
-      'sk_test_51NDw9MARhMwSarZX5RFCidCIKsrec9HdO3gMDT3zBc1COtGyVrV5x93jKzXPDqUveYdWt9lcHm1YiVWxgQarpt1j006wO8q0eR',
-    {
-      apiVersion: '2022-11-15',
-    }
-  );
+  return new Stripe(STRIPE_API_KEY, {
+    apiVersion: '2023-10-16',
+  });
 };
 
 type ShippingRatesListOptions = {
@@ -105,7 +103,7 @@ type ShippingRatesListOptions = {
 
 export const getStripeShippingRatesList = async (
   stripe: Stripe,
-  { minimumWeightThreshold }: ShippingRatesListOptions
+  { minimumWeightThreshold }: ShippingRatesListOptions,
 ) => {
   const { data: shippingRates } = await stripe.shippingRates.list({
     active: true,
@@ -115,7 +113,7 @@ export const getStripeShippingRatesList = async (
   return shippingRates.filter(
     shippingRate =>
       +shippingRate.metadata.minWeight <= minimumWeightThreshold &&
-      +shippingRate.metadata.maxWeight >= minimumWeightThreshold
+      +shippingRate.metadata.maxWeight >= minimumWeightThreshold,
   );
 };
 

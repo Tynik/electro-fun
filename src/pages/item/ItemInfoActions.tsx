@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Badge, Button, Stack, Typography, useMediaQuery } from '@mui/material';
 import { Link as LinkIcon, ShoppingCart as ShoppingCartIcon } from '@mui/icons-material';
 
+import type { StripeProduct } from '~/api';
 import type { Item } from '~/types';
 
 import { DbContext, UserContext } from '~/contexts';
@@ -12,9 +13,10 @@ import { getItemAvailability } from '~/helpers';
 
 export type ItemInfoActionsProps = {
   item: Item;
+  stripeProduct: StripeProduct | undefined;
 };
 
-export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
+export const ItemInfoActions = ({ item, stripeProduct }: ItemInfoActionsProps) => {
   const { db } = React.useContext(DbContext);
   const { getNumberItemsInBasket, addItemToBasket } = React.useContext(UserContext);
 
@@ -23,7 +25,8 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
 
   const downSmMatch = useMediaQuery<any>(theme => theme.breakpoints.down('sm'));
 
-  const initialItemAvailability = getItemAvailability(item, selectedItemOptionId);
+  const initialItemAvailability =
+    stripeProduct?.quantity ?? getItemAvailability(item, selectedItemOptionId);
 
   const itemAvailability = item.availability
     ? numberItemsInBasket
@@ -52,6 +55,7 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
           Datasheet
         </ExternalButtonLink>
       )}
+
       {typeof item.buy === 'string' && item.buy && (
         <ExternalButtonLink
           href={item.buy}
@@ -62,6 +66,7 @@ export const ItemInfoActions = ({ item }: ItemInfoActionsProps) => {
           Buy
         </ExternalButtonLink>
       )}
+
       {item.buy === true && (
         <Box
           sx={{

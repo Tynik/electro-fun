@@ -3,11 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import { Button, Grid, Stack, Box, TextField } from '@mui/material';
 import { useHoneyForm } from '@tynik/react-honey-form';
 
+import type { CheckoutItem } from '~/api';
 import type { Item } from '~/types';
 
 import { AppContext, UserContext } from '~/contexts';
 import { getIcon } from '~/utils';
-import { type CheckoutItem, checkoutRequest } from '~/api';
+import { checkoutRequest } from '~/api';
 import { getItemPriceId, getItemWeight } from '~/helpers';
 
 type CheckoutFormData = {
