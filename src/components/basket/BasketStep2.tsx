@@ -1,5 +1,4 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Button, Grid, Stack, Box, TextField } from '@mui/material';
 import { useHoneyForm } from '@tynik/react-honey-form';
 
@@ -30,8 +29,6 @@ export type BasketStep2Props = {
 };
 
 const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
-  const navigate = useNavigate();
-
   const {
     user: { basket },
   } = React.useContext(UserContext);

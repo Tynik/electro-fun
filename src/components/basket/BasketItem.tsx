@@ -1,6 +1,15 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import { Button, Box, ButtonGroup, Paper, Typography, Chip, Stack } from '@mui/material';
+import {
+  Button,
+  Box,
+  ButtonGroup,
+  Paper,
+  Typography,
+  Chip,
+  Stack,
+  useMediaQuery,
+} from '@mui/material';
 
 import type { Item, ItemOptionId } from '~/types';
 import type { StripeProduct } from '~/api';
@@ -23,10 +32,18 @@ const BasketItem = ({ item, stripeProduct, optionId }: BasketItemProps) => {
     removeItemFromBasket,
   } = React.useContext(UserContext);
 
+  const smMatch = useMediaQuery<any>(theme => theme.breakpoints.down('sm'));
+
   const basketItem = basket.items[item.id];
 
   const itemAllowedQuantity = stripeProduct?.quantity ?? getItemAllowedQuantity(item, optionId);
   const itemPrice = (getItemPrice(item, optionId) * basketItem[optionId]).toFixed(2);
+
+  const inStockElement = (
+    <Typography variant="caption" color="primary.dark" fontWeight="500" sx={{ userSelect: 'none' }}>
+      In Stock: {itemAllowedQuantity}
+    </Typography>
+  );
 
   return (
     <Paper
@@ -66,10 +83,6 @@ const BasketItem = ({ item, stripeProduct, optionId }: BasketItemProps) => {
         </Typography>
       </Box>
 
-      <Typography variant="subtitle1" flexShrink={0}>
-        {itemPrice} £
-      </Typography>
-
       <Stack
         direction={{ xs: 'column', sm: 'row' }}
         alignItems="center"
@@ -77,7 +90,19 @@ const BasketItem = ({ item, stripeProduct, optionId }: BasketItemProps) => {
         spacing={1}
         flexShrink={0}
       >
-        <ButtonGroup size="small" aria-label="Count">
+        <Typography variant="subtitle1" flexShrink={0}>
+          {itemPrice} £
+        </Typography>
+
+        {smMatch && inStockElement}
+      </Stack>
+
+      <Stack direction="column" alignItems="center" spacing={1}>
+        <ButtonGroup
+          size="small"
+          orientation={smMatch ? 'vertical' : 'horizontal'}
+          aria-label="Quantity"
+        >
           <Button
             disabled={basketItem[optionId] === 1}
             onClick={() => removeItemFromBasket(item.id, optionId)}
@@ -95,14 +120,7 @@ const BasketItem = ({ item, stripeProduct, optionId }: BasketItemProps) => {
           </Button>
         </ButtonGroup>
 
-        <Typography
-          variant="caption"
-          color="primary.dark"
-          fontWeight="500"
-          sx={{ userSelect: 'none' }}
-        >
-          In Stock: {itemAllowedQuantity}
-        </Typography>
+        {!smMatch && inStockElement}
       </Stack>
 
       <Box
