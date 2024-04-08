@@ -110,6 +110,10 @@
     "13": {
       "name": "Big Tree Technology Co., Ltd.",
       "url": "https://bigtree-tech.com"
+    },
+    "14": {
+      "name": "THAT Corporation",
+      "url": "https://thatcorp.com"
     }
   },
   "abbreviations": {},
@@ -200,6 +204,43 @@
     }
   },
   "datasheets": {
+    "F-6988": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/F-6988.pdf",
+      "lang": "en",
+      "version": "3.1",
+      "relatedDatasheetIds": [
+        "BK3266"
+      ]
+    },
+    "2N4416": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/2N4416.pdf",
+      "lang": "en"
+    },
+    "THAT1512": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/THAT1512.pdf",
+      "lang": "en",
+      "manufacturerId": "14"
+    },
+    "TL071": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/TL071.pdf",
+      "lang": "en"
+    },
+    "TL072": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/TL072.pdf",
+      "lang": "en"
+    },
+    "BK3254": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/BK3254.pdf",
+      "lang": "en"
+    },
+    "BK3256": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/BK3256.pdf",
+      "lang": "en"
+    },
+    "BK3266": {
+      "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/BK3266.pdf",
+      "lang": "en"
+    },
     "ILI9488": {
       "url": "https://raw.githubusercontent.com/Tynik/smart-home-tech/main/src/datasheets/ILI9488.pdf",
       "lang": "en"
