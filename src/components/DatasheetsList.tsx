@@ -1,7 +1,7 @@
 import React from 'react';
 import { List, ListItem, ListItemText } from '@mui/material';
 
-import { FoundDatasheets } from '~/types';
+import type { FoundDatasheets } from '~/types';
 import { sortDatasheets } from '~/helpers';
 import { ExternalLink } from '~/components';
 
@@ -18,11 +18,7 @@ export const DatasheetsList = ({ datasheets }: DatasheetsListProps) => {
         <ListItem key={datasheetId} disablePadding>
           <ListItemText>
             <ExternalLink
-              href={
-                process.env.LOCAL_ENV
-                  ? `/datasheets/${datasheetId}.pdf`
-                  : datasheets[datasheetId].url
-              }
+              href={`/assets/datasheets/${datasheetId}.pdf`}
               hrefLang={datasheets[datasheetId].lang}
             >
               {datasheets[datasheetId].priority === 0 ? (

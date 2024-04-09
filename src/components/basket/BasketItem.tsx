@@ -50,38 +50,52 @@ const BasketItem = ({ item, stripeProduct, optionId }: BasketItemProps) => {
       key={item.id}
       sx={{
         padding: 2,
-        height: '100px',
+        height: '120px',
         display: 'flex',
         alignItems: 'center',
         gap: 2,
       }}
     >
-      <RouterLink to={`/item/${item.id}`} style={{ height: '100%' }}>
-        <img
-          src={item.images[0].src}
-          alt={item.images[0].alt}
-          style={{ objectFit: 'cover', height: '100%' }}
-        />
-      </RouterLink>
+      <Stack
+        direction={{ xs: 'column', sm: 'row' }}
+        spacing={2}
+        width="100%"
+        height="100%"
+        overflow="hidden"
+      >
+        <RouterLink to={`/item/${item.id}`}>
+          <img
+            src={item.images[0].src}
+            alt={item.images[0].alt}
+            style={{ objectFit: 'cover', height: '100%', maxWidth: '80px', maxHeight: '70px' }}
+          />
+        </RouterLink>
 
-      <Box flexGrow={1} sx={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
-        <Typography variant={'subtitle2'} component={'div'}>
-          {item.title}
+        <Box flexGrow={1} order={{ xs: -1, sm: 0 }}>
+          <Typography
+            variant="subtitle2"
+            component="div"
+            whiteSpace="nowrap"
+            textOverflow="ellipsis"
+            overflow="hidden"
+          >
+            {item.title}
 
-          {optionId !== 'undefined' && (
-            <Chip
-              size={'small'}
-              color={'info'}
-              label={item.options[optionId].name}
-              sx={{ marginLeft: 1 }}
-            />
-          )}
-        </Typography>
+            {optionId !== 'undefined' && (
+              <Chip
+                size="small"
+                color="info"
+                label={item.options[optionId].name}
+                sx={{ marginLeft: 1 }}
+              />
+            )}
+          </Typography>
 
-        <Typography variant={'body2'} display={{ xs: 'none', sm: 'block' }}>
-          {item.subtitle}
-        </Typography>
-      </Box>
+          <Typography variant={'body2'} display={{ xs: 'none', sm: 'block' }}>
+            {item.subtitle}
+          </Typography>
+        </Box>
+      </Stack>
 
       <Stack
         direction={{ xs: 'column', sm: 'row' }}
@@ -123,12 +137,7 @@ const BasketItem = ({ item, stripeProduct, optionId }: BasketItemProps) => {
         {!smMatch && inStockElement}
       </Stack>
 
-      <Box
-        sx={{
-          display: { xs: 'none', sm: 'flex' },
-          alignItems: 'center',
-        }}
-      >
+      <Box display={{ xs: 'none', sm: 'flex' }} alignItems="center">
         <CIconButton
           onClick={() => removeItemFromBasket(item.id, optionId, true)}
           icon={getIcon('deleteForever')}

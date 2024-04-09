@@ -83,9 +83,9 @@ export type DbMeta = {
 };
 
 export type Datasheet = {
-  url: string;
   lang: string;
   manufacturerId?: ManufacturerId;
+  relatedDatasheetIds?: DatasheetId[];
   version?: string;
   description?: string;
 };

@@ -91,7 +91,7 @@ module.exports = {
         },
         {
           from: 'src/datasheets',
-          to: 'datasheets',
+          to: 'assets/datasheets',
         },
       ],
     }),

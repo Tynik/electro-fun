@@ -43,11 +43,7 @@ export const ItemInfoActions = ({ item, stripeProduct }: ItemInfoActionsProps) =
     >
       {Boolean(item.datasheetId) && (
         <ExternalButtonLink
-          href={
-            process.env.LOCAL_ENV
-              ? `/datasheets/${item.datasheetId}.pdf`
-              : db.datasheets[item.datasheetId].url
-          }
+          href={`/assets/datasheets/${item.datasheetId}.pdf`}
           hrefLang={db.datasheets[item.datasheetId].lang}
           variant={'outlined'}
           startIcon={<LinkIcon />}
