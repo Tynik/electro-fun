@@ -41,16 +41,18 @@
       "stripeProductId": "prod_PtY29QLZ9Cl5Sv",
       "categoryId": 27,
       "title": "THAT1512",
-      "subtitle": "Preamplifier",
+      "subtitle": "Audio preamplifier",
       "seo": {
-        "description": "THAT1512",
-        "keywords": "THAT1512, preamplifier"
+        "description": "The THAT1512 analog audio preamp delivers pristine sound quality with ultra-low noise and precision control, perfect for studio recording and live sound applications",
+        "keywords": "THAT1512, preamplifier, sound, ultra-low noise"
       },
       "buy": true,
       "price": 4.90,
       "stripePriceId": "price_1P3kwpARhMwSarZXxspqp7jh",
       "weight": 5,
       "quantity": 1,
+      "datasheetId": "THAT1512",
+      "manufacturerId": "14",
       "content": "<p>Introducing the THAT1512, an exceptional analog audio preamplifier integrated circuit meticulously engineered by THAT Corporation. Designed to meet the rigorous demands of professional audio applications, the THAT1512 boasts unparalleled performance and precision.</p>",
       "peculiarities": [
         "Low Noise: Experience pristine audio signals with minimal interference, thanks to the THAT1512's ultra-low noise design, ensuring crystal-clear audio reproduction.",
@@ -66,19 +68,40 @@
           "value": "5 - 20V"
         },
         {
+          "refId": 24,
+          "value": "-40 - +85 °C"
+        },
+        {
           "refId": 93,
           "value": "6mA"
         },
         {
           "refId": 161,
           "value": [
-            {
-              "value": "1 nV/√Hz (60dB gain)"
-            },
-            {
-              "value": "34 nV/√Hz (0dB gain)"
-            }
+            "34 nV/√Hz (0dB gain)",
+            "4.6 nV/√Hz (20dB gain)",
+            "1.4 nV/√Hz (40dB gain)",
+            "1 nV/√Hz (60dB gain)"
           ]
+        },
+        {
+          "refId": 162,
+          "value": [
+            "11 MHz (0dB gain)",
+            "9 MHz (20dB gain)",
+            "7 MHz (40dB gain)",
+            "1.6 MHz (60dB gain)"
+          ],
+          "info": "-3 dB (RL = 2 kΩ, CL = 10 pF)"
+        },
+        {
+          "refId": 163,
+          "value": "19 V/µs",
+          "info": "RL = 2 kΩ, CL = 50 pF"
+        },
+        {
+          "refId": 164,
+          "value": "2 pA/√Hz (60dB gain)"
         }
       ],
       "images": [
@@ -86,9 +109,6 @@
           "src": "/photos/THAT1512-1.webp",
           "alt": "THAT1512 - DIP8"
         }
-      ],
-      "relatedDatasheetIds": [
-        "THAT1512"
       ],
       "applicationIds": [
         "16",

@@ -590,7 +590,7 @@
     },
     {
       "id": 12,
-      "name": "LEDs",
+      "name": "LED",
       "icon": "led"
     },
     {
@@ -666,6 +666,11 @@
     {
       "id": 27,
       "name": "Preamplifiers",
+      "icon": "apps"
+    },
+    {
+      "id": 28,
+      "name": "PCB",
       "icon": "apps"
     }
   ],
@@ -1352,8 +1357,18 @@
       "featSecRefId": 18
     },
     "161": {
-      "name": "Input Noise",
+      "name": "Noise",
       "featSecRefId": 3
+    },
+    "162": {
+      "name": "Bandwidth"
+    },
+    "163": {
+      "name": "Slew Rate"
+    },
+    "164": {
+      "name": "Noise",
+      "featSecRefId": 4
     }
   },
   "items": [
