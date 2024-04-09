@@ -121,6 +121,56 @@
         "23",
         "24"
       ]
+    },
+    {
+      "stripeProductId": "prod_PtZxJVSgtguXZ7",
+      "categoryId": 28,
+      "title": "Microphone Preamplifier",
+      "subtitle": "Based on THAT1512",
+      "seo": {
+        "description": "Enhance your audio quality with our mic preamp, featuring the powerful THAT1512 analog preamplifier. Ideal for studio and live sound applications",
+        "keywords": "THAT1512, NMA0515SC, pcb, audio, preamplifier, sound, ultra-low noise"
+      },
+      "buy": true,
+      "price": 2.70,
+      "stripePriceId": "price_1P3mnFARhMwSarZXMVSTwyk8",
+      "weight": 15,
+      "quantity": 1,
+      "features": [
+        {
+          "refId": 13,
+          "value": "4.5 - 5.5 V"
+        },
+        {
+          "refId": 76,
+          "value": "55.88 x 53.34 x 1.6 mm",
+          "info": "±0.2 mm"
+        }
+      ],
+      "images": [
+        {
+          "src": "/photos/PCB-THAT1512-mic-preamp-1.webp",
+          "alt": "PCB - Top view"
+        },
+        {
+          "src": "/photos/PCB-THAT1512-mic-preamp-2.webp",
+          "alt": "PCB - Bottom view"
+        },
+        {
+          "src": "/photos/PCB-THAT1512-mic-preamp-3.webp",
+          "alt": "PCB - Circuit"
+        }
+      ],
+      "content": "<p>Introducing our THAT1512 Mic Preamp PCB, the foundation for professional-grade audio recording and amplification. Engineered with precision and reliability in mind, this PCB empowers audio enthusiasts and professionals alike to build their own high-quality mic preamp systems.</p>",
+      "peculiarities": [
+        "Compatible with THAT1512 analog preamplifier chip",
+        "High-quality PCB construction for durability",
+        "Ideal for studio, live sound, and home audio applications"
+      ],
+      "relatedDatasheetIds": [
+        "NMA0515SC",
+        "THAT1512"
+      ]
     }
   ]
 }
