@@ -113,7 +113,7 @@ export type Item = {
   gtin?: GTIN;
   mpn?: MPN;
   manufacturerId?: ManufacturerId;
-  companyLink?: string;
+  companyUrl?: string;
   original?: boolean;
   content?: string;
   warningContent?: string;

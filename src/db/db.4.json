@@ -36,6 +36,71 @@
           "value": "14"
         }
       ]
+    },
+    {
+      "stripeProductId": "prod_PtY29QLZ9Cl5Sv",
+      "categoryId": 27,
+      "title": "THAT1512",
+      "subtitle": "Preamplifier",
+      "seo": {
+        "description": "THAT1512",
+        "keywords": "THAT1512, preamplifier"
+      },
+      "buy": true,
+      "price": 4.90,
+      "stripePriceId": "price_1P3kwpARhMwSarZXxspqp7jh",
+      "weight": 5,
+      "quantity": 1,
+      "content": "<p>Introducing the THAT1512, an exceptional analog audio preamplifier integrated circuit meticulously engineered by THAT Corporation. Designed to meet the rigorous demands of professional audio applications, the THAT1512 boasts unparalleled performance and precision.</p>",
+      "peculiarities": [
+        "Low Noise: Experience pristine audio signals with minimal interference, thanks to the THAT1512's ultra-low noise design, ensuring crystal-clear audio reproduction.",
+        "High Dynamic Range: Enjoy a wide dynamic range that faithfully captures the full spectrum of audio signals, from subtle nuances to powerful peaks, without sacrificing quality.",
+        "Precision Gain Control: Fine-tune your audio levels with precision using the integrated gain control feature, allowing for meticulous adjustment to suit your specific application requirements.",
+        "Wide Bandwidth: With its broad bandwidth response, the THAT1512 delivers consistent fidelity across the entire audio frequency range, ensuring accurate reproduction of sound.",
+        "Reliable Performance: Built to withstand the demands of professional audio environments, the THAT1512 offers robust construction and dependable performance, ensuring consistent operation under challenging conditions.",
+        "Seamless Integration: Designed for easy integration into a variety of audio systems, the THAT1512 simplifies the development process and streamlines implementation, making it an ideal choice for both new and existing setups."
+      ],
+      "features": [
+        {
+          "refId": 13,
+          "value": "5 - 20V"
+        },
+        {
+          "refId": 93,
+          "value": "6mA"
+        },
+        {
+          "refId": 161,
+          "value": [
+            {
+              "value": "1 nV/√Hz (60dB gain)"
+            },
+            {
+              "value": "34 nV/√Hz (0dB gain)"
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "/photos/THAT1512-1.webp",
+          "alt": "THAT1512 - DIP8"
+        }
+      ],
+      "relatedDatasheetIds": [
+        "THAT1512"
+      ],
+      "applicationIds": [
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24"
+      ]
     }
   ]
 }

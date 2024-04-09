@@ -21,6 +21,7 @@ export const ItemInfoPeculiarities = ({ peculiarities }: ItemInfoPeculiaritiesPr
             <ListItemIcon sx={{ minWidth: theme.spacing(1) }}>
               <ArrowRightIcon />
             </ListItemIcon>
+
             <ListItemText>{peculiarity}</ListItemText>
           </ListItem>
         ))}

@@ -7,7 +7,7 @@
     "keywords": "electronics components, electronic parts, DIY electronics, electronic accessories, fast shipping, high-quality, DIY"
   },
   "footer": {
-    "bottom": "SmartStream Electronics 2023"
+    "bottom": "SmartStream Electronics 2023-2024"
   },
   "menu": [
     {
@@ -33,7 +33,16 @@
     "12": "Temperature Measurement Systems",
     "13": "Automotive Industry",
     "14": "Robotics",
-    "15": "3D-printing"
+    "15": "3D-printing",
+    "16": "Audio",
+    "17": "Line Input Stages",
+    "18": "Differential Low Noise Preamplifiers",
+    "19": "Differential Summing Amplifiers",
+    "20": "Differential Variable Gain Amplifiers",
+    "21": "Microphone Preamplifiers",
+    "22": "Moving-Coil Transducer Amplifiers",
+    "23": "Sonar",
+    "24": "Instrumentation"
   },
   "brands": {
     "1": {
@@ -517,6 +526,10 @@
     {
       "name": "TI-RTOS - Bios user guide",
       "url": "TI-RTOS/Bios_User_Guide.pdf"
+    },
+    {
+      "name": "Configuring gain with the THAT1510 and THAT1512.pdf",
+      "url": "Configuring-gain-THAT1510|THAT1512.pdf"
     }
   ],
   "categories": [
@@ -649,6 +662,11 @@
       "id": 26,
       "name": "Displays",
       "icon": "tv"
+    },
+    {
+      "id": 27,
+      "name": "Preamplifiers",
+      "icon": "apps"
     }
   ],
   "featureSections": {
@@ -1081,11 +1099,11 @@
       "featSecRefId": 3
     },
     "93": {
-      "name": "Input",
+      "name": "Supply",
       "featSecRefId": 4
     },
     "94": {
-      "name": "Input (Reverse)",
+      "name": "Supply (Reverse)",
       "featSecRefId": 4
     },
     "95": {
@@ -1332,6 +1350,10 @@
     "160": {
       "name": "Controller",
       "featSecRefId": 18
+    },
+    "161": {
+      "name": "Input Noise",
+      "featSecRefId": 3
     }
   },
   "items": [
@@ -1490,7 +1512,7 @@
       "weight": 5,
       "quantity": 1,
       "datasheetId": "MPU-9250A-1.1",
-      "companyLink": "https://invensense.tdk.com",
+      "companyUrl": "https://invensense.tdk.com",
       "images": [
         {
           "src": "https://images.izi.ua/29881771",
