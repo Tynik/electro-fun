@@ -1,5 +1,4 @@
 import type { Item, Db, ItemContributorSrc } from '~/types';
-import { ItemContributorSrcSource } from '~/types';
 
 export * from './mui';
 export * from './object';
@@ -20,8 +19,13 @@ export const preprocessDb = (db: Db) => ({
 });
 
 export const getItemContributorAvatarSrc = (contributorSrc: ItemContributorSrc): string => {
-  if (contributorSrc.source === ItemContributorSrcSource.GITHUB) {
+  if (contributorSrc.source === 'github') {
     return `https://avatars.githubusercontent.com/u/${contributorSrc.userId}?s=60&v=4`;
   }
+
+  if (contributorSrc.source === 'youtube') {
+    return contributorSrc.avatarSrc;
+  }
+
   throw new Error('Contributor avatar src cannot be found');
 };

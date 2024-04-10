@@ -44,14 +44,17 @@ export type ItemImage = {
   optionId?: string;
 };
 
-export enum ItemContributorSrcSource {
-  GITHUB = 'github',
-}
-
-export type ItemContributorSrc = {
-  source: ItemContributorSrcSource;
+type GithubItemContributorSrc = {
+  source: 'github';
   userId: number;
 };
+
+type YoutubeItemContributorSrc = {
+  source: 'youtube';
+  avatarSrc: string;
+};
+
+export type ItemContributorSrc = GithubItemContributorSrc | YoutubeItemContributorSrc;
 
 export type ItemContributor = {
   name: string;
