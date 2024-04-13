@@ -8,7 +8,7 @@ import type { Product } from '~/types';
 import { AppContext, UserContext } from '~/contexts';
 import { getIcon } from '~/utils';
 import { checkoutRequest } from '~/api';
-import { getProductStripePriceId, getProductWeight } from '~/helpers';
+import { getStripeProductPriceId, getProductWeight } from '~/helpers';
 
 type CheckoutFormData = {
   fullName: string;
@@ -75,7 +75,7 @@ const BasketStep2 = ({ isActive, products, onBefore }: BasketStep2Props) => {
         (result, product) => {
           Object.keys(basket.products[product.id]).map(optionId => {
             result.push({
-              priceId: getProductStripePriceId(product, optionId),
+              priceId: getStripeProductPriceId(product, optionId),
               weight: getProductWeight(product, optionId),
               quantity: basket.products[product.id][optionId],
             });

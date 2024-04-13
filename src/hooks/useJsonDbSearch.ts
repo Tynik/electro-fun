@@ -9,6 +9,7 @@ import type {
   FoundDatasheets,
   ApplicationId,
   ManufacturerId,
+  Nullable,
 } from '~/types';
 import {
   checkSearchKeyword,
@@ -24,11 +25,11 @@ export type SearchHandler = {
 };
 
 export const useJsonDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
-  const [productIds, setProductIds] = React.useState<ProductId[]>(null);
-  const [searchKeywords, setSearchKeywords] = React.useState<string[]>(null);
-  const [categoryId, setCategoryId] = React.useState<number>(null);
-  const [foundProducts, setFoundProducts] = React.useState<Product[]>(null);
-  const [foundDatasheets, setFoundDatasheets] = React.useState<FoundDatasheets>(null);
+  const [productIds, setProductIds] = React.useState<Nullable<ProductId[]>>(null);
+  const [searchKeywords, setSearchKeywords] = React.useState<Nullable<string[]>>(null);
+  const [categoryId, setCategoryId] = React.useState<Nullable<number>>(null);
+  const [foundProducts, setFoundProducts] = React.useState<Nullable<Product[]>>(null);
+  const [foundDatasheets, setFoundDatasheets] = React.useState<Nullable<FoundDatasheets>>(null);
   const [isSearching, setIsSearching] = React.useState(false);
   const [searchOffset, setSearchOffset] = React.useState<number>(0);
 

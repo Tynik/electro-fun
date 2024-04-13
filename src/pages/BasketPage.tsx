@@ -3,6 +3,8 @@ import { useQuery } from 'react-query';
 import { Grid, Typography, Stepper, Step, StepLabel } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
+import type { StripeProductId } from '~/types';
+
 import { getStripeProducts } from '~/api';
 import { DbContext, UserContext } from '~/contexts';
 import { BackButton, Loader, BasketStep1, BasketStep2 } from '~/components';
@@ -15,7 +17,7 @@ export const BasketPage = () => {
   const { step: queryStep } = useQueryParams();
 
   const { db, loadNextDbPart } = React.useContext(DbContext);
-  const { search, foundProducts: items } = useJsonDbSearch(db, loadNextDbPart);
+  const { search, foundProducts: products } = useJsonDbSearch(db, loadNextDbPart);
 
   const {
     user: { basket },
@@ -24,8 +26,11 @@ export const BasketPage = () => {
   const [step, setStep] = React.useState(+queryStep || 0);
 
   const stripeProductIds = useMemo(
-    () => items?.map(item => item.stripeProductId).filter(stripeProductId => stripeProductId),
-    [items],
+    () =>
+      (products
+        ?.map(product => product.stripeProductId)
+        .filter(stripeProductId => stripeProductId) ?? []) as StripeProductId[],
+    [products],
   );
 
   const { data: stripeProducts, isFetching: isStripeProductsFetching } = useQuery(
@@ -46,23 +51,26 @@ export const BasketPage = () => {
 
   const totalPrice = React.useMemo(
     () =>
-      items?.reduce((totalPrice, product) => {
-        const basketItem = basket.products[product.id];
+      products?.reduce((totalPrice, product) => {
+        const basketProduct = basket.products[product.id];
 
-        const itemsPrice = Object.keys(basketItem).reduce(
-          (itemsTotalPrice, optionId) =>
-            itemsTotalPrice +
-            getProductPrice(stripeProducts?.[product.stripePriceId], product, optionId) *
-              basketItem[optionId],
+        const stripeProduct = stripeProducts?.find(
+          stripeProduct => stripeProduct.id === product.stripeProductId,
+        );
+
+        const productsPrice = Object.keys(basketProduct).reduce(
+          (productsTotalPrice, optionId) =>
+            productsTotalPrice +
+            getProductPrice(stripeProduct, product, optionId) * basketProduct[optionId],
           0,
         );
 
-        return totalPrice + itemsPrice;
+        return totalPrice + productsPrice;
       }, 0) ?? 0,
-    [items],
+    [products, stripeProducts],
   );
 
-  if (items === null || isStripeProductsFetching) {
+  if (products === null || isStripeProductsFetching) {
     return <Loader />;
   }
 
@@ -94,14 +102,14 @@ export const BasketPage = () => {
           <Grid xs={12} md={9} spacing={2} direction={'column'} container item>
             <BasketStep1
               isActive={step === 0}
-              items={items}
+              products={products}
               stripeProducts={stripeProducts}
               onNext={() => setStep(step + 1)}
             />
 
             <BasketStep2
               isActive={step === 1}
-              products={items}
+              products={products}
               totalPrice={totalPrice}
               onBefore={() => setStep(step - 1)}
             />

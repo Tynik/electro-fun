@@ -120,7 +120,7 @@ export const getProductDefaultOption = (product: Product) => {
   return Object.keys(productOptions).find(optionId => productOptions[optionId]?.default);
 };
 
-export const getProductStripePriceId = (product: Product, optionId: Nullable<ProductOptionId>) => {
+export const getStripeProductPriceId = (product: Product, optionId: Nullable<ProductOptionId>) => {
   if (product.stripePriceId) {
     return product.stripePriceId;
   }
@@ -138,7 +138,7 @@ export const getProductPrice = (
   optionId: ProductOptionId,
 ) => {
   if (stripeProduct) {
-    const productStripePriceId = getProductStripePriceId(product, optionId);
+    const productStripePriceId = getStripeProductPriceId(product, optionId);
 
     if (productStripePriceId) {
       const productPrice = stripeProduct.prices[productStripePriceId];
@@ -158,7 +158,7 @@ export const getProductAllowedQuantity = (
   optionId: Nullable<ProductOptionId>,
 ) => {
   if (stripeProduct) {
-    const productStripePriceId = getProductStripePriceId(product, optionId);
+    const productStripePriceId = getStripeProductPriceId(product, optionId);
 
     if (productStripePriceId) {
       const productPrice = stripeProduct.prices[productStripePriceId];

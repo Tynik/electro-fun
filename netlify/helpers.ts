@@ -137,7 +137,7 @@ export type ProductPrices = Record<
 export const processProductPrices = (prices: Stripe.Price[]) =>
   prices.reduce<ProductPrices>((resultPrices, price) => {
     resultPrices[price.id] = {
-      amount: price.active ? price.unit_amount / 100 : 0,
+      amount: price.active ? (price.unit_amount ?? 0) / 100 : 0,
       quantity: +(price.metadata.quantity ?? 0),
     };
 

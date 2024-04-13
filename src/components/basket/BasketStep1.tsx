@@ -10,12 +10,12 @@ import { getIcon } from '~/utils';
 
 export type BasketStep1Props = {
   isActive: boolean;
-  items: Product[];
+  products: Product[];
   stripeProducts: StripeProduct[] | undefined;
   onNext: () => void;
 };
 
-const BasketStep1 = ({ isActive, items, stripeProducts, onNext }: BasketStep1Props) => {
+const BasketStep1 = ({ isActive, products, stripeProducts, onNext }: BasketStep1Props) => {
   const {
     user: { basket },
     clearBasket,
@@ -27,19 +27,19 @@ const BasketStep1 = ({ isActive, items, stripeProducts, onNext }: BasketStep1Pro
 
   return (
     <>
-      {!items.length && (
+      {!products.length && (
         <Grid item>
           <Alert severity={'info'}>Cart is empty</Alert>
         </Grid>
       )}
 
-      {items.map(item =>
-        Object.keys(basket.products[item.id] || {}).map(optionId => (
-          <Grid key={`${item.id}-${optionId}`} item>
+      {products.map(product =>
+        Object.keys(basket.products[product.id] || {}).map(optionId => (
+          <Grid key={`${product.id}-${optionId}`} item>
             <BasketItem
-              product={item}
+              product={product}
               stripeProduct={stripeProducts?.find(
-                stripeProduct => stripeProduct.id === item.stripeProductId,
+                stripeProduct => stripeProduct.id === product.stripeProductId,
               )}
               optionId={optionId}
             />
@@ -51,7 +51,7 @@ const BasketStep1 = ({ isActive, items, stripeProducts, onNext }: BasketStep1Pro
         <Stack spacing={2} direction={'row'} sx={{ justifyContent: 'right' }}>
           <Button
             onClick={clearBasket}
-            disabled={!items.length}
+            disabled={!products.length}
             startIcon={getIcon('deleteForever')}
             variant={'outlined'}
           >
@@ -60,7 +60,7 @@ const BasketStep1 = ({ isActive, items, stripeProducts, onNext }: BasketStep1Pro
 
           <Button
             onClick={onNext}
-            disabled={!items.length}
+            disabled={!products.length}
             startIcon={getIcon('navigateNext')}
             color={'success'}
             variant={'contained'}

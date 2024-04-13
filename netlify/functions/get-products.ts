@@ -17,13 +17,11 @@ export const handler = createHandler({ allowMethods: ['GET'] }, async ({ event }
   const productsPrices: Record<Stripe.Product['id'], ProductPrices> = {};
 
   const getProductsPricesTasks = products.data.map(async product => {
-    if (typeof product.default_price === 'string') {
-      const prices = await stripe.prices.list({
-        product: product.id,
-      });
+    const prices = await stripe.prices.list({
+      product: product.id,
+    });
 
-      productsPrices[product.id] = processProductPrices(prices.data);
-    }
+    productsPrices[product.id] = processProductPrices(prices.data);
   });
 
   await Promise.all(getProductsPricesTasks);

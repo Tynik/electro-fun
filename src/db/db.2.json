@@ -914,6 +914,15 @@
         "keywords": "usb, type-c, cable, data"
       },
       "buy": true,
+      "options": {
+        "1": {
+          "name": "USB-A to Type-C (0.5 m)",
+          "default": true
+        },
+        "2": {
+          "name": "Type-C to Type-C (0.5 m)"
+        }
+      },
       "price": {
         "1": {
           "stripePriceId": "price_1P5BLHARhMwSarZX3rHJLJHY"
@@ -947,16 +956,7 @@
           "value": "up to 3 A",
           "optionId": "2"
         }
-      ],
-      "options": {
-        "1": {
-          "name": "USB-A to Type-C (0.5 m)",
-          "default": true
-        },
-        "2": {
-          "name": "Type-C to Type-C (0.5 m)"
-        }
-      }
+      ]
     },
     {
       "stripeProductId": "prod_OGwnAn7ja19zx8",
