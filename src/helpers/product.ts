@@ -6,9 +6,11 @@ import type {
   ProductOptionId,
   ApplicationId,
   ManufacturerId,
+  Nullable,
 } from '~/types';
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
 import { checkSearchKeyword } from '~/helpers';
+import type { StripeProduct } from '~/api';
 
 export const matchProductWithSearchKeyword = (
   product: Product,
@@ -108,36 +110,66 @@ export const matchProductWithSearch = (
   return isProductMatched;
 };
 
-export const getProductDefaultOption = (product: Product) =>
-  product.options &&
-  Object.keys(product.options).find(optionId => product.options[optionId].default);
+export const getProductDefaultOption = (product: Product) => {
+  const productOptions = product.options;
 
-export const getProductPrice = (product: Product, optionId: ProductOptionId) => {
-  if (!product.price) {
-    return 0;
+  if (!productOptions) {
+    return null;
   }
 
-  if (typeof product.price === 'number') {
-    return product.price;
-  }
-
-  return product.price[optionId].price;
+  return Object.keys(productOptions).find(optionId => productOptions[optionId]?.default);
 };
 
-export const getProductStripePriceId = (product: Product, optionId: ProductOptionId) => {
+export const getProductStripePriceId = (product: Product, optionId: Nullable<ProductOptionId>) => {
   if (product.stripePriceId) {
     return product.stripePriceId;
+  }
+
+  if (!optionId || product.price === undefined) {
+    return undefined;
   }
 
   return product.price[optionId].stripePriceId;
 };
 
-export const getProductAllowedQuantity = (product: Product, optionId: ProductOptionId) => {
-  if (!product.quantity) {
-    return 0;
+export const getProductPrice = (
+  stripeProduct: StripeProduct | undefined,
+  product: Product,
+  optionId: ProductOptionId,
+) => {
+  if (stripeProduct) {
+    const productStripePriceId = getProductStripePriceId(product, optionId);
+
+    if (productStripePriceId) {
+      const productPrice = stripeProduct.prices[productStripePriceId];
+
+      if (productPrice) {
+        return productPrice.amount;
+      }
+    }
   }
 
-  return typeof product.quantity === 'number' ? product.quantity : product.quantity[optionId];
+  return 0;
+};
+
+export const getProductAllowedQuantity = (
+  stripeProduct: StripeProduct | undefined,
+  product: Product,
+  optionId: Nullable<ProductOptionId>,
+) => {
+  if (stripeProduct) {
+    const productStripePriceId = getProductStripePriceId(product, optionId);
+
+    if (productStripePriceId) {
+      const productPrice = stripeProduct.prices[productStripePriceId];
+
+      if (productPrice) {
+        return productPrice.quantity;
+      }
+    }
+  }
+
+  return 0;
 };
 
 export const getProductWeight = (product: Product, optionId: ProductOptionId) => {
@@ -148,8 +180,12 @@ export const getProductWeight = (product: Product, optionId: ProductOptionId) =>
   return typeof product.weight === 'number' ? product.weight : product.weight[optionId];
 };
 
-export const getProductAvailabilitySeoSchema = (product: Product, optionId: ProductOptionId) => {
-  const quantity = getProductAllowedQuantity(product, optionId);
+export const getProductAvailabilitySeoSchema = (
+  stripeProduct: StripeProduct | undefined,
+  product: Product,
+  optionId: ProductOptionId,
+) => {
+  const quantity = getProductAllowedQuantity(stripeProduct, product, optionId);
 
   if (quantity) {
     return `${SEO_SCHEMA_BASE_URL}/InStock`;
@@ -177,6 +213,7 @@ export const sortProductFeatures = (allFeatures: DbProductFeatures, features: Pr
   });
 
 export const getProductRatingIconName = (product: Product, iconNumber: number) => {
-  const diff = product.rating - (iconNumber + 1);
+  const diff = (product.rating ?? 5) - (iconNumber + 1);
+
   return diff >= 0 ? 'star' : diff >= -0.5 ? 'starHalf' : 'starBorder';
 };

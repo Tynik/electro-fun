@@ -11,6 +11,8 @@ import {
   useSelectedProductOptionId,
   useProductImages,
 } from '~/hooks';
+import { useQuery } from 'react-query';
+import { getStripeProduct } from '~/api';
 
 export const useCurrentProduct = () => {
   const { id } = useParams<{ id: string }>();
@@ -53,7 +55,15 @@ export const useCurrentProduct = () => {
     [db, product],
   );
 
-  const price = product && getProductPrice(product, selectedProductOptionId);
+  const { data: stripeProduct, isFetching: isStripeProductFetching } = useQuery(
+    ['stripe-product', product?.id],
+    () => getStripeProduct(product!.stripeProductId),
+    {
+      enabled: Boolean(product?.stripeProductId),
+    },
+  );
+
+  const price = product && getProductPrice(stripeProduct, product, selectedProductOptionId);
 
   return {
     db,
@@ -65,5 +75,7 @@ export const useCurrentProduct = () => {
     seo,
     errors,
     printErrors,
+    stripeProduct,
+    isStripeProductFetching,
   };
 };

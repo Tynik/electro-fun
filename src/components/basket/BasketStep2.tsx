@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Grid, Stack, Box, TextField } from '@mui/material';
 import { useHoneyForm } from '@tynik/react-honey-form';
 
-import type { CheckoutProduct } from '~/api';
+import type { CheckoutProductPayload } from '~/api';
 import type { Product } from '~/types';
 
 import { AppContext, UserContext } from '~/contexts';
@@ -23,12 +23,12 @@ type CheckoutFormData = {
 
 export type BasketStep2Props = {
   isActive: boolean;
-  items: Product[];
+  products: Product[];
   totalPrice: number;
   onBefore: () => void;
 };
 
-const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
+const BasketStep2 = ({ isActive, products, onBefore }: BasketStep2Props) => {
   const {
     user: { basket },
   } = React.useContext(UserContext);
@@ -71,20 +71,23 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
 
   const makeOrder = async (formData: CheckoutFormData) => {
     try {
-      const checkoutItems = items.reduce<CheckoutProduct[]>((result, item) => {
-        Object.keys(basket.products[item.id]).map(optionId => {
-          result.push({
-            priceId: getProductStripePriceId(item, optionId),
-            weight: getProductWeight(item, optionId),
-            quantity: basket.products[item.id][optionId],
+      const checkoutProductsPayload = products.reduce<CheckoutProductPayload[]>(
+        (result, product) => {
+          Object.keys(basket.products[product.id]).map(optionId => {
+            result.push({
+              priceId: getProductStripePriceId(product, optionId),
+              weight: getProductWeight(product, optionId),
+              quantity: basket.products[product.id][optionId],
+            });
           });
-        });
 
-        return result;
-      }, []);
+          return result;
+        },
+        [],
+      );
 
       const checkoutResponse = await checkoutRequest({
-        items: checkoutItems,
+        products: checkoutProductsPayload,
         fullName: formData.fullName,
         phone: formData.phone,
         email: formData.email,

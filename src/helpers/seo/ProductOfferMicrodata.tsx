@@ -1,6 +1,7 @@
 import React from 'react';
 
 import type { Product } from '~/types';
+import type { StripeProduct } from '~/api';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
 import {
@@ -15,13 +16,15 @@ import { useCategory, useSelectedProductOptionId } from '~/hooks';
 
 export type ProductOfferMicrodataProps = {
   product: Product;
+  stripeProduct: StripeProduct | undefined;
 };
 
-export const ProductOfferMicrodata = ({ product }: ProductOfferMicrodataProps) => {
+export const ProductOfferMicrodata = ({ product, stripeProduct }: ProductOfferMicrodataProps) => {
   const selectedProductOptionId = useSelectedProductOptionId(product);
 
-  const productPrice = getProductPrice(product, selectedProductOptionId);
+  const productPrice = getProductPrice(stripeProduct, product, selectedProductOptionId);
   const productAvailabilitySEOSchema = getProductAvailabilitySeoSchema(
+    stripeProduct,
     product,
     selectedProductOptionId,
   );
@@ -42,7 +45,7 @@ export const ProductOfferMicrodata = ({ product }: ProductOfferMicrodataProps) =
 
       <MerchantReturnPolicyMicrodata />
 
-      <ProductInventoryLevelMicrodata product={product} />
+      <ProductInventoryLevelMicrodata product={product} stripeProduct={stripeProduct} />
       <ProductMeasurementMicrodata product={product} />
 
       <OfferShippingDetailsMicrodata />

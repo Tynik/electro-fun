@@ -37,7 +37,7 @@ const BasketStep1 = ({ isActive, items, stripeProducts, onNext }: BasketStep1Pro
         Object.keys(basket.products[item.id] || {}).map(optionId => (
           <Grid key={`${item.id}-${optionId}`} item>
             <BasketItem
-              item={item}
+              product={item}
               stripeProduct={stripeProducts?.find(
                 stripeProduct => stripeProduct.id === item.stripeProductId,
               )}

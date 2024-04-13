@@ -46,12 +46,14 @@ export const BasketPage = () => {
 
   const totalPrice = React.useMemo(
     () =>
-      items?.reduce((totalPrice, item) => {
-        const basketItem = basket.products[item.id];
+      items?.reduce((totalPrice, product) => {
+        const basketItem = basket.products[product.id];
 
         const itemsPrice = Object.keys(basketItem).reduce(
           (itemsTotalPrice, optionId) =>
-            itemsTotalPrice + getProductPrice(item, optionId) * basketItem[optionId],
+            itemsTotalPrice +
+            getProductPrice(stripeProducts?.[product.stripePriceId], product, optionId) *
+              basketItem[optionId],
           0,
         );
 
@@ -99,7 +101,7 @@ export const BasketPage = () => {
 
             <BasketStep2
               isActive={step === 1}
-              items={items}
+              products={items}
               totalPrice={totalPrice}
               onBefore={() => setStep(step - 1)}
             />

@@ -1,15 +1,17 @@
-import { createHandler, getStripeShippingRatesList, initStripeClient } from '../helpers';
+import Stripe from 'stripe';
+
 import { SITE_DOMAIN } from '../constants';
+import { createHandler, getStripeShippingRatesList, initStripeClient } from '../helpers';
 
 const ORDER_CONFIRMATION_PAGE_URL = `${SITE_DOMAIN}/order-confirmation?sessionId={CHECKOUT_SESSION_ID}`;
 
-type Item = {
-  priceId: string;
+type ProductPayload = {
+  priceId: Stripe.Price['id'];
   weight: number;
   quantity: number;
 };
 
-type Payload = {
+type CheckoutPayload = {
   fullName: string;
   phone: string;
   email: string;
@@ -18,55 +20,68 @@ type Payload = {
   shippingAddress2: string;
   shippingPostcode: string;
   note: string;
-  items: Item[];
+  products: ProductPayload[];
 };
 
-export const handler = createHandler<Payload>({ allowMethods: ['POST'] }, async ({ payload }) => {
-  const stripe = initStripeClient();
+export const handler = createHandler<CheckoutPayload>(
+  { allowMethods: ['POST'] },
+  async ({ payload }) => {
+    if (!payload) {
+      return {
+        status: 'error',
+        data: {
+          error: 'Payload is empty',
+        },
+      };
+    }
 
-  const totalItemsWeight = payload.items.reduce(
-    (totalWeight, item) => totalWeight + item.weight,
-    0,
-  );
+    const stripe = initStripeClient();
 
-  const shippingRates = await getStripeShippingRatesList(stripe, {
-    minimumWeightThreshold: totalItemsWeight,
-  });
+    const totalProductsWeight = payload.products.reduce(
+      (totalWeight, product) => totalWeight + product.weight,
+      0,
+    );
 
-  const session = await stripe.checkout.sessions.create({
-    mode: 'payment',
-    payment_intent_data: {
-      receipt_email: payload.email,
-      description: payload.note,
-      shipping: {
-        name: payload.fullName,
-        phone: payload.phone,
-        address: {
-          country: 'GB',
-          city: payload.shippingCity,
-          line1: payload.shippingAddress1,
-          line2: payload.shippingAddress2,
-          postal_code: payload.shippingPostcode,
+    const shippingRates = await getStripeShippingRatesList(stripe, {
+      minimumWeightThreshold: totalProductsWeight,
+    });
+
+    const session = await stripe.checkout.sessions.create({
+      mode: 'payment',
+      payment_intent_data: {
+        receipt_email: payload.email,
+        description: payload.note,
+        shipping: {
+          name: payload.fullName,
+          phone: payload.phone,
+          address: {
+            country: 'GB',
+            city: payload.shippingCity,
+            line1: payload.shippingAddress1,
+            line2: payload.shippingAddress2,
+            postal_code: payload.shippingPostcode,
+          },
         },
       },
-    },
-    customer_creation: 'always',
-    customer_email: payload.email,
-    shipping_options: shippingRates.map(shippingRate => ({
-      shipping_rate: shippingRate.id,
-    })),
-    line_items: payload.items.map(item => ({
-      price: item.priceId,
-      quantity: item.quantity,
-    })),
-    success_url: ORDER_CONFIRMATION_PAGE_URL,
-    cancel_url: ORDER_CONFIRMATION_PAGE_URL,
-  });
+      customer: undefined,
+      customer_creation: 'always',
+      customer_email: payload.email,
+      shipping_options: shippingRates.map(shippingRate => ({
+        shipping_rate: shippingRate.id,
+      })),
+      line_items: payload.products.map(product => ({
+        price: product.priceId,
+        quantity: product.quantity,
+      })),
+      success_url: ORDER_CONFIRMATION_PAGE_URL,
+      cancel_url: ORDER_CONFIRMATION_PAGE_URL,
+    });
 
-  return {
-    status: 'ok',
-    data: {
-      url: session.url,
-    },
-  };
-});
+    return {
+      status: 'ok',
+      data: {
+        url: session.url,
+      },
+    };
+  },
+);

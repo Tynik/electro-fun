@@ -125,3 +125,21 @@ export const getStripeProductsList = async (stripe: Stripe) => {
 
   return products;
 };
+
+export type ProductPrices = Record<
+  Stripe.Price['id'],
+  {
+    amount: number;
+    quantity: number;
+  }
+>;
+
+export const processProductPrices = (prices: Stripe.Price[]) =>
+  prices.reduce<ProductPrices>((resultPrices, price) => {
+    resultPrices[price.id] = {
+      amount: price.active ? price.unit_amount / 100 : 0,
+      quantity: +(price.metadata.quantity ?? 0),
+    };
+
+    return resultPrices;
+  }, {});

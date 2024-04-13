@@ -1,20 +1,16 @@
 import { netlifyRequest } from '~/api/api-client';
-import type { StripeProductId, StripeSessionId } from '~/types';
 
-export type StripeProduct = {
-  id: StripeProductId;
+import type { StripePriceId, StripeProductId, StripeSessionId } from '~/types';
+
+export type StripeProductPrice = {
+  amount: number;
   quantity: number;
 };
 
-export const getStripeProduct = async (productId: StripeProductId) =>
-  (
-    await netlifyRequest<StripeProduct>('get-product', {
-      method: 'GET',
-      params: {
-        productId,
-      },
-    })
-  ).data;
+export type StripeProduct = {
+  id: StripeProductId;
+  prices: Record<StripePriceId, StripeProductPrice>;
+};
 
 export const getStripeProducts = async (productIds: StripeProductId[]) =>
   (
@@ -26,11 +22,21 @@ export const getStripeProducts = async (productIds: StripeProductId[]) =>
     })
   ).data;
 
+export const getStripeProduct = async (productId: StripeProductId) =>
+  (
+    await netlifyRequest<StripeProduct>('get-product', {
+      method: 'GET',
+      params: {
+        productId,
+      },
+    })
+  ).data;
+
 export type CheckoutResponse = {
   url: string;
 };
 
-export type CheckoutProduct = {
+export type CheckoutProductPayload = {
   weight: number;
   priceId: string;
   quantity: number;
@@ -45,7 +51,7 @@ export type CheckoutPayload = {
   shippingAddress2: string;
   shippingPostcode: string;
   note: string;
-  items: CheckoutProduct[];
+  products: CheckoutProductPayload[];
 };
 
 export const checkoutRequest = async (payload: CheckoutPayload) =>

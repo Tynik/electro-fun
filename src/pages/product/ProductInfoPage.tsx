@@ -1,8 +1,6 @@
 import React from 'react';
-import { useQuery } from 'react-query';
 import { Box, Grid, Typography, Alert, Divider, useTheme } from '@mui/material';
 
-import { getStripeProduct } from '~/api';
 import { ProductMicrodata } from '~/helpers';
 import { useTextProcessor, useSmoothScroll, useSeo, useCurrentProduct } from '~/hooks';
 import { Loader, ExternalLink, ImageSlider, BackButton } from '~/components';
@@ -21,21 +19,23 @@ import { ProductInfoPeculiarities } from './ProductInfoPeculiarities';
 export const ProductInfoPage = () => {
   const theme = useTheme();
 
-  const { db, product, price, images, seo, errors, printErrors } = useCurrentProduct();
+  const {
+    db,
+    product,
+    price,
+    images,
+    seo,
+    errors,
+    printErrors,
+    stripeProduct,
+    isStripeProductFetching,
+  } = useCurrentProduct();
 
   const { wordsWrapper } = useTextProcessor();
 
   useSmoothScroll({ top: 0, left: 0 });
 
   useSeo(Object.keys(seo).length ? seo : null);
-
-  const { data: stripeProduct, isFetching: isStripeProductFetching } = useQuery(
-    ['stripe-product', product?.id],
-    () => getStripeProduct(product!.stripeProductId),
-    {
-      enabled: Boolean(product?.stripeProductId),
-    },
-  );
 
   const clarificationsWrapper = React.useCallback(
     (text: string) =>
@@ -66,7 +66,7 @@ export const ProductInfoPage = () => {
 
   return (
     <Grid spacing={2} container>
-      <ProductMicrodata product={product} />
+      <ProductMicrodata product={product} stripeProduct={stripeProduct} />
 
       <Grid xs={12} item>
         <BackButton />
@@ -185,7 +185,7 @@ export const ProductInfoPage = () => {
         )}
 
         <Box marginTop={theme.spacing(2)}>
-          <ProductInfoActions item={product} stripeProduct={stripeProduct} />
+          <ProductInfoActions product={product} stripeProduct={stripeProduct} />
         </Box>
       </Grid>
     </Grid>

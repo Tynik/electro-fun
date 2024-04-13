@@ -96,8 +96,7 @@ export type ProductAccessory = {
 };
 
 type ProductPriceConfig = {
-  stripePriceId?: StripePriceId;
-  price: number;
+  stripePriceId: StripePriceId;
 };
 
 export type GTIN = string;
@@ -105,9 +104,9 @@ export type GTIN = string;
 export type MPN = string;
 
 export type Product = {
+  id: ProductId;
   title: string;
   subtitle: string;
-  id?: ProductId;
   stripeProductId?: StripeProductId;
   categoryId?: CategoryId;
   googleCategoryId?: number;
@@ -122,16 +121,15 @@ export type Product = {
   warningContent?: string;
   datasheetId?: DatasheetId;
   relatedDatasheetIds?: DatasheetId[];
-  quantity?: number | Record<ProductOptionId, number>;
   weight?: number | Record<ProductOptionId, number>;
-  price?: number | Record<ProductOptionId, ProductPriceConfig>;
+  price?: Record<ProductOptionId, ProductPriceConfig>;
   stripePriceId?: StripePriceId;
   rating?: number;
   // link where is to buy or true/false
   buy?: string | boolean;
   options?: ProductOptions;
   features?: ProductFeature[];
-  images?: ProductImage[];
+  images: ProductImage[];
   peculiarities?: ProductPeculiarity[];
   applicationIds?: ApplicationId[];
   accessories?: ProductAccessory[];

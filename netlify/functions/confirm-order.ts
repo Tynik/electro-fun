@@ -1,7 +1,15 @@
 import { createHandler, initStripeClient } from '../helpers';
 
 export const handler = createHandler({ allowMethods: ['POST'] }, async ({ event }) => {
-  const sessionId = event.queryStringParameters.sessionId;
+  const sessionId = event.queryStringParameters?.sessionId;
+  if (!sessionId) {
+    return {
+      status: 'error',
+      data: {
+        error: 'Session ID is empty',
+      },
+    };
+  }
 
   const stripe = initStripeClient();
 
@@ -16,7 +24,7 @@ export const handler = createHandler({ allowMethods: ['POST'] }, async ({ event 
     return {
       status: 'error',
       data: {
-        error: 'Payment ID is missed',
+        error: 'Payment ID is empty',
       },
     };
   }
@@ -36,35 +44,25 @@ export const handler = createHandler({ allowMethods: ['POST'] }, async ({ event 
       limit: 100,
     });
 
-    const updateProductsMetadataTasks = itemLines.data.map(async itemLine => {
+    const updatePricesMetadataTasks = itemLines.data.map(async itemLine => {
       if (!itemLine.price) {
         throw new Error('Price is missed');
       }
 
-      const productId =
-        typeof itemLine.price.product === 'string'
-          ? itemLine.price.product
-          : itemLine.price.product.id;
+      const currentPriceQuantity = +itemLine.price.metadata.quantity;
 
-      if (!productId) {
-        throw Error('Product ID was not identified');
-      }
+      if (currentPriceQuantity > 0) {
+        const remainingPriceQuantity = currentPriceQuantity - (itemLine.quantity ?? 0);
 
-      const product = await stripe.products.retrieve(productId);
-      const currentProductQuantity = +product.metadata.quantity;
-
-      if (currentProductQuantity > 0) {
-        const remainingProductQuantity = currentProductQuantity - itemLine.quantity;
-
-        await stripe.products.update(productId, {
+        await stripe.prices.update(itemLine.price.id, {
           metadata: {
-            quantity: remainingProductQuantity > 0 ? remainingProductQuantity : 0,
+            quantity: remainingPriceQuantity > 0 ? remainingPriceQuantity : 0,
           },
         });
       }
     });
 
-    await Promise.all(updateProductsMetadataTasks ?? []);
+    await Promise.all(updatePricesMetadataTasks ?? []);
 
     await stripe.paymentIntents.update(paymentId, {
       metadata: {

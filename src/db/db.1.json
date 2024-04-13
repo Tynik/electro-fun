@@ -1383,6 +1383,8 @@
   },
   "items": [
     {
+      "stripeProductId": "prod_OCUu4bkuW5uDxX",
+      "stripePriceId": "price_1NQ5uUARhMwSarZXeichshFk",
       "categoryId": 4,
       "title": "LM2596s DC-DC 3A",
       "subtitle": "Step-Down Voltage Regulator",
@@ -1391,10 +1393,7 @@
         "keywords": "lm2596s, voltage-regulator, step-down"
       },
       "buy": true,
-      "price": 2.9,
-      "stripePriceId": "price_1NQ5uUARhMwSarZXeichshFk",
       "weight": 25,
-      "quantity": 2,
       "datasheetId": "LM2596",
       "images": [
         {
@@ -1440,6 +1439,8 @@
       ]
     },
     {
+      "stripeProductId": "prod_OCUx258nVbZ0Ua",
+      "stripePriceId": "price_1NQ5xzARhMwSarZXhmGQXjAM",
       "categoryId": 1,
       "title": "BMP280",
       "subtitle": "Sensor for Temperature Measurement, etc.",
@@ -1449,10 +1450,7 @@
       },
       "manufacturerId": "3",
       "buy": true,
-      "price": 1.50,
-      "stripePriceId": "price_1NQ5xzARhMwSarZXhmGQXjAM",
       "weight": 5,
-      "quantity": 9,
       "datasheetId": "BMP280",
       "images": [
         {
@@ -1524,6 +1522,8 @@
       ]
     },
     {
+      "stripeProductId": "prod_OCV1nLjoDv1Rif",
+      "stripePriceId": "price_1NQ61SARhMwSarZX2WLk7jKd",
       "categoryId": 5,
       "title": "MPU-9250",
       "subtitle": "Gyroscope/Accelerometer/Magnetometer",
@@ -1532,10 +1532,7 @@
         "keywords": "mpu-9250, invensense, gyroscope, accelerometer, magnetometer, dmp, i2c"
       },
       "buy": true,
-      "price": 3.9,
-      "stripePriceId": "price_1NQ61SARhMwSarZX2WLk7jKd",
       "weight": 5,
-      "quantity": 1,
       "datasheetId": "MPU-9250A-1.1",
       "companyUrl": "https://invensense.tdk.com",
       "images": [
@@ -1618,7 +1615,7 @@
         "description": "CCS811 - Air Quality Sensor",
         "keywords": "sensor, co2, air quality, particles, voc, tvoc"
       },
-      "buy": true,
+      "buy": false,
       "price": 0,
       "weight": 10,
       "quantity": 0,
@@ -1693,6 +1690,8 @@
       ]
     },
     {
+      "stripeProductId": "prod_OCV4UtBM9DcD3P",
+      "stripePriceId": "price_1NQ64TARhMwSarZXA5VfFuPI",
       "categoryId": 1,
       "title": "APDS-9960",
       "subtitle": "RGB Color Sensor and Gesture Recognition",
@@ -1701,10 +1700,7 @@
         "keywords": "sensor, gestures, rgb, recognition, i2c"
       },
       "buy": true,
-      "price": 3.3,
-      "stripePriceId": "price_1NQ64TARhMwSarZXA5VfFuPI",
       "weight": 5,
-      "quantity": 9,
       "datasheetId": "APDS-9960",
       "images": [
         {
@@ -1771,6 +1767,8 @@
       ]
     },
     {
+      "stripeProductId": "prod_OCV7Wgy4XCgntI",
+      "stripePriceId": "price_1NQ674ARhMwSarZX8ZkzOS8m",
       "categoryId": 7,
       "title": "MAC Series 35",
       "subtitle": "Electromagnetically Controlled Solenoid",
@@ -1779,10 +1777,7 @@
         "keywords": "mac, solenoid, boost, vacuum, pressure, control, electromagnet"
       },
       "buy": true,
-      "price": 12.9,
-      "stripePriceId": "price_1NQ674ARhMwSarZX8ZkzOS8m",
       "weight": 150,
-      "quantity": 2,
       "datasheetId": "MAC-35A",
       "images": [
         {
@@ -1836,6 +1831,8 @@
       ]
     },
     {
+      "stripeProductId": "prod_OCV9MtNxug8c9x",
+      "stripePriceId": "price_1NQ69FARhMwSarZXRNj9MqxP",
       "categoryId": 3,
       "title": "TEC1-12715",
       "subtitle": "Peltier Element 40x40x4mm, up to 136W",
@@ -1845,10 +1842,7 @@
       },
       "datasheetId": "TEC1-12715",
       "buy": true,
-      "price": 4,
-      "stripePriceId": "price_1NQ69FARhMwSarZXRNj9MqxP",
       "weight": 25,
-      "quantity": 5,
       "images": [
         {
           "src": "/photos/TEC1-12715-1.webp",
@@ -1992,6 +1986,8 @@
       ]
     },
     {
+      "stripeProductId": "prod_OCVCDAX7FzNZV8",
+      "stripePriceId": "price_1NQ6CGARhMwSarZXFBeaxMs1",
       "categoryId": 8,
       "title": "nRF24L01+",
       "subtitle": "2.4 GHz Transceiver and Audio Streamer",
@@ -2000,10 +1996,7 @@
         "keywords": "nrf24l01, transceiver, receiver, audio-streamer"
       },
       "buy": true,
-      "price": 0.8,
-      "stripePriceId": "price_1NQ6CGARhMwSarZXFBeaxMs1",
       "weight": 5,
-      "quantity": 5,
       "datasheetId": "nRF24L01",
       "images": [
         {
@@ -2361,6 +2354,7 @@
       ]
     },
     {
+      "stripeProductId": "prod_OCeeCfJfhxnzRv",
       "categoryId": 6,
       "title": "CH340",
       "subtitle": "USB to UART Converter",
@@ -2373,17 +2367,11 @@
       "weight": 2,
       "price": {
         "1": {
-          "price": 0,
-          "stripePriceId": "price_1NQFLzARhMwSarZXUJRR4Jju"
+          "stripePriceId": "price_1P5AmRARhMwSarZXVnFPL5Yq"
         },
         "2": {
-          "price": 0.7,
           "stripePriceId": "price_1NQFLZARhMwSarZXz71iQVfm"
         }
-      },
-      "quantity": {
-        "1": 0,
-        "2": 9
       },
       "images": [
         {
@@ -2435,6 +2423,8 @@
       "content": "<p>CH340 is a USB to UART converter chip that transforms USB into a serial UART interface or printer interface. In UART mode, CH340 provides a common MODEM signal to expand the UART interface.</p>"
     },
     {
+      "stripeProductId": "prod_OCVG8Xu9RJlvcb",
+      "stripePriceId": "price_1NQ6GNARhMwSarZXTdfD5iTx",
       "categoryId": 10,
       "title": "IRF3205",
       "subtitle": "MOSFET Transistor up to 55 V and 110 A",
@@ -2443,10 +2433,7 @@
         "keywords": "irf3205, mosfet, transistor, 55v, 110a"
       },
       "buy": true,
-      "price": 0.45,
-      "stripePriceId": "price_1NQ6GNARhMwSarZXTdfD5iTx",
       "weight": 3,
-      "quantity": 10,
       "datasheetId": "IRF3205",
       "manufacturerId": "6",
       "images": [
@@ -2541,6 +2528,8 @@
       ]
     },
     {
+      "stripeProductId": "prod_OCVJeoYY3bE1iu",
+      "stripePriceId": "price_1NQ6IeARhMwSarZX80cgsarK",
       "categoryId": 20,
       "title": "14-Piece Tweezers Set with Case",
       "subtitle": "For Soldering, PCB Repair, Phones, etc.",
@@ -2551,10 +2540,7 @@
       },
       "manufacturerId": "7",
       "buy": true,
-      "price": 17,
-      "stripePriceId": "price_1NQ6IeARhMwSarZX80cgsarK",
       "weight": 700,
-      "quantity": 1,
       "content": "<p>Professional 14-piece tweezers set made of stainless steel with excellent quality for various needs.</p><p>The anti-static coating provides superior protection against electrostatic discharge.</p>",
       "images": [
         {

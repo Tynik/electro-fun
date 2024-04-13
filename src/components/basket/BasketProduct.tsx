@@ -19,13 +19,13 @@ import { CIconButton } from '~/components';
 import { getIcon } from '~/utils';
 import { getProductAllowedQuantity, getProductPrice } from '~/helpers';
 
-export type BasketItemProps = {
-  item: Product;
+export type BasketProductProps = {
+  product: Product;
   stripeProduct: StripeProduct | undefined;
   optionId: ProductOptionId;
 };
 
-const BasketItem = ({ item, stripeProduct, optionId }: BasketItemProps) => {
+const BasketProduct = ({ product, stripeProduct, optionId }: BasketProductProps) => {
   const {
     user: { basket },
     addProductToBasket,
@@ -34,20 +34,22 @@ const BasketItem = ({ item, stripeProduct, optionId }: BasketItemProps) => {
 
   const smMatch = useMediaQuery<any>(theme => theme.breakpoints.down('sm'));
 
-  const basketItem = basket.products[item.id];
+  const basketProduct = basket.products[product.id];
 
-  const itemAllowedQuantity = stripeProduct?.quantity ?? getProductAllowedQuantity(item, optionId);
-  const itemPrice = (getProductPrice(item, optionId) * basketItem[optionId]).toFixed(2);
+  const productAllowedQuantity = getProductAllowedQuantity(stripeProduct, product, optionId);
+  const productPrice = (
+    getProductPrice(stripeProduct, product, optionId) * basketProduct[optionId]
+  ).toFixed(2);
 
   const inStockElement = (
     <Typography variant="caption" color="primary.dark" fontWeight="500" sx={{ userSelect: 'none' }}>
-      In Stock: {itemAllowedQuantity}
+      In Stock: {productAllowedQuantity}
     </Typography>
   );
 
   return (
     <Paper
-      key={item.id}
+      key={product.id}
       sx={{
         padding: 2,
         height: '120px',
@@ -63,10 +65,10 @@ const BasketItem = ({ item, stripeProduct, optionId }: BasketItemProps) => {
         height="100%"
         overflow="hidden"
       >
-        <RouterLink to={`/item/${item.id}`}>
+        <RouterLink to={`/item/${product.id}`}>
           <img
-            src={item.images[0].src}
-            alt={item.images[0].alt}
+            src={product.images[0].src}
+            alt={product.images[0].alt}
             style={{ objectFit: 'cover', height: '100%', maxWidth: '80px', maxHeight: '70px' }}
           />
         </RouterLink>
@@ -79,20 +81,20 @@ const BasketItem = ({ item, stripeProduct, optionId }: BasketItemProps) => {
             textOverflow="ellipsis"
             overflow="hidden"
           >
-            {item.title}
+            {product.title}
 
-            {optionId !== 'undefined' && (
+            {optionId && product.options?.[optionId] && (
               <Chip
                 size="small"
                 color="info"
-                label={item.options[optionId].name}
+                label={product.options[optionId].name}
                 sx={{ marginLeft: 1 }}
               />
             )}
           </Typography>
 
           <Typography variant={'body2'} display={{ xs: 'none', sm: 'block' }}>
-            {item.subtitle}
+            {product.subtitle}
           </Typography>
         </Box>
       </Stack>
@@ -105,7 +107,7 @@ const BasketItem = ({ item, stripeProduct, optionId }: BasketItemProps) => {
         flexShrink={0}
       >
         <Typography variant="subtitle1" flexShrink={0}>
-          {itemPrice} £
+          {productPrice} £
         </Typography>
 
         {smMatch && inStockElement}
@@ -118,17 +120,17 @@ const BasketItem = ({ item, stripeProduct, optionId }: BasketItemProps) => {
           aria-label="Quantity"
         >
           <Button
-            disabled={basketItem[optionId] === 1}
-            onClick={() => removeProductFromBasket(item.id, optionId)}
+            disabled={basketProduct[optionId] === 1}
+            onClick={() => removeProductFromBasket(product.id, optionId)}
           >
             -
           </Button>
 
-          <Button disabled>{basketItem[optionId]}</Button>
+          <Button disabled>{basketProduct[optionId]}</Button>
 
           <Button
-            disabled={basketItem[optionId] >= itemAllowedQuantity}
-            onClick={() => addProductToBasket(item.id, optionId)}
+            disabled={basketProduct[optionId] >= productAllowedQuantity}
+            onClick={() => addProductToBasket(product.id, optionId)}
           >
             +
           </Button>
@@ -139,7 +141,7 @@ const BasketItem = ({ item, stripeProduct, optionId }: BasketItemProps) => {
 
       <Box display={{ xs: 'none', sm: 'flex' }} alignItems="center">
         <CIconButton
-          onClick={() => removeProductFromBasket(item.id, optionId, true)}
+          onClick={() => removeProductFromBasket(product.id, optionId, true)}
           icon={getIcon('deleteForever')}
         />
       </Box>
@@ -147,4 +149,4 @@ const BasketItem = ({ item, stripeProduct, optionId }: BasketItemProps) => {
   );
 };
 
-export default BasketItem;
+export default BasketProduct;

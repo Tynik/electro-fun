@@ -1,15 +1,19 @@
 import React from 'react';
 
-import type { UserInfo, Product, ProductId, ProductOptionId } from '~/types';
+import type { UserInfo, Product, ProductId, ProductOptionId, Nullable } from '~/types';
 
 import { useUser } from '~/hooks';
 
 export type UserContextValue = {
   user: UserInfo;
   totalNumberProductsInBasket: number;
-  getNumberProductsInBasket: (item: Product, optionId: ProductOptionId) => number;
-  addProductToBasket: (itemId: ProductId, optionId: ProductOptionId) => void;
-  removeProductFromBasket: (itemId: ProductId, optionId: ProductOptionId, all?: boolean) => void;
+  getNumberProductsInBasket: (item: Product, optionId: Nullable<ProductOptionId>) => number;
+  addProductToBasket: (itemId: ProductId, optionId: Nullable<ProductOptionId>) => void;
+  removeProductFromBasket: (
+    itemId: ProductId,
+    optionId: Nullable<ProductOptionId>,
+    all?: boolean,
+  ) => void;
   clearBasket: () => void;
 };
 

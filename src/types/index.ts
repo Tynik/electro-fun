@@ -15,6 +15,8 @@ export * from './ids.types';
 export * from './product.types';
 export * from './user.types';
 
+export type Nullable<T> = T | null;
+
 export type Article = {};
 
 export type Seo = {

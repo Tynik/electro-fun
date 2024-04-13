@@ -1,17 +1,18 @@
-import { createHandler, initStripeClient } from '../helpers';
+import { createHandler, initStripeClient, processProductPrices } from '../helpers';
 
 export const handler = createHandler({ allowMethods: ['GET'] }, async ({ event }) => {
-  const productId = event.queryStringParameters.productId;
+  const productId = event.queryStringParameters?.productId;
 
   const stripe = initStripeClient();
 
-  const product = await stripe.products.retrieve(productId);
+  const prices = await stripe.prices.list({
+    product: productId,
+  });
 
   return {
     status: 'ok',
     data: {
-      id: product.id,
-      quantity: +product.metadata.quantity,
+      prices: processProductPrices(prices.data),
     },
   };
 });

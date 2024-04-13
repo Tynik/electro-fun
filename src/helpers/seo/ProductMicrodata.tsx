@@ -1,6 +1,7 @@
 import React from 'react';
 
 import type { Product } from '~/types';
+import type { StripeProduct } from '~/api';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
 import { ProductOfferMicrodata, ProductBrandMicrodata } from '~/helpers';
@@ -8,14 +9,17 @@ import { getProductContributorAvatarSrc } from '~/utils';
 
 export type ProductMicrodataProps = {
   product: Product;
+  stripeProduct: StripeProduct | undefined;
 };
 
-export const ProductMicrodata = ({ product }: ProductMicrodataProps) => {
+export const ProductMicrodata = ({ product, stripeProduct }: ProductMicrodataProps) => {
   return (
     <div itemType={`${SEO_SCHEMA_BASE_URL}/Product`} itemScope>
       <ProductBrandMicrodata product={product} />
 
-      {Boolean(product.price) && <ProductOfferMicrodata product={product} />}
+      {Boolean(product.price) && (
+        <ProductOfferMicrodata product={product} stripeProduct={stripeProduct} />
+      )}
 
       <meta itemProp="name" content={product.title} />
 

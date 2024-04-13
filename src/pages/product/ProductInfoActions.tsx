@@ -12,27 +12,32 @@ import { useSelectedProductOptionId } from '~/hooks';
 import { getProductAllowedQuantity } from '~/helpers';
 
 export type ProductInfoActionsProps = {
-  item: Product;
+  product: Product;
   stripeProduct: StripeProduct | undefined;
 };
 
-export const ProductInfoActions = ({ item, stripeProduct }: ProductInfoActionsProps) => {
+export const ProductInfoActions = ({ product, stripeProduct }: ProductInfoActionsProps) => {
   const { db } = React.useContext(DbContext);
   const { getNumberProductsInBasket, addProductToBasket } = React.useContext(UserContext);
 
-  const selectedProductOptionId = useSelectedProductOptionId(item);
-  const numberProductsInBasket = getNumberProductsInBasket(item, selectedProductOptionId);
+  const selectedProductOptionId = useSelectedProductOptionId(product);
+  const numberProductsInBasket = getNumberProductsInBasket(product, selectedProductOptionId);
 
   const downSmMatch = useMediaQuery<any>(theme => theme.breakpoints.down('sm'));
 
-  const initialProductAvailability =
-    stripeProduct?.quantity ?? getProductAllowedQuantity(item, selectedProductOptionId);
+  const initialProductAvailability = getProductAllowedQuantity(
+    stripeProduct,
+    product,
+    selectedProductOptionId,
+  );
 
-  const productAvailability = item.quantity
+  const productAvailability = product.buy
     ? numberProductsInBasket
       ? initialProductAvailability - numberProductsInBasket
       : initialProductAvailability
     : 0;
+
+  const datasheet = product.datasheetId ? db.datasheets[product.datasheetId] : null;
 
   return (
     <Stack
@@ -41,10 +46,10 @@ export const ProductInfoActions = ({ item, stripeProduct }: ProductInfoActionsPr
       alignItems={downSmMatch ? 'center' : 'normal'}
       justifyContent={'center'}
     >
-      {Boolean(item.datasheetId) && (
+      {datasheet && (
         <ExternalButtonLink
-          href={`/assets/datasheets/${item.datasheetId}.pdf`}
-          hrefLang={db.datasheets[item.datasheetId].lang}
+          href={`/assets/datasheets/${product.datasheetId}.pdf`}
+          hrefLang={datasheet.lang}
           variant={'outlined'}
           startIcon={<LinkIcon />}
         >
@@ -52,9 +57,9 @@ export const ProductInfoActions = ({ item, stripeProduct }: ProductInfoActionsPr
         </ExternalButtonLink>
       )}
 
-      {typeof item.buy === 'string' && item.buy && (
+      {typeof product.buy === 'string' && product.buy && (
         <ExternalButtonLink
-          href={item.buy}
+          href={product.buy}
           variant={'contained'}
           color={'success'}
           startIcon={<ShoppingCartIcon />}
@@ -63,7 +68,7 @@ export const ProductInfoActions = ({ item, stripeProduct }: ProductInfoActionsPr
         </ExternalButtonLink>
       )}
 
-      {item.buy === true && (
+      {product.buy === true && (
         <Box
           sx={{
             display: 'flex',
@@ -77,7 +82,7 @@ export const ProductInfoActions = ({ item, stripeProduct }: ProductInfoActionsPr
                 color={productAvailability >= 0 ? 'success' : 'error'}
               >
                 <Button
-                  onClick={() => addProductToBasket(item.id, selectedProductOptionId)}
+                  onClick={() => addProductToBasket(product.id, selectedProductOptionId)}
                   variant={numberProductsInBasket ? 'outlined' : 'contained'}
                   color={numberProductsInBasket ? 'info' : 'success'}
                   startIcon={getIcon('addShoppingCart')}

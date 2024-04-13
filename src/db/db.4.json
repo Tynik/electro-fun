@@ -2,6 +2,7 @@
   "items": [
     {
       "stripeProductId": "prod_OCf0MkNHp6CnLc",
+      "stripePriceId": "price_1NQFg7ARhMwSarZXMcU2IkDC",
       "categoryId": 21,
       "title": "Jumper Wire Set",
       "subtitle": "140 pcs.",
@@ -11,10 +12,7 @@
         "measurement": "140 pcs."
       },
       "buy": true,
-      "price": 3,
-      "stripePriceId": "price_1NQFg7ARhMwSarZXMcU2IkDC",
       "weight": 50,
-      "quantity": 10,
       "content": "<p>The set includes 140 jumper wires (14 types) of various colors: red, green, yellow, orange, gray, white, blue) and sizes: 2, 5, 7, 10, 12, 15, 17, 20, 22, 25, 50, 75, 100, 125 mm.</p>",
       "images": [
         {
@@ -39,6 +37,7 @@
     },
     {
       "stripeProductId": "prod_PtY29QLZ9Cl5Sv",
+      "stripePriceId": "price_1P3kwpARhMwSarZXxspqp7jh",
       "categoryId": 27,
       "title": "THAT1512",
       "subtitle": "Audio preamplifier",
@@ -47,10 +46,7 @@
         "keywords": "THAT1512, preamplifier, sound, ultra-low noise"
       },
       "buy": true,
-      "price": 4.90,
-      "stripePriceId": "price_1P3kwpARhMwSarZXxspqp7jh",
       "weight": 5,
-      "quantity": 1,
       "datasheetId": "THAT1512",
       "manufacturerId": "14",
       "content": "<p>Introducing the THAT1512, an exceptional analog audio preamplifier integrated circuit meticulously engineered by THAT Corporation. Designed to meet the rigorous demands of professional audio applications, the THAT1512 boasts unparalleled performance and precision.</p>",
@@ -133,6 +129,7 @@
     },
     {
       "stripeProductId": "prod_PtZxJVSgtguXZ7",
+      "stripePriceId": "price_1P3mnFARhMwSarZXMVSTwyk8",
       "categoryId": 28,
       "title": "Microphone Preamplifier",
       "subtitle": "Based on THAT1512",
@@ -141,10 +138,7 @@
         "keywords": "THAT1512, NMA0515SC, pcb, audio, preamplifier, sound, ultra-low noise"
       },
       "buy": true,
-      "price": 2.70,
-      "stripePriceId": "price_1P3mnFARhMwSarZXMVSTwyk8",
       "weight": 15,
-      "quantity": 1,
       "features": [
         {
           "refId": 13,
