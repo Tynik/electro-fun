@@ -42,19 +42,28 @@ export const useUser = () => {
   const removeProductFromBasket = React.useCallback(
     (productId: ProductId, optionId: ProductOptionId, all = false) => {
       setUser(user => {
-        let products = { ...user.basket.products };
+        const products = { ...user.basket.products };
 
         if (all) {
           delete products[productId][optionId];
+
+          if (!Object.keys(products[productId]).length) {
+            // Delete product itself if all options are removed
+            delete products[productId];
+          }
         } else {
-          products[productId][optionId]--;
+          products[productId][optionId] -= 1;
+
+          if (!products[productId][optionId]) {
+            delete products[productId];
+          }
         }
 
         return {
           ...user,
           basket: {
-            products,
             ...user.basket,
+            products,
           },
         };
       });

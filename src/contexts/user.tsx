@@ -1,4 +1,5 @@
 import React from 'react';
+import type { PropsWithChildren } from 'react';
 
 import type { UserInfo, Product, ProductId, ProductOptionId, Nullable } from '~/types';
 
@@ -28,7 +29,7 @@ const initialUserContextState: UserContextValue = {
 
 export const UserContext = React.createContext<UserContextValue>(initialUserContextState);
 
-export const UserContextProvider = ({ children }) => {
+export const UserContextProvider = ({ children }: PropsWithChildren) => {
   const user = useUser();
 
   return <UserContext.Provider value={user}>{children}</UserContext.Provider>;
