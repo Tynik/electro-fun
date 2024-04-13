@@ -57,11 +57,6 @@ const run = () => {
       return;
     }
 
-    if (typeof product.quantity !== 'number') {
-      console.warn(`The availability is not a number for product "${product.title}"`);
-      return;
-    }
-
     if (!product.images.length) {
       console.warn(`Images are missing for product "${product.title}"`);
       return;
