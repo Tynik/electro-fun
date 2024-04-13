@@ -47,6 +47,9 @@ const BasketProduct = ({ product, stripeProduct, optionId }: BasketProductProps)
     </Typography>
   );
 
+  const productImage =
+    product.images.find(image => image.optionId === optionId) ?? product.images[0];
+
   return (
     <Paper
       key={product.id}
@@ -67,8 +70,8 @@ const BasketProduct = ({ product, stripeProduct, optionId }: BasketProductProps)
       >
         <RouterLink to={`/item/${product.id}`}>
           <img
-            src={product.images[0].src}
-            alt={product.images[0].alt}
+            src={productImage.src}
+            alt={productImage.alt}
             style={{ objectFit: 'cover', height: '100%', maxWidth: '80px', maxHeight: '70px' }}
           />
         </RouterLink>

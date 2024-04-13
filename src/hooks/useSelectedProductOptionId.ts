@@ -1,11 +1,14 @@
 import React from 'react';
 
-import type { Product } from '~/types';
+import type { Nullable, Product } from '~/types';
 
 import { useQueryParams } from '~/utils';
 import { getProductDefaultOption } from '~/helpers';
 
-export const useSelectedProductOptionId = (item: Product, applyDefault = true): string | null => {
+export const useSelectedProductOptionId = (
+  item: Nullable<Product>,
+  applyDefault = true,
+): string | null => {
   const { optionId: selectedProductOptionId } = useQueryParams();
 
   return React.useMemo(

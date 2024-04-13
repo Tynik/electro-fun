@@ -135,7 +135,7 @@ export const getStripeProductPriceId = (product: Product, optionId: Nullable<Pro
 export const getProductPrice = (
   stripeProduct: StripeProduct | undefined,
   product: Product,
-  optionId: ProductOptionId,
+  optionId: Nullable<ProductOptionId>,
 ) => {
   if (stripeProduct) {
     const stripeProductPriceId = getStripeProductPriceId(product, optionId);
@@ -183,7 +183,7 @@ export const getProductWeight = (product: Product, optionId: ProductOptionId) =>
 export const getProductAvailabilitySeoSchema = (
   stripeProduct: StripeProduct | undefined,
   product: Product,
-  optionId: ProductOptionId,
+  optionId: Nullable<ProductOptionId>,
 ) => {
   const quantity = getProductAllowedQuantity(stripeProduct, product, optionId);
 

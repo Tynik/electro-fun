@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-import type { Product } from '~/types';
+import type { Nullable, Product } from '~/types';
 
 import { DbContext } from '~/contexts';
 import { getProductPrice } from '~/helpers';
@@ -20,7 +20,7 @@ export const useCurrentProduct = () => {
   const { db, loadNextDbPart } = React.useContext(DbContext);
   const { search, foundProducts } = useJsonDbSearch(db, loadNextDbPart);
 
-  const [product, setProduct] = React.useState<Product | null>(null);
+  const [product, setProduct] = React.useState<Nullable<Product>>(null);
   const { errors, setErrors, printErrors } = useStaticErrors();
 
   const selectedProductOptionId = useSelectedProductOptionId(product);
@@ -56,8 +56,8 @@ export const useCurrentProduct = () => {
   );
 
   const { data: stripeProduct, isFetching: isStripeProductFetching } = useQuery(
-    ['stripe-product', product?.id],
-    () => getStripeProduct(product!.stripeProductId),
+    ['stripe-product', product?.stripeProductId],
+    () => getStripeProduct(product!.stripeProductId!),
     {
       enabled: Boolean(product?.stripeProductId),
     },

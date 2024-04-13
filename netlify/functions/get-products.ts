@@ -18,8 +18,8 @@ export const handler = createHandler({ allowMethods: ['GET'] }, async ({ event }
 
   const getProductsPricesTasks = products.data.map(async product => {
     const prices = await stripe.prices.list({
-      active: true,
       product: product.id,
+      active: true,
     });
 
     productsPrices[product.id] = processProductPrices(prices.data);

@@ -7,6 +7,7 @@ export const handler = createHandler({ allowMethods: ['GET'] }, async ({ event }
 
   const prices = await stripe.prices.list({
     product: productId,
+    active: true,
   });
 
   return {
