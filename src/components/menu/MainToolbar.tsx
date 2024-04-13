@@ -18,7 +18,7 @@ const MainToolbar = ({ menuIsOpened, onSearch, onOpenMenu }: ToolbarProps) => {
   const navigate = useNavigate();
 
   const { db } = React.useContext(DbContext);
-  const { totalNumberItemsInBasket } = React.useContext(UserContext);
+  const { totalNumberProductsInBasket } = React.useContext(UserContext);
 
   const [searchValue, setSearchValue] = React.useState<string>(null);
 
@@ -75,8 +75,8 @@ const MainToolbar = ({ menuIsOpened, onSearch, onOpenMenu }: ToolbarProps) => {
       <Box sx={{ display: 'flex' }}>
         <CIconButton
           onClick={onBasketClick}
-          disabled={!totalNumberItemsInBasket}
-          badgeContent={totalNumberItemsInBasket}
+          disabled={!totalNumberProductsInBasket}
+          badgeContent={totalNumberProductsInBasket}
           icon={getIcon('shoppingBasket')}
           color={'inherit'}
           aria-label={'Open cart'}

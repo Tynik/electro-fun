@@ -4,24 +4,24 @@ import { Box, Grid, Typography, Alert, Divider, useTheme } from '@mui/material';
 
 import { getStripeProduct } from '~/api';
 import { ProductMicrodata } from '~/helpers';
-import { useTextProcessor, useSmoothScroll, useSeo, useCurrentItem } from '~/hooks';
+import { useTextProcessor, useSmoothScroll, useSeo, useCurrentProduct } from '~/hooks';
 import { Loader, ExternalLink, ImageSlider, BackButton } from '~/components';
 
-import { ItemInfoFeatures } from './ItemInfoFeatures';
-import { ItemInfoOptions } from './ItemInfoOptions';
-import { ItemInfoExternalLinks } from './ItemInfoExternalLinks';
-import { ItemInfoApplications } from './ItemInfoApplications';
-import { ItemInfoAccessories } from './ItemInfoAccessories';
-import { ItemInfoActions } from './ItemInfoActions';
-import { ItemInfoContributors } from './ItemInfoContributors';
-import { ItemInfoRelatedDatasheets } from './ItemInfoRelatedDatasheets';
-import { ItemInfoHeader } from './ItemInfoHeader';
-import { ItemInfoPeculiarities } from './ItemInfoPeculiarities';
+import { ProductInfoFeatures } from './ProductInfoFeatures';
+import { ProductInfoOptions } from './ProductInfoOptions';
+import { ProductInfoExternalLinks } from './ProductInfoExternalLinks';
+import { ProductInfoApplications } from './ProductInfoApplications';
+import { ProductInfoAccessories } from './ProductInfoAccessories';
+import { ProductInfoActions } from './ProductInfoActions';
+import { ProductInfoContributors } from './ProductInfoContributors';
+import { ProductInfoRelatedDatasheets } from './ProductInfoRelatedDatasheets';
+import { ProductInfoHeader } from './ProductInfoHeader';
+import { ProductInfoPeculiarities } from './ProductInfoPeculiarities';
 
-export const ItemInfoPage = () => {
+export const ProductInfoPage = () => {
   const theme = useTheme();
 
-  const { db, item, price, images, seo, errors, printErrors } = useCurrentItem();
+  const { db, product, price, images, seo, errors, printErrors } = useCurrentProduct();
 
   const { wordsWrapper } = useTextProcessor();
 
@@ -30,10 +30,10 @@ export const ItemInfoPage = () => {
   useSeo(Object.keys(seo).length ? seo : null);
 
   const { data: stripeProduct, isFetching: isStripeProductFetching } = useQuery(
-    ['stripe-product', item?.id],
-    () => getStripeProduct(item!.stripeProductId),
+    ['stripe-product', product?.id],
+    () => getStripeProduct(product!.stripeProductId),
     {
-      enabled: Boolean(item?.stripeProductId),
+      enabled: Boolean(product?.stripeProductId),
     },
   );
 
@@ -60,38 +60,38 @@ export const ItemInfoPage = () => {
     return printErrors();
   }
 
-  if (item === null || isStripeProductFetching) {
+  if (product === null || isStripeProductFetching) {
     return <Loader />;
   }
 
   return (
     <Grid spacing={2} container>
-      <ProductMicrodata item={item} />
+      <ProductMicrodata product={product} />
 
       <Grid xs={12} item>
         <BackButton />
       </Grid>
 
       <Grid xs={12} item>
-        <ItemInfoHeader item={item} />
+        <ProductInfoHeader item={product} />
       </Grid>
 
       <Grid xs={12} md={6} item>
         <ImageSlider images={images} height={'300px'} />
 
-        {item.content && (
+        {product.content && (
           <Box component={'main'} marginTop={theme.spacing(2)}>
             <Typography variant={'overline'}>Description</Typography>
 
             <Typography
               variant={'body1'}
               sx={{ whiteSpace: 'pre-line', textAlign: 'justify' }}
-              dangerouslySetInnerHTML={{ __html: item.content }}
+              dangerouslySetInnerHTML={{ __html: product.content }}
             />
           </Box>
         )}
 
-        {item.warningContent && (
+        {product.warningContent && (
           <Box marginTop={2}>
             <Alert
               severity={'warning'}
@@ -103,50 +103,50 @@ export const ItemInfoPage = () => {
                 alignItems: 'center',
               }}
             >
-              <span dangerouslySetInnerHTML={{ __html: item.warningContent }} />
+              <span dangerouslySetInnerHTML={{ __html: product.warningContent }} />
             </Alert>
           </Box>
         )}
 
-        {item.relatedDatasheetIds && item.relatedDatasheetIds.length > 0 && (
+        {product.relatedDatasheetIds && product.relatedDatasheetIds.length > 0 && (
           <Box marginTop={theme.spacing(2)}>
-            <ItemInfoRelatedDatasheets relatedDatasheetIds={item.relatedDatasheetIds} />
+            <ProductInfoRelatedDatasheets relatedDatasheetIds={product.relatedDatasheetIds} />
           </Box>
         )}
 
-        {item.peculiarities && item.peculiarities.length > 0 && (
+        {product.peculiarities && product.peculiarities.length > 0 && (
           <Box marginTop={theme.spacing(2)}>
-            <ItemInfoPeculiarities peculiarities={item.peculiarities} />
+            <ProductInfoPeculiarities peculiarities={product.peculiarities} />
           </Box>
         )}
 
-        {item.applicationIds && item.applicationIds.length > 0 && (
+        {product.applicationIds && product.applicationIds.length > 0 && (
           <Box marginTop={theme.spacing(2)}>
-            <ItemInfoApplications applicationIds={item.applicationIds} />
+            <ProductInfoApplications applicationIds={product.applicationIds} />
           </Box>
         )}
 
-        {item.accessories && item.accessories.length > 0 && (
+        {product.accessories && product.accessories.length > 0 && (
           <Box marginTop={theme.spacing(2)}>
-            <ItemInfoAccessories accessories={item.accessories} />
+            <ProductInfoAccessories accessories={product.accessories} />
           </Box>
         )}
 
-        {item.externalLinks && item.externalLinks.length > 0 && (
+        {product.externalLinks && product.externalLinks.length > 0 && (
           <Box marginTop={theme.spacing(2)}>
-            <ItemInfoExternalLinks externalLinks={item.externalLinks} />
+            <ProductInfoExternalLinks externalLinks={product.externalLinks} />
           </Box>
         )}
 
-        {item.contributors && item.contributors.length > 0 && (
+        {product.contributors && product.contributors.length > 0 && (
           <Box marginTop={theme.spacing(2)}>
-            <ItemInfoContributors contributors={item.contributors} />
+            <ProductInfoContributors contributors={product.contributors} />
           </Box>
         )}
 
-        {item.codeExamples && item.codeExamples.length > 0 && (
+        {product.codeExamples && product.codeExamples.length > 0 && (
           <Box marginTop={theme.spacing(2)}>
-            {item.codeExamples.map(codeExample => (
+            {product.codeExamples.map(codeExample => (
               <pre key={codeExample.name}>{codeExample.code}</pre>
             ))}
           </Box>
@@ -154,20 +154,20 @@ export const ItemInfoPage = () => {
       </Grid>
 
       <Grid xs={12} md={6} item>
-        {item.features && item.features.length > 0 && (
+        {product.features && product.features.length > 0 && (
           <>
-            <ItemInfoFeatures item={item} />
+            <ProductInfoFeatures product={product} />
             <Divider sx={{ marginTop: theme.spacing(2) }} />
           </>
         )}
 
-        {item.options && Object.keys(item.options).length > 0 && (
+        {product.options && Object.keys(product.options).length > 0 && (
           <Box
             sx={{
               marginTop: theme.spacing(2),
             }}
           >
-            <ItemInfoOptions item={item} />
+            <ProductInfoOptions product={product} />
           </Box>
         )}
 
@@ -185,7 +185,7 @@ export const ItemInfoPage = () => {
         )}
 
         <Box marginTop={theme.spacing(2)}>
-          <ItemInfoActions item={item} stripeProduct={stripeProduct} />
+          <ProductInfoActions item={product} stripeProduct={stripeProduct} />
         </Box>
       </Grid>
     </Grid>

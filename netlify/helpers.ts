@@ -93,7 +93,7 @@ export const createHandler = <Payload = unknown>(
 
 export const initStripeClient = () => {
   return new Stripe(STRIPE_API_KEY, {
-    apiVersion: '2023-10-16',
+    apiVersion: '2024-04-10',
   });
 };
 

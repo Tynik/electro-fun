@@ -11,33 +11,33 @@ import {
   useMediaQuery,
 } from '@mui/material';
 
-import type { Item, ItemOptionId } from '~/types';
+import type { Product, ProductOptionId } from '~/types';
 import type { StripeProduct } from '~/api';
 
 import { UserContext } from '~/contexts';
 import { CIconButton } from '~/components';
 import { getIcon } from '~/utils';
-import { getItemAllowedQuantity, getItemPrice } from '~/helpers';
+import { getProductAllowedQuantity, getProductPrice } from '~/helpers';
 
 export type BasketItemProps = {
-  item: Item;
+  item: Product;
   stripeProduct: StripeProduct | undefined;
-  optionId: ItemOptionId;
+  optionId: ProductOptionId;
 };
 
 const BasketItem = ({ item, stripeProduct, optionId }: BasketItemProps) => {
   const {
     user: { basket },
-    addItemToBasket,
-    removeItemFromBasket,
+    addProductToBasket,
+    removeProductFromBasket,
   } = React.useContext(UserContext);
 
   const smMatch = useMediaQuery<any>(theme => theme.breakpoints.down('sm'));
 
-  const basketItem = basket.items[item.id];
+  const basketItem = basket.products[item.id];
 
-  const itemAllowedQuantity = stripeProduct?.quantity ?? getItemAllowedQuantity(item, optionId);
-  const itemPrice = (getItemPrice(item, optionId) * basketItem[optionId]).toFixed(2);
+  const itemAllowedQuantity = stripeProduct?.quantity ?? getProductAllowedQuantity(item, optionId);
+  const itemPrice = (getProductPrice(item, optionId) * basketItem[optionId]).toFixed(2);
 
   const inStockElement = (
     <Typography variant="caption" color="primary.dark" fontWeight="500" sx={{ userSelect: 'none' }}>
@@ -119,7 +119,7 @@ const BasketItem = ({ item, stripeProduct, optionId }: BasketItemProps) => {
         >
           <Button
             disabled={basketItem[optionId] === 1}
-            onClick={() => removeItemFromBasket(item.id, optionId)}
+            onClick={() => removeProductFromBasket(item.id, optionId)}
           >
             -
           </Button>
@@ -128,7 +128,7 @@ const BasketItem = ({ item, stripeProduct, optionId }: BasketItemProps) => {
 
           <Button
             disabled={basketItem[optionId] >= itemAllowedQuantity}
-            onClick={() => addItemToBasket(item.id, optionId)}
+            onClick={() => addProductToBasket(item.id, optionId)}
           >
             +
           </Button>
@@ -139,7 +139,7 @@ const BasketItem = ({ item, stripeProduct, optionId }: BasketItemProps) => {
 
       <Box display={{ xs: 'none', sm: 'flex' }} alignItems="center">
         <CIconButton
-          onClick={() => removeItemFromBasket(item.id, optionId, true)}
+          onClick={() => removeProductFromBasket(item.id, optionId, true)}
           icon={getIcon('deleteForever')}
         />
       </Box>

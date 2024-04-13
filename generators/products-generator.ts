@@ -1,13 +1,13 @@
 import { writeFileSync, appendFileSync } from 'fs';
 import { getProductLink, readDb } from './helpers';
-import { generateItemId, mergeDeep } from '../src/utils';
+import { generateProductId, mergeDeep } from '../src/utils';
 import { SITE_DOMAIN } from './constants';
-import type { Db, ItemImage } from '../src/types';
+import type { Db, ProductImage } from '../src/types';
 
 const wrapInDoubleQuotes = (value: string) => `"${value}"`;
 
-const getProductImageSrc = (itemImage: ItemImage) =>
-  itemImage.src.startsWith('http') ? itemImage.src : SITE_DOMAIN + itemImage.src;
+const getProductImageSrc = (productImage: ProductImage) =>
+  productImage.src.startsWith('http') ? productImage.src : SITE_DOMAIN + productImage.src;
 
 const PRODUCTS_FILENAME = 'products.txt';
 
@@ -47,71 +47,71 @@ const run = () => {
     db = mergeDeep(db ?? {}, dbPart);
   });
 
-  db.items.forEach(item => {
-    if (!item.buy) {
+  db.items.forEach(product => {
+    if (!product.buy) {
       return;
     }
 
-    if (typeof item.price !== 'number') {
-      console.warn(`The price is not a number for product "${item.title}"`);
+    if (typeof product.price !== 'number') {
+      console.warn(`The price is not a number for product "${product.title}"`);
       return;
     }
 
-    if (typeof item.quantity !== 'number') {
-      console.warn(`The availability is not a number for product "${item.title}"`);
+    if (typeof product.quantity !== 'number') {
+      console.warn(`The availability is not a number for product "${product.title}"`);
       return;
     }
 
-    if (!item.images.length) {
-      console.warn(`Images are missing for product "${item.title}"`);
+    if (!product.images.length) {
+      console.warn(`Images are missing for product "${product.title}"`);
       return;
     }
 
-    if (!item.seo) {
-      console.warn(`SEO is missing for product "${item.title}"`);
+    if (!product.seo) {
+      console.warn(`SEO is missing for product "${product.title}"`);
       return;
     }
 
-    if (!item.price) {
-      console.warn(`The price is "0" for product "${item.title}"`);
+    if (!product.price) {
+      console.warn(`The price is "0" for product "${product.title}"`);
       return;
     }
 
-    const productId = generateItemId(item);
+    const productId = generateProductId(product);
 
     const brand = wrapInDoubleQuotes(
-      db.manufacturers[item.manufacturerId]?.name ?? db.brands[item.brandId]?.name ?? '',
+      db.manufacturers[product.manufacturerId]?.name ?? db.brands[product.brandId]?.name ?? '',
     );
 
-    const availability = item.quantity ? 'in_stock' : 'out_of_stock';
+    const availability = product.quantity ? 'in_stock' : 'out_of_stock';
 
-    const additionalImages = item.images
+    const additionalImages = product.images
       .slice(1, MAX_PRODUCT_ADDITIONAL_IMAGES)
       .map(getProductImageSrc);
 
     productsData.push([
       productId,
       // google_product_category
-      item.googleCategoryId,
-      wrapInDoubleQuotes(item.title),
+      product.googleCategoryId,
+      wrapInDoubleQuotes(product.title),
       brand,
-      item.gtin,
-      item.mpn,
+      product.gtin,
+      product.mpn,
       // identifier_exists
-      Boolean(item.gtin || item.mpn),
-      wrapInDoubleQuotes(item.seo.description),
-      item.price,
+      Boolean(product.gtin || product.mpn),
+      wrapInDoubleQuotes(product.seo.description),
+      product.price,
       availability,
       // quantity
-      item.quantity,
+      product.quantity,
       // condition
       'new',
       // weight
-      `${item.weight ?? 0} g`,
+      `${product.weight ?? 0} g`,
       'adult',
-      getProductImageSrc(item.images[0]),
+      getProductImageSrc(product.images[0]),
       additionalImages.join(','),
-      getProductLink(item),
+      getProductLink(product),
       // store_code
       'SSE01',
       // pickup_method

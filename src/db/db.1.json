@@ -228,10 +228,20 @@
       "lang": "en",
       "manufacturerId": "15"
     },
+    "CM108B": {
+      "lang": "en"
+    },
+    "CM108": {
+      "lang": "en"
+    },
     "2N4416": {
       "lang": "en"
     },
     "THAT1512": {
+      "lang": "en",
+      "manufacturerId": "14"
+    },
+    "THAT1580": {
       "lang": "en",
       "manufacturerId": "14"
     },
@@ -529,7 +539,7 @@
     },
     {
       "name": "Configuring gain with the THAT1510 and THAT1512.pdf",
-      "url": "Configuring-gain-THAT1510|THAT1512.pdf"
+      "url": "Configuring-gain-THAT1510-THAT1512.pdf"
     }
   ],
   "categories": [

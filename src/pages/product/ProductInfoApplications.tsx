@@ -5,11 +5,11 @@ import { ArrowRight as ArrowRightIcon } from '@mui/icons-material';
 import type { ApplicationId } from '~/types';
 import { DbContext } from '~/contexts';
 
-export type ItemInfoApplicationsProps = {
+export type ProductInfoApplicationsProps = {
   applicationIds: ApplicationId[];
 };
 
-export const ItemInfoApplications = ({ applicationIds }: ItemInfoApplicationsProps) => {
+export const ProductInfoApplications = ({ applicationIds }: ProductInfoApplicationsProps) => {
   const theme = useTheme();
 
   const { db } = React.useContext(DbContext);
@@ -24,6 +24,7 @@ export const ItemInfoApplications = ({ applicationIds }: ItemInfoApplicationsPro
             <ListItemIcon sx={{ minWidth: theme.spacing(1) }}>
               <ArrowRightIcon />
             </ListItemIcon>
+
             <ListItemText>{db.applications[applicationId]}</ListItemText>
           </ListItem>
         ))}

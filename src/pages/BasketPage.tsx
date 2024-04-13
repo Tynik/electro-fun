@@ -7,7 +7,7 @@ import { getStripeProducts } from '~/api';
 import { DbContext, UserContext } from '~/contexts';
 import { BackButton, Loader, BasketStep1, BasketStep2 } from '~/components';
 import { useJsonDbSearch } from '~/hooks';
-import { getItemPrice } from '~/helpers';
+import { getProductPrice } from '~/helpers';
 import { useQueryParams } from '~/utils';
 
 export const BasketPage = () => {
@@ -15,7 +15,7 @@ export const BasketPage = () => {
   const { step: queryStep } = useQueryParams();
 
   const { db, loadNextDbPart } = React.useContext(DbContext);
-  const { search, foundItems: items } = useJsonDbSearch(db, loadNextDbPart);
+  const { search, foundProducts: items } = useJsonDbSearch(db, loadNextDbPart);
 
   const {
     user: { basket },
@@ -32,7 +32,7 @@ export const BasketPage = () => {
     ['stripe-products'],
     () => getStripeProducts(stripeProductIds!),
     {
-      enabled: stripeProductIds?.length > 0,
+      enabled: Boolean(stripeProductIds?.length),
     },
   );
 
@@ -41,16 +41,17 @@ export const BasketPage = () => {
   }, [step]);
 
   React.useEffect(() => {
-    search({ ids: Object.keys(basket.items) });
-  }, [basket.items]);
+    search({ ids: Object.keys(basket.products) });
+  }, [basket.products]);
 
   const totalPrice = React.useMemo(
     () =>
       items?.reduce((totalPrice, item) => {
-        const basketItem = basket.items[item.id];
+        const basketItem = basket.products[item.id];
 
         const itemsPrice = Object.keys(basketItem).reduce(
-          (price, optionId) => price + getItemPrice(item, optionId) * basketItem[optionId],
+          (itemsTotalPrice, optionId) =>
+            itemsTotalPrice + getProductPrice(item, optionId) * basketItem[optionId],
           0,
         );
 

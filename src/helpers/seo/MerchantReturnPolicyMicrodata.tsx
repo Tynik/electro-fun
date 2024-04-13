@@ -26,7 +26,7 @@ export const MerchantReturnPolicyMicrodata = () => {
 
       <MonetaryAmountMicrodata
         property="returnShippingFeesAmount"
-        minValue="1.35"
+        minValue="1.55"
         maxValue="7.00"
       />
     </div>

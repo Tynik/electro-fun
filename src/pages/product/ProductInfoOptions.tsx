@@ -1,31 +1,31 @@
 import React from 'react';
 import { FormLabel, RadioGroup, FormControlLabel, Radio, Chip, FormControl } from '@mui/material';
 
-import type { Item } from '~/types';
+import type { Product } from '~/types';
 
 import { UserContext } from '~/contexts';
 import { useQueryParams } from '~/utils/router';
-import { getItemDefaultOption } from '~/helpers';
+import { getProductDefaultOption } from '~/helpers';
 import { useNavigate } from 'react-router-dom';
 
-export type ItemInfoOptionsProps = {
-  item: Item;
+export type ProductInfoOptionsProps = {
+  product: Product;
 };
 
-export const ItemInfoOptions = ({ item }: ItemInfoOptionsProps) => {
+export const ProductInfoOptions = ({ product }: ProductInfoOptionsProps) => {
   const navigate = useNavigate();
 
-  const { optionId: selectedItemOptionId } = useQueryParams();
+  const { optionId: selectedProductOptionId } = useQueryParams();
 
   const {
     user: { basket },
   } = React.useContext(UserContext);
 
-  const itemOptionsInBasket = basket.items[item.id] || {};
+  const productOptionsInBasket = basket.products[product.id] || {};
 
-  const defaultItemOptionId = React.useMemo(
-    () => selectedItemOptionId || getItemDefaultOption(item),
-    []
+  const defaultProductOptionId = React.useMemo(
+    () => selectedProductOptionId || getProductDefaultOption(product),
+    [],
   );
 
   const onSelectOption = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -41,23 +41,23 @@ export const ItemInfoOptions = ({ item }: ItemInfoOptionsProps) => {
       <FormLabel component={'legend'}>Options</FormLabel>
 
       <RadioGroup
-        defaultValue={defaultItemOptionId}
+        defaultValue={defaultProductOptionId}
         aria-label={'option'}
         name={'radio-buttons-group'}
         onChange={onSelectOption}
       >
-        {Object.keys(item.options).map(optionId => (
+        {Object.keys(product.options).map(optionId => (
           <FormControlLabel
             key={optionId}
             value={optionId}
             label={
               <>
-                {item.options[optionId].name}
+                {product.options[optionId].name}
 
-                {itemOptionsInBasket[optionId] && (
+                {productOptionsInBasket[optionId] && (
                   <Chip
                     size={'small'}
-                    label={`in cart x${itemOptionsInBasket[optionId]}`}
+                    label={`in cart x${productOptionsInBasket[optionId]}`}
                     color={'info'}
                     sx={{ marginLeft: 1 }}
                   />

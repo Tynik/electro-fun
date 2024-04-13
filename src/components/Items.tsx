@@ -3,24 +3,24 @@ import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import { Grid, Card, Button, CardActionArea, CardHeader } from '@mui/material';
 import { ExpandMore as ExpandMoreIcon } from '@mui/icons-material';
 
-import type { Item, Items } from '~/types';
+import type { Product } from '~/types';
 
 import { DbContext } from '~/contexts';
 import { NO_IMAGE } from '~/constants';
 import { CCardMedia } from '~/components';
 
-export const getItemMainImageSrc = (item: Item) => {
+export const getProductMainImageSrc = (item: Product) => {
   if (!item.images || !item.images.length) {
     return NO_IMAGE;
   }
   return item.images[0].src;
 };
 
-export type ItemsListProps = {
-  items: Items;
+export type ProductsListProps = {
+  products: Product[];
 };
 
-export const ItemsList = ({ items }: ItemsListProps) => {
+export const ProductsList = ({ products }: ProductsListProps) => {
   const navigate = useNavigate();
 
   const { isNextPage, loadNextPage } = React.useContext(DbContext);
@@ -33,7 +33,7 @@ export const ItemsList = ({ items }: ItemsListProps) => {
 
   return (
     <Grid role={'list'} spacing={2} justifyContent={'center'} container>
-      {items.map(item => (
+      {products.map(item => (
         <Grid key={item.id} role={'listitem'} sx={{ maxWidth: '345px', width: '100%' }} item>
           <Card
             sx={{ width: '100%' }}
@@ -48,13 +48,13 @@ export const ItemsList = ({ items }: ItemsListProps) => {
                 subheaderTypographyProps={{ variant: 'subtitle2' }}
               />
 
-              <CCardMedia src={getItemMainImageSrc(item)} alt={item.title} />
+              <CCardMedia src={getProductMainImageSrc(item)} alt={item.title} />
             </CardActionArea>
           </Card>
         </Grid>
       ))}
 
-      {items.length > 0 && (
+      {products.length > 0 && (
         <Grid xs={12} sx={{ textAlign: 'center' }} item>
           <Button
             onClick={loadNextPage}

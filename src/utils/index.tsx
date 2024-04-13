@@ -1,24 +1,25 @@
-import type { Item, Db, ItemContributorSrc } from '~/types';
+import type { Product, Db, ProductContributorSrc } from '~/types';
 
 export * from './mui';
 export * from './object';
 export * from './text';
 export * from './router';
 
-export const generateItemId = (item: Item) => item.title.replace(/[ ./]/g, '-').toLowerCase();
+export const generateProductId = (product: Product) =>
+  product.title.replace(/[ ./]/g, '-').toLowerCase();
 
-export const preprocessItems = (items: Item[]) =>
-  items.map(item => ({
+export const preprocessProducts = (products: Product[]) =>
+  products.map(item => ({
     ...item,
-    id: generateItemId(item),
+    id: generateProductId(item),
   }));
 
 export const preprocessDb = (db: Db) => ({
   ...db,
-  items: preprocessItems(db.items),
+  items: preprocessProducts(db.items),
 });
 
-export const getItemContributorAvatarSrc = (contributorSrc: ItemContributorSrc): string => {
+export const getProductContributorAvatarSrc = (contributorSrc: ProductContributorSrc): string => {
   if (contributorSrc.source === 'github') {
     return `https://avatars.githubusercontent.com/u/${contributorSrc.userId}?s=60&v=4`;
   }

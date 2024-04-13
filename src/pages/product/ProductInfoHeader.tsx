@@ -1,17 +1,17 @@
 import React from 'react';
 import { Typography, Box, Chip, useTheme } from '@mui/material';
 
-import type { Item } from '~/types';
+import type { Product } from '~/types';
 
 import { InternalLink } from '~/components';
 import { getIcon } from '~/utils';
 import { useCategory } from '~/hooks';
 
-export type ItemInfoHeaderProps = {
-  item: Item;
+export type ProductInfoHeaderProps = {
+  item: Product;
 };
 
-export const ItemInfoHeader = ({ item }: ItemInfoHeaderProps) => {
+export const ProductInfoHeader = ({ item }: ProductInfoHeaderProps) => {
   const theme = useTheme();
 
   const category = useCategory(item.categoryId);

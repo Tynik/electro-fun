@@ -1,28 +1,28 @@
 import React from 'react';
 import { Alert, Box, Typography, useTheme } from '@mui/material';
 
-import type { Items, FoundDatasheets } from '~/types';
+import type { Product, FoundDatasheets } from '~/types';
 
 import { DbContext } from '~/contexts';
 import { SearchResultsPage } from './SearchResultsPage';
 
 export type HomePageProps = {
-  items: Items;
-  foundItems?: Items;
+  products: Product[];
+  foundProducts?: Product[];
   foundDatasheets?: FoundDatasheets;
   isSearching?: boolean;
   onSearchReset?: () => void;
 };
 
 export const HomePage = (props: HomePageProps) => {
-  const { items, foundItems, foundDatasheets, isSearching, onSearchReset } = props;
+  const { products, foundProducts, foundDatasheets, isSearching, onSearchReset } = props;
 
   const theme = useTheme();
   const { db } = React.useContext(DbContext);
 
   return (
     <>
-      {!foundItems && !isSearching && (
+      {!foundProducts && !isSearching && (
         <Box
           sx={{
             margin: {
@@ -69,10 +69,11 @@ export const HomePage = (props: HomePageProps) => {
           </Typography>
 
           <Box sx={{ padding: { md: theme.spacing(0, 12) }, marginTop: { xs: 2, md: 10 } }}>
-            <Alert color="info">
+            <Alert color="info" sx={{ justifyContent: 'center' }}>
               🚚 Don't miss out on our incredible shipping rates starting from just{' '}
-              <strong>£1.35</strong>! 📦 Shop now and enjoy fast and affordable delivery to your
-              doorstep. Hurry, limited time offer! 🔥
+              <strong>£1.55</strong>!
+              <br />
+              📦 Shop now and enjoy fast and affordable delivery to your doorstep. 🔥
             </Alert>
           </Box>
         </Box>
@@ -80,8 +81,8 @@ export const HomePage = (props: HomePageProps) => {
 
       <SearchResultsPage
         isSearching={isSearching}
-        items={items}
-        foundItems={foundItems}
+        products={products}
+        foundProducts={foundProducts}
         foundDatasheets={foundDatasheets}
         onSearchReset={onSearchReset}
       />

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { SearchResultsPage } from '~/pages';
-import { useCurrentCategoryItems } from '~/hooks';
+import { useCurrentCategoryProducts } from '~/hooks';
 import { getIcon } from '~/utils';
 
 import { Loader } from './Loader';
@@ -9,10 +9,10 @@ import { Breadcrumbs } from './Breadcrumbs';
 import { BreadcrumbItem } from './BreadcrumbItem';
 
 export const Category = () => {
-  const { category, foundItems } = useCurrentCategoryItems();
+  const { category, foundProducts } = useCurrentCategoryProducts();
 
-  if (!foundItems) {
-    return <Loader/>;
+  if (!foundProducts) {
+    return <Loader />;
   }
 
   return (
@@ -23,7 +23,7 @@ export const Category = () => {
         </BreadcrumbItem>
       </Breadcrumbs>
 
-      <SearchResultsPage items={foundItems}/>
+      <SearchResultsPage products={foundProducts} />
     </>
   );
 };

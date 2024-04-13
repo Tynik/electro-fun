@@ -2,22 +2,22 @@ import React from 'react';
 import { Alert, Box, Typography, Button } from '@mui/material';
 import { Refresh as RefreshIcon } from '@mui/icons-material';
 
-import type { Items, FoundDatasheets } from '~/types';
+import type { Product, FoundDatasheets } from '~/types';
 
-import { Loader, ItemsList, DatasheetsList } from '~/components';
+import { Loader, ProductsList, DatasheetsList } from '~/components';
 
 export type SearchResultsPageProps = {
-  items: Items;
+  products: Product[];
   foundDatasheets?: FoundDatasheets;
-  foundItems?: Items;
+  foundProducts?: Product[];
   isSearching?: boolean;
   onSearchReset?: () => void;
 };
 
 export const SearchResultsPage = (props: SearchResultsPageProps) => {
   const {
-    items,
-    foundItems = null,
+    products,
+    foundProducts = null,
     foundDatasheets = null,
     isSearching = false,
     onSearchReset = null,
@@ -29,18 +29,18 @@ export const SearchResultsPage = (props: SearchResultsPageProps) => {
 
   return (
     <>
-      {foundItems && onSearchReset && (
+      {foundProducts && onSearchReset && (
         <Button size={'small'} startIcon={<RefreshIcon />} onClick={onSearchReset}>
           Reset search
         </Button>
       )}
 
-      {foundItems !== null && !foundItems.length && !Object.keys(foundDatasheets).length && (
+      {foundProducts !== null && !foundProducts.length && !Object.keys(foundDatasheets).length && (
         <Alert severity={'info'}>Nothing found</Alert>
       )}
 
       <Box sx={{ marginTop: 2 }}>
-        <ItemsList items={foundItems ? foundItems : items} />
+        <ProductsList products={foundProducts ? foundProducts : products} />
       </Box>
 
       {foundDatasheets && Object.keys(foundDatasheets).length > 0 && (

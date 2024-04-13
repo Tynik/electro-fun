@@ -3,18 +3,14 @@ import React from 'react';
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
 import { MonetaryAmountMicrodata } from '~/helpers';
 
-type OfferShippingDetailsMicrodataProps = {
-  //
-};
-
-export const OfferShippingDetailsMicrodata = (props: OfferShippingDetailsMicrodataProps) => {
+export const OfferShippingDetailsMicrodata = () => {
   return (
     <div
       itemProp={'shippingDetails'}
       itemType={`${SEO_SCHEMA_BASE_URL}/OfferShippingDetails`}
       itemScope
     >
-      <MonetaryAmountMicrodata property="shippingRate" minValue="1.35" maxValue="7.00" />
+      <MonetaryAmountMicrodata property="shippingRate" minValue="1.55" maxValue="8.00" />
 
       <div
         itemProp={'shippingDestination'}

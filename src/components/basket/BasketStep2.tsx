@@ -2,13 +2,13 @@ import React from 'react';
 import { Button, Grid, Stack, Box, TextField } from '@mui/material';
 import { useHoneyForm } from '@tynik/react-honey-form';
 
-import type { CheckoutItem } from '~/api';
-import type { Item } from '~/types';
+import type { CheckoutProduct } from '~/api';
+import type { Product } from '~/types';
 
 import { AppContext, UserContext } from '~/contexts';
 import { getIcon } from '~/utils';
 import { checkoutRequest } from '~/api';
-import { getItemPriceId, getItemWeight } from '~/helpers';
+import { getProductStripePriceId, getProductWeight } from '~/helpers';
 
 type CheckoutFormData = {
   fullName: string;
@@ -23,7 +23,7 @@ type CheckoutFormData = {
 
 export type BasketStep2Props = {
   isActive: boolean;
-  items: Item[];
+  items: Product[];
   totalPrice: number;
   onBefore: () => void;
 };
@@ -71,12 +71,12 @@ const BasketStep2 = ({ isActive, items, onBefore }: BasketStep2Props) => {
 
   const makeOrder = async (formData: CheckoutFormData) => {
     try {
-      const checkoutItems = items.reduce<CheckoutItem[]>((result, item) => {
-        Object.keys(basket.items[item.id]).map(optionId => {
+      const checkoutItems = items.reduce<CheckoutProduct[]>((result, item) => {
+        Object.keys(basket.products[item.id]).map(optionId => {
           result.push({
-            priceId: getItemPriceId(item, optionId),
-            weight: getItemWeight(item, optionId),
-            quantity: basket.items[item.id][optionId],
+            priceId: getProductStripePriceId(item, optionId),
+            weight: getProductWeight(item, optionId),
+            quantity: basket.products[item.id][optionId],
           });
         });
 

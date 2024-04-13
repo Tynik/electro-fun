@@ -6,13 +6,13 @@ import type { DatasheetId, Datasheets } from '~/types';
 import { DbContext } from '~/contexts';
 import { DatasheetsList } from '~/components';
 
-export type ItemInfoRelatedDatasheetsProps = {
+export type ProductInfoRelatedDatasheetsProps = {
   relatedDatasheetIds: DatasheetId[];
 };
 
-export const ItemInfoRelatedDatasheets = ({
+export const ProductInfoRelatedDatasheets = ({
   relatedDatasheetIds,
-}: ItemInfoRelatedDatasheetsProps) => {
+}: ProductInfoRelatedDatasheetsProps) => {
   const { db } = React.useContext(DbContext);
 
   const datasheets = React.useMemo(
@@ -22,9 +22,9 @@ export const ItemInfoRelatedDatasheets = ({
           ...datasheets,
           [datasheetId]: db.datasheets[datasheetId],
         }),
-        {}
+        {},
       ),
-    [relatedDatasheetIds]
+    [relatedDatasheetIds],
   );
 
   return (

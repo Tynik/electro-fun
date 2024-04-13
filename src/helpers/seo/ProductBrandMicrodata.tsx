@@ -1,19 +1,19 @@
 import React from 'react';
 
-import type { Item } from '~/types';
+import type { Product } from '~/types';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
 import { DbContext } from '~/contexts';
 import { useItemManufacturer } from '~/hooks';
 
-type ItemBrandMicrodataProps = {
-  item: Item;
+type ProductBrandMicrodataProps = {
+  product: Product;
 };
 
-export const ItemBrandMicrodata = ({ item }: ItemBrandMicrodataProps) => {
+export const ProductBrandMicrodata = ({ product }: ProductBrandMicrodataProps) => {
   const { db } = React.useContext(DbContext);
 
-  const manufacturer = useItemManufacturer(item);
+  const manufacturer = useItemManufacturer(product);
   if (!manufacturer) {
     return null;
   }

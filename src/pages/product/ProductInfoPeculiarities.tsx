@@ -2,13 +2,13 @@ import React from 'react';
 import { List, ListItem, ListItemText, ListItemIcon, Typography, useTheme } from '@mui/material';
 import { ArrowRight as ArrowRightIcon } from '@mui/icons-material';
 
-import type { ItemPeculiarity } from '~/types';
+import type { ProductPeculiarity } from '~/types';
 
-export type ItemInfoPeculiaritiesProps = {
-  peculiarities: ItemPeculiarity[];
+export type ProductInfoPeculiaritiesProps = {
+  peculiarities: ProductPeculiarity[];
 };
 
-export const ItemInfoPeculiarities = ({ peculiarities }: ItemInfoPeculiaritiesProps) => {
+export const ProductInfoPeculiarities = ({ peculiarities }: ProductInfoPeculiaritiesProps) => {
   const theme = useTheme();
 
   return (

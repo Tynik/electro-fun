@@ -1,8 +1,8 @@
 import type {
   ApplicationId,
   DatasheetId,
-  ItemId,
-  ItemOptionId,
+  ProductId,
+  ProductOptionId,
   FeatureId,
   CategoryId,
   ManufacturerId,
@@ -12,68 +12,68 @@ import type {
 } from './ids.types';
 import type { Seo } from '.';
 
-export enum ItemFeatureValueType {
+export enum ProductFeatureValueType {
   axis,
   range,
 }
 
-export type ItemSeo = Seo & {
+export type ProductSeo = Seo & {
   title?: string;
   measurement?: string;
 };
 
-export type ItemFeatureMultiValue =
+export type ProductFeatureMultiValue =
   | string
   | {
       value: string | string[];
-      type?: ItemFeatureValueType;
+      type?: ProductFeatureValueType;
       info?: string;
     };
 
-export type ItemFeature = {
+export type ProductFeature = {
   refId: FeatureId;
-  value: string | ItemFeatureMultiValue[];
+  value: string | ProductFeatureMultiValue[];
   info?: string | string[];
   optionId?: string;
 };
 
-export type ItemImage = {
+export type ProductImage = {
   alt: string;
   src: string;
   description?: string;
   optionId?: string;
 };
 
-type GithubItemContributorSrc = {
+type GithubProductContributorSrc = {
   source: 'github';
   userId: number;
 };
 
-type YoutubeItemContributorSrc = {
+type YoutubeProductContributorSrc = {
   source: 'youtube';
   avatarSrc: string;
 };
 
-export type ItemContributorSrc = GithubItemContributorSrc | YoutubeItemContributorSrc;
+export type ProductContributorSrc = GithubProductContributorSrc | YoutubeProductContributorSrc;
 
-export type ItemContributor = {
+export type ProductContributor = {
   name: string;
   url: string;
-  src?: ItemContributorSrc;
+  src?: ProductContributorSrc;
 };
 
-type ItemCodeExampleLib = {
+type ProductCodeExampleLib = {
   name: string;
   url: string;
 };
 
-type ItemCodeExample = {
+type ProductCodeExample = {
   name: string;
   code: string;
-  libs?: ItemCodeExampleLib[];
+  libs?: ProductCodeExampleLib[];
 };
 
-export type ItemExternalLink = {
+export type ProductExternalLink = {
   name: string;
   url: string;
   lang: string;
@@ -81,37 +81,37 @@ export type ItemExternalLink = {
   iconAlt?: string;
 };
 
-type ItemOption = {
+type ProductOption = {
   name: string;
   default?: boolean;
 };
 
-export type ItemOptions = Record<ItemOptionId, ItemOption>;
+export type ProductOptions = Record<ProductOptionId, ProductOption>;
 
-export type ItemPeculiarity = string;
+export type ProductPeculiarity = string;
 
-export type ItemAccessory = {
+export type ProductAccessory = {
   name: string;
   count: number;
 };
 
-type PriceConfig = {
-  price: number;
+type ProductPriceConfig = {
   stripePriceId?: StripePriceId;
+  price: number;
 };
 
 export type GTIN = string;
 
 export type MPN = string;
 
-export type Item = {
+export type Product = {
   title: string;
   subtitle: string;
-  id?: ItemId;
+  id?: ProductId;
   stripeProductId?: StripeProductId;
   categoryId?: CategoryId;
   googleCategoryId?: number;
-  seo?: ItemSeo;
+  seo?: ProductSeo;
   brandId?: BrandId;
   gtin?: GTIN;
   mpn?: MPN;
@@ -122,22 +122,20 @@ export type Item = {
   warningContent?: string;
   datasheetId?: DatasheetId;
   relatedDatasheetIds?: DatasheetId[];
-  quantity?: number | Record<ItemOptionId, number>;
-  weight?: number | Record<ItemOptionId, number>;
-  price?: number | Record<ItemOptionId, number | PriceConfig>;
+  quantity?: number | Record<ProductOptionId, number>;
+  weight?: number | Record<ProductOptionId, number>;
+  price?: number | Record<ProductOptionId, ProductPriceConfig>;
   stripePriceId?: StripePriceId;
   rating?: number;
   // link where is to buy or true/false
   buy?: string | boolean;
-  options?: ItemOptions;
-  features?: ItemFeature[];
-  images?: ItemImage[];
-  peculiarities?: ItemPeculiarity[];
+  options?: ProductOptions;
+  features?: ProductFeature[];
+  images?: ProductImage[];
+  peculiarities?: ProductPeculiarity[];
   applicationIds?: ApplicationId[];
-  accessories?: ItemAccessory[];
-  contributors?: ItemContributor[];
-  externalLinks?: ItemExternalLink[];
-  codeExamples?: ItemCodeExample[];
+  accessories?: ProductAccessory[];
+  contributors?: ProductContributor[];
+  externalLinks?: ProductExternalLink[];
+  codeExamples?: ProductCodeExample[];
 };
-
-export type Items = Item[];

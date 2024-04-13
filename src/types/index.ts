@@ -9,10 +9,10 @@ import type {
   BrandId,
 } from './ids.types';
 
-import type { Item, ItemFeatureValueType } from './item.types';
+import type { Product, ProductFeatureValueType } from './product.types';
 
 export * from './ids.types';
-export * from './item.types';
+export * from './product.types';
 export * from './user.types';
 
 export type Article = {};
@@ -42,7 +42,7 @@ export type Manufacturer = {
 export type Application = string;
 export type Applications = Record<ApplicationId, Application>;
 
-export type FeatureDefinitionSuffix = string | Record<ItemFeatureValueType, string>;
+export type FeatureDefinitionSuffix = string | Record<ProductFeatureValueType, string>;
 
 export enum FeatureTypeId {
   bool,
@@ -56,7 +56,7 @@ export type FeatureDefinition = {
   type?: FeatureTypeId;
 };
 
-export type DbItemFeatures = Record<FeatureId, FeatureDefinition>;
+export type DbProductFeatures = Record<FeatureId, FeatureDefinition>;
 
 export type AbbreviationName = string;
 
@@ -129,8 +129,8 @@ export type Db = {
       n: string;
     }
   >;
-  itemFeatures: DbItemFeatures;
-  items: Item[];
+  itemFeatures: DbProductFeatures;
+  items: Product[];
   datasheets: Datasheets;
   brands: Record<BrandId, Brand>;
   manufacturers: Record<ManufacturerId, Manufacturer>;

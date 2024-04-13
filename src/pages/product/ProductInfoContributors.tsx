@@ -1,16 +1,16 @@
 import React from 'react';
 import { Typography, AvatarGroup, Avatar } from '@mui/material';
 
-import type { ItemContributor } from '~/types';
+import type { ProductContributor } from '~/types';
 
 import { ExternalLink } from '~/components';
-import { getItemContributorAvatarSrc } from '~/utils';
+import { getProductContributorAvatarSrc } from '~/utils';
 
-export type ItemInfoContributorsProps = {
-  contributors: ItemContributor[];
+export type ProductInfoContributorsProps = {
+  contributors: ProductContributor[];
 };
 
-export const ItemInfoContributors = ({ contributors }: ItemInfoContributorsProps) => {
+export const ProductInfoContributors = ({ contributors }: ProductInfoContributorsProps) => {
   return (
     <>
       <Typography variant={'overline'}>Contributors</Typography>
@@ -24,7 +24,7 @@ export const ItemInfoContributors = ({ contributors }: ItemInfoContributorsProps
             title={contributor.name}
             sx={{ textDecoration: 'none' }}
           >
-            <Avatar alt={contributor.name} src={getItemContributorAvatarSrc(contributor.src)} />
+            <Avatar alt={contributor.name} src={getProductContributorAvatarSrc(contributor.src)} />
           </ExternalLink>
         ))}
       </AvatarGroup>

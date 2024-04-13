@@ -3,35 +3,35 @@ import { Box, Badge, Button, Stack, Typography, useMediaQuery } from '@mui/mater
 import { Link as LinkIcon, ShoppingCart as ShoppingCartIcon } from '@mui/icons-material';
 
 import type { StripeProduct } from '~/api';
-import type { Item } from '~/types';
+import type { Product } from '~/types';
 
 import { DbContext, UserContext } from '~/contexts';
 import { ExternalButtonLink } from '~/components';
 import { getIcon } from '~/utils';
-import { useSelectedItemOptionId } from '~/hooks';
-import { getItemAllowedQuantity } from '~/helpers';
+import { useSelectedProductOptionId } from '~/hooks';
+import { getProductAllowedQuantity } from '~/helpers';
 
-export type ItemInfoActionsProps = {
-  item: Item;
+export type ProductInfoActionsProps = {
+  item: Product;
   stripeProduct: StripeProduct | undefined;
 };
 
-export const ItemInfoActions = ({ item, stripeProduct }: ItemInfoActionsProps) => {
+export const ProductInfoActions = ({ item, stripeProduct }: ProductInfoActionsProps) => {
   const { db } = React.useContext(DbContext);
-  const { getNumberItemsInBasket, addItemToBasket } = React.useContext(UserContext);
+  const { getNumberProductsInBasket, addProductToBasket } = React.useContext(UserContext);
 
-  const selectedItemOptionId = useSelectedItemOptionId(item);
-  const numberItemsInBasket = getNumberItemsInBasket(item, selectedItemOptionId);
+  const selectedProductOptionId = useSelectedProductOptionId(item);
+  const numberProductsInBasket = getNumberProductsInBasket(item, selectedProductOptionId);
 
   const downSmMatch = useMediaQuery<any>(theme => theme.breakpoints.down('sm'));
 
-  const initialItemAvailability =
-    stripeProduct?.quantity ?? getItemAllowedQuantity(item, selectedItemOptionId);
+  const initialProductAvailability =
+    stripeProduct?.quantity ?? getProductAllowedQuantity(item, selectedProductOptionId);
 
-  const itemAvailability = item.quantity
-    ? numberItemsInBasket
-      ? initialItemAvailability - numberItemsInBasket
-      : initialItemAvailability
+  const productAvailability = item.quantity
+    ? numberProductsInBasket
+      ? initialProductAvailability - numberProductsInBasket
+      : initialProductAvailability
     : 0;
 
   return (
@@ -70,25 +70,25 @@ export const ItemInfoActions = ({ item, stripeProduct }: ItemInfoActionsProps) =
             alignItems: 'center',
           }}
         >
-          {initialItemAvailability ? (
+          {initialProductAvailability ? (
             <>
               <Badge
-                badgeContent={numberItemsInBasket && `x${numberItemsInBasket}`}
-                color={itemAvailability >= 0 ? 'success' : 'error'}
+                badgeContent={numberProductsInBasket && `x${numberProductsInBasket}`}
+                color={productAvailability >= 0 ? 'success' : 'error'}
               >
                 <Button
-                  onClick={() => addItemToBasket(item.id, selectedItemOptionId)}
-                  variant={numberItemsInBasket ? 'outlined' : 'contained'}
-                  color={numberItemsInBasket ? 'info' : 'success'}
+                  onClick={() => addProductToBasket(item.id, selectedProductOptionId)}
+                  variant={numberProductsInBasket ? 'outlined' : 'contained'}
+                  color={numberProductsInBasket ? 'info' : 'success'}
                   startIcon={getIcon('addShoppingCart')}
-                  disabled={!itemAvailability}
+                  disabled={!productAvailability}
                 >
-                  {numberItemsInBasket ? 'In cart' : 'Add to cart'}
+                  {numberProductsInBasket ? 'In cart' : 'Add to cart'}
                 </Button>
               </Badge>
 
               <Typography variant={'body2'} color={'primary.dark'} marginLeft={2}>
-                In Stock: {itemAvailability}
+                In Stock: {productAvailability}
               </Typography>
             </>
           ) : (

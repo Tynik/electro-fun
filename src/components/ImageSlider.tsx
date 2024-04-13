@@ -4,7 +4,7 @@ import { Box, Modal, styled, Typography, useTheme } from '@mui/material';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 
-import type { ItemImage } from '~/types';
+import type { ProductImage } from '~/types';
 
 import { Loader } from './Loader';
 import { CImage } from './CImage';
@@ -31,7 +31,7 @@ const CustomCarousel = styled(Carousel)(({ theme }) => ({
 }));
 
 export type ImageSliderProps = {
-  images: ItemImage[];
+  images: ProductImage[];
   height: string;
 };
 
@@ -41,9 +41,9 @@ export const ImageSlider = (props: ImageSliderProps) => {
   const theme = useTheme();
 
   const [inLoading, setInLoading] = React.useState(images.length);
-  const [zoomedImage, setZoomedImage] = React.useState<ItemImage>(null);
+  const [zoomedImage, setZoomedImage] = React.useState<ProductImage>(null);
 
-  const onImageClick = (image: ItemImage, index: number) => {
+  const onImageClick = (image: ProductImage, index: number) => {
     setZoomedImage(image);
   };
 

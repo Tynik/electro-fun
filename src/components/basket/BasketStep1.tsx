@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Grid, Alert, Stack } from '@mui/material';
 
-import type { Item } from '~/types';
+import type { Product } from '~/types';
 import type { StripeProduct } from '~/api';
 
 import { UserContext } from '~/contexts';
@@ -10,7 +10,7 @@ import { getIcon } from '~/utils';
 
 export type BasketStep1Props = {
   isActive: boolean;
-  items: Item[];
+  items: Product[];
   stripeProducts: StripeProduct[] | undefined;
   onNext: () => void;
 };
@@ -34,7 +34,7 @@ const BasketStep1 = ({ isActive, items, stripeProducts, onNext }: BasketStep1Pro
       )}
 
       {items.map(item =>
-        Object.keys(basket.items[item.id] || {}).map(optionId => (
+        Object.keys(basket.products[item.id] || {}).map(optionId => (
           <Grid key={`${item.id}-${optionId}`} item>
             <BasketItem
               item={item}

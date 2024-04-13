@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
-import type { Db, DbMeta, Item } from '../src/types';
+import type { Db, DbMeta, Product } from '../src/types';
 import { SITE_DOMAIN } from './constants';
-import { generateItemId } from '../src/utils';
+import { generateProductId } from '../src/utils';
 
 export const readJsonFile = <T>(path: string) => JSON.parse(readFileSync(path, 'utf8')) as T;
 
@@ -15,4 +15,5 @@ export const readDb = (callback: (dbPart: Db) => void) => {
   });
 };
 
-export const getProductLink = (item: Item) => `${SITE_DOMAIN}/item/` + generateItemId(item);
+export const getProductLink = (product: Product) =>
+  `${SITE_DOMAIN}/item/` + generateProductId(product);

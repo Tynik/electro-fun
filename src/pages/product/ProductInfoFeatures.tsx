@@ -2,29 +2,32 @@ import React from 'react';
 import { Grid, Box, Typography, Popover, Paper, useTheme } from '@mui/material';
 import { Info as InfoIcon } from '@mui/icons-material';
 
-import type { Item, ItemFeature, FeatureDefinitionSuffix } from '~/types';
+import type { Product, ProductFeature, FeatureDefinitionSuffix } from '~/types';
 
 import { DbContext } from '~/contexts';
-import { sortItemFeatures } from '~/helpers';
+import { sortProductFeatures } from '~/helpers';
 import { useTextProcessor } from '~/hooks';
 import { AbbrLink } from '~/components';
-import { useItemFeatures } from '~/hooks';
+import { useProductFeatures } from '~/hooks';
 
-export type ItemInfoFeaturesProps = {
-  item: Item;
+export type ProductInfoFeaturesProps = {
+  product: Product;
 };
 
-export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
+export const ProductInfoFeatures = ({ product }: ProductInfoFeaturesProps) => {
   const theme = useTheme();
 
   const { db } = React.useContext(DbContext);
 
   const { wordsWrapper } = useTextProcessor();
 
-  const [featureInfo, setFeatureInfo] = React.useState<ItemFeature['info']>('');
+  const [featureInfo, setFeatureInfo] = React.useState<ProductFeature['info']>('');
   const [featureInfoAnchorEl, setFeatureInfoAnchorEl] = React.useState(null);
 
-  const isInsertItemFeatureSectionName = (features: ItemFeature[], index: number): boolean => {
+  const isInsertProductFeatureSectionName = (
+    features: ProductFeature[],
+    index: number,
+  ): boolean => {
     const featSectionRef = db.itemFeatures[features[index].refId].featSecRefId;
 
     if (!index) {
@@ -35,12 +38,12 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
     return !prevFeatSectionRef ? Boolean(featSectionRef) : featSectionRef !== prevFeatSectionRef;
   };
 
-  const onFeatureInfoClick = (featureInfo: ItemFeature['info'], e) => {
+  const onFeatureInfoClick = (featureInfo: ProductFeature['info'], e) => {
     setFeatureInfoAnchorEl(e.currentTarget);
     setFeatureInfo(featureInfo);
   };
 
-  const getItemFeatureValue = (feature: ItemFeature) => {
+  const getProductFeatureValue = (feature: ProductFeature) => {
     const processFeatureValue = (featureValue: any, suffix: FeatureDefinitionSuffix) => {
       if (!Array.isArray(featureValue)) {
         return [featureValue + (suffix || '')];
@@ -48,7 +51,7 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
       return featureValue.map(value =>
         ['string', 'number'].includes(typeof value)
           ? processFeatureValue(value, suffix)
-          : processFeatureValue(value.value, suffix && suffix[value.type]).join(', ')
+          : processFeatureValue(value.value, suffix && suffix[value.type]).join(', '),
       );
     };
 
@@ -76,7 +79,7 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
             />
           )}
         </span>
-      )
+      ),
     );
   };
 
@@ -93,26 +96,26 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
           </AbbrLink>
         ) : (
           <span key={`${text}`} dangerouslySetInnerHTML={{ __html: text }} />
-        )
+        ),
       ),
-    []
+    [],
   );
 
-  const itemFeatures = useItemFeatures(item);
+  const productFeatures = useProductFeatures(product);
 
   return (
     <>
       <Typography variant={'overline'}>Features</Typography>
 
       <Box>
-        {sortItemFeatures(db.itemFeatures, itemFeatures).map((feature, index, features) => (
+        {sortProductFeatures(db.itemFeatures, productFeatures).map((feature, index, features) => (
           <div
             key={`${feature.refId}-${index}-feature`}
             style={{
               marginBottom: theme.spacing(1),
             }}
           >
-            {isInsertItemFeatureSectionName(features, index) && (
+            {isInsertProductFeatureSectionName(features, index) && (
               <Typography variant={'subtitle2'} marginTop={theme.spacing(1)}>
                 {db.featureSections[db.itemFeatures[feature.refId].featSecRefId]}
               </Typography>
@@ -124,7 +127,7 @@ export const ItemInfoFeatures = ({ item }: ItemInfoFeaturesProps) => {
                 </Typography>
               </Grid>
               <Grid xs={4} sx={{ display: 'flex', alignItems: 'center' }} item>
-                <Typography variant={'body2'}>{getItemFeatureValue(feature)}</Typography>
+                <Typography variant={'body2'}>{getProductFeatureValue(feature)}</Typography>
               </Grid>
             </Grid>
           </div>

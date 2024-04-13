@@ -6,7 +6,7 @@ import { DbContext } from './contexts';
 import { Menu, DrawerHeader, Category, Footer } from './components';
 import {
   HomePage,
-  ItemInfoPage,
+  ProductInfoPage,
   DatasheetsPage,
   BasketPage,
   ReturnPolicyPage,
@@ -47,7 +47,10 @@ export const App = () => {
 
   const { db, loadNextDbPart } = React.useContext(DbContext);
 
-  const { isSearching, search, foundItems, foundDatasheets } = useJsonDbSearch(db, loadNextDbPart);
+  const { isSearching, search, foundProducts, foundDatasheets } = useJsonDbSearch(
+    db,
+    loadNextDbPart,
+  );
 
   React.useEffect(() => {
     if (db && !isAlreadyMounted) {
@@ -95,15 +98,15 @@ export const App = () => {
                 element={
                   <HomePage
                     isSearching={isSearching}
-                    items={db.items}
-                    foundItems={foundItems}
+                    products={db.items}
+                    foundProducts={foundProducts}
                     foundDatasheets={foundDatasheets}
                     onSearchReset={onSearchReset}
                   />
                 }
               />
 
-              <Route path="/item/:id" element={<ItemInfoPage />} />
+              <Route path="/item/:id" element={<ProductInfoPage />} />
 
               <Route path="/category/:categoryId" element={<Category />} />
 

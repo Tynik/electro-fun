@@ -1,15 +1,15 @@
 import React from 'react';
 import { Typography, List, ListItem, Icon, ListItemText } from '@mui/material';
 
-import type { ItemExternalLink } from '~/types';
+import type { ProductExternalLink } from '~/types';
 
 import { ExternalLink } from '~/components';
 
-export type ItemInfoExternalLinksProps = {
-  externalLinks: ItemExternalLink[];
+export type ProductInfoExternalLinksProps = {
+  externalLinks: ProductExternalLink[];
 };
 
-export const ItemInfoExternalLinks = ({ externalLinks }: ItemInfoExternalLinksProps) => {
+export const ProductInfoExternalLinks = ({ externalLinks }: ProductInfoExternalLinksProps) => {
   return (
     <>
       <Typography variant={'overline'}>Links to external resources</Typography>

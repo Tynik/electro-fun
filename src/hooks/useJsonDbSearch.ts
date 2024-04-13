@@ -3,8 +3,8 @@ import debounce from 'lodash.debounce';
 
 import type {
   Db,
-  ItemId,
-  Item,
+  ProductId,
+  Product,
   DatasheetId,
   FoundDatasheets,
   ApplicationId,
@@ -12,7 +12,7 @@ import type {
 } from '~/types';
 import {
   checkSearchKeyword,
-  matchItemWithSearch,
+  matchProductWithSearch,
   matchDatasheetWithSearchKeywords,
 } from '~/helpers';
 
@@ -24,10 +24,10 @@ export type SearchHandler = {
 };
 
 export const useJsonDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
-  const [itemIds, setItemIds] = React.useState<ItemId[]>(null);
+  const [productIds, setProductIds] = React.useState<ProductId[]>(null);
   const [searchKeywords, setSearchKeywords] = React.useState<string[]>(null);
   const [categoryId, setCategoryId] = React.useState<number>(null);
-  const [foundItems, setFoundItems] = React.useState<Item[]>(null);
+  const [foundProducts, setFoundProducts] = React.useState<Product[]>(null);
   const [foundDatasheets, setFoundDatasheets] = React.useState<FoundDatasheets>(null);
   const [isSearching, setIsSearching] = React.useState(false);
   const [searchOffset, setSearchOffset] = React.useState<number>(0);
@@ -37,25 +37,25 @@ export const useJsonDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
   // }, [id, text, categoryId]);
 
   React.useEffect(() => {
-    if ((itemIds === null && searchKeywords === null && categoryId === null) || !db) {
+    if ((productIds === null && searchKeywords === null && categoryId === null) || !db) {
       return;
     }
 
-    if (itemIds === null && searchKeywords && !searchKeywords.length && categoryId === null) {
-      setItemIds(null);
+    if (productIds === null && searchKeywords && !searchKeywords.length && categoryId === null) {
+      setProductIds(null);
       setIsSearching(false);
-      setFoundItems(null);
+      setFoundProducts(null);
       setFoundDatasheets(null);
       return;
     }
 
-    let foundItems: Item[];
+    let foundProducts: Product[];
 
-    if (itemIds) {
-      foundItems = db.items.filter(item => itemIds.includes(item.id));
+    if (productIds) {
+      foundProducts = db.items.filter(product => productIds.includes(product.id));
     } else {
-      let foundItemsDatasheets: Record<DatasheetId, boolean> = {};
-      let foundItemsRelatedDatasheets: Record<DatasheetId, boolean> = {};
+      let foundProductsDatasheets: Record<DatasheetId, boolean> = {};
+      let foundProductsRelatedDatasheets: Record<DatasheetId, boolean> = {};
 
       let matchedApplicationIds: ApplicationId[];
 
@@ -77,45 +77,45 @@ export const useJsonDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
         );
       }
 
-      foundItems = db.items.filter(item => {
-        const isItemMatched = matchItemWithSearch(item, {
+      foundProducts = db.items.filter(product => {
+        const isProductMatched = matchProductWithSearch(product, {
           applicationIds: matchedApplicationIds,
           manufacturerIds: matchedManufacturerIds,
           searchKeywords,
           categoryId,
         });
 
-        if (isItemMatched) {
-          if (item.datasheetId) {
-            foundItemsDatasheets[item.datasheetId] = true;
+        if (isProductMatched) {
+          if (product.datasheetId) {
+            foundProductsDatasheets[product.datasheetId] = true;
           }
 
-          if (item.relatedDatasheetIds) {
-            item.relatedDatasheetIds.forEach(relatedDatasheetId => {
-              foundItemsRelatedDatasheets[relatedDatasheetId] = true;
+          if (product.relatedDatasheetIds) {
+            product.relatedDatasheetIds.forEach(relatedDatasheetId => {
+              foundProductsRelatedDatasheets[relatedDatasheetId] = true;
             });
           }
         }
 
-        return isItemMatched;
+        return isProductMatched;
       });
 
       if (searchKeywords && searchKeywords.length) {
         const foundDatasheets = Object.keys(db.datasheets).reduce<FoundDatasheets>(
           (foundDatasheets, datasheetId) => {
             const datasheetIsMatched =
-              foundItemsDatasheets[datasheetId] ||
-              foundItemsRelatedDatasheets[datasheetId] ||
+              foundProductsDatasheets[datasheetId] ||
+              foundProductsRelatedDatasheets[datasheetId] ||
               matchDatasheetWithSearchKeywords(datasheetId, searchKeywords);
 
             if (datasheetIsMatched) {
               foundDatasheets[datasheetId] = { ...db.datasheets[datasheetId] };
               // assign priorities for datasheets to sort them after
-              if (foundItemsDatasheets[datasheetId]) {
+              if (foundProductsDatasheets[datasheetId]) {
                 foundDatasheets[datasheetId].priority = 0;
               }
 
-              if (foundItemsRelatedDatasheets[datasheetId]) {
+              if (foundProductsRelatedDatasheets[datasheetId]) {
                 foundDatasheets[datasheetId].priority = 1;
               }
             }
@@ -136,8 +136,8 @@ export const useJsonDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
     //   ...foundItems
     // ]);
 
-    if (itemIds && foundItems.length === itemIds.length) {
-      setFoundItems(foundItems);
+    if (productIds && foundProducts.length === productIds.length) {
+      setFoundProducts(foundProducts);
       // if an item by id was found we should not load next db part
       return;
     }
@@ -145,14 +145,14 @@ export const useJsonDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
     if (!loadNextDbPart()) {
       // finish
       setIsSearching(false);
-      setFoundItems(foundItems);
+      setFoundProducts(foundProducts);
     }
-  }, [db, itemIds, searchKeywords, categoryId]);
+  }, [db, productIds, searchKeywords, categoryId]);
 
   const baseSearch = React.useCallback(
     ({ ids, text, categoryId }: Omit<SearchHandler, 'debounce'>) => {
       if (ids !== undefined) {
-        setItemIds(ids);
+        setProductIds(ids);
         return;
       }
 
@@ -196,7 +196,7 @@ export const useJsonDbSearch = (db: Db, loadNextDbPart: () => boolean) => {
   return {
     isSearching,
     search,
-    foundItems,
+    foundProducts,
     foundDatasheets,
   };
 };

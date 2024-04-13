@@ -1,10 +1,10 @@
 import React from 'react';
 
-import type { Item } from '~/types';
+import type { Product } from '~/types';
 
 import { DbContext } from '~/contexts';
 
-export const useItemManufacturer = (item: Item) => {
+export const useItemManufacturer = (item: Product) => {
   const { db } = React.useContext(DbContext);
 
   return item.manufacturerId && db.manufacturers[item.manufacturerId];

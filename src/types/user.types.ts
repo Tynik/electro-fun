@@ -1,9 +1,9 @@
-import type { ItemId, ItemOptionId } from './ids.types';
+import type { ProductId, ProductOptionId } from './ids.types';
 
-export type UserBasketItem = Record<ItemOptionId, number>;
+export type UserBasketProduct = Record<ProductOptionId, number>;
 
 export type UserBasket = {
-  items: Record<ItemId, UserBasketItem>;
+  products: Record<ProductId, UserBasketProduct>;
 };
 
 export type UserInfo = {

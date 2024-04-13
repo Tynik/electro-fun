@@ -1,34 +1,34 @@
 import React from 'react';
 
-import type { Item } from '~/types';
+import type { Product } from '~/types';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
-import { OfferMicrodata, ItemBrandMicrodata } from '~/helpers';
-import { getItemContributorAvatarSrc } from '~/utils';
+import { ProductOfferMicrodata, ProductBrandMicrodata } from '~/helpers';
+import { getProductContributorAvatarSrc } from '~/utils';
 
 export type ProductMicrodataProps = {
-  item: Item;
+  product: Product;
 };
 
-export const ProductMicrodata = ({ item }: ProductMicrodataProps) => {
+export const ProductMicrodata = ({ product }: ProductMicrodataProps) => {
   return (
     <div itemType={`${SEO_SCHEMA_BASE_URL}/Product`} itemScope>
-      <ItemBrandMicrodata item={item} />
+      <ProductBrandMicrodata product={product} />
 
-      {Boolean(item.price) && <OfferMicrodata item={item} />}
+      {Boolean(product.price) && <ProductOfferMicrodata product={product} />}
 
-      <meta itemProp="name" content={item.title} />
+      <meta itemProp="name" content={product.title} />
 
-      {item.content && <meta itemProp="description" content={item.content} />}
+      {product.content && <meta itemProp="description" content={product.content} />}
 
-      {item.gtin && <meta itemProp="gtin" content={item.gtin} />}
-      {item.mpn && <meta itemProp="mpn" content={item.mpn} />}
+      {product.gtin && <meta itemProp="gtin" content={product.gtin} />}
+      {product.mpn && <meta itemProp="mpn" content={product.mpn} />}
 
-      {(item.images || []).map(image => (
+      {(product.images || []).map(image => (
         <meta key={image.src} itemProp="image" content={image.src} />
       ))}
 
-      {(item.contributors || []).map(contributor => (
+      {(product.contributors || []).map(contributor => (
         <div
           key={contributor.name}
           itemType={`${SEO_SCHEMA_BASE_URL}/Person`}
@@ -36,7 +36,7 @@ export const ProductMicrodata = ({ item }: ProductMicrodataProps) => {
           itemScope
         >
           <meta itemProp="name" content={contributor.name} />
-          <meta itemProp="image" content={getItemContributorAvatarSrc(contributor.src)} />
+          <meta itemProp="image" content={getProductContributorAvatarSrc(contributor.src)} />
         </div>
       ))}
     </div>
