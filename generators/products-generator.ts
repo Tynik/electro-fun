@@ -83,7 +83,7 @@ const run = () => {
       db.manufacturers[product.manufacturerId]?.name ?? db.brands[product.brandId]?.name ?? '',
     );
 
-    const availability = product.quantity ? 'in_stock' : 'out_of_stock';
+    const availability = 0 ? 'in_stock' : 'out_of_stock';
 
     const additionalImages = product.images
       .slice(1, MAX_PRODUCT_ADDITIONAL_IMAGES)
@@ -103,7 +103,7 @@ const run = () => {
       product.price,
       availability,
       // quantity
-      product.quantity,
+      0,
       // condition
       'new',
       // weight
