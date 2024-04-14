@@ -6,7 +6,7 @@ export const handler = createHandler({ allowMethods: ['POST'] }, async ({ event 
     return {
       status: 'error',
       data: {
-        error: 'Session ID is empty',
+        error: 'Session ID is missed',
       },
     };
   }

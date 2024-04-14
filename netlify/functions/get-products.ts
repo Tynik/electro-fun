@@ -6,6 +6,14 @@ import { createHandler, initStripeClient, processProductPrices } from '../helper
 
 export const handler = createHandler({ allowMethods: ['GET'] }, async ({ event }) => {
   const productIds = event.queryStringParameters?.ids?.split(',');
+  if (!productIds) {
+    return {
+      status: 'error',
+      data: {
+        error: 'Product IDs are missed',
+      },
+    };
+  }
 
   const stripe = initStripeClient();
 
