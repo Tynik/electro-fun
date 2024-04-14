@@ -22,17 +22,20 @@ export type ProductSeo = Seo & {
   measurement?: string;
 };
 
-export type ProductFeatureMultiValue =
-  | string
-  | {
-      value: string | string[];
-      type?: ProductFeatureValueType;
-      info?: string;
-    };
+type ProductFeaturePrimitiveValue = string | number | (string | number)[];
+
+type ProductFeatureMultiValue = {
+  value: ProductFeaturePrimitiveValue;
+  type?: ProductFeatureValueType;
+  info?: string;
+  icon?: string;
+};
+
+export type ProductFeatureValue = ProductFeaturePrimitiveValue | ProductFeatureMultiValue[];
 
 export type ProductFeature = {
   refId: FeatureId;
-  value: string | ProductFeatureMultiValue[];
+  value: ProductFeatureValue;
   info?: string | string[];
   optionId?: string;
 };

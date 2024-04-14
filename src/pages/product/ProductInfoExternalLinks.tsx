@@ -35,6 +35,7 @@ export const ProductInfoExternalLinks = ({ externalLinks }: ProductInfoExternalL
                 />
               </Icon>
             )}
+
             <ListItemText>
               <ExternalLink href={externalResource.url} hrefLang={externalResource.lang}>
                 {externalResource.name}

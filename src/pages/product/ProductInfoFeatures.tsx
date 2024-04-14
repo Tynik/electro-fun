@@ -2,7 +2,12 @@ import React from 'react';
 import { Grid, Box, Typography, Popover, Paper, useTheme } from '@mui/material';
 import { Info as InfoIcon } from '@mui/icons-material';
 
-import type { Product, ProductFeature, FeatureDefinitionSuffix } from '~/types';
+import type {
+  Product,
+  ProductFeature,
+  FeatureDefinitionSuffix,
+  ProductFeatureValue,
+} from '~/types';
 
 import { DbContext } from '~/providers';
 import { sortProductFeatures } from '~/helpers';
@@ -43,44 +48,52 @@ export const ProductInfoFeatures = ({ product }: ProductInfoFeaturesProps) => {
     setFeatureInfo(featureInfo);
   };
 
-  const getProductFeatureValue = (feature: ProductFeature) => {
-    const processFeatureValue = (featureValue: any, suffix: FeatureDefinitionSuffix) => {
+  const getProductFeatureValue = (productFeature: ProductFeature) => {
+    const processFeatureValue = (
+      featureValue: ProductFeatureValue,
+      suffix: FeatureDefinitionSuffix | undefined,
+    ) => {
       if (!Array.isArray(featureValue)) {
-        return [featureValue + (suffix || '')];
+        return [featureValue.toString() + (suffix ?? '')];
       }
+
       return featureValue.map(value =>
-        ['string', 'number'].includes(typeof value)
+        typeof value === 'string' || typeof value === 'number'
           ? processFeatureValue(value, suffix)
-          : processFeatureValue(value.value, suffix && suffix[value.type]).join(', '),
+          : processFeatureValue(
+              value.value,
+              suffix && value.type ? suffix[value.type] : undefined,
+            ).join(', '),
       );
     };
 
-    return processFeatureValue(feature.value, db.itemFeatures[feature.refId].suffix).map(
-      (value, index) => (
-        <span
-          key={`${feature.refId}-${index}`}
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            wordBreak: 'break-word',
-            whiteSpace: 'pre-wrap',
-          }}
-        >
-          {value}
+    return processFeatureValue(
+      productFeature.value,
+      db.itemFeatures[productFeature.refId].suffix,
+    ).map((value, index) => (
+      <span
+        key={`${productFeature.refId}-${index}`}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          wordBreak: 'break-word',
+          whiteSpace: 'pre-wrap',
+        }}
+      >
+        {value}
 
-          {feature.info && (
-            <InfoIcon
-              fontSize={'small'}
-              color={'info'}
-              sx={{ marginLeft: theme.spacing(1), cursor: 'pointer' }}
-              onClick={e => onFeatureInfoClick(feature.info, e)}
-              aria-owns={featureInfo ? 'mouse-feature-info-click-popover' : undefined}
-              aria-haspopup
-            />
-          )}
-        </span>
-      ),
-    );
+        {productFeature.info && (
+          <InfoIcon
+            fontSize={'small'}
+            color={'info'}
+            sx={{ marginLeft: theme.spacing(1), cursor: 'pointer' }}
+            onClick={e => onFeatureInfoClick(productFeature.info, e)}
+            aria-owns={featureInfo ? 'mouse-feature-info-click-popover' : undefined}
+            aria-haspopup
+          />
+        )}
+      </span>
+    ));
   };
 
   const abbreviationsWrapper = React.useCallback(
@@ -108,43 +121,45 @@ export const ProductInfoFeatures = ({ product }: ProductInfoFeaturesProps) => {
       <Typography variant={'overline'}>Features</Typography>
 
       <Box>
-        {sortProductFeatures(db.itemFeatures, productFeatures).map((feature, index, features) => (
-          <div
-            key={`${feature.refId}-${index}-feature`}
-            style={{
-              marginBottom: theme.spacing(0.5),
-            }}
-          >
-            {isInsertProductFeatureSectionName(features, index) && (
-              <Typography variant={'subtitle2'} marginTop={2}>
-                {db.featureSections[db.itemFeatures[feature.refId].featSecRefId]}
-              </Typography>
-            )}
-
-            <Grid
-              marginLeft={1.5}
-              sx={{
-                padding: theme.spacing(0.5, 1),
-                borderRadius: 1,
-                cursor: 'pointer',
-                '&:hover': {
-                  backgroundColor: theme.palette.grey.A100,
-                },
+        {sortProductFeatures(db.itemFeatures, productFeatures).map(
+          (feature, featureIndex, features) => (
+            <div
+              key={`${feature.refId}-${featureIndex}-feature`}
+              style={{
+                marginBottom: theme.spacing(0.5),
               }}
-              container
             >
-              <Grid xs={8} item>
-                <Typography variant={'body1'}>
-                  {abbreviationsWrapper(db.itemFeatures[feature.refId].name)}
+              {isInsertProductFeatureSectionName(features, featureIndex) && (
+                <Typography variant={'subtitle2'} marginTop={2}>
+                  {db.featureSections[db.itemFeatures[feature.refId].featSecRefId]}
                 </Typography>
-              </Grid>
+              )}
 
-              <Grid xs={4} sx={{ display: 'flex', alignItems: 'center' }} item>
-                <Typography variant={'body2'}>{getProductFeatureValue(feature)}</Typography>
+              <Grid
+                marginLeft={1.5}
+                sx={{
+                  padding: theme.spacing(0.5, 1),
+                  borderRadius: 1,
+                  cursor: 'pointer',
+                  '&:hover': {
+                    backgroundColor: theme.palette.grey.A100,
+                  },
+                }}
+                container
+              >
+                <Grid xs={8} item>
+                  <Typography variant={'body1'}>
+                    {abbreviationsWrapper(db.itemFeatures[feature.refId].name)}
+                  </Typography>
+                </Grid>
+
+                <Grid xs={4} sx={{ display: 'flex', alignItems: 'center' }} item>
+                  <Typography variant={'body2'}>{getProductFeatureValue(feature)}</Typography>
+                </Grid>
               </Grid>
-            </Grid>
-          </div>
-        ))}
+            </div>
+          ),
+        )}
       </Box>
 
       <Popover
