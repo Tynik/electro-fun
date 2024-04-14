@@ -2,7 +2,7 @@ import React from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import { ThemeProvider, CssBaseline } from '@mui/material';
+import { ThemeProvider, CssBaseline, GlobalStyles } from '@mui/material';
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -29,6 +29,16 @@ root.render(
   <BrowserRouter>
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <GlobalStyles
+        styles={{
+          h5: {
+            margin: '4px',
+          },
+          ul: {
+            margin: '4px',
+          },
+        }}
+      />
 
       <QueryClientProvider client={queryClient}>
         <AppContextProvider>

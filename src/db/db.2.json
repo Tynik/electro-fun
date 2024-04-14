@@ -1265,11 +1265,11 @@
         },
         {
           "refId": 50,
-          "value": "Arm® Cortex®-M7 STM32H743VIT6/STM32H723VGT6"
+          "value": "Arm® Cortex®-M7 STM32H743VIT6"
         },
         {
           "refId": 53,
-          "value": "480/550 MHz"
+          "value": "480 MHz"
         },
         {
           "refId": 76,
@@ -1338,12 +1338,30 @@
           "alt": "SKR 3 EZ 32Bit - Wiring"
         }
       ],
-      "content": "<p>\nThe SKR 3 EZ V1.0 motherboard represents a significant upgrade to the 32-bit 3D printer motherboard line. This motherboard enhances compatibility with our EZ series drivers, while also supporting TMC drivers. With its advanced features and seamless integration, it's designed to elevate your 3D printing experience to new heights.</p>",
+      "content": "<p>The SKR 3 EZ V1.0 motherboard represents a significant upgrade to the 32-bit 3D printer motherboard line. This motherboard enhances compatibility with our EZ series drivers, while also supporting TMC drivers. With its advanced features and seamless integration, it's designed to elevate your 3D printing experience to new heights.</p><h4>Differences between SKR 3 Motherboard and SKR 3 EZ Motherboard</h4><h5>1. Product Size:</h5><ul><li><strong>SKR 3:</strong> Product size measures 110*85mm, with an installation size of 102*76mm.</li><li><strong>SKR 3 EZ:</strong> Product size is slightly different at 109.7*98mm, while the installation size remains the same at 102*76mm.</li></ul>\n<h5>2. Motor Voltage:</h5><ul><li><strong>SKR 3:</strong> Supports motor voltage ranging from DC 12V to 24V.</li><li><strong>SKR 3 EZ:</strong> Offers a wider range, from 12V to 48V, adjustable via a jumper cap. Higher voltage options significantly enhance printing speed. Additionally, while SKR 3 features 2 normal fans, the EZ version boasts 3, ensuring smoother printer operation and superior print quality.</li></ul>\n<h5>3. Connection Methods:</h5><ul><li><strong>SKR 3:</strong> Utilizes the driver connector for compatibility with our newly designed EZ driver.</li><li><strong>SKR 3 EZ:</strong> Streamlines the process by allowing direct insertion of the EZ driver, eliminating the need for a converter. The EZ driver's design prioritizes user safety, featuring finger-friendly components to mitigate the risk of injury from sharp pin headers. Furthermore, the innovative anti-plug linker design enhances mainboard protection, addressing previous issues of driver and mainboard damage due to incorrect insertion. This upgraded driver technology ensures a safe and enjoyable user experience.</li></ul>",
       "peculiarities": [
-        "Optional CNC fan voltage",
-        "Fan Interfaces: 3 CNC fans, 3 normally open fans",
-        "Expansion Interfaces: BLTouch (Servos, Probe), PS-ON, PWR-DET, Fil-DET, RGB, CAN FD",
-        "Heating Interfaces: Bed (HB), Hot End (E0, E1)"
+        "Fan Interfaces: 3 CNC fans, 3 normally open fans.",
+        "Expansion Interfaces: BLTouch (Servos, Probe), PS-ON, PWR-DET, Fil-DET, RGB, CAN FD.",
+        "Heating Interfaces: Bed (HB), Hot End (E0, E1).",
+        "Equipped with the TPS5450-5A power chip, this motherboard seamlessly supports DC12/24V power input, boasting an impressive output current of up to 5A, with a peak value reaching 6A. This robust power provision perfectly complements Raspberry Pi setups.",
+        "Featuring a reserved BOOT button, users can effortlessly update the motherboard boot program through DFU.",
+        "Enhanced protection circuitry for the thermistor section mitigates risks of main control chip damage due to heated bed or heating rod leakage.",
+        "Offering versatile voltage selection (24V, 12V, 5V) for the numerical control fan through an external power supply module, eliminating the need for customer's external transformer modules and reducing the risk of motherboard damage.",
+        "The thermistor's pull-up resistance value can be conveniently selected through a jumper, enabling support for PT1000 without external modules, enhancing DIY flexibility.",
+        "Comprehensive support for all versions of serial, SPI, and LCD screens.",
+        "Simplified firmware upgrades through an SD card, ensuring a user-friendly and efficient operation.",
+        "Convenient utilization of on-board DIAG function pins via simple jumper cap insertion and removal.",
+        "Supports an array of functions including resume printing, Filament Run-out Detection, Completed Shutdown, BLTouch, RGB Lights, and more.",
+        "Incorporating high-performance MOSFETs to minimize heat generation.",
+        "Featuring a replaceable fuse for easy maintenance and replacement.",
+        "Integration of a WIFI module (ESP-12S, ESP-07, ESP32) for enhanced connectivity options.",
+        "On-board non-self-elastic MicroSD card slot operating in SDIO mode for improved transfer rates.",
+        "Onboard EEPROM for hassle-free parameter information storage.",
+        "Dual CAN interfaces (USB port and XH2.54 6Pin terminal interface) with a double-pole double-throw switch, offering versatility for accessory usage.",
+        "Temperature sensor interface with high-precision pull-up resistor.",
+        "Compatible drive sockets for both EZ series drive modules and TMC series drive modules.",
+        "Each motor drive module can conveniently select the corresponding motor voltage through a jumper cap.",
+        "Supports motor power supply up to 48V, with isolation chip integration for enhanced safety, especially with TMC5160 and EZ5160 usage."
       ]
     }
   ]
