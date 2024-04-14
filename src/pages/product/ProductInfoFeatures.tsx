@@ -112,20 +112,33 @@ export const ProductInfoFeatures = ({ product }: ProductInfoFeaturesProps) => {
           <div
             key={`${feature.refId}-${index}-feature`}
             style={{
-              marginBottom: theme.spacing(1),
+              marginBottom: theme.spacing(0.5),
             }}
           >
             {isInsertProductFeatureSectionName(features, index) && (
-              <Typography variant={'subtitle2'} marginTop={theme.spacing(1)}>
+              <Typography variant={'subtitle2'} marginTop={2}>
                 {db.featureSections[db.itemFeatures[feature.refId].featSecRefId]}
               </Typography>
             )}
-            <Grid container>
+
+            <Grid
+              marginLeft={1.5}
+              sx={{
+                padding: theme.spacing(0.5, 1),
+                borderRadius: 1,
+                cursor: 'pointer',
+                '&:hover': {
+                  backgroundColor: theme.palette.grey.A100,
+                },
+              }}
+              container
+            >
               <Grid xs={8} item>
                 <Typography variant={'body1'}>
                   {abbreviationsWrapper(db.itemFeatures[feature.refId].name)}
                 </Typography>
               </Grid>
+
               <Grid xs={4} sx={{ display: 'flex', alignItems: 'center' }} item>
                 <Typography variant={'body2'}>{getProductFeatureValue(feature)}</Typography>
               </Grid>

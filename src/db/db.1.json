@@ -58,7 +58,7 @@
       "name": "WCMCU"
     },
     "5": {
-      "name": "BIG TREE TECH"
+      "name": "BIGTREETECH"
     }
   },
   "manufacturers": {
@@ -223,6 +223,10 @@
       "relatedDatasheetIds": [
         "BK3266"
       ]
+    },
+    "BIGTREETECH-SKR-3-EZ": {
+      "lang": "en",
+      "manufacturerId": "13"
     },
     "NMA0515SC": {
       "lang": "en",
@@ -660,7 +664,7 @@
     },
     {
       "id": 24,
-      "name": "Motion Control Devices",
+      "name": "3D Printers",
       "icon": "apps"
     },
     {
@@ -702,7 +706,8 @@
     "15": "Analog Input",
     "16": "Phase",
     "17": "Display",
-    "18": "Touch Screen"
+    "18": "Touch Screen",
+    "19": "Motor Drivers"
   },
   "optionTypes": {
     "bool": {
@@ -972,7 +977,7 @@
       "featSecRefId": 10
     },
     "53": {
-      "name": "Clock Frequency",
+      "name": "Frequency",
       "featSecRefId": 10
     },
     "54": {
@@ -1379,6 +1384,29 @@
     "164": {
       "name": "Noise",
       "featSecRefId": 4
+    },
+    "165": {
+      "name": "EEPROM",
+      "featSecRefId": 10
+    },
+    "166": {
+      "name": "Working Mode",
+      "featSecRefId": 19
+    },
+    "167": {
+      "name": "Supported",
+      "featSecRefId": 19
+    },
+    "168": {
+      "name": "Voltage",
+      "featSecRefId": 19
+    },
+    "169": {
+      "name": "Logic",
+      "featSecRefId": 3
+    },
+    "170": {
+      "name": "Firmware"
     }
   },
   "items": [
@@ -1417,15 +1445,15 @@
       "features": [
         {
           "refId": 13,
-          "value": "4.5 - 28V"
+          "value": "4.5 - 28 V"
         },
         {
           "refId": 14,
-          "value": "0.8 - 20V"
+          "value": "0.8 - 20 V"
         },
         {
           "refId": 15,
-          "value": "up to 3A"
+          "value": "up to 3 A"
         }
       ],
       "externalLinks": [
@@ -1473,7 +1501,7 @@
         },
         {
           "refId": 3,
-          "value": "1.8 - 5V"
+          "value": "1.8 - 5 V"
         },
         {
           "refId": 4,
@@ -1596,7 +1624,7 @@
         },
         {
           "refId": 13,
-          "value": "2.4 - 3.6V"
+          "value": "2.4 - 3.6 V"
         },
         {
           "refId": 7,
