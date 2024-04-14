@@ -1,7 +1,7 @@
 import Stripe from 'stripe';
 
 import { SITE_DOMAIN } from '../constants';
-import { createHandler, getStripeShippingRatesList, initStripeClient } from '../helpers';
+import { createHandler, getStripeAllowableShippingRates, initStripeClient } from '../helpers';
 
 const ORDER_CONFIRMATION_PAGE_URL = `${SITE_DOMAIN}/order-confirmation?sessionId={CHECKOUT_SESSION_ID}`;
 
@@ -42,7 +42,7 @@ export const handler = createHandler<CheckoutPayload>(
       0,
     );
 
-    const shippingRates = await getStripeShippingRatesList(stripe, {
+    const shippingRates = await getStripeAllowableShippingRates(stripe, {
       minimumWeightThreshold: totalProductsWeight,
     });
 

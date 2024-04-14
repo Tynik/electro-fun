@@ -101,7 +101,7 @@ type ShippingRatesListOptions = {
   minimumWeightThreshold: number;
 };
 
-export const getStripeShippingRatesList = async (
+export const getStripeAllowableShippingRates = async (
   stripe: Stripe,
   { minimumWeightThreshold }: ShippingRatesListOptions,
 ) => {
@@ -113,7 +113,8 @@ export const getStripeShippingRatesList = async (
   return shippingRates.filter(
     shippingRate =>
       +shippingRate.metadata.minWeight <= minimumWeightThreshold &&
-      +shippingRate.metadata.maxWeight >= minimumWeightThreshold,
+      (!shippingRate.metadata.maxWeight ||
+        +shippingRate.metadata.maxWeight >= minimumWeightThreshold),
   );
 };
 

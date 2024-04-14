@@ -100,7 +100,7 @@ const BasketStep2 = ({ isActive, products, onBefore }: BasketStep2Props) => {
         note: formData.note,
       });
 
-      window.open(checkoutResponse.url);
+      window.open(checkoutResponse.url, '_self');
     } catch (e) {
       addNotification('Error when placing an order. Please, try later.', {
         severity: 'error',

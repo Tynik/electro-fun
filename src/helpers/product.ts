@@ -176,7 +176,7 @@ export const getProductAllowedQuantity = (
 };
 
 export const getProductWeight = (product: Product, optionId: ProductOptionId) => {
-  if (!product.weight) {
+  if (product.weight === undefined) {
     return 0;
   }
 

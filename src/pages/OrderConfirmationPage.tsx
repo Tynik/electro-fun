@@ -20,15 +20,17 @@ export const OrderConfirmationPage = () => {
     data: orderConfirmationResult,
     isFetching: isOrderConfirmationResultFetching,
     isError: isOrderConfirmationResultError,
-  } = useQuery(['confirm-order', sessionId], () => confirmOrder(sessionId), {
+  } = useQuery(['confirm-order', sessionId], () => confirmOrder(sessionId!), {
     enabled: Boolean(sessionId),
   });
 
+  const isOrderConfirmationError = orderConfirmationResult?.error ?? false;
+
   useEffect(() => {
-    if (orderConfirmationResult) {
+    if (orderConfirmationResult && !isOrderConfirmationResultError && !isOrderConfirmationError) {
       clearBasket();
     }
-  }, [orderConfirmationResult]);
+  }, [orderConfirmationResult, isOrderConfirmationResultError]);
 
   if (isOrderConfirmationResultFetching) {
     return <Loader />;
@@ -39,15 +41,15 @@ export const OrderConfirmationPage = () => {
       <Grid xs={12} item>
         {isOrderConfirmationResultError && <Alert severity="error">Something went wrong</Alert>}
 
-        {orderConfirmationResult?.error && (
-          <Alert severity="error">The payment was not success</Alert>
+        {isOrderConfirmationError && (
+          <Alert severity="warning">The payment was not successful or has been canceled</Alert>
         )}
 
         {orderConfirmationResult?.customer && (
           <Alert severity="info">
             You successfully placed the order{' '}
             <strong>{orderConfirmationResult.customer.name}</strong>. We will deliver your items as
-            soon as possible. Thank you and have the great day!
+            soon as possible. Thank you, and have a great day!
           </Alert>
         )}
       </Grid>
