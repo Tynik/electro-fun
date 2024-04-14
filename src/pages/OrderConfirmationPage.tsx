@@ -55,7 +55,11 @@ export const OrderConfirmationPage = () => {
       </Grid>
 
       <Grid xs={12} textAlign="center" item>
-        <Button onClick={() => navigate('/')} startIcon={<HomeIcon />} variant={'outlined'}>
+        <Button
+          onClick={() => navigate('/', { replace: true })}
+          startIcon={<HomeIcon />}
+          variant={'outlined'}
+        >
           Home Page
         </Button>
       </Grid>

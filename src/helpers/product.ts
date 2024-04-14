@@ -6,9 +6,9 @@ import type {
   ProductOptionId,
   ApplicationId,
   ManufacturerId,
-  Nullable,
+  StripePriceId,
 } from '~/types';
-import type { StripeProduct } from '~/api';
+import type { StripeProduct, StripeProductPrice } from '~/api';
 
 import { DEFAULT_PRODUCT_OPTION_ID, SEO_SCHEMA_BASE_URL } from '~/constants';
 import { checkSearchKeyword } from '~/helpers';
@@ -123,16 +123,35 @@ export const getProductDefaultOption = (product: Product): ProductOptionId => {
   );
 };
 
-export const getStripeProductPriceId = (product: Product, optionId: ProductOptionId) => {
+export const getStripeProductPriceId = (
+  product: Product,
+  optionId: ProductOptionId,
+): StripePriceId => {
   if (product.stripePriceId) {
     return product.stripePriceId;
   }
 
   if (optionId === DEFAULT_PRODUCT_OPTION_ID || product.price === undefined) {
-    return undefined;
+    throw new Error('This product cannot be purchased');
   }
 
   return product.price[optionId].stripePriceId;
+};
+
+const getStripeProductPrice = (
+  stripeProduct: StripeProduct | undefined,
+  product: Product,
+  optionId: ProductOptionId,
+): StripeProductPrice | undefined => {
+  if (stripeProduct) {
+    const stripeProductPriceId = getStripeProductPriceId(product, optionId);
+
+    if (stripeProductPriceId) {
+      return stripeProduct.prices[stripeProductPriceId];
+    }
+  }
+
+  return undefined;
 };
 
 export const getProductPrice = (
@@ -140,16 +159,9 @@ export const getProductPrice = (
   product: Product,
   optionId: ProductOptionId,
 ) => {
-  if (stripeProduct) {
-    const stripeProductPriceId = getStripeProductPriceId(product, optionId);
-
-    if (stripeProductPriceId) {
-      const productPrice = stripeProduct.prices[stripeProductPriceId];
-
-      if (productPrice) {
-        return productPrice.amount;
-      }
-    }
+  const stripeProductPrice = getStripeProductPrice(stripeProduct, product, optionId);
+  if (stripeProductPrice) {
+    return stripeProductPrice.amount;
   }
 
   return 0;
@@ -160,16 +172,9 @@ export const getProductAllowedQuantity = (
   product: Product,
   optionId: ProductOptionId,
 ) => {
-  if (stripeProduct) {
-    const stripeProductPriceId = getStripeProductPriceId(product, optionId);
-
-    if (stripeProductPriceId) {
-      const productPrice = stripeProduct.prices[stripeProductPriceId];
-
-      if (productPrice) {
-        return productPrice.quantity;
-      }
-    }
+  const stripeProductPrice = getStripeProductPrice(stripeProduct, product, optionId);
+  if (stripeProductPrice) {
+    return stripeProductPrice.quantity;
   }
 
   return 0;

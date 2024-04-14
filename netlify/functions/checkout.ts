@@ -46,35 +46,41 @@ export const handler = createHandler<CheckoutPayload>(
       minimumWeightThreshold: totalProductsWeight,
     });
 
-    const session = await stripe.checkout.sessions.create({
-      mode: 'payment',
-      payment_intent_data: {
-        receipt_email: payload.email,
-        description: payload.note,
-        shipping: {
-          name: payload.fullName,
-          phone: payload.phone,
-          address: {
-            country: 'GB',
-            city: payload.shippingCity,
-            line1: payload.shippingAddress1,
-            line2: payload.shippingAddress2,
-            postal_code: payload.shippingPostcode,
-          },
+    const paymentIntentData: Stripe.Checkout.SessionCreateParams.PaymentIntentData = {
+      receipt_email: payload.email,
+      description: payload.note,
+      shipping: {
+        name: payload.fullName,
+        phone: payload.phone,
+        address: {
+          country: 'GB',
+          city: payload.shippingCity,
+          line1: payload.shippingAddress1,
+          line2: payload.shippingAddress2,
+          postal_code: payload.shippingPostcode,
         },
       },
-      customer: undefined,
-      customer_creation: 'always',
+    };
+
+    const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = payload.products.map(
+      product => ({
+        price: product.priceId,
+        quantity: product.quantity,
+      }),
+    );
+
+    const session = await stripe.checkout.sessions.create({
+      payment_intent_data: paymentIntentData,
+      line_items: lineItems,
       customer_email: payload.email,
       shipping_options: shippingRates.map(shippingRate => ({
         shipping_rate: shippingRate.id,
       })),
-      line_items: payload.products.map(product => ({
-        price: product.priceId,
-        quantity: product.quantity,
-      })),
       success_url: ORDER_CONFIRMATION_PAGE_URL,
       cancel_url: ORDER_CONFIRMATION_PAGE_URL,
+      mode: 'payment',
+      customer: undefined,
+      customer_creation: 'always',
     });
 
     return {
