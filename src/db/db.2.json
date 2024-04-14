@@ -925,10 +925,10 @@
       },
       "price": {
         "1": {
-          "stripePriceId": "price_1P5BLHARhMwSarZX3rHJLJHY"
+          "stripePriceId": "price_1P5BHpARhMwSarZXNfgQ4fK6"
         },
         "2": {
-          "stripePriceId": "price_1P5BHpARhMwSarZXNfgQ4fK6"
+          "stripePriceId": "price_1P5BLHARhMwSarZX3rHJLJHY"
         }
       },
       "weight": 55,
