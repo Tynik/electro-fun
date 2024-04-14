@@ -5,7 +5,7 @@ import { useHoneyForm } from '@tynik/react-honey-form';
 import type { CheckoutProductPayload } from '~/api';
 import type { Product } from '~/types';
 
-import { AppContext, UserContext } from '~/contexts';
+import { AppContext, useCurrentUser } from '~/providers';
 import { getIcon } from '~/utils';
 import { checkoutRequest } from '~/api';
 import { getStripeProductPriceId, getProductWeight } from '~/helpers';
@@ -31,7 +31,7 @@ export type BasketStep2Props = {
 const BasketStep2 = ({ isActive, products, onBefore }: BasketStep2Props) => {
   const {
     user: { basket },
-  } = React.useContext(UserContext);
+  } = useCurrentUser();
 
   const { addNotification } = React.useContext(AppContext);
 
@@ -72,16 +72,18 @@ const BasketStep2 = ({ isActive, products, onBefore }: BasketStep2Props) => {
   const makeOrder = async (formData: CheckoutFormData) => {
     try {
       const checkoutProductsPayload = products.reduce<CheckoutProductPayload[]>(
-        (result, product) => {
-          Object.keys(basket.products[product.id]).map(optionId => {
-            result.push({
+        (checkoutPayload, product) => {
+          const basketProduct = basket.products[product.id];
+
+          Object.keys(basketProduct).map(optionId => {
+            checkoutPayload.push({
               priceId: getStripeProductPriceId(product, optionId),
               weight: getProductWeight(product, optionId),
-              quantity: basket.products[product.id][optionId],
+              quantity: basketProduct[optionId],
             });
           });
 
-          return result;
+          return checkoutPayload;
         },
         [],
       );

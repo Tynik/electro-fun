@@ -2,9 +2,10 @@ import React from 'react';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import { Box, Toolbar, Typography } from '@mui/material';
 
-import { DbContext, UserContext } from '~/contexts';
+import type { Nullable } from '~/types';
+import { DbContext, useCurrentUser } from '~/providers';
+import { CIconButton } from '~/components';
 import { getIcon } from '~/utils';
-import CIconButton from '~/components/CIconButton';
 
 import Search from './Search';
 
@@ -18,9 +19,9 @@ const MainToolbar = ({ menuIsOpened, onSearch, onOpenMenu }: ToolbarProps) => {
   const navigate = useNavigate();
 
   const { db } = React.useContext(DbContext);
-  const { totalNumberProductsInBasket } = React.useContext(UserContext);
+  const { totalNumberProductsInBasket } = useCurrentUser();
 
-  const [searchValue, setSearchValue] = React.useState<string>(null);
+  const [searchValue, setSearchValue] = React.useState<Nullable<string>>(null);
 
   React.useEffect(() => {
     if (searchValue === null) {

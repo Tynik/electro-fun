@@ -3,7 +3,7 @@ import React from 'react';
 import type { Product } from '~/types';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
-import { DbContext } from '~/contexts';
+import { DbContext } from '~/providers';
 import { useItemManufacturer } from '~/hooks';
 
 type ProductBrandMicrodataProps = {

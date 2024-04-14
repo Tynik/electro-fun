@@ -5,7 +5,7 @@ import { ExpandMore as ExpandMoreIcon } from '@mui/icons-material';
 
 import type { Product } from '~/types';
 
-import { DbContext } from '~/contexts';
+import { DbContext } from '~/providers';
 import { NO_IMAGE } from '~/constants';
 import { CCardMedia } from '~/components';
 

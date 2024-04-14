@@ -14,7 +14,7 @@ import {
 import type { Product, ProductOptionId } from '~/types';
 import type { StripeProduct } from '~/api';
 
-import { UserContext } from '~/contexts';
+import { useCurrentUser } from '~/providers';
 import { CIconButton } from '~/components';
 import { getIcon } from '~/utils';
 import { getProductAllowedQuantity, getProductPrice } from '~/helpers';
@@ -30,7 +30,7 @@ const BasketProduct = ({ product, stripeProduct, optionId }: BasketProductProps)
     user: { basket },
     addProductToBasket,
     removeProductFromBasket,
-  } = React.useContext(UserContext);
+  } = useCurrentUser();
 
   const smMatch = useMediaQuery<any>(theme => theme.breakpoints.down('sm'));
 

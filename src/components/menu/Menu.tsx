@@ -1,14 +1,8 @@
 import React from 'react';
 import sortBy from 'lodash.sortby';
-import {
-  Divider,
-  List,
-  Drawer as MuiDrawer,
-  useTheme,
-  styled
-} from '@mui/material';
+import { Divider, List, Drawer as MuiDrawer, useTheme, styled } from '@mui/material';
 
-import { DbContext } from '~/contexts';
+import { DbContext } from '~/providers';
 import { getIcon } from '~/utils';
 import { useLocalStorage } from '~/hooks';
 
@@ -17,51 +11,41 @@ import MenuItem from './MenuItem';
 import CIconButton from '~/components/CIconButton';
 
 export const Drawer = styled(MuiDrawer, {
-  shouldForwardProp: (prop) => 'drawerWidth' !== prop
+  shouldForwardProp: prop => 'drawerWidth' !== prop,
 })<{
-  drawerWidth: number
-}>(({ drawerWidth }) => (
-  {
+  drawerWidth: number;
+}>(({ drawerWidth }) => ({
+  width: drawerWidth,
+  flexShrink: 0,
+  '& .MuiDrawer-paper': {
     width: drawerWidth,
-    flexShrink: 0,
-    '& .MuiDrawer-paper': {
-      width: drawerWidth,
-      boxSizing: 'border-box'
-    }
-  }
-));
+    boxSizing: 'border-box',
+  },
+}));
 
-export const DrawerHeader = styled('div')(({ theme }) => (
-  {
-    display: 'flex',
-    alignItems: 'center',
-    padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
-    ...theme.mixins.toolbar,
-    justifyContent: 'flex-end'
-  }
-));
+export const DrawerHeader = styled('div')(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  padding: theme.spacing(0, 1),
+  // necessary for content to be below app bar
+  ...theme.mixins.toolbar,
+  justifyContent: 'flex-end',
+}));
 
 export type MenuProps = Pick<AppBarProps, 'onSearch'> & {
-  onOpen: (state: boolean) => void
-  drawerWidth: number
-}
+  onOpen: (state: boolean) => void;
+  drawerWidth: number;
+};
 
 const Menu = (props: MenuProps) => {
-  const {
-    onOpen,
-    onSearch,
-    drawerWidth
-  } = props;
+  const { onOpen, onSearch, drawerWidth } = props;
 
   const theme = useTheme();
 
   const { db } = React.useContext(DbContext);
 
-  const {
-    set: saveMenuIsOpenedState,
-    initialValue: menuIsOpenedInitialState
-  } = useLocalStorage<boolean>('menuIsOpened');
+  const { set: saveMenuIsOpenedState, initialValue: menuIsOpenedInitialState } =
+    useLocalStorage<boolean>('menuIsOpened');
 
   const [menuIsOpened, setMenuOpen] = React.useState<boolean>(menuIsOpenedInitialState);
 
@@ -95,12 +79,7 @@ const Menu = (props: MenuProps) => {
         onOpenMenu={openMenu}
       />
 
-      <Drawer
-        variant={'persistent'}
-        anchor={'left'}
-        open={menuIsOpened}
-        drawerWidth={drawerWidth}
-      >
+      <Drawer variant={'persistent'} anchor={'left'} open={menuIsOpened} drawerWidth={drawerWidth}>
         <DrawerHeader>
           <CIconButton
             onClick={closeMenu}
@@ -109,7 +88,7 @@ const Menu = (props: MenuProps) => {
           />
         </DrawerHeader>
 
-        <Divider/>
+        <Divider />
 
         <List>
           {categories.map(category => (
@@ -122,7 +101,7 @@ const Menu = (props: MenuProps) => {
           ))}
         </List>
 
-        <Divider/>
+        <Divider />
 
         <List>
           {db.menu.map(itemMenu => (

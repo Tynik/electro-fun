@@ -1,12 +1,12 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useQuery } from 'react-query';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Alert, Button, Grid } from '@mui/material';
 import { Home as HomeIcon } from '@mui/icons-material';
 
 import { confirmOrder } from '~/api';
+import { useCurrentUser } from '~/providers';
 import { Loader } from '~/components';
-import { UserContext } from '~/contexts';
 
 export const OrderConfirmationPage = () => {
   const location = useLocation();
@@ -14,7 +14,7 @@ export const OrderConfirmationPage = () => {
 
   const sessionId = new URLSearchParams(location.search).get('sessionId');
 
-  const { clearBasket } = useContext(UserContext);
+  const { clearBasket } = useCurrentUser();
 
   const {
     data: orderConfirmationResult,

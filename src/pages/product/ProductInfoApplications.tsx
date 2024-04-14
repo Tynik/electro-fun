@@ -3,7 +3,7 @@ import { List, ListItem, ListItemText, ListItemIcon, Typography, useTheme } from
 import { ArrowRight as ArrowRightIcon } from '@mui/icons-material';
 
 import type { ApplicationId } from '~/types';
-import { DbContext } from '~/contexts';
+import { DbContext } from '~/providers';
 
 export type ProductInfoApplicationsProps = {
   applicationIds: ApplicationId[];

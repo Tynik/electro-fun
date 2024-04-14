@@ -2,6 +2,8 @@ import React from 'react';
 import { InputBase, alpha, styled } from '@mui/material';
 import { Search as SearchIcon } from '@mui/icons-material';
 
+import type { Nullable } from '~/types';
+
 const StyledSearch = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -43,7 +45,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export type SearchProps = {
-  searchValue: string;
+  searchValue: Nullable<string>;
   setSearchValue: (value: string) => void;
   onSearch: (text: string) => void;
 };
@@ -61,7 +63,7 @@ const Search = (props: SearchProps) => {
         onSearch(e.target.value);
       }
     },
-    [onSearch]
+    [onSearch],
   );
 
   return (

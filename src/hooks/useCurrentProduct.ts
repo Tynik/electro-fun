@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import type { Nullable, Product } from '~/types';
 
-import { DbContext } from '~/contexts';
+import { DbContext } from '~/providers';
 import { getProductPrice } from '~/helpers';
 import {
   useJsonDbSearch,

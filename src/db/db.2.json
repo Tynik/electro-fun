@@ -905,7 +905,7 @@
       ]
     },
     {
-      "stripeProductId": "prod_OEjuD6NuAoR2PW",
+      "stripeProductId": "prod_Pv2tzI2T2219hY",
       "categoryId": 19,
       "title": "USB-A to Type-C / Type-C to Type-C",
       "subtitle": "60/100 W",
@@ -925,10 +925,10 @@
       },
       "price": {
         "1": {
-          "stripePriceId": "price_1P5BLHARhMwSarZX3rHJLJHY"
+          "stripePriceId": "price_1P5Co3ARhMwSarZXzU9iSQ8R"
         },
         "2": {
-          "stripePriceId": "price_1P5BHpARhMwSarZXNfgQ4fK6"
+          "stripePriceId": "price_1P5Co3ARhMwSarZXqrWjYgVc"
         }
       },
       "weight": 55,

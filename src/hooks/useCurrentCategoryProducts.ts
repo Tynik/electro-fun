@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { DbContext } from '~/contexts';
+import { DbContext } from '~/providers';
 import { useJsonDbSearch, useCurrentCategory } from '~/hooks';
 
 export const useCurrentCategoryProducts = () => {

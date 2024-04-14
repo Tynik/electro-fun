@@ -3,7 +3,7 @@ import { Typography } from '@mui/material';
 
 import type { DatasheetId, Datasheets } from '~/types';
 
-import { DbContext } from '~/contexts';
+import { DbContext } from '~/providers';
 import { DatasheetsList } from '~/components';
 
 export type ProductInfoRelatedDatasheetsProps = {

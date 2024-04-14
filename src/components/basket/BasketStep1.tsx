@@ -4,7 +4,7 @@ import { Button, Grid, Alert, Stack } from '@mui/material';
 import type { Product } from '~/types';
 import type { StripeProduct } from '~/api';
 
-import { UserContext } from '~/contexts';
+import { useCurrentUser } from '~/providers';
 import { BasketItem } from '~/components';
 import { getIcon } from '~/utils';
 
@@ -19,7 +19,7 @@ const BasketStep1 = ({ isActive, products, stripeProducts, onNext }: BasketStep1
   const {
     user: { basket },
     clearBasket,
-  } = React.useContext(UserContext);
+  } = useCurrentUser();
 
   if (!isActive) {
     return null;

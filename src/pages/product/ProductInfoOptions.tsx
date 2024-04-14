@@ -1,12 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FormLabel, RadioGroup, FormControlLabel, Radio, Chip, FormControl } from '@mui/material';
 
 import type { Product } from '~/types';
 
-import { UserContext } from '~/contexts';
+import { useCurrentUser } from '~/providers';
 import { useQueryParams } from '~/utils/router';
 import { getProductDefaultOption } from '~/helpers';
-import { useNavigate } from 'react-router-dom';
 
 export type ProductInfoOptionsProps = {
   product: Product;
@@ -19,7 +19,7 @@ export const ProductInfoOptions = ({ product }: ProductInfoOptionsProps) => {
 
   const {
     user: { basket },
-  } = React.useContext(UserContext);
+  } = useCurrentUser();
 
   const productOptionsInBasket = basket.products[product.id] || {};
 
@@ -36,6 +36,8 @@ export const ProductInfoOptions = ({ product }: ProductInfoOptionsProps) => {
     navigate(`?${queryParams}`, { replace: true });
   };
 
+  const productOptions = product.options ?? {};
+
   return (
     <FormControl component={'fieldset'}>
       <FormLabel component={'legend'}>Options</FormLabel>
@@ -46,13 +48,13 @@ export const ProductInfoOptions = ({ product }: ProductInfoOptionsProps) => {
         name={'radio-buttons-group'}
         onChange={onSelectOption}
       >
-        {Object.keys(product.options).map(optionId => (
+        {Object.keys(productOptions).map(optionId => (
           <FormControlLabel
             key={optionId}
             value={optionId}
             label={
               <>
-                {product.options[optionId].name}
+                {productOptions[optionId].name}
 
                 {productOptionsInBasket[optionId] && (
                   <Chip

@@ -2,7 +2,7 @@ import React from 'react';
 import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { Container, Box, styled, LinearProgress } from '@mui/material';
 
-import { DbContext } from './contexts';
+import { DbContext } from './providers';
 import { Menu, DrawerHeader, Category, Footer } from './components';
 import {
   HomePage,

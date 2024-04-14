@@ -4,7 +4,7 @@ import { Info as InfoIcon } from '@mui/icons-material';
 
 import type { Product, ProductFeature, FeatureDefinitionSuffix } from '~/types';
 
-import { DbContext } from '~/contexts';
+import { DbContext } from '~/providers';
 import { sortProductFeatures } from '~/helpers';
 import { useTextProcessor } from '~/hooks';
 import { AbbrLink } from '~/components';

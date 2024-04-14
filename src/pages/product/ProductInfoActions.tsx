@@ -5,7 +5,7 @@ import { Link as LinkIcon, ShoppingCart as ShoppingCartIcon } from '@mui/icons-m
 import type { StripeProduct } from '~/api';
 import type { Product } from '~/types';
 
-import { DbContext, UserContext } from '~/contexts';
+import { DbContext, useCurrentUser } from '~/providers';
 import { ExternalButtonLink } from '~/components';
 import { getIcon } from '~/utils';
 import { useSelectedProductOptionId } from '~/hooks';
@@ -18,10 +18,10 @@ export type ProductInfoActionsProps = {
 
 export const ProductInfoActions = ({ product, stripeProduct }: ProductInfoActionsProps) => {
   const { db } = React.useContext(DbContext);
-  const { getNumberProductsInBasket, addProductToBasket } = React.useContext(UserContext);
+  const { getNumberProductsInBasket, addProductToBasket } = useCurrentUser();
 
   const selectedProductOptionId = useSelectedProductOptionId(product);
-  const numberProductsInBasket = getNumberProductsInBasket(product, selectedProductOptionId);
+  const numberProductsInBasket = getNumberProductsInBasket(product.id, selectedProductOptionId);
 
   const downSmMatch = useMediaQuery<any>(theme => theme.breakpoints.down('sm'));
 

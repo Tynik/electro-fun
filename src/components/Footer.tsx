@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Grid, Container, Link, Typography, List, ListItem } from '@mui/material';
 
-import { DbContext } from '~/contexts';
+import { DbContext } from '~/providers';
 import { InternalLink } from '~/components';
 
 export const Footer = () => {

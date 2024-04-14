@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import type { StripeProductId } from '~/types';
 
 import { getStripeProducts } from '~/api';
-import { DbContext, UserContext } from '~/contexts';
+import { DbContext, useCurrentUser } from '~/providers';
 import { BackButton, Loader, BasketStep1, BasketStep2 } from '~/components';
 import { useJsonDbSearch } from '~/hooks';
 import { getProductPrice } from '~/helpers';
@@ -21,7 +21,7 @@ export const BasketPage = () => {
 
   const {
     user: { basket },
-  } = React.useContext(UserContext);
+  } = useCurrentUser();
 
   const [step, setStep] = React.useState(+queryStep || 0);
 

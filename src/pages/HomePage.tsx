@@ -3,7 +3,7 @@ import { Alert, Box, Typography, useTheme } from '@mui/material';
 
 import type { Product, FoundDatasheets } from '~/types';
 
-import { DbContext } from '~/contexts';
+import { DbContext } from '~/providers';
 import { SearchResultsPage } from './SearchResultsPage';
 
 export type HomePageProps = {

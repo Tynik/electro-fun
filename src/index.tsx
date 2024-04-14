@@ -10,7 +10,7 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 import { App } from './App';
-import { AppContextProvider, UserContextProvider, DbContextProvider } from './contexts';
+import { AppContextProvider, UserProvider, DbContextProvider } from './providers';
 import theme from './theme';
 
 const root = createRoot(document.getElementById('app'));
@@ -32,11 +32,11 @@ root.render(
 
       <QueryClientProvider client={queryClient}>
         <AppContextProvider>
-          <UserContextProvider>
+          <UserProvider>
             <DbContextProvider>
               <App />
             </DbContextProvider>
-          </UserContextProvider>
+          </UserProvider>
         </AppContextProvider>
       </QueryClientProvider>
     </ThemeProvider>
