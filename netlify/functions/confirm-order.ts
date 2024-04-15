@@ -1,4 +1,12 @@
+import Stripe from 'stripe';
+
 import { createHandler, initStripeClient } from '../helpers';
+
+enum PaymentStatus {
+  SUCCESS = 'success',
+  // When some items quantity are partially unavailable
+  PARTIAL_SUCCESS = 'partial_success',
+}
 
 export const handler = createHandler({ allowMethods: ['POST'] }, async ({ event }) => {
   const sessionId = event.queryStringParameters?.sessionId;
@@ -39,10 +47,12 @@ export const handler = createHandler({ allowMethods: ['POST'] }, async ({ event 
     };
   }
 
-  if (payment.metadata.completed !== 'yes') {
+  if (payment.metadata.status !== PaymentStatus.SUCCESS) {
     const itemLines = await stripe.checkout.sessions.listLineItems(sessionId, {
       limit: 100,
     });
+
+    const partiallyUnavailableItems: Stripe.LineItem[] = [];
 
     const updatePricesMetadataTasks = itemLines.data.map(async itemLine => {
       if (!itemLine.price) {
@@ -59,6 +69,10 @@ export const handler = createHandler({ allowMethods: ['POST'] }, async ({ event 
             quantity: remainingPriceQuantity > 0 ? remainingPriceQuantity : 0,
           },
         });
+
+        if (remainingPriceQuantity < 0) {
+          partiallyUnavailableItems.push(itemLine);
+        }
       }
     });
 
@@ -66,7 +80,9 @@ export const handler = createHandler({ allowMethods: ['POST'] }, async ({ event 
 
     await stripe.paymentIntents.update(paymentId, {
       metadata: {
-        completed: 'yes',
+        status: partiallyUnavailableItems.length
+          ? PaymentStatus.PARTIAL_SUCCESS
+          : PaymentStatus.SUCCESS,
       },
     });
   }

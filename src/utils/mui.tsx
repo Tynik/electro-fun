@@ -49,7 +49,7 @@ export const getIcon = (name: string, props: SvgIconProps = {}): any => {
     dashboard: <DashboardIcon {...props} />,
     flash: <FlashOnIcon {...props} />,
     compass: <ExploreIcon {...props} />,
-    mosfet: <CallMergeIcon {...props} />,
+    transistor: <CallMergeIcon {...props} />,
     wifi: <WifiIcon {...props} />,
     antenna: <SettingsInputAntennaIcon {...props} />,
     convertors: <MultipleStopIcon {...props} />,

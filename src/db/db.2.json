@@ -1243,7 +1243,7 @@
           "default": true
         },
         "2": {
-          "name": "Just board"
+          "name": "Only board"
         }
       },
       "price": {
@@ -1364,6 +1364,42 @@
         "Each motor drive module can conveniently select the corresponding motor voltage through a jumper cap.",
         "Supports motor power supply up to 48V, with isolation chip integration for enhanced safety, especially with TMC5160 and EZ5160 usage."
       ]
+    },
+    {
+      "stripeProductId": "prod_PvnhVgKLeUXjxZ",
+      "stripePriceId": "price_1P5w5lARhMwSarZXnw5oeteA",
+      "categoryId": 10,
+      "title": "2N5457",
+      "subtitle": "JFET N-Channel General Purpose",
+      "seo": {
+        "description": "2N5457 - N-channel JFET transistor known for its high input impedance and low noise characteristics",
+        "keywords": "2N5457, JFET, N-Channel, transistor, general-purpose, low-noise, high-input-impedance, audio"
+      },
+      "buy": true,
+      "weight": 1,
+      "datasheetId": "2N5457-2N5458",
+      "manufacturerId": "16",
+      "images": [
+        {
+          "src": "/photos/2N5457-1.webp",
+          "alt": "2N5457 - JFET N-Channel-Depletion GP"
+        }
+      ],
+      "features": [
+        {
+          "refId": 42,
+          "value": "TO-92"
+        },
+        {
+          "refId": 65,
+          "value": "N"
+        },
+        {
+          "refId": 70,
+          "value": "135 °C"
+        }
+      ],
+      "content": "<p>N−Channel Junction Field Effect Transistors, depletion mode (Type A) designed for audio and switching applications.</p>"
     }
   ]
 }

@@ -127,6 +127,10 @@
     "15": {
       "name": "Murata",
       "url": "https://www.murata.com"
+    },
+    "16": {
+      "name": "ON Semiconductor",
+      "url": "https://www.onsemi.com"
     }
   },
   "abbreviations": {},
@@ -223,6 +227,9 @@
       "relatedDatasheetIds": [
         "BK3266"
       ]
+    },
+    "2N5457-2N5458": {
+      "lang": "en"
     },
     "BIGTREETECH-SKR-3-EZ": {
       "lang": "en",
@@ -594,8 +601,8 @@
     },
     {
       "id": 10,
-      "name": "MOSFET Transistors",
-      "icon": "mosfet"
+      "name": "Transistors",
+      "icon": "transistor"
     },
     {
       "id": 11,
@@ -2458,7 +2465,7 @@
       "subtitle": "MOSFET Transistor up to 55 V and 110 A",
       "seo": {
         "description": "IRF3205 MOSFET transistor up to 55 V and 110 A",
-        "keywords": "irf3205, mosfet, transistor, 55v, 110a"
+        "keywords": "IRF3205, MOSFET, transistor, 55V, 110A"
       },
       "buy": true,
       "weight": 3,
@@ -2467,7 +2474,7 @@
       "images": [
         {
           "src": "/photos/IRF3205PbF-1.webp",
-          "alt": "IRF3205"
+          "alt": "IRF3205 - MOSFET up to 55 V and 110 A"
         }
       ],
       "features": [

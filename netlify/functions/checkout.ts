@@ -81,6 +81,7 @@ export const handler = createHandler<CheckoutPayload>(
       mode: 'payment',
       customer: undefined,
       customer_creation: 'always',
+      currency: 'GBP',
     });
 
     return {
