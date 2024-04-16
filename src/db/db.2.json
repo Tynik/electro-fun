@@ -1392,14 +1392,21 @@
         },
         {
           "refId": 65,
-          "value": "N"
+          "value": "N-Channel"
         },
         {
           "refId": 70,
           "value": "135 °C"
         }
       ],
-      "content": "<p>N−Channel Junction Field Effect Transistors, depletion mode (Type A) designed for audio and switching applications.</p>"
+      "content": "<p>The 2N5457 - N−Channel Junction Field Effect Transistor (JFET), depletion mode (Type A) designed for audio and switching applications.</p>",
+      "externalLinks": [
+        {
+          "name": "JFET (Junction Field Effect Transistor)",
+          "url": "https://www.electronics-tutorials.ws/transistor/tran_5.html",
+          "lang": "en"
+        }
+      ]
     }
   ]
 }

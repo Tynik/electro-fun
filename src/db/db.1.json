@@ -460,6 +460,12 @@
     "JLINKUM08001": {
       "lang": "en"
     },
+    "TL072A-TL072B": {
+      "lang": "en"
+    },
+    "TL071C-TL072C-TL074C": {
+      "lang": "en"
+    },
     "BC847": {
       "lang": "en"
     },
@@ -2503,7 +2509,7 @@
         },
         {
           "refId": 65,
-          "value": "N"
+          "value": "N-Channel"
         },
         {
           "refId": 66,
