@@ -45,7 +45,7 @@ const Menu = (props: MenuProps) => {
   const { db } = React.useContext(DbContext);
 
   const { set: saveMenuIsOpenedState, initialValue: menuIsOpenedInitialState } =
-    useLocalStorage<boolean>('menuIsOpened');
+    useLocalStorage<boolean>('menuIsOpened', true);
 
   const [menuIsOpened, setMenuOpen] = React.useState<boolean>(menuIsOpenedInitialState);
 

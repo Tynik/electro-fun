@@ -1,13 +1,10 @@
 import React from 'react';
 
-export const useLocalStorage = <T = any>(
-  key: string,
-  defaultValue: T = null
-) => {
+export const useLocalStorage = <T = unknown>(key: string, defaultValue: T = null) => {
   const get = React.useCallback((): T => {
-    const value = window.localStorage.getItem(key);
+    const rawValue = window.localStorage.getItem(key);
 
-    return value ? JSON.parse(value) : defaultValue;
+    return rawValue === null ? defaultValue : JSON.parse(rawValue);
   }, []);
 
   const set = React.useCallback((value: T) => {
@@ -19,6 +16,6 @@ export const useLocalStorage = <T = any>(
   return {
     get,
     set,
-    initialValue
+    initialValue,
   };
 };

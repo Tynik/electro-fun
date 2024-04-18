@@ -1407,6 +1407,32 @@
           "lang": "en"
         }
       ]
+    },
+    {
+      "stripeProductId": "prod_PwvWl4Bin5suDw",
+      "stripePriceId": "price_1P71fJARhMwSarZX5GoOqACK",
+      "categoryId": 19,
+      "title": "USB Type-C Breakout Board",
+      "subtitle": "Female",
+      "seo": {
+        "description": "USB Type-C breakout board featuring symmetrical reversible connectors, expanded data pin functionality, and ultra-portable design",
+        "keywords": "usb, pcb, type-c, breakout, female"
+      },
+      "buy": true,
+      "weight": 5,
+      "images": [
+        {
+          "src": "/photos/USB-Type-C-Breakout-Board-1.webp",
+          "alt": "USB Type-C Breakout Board"
+        }
+      ],
+      "features": [
+        {
+          "refId": 76,
+          "value": "21.6 x 14.2 x 4.9 mm"
+        }
+      ],
+      "content": "<p>USB Type-C Breakout Board featuring a meticulously designed interface with precise pin arrangement. With symmetrical reversible connectors, expanded data pin functionality, and enhanced current output, this ultra-compact board delivers unparalleled versatility. Crafted from high-quality FR-4 fiberglass and finished with a premium red oil tin injection process.</p>"
     }
   ]
 }

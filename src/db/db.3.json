@@ -156,11 +156,11 @@
       "subtitle": "220V to 5V at 600mA",
       "seo": {
         "description": "HLK-PM01 - power supply 5V at 600mA (3W)",
-        "keywords": "hlk-pm01, hi-link, conversion, 220V, 5V, 3W, ac-dc, 600mA"
+        "keywords": "hlk-pm01, hi-link, voltage regulator, 220V, 5V, 3W, ac-dc, 600mA, low power"
       },
       "buy": true,
       "weight": 55,
-      "content": "",
+      "content": "<p>The HLK-PM01 is a compact and efficient 3W ultra-small power module designed by Hi-Link Electronics. This high-quality power supply features a global input voltage range, ensuring compatibility worldwide. With its low temperature rise, minimal power consumption, and high efficiency, the HLK-PM01 delivers reliable and secure power supply solutions. It is widely utilized in smart home systems, automation devices, communication equipment, and instrumentation across various industries.</p>",
       "datasheetId": "HLK-PM0x",
       "manufacturerId": "2",
       "images": [

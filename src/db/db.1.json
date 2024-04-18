@@ -237,7 +237,8 @@
     },
     "NMA0515SC": {
       "lang": "en",
-      "manufacturerId": "15"
+      "manufacturerId": "15",
+      "keywords": ["murata"]
     },
     "CM108B": {
       "lang": "en"
@@ -652,7 +653,7 @@
     },
     {
       "id": 19,
-      "name": "Cables/Wires",
+      "name": "Cables / Wires / Connectors",
       "icon": "power"
     },
     {

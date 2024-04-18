@@ -18,6 +18,7 @@ export const matchDatasheetIdWithSearchKeyword = (
   if (datasheetId.length < searchKeyword.length) {
     return false;
   }
+
   let keywordCharIndexOffset = -1;
   let keywordFrameLen = searchKeyword.length;
 
@@ -25,12 +26,15 @@ export const matchDatasheetIdWithSearchKeyword = (
     keywordCharIndexOffset = datasheetId
       .toLowerCase()
       .indexOf(searchKeyword.substring(0, keywordFrameLen));
+
     keywordFrameLen--;
   }
+
   keywordCharIndexOffset = keywordCharIndexOffset === -1 ? 0 : keywordCharIndexOffset;
 
   return searchKeyword.split('').every((keywordChar, keywordCharIndex) => {
     const datasheetIdChar = datasheetId[keywordCharIndexOffset + keywordCharIndex];
+
     return (
       datasheetIdChar && (datasheetIdChar === 'x' || keywordChar === datasheetIdChar.toLowerCase())
     );

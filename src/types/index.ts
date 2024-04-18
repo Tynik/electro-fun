@@ -90,6 +90,7 @@ export type Datasheet = {
   relatedDatasheetIds?: DatasheetId[];
   version?: string;
   description?: string;
+  keywords?: string[];
 };
 
 export type Datasheets = Record<DatasheetId, Datasheet>;
