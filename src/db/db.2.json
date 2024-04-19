@@ -1433,6 +1433,63 @@
         }
       ],
       "content": "<p>USB Type-C Breakout Board featuring a meticulously designed interface with precise pin arrangement. With symmetrical reversible connectors, expanded data pin functionality, and enhanced current output, this ultra-compact board delivers unparalleled versatility. Crafted from high-quality FR-4 fiberglass and finished with a premium red oil tin injection process.</p>"
+    },
+    {
+      "stripeProductId": "prod_Px87PkiO5YKJ4d",
+      "stripePriceId": "price_1P7DqmARhMwSarZXTB13Mx4i",
+      "categoryId": 17,
+      "title": "LiPo Battery 103450 3.7V 2000mAh",
+      "subtitle": "JST PH 2.0mm",
+      "seo": {
+        "description": "Reliable and versatile 103450 3.7V, 2000mAh Li-Po battery features intelligent protection against overcharging, over discharge, and short circuits",
+        "keywords": "LiPo, Li-Po, lLithium-polymer, battery, rechargeable, 2000mAh, 3.7V"
+      },
+      "buy": true,
+      "weight": 15,
+      "features": [
+        {
+          "refId": 14,
+          "value": "3.7 V"
+        },
+        {
+          "refId": 175,
+          "value": "3.7 - 4.2 V"
+        },
+        {
+          "refId": 76,
+          "value": "10 x 34 x 50 mm"
+        },
+        {
+          "refId": 171,
+          "value": "103450"
+        },
+        {
+          "refId": 172,
+          "value": "LiPo",
+          "info": "Lithium Polymer"
+        },
+        {
+          "refId": 173,
+          "value": "2000mAh"
+        },
+        {
+          "refId": 174,
+          "value": "Yes"
+        }
+      ],
+      "images": [
+        {
+          "src": "/photos/LiPo-Battery-103450-3.7V-2000mAh-1.webp",
+          "alt": "LiPo Battery 103450 3.7V 2000mAh"
+        }
+      ],
+      "content": "<p>The 103450 3.7V 2000mAh rechargeable Li-Po battery with a built-in intelligent protection PCB charging module, it guards against overcharge, over discharge, over current, and short circuits. Widely compatible with electric toys, MP5 players, GPS units, remote controls, iPods, tablets, Bluetooth speakers, headsets, cameras, MID devices, POS machines, solar lamps, and more.</p>",
+      "peculiarities": [
+        "Over charge protection",
+        "Over discharge protection",
+        "Over current protection",
+        "Short protection"
+      ]
     }
   ]
 }

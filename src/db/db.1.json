@@ -221,6 +221,12 @@
     }
   },
   "datasheets": {
+    "Ai-M62-32S": {
+      "lang": "en"
+    },
+    "Ai-WB2-M1": {
+      "lang": "en"
+    },
     "F-6988": {
       "lang": "en",
       "version": "3.1",
@@ -238,7 +244,9 @@
     "NMA0515SC": {
       "lang": "en",
       "manufacturerId": "15",
-      "keywords": ["murata"]
+      "keywords": [
+        "murata"
+      ]
     },
     "CM108B": {
       "lang": "en"
@@ -1421,6 +1429,23 @@
     },
     "170": {
       "name": "Firmware"
+    },
+    "171": {
+      "name": "Model"
+    },
+    "172": {
+      "name": "Type"
+    },
+    "173": {
+      "name": "Nominal Capacity"
+    },
+    "174": {
+      "name": "Rechargeable",
+      "type": "bool"
+    },
+    "175": {
+      "name": "Charging",
+      "featSecRefId": 3
     }
   },
   "items": [
