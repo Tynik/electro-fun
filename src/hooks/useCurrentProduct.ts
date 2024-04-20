@@ -28,7 +28,9 @@ export const useCurrentProduct = () => {
   const images = useProductImages(product);
 
   React.useEffect(() => {
-    search({ ids: [id] });
+    if (id) {
+      search({ ids: [id] });
+    }
   }, []);
 
   React.useEffect(() => {
@@ -55,7 +57,11 @@ export const useCurrentProduct = () => {
     [db, product],
   );
 
-  const { data: stripeProduct, isFetching: isStripeProductFetching } = useQuery(
+  const {
+    data: stripeProduct,
+    isFetching: isStripeProductFetching,
+    isError: isStripeProductError,
+  } = useQuery(
     ['stripe-product', product?.stripeProductId],
     () => getStripeProduct(product!.stripeProductId!),
     {
@@ -77,5 +83,6 @@ export const useCurrentProduct = () => {
     printErrors,
     stripeProduct,
     isStripeProductFetching,
+    isStripeProductError,
   };
 };

@@ -221,6 +221,12 @@
     }
   },
   "datasheets": {
+    "CH32V003RM.pdf": {
+      "lang": "en"
+    },
+    "CH32V003DS0.pdf": {
+      "lang": "en"
+    },
     "Ai-M62-32S": {
       "lang": "en"
     },
