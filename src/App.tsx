@@ -21,20 +21,22 @@ const Main = styled('div', {
   shouldForwardProp: prop => prop !== 'menuIsOpened',
 })<{
   menuIsOpened: boolean;
-}>(({ theme, menuIsOpened }) => ({
+}>(({ menuIsOpened, theme: { spacing, transitions, breakpoints } }) => ({
   flexGrow: 1,
-  padding: theme.spacing(2, 0),
-  transition: theme.transitions.create('margin', {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
+  padding: spacing(2, 0),
+  transition: transitions.create('margin', {
+    easing: transitions.easing.sharp,
+    duration: transitions.duration.leavingScreen,
   }),
-  marginLeft: `-${drawerWidth}px`,
   ...(menuIsOpened && {
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
+    marginLeft: `${drawerWidth}px`,
+    transition: transitions.create('margin', {
+      easing: transitions.easing.easeOut,
+      duration: transitions.duration.enteringScreen,
     }),
-    marginLeft: 0,
+    [breakpoints.down('md')]: {
+      marginLeft: 0,
+    },
   }),
 }));
 

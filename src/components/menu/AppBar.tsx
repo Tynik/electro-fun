@@ -1,42 +1,39 @@
 import React from 'react';
-import { styled, AppBar as MuiAppBar, Theme } from '@mui/material';
+import { styled, AppBar as MuiAppBar } from '@mui/material';
 
 import MainToolbar, { ToolbarProps } from './MainToolbar';
 
 export type StyledAppBarProps = {
-  drawerWidth: number;
   open: boolean;
-  theme?: Theme;
+  drawerWidth: number;
 };
 
 const StyledAppBar = styled(MuiAppBar, {
   shouldForwardProp: prop => ['open', 'drawerWidth'].indexOf(prop as string) === -1,
-})(({ theme, drawerWidth, open }: StyledAppBarProps) => ({
-  transition: theme.transitions.create(['margin', 'width'], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
+})<StyledAppBarProps>(({ open, drawerWidth, theme: { transitions } }) => ({
+  transition: transitions.create(['margin', 'width'], {
+    easing: transitions.easing.sharp,
+    duration: transitions.duration.leavingScreen,
   }),
   ...(open && {
     width: `calc(100% - ${drawerWidth}px)`,
     marginLeft: `${drawerWidth}px`,
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
+    transition: transitions.create(['margin', 'width'], {
+      easing: transitions.easing.easeOut,
+      duration: transitions.duration.enteringScreen,
     }),
   }),
 }));
 
 export type AppBarProps = Pick<ToolbarProps, 'onSearch' | 'onOpenMenu'> & {
-  menuIsOpened: boolean;
+  isMenuOpened: boolean;
   drawerWidth: number;
 };
 
-const AppBar = (props: AppBarProps) => {
-  const { menuIsOpened, drawerWidth, onSearch, onOpenMenu } = props;
-
+const AppBar = ({ isMenuOpened, drawerWidth, onSearch, onOpenMenu }: AppBarProps) => {
   return (
-    <StyledAppBar position={'fixed'} open={menuIsOpened} drawerWidth={drawerWidth}>
-      <MainToolbar menuIsOpened={menuIsOpened} onSearch={onSearch} onOpenMenu={onOpenMenu} />
+    <StyledAppBar position="fixed" open={isMenuOpened} drawerWidth={drawerWidth}>
+      <MainToolbar menuIsOpened={isMenuOpened} onSearch={onSearch} onOpenMenu={onOpenMenu} />
     </StyledAppBar>
   );
 };

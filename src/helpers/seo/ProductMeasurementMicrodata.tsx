@@ -12,13 +12,10 @@ export const ProductMeasurementMicrodata = ({ product }: ProductMeasurementMicro
   if (!product.seo || !product.seo.measurement) {
     return null;
   }
+
   return (
-    <div
-      itemProp={'hasMeasurement'}
-      itemType={`${SEO_SCHEMA_BASE_URL}/QuantitativeValue`}
-      itemScope
-    >
-      <meta itemProp={'value'} content={product.seo.measurement} />
+    <div itemProp="hasMeasurement" itemType={`${SEO_SCHEMA_BASE_URL}/QuantitativeValue`} itemScope>
+      <meta itemProp="value" content={product.seo.measurement} />
     </div>
   );
 };

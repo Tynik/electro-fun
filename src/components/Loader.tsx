@@ -1,14 +1,10 @@
 import React from 'react';
-import {
-  CircularProgress,
-  Typography,
-  useTheme
-} from '@mui/material';
+import { CircularProgress, Typography, useTheme } from '@mui/material';
 
 export type LoaderProps = {
-  style?: Omit<React.CSSProperties, 'display' | 'justifyContent'>
-  label?: string
-}
+  style?: Omit<React.CSSProperties, 'display' | 'justifyContent'>;
+  label?: string;
+};
 
 export const Loader = ({ style, label }: LoaderProps) => {
   const theme = useTheme();
@@ -16,18 +12,18 @@ export const Loader = ({ style, label }: LoaderProps) => {
   return (
     <div
       aria-busy={true}
-      aria-live={'polite'}
+      aria-live="polite"
       style={{
         display: 'flex',
         justifyContent: 'center',
         ...(style || {}),
-        ...(label && { flexDirection: 'column', alignItems: 'center' })
+        ...(label && { flexDirection: 'column', alignItems: 'center' }),
       }}
     >
-      <CircularProgress/>
+      <CircularProgress />
 
       {label && (
-        <Typography variant={'body2'} sx={{ marginTop: theme.spacing(2) }}>
+        <Typography variant="body2" sx={{ marginTop: theme.spacing(2) }}>
           {label}
         </Typography>
       )}

@@ -1,6 +1,6 @@
 import React from 'react';
 import sortBy from 'lodash.sortby';
-import { Divider, List, Drawer as MuiDrawer, useTheme, styled } from '@mui/material';
+import { Divider, List, Drawer as MuiDrawer, useTheme, styled, useMediaQuery } from '@mui/material';
 
 import { DbContext } from '~/providers';
 import { getIcon } from '~/utils';
@@ -14,12 +14,14 @@ export const Drawer = styled(MuiDrawer, {
   shouldForwardProp: prop => 'drawerWidth' !== prop,
 })<{
   drawerWidth: number;
-}>(({ drawerWidth }) => ({
-  width: drawerWidth,
+}>(({ drawerWidth, theme: { breakpoints } }) => ({
   flexShrink: 0,
   '& .MuiDrawer-paper': {
     width: drawerWidth,
     boxSizing: 'border-box',
+    [breakpoints.down('sm')]: {
+      width: '100%',
+    },
   },
 }));
 
@@ -37,33 +39,32 @@ export type MenuProps = Pick<AppBarProps, 'onSearch'> & {
   drawerWidth: number;
 };
 
-const Menu = (props: MenuProps) => {
-  const { onOpen, onSearch, drawerWidth } = props;
-
+export const Menu = ({ onOpen, onSearch, drawerWidth }: MenuProps) => {
   const theme = useTheme();
+  const isMdScreen = useMediaQuery<any>(({ breakpoints }) => breakpoints.down('md'));
 
   const { db } = React.useContext(DbContext);
 
   const { set: saveMenuIsOpenedState, initialValue: menuIsOpenedInitialState } =
-    useLocalStorage<boolean>('menuIsOpened', true);
+    useLocalStorage<boolean>('menuIsOpened', false);
 
-  const [menuIsOpened, setMenuOpen] = React.useState<boolean>(menuIsOpenedInitialState);
+  const [menuIsOpened, setMenuOpen] = React.useState(menuIsOpenedInitialState);
 
   React.useEffect(() => {
     onOpen(menuIsOpened);
   }, [menuIsOpened]);
 
-  const onToggleMenuHandler = React.useCallback((state: boolean) => {
+  const setNewMenuState = React.useCallback((state: boolean) => {
     setMenuOpen(state);
     saveMenuIsOpenedState(state);
   }, []);
 
   const openMenu = React.useCallback(() => {
-    onToggleMenuHandler(true);
+    setNewMenuState(true);
   }, []);
 
   const closeMenu = React.useCallback(() => {
-    onToggleMenuHandler(false);
+    setNewMenuState(false);
   }, []);
 
   const categories = React.useMemo(() => {
@@ -73,18 +74,22 @@ const Menu = (props: MenuProps) => {
   return (
     <>
       <AppBar
-        menuIsOpened={menuIsOpened}
+        isMenuOpened={menuIsOpened}
         drawerWidth={drawerWidth}
         onSearch={onSearch}
         onOpenMenu={openMenu}
       />
 
-      <Drawer variant={'persistent'} anchor={'left'} open={menuIsOpened} drawerWidth={drawerWidth}>
+      <Drawer
+        variant={isMdScreen ? 'temporary' : 'persistent'}
+        anchor="left"
+        open={menuIsOpened}
+        drawerWidth={drawerWidth}
+      >
         <DrawerHeader>
           <CIconButton
             onClick={closeMenu}
             icon={getIcon(theme.direction === 'ltr' ? 'chevronLeft' : 'chevronRight')}
-            aria-label={'Закрыть основное меню'}
           />
         </DrawerHeader>
 
@@ -97,6 +102,7 @@ const Menu = (props: MenuProps) => {
               to={`/category/${category.id}`}
               icon={getIcon(category.icon)}
               name={category.name}
+              onClick={() => isMdScreen && closeMenu()}
             />
           ))}
         </List>
@@ -117,5 +123,3 @@ const Menu = (props: MenuProps) => {
     </>
   );
 };
-
-export default Menu;

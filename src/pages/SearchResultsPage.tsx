@@ -2,14 +2,14 @@ import React from 'react';
 import { Alert, Box, Typography, Button } from '@mui/material';
 import { Refresh as RefreshIcon } from '@mui/icons-material';
 
-import type { Product, FoundDatasheets } from '~/types';
+import type { Product, FoundDatasheets, Nullable } from '~/types';
 
 import { Loader, ProductsList, DatasheetsList } from '~/components';
 
 export type SearchResultsPageProps = {
   products: Product[];
-  foundDatasheets?: FoundDatasheets;
-  foundProducts?: Product[];
+  foundDatasheets?: Nullable<FoundDatasheets>;
+  foundProducts?: Nullable<Product[]>;
   isSearching?: boolean;
   onSearchReset?: () => void;
 };
@@ -24,20 +24,22 @@ export const SearchResultsPage = (props: SearchResultsPageProps) => {
   } = props;
 
   if (isSearching) {
-    return <Loader label={'Searching...'} />;
+    return <Loader label="Searching..." />;
   }
 
   return (
     <>
       {foundProducts && onSearchReset && (
-        <Button size={'small'} startIcon={<RefreshIcon />} onClick={onSearchReset}>
+        <Button size="small" startIcon={<RefreshIcon />} onClick={onSearchReset}>
           Reset search
         </Button>
       )}
 
-      {foundProducts !== null && !foundProducts.length && !Object.keys(foundDatasheets).length && (
-        <Alert severity={'info'}>Nothing found</Alert>
-      )}
+      {foundProducts !== null &&
+        !foundProducts.length &&
+        (!foundDatasheets || !Object.keys(foundDatasheets).length) && (
+          <Alert severity="info">Nothing was found</Alert>
+        )}
 
       <Box sx={{ marginTop: 2 }}>
         <ProductsList products={foundProducts ? foundProducts : products} />
@@ -45,7 +47,7 @@ export const SearchResultsPage = (props: SearchResultsPageProps) => {
 
       {foundDatasheets && Object.keys(foundDatasheets).length > 0 && (
         <Box sx={{ marginTop: 2 }}>
-          <Typography variant={'h6'} role={'heading'} aria-level={2}>
+          <Typography variant="h6" role="heading" aria-level={2}>
             Found Datasheets
           </Typography>
 

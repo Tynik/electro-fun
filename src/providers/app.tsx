@@ -1,5 +1,7 @@
 import React from 'react';
-import { AlertColor, Alert, Stack, useTheme } from '@mui/material';
+import type { PropsWithChildren } from 'react';
+import type { AlertColor } from '@mui/material';
+import { Alert, Stack, useTheme } from '@mui/material';
 
 export type Notification = {
   message: string;
@@ -22,7 +24,7 @@ const initialAppContextValue: AppContextValue = {
 
 export const AppContext = React.createContext(initialAppContextValue);
 
-export const AppContextProvider = ({ children }) => {
+export const AppContextProvider = ({ children }: PropsWithChildren) => {
   const theme = useTheme();
 
   const [notifications, setNotifications] = React.useState<Notification[]>([]);

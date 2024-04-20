@@ -77,7 +77,7 @@ export const ProductInfoPage = () => {
       </Grid>
 
       <Grid xs={12} md={6} item>
-        <ImageSlider images={images} height={'300px'} />
+        <ImageSlider images={images} height="300px" />
 
         {product.content && (
           <Box component={'main'} marginTop={theme.spacing(2)}>

@@ -33,9 +33,6 @@ export const ProductOfferMicrodata = ({ product, stripeProduct }: ProductOfferMi
   );
 
   const category = useCategory(product.categoryId);
-  if (!category) {
-    return null;
-  }
 
   return (
     <div itemProp="offers" itemType={`${SEO_SCHEMA_BASE_URL}/Offer`} itemScope>
@@ -44,7 +41,8 @@ export const ProductOfferMicrodata = ({ product, stripeProduct }: ProductOfferMi
       <meta itemProp="price" content={productPrice.toString()} />
       <meta itemProp="priceCurrency" content="GBP" />
       <meta itemProp="availability" content={productAvailability} />
-      <meta itemProp="itemCondition" content={`${SEO_SCHEMA_BASE_URL}/NewCondition`} />$
+      <meta itemProp="itemCondition" content={`${SEO_SCHEMA_BASE_URL}/NewCondition`} />
+
       {ACCEPTED_PAYMENT_METHODS.map(paymentMethod => (
         <meta
           key={paymentMethod}
@@ -52,6 +50,7 @@ export const ProductOfferMicrodata = ({ product, stripeProduct }: ProductOfferMi
           content={`http://purl.org/goodrelations/v1#${paymentMethod}`}
         />
       ))}
+
       <MerchantReturnPolicyMicrodata />
       <ProductInventoryLevelMicrodata product={product} stripeProduct={stripeProduct} />
       <ProductMeasurementMicrodata product={product} />

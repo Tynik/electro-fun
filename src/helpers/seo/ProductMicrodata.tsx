@@ -17,9 +17,7 @@ export const ProductMicrodata = ({ product, stripeProduct }: ProductMicrodataPro
     <div itemType={`${SEO_SCHEMA_BASE_URL}/Product`} itemScope>
       <ProductBrandMicrodata product={product} />
 
-      {Boolean(product.buy) && (
-        <ProductOfferMicrodata product={product} stripeProduct={stripeProduct} />
-      )}
+      <ProductOfferMicrodata product={product} stripeProduct={stripeProduct} />
 
       <meta itemProp="name" content={product.title} />
 

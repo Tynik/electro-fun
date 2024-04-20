@@ -1,15 +1,15 @@
 import React from 'react';
 import { Alert, Box, Typography, useTheme } from '@mui/material';
 
-import type { Product, FoundDatasheets } from '~/types';
+import type { Product, FoundDatasheets, Nullable } from '~/types';
 
 import { DbContext } from '~/providers';
 import { SearchResultsPage } from './SearchResultsPage';
 
 export type HomePageProps = {
   products: Product[];
-  foundProducts?: Product[];
-  foundDatasheets?: FoundDatasheets;
+  foundProducts?: Nullable<Product[]>;
+  foundDatasheets?: Nullable<FoundDatasheets>;
   isSearching?: boolean;
   onSearchReset?: () => void;
 };

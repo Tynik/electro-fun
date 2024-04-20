@@ -111,7 +111,7 @@ export type Product = {
   title: string;
   subtitle: string;
   stripeProductId?: StripeProductId;
-  categoryId?: CategoryId;
+  categoryId: CategoryId;
   googleCategoryId?: number;
   seo?: ProductSeo;
   brandId?: BrandId;

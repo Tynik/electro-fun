@@ -1,28 +1,26 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
+import type { LinkProps } from 'react-router-dom';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { ListItemButton, ListItemIcon, ListItemText, useTheme } from '@mui/material';
 
-export type MenuItemProps = {
-  to: string;
-  icon: React.ReactElement;
+export type MenuItemProps = LinkProps & {
+  icon: ReactElement;
   name: string;
 };
 
-const MenuItem = (props: MenuItemProps) => {
-  const { to, icon, name } = props;
-
+const MenuItem = ({ icon, name, ...props }: MenuItemProps) => {
   const theme = useTheme();
   const location = useLocation();
 
   return (
     <ListItemButton
       component={RouterLink}
-      to={to}
       sx={{
         textDecoration: 'none',
         color: theme.palette.text.primary,
-        backgroundColor: to === location.pathname ? theme.palette.action.selected : 'inherit',
+        backgroundColor: props.to === location.pathname ? theme.palette.action.selected : 'inherit',
       }}
+      {...props}
     >
       <ListItemIcon>{icon}</ListItemIcon>
       <ListItemText>{name}</ListItemText>
