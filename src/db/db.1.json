@@ -221,6 +221,9 @@
     }
   },
   "datasheets": {
+    "INA163.pdf": {
+      "lang": "en"
+    },
     "CH32V003RM.pdf": {
       "lang": "en"
     },
@@ -251,7 +254,16 @@
       "lang": "en",
       "manufacturerId": "15",
       "keywords": [
-        "murata"
+        "murata",
+        "0515"
+      ]
+    },
+    "A0515S-2WR3": {
+      "lang": "en",
+      "manufacturerId": "2",
+      "keywords": [
+        "hi-link",
+        "0515"
       ]
     },
     "CM108B": {
@@ -1452,6 +1464,9 @@
     "175": {
       "name": "Charging",
       "featSecRefId": 3
+    },
+    "176": {
+      "name": "Output Load"
     }
   },
   "items": [

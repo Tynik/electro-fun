@@ -27,15 +27,15 @@
       "features": [
         {
           "refId": 13,
-          "value": "4.75 - 12V"
+          "value": "4.75 - 12 V"
         },
         {
           "refId": 14,
-          "value": "3.235 - 3.365V"
+          "value": "3.235 - 3.365 V"
         },
         {
           "refId": 15,
-          "value": "Up to 1A"
+          "value": "up to 1 A"
         },
         {
           "refId": 42,
@@ -88,12 +88,12 @@
       "features": [
         {
           "refId": 13,
-          "value": "1.15 - 1.5V",
+          "value": "1.15 - 1.5 V",
           "info": "At 20mA input current"
         },
         {
           "refId": 15,
-          "value": "Up to 1A"
+          "value": "up to 1 A"
         },
         {
           "refId": 42,
@@ -108,21 +108,21 @@
         {
           "refId": 93,
           "value": "15mA",
-          "info": "Up to 50mA peak"
+          "info": "Up to 50 mA peak"
         },
         {
           "refId": 92,
-          "value": "Up to 6V"
+          "value": "Up to 6 V"
         },
         {
           "refId": 94,
-          "value": "Up to 10µA",
-          "info": "At reverse voltage of 6V"
+          "value": "Up to 10 µA",
+          "info": "At reverse voltage of 6 V"
         },
         {
           "refId": 95,
           "value": "Up to 5kV",
-          "info": "RMS. Peak value: 5kV * √2 ≈ 7kV"
+          "info": "RMS. Peak value: 5 kV * √2 ≈ 7 kV"
         }
       ],
       "content": "",
@@ -176,7 +176,7 @@
       "features": [
         {
           "refId": 13,
-          "value": "90 - 245V",
+          "value": "90 - 245 V",
           "info": "AC input"
         },
         {
@@ -187,7 +187,7 @@
         {
           "refId": 15,
           "value": "up to 0.6A",
-          "info": "Up to 3W"
+          "info": "up to 3W"
         },
         {
           "refId": 76,
@@ -485,29 +485,29 @@
       "features": [
         {
           "refId": 13,
-          "value": "8 - 32V"
+          "value": "8 - 32 V"
         },
         {
           "refId": 14,
-          "value": "45 - 390V"
+          "value": "45 - 390 V"
         },
         {
           "refId": 15,
-          "value": "up to 0.2A",
+          "value": "up to 0.2 A",
           "info": "The higher the output voltage, the lower the output current"
         },
         {
           "refId": 93,
-          "value": "up to 5A"
+          "value": "up to 5 A"
         },
         {
           "refId": 115,
-          "value": "40W",
-          "info": "up to 70W peak"
+          "value": "40 W",
+          "info": "up to 70 W peak"
         },
         {
           "refId": 116,
-          "value": "75kHz"
+          "value": "75 kHz"
         },
         {
           "refId": 117,
@@ -520,7 +520,7 @@
         {
           "refId": 119,
           "value": "Yes",
-          "info": "> 4.5A"
+          "info": "> 4.5 A"
         },
         {
           "refId": 120,

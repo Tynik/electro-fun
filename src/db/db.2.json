@@ -851,7 +851,7 @@
       "features": [
         {
           "refId": 13,
-          "value": "5.0 V"
+          "value": "5 V"
         },
         {
           "refId": 76,
@@ -1001,7 +1001,7 @@
       "features": [
         {
           "refId": 13,
-          "value": "115/230V ±20%"
+          "value": "115/230 V (±20%)"
         },
         {
           "refId": 14,

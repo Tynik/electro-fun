@@ -43,7 +43,7 @@
       "subtitle": "Audio preamplifier",
       "seo": {
         "description": "The THAT1512 analog audio preamp delivers pristine sound quality with ultra-low noise and precision control, perfect for studio recording and live sound applications",
-        "keywords": "THAT1512, preamplifier, sound, ultra-low noise"
+        "keywords": "THAT1512, preamplifier, audio, ultra-low noise, precision, sound"
       },
       "buy": true,
       "weight": 5,
@@ -61,7 +61,7 @@
       "features": [
         {
           "refId": 13,
-          "value": "5 - 20 V"
+          "value": "±5 - ±20 V"
         },
         {
           "refId": 24,
@@ -104,6 +104,10 @@
         {
           "src": "/photos/THAT1512-1.webp",
           "alt": "THAT1512 - DIP8"
+        },
+        {
+          "src": "/photos/THAT1512-2.webp",
+          "alt": "THAT1512 - PINs"
         }
       ],
       "applicationIds": [
@@ -125,6 +129,67 @@
           "icon": "youtube.com.png",
           "iconAlt": "www.youtube.com"
         }
+      ]
+    },
+    {
+      "stripeProductId": "prod_Q0bYMNbDzOHdaF",
+      "stripePriceId": "price_1PAaLSARhMwSarZXYpmHBRAc",
+      "categoryId": 4,
+      "title": "Hi-Link A0515S-2WR3",
+      "subtitle": "5 to ±15 V, 2 W",
+      "seo": {
+        "description": "Discover the Hi-Link A0515S-2WR3: compact, efficient, and reliable DC/DC power supply modules designed for on-board systems. With constant voltage output, input isolation, and dual outputs, these modules cater to diverse applications, ensuring stable power delivery in automotive, industrial, and embedded systems",
+        "keywords": "0515, A0515S-2WR3, hi-link, power, dc-dc, dual-outputs"
+      },
+      "buy": true,
+      "weight": 10,
+      "datasheetId": "A0515S-2WR3",
+      "manufacturerId": "14",
+      "features": [
+        {
+          "refId": 13,
+          "value": "4.5 - 5.5 V"
+        },
+        {
+          "refId": 14,
+          "value": "±15 V",
+          "info": "dual"
+        },
+        {
+          "refId": 15,
+          "value": "±7 - ±67 mA"
+        },
+        {
+          "refId": 42,
+          "value": "SIP"
+        },
+        {
+          "refId": 76,
+          "value": "19.5 x 7.0 x 10.0 mm"
+        },
+        {
+          "refId": 95,
+          "value": "≤ 1500 VDC"
+        },
+        {
+          "refId": 117,
+          "value": "82 - 86%"
+        },
+        {
+          "refId": 176,
+          "value": "≥ 10%"
+        }
+      ],
+      "images": [
+        {
+          "src": "/photos/Hi-Link-A0515S-2WR3-1.webp",
+          "alt": "Hi-Link A0515S-2WR3"
+        }
+      ],
+      "content": "<p>The Hi-Link AxxxxS-2WR3 series represents a compact and highly efficient solution for micro power applications, delivering constant voltage with input isolation and unregulated dual output DC/DC power supply modules. Designed by Hi-Link, these modules cater to the specific requirements of on-board power supply systems, offering reliability and versatility. With a focus on small size and high efficiency, they are ideal for applications demanding isolated voltage outputs from the input power source.</p>",
+      "warningContent": "<p>To guarantee optimal efficiency and reliability, it's essential to meet certain output load requirements when using the module. Ensure that the minimum output load remains above 10% of the rated load during operation. In cases where power demands are minimal, it's advised to connect a resistor in parallel across the output terminals. This resistor's power consumption should equal or exceed 10% of the module's rated power, and its rated power should be at least five times greater than the actual power used to prevent excessive temperature rise.</p>",
+      "relatedDatasheetIds": [
+        "NMA0515SC"
       ]
     },
     {
@@ -172,6 +237,7 @@
       ],
       "relatedDatasheetIds": [
         "NMA0515SC",
+        "A0515S-2WR3",
         "THAT1512"
       ],
       "externalLinks": [
