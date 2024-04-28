@@ -13,7 +13,7 @@
       },
       "buy": true,
       "weight": 50,
-      "content": "<p>The set includes 140 jumper wires (14 types) of various colors: red, green, yellow, orange, gray, white, blue) and sizes: 2, 5, 7, 10, 12, 15, 17, 20, 22, 25, 50, 75, 100, 125 mm.</p>",
+      "content": "<p>The set includes 140 jumper wires (14 types) of various colors: red, green, yellow, orange, gray, white, blue) and sizes: 2, 5, 7, 10, 12, 15, 17, 20, 22, 25, 50, 75, 100, 125mm.</p>",
       "images": [
         {
           "src": "/photos/breadboard-jumpers-140-1.webp",
@@ -61,43 +61,43 @@
       "features": [
         {
           "refId": 13,
-          "value": "±5 - ±20 V"
+          "value": "±5 - ±20V"
         },
         {
           "refId": 24,
-          "value": "-40 - +85 °C"
+          "value": "-40 - +85°C"
         },
         {
           "refId": 93,
-          "value": "6 mA"
+          "value": "6mA"
         },
         {
           "refId": 161,
           "value": [
-            "34 nV/√Hz (0dB gain)",
-            "4.6 nV/√Hz (20dB gain)",
-            "1.4 nV/√Hz (40dB gain)",
-            "1 nV/√Hz (60dB gain)"
+            "34nV/√Hz (0dB gain)",
+            "4.6nV/√Hz (20dB gain)",
+            "1.4nV/√Hz (40dB gain)",
+            "1nV/√Hz (60dB gain)"
           ]
         },
         {
           "refId": 162,
           "value": [
-            "11 MHz (0dB gain)",
-            "9 MHz (20dB gain)",
-            "7 MHz (40dB gain)",
-            "1.6 MHz (60dB gain)"
+            "11MHz (0dB gain)",
+            "9MHz (20dB gain)",
+            "7MHz (40dB gain)",
+            "1.6MHz (60dB gain)"
           ],
-          "info": "-3 dB (RL = 2 kΩ, CL = 10 pF)"
+          "info": "-3dB (RL = 2kΩ, CL = 10pF)"
         },
         {
           "refId": 163,
-          "value": "19 V/µs",
-          "info": "RL = 2 kΩ, CL = 50 pF"
+          "value": "19V/µs",
+          "info": "RL = 2kΩ, CL = 50pF"
         },
         {
           "refId": 164,
-          "value": "2 pA/√Hz (60dB gain)"
+          "value": "2pA/√Hz (60dB gain)"
         }
       ],
       "images": [
@@ -136,10 +136,10 @@
       "stripePriceId": "price_1PAaLSARhMwSarZXYpmHBRAc",
       "categoryId": 4,
       "title": "Hi-Link A0515S-2WR3",
-      "subtitle": "5 to ±15 V, 2 W",
+      "subtitle": "5 to ±15V, 2W",
       "seo": {
         "description": "Discover the Hi-Link A0515S-2WR3: compact, efficient, and reliable DC/DC power supply modules designed for on-board systems. With constant voltage output, input isolation, and dual outputs, these modules cater to diverse applications, ensuring stable power delivery in automotive, industrial, and embedded systems",
-        "keywords": "0515, A0515S-2WR3, hi-link, power, dc-dc, dual-outputs"
+        "keywords": "0515, A0515S-2WR3, hi-link, power, dc-dc, dual-outputs, 5V, 15V, 2W"
       },
       "buy": true,
       "weight": 10,
@@ -148,16 +148,16 @@
       "features": [
         {
           "refId": 13,
-          "value": "4.5 - 5.5 V"
+          "value": "4.5 - 5.5V"
         },
         {
           "refId": 14,
-          "value": "±15 V",
+          "value": "±15V",
           "info": "dual"
         },
         {
           "refId": 15,
-          "value": "±7 - ±67 mA"
+          "value": "±7 - ±67mA"
         },
         {
           "refId": 42,
@@ -165,11 +165,11 @@
         },
         {
           "refId": 76,
-          "value": "19.5 x 7.0 x 10.0 mm"
+          "value": "19.5 x 7.0 x 10.0mm"
         },
         {
           "refId": 95,
-          "value": "≤ 1500 VDC"
+          "value": "≤ 1500VDC"
         },
         {
           "refId": 117,
@@ -207,12 +207,12 @@
       "features": [
         {
           "refId": 13,
-          "value": "4.5 - 5.5 V"
+          "value": "4.5 - 5.5V"
         },
         {
           "refId": 76,
-          "value": "55.88 x 53.34 x 1.6 mm",
-          "info": "±0.2 mm"
+          "value": "55.88 x 53.34 x 1.6mm",
+          "info": "±0.2mm"
         }
       ],
       "images": [

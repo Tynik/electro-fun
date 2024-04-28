@@ -1505,15 +1505,15 @@
       "features": [
         {
           "refId": 13,
-          "value": "4.5 - 28 V"
+          "value": "4.5 - 28V"
         },
         {
           "refId": 14,
-          "value": "0.8 - 20 V"
+          "value": "0.8 - 20V"
         },
         {
           "refId": 15,
-          "value": "up to 3 A"
+          "value": "up to 3A"
         }
       ],
       "externalLinks": [
@@ -1555,17 +1555,17 @@
         {
           "refId": 2,
           "value": [
-            "I²C (up to 3.4 MHz)",
-            "SPI (3-wire and 4-wire, up to 10 MHz)"
+            "I²C (up to 3.4MHz)",
+            "SPI (3-wire and 4-wire, up to 10MHz)"
           ]
         },
         {
           "refId": 3,
-          "value": "1.8 - 5 V"
+          "value": "1.8 - 5V"
         },
         {
           "refId": 4,
-          "value": "-40 - +85 °C"
+          "value": "-40 - +85°C"
         },
         {
           "refId": 5,
@@ -1573,7 +1573,7 @@
         },
         {
           "refId": 6,
-          "value": "300 - 1100 hPa"
+          "value": "300 - 1100hPa"
         },
         {
           "refId": 7,
@@ -1584,7 +1584,7 @@
         },
         {
           "refId": 8,
-          "value": "1 °C"
+          "value": "1°C"
         },
         {
           "refId": 9,
@@ -1643,7 +1643,7 @@
           "refId": 2,
           "value": [
             "I²C (400 kHz)",
-            "SPI (1 MHz, 20 MHz)"
+            "SPI (1MHz, 20MHz)"
           ]
         },
         {
@@ -1684,7 +1684,7 @@
         },
         {
           "refId": 13,
-          "value": "2.4 - 3.6 V"
+          "value": "2.4 - 3.6V"
         },
         {
           "refId": 7,
@@ -1734,7 +1734,7 @@
         },
         {
           "refId": 24,
-          "value": "-40 - +85 °C"
+          "value": "-40 - +85°C"
         },
         {
           "refId": 26,
@@ -1827,7 +1827,7 @@
         },
         {
           "refId": 24,
-          "value": "-40 - +85 °C"
+          "value": "-40 - +85°C"
         }
       ],
       "externalLinks": [
@@ -1905,7 +1905,7 @@
         },
         {
           "refId": 24,
-          "value": "-18 - +50 °C"
+          "value": "-18 - +50°C"
         }
       ],
       "externalLinks": [
@@ -1944,7 +1944,7 @@
         },
         {
           "refId": 30,
-          "value": "up to 60 °C"
+          "value": "up to 60°C"
         },
         {
           "refId": 28,
@@ -1964,7 +1964,7 @@
         }
       ],
       "content": "",
-      "warningContent": "<p>Do not allow the hot side of the thermoelectric element to exceed 50 °C, as the thermoelectric element will fail within 1-2 minutes of operation without heat dissipation.</p>"
+      "warningContent": "<p>Do not allow the hot side of the thermoelectric element to exceed 50°C, as the thermoelectric element will fail within 1-2 minutes of operation without heat dissipation.</p>"
     },
     {
       "categoryId": 1,
@@ -1999,13 +1999,13 @@
         {
           "refId": 2,
           "value": [
-            "I²C (3.4 MHz)",
-            "SPI and GPIO(s) (50 MHz)"
+            "I²C (3.4MHz)",
+            "SPI and GPIO(s) (50MHz)"
           ]
         },
         {
           "refId": 3,
-          "value": "1.8 V"
+          "value": "1.8V"
         },
         {
           "refId": 20,
@@ -2013,15 +2013,15 @@
         },
         {
           "refId": 34,
-          "value": "249 µA"
+          "value": "249µA"
         },
         {
           "refId": 35,
-          "value": "386 µA"
+          "value": "386µA"
         },
         {
           "refId": 36,
-          "value": "8 µA"
+          "value": "8µA"
         },
         {
           "refId": 16,
@@ -2111,7 +2111,7 @@
         },
         {
           "refId": 3,
-          "value": "1.9 - 3.6 V"
+          "value": "1.9 - 3.6V"
         },
         {
           "refId": 29,
@@ -2163,11 +2163,11 @@
         },
         {
           "refId": 3,
-          "value": "2.5 - 3.6 V"
+          "value": "2.5 - 3.6V"
         },
         {
           "refId": 24,
-          "value": "-40 - +120 °C"
+          "value": "-40 - +120°C"
         },
         {
           "refId": 29,
@@ -2175,7 +2175,7 @@
         },
         {
           "refId": 42,
-          "value": "QFN32 (5 x 5 mm)"
+          "value": "QFN32 (5 x 5mm)"
         },
         {
           "refId": 38,
@@ -2183,7 +2183,7 @@
         },
         {
           "refId": 53,
-          "value": "80/160 MHz"
+          "value": "80/160MHz"
         },
         {
           "refId": 43,
@@ -2229,7 +2229,7 @@
       "images": [
         {
           "src": "/photos/CC1310-1.webp",
-          "alt": "CC1310 - 5 x 5 mm RHB"
+          "alt": "CC1310 - 5 x 5mm RHB"
         },
         {
           "src": "/photos/CC1310-2.webp",
@@ -2237,21 +2237,21 @@
         },
         {
           "src": "/photos/CC1310-3.webp",
-          "alt": "CC1310 - 4 x 4 mm RSM Pinout"
+          "alt": "CC1310 - 4 x 4mm RSM Pinout"
         },
         {
           "src": "/photos/CC1310-4.webp",
-          "alt": "CC1310 - 5 x 5 mm RHB Pinout"
+          "alt": "CC1310 - 5 x 5mm RHB Pinout"
         },
         {
           "src": "/photos/CC1310-5.webp",
-          "alt": "CC1310 - 7 x 7 mm RGZ Pinout"
+          "alt": "CC1310 - 7 x 7mm RGZ Pinout"
         }
       ],
       "features": [
         {
           "refId": 3,
-          "value": "1.8 - 3.8 V"
+          "value": "1.8 - 3.8V"
         },
         {
           "refId": 50,
@@ -2267,11 +2267,11 @@
         },
         {
           "refId": 53,
-          "value": "48 MHz"
+          "value": "48MHz"
         },
         {
           "refId": 54,
-          "value": "2/64/128 KB"
+          "value": "2/64/128KB"
         },
         {
           "refId": 55,
@@ -2280,26 +2280,26 @@
         {
           "refId": 42,
           "value": [
-            "7 x 7 mm RGZ VQFN48 (30 GPIOs)",
-            "5 x 5 mm RHB VQFN32 (15 GPIOs)",
-            "4 x 4 mm RSM VQFN32 (10 GPIOs)"
+            "7 x 7mm RGZ VQFN48 (30 GPIOs)",
+            "5 x 5mm RHB VQFN32 (15 GPIOs)",
+            "4 x 4mm RSM VQFN32 (10 GPIOs)"
           ]
         },
         {
           "refId": 36,
-          "value": "0.7 µA"
+          "value": "0.7µA"
         },
         {
           "refId": 56,
-          "value": "+10 dBm = 13.4 mA"
+          "value": "+10dBm = 13.4mA"
         },
         {
           "refId": 57,
-          "value": "5.4 mA"
+          "value": "5.4mA"
         },
         {
           "refId": 58,
-          "value": "185 nA (wake-on external events)"
+          "value": "185nA (wake-on external events)"
         }
       ],
       "content": "<p>CC1310 is an economical, ultra-low power Sub-1 GHz RF device from Texas Instruments™, which is part of the SimpleLink™ microcontroller (MCU) platform.</p><p>The platform consists of Wi-Fi®, Bluetooth® Low Energy, Sub-1 GHz, Ethernet, Zigbee®, Thread, and host MCUs. All of these devices use a common, easy-to-use development environment with a single-core software development kit (SDK) and a rich set of tools.</p><p>The one-time integration of the SimpleLink platform allows users to add any combination of devices to their design out of the box, providing 100% code reuse when design requirements change.</p><p>With very low RF and MCU active current consumption, along with flexible low-power modes, the CC1310 device provides excellent battery life and enables the use of flat batteries.</p>",
@@ -2325,7 +2325,7 @@
       "images": [
         {
           "src": "/photos/CC2652P-1.webp",
-          "alt": "CC2652P - RGZ 48 7 x 7 mm"
+          "alt": "CC2652P - RGZ 48 7 x 7mm"
         },
         {
           "src": "/photos/CC2652P-2.webp",
@@ -2333,7 +2333,7 @@
         },
         {
           "src": "/photos/CC2652P-3.webp",
-          "alt": "CC2652P - pinout RGZ 7 x 7 mm"
+          "alt": "CC2652P - pinout RGZ 7 x 7mm"
         },
         {
           "src": "/photos/CC2652P-4.webp",
@@ -2343,8 +2343,8 @@
       "features": [
         {
           "refId": 3,
-          "value": "1.8 - 3.8 V",
-          "info": "3.3 V (recommended)"
+          "value": "1.8 - 3.8V",
+          "info": "3.3V (recommended)"
         },
         {
           "refId": 2,
@@ -2360,19 +2360,19 @@
         },
         {
           "refId": 42,
-          "value": "7 x 7 mm RGZ VQFN48 (26 GPIOs)"
+          "value": "7 x 7mm RGZ VQFN48 (26 GPIOs)"
         },
         {
           "refId": 53,
-          "value": "48 MHz"
+          "value": "48MHz"
         },
         {
           "refId": 36,
-          "value": "0.94 μA (including RTC, 80 KB RAM, and CPU retention)"
+          "value": "0.94μA (including RTC, 80 KB RAM, and CPU retention)"
         },
         {
           "refId": 54,
-          "value": "352 KB"
+          "value": "352KB"
         },
         {
           "refId": 55,
@@ -2470,12 +2470,12 @@
       "features": [
         {
           "refId": 3,
-          "value": "2.8 - 3.6 V",
+          "value": "2.8 - 3.6V",
           "info": "V3 -> VCC"
         },
         {
           "refId": 3,
-          "value": "4 - 5.3 V",
+          "value": "4 - 5.3V",
           "info": "V3 ≠ VCC"
         },
         {
@@ -2484,19 +2484,19 @@
         },
         {
           "refId": 24,
-          "value": "-40 - +85 °C"
+          "value": "-40 - +85°C"
         },
         {
           "refId": 62,
-          "value": "-55 - +125 °C"
+          "value": "-55 - +125°C"
         },
         {
           "refId": 28,
-          "value": "20 mA"
+          "value": "20mA"
         },
         {
           "refId": 29,
-          "value": "7 mA"
+          "value": "7mA"
         }
       ],
       "options": {
@@ -2515,9 +2515,9 @@
       "stripePriceId": "price_1NQ6GNARhMwSarZXTdfD5iTx",
       "categoryId": 10,
       "title": "IRF3205",
-      "subtitle": "MOSFET Transistor up to 55 V and 110 A",
+      "subtitle": "MOSFET Transistor up to 55V and 110A",
       "seo": {
-        "description": "IRF3205 MOSFET transistor up to 55 V and 110 A",
+        "description": "IRF3205 MOSFET transistor up to 55V and 110A",
         "keywords": "IRF3205, MOSFET, transistor, 55V, 110A"
       },
       "buy": true,
@@ -2527,7 +2527,7 @@
       "images": [
         {
           "src": "/photos/IRF3205PbF-1.webp",
-          "alt": "IRF3205 - MOSFET up to 55 V and 110 A"
+          "alt": "IRF3205 - MOSFET up to 55V and 110A"
         }
       ],
       "features": [
@@ -2539,17 +2539,17 @@
           "refId": 63,
           "value": [
             {
-              "value": "110 A",
+              "value": "110A",
               "info": [
-                "V<sub>GS</sub> = 10 V",
-                "T<sub>C</sub> = 25 ºC"
+                "V<sub>GS</sub> = 10V",
+                "T<sub>C</sub> = 25ºC"
               ]
             },
             {
-              "value": "80 A",
+              "value": "80A",
               "info": [
-                "V<sub>GS</sub> = 10 V",
-                "T<sub>C</sub> = 100 ºC"
+                "V<sub>GS</sub> = 10V",
+                "T<sub>C</sub> = 100ºC"
               ]
             }
           ]
@@ -2560,47 +2560,47 @@
         },
         {
           "refId": 66,
-          "value": "36 nC"
+          "value": "36nC"
         },
         {
           "refId": 67,
-          "value": "up to 146 nC",
+          "value": "up to 146nC",
           "info": [
-            "I<sub>D</sub> = 62 A",
-            "V<sub>DS</sub> = 44 V",
-            "V<sub>GS</sub> = 10 V"
+            "I<sub>D</sub> = 62A",
+            "V<sub>DS</sub> = 44V",
+            "V<sub>GS</sub> = 10V"
           ]
         },
         {
           "refId": 68,
-          "value": "up to 8 mΩ",
+          "value": "up to 8mΩ",
           "info": [
-            "V<sub>GS</sub> = 10 V",
-            "I<sub>D</sub> = 62 A"
+            "V<sub>GS</sub> = 10V",
+            "I<sub>D</sub> = 62A"
           ]
         },
         {
           "refId": 69,
-          "value": "0.75 °C/W"
+          "value": "0.75°C/W"
         },
         {
           "refId": 70,
-          "value": "-55 - 175 °C"
+          "value": "-55 - 175°C"
         },
         {
           "refId": 71,
-          "value": "55 V",
+          "value": "55V",
           "info": [
-            "V<sub>GS</sub> = 0 V",
-            "I<sub>D</sub> = 250 µA"
+            "V<sub>GS</sub> = 0V",
+            "I<sub>D</sub> = 250µA"
           ]
         },
         {
           "refId": 72,
-          "value": "2 - 4 V",
+          "value": "2 - 4V",
           "info": [
             "V<sub>DS</sub> = V<sub>GS</sub>",
-            "I<sub>D</sub> = 250 µA"
+            "I<sub>D</sub> = 250µA"
           ]
         }
       ],

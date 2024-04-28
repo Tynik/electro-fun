@@ -8,7 +8,7 @@
       "subtitle": "Voltage Regulator",
       "seo": {
         "description": "AMS1117 - 5V to 3.3V Voltage Regulator",
-        "keywords": "ams1117, voltage regulator, 5v, 3.3v"
+        "keywords": "ams1117, voltage-regulator, 5V, 3.3V"
       },
       "buy": true,
       "weight": 1,
@@ -27,15 +27,15 @@
       "features": [
         {
           "refId": 13,
-          "value": "4.75 - 12 V"
+          "value": "4.75 - 12V"
         },
         {
           "refId": 14,
-          "value": "3.235 - 3.365 V"
+          "value": "3.235 - 3.365V"
         },
         {
           "refId": 15,
-          "value": "up to 1 A"
+          "value": "up to 1A"
         },
         {
           "refId": 42,
@@ -88,12 +88,12 @@
       "features": [
         {
           "refId": 13,
-          "value": "1.15 - 1.5 V",
+          "value": "1.15 - 1.5V",
           "info": "At 20mA input current"
         },
         {
           "refId": 15,
-          "value": "up to 1 A"
+          "value": "up to 1A"
         },
         {
           "refId": 42,
@@ -108,21 +108,21 @@
         {
           "refId": 93,
           "value": "15mA",
-          "info": "Up to 50 mA peak"
+          "info": "Up to 50mA peak"
         },
         {
           "refId": 92,
-          "value": "Up to 6 V"
+          "value": "Up to 6V"
         },
         {
           "refId": 94,
           "value": "Up to 10 µA",
-          "info": "At reverse voltage of 6 V"
+          "info": "At reverse voltage of 6V"
         },
         {
           "refId": 95,
           "value": "Up to 5kV",
-          "info": "RMS. Peak value: 5 kV * √2 ≈ 7 kV"
+          "info": "RMS. Peak value: 5kV * √2 ≈ 7kV"
         }
       ],
       "content": "",
@@ -153,7 +153,7 @@
       "stripePriceId": "price_1NQFY3ARhMwSarZXdxixmprI",
       "categoryId": 17,
       "title": "HLK-PM01",
-      "subtitle": "220V to 5V at 600mA",
+      "subtitle": "220 to 5V at 600mA",
       "seo": {
         "description": "HLK-PM01 - power supply 5V at 600mA (3W)",
         "keywords": "hlk-pm01, hi-link, voltage regulator, 220V, 5V, 3W, ac-dc, 600mA, low power"
@@ -176,7 +176,7 @@
       "features": [
         {
           "refId": 13,
-          "value": "90 - 245 V",
+          "value": "90 - 245V",
           "info": "AC input"
         },
         {
@@ -301,10 +301,10 @@
         {
           "refId": 101,
           "value": [
-            "Vcc 2V = up to 625 ns/V",
-            "Vcc 4.5V = from 1.67 to 139 ns/V",
-            "Vcc 6V = up to 83 ns/V",
-            "Vcc 10V = up to 31 ns/V"
+            "Vcc 2V = up to 625ns/V",
+            "Vcc 4.5V = from 1.67 to 139ns/V",
+            "Vcc 6V = up to 83ns/V",
+            "Vcc 10V = up to 31ns/V"
           ]
         }
       ]
@@ -313,7 +313,7 @@
       "stripeProductId": "prod_OCf2BiFAW1ARCk",
       "categoryId": 19,
       "title": "Copper Wire",
-      "subtitle": "Diameter 0.2/0.5/0.6/0.9mm",
+      "subtitle": "Diameter 0.2 / 0.5 / 0.6 / 0.9mm",
       "seo": {
         "description": "Coil of copper wire with different diameters and lengths",
         "keywords": "copper, wire, coil, winding, cable",
@@ -485,29 +485,29 @@
       "features": [
         {
           "refId": 13,
-          "value": "8 - 32 V"
+          "value": "8 - 32V"
         },
         {
           "refId": 14,
-          "value": "45 - 390 V"
+          "value": "45 - 390V"
         },
         {
           "refId": 15,
-          "value": "up to 0.2 A",
+          "value": "up to 0.2A",
           "info": "The higher the output voltage, the lower the output current"
         },
         {
           "refId": 93,
-          "value": "up to 5 A"
+          "value": "up to 5A"
         },
         {
           "refId": 115,
-          "value": "40 W",
-          "info": "up to 70 W peak"
+          "value": "40W",
+          "info": "up to 70W peak"
         },
         {
           "refId": 116,
-          "value": "75 kHz"
+          "value": "75kHz"
         },
         {
           "refId": 117,
@@ -520,7 +520,7 @@
         {
           "refId": 119,
           "value": "Yes",
-          "info": "> 4.5 A"
+          "info": "> 4.5A"
         },
         {
           "refId": 120,
@@ -635,20 +635,20 @@
       "features": [
         {
           "refId": 3,
-          "value": "4.5 - 5.5 V",
-          "info": "5 V (recommended)"
+          "value": "4.5 - 5.5V",
+          "info": "5V (recommended)"
         },
         {
           "refId": 26,
-          "value": "0 - 99 %"
+          "value": "0 - 99%"
         },
         {
           "refId": 24,
-          "value": "-10 - +60 °C"
+          "value": "-10 - +60°C"
         },
         {
           "refId": 76,
-          "value": "50 x 38 x 21 mm"
+          "value": "50 x 38 x 21mm"
         },
         {
           "refId": 122,
@@ -656,20 +656,20 @@
         },
         {
           "refId": 123,
-          "value": "0 - 500 μg/m³"
+          "value": "0 - 500μg/m³"
         },
         {
           "refId": 124,
-          "value": "0 - 1000 μg/m³"
+          "value": "0 - 1000μg/m³"
         },
         {
           "refId": 125,
-          "value": "1 μg/m³"
+          "value": "1μg/m³"
         },
         {
           "refId": 126,
           "value": "up to ±10%",
-          "info": "100 - 500 μg/m³"
+          "info": "100 - 500μg/m³"
         }
       ],
       "peculiarities": [
@@ -713,19 +713,19 @@
         },
         {
           "refId": 3,
-          "value": "2 - 5.5 V"
+          "value": "2 - 5.5V"
         },
         {
           "refId": 13,
-          "value": "±256 mV - ±6.144 V"
+          "value": "±256mV - ±6.144V"
         },
         {
           "refId": 24,
-          "value": "-40 - +125 °C"
+          "value": "-40 - +125°C"
         },
         {
           "refId": 28,
-          "value": "150 µA"
+          "value": "150µA"
         },
         {
           "refId": 127,
@@ -779,31 +779,31 @@
       "features": [
         {
           "refId": 2,
-          "value": "SPI (up to 10 MHz)"
+          "value": "SPI (up to 10MHz)"
         },
         {
           "refId": 3,
-          "value": "5 V"
+          "value": "5V"
         },
         {
           "refId": 24,
-          "value": "-40 - +85 °C"
+          "value": "-40 - +85°C"
         },
         {
           "refId": 29,
-          "value": "5 mA"
+          "value": "5mA"
         },
         {
           "refId": 36,
-          "value": "1 µA"
+          "value": "1µA"
         },
         {
           "refId": 76,
-          "value": "40 x 28 x 13 mm"
+          "value": "40 x 28 x 13mm"
         },
         {
           "refId": 131,
-          "value": "Up to 1 Mbps"
+          "value": "Up to 1Mbps"
         }
       ],
       "images": [
@@ -863,15 +863,15 @@
       "features": [
         {
           "refId": 24,
-          "value": "-40 - +85 °C"
+          "value": "-40 - +85°C"
         },
         {
           "refId": 76,
-          "value": "19 x 16.2 mm"
+          "value": "19 x 16.2mm"
         },
         {
           "refId": 131,
-          "value": "Up to 1 Mbps"
+          "value": "Up to 1Mbps"
         },
         {
           "refId": 132,
@@ -890,7 +890,7 @@
       "stripeProductId": "prod_OCfE4cIIwSTBOc",
       "categoryId": 8,
       "title": "SIM800",
-      "subtitle": "GSM/GPRS 850/900/1800/1900 MHz",
+      "subtitle": "GSM/GPRS 850/900/1800/1900MHz",
       "seo": {
         "description": "SIM800 - GSM/GPRS module operating on GSM850MHz, EGSM900MHz, DCS1800MHz, and PCS1900MHz frequencies",
         "keywords": "sim, sim800, sim800l, gsm, gprs, ttl, module"
@@ -936,11 +936,11 @@
       "features": [
         {
           "refId": 24,
-          "value": "-40 - +85 °C"
+          "value": "-40 - +85°C"
         },
         {
           "refId": 76,
-          "value": "25.1 x 23 mm"
+          "value": "25.1 x 23mm"
         },
         {
           "refId": 133,
