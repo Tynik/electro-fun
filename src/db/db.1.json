@@ -704,7 +704,7 @@
     },
     {
       "id": 24,
-      "name": "3D Printers",
+      "name": "3D Printer Accessories",
       "icon": "apps"
     },
     {
@@ -1466,7 +1466,7 @@
       "featSecRefId": 3
     },
     "176": {
-      "name": "Output Load"
+      "name": "Recommended Load"
     }
   },
   "items": [
@@ -1742,15 +1742,15 @@
         },
         {
           "refId": 27,
-          "value": "1.2 - 46 mW"
+          "value": "1.2 - 46mW"
         },
         {
           "refId": 28,
-          "value": "54 mA"
+          "value": "54mA"
         },
         {
           "refId": 29,
-          "value": "30 mA"
+          "value": "30mA"
         }
       ],
       "externalLinks": [
@@ -2171,7 +2171,7 @@
         },
         {
           "refId": 29,
-          "value": "80 mA"
+          "value": "80mA"
         },
         {
           "refId": 42,
@@ -2368,7 +2368,7 @@
         },
         {
           "refId": 36,
-          "value": "0.94μA (including RTC, 80 KB RAM, and CPU retention)"
+          "value": "0.94μA (including RTC, 80KB RAM, and CPU retention)"
         },
         {
           "refId": 54,
@@ -2381,32 +2381,32 @@
         {
           "refId": 56,
           "value": [
-            "0 dBm = 7.3 mA",
-            "+5 dBm = 9.6 mA",
-            "+10 dBm = 22 mA",
-            "+20 dBm = 85 mA"
+            "0dBm = 7.3mA",
+            "+5dBm = 9.6mA",
+            "+10dBm = 22mA",
+            "+20dBm = 85mA"
           ]
         },
         {
           "refId": 57,
-          "value": "6.9 mA"
+          "value": "6.9mA"
         },
         {
           "refId": 58,
-          "value": "150 nA",
+          "value": "150nA",
           "info": "Wake-on external events"
         },
         {
           "refId": 59,
-          "value": "256 KB"
+          "value": "256KB"
         },
         {
           "refId": 60,
-          "value": "8 KB"
+          "value": "8KB"
         },
         {
           "refId": 61,
-          "value": "80 KB"
+          "value": "80KB"
         }
       ],
       "content": "<p>SimpleLink™ CC2652P is a multi-protocol wireless microcontroller (MCU) operating at 2.4 GHz, supporting Thread, Zigbee®, Bluetooth® 5.2 Low Energy, IEEE 802.15.4, IPv6-enabled smart objects (6LoWPAN), proprietary systems including TI 15.4-Stack (2.4 GHz), and parallel multi-protocol through DMM driver.</p>",

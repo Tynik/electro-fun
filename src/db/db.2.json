@@ -189,7 +189,7 @@
         },
         {
           "refId": 36,
-          "value": "0.94μA (including RTC, 80 KB RAM, and CPU retention)"
+          "value": "0.94μA (including RTC, 80KB RAM, and CPU retention)"
         },
         {
           "refId": 50,
@@ -221,7 +221,7 @@
           "value": "30 x 16.4 x (2.2 ± 0.1)mm"
         }
       ],
-      "content": "<p>RF-BM-2652P2 is a radio frequency module based on CC2652P, which is a multi-protocol wireless module supporting Thread, Zigbee®, Bluetooth® 5.1 Low Energy, IEEE 802.15.4, smart objects with IPv6 (6LoWPAN) support, proprietary systems including TI 15.4-Stack (2.4 GHz), and parallel multi-protocol through DMM driver.\n\nIt combines 48MHz and 32.768 kHz crystals, 352 KB of on-chip programmable flash memory, 256 KB of ROM, 8 KB of cache SRAM, and 80 KB of ultra-low-leakage SRAM.\n\nIts main application processor, ARM® Cortex®-M4F, can operate at an extremely low current in flexible power modes. Additionally, the module enables long-range and low-power applications using the built-in powerful +20 dBm amplifier with best-in-class transmit current at 85 mA.\n\nIt features small size, long-range connectivity, and high reliability.</p>",
+      "content": "<p>RF-BM-2652P2 is a radio frequency module based on CC2652P, which is a multi-protocol wireless module supporting Thread, Zigbee®, Bluetooth® 5.1 Low Energy, IEEE 802.15.4, smart objects with IPv6 (6LoWPAN) support, proprietary systems including TI 15.4-Stack (2.4 GHz), and parallel multi-protocol through DMM driver.\n\nIt combines 48MHz and 32.768 kHz crystals, 352KB of on-chip programmable flash memory, 256KB of ROM, 8KB of cache SRAM, and 80KB of ultra-low-leakage SRAM.\n\nIts main application processor, ARM® Cortex®-M4F, can operate at an extremely low current in flexible power modes. Additionally, the module enables long-range and low-power applications using the built-in powerful +20dBm amplifier with best-in-class transmit current at 85mA.\n\nIt features small size, long-range connectivity, and high reliability.</p>",
       "contributors": [
         {
           "name": "Koen Kanters",
@@ -812,7 +812,7 @@
         },
         {
           "refId": 60,
-          "value": "400 KB (16KB for cache)"
+          "value": "400KB (16KB for cache)"
         },
         {
           "refId": 76,
