@@ -67,9 +67,14 @@ export const Menu = ({ onOpen, onSearch, drawerWidth }: MenuProps) => {
     setNewMenuState(false);
   }, []);
 
-  const categories = React.useMemo(() => {
-    return sortBy(db.categories, 'name');
-  }, []);
+  const categories = React.useMemo(
+    () =>
+      sortBy(
+        db.categories.filter(category => category.visible !== false),
+        'name',
+      ),
+    [],
+  );
 
   return (
     <>

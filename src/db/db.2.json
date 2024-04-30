@@ -148,7 +148,7 @@
     {
       "stripeProductId": "prod_OD264e6nWV7PtK",
       "stripePriceId": "price_1NQc2eARhMwSarZXf8L4jMvH",
-      "categoryId": 8,
+      "categoryId": 18,
       "lang": "en",
       "title": "RF-BM-2652P2",
       "subtitle": "Multi-Protocol Wireless Module",
@@ -562,7 +562,7 @@
     {
       "stripeProductId": "prod_OD28WEC7scRb5b",
       "stripePriceId": "price_1NQc4QARhMwSarZX82odK6mC",
-      "categoryId": 9,
+      "categoryId": 18,
       "title": "ESP-C3-13U 4M",
       "subtitle": "Wi-Fi module",
       "seo": {
@@ -1129,7 +1129,7 @@
     {
       "stripeProductId": "prod_OHX0Y3hCZeb1fw",
       "stripePriceId": "price_1NUxwJARhMwSarZXJ3jTDYaW",
-      "categoryId": 25,
+      "categoryId": 13,
       "title": "Digital Multimeter ANENG Q1 Red Pro",
       "subtitle": "9999 Counts",
       "brandId": "3",

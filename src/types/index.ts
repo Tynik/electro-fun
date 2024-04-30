@@ -29,6 +29,7 @@ export type Category = {
   id: CategoryId;
   name: string;
   icon: string;
+  visible?: boolean;
 };
 
 type Brand = {

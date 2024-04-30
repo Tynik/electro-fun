@@ -221,13 +221,109 @@
     }
   },
   "datasheets": {
-    "INA163.pdf": {
+    "INA163": {
+      "lang": "en",
+      "manufacturerId": "8",
+      "keywords": [
+        "amplifier",
+        "low-noise",
+        "low-distortion",
+        "audio"
+      ]
+    },
+    "INA209": {
+      "lang": "en",
+      "manufacturerId": "8",
+      "keywords": [
+        "current",
+        "voltage",
+        "power",
+        "bi-directional",
+        "I2C"
+      ]
+    },
+    "INA217": {
+      "lang": "en",
+      "manufacturerId": "8",
+      "keywords": [
+        "amplifier",
+        "low-noise",
+        "low-distortion",
+        "audio",
+        "low-impedance",
+        "microphone"
+      ]
+    },
+    "INA219": {
+      "lang": "en",
+      "manufacturerId": "8",
+      "keywords": [
+        "current",
+        "voltage",
+        "power",
+        "I2C"
+      ]
+    },
+    "INA226": {
+      "lang": "en",
+      "manufacturerId": "8",
+      "keywords": [
+        "current",
+        "power",
+        "voltage",
+        "bi-directional",
+        "I2C"
+      ]
+    },
+    "INA228": {
+      "lang": "en",
+      "manufacturerId": "8",
+      "keywords": [
+        "current",
+        "power",
+        "voltage",
+        "ultra-precise",
+        "temperature",
+        "20bit"
+      ]
+    },
+    "INA229": {
+      "lang": "en",
+      "manufacturerId": "8",
+      "keywords": [
+        "current",
+        "power",
+        "voltage",
+        "ultra-precise",
+        "temperature",
+        "20bit"
+      ]
+    },
+    "INA236": {
+      "lang": "en",
+      "manufacturerId": "8",
+      "keywords": [
+        "current",
+        "power",
+        "voltage",
+        "bi-directional",
+        "ultra-precise"
+      ]
+    },
+    "INA240": {
+      "lang": "en",
+      "manufacturerId": "8",
+      "keywords": [
+        "current",
+        "voltage",
+        "bidirectional",
+        "ultra-precise"
+      ]
+    },
+    "CH32V003RM": {
       "lang": "en"
     },
-    "CH32V003RM.pdf": {
-      "lang": "en"
-    },
-    "CH32V003DS0.pdf": {
+    "CH32V003DS0": {
       "lang": "en"
     },
     "Ai-M62-32S": {
@@ -588,49 +684,14 @@
   ],
   "categories": [
     {
-      "id": 1,
-      "name": "Sensors",
-      "icon": "sensor"
-    },
-    {
-      "id": 2,
-      "name": "Microprocessors",
-      "icon": "cpu"
-    },
-    {
-      "id": 3,
-      "name": "Peltier Elements",
-      "icon": "snow"
-    },
-    {
       "id": 4,
       "name": "DC-DC Converters",
       "icon": "flash"
     },
     {
-      "id": 5,
-      "name": "Gyroscopes",
-      "icon": "compass"
-    },
-    {
-      "id": 6,
-      "name": "Converters",
-      "icon": "convertors"
-    },
-    {
       "id": 7,
-      "name": "Solenoids",
-      "icon": "coil"
-    },
-    {
-      "id": 8,
-      "name": "Transceivers",
-      "icon": "antenna"
-    },
-    {
-      "id": 9,
-      "name": "Wi-Fi Devices",
-      "icon": "wifi"
+      "name": "Other",
+      "icon": "apps"
     },
     {
       "id": 10,
@@ -655,12 +716,8 @@
     {
       "id": 14,
       "name": "Fuses",
-      "icon": "fuse"
-    },
-    {
-      "id": 15,
-      "name": "Optoisolators",
-      "icon": "fluorescent"
+      "icon": "fuse",
+      "visible": false
     },
     {
       "id": 16,
@@ -674,8 +731,8 @@
     },
     {
       "id": 18,
-      "name": "Switches",
-      "icon": "switch"
+      "name": "Modules",
+      "icon": "apps"
     },
     {
       "id": 19,
@@ -708,18 +765,14 @@
       "icon": "apps"
     },
     {
-      "id": 25,
-      "name": "Measurement Tools",
-      "icon": "apps"
-    },
-    {
       "id": 26,
       "name": "Displays",
-      "icon": "tv"
+      "icon": "tv",
+      "visible": false
     },
     {
       "id": 27,
-      "name": "Preamplifiers",
+      "name": "Chips",
       "icon": "apps"
     },
     {
@@ -1529,9 +1582,9 @@
     {
       "stripeProductId": "prod_OCUx258nVbZ0Ua",
       "stripePriceId": "price_1NQ5xzARhMwSarZXhmGQXjAM",
-      "categoryId": 1,
+      "categoryId": 18,
       "title": "BMP280",
-      "subtitle": "Sensor for Temperature Measurement, etc.",
+      "subtitle": "Sensor for temperature measurement, etc.",
       "seo": {
         "description": "BMP280 - Sensor for Temperature, Pressure, and Humidity Measurement",
         "keywords": "sensor, bmp280, bosch, temperature, pressure, humidity"
@@ -1612,7 +1665,7 @@
     {
       "stripeProductId": "prod_OCV1nLjoDv1Rif",
       "stripePriceId": "price_1NQ61SARhMwSarZX2WLk7jKd",
-      "categoryId": 5,
+      "categoryId": 18,
       "title": "MPU-9250",
       "subtitle": "Gyroscope/Accelerometer/Magnetometer",
       "seo": {
@@ -1696,7 +1749,7 @@
       ]
     },
     {
-      "categoryId": 1,
+      "categoryId": 18,
       "title": "CCS811",
       "subtitle": "Air Quality Sensor",
       "seo": {
@@ -1780,7 +1833,7 @@
     {
       "stripeProductId": "prod_OCV4UtBM9DcD3P",
       "stripePriceId": "price_1NQ64TARhMwSarZXA5VfFuPI",
-      "categoryId": 1,
+      "categoryId": 18,
       "title": "APDS-9960",
       "subtitle": "RGB Color Sensor and Gesture Recognition",
       "seo": {
@@ -1921,7 +1974,7 @@
     {
       "stripeProductId": "prod_OCV9MtNxug8c9x",
       "stripePriceId": "price_1NQ69FARhMwSarZXRNj9MqxP",
-      "categoryId": 3,
+      "categoryId": 7,
       "title": "TEC1-12715",
       "subtitle": "Peltier Element 40x40x4mm, up to 136W",
       "seo": {
@@ -1967,7 +2020,7 @@
       "warningContent": "<p>Do not allow the hot side of the thermoelectric element to exceed 50°C, as the thermoelectric element will fail within 1-2 minutes of operation without heat dissipation.</p>"
     },
     {
-      "categoryId": 1,
+      "categoryId": 27,
       "title": "BHI260AP",
       "subtitle": "Intelligent Sensor",
       "seo": {
@@ -2076,7 +2129,7 @@
     {
       "stripeProductId": "prod_OCVCDAX7FzNZV8",
       "stripePriceId": "price_1NQ6CGARhMwSarZXFBeaxMs1",
-      "categoryId": 8,
+      "categoryId": 18,
       "title": "nRF24L01+",
       "subtitle": "2.4 GHz Transceiver and Audio Streamer",
       "seo": {
@@ -2134,7 +2187,7 @@
       ]
     },
     {
-      "categoryId": 9,
+      "categoryId": 27,
       "title": "ESP8266EX",
       "subtitle": "Wi-Fi Chip",
       "seo": {
@@ -2218,7 +2271,7 @@
       ]
     },
     {
-      "categoryId": 8,
+      "categoryId": 27,
       "title": "CC1310",
       "subtitle": "Sub-1 GHz RF Device",
       "seo": {
@@ -2314,7 +2367,7 @@
       ]
     },
     {
-      "categoryId": 8,
+      "categoryId": 27,
       "title": "CC2652P",
       "subtitle": "Multi-Protocol Wireless MCU",
       "seo": {
@@ -2443,7 +2496,7 @@
     },
     {
       "stripeProductId": "prod_OCeeCfJfhxnzRv",
-      "categoryId": 6,
+      "categoryId": 27,
       "title": "CH340",
       "subtitle": "USB to UART Converter",
       "seo": {
