@@ -197,6 +197,63 @@
       ]
     },
     {
+      "stripeProductId": "prod_Q1QHLPUEEbzB9F",
+      "stripePriceId": "price_1PBNR6ARhMwSarZXcmD1YmxW",
+      "title": "WeAct USB Logic Analyzer",
+      "subtitle": "24MHz 8-channels",
+      "seo": {
+        "description": "WeAct LogicAnalyzerV1 offers powerful logic analysis capabilities with its Cypress/Corebai USB controller. Capture data from 8 channels simultaneously at a maximum sampling rate of 24MHz, supporting logic levels up to 5.5V. Compatible with sigrok-PulseView software for open-source protocol analysis on Linux, Windows, and Mac OS X",
+        "keywords": "logic analyzer, WeAct, cypress, corebai, 8-channels, 24MHz, logic level analysis, protocol analysis"
+      },
+      "categoryId": 23,
+      "manufacturerId": "17",
+      "buy": true,
+      "weight": 50,
+      "features": [
+        {
+          "refId": 19,
+          "value": "5.0V"
+        },
+        {
+          "refId": 76,
+          "value": "16 x 39.8mm"
+        },
+        {
+          "refId": 177,
+          "value": 8
+        },
+        {
+          "refId": 178,
+          "value": "24MHz",
+          "info": "per channel"
+        }
+      ],
+      "images": [
+        {
+          "src": "/photos/WeAct-USB-Logic-Analyzer-1.webp",
+          "alt": "WeAct USB Logic Analyzer"
+        },
+        {
+          "src": "/photos/WeAct-USB-Logic-Analyzer-2.webp",
+          "alt": "WeAct USB Logic Analyzer - Package"
+        }
+      ],
+      "content": "<p>WeAct Logic Analyzer V1 is a powerful logic analyzer built around the Cypress/Corebai USB controller. With the capability to simultaneously capture 8-channels of data. Each channel boasts a maximum sampling rate of 24MHz, accommodating rapid data acquisition. Supporting logic levels of up to 5.5V, it ensures compatibility with a wide range of devices.</p><p>The software, powered by sigrok-PulseView, is open-source and compatible with Linux, Windows, Mac OS X, and other platforms, providing flexibility for users across different operating systems. With support for over 100 protocol analyses and the ability to customize protocols, it empowers users to delve into intricate data analysis tailored to their specific needs.</p>",
+      "relatedDatasheetIds": [
+        "CBM9002A",
+        "SN74LVC541A"
+      ],
+      "externalLinks": [
+        {
+          "name": "WeAct LogicAnalyzer V1",
+          "url": "https://github.com/WeActStudio/LogicAnalyzerV1",
+          "lang": "en",
+          "icon": "github.com.svg",
+          "iconAlt": "github.com"
+        }
+      ]
+    },
+    {
       "stripeProductId": "prod_PtZxJVSgtguXZ7",
       "stripePriceId": "price_1P3mnFARhMwSarZXMVSTwyk8",
       "categoryId": 28,

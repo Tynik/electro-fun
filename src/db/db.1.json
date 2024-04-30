@@ -131,6 +131,14 @@
     "16": {
       "name": "ON Semiconductor",
       "url": "https://www.onsemi.com"
+    },
+    "17": {
+      "name": "WeAct Studio",
+      "url": "https://github.com/WeActStudio"
+    },
+    "18": {
+      "name": "COREBAI",
+      "url": "https://corebai.com"
     }
   },
   "abbreviations": {},
@@ -221,6 +229,24 @@
     }
   },
   "datasheets": {
+    "SN74LVC541A": {
+      "lang": "en",
+      "manufacturerId": "8",
+      "keywords": [
+        "buffer",
+        "driver"
+      ]
+    },
+    "CBM9002A": {
+      "lang": "en",
+      "manufacturerId": "18",
+      "keywords": [
+        "USB-microcontroller",
+        "8051",
+        "USB2.0",
+        "480Mbps"
+      ]
+    },
     "INA163": {
       "lang": "en",
       "manufacturerId": "8",
@@ -1004,11 +1030,11 @@
       ]
     },
     "34": {
-      "name": "Self-Learning (25 Hz)",
+      "name": "Self-Learning (25Hz)",
       "featSecRefId": 7
     },
     "35": {
-      "name": "Self-Learning (50 Hz)",
+      "name": "Self-Learning (50Hz)",
       "featSecRefId": 7
     },
     "36": {
@@ -1307,12 +1333,12 @@
       "featSecRefId": 12
     },
     "119": {
-      "name": "Overcurrent Protection",
+      "name": "Over-current Protection",
       "type": "bool",
       "featSecRefId": 12
     },
     "120": {
-      "name": "Overvoltage Protection",
+      "name": "Over-voltage Protection",
       "type": "bool",
       "featSecRefId": 12
     },
@@ -1520,6 +1546,12 @@
     },
     "176": {
       "name": "Recommended Load"
+    },
+    "177": {
+      "name": "Channels"
+    },
+    "178": {
+      "name": "Sampling Rate"
     }
   },
   "items": [
