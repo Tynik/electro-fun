@@ -139,6 +139,14 @@
     "18": {
       "name": "COREBAI",
       "url": "https://corebai.com"
+    },
+    "19": {
+      "name": "WCH(Jiangsu Qin Heng)",
+      "url": "https://wch-ic.com"
+    },
+    "20": {
+      "name": "Allegro MicroSystems",
+      "url": "https://www.allegromicro.com"
     }
   },
   "abbreviations": {},
@@ -229,6 +237,48 @@
     }
   },
   "datasheets": {
+    "CH32V00x-Evaluation-Board-Reference": {
+      "lang": "en",
+      "manufacturerId": "19",
+      "keywords": [
+      ]
+    },
+    "ACS712": {
+      "lang": "en",
+      "manufacturerId": "20",
+      "keywords": [
+        "current-sensor",
+        "low-noise",
+        "hall-effect",
+        "low-resistance"
+      ]
+    },
+    "CH32X035": {
+      "lang": "en",
+      "manufacturerId": "19",
+      "keywords": [
+        "microcontroller",
+        "48MHz",
+        "RISC-V",
+        "PD",
+        "fast-charging",
+        "RV32IMAC",
+        "12-bit ADC"
+      ]
+    },
+    "CH224": {
+      "lang": "en",
+      "manufacturerId": "19",
+      "keywords": [
+        "PD",
+        "fast-charging",
+        "PD3.0",
+        "PD2.0",
+        "100W",
+        "over-temperature",
+        "over-voltage"
+      ]
+    },
     "SN74LVC541A": {
       "lang": "en",
       "manufacturerId": "8",
@@ -310,7 +360,7 @@
         "voltage",
         "ultra-precise",
         "temperature",
-        "20bit"
+        "20-bit"
       ]
     },
     "INA229": {
@@ -322,7 +372,7 @@
         "voltage",
         "ultra-precise",
         "temperature",
-        "20bit"
+        "20-bit"
       ]
     },
     "INA236": {
@@ -349,7 +399,7 @@
     "CH32V003RM": {
       "lang": "en"
     },
-    "CH32V003DS0": {
+    "CH32V003": {
       "lang": "en"
     },
     "Ai-M62-32S": {
@@ -826,7 +876,8 @@
     "16": "Phase",
     "17": "Display",
     "18": "Touch Screen",
-    "19": "Motor Drivers"
+    "19": "Motor Drivers",
+    "20": "Memory"
   },
   "optionTypes": {
     "bool": {
@@ -1060,8 +1111,8 @@
       "type": "bool"
     },
     "41": {
-      "name": "Direct Memory Access (DMA)",
-      "featSecRefId": 8,
+      "name": "DMA",
+      "featSecRefId": 20,
       "suffix": " channel"
     },
     "42": {
@@ -1100,8 +1151,8 @@
       "featSecRefId": 10
     },
     "54": {
-      "name": "Flash Memory",
-      "featSecRefId": 10
+      "name": "Flash",
+      "featSecRefId": 20
     },
     "55": {
       "name": "Over-the-Air (OTA) Update",
@@ -1121,15 +1172,15 @@
     },
     "59": {
       "name": "ROM",
-      "featSecRefId": 10
+      "featSecRefId": 20
     },
     "60": {
       "name": "SRAM",
-      "featSecRefId": 10
+      "featSecRefId": 20
     },
     "61": {
       "name": "RAM",
-      "featSecRefId": 10
+      "featSecRefId": 20
     },
     "62": {
       "name": "Storage Temperature",
@@ -1552,6 +1603,10 @@
     },
     "178": {
       "name": "Sampling Rate"
+    },
+    "179": {
+      "name": "Package",
+      "featSecRefId": 10
     }
   },
   "items": [

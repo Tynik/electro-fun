@@ -722,7 +722,7 @@
         },
         {
           "refId": 135,
-          "value": "12bit"
+          "value": "12-bit"
         }
       ],
       "options": {
@@ -800,7 +800,7 @@
         },
         {
           "refId": 54,
-          "value": "4 MB"
+          "value": "4MB"
         },
         {
           "refId": 55,

@@ -254,6 +254,104 @@
       ]
     },
     {
+      "stripeProductId": "prod_Q1zZ2ZC3EKCIUQ",
+      "stripePriceId": "price_1PBvanARhMwSarZXLnoRLJl8",
+      "categoryId": 23,
+      "title": "Development Board Kit CH32V003",
+      "subtitle": "32-bit RISC-V",
+      "seo": {
+        "description": "Explore the CH32V003 Evaluation Development Board Kit, featuring the CH32V003F4P6 board, WCH-LinkE interface, and five CH32V003F4P6 chips in TSSOP-20 packaging. Ideal for prototyping and testing, this kit offers a comprehensive platform for evaluating the capabilities of the CH32V003 microcontroller",
+        "keywords": "CH32V003, CH32V003F4P6, WCH-LinkE, development-board, prototyping"
+      },
+      "buy": true,
+      "weight": 50,
+      "manufacturerId": "19",
+      "datasheetId": "CH32V00x-Evaluation-Board-Reference",
+      "features": [
+        {
+          "refId": 2,
+          "value": "USART/GPIO/SDIO/TIMx/SPI/I²C/PWM/ADC"
+        },
+        {
+          "refId": 13,
+          "value": "3.3/5V"
+        },
+        {
+          "refId": 20,
+          "value": 18
+        },
+        {
+          "refId": 41,
+          "value": 1
+        },
+        {
+          "refId": 50,
+          "value": "QingKe 32-bit RISC-V2A"
+        },
+        {
+          "refId": 53,
+          "value": "48MHz"
+        },
+        {
+          "refId": 54,
+          "value": "16KB"
+        },
+        {
+          "refId": 60,
+          "value": "2KB"
+        },
+        {
+          "refId": 135,
+          "value": "10-bit"
+        },
+        {
+          "refId": 179,
+          "value": "TSSOP20"
+        }
+      ],
+      "images": [
+        {
+          "src": "/photos/Development-Board-Kit-CH32V003-32-bit-RISC-V-1.webp",
+          "alt": "Development Board Kit CH32V003 32-bit RISC-V"
+        }
+      ],
+      "content": "<p>The Evaluation Development Board Kit CH32V003 includes essential components for exploring the capabilities of the CH32V003 microcontroller. This comprehensive kit comprises the 1x CH32V003F4P6 board, the 1x WCH-LinkE interface, and 5x CH32V003F4P6 chips in TSSOP-20 packaging.</p><p>The CH32V003F4P6 board serves as the primary platform for prototyping and testing various applications. It provides ample connectivity options and interfaces, enabling users to interface with peripherals and sensors seamlessly. With its compact design and robust construction, the board facilitates rapid development and evaluation of embedded systems.</p><p>The WCH-LinkE interface module allows for easy communication between the CH32V003F4P6 board and a computer. Utilizing this interface, developers can upload firmware, debug code, and monitor the system's performance conveniently.</p><p>Additionally, the kit includes five CH32V003F4P6 chips in TSSOP-20 packaging. These microcontrollers feature advanced capabilities, including high-speed processing, versatile I/O options, and low-power operation. With multiple chips included in the kit, developers have the flexibility to experiment with different configurations and applications.</p>",
+      "relatedDatasheetIds": [
+        "CH32V003",
+        "CH32V003RM"
+      ],
+      "externalLinks": [
+        {
+          "name": "Official page MCU-CH32V003",
+          "url": "https://www.wch-ic.com/products/CH32V003.html",
+          "lang": "en",
+          "icon": "wch-ic.com.ico",
+          "iconAlt": "www.wch-ic.com"
+        },
+        {
+          "name": "Github page MCU-CH32V003",
+          "url": "https://github.com/openwch/ch32v003",
+          "lang": "en",
+          "icon": "github.com.svg",
+          "iconAlt": "github.com"
+        }
+      ],
+      "accessories": [
+        {
+          "name": "Board CH32V003F4P6",
+          "count": 1
+        },
+        {
+          "name": "WCH-LinkE",
+          "count": 1
+        },
+        {
+          "name": "Chip CH32V003F4P6 (TSSOP-20)",
+          "count": 5
+        }
+      ]
+    },
+    {
       "stripeProductId": "prod_PtZxJVSgtguXZ7",
       "stripePriceId": "price_1P3mnFARhMwSarZXMVSTwyk8",
       "categoryId": 28,

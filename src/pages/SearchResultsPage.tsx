@@ -14,15 +14,13 @@ export type SearchResultsPageProps = {
   onSearchReset?: () => void;
 };
 
-export const SearchResultsPage = (props: SearchResultsPageProps) => {
-  const {
-    products,
-    foundProducts = null,
-    foundDatasheets = null,
-    isSearching = false,
-    onSearchReset = null,
-  } = props;
-
+export const SearchResultsPage = ({
+  products,
+  foundProducts = null,
+  foundDatasheets = null,
+  isSearching = false,
+  onSearchReset,
+}: SearchResultsPageProps) => {
   if (isSearching) {
     return <Loader label="Searching..." />;
   }

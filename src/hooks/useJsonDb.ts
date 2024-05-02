@@ -1,6 +1,6 @@
 import React from 'react';
 
-import type { Db, DbMeta } from '~/types';
+import type { Db, DbMeta, Nullable } from '~/types';
 
 import { mergeDeep, preprocessDb } from '~/utils';
 import { fetchDbMeta, fetchDbPart } from '~/api';
@@ -14,9 +14,9 @@ export type UseDbOptions = {
   itemsPerPage: number;
 };
 
-export const useJsonDb = (options: UseDbOptions = { itemsPerPage: 50 }) => {
-  const [dbMeta, setDbMeta] = React.useState<DbMeta>(null);
-  const [fullDb, setFullDb] = React.useState<Db>(null);
+export const useJsonDb = (options: UseDbOptions = { itemsPerPage: 150 }) => {
+  const [dbMeta, setDbMeta] = React.useState<Nullable<DbMeta>>(null);
+  const [fullDb, setFullDb] = React.useState<Nullable<Db>>(null);
   const [page, setPage] = React.useState<number>(1);
   const [dbPartNumber, setDbPartNumber] = React.useState<number>(1);
   const [dbParts, setDbParts] = React.useState<DbPartsT>({});
