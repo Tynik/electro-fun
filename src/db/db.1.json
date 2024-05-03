@@ -42,7 +42,9 @@
     "21": "Microphone Preamplifiers",
     "22": "Moving-Coil Transducer Amplifiers",
     "23": "Sonar",
-    "24": "Instrumentation"
+    "24": "Instrumentation",
+    "25": "Wireless chargers",
+    "26": "Power management"
   },
   "brands": {
     "1": {
@@ -1653,7 +1655,7 @@
         },
         {
           "refId": 15,
-          "value": "up to 3A"
+          "value": "≤ 3A"
         }
       ],
       "externalLinks": [
@@ -1695,8 +1697,8 @@
         {
           "refId": 2,
           "value": [
-            "I²C (up to 3.4MHz)",
-            "SPI (3-wire and 4-wire, up to 10MHz)"
+            "I²C (≤ 3.4MHz)",
+            "SPI (3-wire and 4-wire, ≤ 10MHz)"
           ]
         },
         {
@@ -1866,7 +1868,7 @@
       "features": [
         {
           "refId": 2,
-          "value": "I²C (up to 400 kHz)"
+          "value": "I²C (≤ 400kHz)"
         },
         {
           "refId": 3,
@@ -1959,7 +1961,7 @@
       "features": [
         {
           "refId": 2,
-          "value": "I²C (up to 400 kHz)"
+          "value": "I²C (≤ 400kHz)"
         },
         {
           "refId": 3,
@@ -2080,11 +2082,11 @@
       "features": [
         {
           "refId": 31,
-          "value": "up to 136W"
+          "value": "≤ 136W"
         },
         {
           "refId": 30,
-          "value": "up to 60°C"
+          "value": "≤ 60°C"
         },
         {
           "refId": 28,
@@ -2247,7 +2249,7 @@
       "features": [
         {
           "refId": 2,
-          "value": "SPI (4-wire, up to 10 Mbps)"
+          "value": "SPI (4-wire, ≤ 10Mbps)"
         },
         {
           "refId": 3,
@@ -2704,7 +2706,7 @@
         },
         {
           "refId": 67,
-          "value": "up to 146nC",
+          "value": "≤ 146nC",
           "info": [
             "I<sub>D</sub> = 62A",
             "V<sub>DS</sub> = 44V",
@@ -2713,7 +2715,7 @@
         },
         {
           "refId": 68,
-          "value": "up to 8mΩ",
+          "value": "≤ 8MOhm",
           "info": [
             "V<sub>GS</sub> = 10V",
             "I<sub>D</sub> = 62A"

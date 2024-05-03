@@ -484,7 +484,7 @@
         },
         {
           "refId": 36,
-          "value": "up to 200µA"
+          "value": "≤ 200µA"
         },
         {
           "refId": 50,
@@ -706,7 +706,7 @@
         },
         {
           "refId": 53,
-          "value": "up to 133MHz"
+          "value": "≤ 133MHz"
         },
         {
           "refId": 76,
@@ -796,7 +796,7 @@
         },
         {
           "refId": 53,
-          "value": "up to 160MHz"
+          "value": "≤ 160MHz"
         },
         {
           "refId": 54,
@@ -948,12 +948,12 @@
       "features": [
         {
           "refId": 15,
-          "value": "up to 6 A",
+          "value": "≤ 6 A",
           "optionId": "1"
         },
         {
           "refId": 15,
-          "value": "up to 3 A",
+          "value": "≤ 3 A",
           "optionId": "2"
         }
       ]

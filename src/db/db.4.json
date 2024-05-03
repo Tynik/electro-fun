@@ -254,6 +254,68 @@
       ]
     },
     {
+      "stripeProductId": "prod_Q2WCuo2cechj9M",
+      "stripePriceId": "price_1PCR9tARhMwSarZXB9fs3R9N",
+      "categoryId": 27,
+      "title": "CH224K USB-PD Sink Controller",
+      "subtitle": "up to 100W",
+      "seo": {
+        "description": "Discover the CH224 chip, a versatile solution integrating USB PD3.0/2.0, BC1.2, and up to 100W power support. With automatic VCONN detection and E-Mark chip emulation, it's ideal for high-power input expansion in wireless chargers, electric toothbrushes, and more.",
+        "keywords": "CH224, CH224K, 100W, USB-PD3.0, USB-PD2.0, USB Type-C PD, BC1.2, VCONN, high-power, power management, fast-charging, ESSOP-10"
+      },
+      "buy": true,
+      "weight": 1,
+      "manufacturerId": "19",
+      "datasheetId": "CH224",
+      "features": [
+        {
+          "refId": 13,
+          "value": "4 - 22V"
+        },
+        {
+          "refId": 14,
+          "value": "5/9/12/15/20V"
+        },
+        {
+          "refId": 115,
+          "value": "≤ 100W"
+        },
+        {
+          "refId": 179,
+          "value": "ESSOP-10"
+        }
+      ],
+      "images": [
+        {
+          "src": "/photos/CH224K-USB-PD-Sink-Controller-1.webp",
+          "alt": "CH224K"
+        },
+        {
+          "src": "/photos/CH224K-USB-PD-Sink-Controller-2.webp",
+          "alt": "CH224K - Pinouts"
+        },
+        {
+          "src": "/photos/CH224K-USB-PD-Sink-Controller-3.webp",
+          "alt": "CH224K - Connect with USB Type-C"
+        }
+      ],
+      "content": "<p>Introducing the CH224, a versatile solution that seamlessly integrates multiple fast charging protocols, including USB PD3.0/2.0 and BC1.2. This advanced chip boasts automatic detection of VCONN and emulation of E-Mark chips, ensuring compatibility with a wide range of devices. With support for up to 100W power, the CH224 is equipped to handle high-power input requirements effortlessly.</p><p>Featuring a built-in PD communication module, the CH224 offers exceptional integration and streamlined peripherals. It includes essential functions such as output voltage detection, as well as over-temperature and over-voltage protection, guaranteeing safe and reliable operation.</p><p>Ideal for various electronic applications, the CH224 finds its place in expanding high-power input scenarios. Whether in wireless chargers, electric toothbrushes, rechargeable shavers, lithium battery power tools, or other devices, the CH224 delivers unmatched performance and versatility, making it a preferred choice for demanding power management needs.</p>",
+      "warningContent": "<p>For CH224K, the input voltage on CFG2/CFG3 cannot be higher than 3.7V. For CH224D, the input voltage on CFG2/CFG3 cannot be higher than 5V.</p><p>In scenarios where back-end circuits, such as MCUs, exhibit slow startup or MCU pins default to a specific state, the CFG1 pin on the CH224K/CH224D may remain in a floating state or IO configuration mode until the MCU becomes operational. This could potentially trigger a 20V request. To mitigate this, if the system cannot tolerate a 20V input, it's advisable to add a configuration resistor to the CFG1 pin. This ensures that the CH224K/CH224D can request an appropriate voltage by configuring the resistor before the MCU initialization process begins.</p>",
+      "applicationIds": [
+        "25",
+        "26"
+      ],
+      "externalLinks": [
+        {
+          "name": "Easy PD Sink using MCU CH32V003 and PD chip CH224K",
+          "url": "https://github.com/openwch/ch32v003/tree/main/Demo%20Application/Easy_PD_Sink",
+          "lang": "en",
+          "icon": "github.com.svg",
+          "iconAlt": "github.com"
+        }
+      ]
+    },
+    {
       "stripeProductId": "prod_Q1zZ2ZC3EKCIUQ",
       "stripePriceId": "price_1PBvanARhMwSarZXLnoRLJl8",
       "categoryId": 23,
@@ -306,7 +368,7 @@
         },
         {
           "refId": 179,
-          "value": "TSSOP20"
+          "value": "TSSOP-20"
         }
       ],
       "images": [
@@ -322,15 +384,22 @@
       ],
       "externalLinks": [
         {
-          "name": "Official page MCU-CH32V003",
+          "name": "Official page CH32V003",
           "url": "https://www.wch-ic.com/products/CH32V003.html",
           "lang": "en",
           "icon": "wch-ic.com.ico",
           "iconAlt": "www.wch-ic.com"
         },
         {
-          "name": "Github page MCU-CH32V003",
+          "name": "Github project with everything for CH32V003",
           "url": "https://github.com/openwch/ch32v003",
+          "lang": "en",
+          "icon": "github.com.svg",
+          "iconAlt": "github.com"
+        },
+        {
+          "name": "Open source development environment for CH32V003",
+          "url": "https://github.com/cnlohr/ch32v003fun",
           "lang": "en",
           "icon": "github.com.svg",
           "iconAlt": "github.com"
