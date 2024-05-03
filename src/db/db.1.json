@@ -710,7 +710,13 @@
       "lang": "en"
     },
     "CH340": {
-      "lang": "en"
+      "lang": "en",
+      "manufacturerId": "19",
+      "keywords": [
+        "USB",
+        "UART",
+        "serial-port"
+      ]
     },
     "ESP8266EX": {
       "lang": "en"
@@ -756,8 +762,12 @@
       "url": "TI-RTOS/Bios_User_Guide.pdf"
     },
     {
-      "name": "Configuring gain with the THAT1510 and THAT1512.pdf",
+      "name": "Configuring gain with the THAT1510 and THAT1512",
       "url": "Configuring-gain-THAT1510-THAT1512.pdf"
+    },
+    {
+      "name": "Packages",
+      "url": "Packages.pdf"
     }
   ],
   "categories": [
@@ -2257,11 +2267,11 @@
         },
         {
           "refId": 29,
-          "value": "26 µA - Standby-I"
+          "value": "26µA - Standby-I"
         },
         {
           "refId": 29,
-          "value": "320 µA - Standby-II"
+          "value": "320µA - Standby-II"
         }
       ],
       "content": "<p>nRF24L01+ is a single-chip 2.4 GHz transceiver with a built-in Enhanced ShockBurst™ protocol engine, suitable for ultra-low-power wireless applications.\n\nnRF24L01+ is designed to operate in the worldwide ISM frequency band from 2.4 to 2.4835 GHz.</p>",
@@ -2593,6 +2603,7 @@
         "keywords": "CH340, usb, uart, converter"
       },
       "datasheetId": "CH340",
+      "manufacturerId": "19",
       "buy": true,
       "weight": 2,
       "price": {
@@ -2622,7 +2633,7 @@
         },
         {
           "refId": 42,
-          "value": "SOP-16"
+          "value": "SOP16"
         },
         {
           "refId": 24,
@@ -2650,7 +2661,16 @@
           "name": "CH340C"
         }
       },
-      "content": "<p>CH340 is a USB to UART converter chip that transforms USB into a serial UART interface or printer interface. In UART mode, CH340 provides a common MODEM signal to expand the UART interface.</p>"
+      "content": "<p>The CH340 is a versatile USB bus converter chip that seamlessly transforms USB signals into either serial or printer port functionality. In UART mode, the CH340 offers standard MODEM signals, making it ideal for expanding serial port capabilities for computers or directly upgrading from traditional serial devices to USB bus compatibility. With its flexible design and reliable performance, the CH340 simplifies connectivity solutions for a wide range of applications.</p>",
+      "externalLinks": [
+        {
+          "name": "Official page CH340",
+          "url": "https://www.wch-ic.com/products/CH340.html",
+          "lang": "en",
+          "icon": "wch-ic.com.ico",
+          "iconAlt": "www.wch-ic.com"
+        }
+      ]
     },
     {
       "stripeProductId": "prod_OCVG8Xu9RJlvcb",
