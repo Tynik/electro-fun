@@ -24,7 +24,7 @@ export const getProductContributorAvatarSrc = (contributorSrc: ProductContributo
     return `https://avatars.githubusercontent.com/u/${contributorSrc.userId}?s=60&v=4`;
   }
 
-  if (contributorSrc.source === 'youtube') {
+  if (contributorSrc.source === 'youtube' || contributorSrc.source === 'oshwlab') {
     return contributorSrc.avatarSrc;
   }
 

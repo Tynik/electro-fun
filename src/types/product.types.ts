@@ -57,7 +57,15 @@ type YoutubeProductContributorSrc = {
   avatarSrc: string;
 };
 
-export type ProductContributorSrc = GithubProductContributorSrc | YoutubeProductContributorSrc;
+type OSHWLabProductContributorSrc = {
+  source: 'oshwlab';
+  avatarSrc: string;
+};
+
+export type ProductContributorSrc =
+  | GithubProductContributorSrc
+  | YoutubeProductContributorSrc
+  | OSHWLabProductContributorSrc;
 
 export type ProductContributor = {
   name: string;

@@ -312,6 +312,23 @@
           "lang": "en",
           "icon": "github.com.svg",
           "iconAlt": "github.com"
+        },
+        {
+          "name": "CH224K USB PD Decoy",
+          "url": "https://oshwlab.com/wagiminator/ch224k-usb-pd-decoy",
+          "lang": "en",
+          "icon": "oshwlab.com.ico",
+          "iconAlt": "oshwlab.com"
+        }
+      ],
+      "contributors": [
+        {
+          "name": "Stefan Wagner",
+          "url": "https://oshwlab.com/wagiminator?tab=project&page=1",
+          "src": {
+            "source": "oshwlab",
+            "avatarSrc": "https://image.easyeda.com/avatars/2019/7/1iNL30DOPt4V6Fqf19iRt1CVZyruon5e9kiV43OT.png"
+          }
         }
       ]
     },
