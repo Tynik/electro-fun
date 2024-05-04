@@ -4,7 +4,11 @@ import type { Product } from '~/types';
 import type { StripeProduct } from '~/api';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
-import { ProductOfferMicrodata, ProductManufacturerMicrodata } from '~/helpers';
+import {
+  ProductOfferMicrodata,
+  ProductManufacturerMicrodata,
+  ProductFeatureMicrodata,
+} from '~/helpers';
 import { getProductContributorAvatarSrc } from '~/utils';
 
 export type ProductMicrodataProps = {
@@ -31,11 +35,15 @@ export const ProductMicrodata = ({ product, stripeProduct }: ProductMicrodataPro
         <meta key={image.src} itemProp="image" content={image.src} />
       ))}
 
+      {product.features?.map(feature => (
+        <ProductFeatureMicrodata key={feature.refId} feature={feature} />
+      ))}
+
       {(product.contributors || []).map(contributor => (
         <div
           key={contributor.name}
           itemType={`${SEO_SCHEMA_BASE_URL}/Person`}
-          itemProp={'contributor'}
+          itemProp="contributor"
           itemScope
         >
           <meta itemProp="name" content={contributor.name} />

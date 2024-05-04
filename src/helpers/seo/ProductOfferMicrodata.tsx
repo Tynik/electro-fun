@@ -8,7 +8,7 @@ import {
   getProductPrice,
   getProductAvailabilitySeoSchema,
   OfferShippingDetailsMicrodata,
-  ProductMeasurementMicrodata,
+  QuantitativeValueMicrodata,
   MerchantReturnPolicyMicrodata,
   ProductInventoryLevelMicrodata,
 } from '~/helpers';
@@ -59,7 +59,9 @@ export const ProductOfferMicrodata = ({ product, stripeProduct }: ProductOfferMi
 
       <ProductInventoryLevelMicrodata product={product} stripeProduct={stripeProduct} />
 
-      <ProductMeasurementMicrodata product={product} />
+      {product.seo?.measurement && (
+        <QuantitativeValueMicrodata value={product.seo.measurement} property="hasMeasurement" />
+      )}
 
       <OfferShippingDetailsMicrodata />
     </div>
