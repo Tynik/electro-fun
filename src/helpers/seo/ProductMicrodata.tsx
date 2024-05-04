@@ -4,7 +4,7 @@ import type { Product } from '~/types';
 import type { StripeProduct } from '~/api';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
-import { ProductOfferMicrodata, ProductBrandMicrodata } from '~/helpers';
+import { ProductOfferMicrodata, ProductManufacturerMicrodata } from '~/helpers';
 import { getProductContributorAvatarSrc } from '~/utils';
 
 export type ProductMicrodataProps = {
@@ -15,12 +15,13 @@ export type ProductMicrodataProps = {
 export const ProductMicrodata = ({ product, stripeProduct }: ProductMicrodataProps) => {
   return (
     <div itemType={`${SEO_SCHEMA_BASE_URL}/Product`} itemScope>
-      <ProductBrandMicrodata product={product} />
+      <ProductManufacturerMicrodata product={product} />
 
       <ProductOfferMicrodata product={product} stripeProduct={stripeProduct} />
 
       <meta itemProp="name" content={product.title} />
 
+      {product.seo?.keywords && <meta itemProp="keywords" content={product.seo.keywords} />}
       {product.content && <meta itemProp="description" content={product.content} />}
 
       {product.gtin && <meta itemProp="gtin" content={product.gtin} />}

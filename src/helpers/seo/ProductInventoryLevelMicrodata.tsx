@@ -1,8 +1,8 @@
 import React from 'react';
 
 import type { Product } from '~/types';
-
 import type { StripeProduct } from '~/api';
+
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
 import { useSelectedProductOptionId } from '~/hooks';
 import { getProductAllowedQuantity } from '~/helpers';
@@ -24,12 +24,8 @@ export const ProductInventoryLevelMicrodata = ({
   );
 
   return (
-    <div
-      itemProp={'inventoryLevel'}
-      itemType={`${SEO_SCHEMA_BASE_URL}/QuantitativeValue`}
-      itemScope
-    >
-      <meta itemProp={'value'} content={productAvailability.toString()} />
+    <div itemProp="inventoryLevel" itemType={`${SEO_SCHEMA_BASE_URL}/QuantitativeValue`} itemScope>
+      <meta itemProp="value" content={productAvailability.toString()} />
     </div>
   );
 };
