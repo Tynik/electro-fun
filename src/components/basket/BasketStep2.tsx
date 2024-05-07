@@ -28,7 +28,7 @@ export type BasketStep2Props = {
   onBefore: () => void;
 };
 
-const BasketStep2 = ({ isActive, products, onBefore }: BasketStep2Props) => {
+export const BasketStep2 = ({ isActive, products, onBefore }: BasketStep2Props) => {
   const {
     user: { basket },
   } = useCurrentUser();
@@ -257,5 +257,3 @@ const BasketStep2 = ({ isActive, products, onBefore }: BasketStep2Props) => {
     </>
   );
 };
-
-export default BasketStep2;

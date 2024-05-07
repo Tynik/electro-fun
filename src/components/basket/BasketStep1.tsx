@@ -5,8 +5,8 @@ import type { Product } from '~/types';
 import type { StripeProduct } from '~/api';
 
 import { useCurrentUser } from '~/providers';
-import { BasketItem } from '~/components';
 import { getIcon } from '~/utils';
+import { BasketProduct } from '~/components';
 
 export type BasketStep1Props = {
   isActive: boolean;
@@ -15,7 +15,7 @@ export type BasketStep1Props = {
   onNext: () => void;
 };
 
-const BasketStep1 = ({ isActive, products, stripeProducts, onNext }: BasketStep1Props) => {
+export const BasketStep1 = ({ isActive, products, stripeProducts, onNext }: BasketStep1Props) => {
   const {
     user: { basket },
     clearBasket,
@@ -36,7 +36,7 @@ const BasketStep1 = ({ isActive, products, stripeProducts, onNext }: BasketStep1
       {products.map(product =>
         Object.keys(basket.products[product.id] || {}).map(optionId => (
           <Grid key={`${product.id}-${optionId}`} item>
-            <BasketItem
+            <BasketProduct
               product={product}
               stripeProduct={stripeProducts?.find(
                 stripeProduct => stripeProduct.id === product.stripeProductId,
@@ -72,5 +72,3 @@ const BasketStep1 = ({ isActive, products, stripeProducts, onNext }: BasketStep1
     </>
   );
 };
-
-export default BasketStep1;

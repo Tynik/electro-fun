@@ -1,3 +1,3 @@
-export { default as BasketItem } from './BasketProduct';
-export { default as BasketStep1 } from './BasketStep1';
-export { default as BasketStep2 } from './BasketStep2';
+export * from './BasketProduct';
+export * from './BasketStep1';
+export * from './BasketStep2';

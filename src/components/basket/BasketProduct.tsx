@@ -25,7 +25,7 @@ export type BasketProductProps = {
   optionId: ProductOptionId;
 };
 
-const BasketProduct = ({ product, stripeProduct, optionId }: BasketProductProps) => {
+export const BasketProduct = ({ product, stripeProduct, optionId }: BasketProductProps) => {
   const {
     user: { basket },
     addProductToBasket,
@@ -151,5 +151,3 @@ const BasketProduct = ({ product, stripeProduct, optionId }: BasketProductProps)
     </Paper>
   );
 };
-
-export default BasketProduct;
