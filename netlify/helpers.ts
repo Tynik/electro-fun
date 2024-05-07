@@ -142,6 +142,7 @@ export const getStripeProductPricesList = async (
   const { data: prices } = await stripe.prices.list({
     product: productId,
     active: true,
+    limit: 100,
   });
 
   return prices;
