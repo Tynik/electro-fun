@@ -40,6 +40,7 @@ import {
 
 import {
   ChipIcon,
+  InductorIcon,
   MeasuringTapeIcon,
   PcbIcon,
   ResistorIcon,
@@ -90,5 +91,6 @@ export const getIcon = (name: string, props: SvgIconProps = {}): any => {
     threeDPrinter: <ThreeDPrinterIcon {...props} />,
     chip: <ChipIcon {...props} />,
     transistor: <TransistorIcon {...props} />,
+    inductor: <InductorIcon {...props} />,
   }[name];
 };

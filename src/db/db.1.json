@@ -872,6 +872,11 @@
       "id": 29,
       "name": "Resistors",
       "icon": "resistor"
+    },
+    {
+      "id": 30,
+      "name": "Inductors",
+      "icon": "inductor"
     }
   ],
   "featureSections": {
@@ -1627,6 +1632,12 @@
     },
     "180": {
       "name": "Max Power Dissipation"
+    },
+    "181": {
+      "name": "DCR"
+    },
+    "182": {
+      "name": "IDC"
     }
   },
   "items": [

@@ -445,16 +445,62 @@
       ]
     },
     {
+      "stripeProductId": "prod_Q42vWiDtIpxQMT",
+      "categoryId": 30,
+      "title": "SMD Power Inductor CD54",
+      "subtitle": "Inductance ±20%",
+      "seo": {
+        "description": "Elevate your electronic designs with the compact and efficient Power Inductor CD54. Perfect for power supplies, converters, and voltage regulators, it ensures stable and reliable power delivery with precision and efficiency.",
+        "keywords": "inductor, power inductor, CD54, SMD, filtering, noise reduction, voltage regulation"
+      },
+      "buy": true,
+      "weight": 5,
+      "images": [
+        {
+          "src": "Power-Inductor-CD54-1.webp",
+          "alt": "Power Inductor CD54"
+        }
+      ],
+      "options": {
+        "1": {
+          "name": "4.7uH (4R7) x 10pcs",
+          "default": true
+        }
+      },
+      "price": {
+        "1": {
+          "stripePriceId": "price_1PDupFARhMwSarZXPhOAB3YJ"
+        }
+      },
+      "features": [
+        {
+          "refId": 76,
+          "value": "5.8 x 5.2 x 4.5mm"
+        },
+        {
+          "refId": 181,
+          "value": "≤ 0.04Ohm",
+          "optionId": "1"
+        },
+        {
+          "refId": 182,
+          "value": "≤ 2.8A",
+          "optionId": "1"
+        }
+      ],
+      "content": "<p>Elevate your electronic designs with the Power Inductor CD54, a crucial component for efficient power management. Whether you're designing power supplies, DC-DC converters, or voltage regulators, this inductor ensures stable and reliable power delivery. With its ability to store energy, filter out noise, and regulate voltage levels, the CD54 is indispensable for achieving optimal performance in your circuits.</p><p><strong>Filtering and Smoothing:</strong> Inductors are commonly used in conjunction with capacitors to form low-pass, high-pass, or band-pass filters. These filters remove unwanted frequencies or noise from signals, ensuring a smoother and cleaner output.</p><p><strong>Energy Storage:</strong> Inductors store energy in the form of a magnetic field when current flows through them. This stored energy can be released when the current decreases, acting as a source of energy for the circuit and smoothing out voltage fluctuations.</p><p><strong>DC-DC Conversion:</strong> Inductors play a crucial role in DC-DC converters by storing and transferring energy efficiently. They help regulate voltage levels, step up or step down voltage, and improve power conversion efficiency.</p><p><strong>Impedance Matching:</strong> Inductors are used in impedance matching circuits to ensure maximum power transfer between components, especially in RF circuits and antenna systems.</p><p><strong>Magnetic Coupling:</strong> Inductors can be used in transformers to transfer energy from one circuit to another while maintaining electrical isolation. This is commonly used in power distribution systems and voltage regulation.</p>"
+    },
+    {
       "stripeProductId": "prod_Q3sBnV4uUML5wT",
       "categoryId": 29,
       "title": "Metal Film Resistors 1/4W",
-      "subtitle": "Accuracy ±1%",
+      "subtitle": "Resistance ±1%",
       "seo": {
         "description": "Metal film resistors, 1/4W with an accuracy of ±1%. These precision resistors offer reliable performance for a variety of electronic applications, ensuring accurate voltage and current regulation",
         "keywords": "metal film resistor, resistor, resistance, 1/4W, 0.25W, 250mW, ±1% accuracy, current regulation, voltage regulation"
       },
       "buy": true,
-      "weight": 5,
+      "weight": 2,
       "options": {
         "1": {
           "name": "10 Ohm x 10pcs",

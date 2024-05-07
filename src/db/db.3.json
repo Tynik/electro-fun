@@ -763,10 +763,10 @@
       "stripePriceId": "price_1NQ6rHARhMwSarZXaqFFQBTR",
       "categoryId": 18,
       "title": "MCP2515 Module",
-      "subtitle": "CAN Controller Module, SPI",
+      "subtitle": "CAN Controller, SPI",
       "seo": {
-        "description": "MCP2515 - CAN Controller module",
-        "keywords": "mcp2515, tja1050, module, can, bus, spi, obd, obd2, obdii, arduino"
+        "description": "MCP2515 - CAN controller module",
+        "keywords": "MCP2515, TJA1050, module, CAN, bus, SPI, OBD, OBD2, OBDII, arduino"
       },
       "manufacturerId": "9",
       "datasheetId": "MCP2515",
