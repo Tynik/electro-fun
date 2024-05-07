@@ -1,6 +1,6 @@
 import Stripe from 'stripe';
 
-import type { ProductPrices } from '../helpers';
+import { getStripeProductPricesList, ProductPrices } from '../helpers';
 
 import { createHandler, initStripeClient, processProductPrices } from '../helpers';
 
@@ -25,12 +25,9 @@ export const handler = createHandler({ allowMethods: ['GET'] }, async ({ event }
   const productsPrices: Record<Stripe.Product['id'], ProductPrices> = {};
 
   const getProductsPricesTasks = products.data.map(async product => {
-    const prices = await stripe.prices.list({
-      product: product.id,
-      active: true,
-    });
+    const prices = await getStripeProductPricesList(stripe, product.id);
 
-    productsPrices[product.id] = processProductPrices(prices.data);
+    productsPrices[product.id] = processProductPrices(prices);
   });
 
   await Promise.all(getProductsPricesTasks);
