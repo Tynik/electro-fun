@@ -867,6 +867,11 @@
       "id": 28,
       "name": "PCB",
       "icon": "apps"
+    },
+    {
+      "id": 29,
+      "name": "Resistors",
+      "icon": "apps"
     }
   ],
   "featureSections": {
@@ -1125,7 +1130,7 @@
     "41": {
       "name": "DMA",
       "featSecRefId": 20,
-      "suffix": " channel"
+      "suffix": "-channel"
     },
     "42": {
       "name": "Package"

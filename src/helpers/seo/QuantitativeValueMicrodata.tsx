@@ -2,9 +2,11 @@ import React from 'react';
 
 import { SEO_SCHEMA_BASE_URL } from '~/constants';
 
+type QuantitativePrimitiveValue = string | number;
+
 export type QuantitativeValueMicrodataProps = {
   property: string;
-  value: string | number | (string | number)[];
+  value: QuantitativePrimitiveValue | QuantitativePrimitiveValue[];
   name?: string;
   minValue?: string | number;
   maxValue?: string | number;

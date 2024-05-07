@@ -255,10 +255,10 @@
       "stripePriceId": "price_1NQFdkARhMwSarZXqQemcab1",
       "categoryId": 18,
       "title": "74HC4051 (Module)",
-      "subtitle": "8-Channel Analog Mux/Demux",
+      "subtitle": "8-channels analog mux/demux",
       "seo": {
         "description": "74HC4051 - 8-channel analog multiplexer/demultiplexer",
-        "keywords": "74hc4051, wcmcu-4051, 4051, multiplexer, demultiplexer, 8 channels, arduino, mux, demux",
+        "keywords": "74HC4051, WCMCU-4051, 4051, multiplexer, demultiplexer, 8 channels, arduino, MUX, DEMUX",
         "measurement": "8 channels"
       },
       "buy": true,

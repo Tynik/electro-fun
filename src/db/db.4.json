@@ -445,6 +445,180 @@
       ]
     },
     {
+      "stripeProductId": "prod_Q3sBnV4uUML5wT",
+      "categoryId": 29,
+      "title": "Metal Film Resistors 1/4W",
+      "subtitle": "Accuracy ±1%",
+      "seo": {
+        "description": "Metal film resistors, 1/4W with an accuracy of ±1%. These precision resistors offer reliable performance for a variety of electronic applications, ensuring accurate voltage and current regulation",
+        "keywords": "metal film resistor, resistor, resistance, 1/4W, 0.25W, ±1% accuracy, current regulation, voltage regulation"
+      },
+      "buy": true,
+      "weight": 5,
+      "options": {
+        "1": {
+          "name": "10 Ohm x 10pcs",
+          "default": true
+        },
+        "2": {
+          "name": "22 Ohm x 10pcs"
+        },
+        "3": {
+          "name": "47 Ohm x 10pcs"
+        },
+        "4": {
+          "name": "100 Ohm x 10pcs"
+        },
+        "5": {
+          "name": "150 Ohm x 10pcs"
+        },
+        "6": {
+          "name": "200 Ohm x 10pcs"
+        },
+        "7": {
+          "name": "220 Ohm x 10pcs"
+        },
+        "8": {
+          "name": "270 Ohm x 10pcs"
+        },
+        "9": {
+          "name": "330 Ohm x 10pcs"
+        },
+        "10": {
+          "name": "470 Ohm x 10pcs"
+        },
+        "11": {
+          "name": "510 Ohm x 10pcs"
+        },
+        "12": {
+          "name": "680 Ohm x 10pcs"
+        },
+        "13": {
+          "name": "1 kOhm x 10pcs"
+        },
+        "14": {
+          "name": "2 kOhm x 10pcs"
+        },
+        "15": {
+          "name": "2.2 kOhm x 10pcs"
+        },
+        "16": {
+          "name": "3.3 kOhm x 10pcs"
+        },
+        "17": {
+          "name": "4.7 kOhm x 10pcs"
+        },
+        "18": {
+          "name": "5.1 kOhm x 10pcs"
+        },
+        "19": {
+          "name": "6.8 kOhm x 10pcs"
+        },
+        "20": {
+          "name": "10 kOhm x 10pcs"
+        },
+        "21": {
+          "name": "20 kOhm x 10pcs"
+        },
+        "22": {
+          "name": "47 kOhm x 10pcs"
+        },
+        "23": {
+          "name": "51 kOhm x 10pcs"
+        },
+        "24": {
+          "name": "68 kOhm x 10pcs"
+        },
+        "25": {
+          "name": "100 kOhm x 10pcs"
+        }
+      },
+      "price": {
+        "1": {
+          "stripePriceId": "price_1PDkQqARhMwSarZXquFR9lk5"
+        },
+        "2": {
+          "stripePriceId": "price_1PDkbkARhMwSarZXLST7p3A2"
+        },
+        "3": {
+          "stripePriceId": "price_1PDkd5ARhMwSarZXZxDbrMUe"
+        },
+        "4": {
+          "stripePriceId": "price_1PDke3ARhMwSarZXX2GvhqmP"
+        },
+        "5": {
+          "stripePriceId": "price_1PDkfnARhMwSarZXW3QzI7k8"
+        },
+        "6": {
+          "stripePriceId": "price_1PDkgfARhMwSarZXgc7q35St"
+        },
+        "7": {
+          "stripePriceId": "price_1PDkiaARhMwSarZXW6d7BFjV"
+        },
+        "8": {
+          "stripePriceId": "price_1PDkk0ARhMwSarZXsD3ncOpE"
+        },
+        "9": {
+          "stripePriceId": "price_1PDklJARhMwSarZXS6gN32Yc"
+        },
+        "10": {
+          "stripePriceId": "price_1PDknBARhMwSarZXKEk9aVLi"
+        },
+        "11": {
+          "stripePriceId": "price_1PDkobARhMwSarZXvQWIweqT"
+        },
+        "12": {
+          "stripePriceId": "price_1PDkpqARhMwSarZXtxSeedwX"
+        },
+        "13": {
+          "stripePriceId": "price_1PDkrtARhMwSarZXjcbYhgbz"
+        },
+        "14": {
+          "stripePriceId": "price_1PDktKARhMwSarZXq1BUi3r0"
+        },
+        "15": {
+          "stripePriceId": "price_1PDkuoARhMwSarZXYDbYV8x4"
+        },
+        "16": {
+          "stripePriceId": "price_1PDkw5ARhMwSarZXrgOiXOgH"
+        },
+        "17": {
+          "stripePriceId": "price_1PDkxSARhMwSarZX7Rf4xuRX"
+        },
+        "18": {
+          "stripePriceId": "price_1PDkydARhMwSarZXxG3XQdDu"
+        },
+        "19": {
+          "stripePriceId": "price_1PDkzeARhMwSarZX1rv3dY2n"
+        },
+        "20": {
+          "stripePriceId": "price_1PDl0tARhMwSarZXDGYSRbVE"
+        },
+        "21": {
+          "stripePriceId": "price_1PDl1oARhMwSarZXQTNvSn46"
+        },
+        "22": {
+          "stripePriceId": "price_1PDl2xARhMwSarZX3r5aGucL"
+        },
+        "23": {
+          "stripePriceId": "price_1PDl4FARhMwSarZX5R1o9KRz"
+        },
+        "24": {
+          "stripePriceId": "price_1PDl59ARhMwSarZXzCvZkMAl"
+        },
+        "25": {
+          "stripePriceId": "price_1PDl6IARhMwSarZXcDFMDKiO"
+        }
+      },
+      "images": [
+        {
+          "src": "/photos/Metal-Film-Resistors-0.25W-1.webp",
+          "alt": "Metal Film Resistors 1/4W ±1%"
+        }
+      ],
+      "content": "<p>Metal Film Resistors, 1/4W with an accuracy of ±1%. These precision resistors are designed to deliver consistent and reliable performance for a wide range of electronic applications.</p>"
+    },
+    {
       "stripeProductId": "prod_PtZxJVSgtguXZ7",
       "stripePriceId": "price_1P3mnFARhMwSarZXMVSTwyk8",
       "categoryId": 28,
