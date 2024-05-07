@@ -110,11 +110,15 @@ export const ImageSlider = ({ images, height }: ImageSliderProps) => {
               p: 1,
             }}
           >
-            <Typography variant={'subtitle1'}>{zoomedImage.alt}</Typography>
+            <Typography variant="subtitle1">{zoomedImage.alt}</Typography>
 
             <img
-              src={zoomedImage.src}
-              alt={''}
+              src={
+                zoomedImage.src.startsWith('http')
+                  ? zoomedImage.src
+                  : `/assets/photos/${zoomedImage.src}`
+              }
+              alt={zoomedImage.alt}
               onClick={() => setZoomedImage(null)}
               style={{
                 maxWidth: '100%',

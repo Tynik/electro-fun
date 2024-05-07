@@ -1624,6 +1624,9 @@
     "179": {
       "name": "Package",
       "featSecRefId": 10
+    },
+    "180": {
+      "name": "Max Power Dissipation"
     }
   },
   "items": [

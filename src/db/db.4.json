@@ -451,7 +451,7 @@
       "subtitle": "Accuracy ±1%",
       "seo": {
         "description": "Metal film resistors, 1/4W with an accuracy of ±1%. These precision resistors offer reliable performance for a variety of electronic applications, ensuring accurate voltage and current regulation",
-        "keywords": "metal film resistor, resistor, resistance, 1/4W, 0.25W, ±1% accuracy, current regulation, voltage regulation"
+        "keywords": "metal film resistor, resistor, resistance, 1/4W, 0.25W, 250mW, ±1% accuracy, current regulation, voltage regulation"
       },
       "buy": true,
       "weight": 5,
@@ -531,6 +531,21 @@
         },
         "25": {
           "name": "100 kOhm x 10pcs"
+        },
+        "26": {
+          "name": "220 kOhm x 10pcs"
+        },
+        "27": {
+          "name": "300 kOhm x 10pcs"
+        },
+        "28": {
+          "name": "470 kOhm x 10pcs"
+        },
+        "29": {
+          "name": "680 kOhm x 10pcs"
+        },
+        "30": {
+          "name": "1 MOhm x 10pcs"
         }
       },
       "price": {
@@ -608,12 +623,33 @@
         },
         "25": {
           "stripePriceId": "price_1PDl6IARhMwSarZXcDFMDKiO"
+        },
+        "26": {
+          "stripePriceId": "price_1PDuLcARhMwSarZXcxw2Ha9z"
+        },
+        "27": {
+          "stripePriceId": "price_1PDuN5ARhMwSarZX2aKUEr5l"
+        },
+        "28": {
+          "stripePriceId": "price_1PDuOCARhMwSarZXj0N2ZcBV"
+        },
+        "29": {
+          "stripePriceId": "price_1PDuP4ARhMwSarZXjXQ7EErv"
+        },
+        "30": {
+          "stripePriceId": "price_1PDuPpARhMwSarZXo3regqu2"
         }
       },
       "images": [
         {
           "src": "Metal-Film-Resistors-0.25W-1.webp",
           "alt": "Metal Film Resistors 1/4W ±1%"
+        }
+      ],
+      "features": [
+        {
+          "refId": 180,
+          "value": "1/4W"
         }
       ],
       "content": "<p>Metal Film Resistors, 1/4W with an accuracy of ±1%. These precision resistors are designed to deliver consistent and reliable performance for a wide range of electronic applications.</p>"

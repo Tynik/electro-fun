@@ -1,5 +1,5 @@
 import React from 'react';
-import { SvgIconProps } from '@mui/material';
+import type { SvgIconProps } from '@mui/material';
 import {
   Menu as MenuIcon,
   Dashboard as DashboardIcon,
@@ -8,7 +8,6 @@ import {
   Sensors as SensorsIcon,
   FlashOn as FlashOnIcon,
   Explore as ExploreIcon,
-  CallMerge as CallMergeIcon,
   Wifi as WifiIcon,
   SettingsInputAntenna as SettingsInputAntennaIcon,
   MultipleStop as MultipleStopIcon,
@@ -39,7 +38,14 @@ import {
   Tv as TvIcon,
 } from '@mui/icons-material';
 
-import { ChipIcon, MeasuringTapeIcon, PcbIcon, ResistorIcon, ThreeDPrinterIcon } from '~/icons';
+import {
+  ChipIcon,
+  MeasuringTapeIcon,
+  PcbIcon,
+  ResistorIcon,
+  ThreeDPrinterIcon,
+  TransistorIcon,
+} from '~/icons';
 
 export const getIcon = (name: string, props: SvgIconProps = {}): any => {
   return {
@@ -50,7 +56,6 @@ export const getIcon = (name: string, props: SvgIconProps = {}): any => {
     dashboard: <DashboardIcon {...props} />,
     flash: <FlashOnIcon {...props} />,
     compass: <ExploreIcon {...props} />,
-    transistor: <CallMergeIcon {...props} />,
     wifi: <WifiIcon {...props} />,
     antenna: <SettingsInputAntennaIcon {...props} />,
     convertors: <MultipleStopIcon {...props} />,
@@ -84,5 +89,6 @@ export const getIcon = (name: string, props: SvgIconProps = {}): any => {
     pcb: <PcbIcon {...props} />,
     threeDPrinter: <ThreeDPrinterIcon {...props} />,
     chip: <ChipIcon {...props} />,
+    transistor: <TransistorIcon {...props} />,
   }[name];
 };
