@@ -39,14 +39,15 @@ export const ProductInfoOptions = ({ product }: ProductInfoOptionsProps) => {
   const productOptions = product.options ?? {};
 
   return (
-    <FormControl component={'fieldset'}>
-      <FormLabel component={'legend'}>Options</FormLabel>
+    <FormControl component="fieldset">
+      <FormLabel component="legend">Options</FormLabel>
 
       <RadioGroup
         defaultValue={defaultProductOptionId}
-        aria-label={'option'}
-        name={'radio-buttons-group'}
+        name="radio-buttons-group"
+        row={true}
         onChange={onSelectOption}
+        aria-label="option"
       >
         {Object.keys(productOptions).map(optionId => (
           <FormControlLabel
@@ -58,15 +59,15 @@ export const ProductInfoOptions = ({ product }: ProductInfoOptionsProps) => {
 
                 {productOptionsInBasket[optionId] && (
                   <Chip
-                    size={'small'}
+                    size="small"
                     label={`in cart x${productOptionsInBasket[optionId]}`}
-                    color={'info'}
+                    color="info"
                     sx={{ marginLeft: 1 }}
                   />
                 )}
               </>
             }
-            control={<Radio size={'small'} sx={{ padding: 1 }} />}
+            control={<Radio size="small" sx={{ padding: 1 }} />}
           />
         ))}
       </RadioGroup>

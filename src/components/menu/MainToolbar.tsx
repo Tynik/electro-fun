@@ -51,7 +51,7 @@ const MainToolbar = ({ menuIsOpened, onSearch, onOpenMenu }: ToolbarProps) => {
           ...(menuIsOpened && { display: 'none' }),
         }}
       />
-      <img src={'/images/logo_128.png'} width="64px" />
+      <img src={'/assets/images/logo_128.png'} width="64px" />
 
       <Typography
         variant={'h6'}

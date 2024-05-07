@@ -25,7 +25,7 @@ export const ProductManufacturerMicrodata = ({ product }: ProductManufacturerMic
       {manufacturer.url && <meta itemProp="url" content={manufacturer.url} />}
 
       {manufacturer.logo && (
-        <meta itemProp="logo" content={`${db.siteURL}/logos/${manufacturer.logo}`} />
+        <meta itemProp="logo" content={`${db.siteURL}/assets/logos/${manufacturer.logo}`} />
       )}
     </div>
   );

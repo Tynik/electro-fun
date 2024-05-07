@@ -37,9 +37,7 @@ export type ImageSliderProps = {
   height: string;
 };
 
-export const ImageSlider = (props: ImageSliderProps) => {
-  const { images, height } = props;
-
+export const ImageSlider = ({ images, height }: ImageSliderProps) => {
   const theme = useTheme();
 
   const [inLoading, setInLoading] = React.useState(images.length);
@@ -83,7 +81,7 @@ export const ImageSlider = (props: ImageSliderProps) => {
             onClick={() => onImageClick(image, index)}
           >
             <CImage
-              src={image.src}
+              src={image.src.startsWith('http') ? image.src : `/assets/photos/${image.src}`}
               alt={image.alt}
               description={image.description}
               style={{

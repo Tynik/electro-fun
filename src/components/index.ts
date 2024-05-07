@@ -3,7 +3,7 @@ export * from './Loader';
 export * from './BackButton';
 export * from './Breadcrumbs';
 export * from './BreadcrumbItem';
-export * from './Items';
+export * from './ProductsList';
 export * from './Category';
 export * from './DatasheetsList';
 export * from './CImage';

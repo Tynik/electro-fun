@@ -16,11 +16,11 @@
       "content": "<p>The adjustable and fixed voltage regulators of the AMS1117 series are designed to provide an output current of up to 1A and operate up to 1V between inputs and outputs. The device's dropout voltage is guaranteed to be as low as 1.3V at maximum output current and decreases at lower load currents.\n\nOn-chip trimming adjusts the reference voltage to within 1%. Current limit is also trimmed, minimizing the stress on both the regulator and the power source circuitry under overload conditions.\n\nAMS1117 devices are pin-compatible with other 3-pin SCSI regulators and are offered in a low-profile SOT-223 surface-mount package, SOIC 8L package, and a plastic TO-252 (DPAK) package.</p>",
       "images": [
         {
-          "src": "/photos/AMS1117-3.3V-1.webp",
+          "src": "AMS1117-3.3V-1.webp",
           "alt": "AMS1117 3.3V - Exterior View"
         },
         {
-          "src": "/photos/AMS1117-3.3V-2.webp",
+          "src": "AMS1117-3.3V-2.webp",
           "alt": "AMS1117 3.3V - Connection Diagram"
         }
       ],
@@ -61,27 +61,27 @@
       "manufacturerId": "5",
       "images": [
         {
-          "src": "/photos/MOC3021-SOP6-1.webp",
+          "src": "MOC3021-SOP6-1.webp",
           "alt": "MOC3021 SOP6 - Exterior View",
           "optionId": "1"
         },
         {
-          "src": "/photos/MOC3021-DIP6-1.webp",
+          "src": "MOC3021-DIP6-1.webp",
           "alt": "MOC3021 DIP6 - Exterior View",
           "optionId": "2"
         },
         {
-          "src": "/photos/MOC3021-SOP6-2.webp",
+          "src": "MOC3021-SOP6-2.webp",
           "alt": "MOC3021 SOP6 - Package",
           "optionId": "1"
         },
         {
-          "src": "/photos/MOC3021-DIP6-2.webp",
+          "src": "MOC3021-DIP6-2.webp",
           "alt": "MOC3021 DIP6 - Package",
           "optionId": "2"
         },
         {
-          "src": "/photos/MOC3021-3.webp",
+          "src": "MOC3021-3.webp",
           "alt": "MOC3021 - Connection Diagram"
         }
       ],
@@ -165,11 +165,11 @@
       "manufacturerId": "2",
       "images": [
         {
-          "src": "/photos/HLK-PM01-1.webp",
+          "src": "HLK-PM01-1.webp",
           "alt": "HLK-PM01 - Top view"
         },
         {
-          "src": "/photos/HLK-PM01-2.webp",
+          "src": "HLK-PM01-2.webp",
           "alt": "HLK-PM01 - Bottom view"
         }
       ],
@@ -234,11 +234,11 @@
       "weight": 15,
       "images": [
         {
-          "src": "/photos/AC-CT-0-100A-1.webp",
+          "src": "AC-CT-0-100A-1.webp",
           "alt": "AC-CT 0-100A - Exterior View"
         },
         {
-          "src": "/photos/AC-CT-0-100A-2.webp",
+          "src": "AC-CT-0-100A-2.webp",
           "alt": "AC-CT 0-100A - Example of Use"
         }
       ],
@@ -268,19 +268,19 @@
       "warningContent": "<p>The voltage on the input/output pins or the input/output selection pins should not exceed the power supply voltage of the circuit.</p>",
       "images": [
         {
-          "src": "/photos/74HC4051-1.webp",
+          "src": "74HC4051-1.webp",
           "alt": "74HC4051 - Top View"
         },
         {
-          "src": "/photos/74HC4051-2.webp",
+          "src": "74HC4051-2.webp",
           "alt": "74HC4051 - Bottom View"
         },
         {
-          "src": "/photos/74HC4051-3.webp",
+          "src": "74HC4051-3.webp",
           "alt": "74HC4051 - Truth Table"
         },
         {
-          "src": "/photos/74HC4051-4.webp",
+          "src": "74HC4051-4.webp",
           "alt": "74HC4051 - Input/Output Description"
         }
       ],
@@ -352,22 +352,22 @@
       },
       "images": [
         {
-          "src": "/photos/copper-wire-0.9-10m.webp",
+          "src": "copper-wire-0.9-10m.webp",
           "alt": "Copper Wire 0.9mm / 10m",
           "optionId": "1"
         },
         {
-          "src": "/photos/copper-wire-0.2-20m.webp",
+          "src": "copper-wire-0.2-20m.webp",
           "alt": "Copper Wire 0.2mm / 20m",
           "optionId": "2"
         },
         {
-          "src": "/photos/copper-wire-0.5-10m.webp",
+          "src": "copper-wire-0.5-10m.webp",
           "alt": "Copper Wire 0.5mm / 10m",
           "optionId": "3"
         },
         {
-          "src": "/photos/copper-wire-0.6-10m.webp",
+          "src": "copper-wire-0.6-10m.webp",
           "alt": "Copper Wire 0.6mm / 10m",
           "optionId": "4"
         }
@@ -408,7 +408,7 @@
       },
       "images": [
         {
-          "src": "/photos/Thermal-insulation-tape-1.webp",
+          "src": "Thermal-insulation-tape-1.webp",
           "alt": "Polyimide Tape - Exterior View",
           "optionId": "1"
         }
@@ -470,15 +470,15 @@
       },
       "images": [
         {
-          "src": "/photos/ZVS-capacitor-charging-1.webp",
+          "src": "ZVS-capacitor-charging-1.webp",
           "alt": "ZVS - Top View"
         },
         {
-          "src": "/photos/ZVS-capacitor-charging-2.webp",
+          "src": "ZVS-capacitor-charging-2.webp",
           "alt": "ZVS - Bottom View"
         },
         {
-          "src": "/photos/ZVS-capacitor-charging-3.webp",
+          "src": "ZVS-capacitor-charging-3.webp",
           "alt": "ZVS - Dimensions and Connection Description"
         }
       ],
@@ -577,23 +577,23 @@
       ],
       "images": [
         {
-          "src": "/photos/PCI-E-raiser-009S-1.webp",
+          "src": "PCI-E-raiser-009S-1.webp",
           "alt": "PCI-E Riser 009S - Complete Set"
         },
         {
-          "src": "/photos/PCI-E-raiser-009S-2.webp",
+          "src": "PCI-E-raiser-009S-2.webp",
           "alt": "PCI-E Riser 009S - Riser"
         },
         {
-          "src": "/photos/PCI-E-raiser-009S-3.webp",
+          "src": "PCI-E-raiser-009S-3.webp",
           "alt": "PCI-E Riser 009S - PCI-E 16x Adapter"
         },
         {
-          "src": "/photos/PCI-E-raiser-009S-4.webp",
+          "src": "PCI-E-raiser-009S-4.webp",
           "alt": "PCI-E Riser 009S - USB 3.0 Cable"
         },
         {
-          "src": "/photos/PCI-E-raiser-009S-5.webp",
+          "src": "PCI-E-raiser-009S-5.webp",
           "alt": "PCI-E Riser 009S - SATA Cable 15 to 6 Contacts"
         }
       ],
@@ -619,15 +619,15 @@
       "datasheetId": "PMS5003",
       "images": [
         {
-          "src": "/photos/PM2.5-1.webp",
+          "src": "PM2.5-1.webp",
           "alt": "PM2.5"
         },
         {
-          "src": "/photos/PM2.5-2.webp",
+          "src": "PM2.5-2.webp",
           "alt": "PM2.5"
         },
         {
-          "src": "/photos/PM2.5-3.webp",
+          "src": "PM2.5-3.webp",
           "alt": "PM2.5"
         }
       ],
@@ -697,11 +697,11 @@
       "datasheetId": "ADS101x",
       "images": [
         {
-          "src": "/photos/ADS1015-1.webp",
+          "src": "ADS1015-1.webp",
           "alt": "ADS1015 - top view"
         },
         {
-          "src": "/photos/ADS1015-2.webp",
+          "src": "ADS1015-2.webp",
           "alt": "ADS1015 - bottom view"
         }
       ],
@@ -808,27 +808,27 @@
       ],
       "images": [
         {
-          "src": "/photos/MCP2515-module-1.webp",
+          "src": "MCP2515-module-1.webp",
           "alt": "MCP2515 Module - top view"
         },
         {
-          "src": "/photos/MCP2515-module-2.webp",
+          "src": "MCP2515-module-2.webp",
           "alt": "MCP2515 Module - side view"
         },
         {
-          "src": "/photos/MCP2515-module-3.webp",
+          "src": "MCP2515-module-3.webp",
           "alt": "MCP2515 Module - side view"
         },
         {
-          "src": "/photos/MCP2515-module-4.webp",
+          "src": "MCP2515-module-4.webp",
           "alt": "MCP2515 Module - bottom view"
         },
         {
-          "src": "/photos/MCP2515-module-5.webp",
+          "src": "MCP2515-module-5.webp",
           "alt": "MCP2515 Module - module schematic"
         },
         {
-          "src": "/photos/MCP2515-module-6.webp",
+          "src": "MCP2515-module-6.webp",
           "alt": "MCP2515 Module - OBDII pinout"
         }
       ],
@@ -852,11 +852,11 @@
       "content": "<p>The MCP2551 is a high-speed fault-tolerant CAN device that serves as an interface between the CAN protocol controller and the physical bus.</p>",
       "images": [
         {
-          "src": "/photos/MCP2551-module-1.webp",
+          "src": "MCP2551-module-1.webp",
           "alt": "MCP2551 Module - top view 1"
         },
         {
-          "src": "/photos/MCP2551-module-2.webp",
+          "src": "MCP2551-module-2.webp",
           "alt": "MCP2551 Module - top view 2"
         }
       ],
@@ -909,17 +909,17 @@
       "content": "<p>SIM800H & SIM800L - 4-band GSM/GPRS module operating on GSM850MHz, EGSM900MHz, DCS1800MHz, and PCS1900MHz frequencies.<p/>",
       "images": [
         {
-          "src": "/photos/SIM800L-module-1.webp",
+          "src": "SIM800L-module-1.webp",
           "alt": "SIM800L Module - top view",
           "optionId": "1"
         },
         {
-          "src": "/photos/SIM800L-module-2.webp",
+          "src": "SIM800L-module-2.webp",
           "alt": "SIM800L Module - bottom view",
           "optionId": "1"
         },
         {
-          "src": "/photos/SIM800H-module-1.webp",
+          "src": "SIM800H-module-1.webp",
           "alt": "SIM800H Chip - top/bottom view",
           "optionId": "2"
         }

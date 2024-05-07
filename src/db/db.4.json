@@ -16,11 +16,11 @@
       "content": "<p>The set includes 140 jumper wires (14 types) of various colors: red, green, yellow, orange, gray, white, blue) and sizes: 2, 5, 7, 10, 12, 15, 17, 20, 22, 25, 50, 75, 100, 125mm.</p>",
       "images": [
         {
-          "src": "/photos/breadboard-jumpers-140-1.webp",
+          "src": "breadboard-jumpers-140-1.webp",
           "alt": "Jumper Wire Set - open box"
         },
         {
-          "src": "/photos/breadboard-jumpers-140-2.webp",
+          "src": "breadboard-jumpers-140-2.webp",
           "alt": "Jumper Wire Set - closed box"
         }
       ],
@@ -102,11 +102,11 @@
       ],
       "images": [
         {
-          "src": "/photos/THAT1512-1.webp",
+          "src": "THAT1512-1.webp",
           "alt": "THAT1512 - DIP8"
         },
         {
-          "src": "/photos/THAT1512-2.webp",
+          "src": "THAT1512-2.webp",
           "alt": "THAT1512 - PINs"
         }
       ],
@@ -182,11 +182,11 @@
       ],
       "images": [
         {
-          "src": "/photos/Hi-Link-A0515S-2WR3-1.webp",
+          "src": "Hi-Link-A0515S-2WR3-1.webp",
           "alt": "Hi-Link A0515S-2WR3"
         },
         {
-          "src": "/photos/Hi-Link-A0515S-2WR3-2.webp",
+          "src": "Hi-Link-A0515S-2WR3-2.webp",
           "alt": "Hi-Link A0515S-2WR3 - Circuit"
         }
       ],
@@ -230,11 +230,11 @@
       ],
       "images": [
         {
-          "src": "/photos/WeAct-USB-Logic-Analyzer-1.webp",
+          "src": "WeAct-USB-Logic-Analyzer-1.webp",
           "alt": "WeAct USB Logic Analyzer"
         },
         {
-          "src": "/photos/WeAct-USB-Logic-Analyzer-2.webp",
+          "src": "WeAct-USB-Logic-Analyzer-2.webp",
           "alt": "WeAct USB Logic Analyzer - Package"
         }
       ],
@@ -287,15 +287,15 @@
       ],
       "images": [
         {
-          "src": "/photos/CH224K-USB-PD-Sink-Controller-1.webp",
+          "src": "CH224K-USB-PD-Sink-Controller-1.webp",
           "alt": "CH224K"
         },
         {
-          "src": "/photos/CH224K-USB-PD-Sink-Controller-2.webp",
+          "src": "CH224K-USB-PD-Sink-Controller-2.webp",
           "alt": "CH224K - Pinouts"
         },
         {
-          "src": "/photos/CH224K-USB-PD-Sink-Controller-3.webp",
+          "src": "CH224K-USB-PD-Sink-Controller-3.webp",
           "alt": "CH224K - Connect with USB Type-C"
         }
       ],
@@ -397,7 +397,7 @@
       ],
       "images": [
         {
-          "src": "/photos/Development-Board-Kit-CH32V003-32-bit-RISC-V-1.webp",
+          "src": "Development-Board-Kit-CH32V003-32-bit-RISC-V-1.webp",
           "alt": "Development Board Kit CH32V003 32-bit RISC-V"
         }
       ],
@@ -612,7 +612,7 @@
       },
       "images": [
         {
-          "src": "/photos/Metal-Film-Resistors-0.25W-1.webp",
+          "src": "Metal-Film-Resistors-0.25W-1.webp",
           "alt": "Metal Film Resistors 1/4W ±1%"
         }
       ],
@@ -643,15 +643,15 @@
       ],
       "images": [
         {
-          "src": "/photos/PCB-THAT1512-mic-preamp-1.webp",
+          "src": "PCB-THAT1512-mic-preamp-1.webp",
           "alt": "PCB - Top view"
         },
         {
-          "src": "/photos/PCB-THAT1512-mic-preamp-2.webp",
+          "src": "PCB-THAT1512-mic-preamp-2.webp",
           "alt": "PCB - Bottom view"
         },
         {
-          "src": "/photos/PCB-THAT1512-mic-preamp-3.webp",
+          "src": "PCB-THAT1512-mic-preamp-3.webp",
           "alt": "PCB - Circuit"
         }
       ],

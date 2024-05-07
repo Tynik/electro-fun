@@ -36,7 +36,7 @@ export const ProductMicrodata = ({ product, stripeProduct }: ProductMicrodataPro
       ))}
 
       {product.features?.map(feature => (
-        <ProductFeatureMicrodata key={feature.refId} feature={feature} />
+        <ProductFeatureMicrodata key={`${feature.refId}-${feature.optionId}`} feature={feature} />
       ))}
 
       {(product.contributors || []).map(contributor => (

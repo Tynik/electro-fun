@@ -799,7 +799,7 @@
     {
       "id": 13,
       "name": "Measuring Instruments",
-      "icon": "measure"
+      "icon": "measuringTape"
     },
     {
       "id": 14,
@@ -850,7 +850,7 @@
     {
       "id": 24,
       "name": "3D Printer Accessories",
-      "icon": "apps"
+      "icon": "threeDPrinter"
     },
     {
       "id": 26,
@@ -861,17 +861,17 @@
     {
       "id": 27,
       "name": "Chips",
-      "icon": "apps"
+      "icon": "chip"
     },
     {
       "id": 28,
       "name": "PCB",
-      "icon": "apps"
+      "icon": "pcb"
     },
     {
       "id": 29,
       "name": "Resistors",
-      "icon": "apps"
+      "icon": "resistor"
     }
   ],
   "featureSections": {
@@ -2090,7 +2090,7 @@
       "weight": 25,
       "images": [
         {
-          "src": "/photos/TEC1-12715-1.webp",
+          "src": "TEC1-12715-1.webp",
           "alt": "TEC1-12715"
         }
       ],
@@ -2136,19 +2136,19 @@
       "datasheetId": "BHI260AP",
       "images": [
         {
-          "src": "/photos/BHI260AP-1.webp",
+          "src": "BHI260AP-1.webp",
           "alt": "BHI260AP"
         },
         {
-          "src": "/photos/BHI260AP-2.webp",
+          "src": "BHI260AP-2.webp",
           "alt": "BHI260AP Contact Pads"
         },
         {
-          "src": "/photos/BHI260AP-3.webp",
+          "src": "BHI260AP-3.webp",
           "alt": "BHI260AP Pinout"
         },
         {
-          "src": "/photos/BHI260AP-4.webp",
+          "src": "BHI260AP-4.webp",
           "alt": "BHI260AP Diagram"
         }
       ],
@@ -2253,11 +2253,11 @@
           "alt": "nRF24L01+ - Dimensions"
         },
         {
-          "src": "/photos/nRF24L01+-1.webp",
+          "src": "nRF24L01+-1.webp",
           "alt": "nRF24L01+ - Block Diagram"
         },
         {
-          "src": "/photos/nRF24L01+-2.webp",
+          "src": "nRF24L01+-2.webp",
           "alt": "nRF24L01+ - Connection Example"
         }
       ],
@@ -2301,15 +2301,15 @@
       "datasheetId": "ESP8266EX",
       "images": [
         {
-          "src": "/photos/ESP8266EX-1.webp",
+          "src": "ESP8266EX-1.webp",
           "alt": "ESP8266EX"
         },
         {
-          "src": "/photos/ESP8266EX-2.webp",
+          "src": "ESP8266EX-2.webp",
           "alt": "ESP8266EX - Block Diagram"
         },
         {
-          "src": "/photos/ESP8266EX-3.webp",
+          "src": "ESP8266EX-3.webp",
           "alt": "ESP8266EX - Pinout"
         }
       ],
@@ -2385,23 +2385,23 @@
       "datasheetId": "CC1310",
       "images": [
         {
-          "src": "/photos/CC1310-1.webp",
+          "src": "CC1310-1.webp",
           "alt": "CC1310 - 5 x 5mm RHB"
         },
         {
-          "src": "/photos/CC1310-2.webp",
+          "src": "CC1310-2.webp",
           "alt": "CC1310 - Block Diagram"
         },
         {
-          "src": "/photos/CC1310-3.webp",
+          "src": "CC1310-3.webp",
           "alt": "CC1310 - 4 x 4mm RSM Pinout"
         },
         {
-          "src": "/photos/CC1310-4.webp",
+          "src": "CC1310-4.webp",
           "alt": "CC1310 - 5 x 5mm RHB Pinout"
         },
         {
-          "src": "/photos/CC1310-5.webp",
+          "src": "CC1310-5.webp",
           "alt": "CC1310 - 7 x 7mm RGZ Pinout"
         }
       ],
@@ -2481,19 +2481,19 @@
       "datasheetId": "CC2652P",
       "images": [
         {
-          "src": "/photos/CC2652P-1.webp",
+          "src": "CC2652P-1.webp",
           "alt": "CC2652P - RGZ 48 7 x 7mm"
         },
         {
-          "src": "/photos/CC2652P-2.webp",
+          "src": "CC2652P-2.webp",
           "alt": "CC2652P - block diagram"
         },
         {
-          "src": "/photos/CC2652P-3.webp",
+          "src": "CC2652P-3.webp",
           "alt": "CC2652P - pinout RGZ 7 x 7mm"
         },
         {
-          "src": "/photos/CC2652P-4.webp",
+          "src": "CC2652P-4.webp",
           "alt": "CC2652P - family overview"
         }
       ],
@@ -2621,7 +2621,7 @@
       },
       "images": [
         {
-          "src": "/photos/CH340G-1.webp",
+          "src": "CH340G-1.webp",
           "alt": "CH340G"
         }
       ],
@@ -2693,7 +2693,7 @@
       "manufacturerId": "6",
       "images": [
         {
-          "src": "/photos/IRF3205PbF-1.webp",
+          "src": "IRF3205PbF-1.webp",
           "alt": "IRF3205 - MOSFET up to 55V and 110A"
         }
       ],
@@ -2799,19 +2799,19 @@
       "content": "<p>Professional 14-piece tweezers set made of stainless steel with excellent quality for various needs.</p><p>The anti-static coating provides superior protection against electrostatic discharge.</p>",
       "images": [
         {
-          "src": "/photos/tweezers-set-14-1.webp",
+          "src": "tweezers-set-14-1.webp",
           "alt": "14-Piece Tweezers Set - Exterior View with Case"
         },
         {
-          "src": "/photos/tweezers-set-14-2.webp",
+          "src": "tweezers-set-14-2.webp",
           "alt": "14-Piece Tweezers Set"
         },
         {
-          "src": "/photos/tweezers-set-14-3.webp",
+          "src": "tweezers-set-14-3.webp",
           "alt": "14-Piece Tweezers Set"
         },
         {
-          "src": "/photos/tweezers-set-14-4.webp",
+          "src": "tweezers-set-14-4.webp",
           "alt": "14-Piece Tweezers Set"
         }
       ],

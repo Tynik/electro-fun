@@ -16,7 +16,6 @@ import {
   Description as DescriptionIcon,
   Keyboard as KeyboardIcon,
   WbTwilight as WbTwilightIcon,
-  Speed as SpeedIcon,
   Security as SecurityIcon,
   Apps as AppsIcon,
   DoubleArrow as DoubleArrowIcon,
@@ -40,6 +39,8 @@ import {
   Tv as TvIcon,
 } from '@mui/icons-material';
 
+import { ChipIcon, MeasuringTapeIcon, PcbIcon, ResistorIcon, ThreeDPrinterIcon } from '~/icons';
+
 export const getIcon = (name: string, props: SvgIconProps = {}): any => {
   return {
     menu: <MenuIcon {...props} />,
@@ -57,7 +58,6 @@ export const getIcon = (name: string, props: SvgIconProps = {}): any => {
     document: <DescriptionIcon {...props} />,
     keyboard: <KeyboardIcon {...props} />,
     led: <WbTwilightIcon {...props} />,
-    measure: <SpeedIcon {...props} />,
     fuse: <SecurityIcon {...props} />,
     apps: <AppsIcon {...props} />,
     doubleArrow: <DoubleArrowIcon {...props} />,
@@ -79,5 +79,10 @@ export const getIcon = (name: string, props: SvgIconProps = {}): any => {
     starHalf: <StarHalfIcon {...props} />,
     fluorescent: <FluorescentIcon {...props} />,
     tv: <TvIcon {...props} />,
+    resistor: <ResistorIcon {...props} />,
+    measuringTape: <MeasuringTapeIcon {...props} />,
+    pcb: <PcbIcon {...props} />,
+    threeDPrinter: <ThreeDPrinterIcon {...props} />,
+    chip: <ChipIcon {...props} />,
   }[name];
 };

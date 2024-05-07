@@ -27,7 +27,7 @@ export const ProductInfoExternalLinks = ({ externalLinks }: ProductInfoExternalL
                 }}
               >
                 <img
-                  src={`/icons/${externalResource.icon}`}
+                  src={`/assets/icons/${externalResource.icon}`}
                   alt={externalResource.iconAlt}
                   title={externalResource.iconAlt}
                   width={16}

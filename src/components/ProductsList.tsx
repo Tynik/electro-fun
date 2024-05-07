@@ -9,11 +9,14 @@ import { DbContext } from '~/providers';
 import { NO_IMAGE } from '~/constants';
 import { CCardMedia } from '~/components';
 
-export const getProductMainImageSrc = (item: Product) => {
+const getProductMainImageSrc = (item: Product) => {
   if (!item.images || !item.images.length) {
     return NO_IMAGE;
   }
-  return item.images[0].src;
+
+  const mainImageSrc = item.images[0].src;
+
+  return mainImageSrc.startsWith('http') ? mainImageSrc : `/assets/photos/${mainImageSrc}`;
 };
 
 export type ProductsListProps = {
@@ -32,9 +35,9 @@ export const ProductsList = ({ products }: ProductsListProps) => {
   };
 
   return (
-    <Grid role={'list'} spacing={2} justifyContent={'center'} container>
+    <Grid role="list" spacing={2} justifyContent="center" container>
       {products.map(item => (
-        <Grid key={item.id} role={'listitem'} sx={{ maxWidth: '345px', width: '100%' }} item>
+        <Grid key={item.id} role="listitem" sx={{ maxWidth: '345px', width: '100%' }} item>
           <Card
             sx={{ width: '100%' }}
             onKeyDown={e => onItemKeyDown(`/item/${item.id}`, e)}

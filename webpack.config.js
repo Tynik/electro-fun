@@ -74,24 +74,8 @@ module.exports = {
           to: 'db',
         },
         {
-          from: 'src/photos',
-          to: 'photos',
-        },
-        {
-          from: 'src/logos',
-          to: 'logos',
-        },
-        {
-          from: 'src/images',
-          to: 'images',
-        },
-        {
-          from: 'src/icons',
-          to: 'icons',
-        },
-        {
-          from: 'src/datasheets',
-          to: 'assets/datasheets',
+          from: 'src/assets',
+          to: 'assets',
         },
       ],
     }),
