@@ -860,12 +860,12 @@
     },
     {
       "id": 27,
-      "name": "Chips",
+      "name": "ICs",
       "icon": "chip"
     },
     {
       "id": 28,
-      "name": "PCB",
+      "name": "PCBs",
       "icon": "pcb"
     },
     {

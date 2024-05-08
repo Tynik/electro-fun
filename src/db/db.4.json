@@ -340,14 +340,100 @@
       ]
     },
     {
+      "stripeProductId": "prod_Q4QQ6SEGJ1qOo6",
+      "categoryId": 27,
+      "title": "CH32V003",
+      "subtitle": "General-purpose MCU 32-bit RISC-V",
+      "seo": {
+        "description": "",
+        "keywords": "CH32V003, CH32V003J4M6, SOP8, 32-bit, general-purpose, MCU, RISC-V"
+      },
+      "buy": true,
+      "weight": 2,
+      "manufacturerId": "19",
+      "datasheetId": "CH32V003",
+      "features": [
+        {
+          "refId": 20,
+          "value": 6,
+          "optionId": "1"
+        },
+        {
+          "refId": 50,
+          "value": "QingKe 32-bit RISC-V2A"
+        },
+        {
+          "refId": 53,
+          "value": "48MHz"
+        },
+        {
+          "refId": 54,
+          "value": "16KB"
+        },
+        {
+          "refId": 60,
+          "value": "2KB"
+        },
+        {
+          "refId": 135,
+          "value": "10-bit"
+        },
+        {
+          "refId": 179,
+          "value": "SOP8",
+          "optionId": "1"
+        }
+      ],
+      "options": {
+        "1": {
+          "name": "CH32V003J4M6 - SOP8",
+          "default": true
+        }
+      },
+      "price": {
+        "1": {
+          "stripePriceId": "price_1PEHZSARhMwSarZX1Eusdd9e"
+        }
+      },
+      "images": [
+        {
+          "src": "CH32V003J4M6-SOP8-1.webp",
+          "alt": "CH32V003J4M6 - MCU 32-bit RISC-V (SOP8)"
+        }
+      ],
+      "externalLinks": [
+        {
+          "name": "Official page CH32V003",
+          "url": "https://www.wch-ic.com/products/CH32V003.html",
+          "lang": "en",
+          "icon": "wch-ic.com.ico",
+          "iconAlt": "www.wch-ic.com"
+        },
+        {
+          "name": "Github project with everything for CH32V003",
+          "url": "https://github.com/openwch/ch32v003",
+          "lang": "en",
+          "icon": "github.com.svg",
+          "iconAlt": "github.com"
+        },
+        {
+          "name": "Open source development environment for CH32V003",
+          "url": "https://github.com/cnlohr/ch32v003fun",
+          "lang": "en",
+          "icon": "github.com.svg",
+          "iconAlt": "github.com"
+        }
+      ]
+    },
+    {
       "stripeProductId": "prod_Q1zZ2ZC3EKCIUQ",
       "stripePriceId": "price_1PBvanARhMwSarZXLnoRLJl8",
       "categoryId": 23,
       "title": "Development Board Kit CH32V003",
-      "subtitle": "32-bit RISC-V",
+      "subtitle": "General-purpose MCU 32-bit RISC-V",
       "seo": {
         "description": "Explore the CH32V003 Evaluation Development Board Kit, featuring the CH32V003F4P6 board, WCH-LinkE interface, and five CH32V003F4P6 chips in TSSOP20 packaging. Ideal for prototyping and testing, this kit offers a comprehensive platform for evaluating the capabilities of the CH32V003 microcontroller",
-        "keywords": "CH32V003, CH32V003F4P6, WCH-LinkE, development-board, prototyping"
+        "keywords": "CH32V003, CH32V003F4P6, WCH-LinkE, development-board, prototyping, general-purpose, MCU, RISC-V"
       },
       "buy": true,
       "weight": 50,
