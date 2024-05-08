@@ -70,7 +70,11 @@ export const BasketProduct = ({ product, stripeProduct, optionId }: BasketProduc
       >
         <RouterLink to={`/item/${product.id}`}>
           <img
-            src={productImage.src}
+            src={
+              productImage.src.startsWith('http')
+                ? productImage.src
+                : `/assets/photos/${productImage.src}`
+            }
             alt={productImage.alt}
             style={{ objectFit: 'cover', height: '100%', maxWidth: '80px', maxHeight: '70px' }}
           />
@@ -96,7 +100,7 @@ export const BasketProduct = ({ product, stripeProduct, optionId }: BasketProduc
             )}
           </Typography>
 
-          <Typography variant={'body2'} display={{ xs: 'none', sm: 'block' }}>
+          <Typography variant="body2" display={{ xs: 'none', sm: 'block' }}>
             {product.subtitle}
           </Typography>
         </Box>
