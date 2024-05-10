@@ -39,6 +39,7 @@ import {
 } from '@mui/icons-material';
 
 import {
+  CapacitorIcon,
   ChipIcon,
   InductorIcon,
   MeasuringTapeIcon,
@@ -92,5 +93,6 @@ export const getIcon = (name: string, props: SvgIconProps = {}): any => {
     chip: <ChipIcon {...props} />,
     transistor: <TransistorIcon {...props} />,
     inductor: <InductorIcon {...props} />,
+    capacitor: <CapacitorIcon {...props} />,
   }[name];
 };

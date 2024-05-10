@@ -793,7 +793,7 @@
     },
     {
       "id": 12,
-      "name": "LED",
+      "name": "LEDs",
       "icon": "led"
     },
     {
@@ -877,6 +877,11 @@
       "id": 30,
       "name": "Inductors",
       "icon": "inductor"
+    },
+    {
+      "id": 31,
+      "name": "Capacitors",
+      "icon": "capacitor"
     }
   ],
   "featureSections": {

@@ -1,20 +1,18 @@
 import React from 'react';
+import type { Nullable } from '~/types';
 
-export type useSeoOptions = {
-  title: string
-  description?: string
-  keywords?: string
-}
+export type UseSeoOptions = {
+  title: string;
+  description?: string;
+  keywords?: string;
+};
 
-export const useSeo = (options: useSeoOptions | null) => {
+export const useSeo = (options: Nullable<UseSeoOptions>) => {
   React.useEffect(() => {
     if (options === null) {
       return;
     }
-    let originalDocumentTitle,
-      originalDescription,
-      originalKeywords,
-      meta;
+    let originalDocumentTitle, originalDescription, originalKeywords, meta;
 
     originalDocumentTitle = document.title;
 
@@ -40,4 +38,4 @@ export const useSeo = (options: useSeoOptions | null) => {
       }
     };
   }, [options]);
-}
+};

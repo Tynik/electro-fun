@@ -8,13 +8,13 @@ import { getIcon } from '~/utils';
 import { useCategory } from '~/hooks';
 
 export type ProductInfoHeaderProps = {
-  item: Product;
+  product: Product;
 };
 
-export const ProductInfoHeader = ({ item }: ProductInfoHeaderProps) => {
+export const ProductInfoHeader = ({ product }: ProductInfoHeaderProps) => {
   const theme = useTheme();
 
-  const category = useCategory(item.categoryId);
+  const category = useCategory(product.categoryId);
   if (!category) {
     return null;
   }
@@ -28,43 +28,44 @@ export const ProductInfoHeader = ({ item }: ProductInfoHeaderProps) => {
           itemScope
         >
           <Typography
-            variant={'subtitle1'}
-            itemProp={'itemListElement'}
-            itemType={'https://schema.org/ListItem'}
+            variant="subtitle1"
+            itemProp="itemListElement"
+            itemType="https://schema.org/ListItem"
             itemScope
           >
             <InternalLink
-              underline={'hover'}
+              underline="hover"
               startIcon={getIcon(category.icon)}
               endIcon={getIcon('doubleArrow')}
               to={`/category/${category.id}`}
-              itemProp={'item'}
+              itemProp="item"
             >
-              <span itemProp={'name'}>{category.name}</span>
+              <span itemProp="name">{category.name}</span>
             </InternalLink>
-            <meta itemProp={'position'} content={'1'} />
+
+            <meta itemProp="position" content="1" />
           </Typography>
 
           <Typography
-            variant={'h5'}
-            role={'heading'}
+            variant="h5"
+            role="heading"
             aria-level={1}
             sx={{ marginLeft: theme.spacing(1) }}
-            itemProp={'itemListElement'}
-            itemType={'https://schema.org/ListItem'}
+            itemProp="itemListElement"
+            itemType="https://schema.org/ListItem"
             itemScope
           >
-            <span itemProp={'name'}>{item.title}</span>
+            <span itemProp="name">{product.title}</span>
 
-            <meta itemProp={'position'} content={'2'} />
+            <meta itemProp="position" content="2" />
           </Typography>
         </Box>
 
-        {item.original === false && (
+        {product.original === false && (
           <Chip
-            size={'small'}
-            label={'not original'}
-            color={'info'}
+            size="small"
+            label="not original"
+            color="info"
             sx={{ marginLeft: theme.spacing(1) }}
           />
         )}
@@ -81,12 +82,12 @@ export const ProductInfoHeader = ({ item }: ProductInfoHeaderProps) => {
       {/*)}*/}
 
       <Typography
-        variant={'subtitle1'}
-        role={'heading'}
+        variant="subtitle1"
+        role="heading"
         aria-level={2}
         sx={{ marginLeft: theme.spacing(3) }}
       >
-        {item.subtitle}
+        {product.subtitle}
       </Typography>
     </>
   );

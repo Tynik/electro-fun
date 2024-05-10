@@ -398,7 +398,8 @@
       "images": [
         {
           "src": "CH32V003J4M6-SOP8-1.webp",
-          "alt": "CH32V003J4M6 - MCU 32-bit RISC-V (SOP8)"
+          "alt": "CH32V003J4M6 - MCU 32-bit RISC-V (SOP8)",
+          "optionId": "1"
         }
       ],
       "externalLinks": [
@@ -575,6 +576,84 @@
         }
       ],
       "content": "<p>Elevate your electronic designs with the Power Inductor CD54, a crucial component for efficient power management. Whether you're designing power supplies, DC-DC converters, or voltage regulators, this inductor ensures stable and reliable power delivery. With its ability to store energy, filter out noise, and regulate voltage levels, the CD54 is indispensable for achieving optimal performance in your circuits.</p><p><strong>Filtering and Smoothing:</strong> Inductors are commonly used in conjunction with capacitors to form low-pass, high-pass, or band-pass filters. These filters remove unwanted frequencies or noise from signals, ensuring a smoother and cleaner output.</p><p><strong>Energy Storage:</strong> Inductors store energy in the form of a magnetic field when current flows through them. This stored energy can be released when the current decreases, acting as a source of energy for the circuit and smoothing out voltage fluctuations.</p><p><strong>DC-DC Conversion:</strong> Inductors play a crucial role in DC-DC converters by storing and transferring energy efficiently. They help regulate voltage levels, step up or step down voltage, and improve power conversion efficiency.</p><p><strong>Impedance Matching:</strong> Inductors are used in impedance matching circuits to ensure maximum power transfer between components, especially in RF circuits and antenna systems.</p><p><strong>Magnetic Coupling:</strong> Inductors can be used in transformers to transfer energy from one circuit to another while maintaining electrical isolation. This is commonly used in power distribution systems and voltage regulation.</p>"
+    },
+    {
+      "stripeProductId": "prod_Q4cjWSr5eWA3Dx",
+      "categoryId": 31,
+      "title": "SMD Ceramic Capacitors 0805",
+      "subtitle": "36 Values",
+      "seo": {
+        "description": "SMD Ceramic Capacitors 0805 for compact and reliable electronic circuitry. Ideal for a range of applications, these capacitors offer stability and performance in a small form factor.",
+        "keywords": "ceramic capacitor, capacitor, 0805, SMD"
+      },
+      "buy": true,
+      "weight": 2,
+      "options": {
+        "1": {
+          "name": "1 pF x 10pcs",
+          "default": true
+        },
+        "2": {
+          "name": "4.7 pF x 10pcs"
+        },
+        "3": {
+          "name": "6.8 pF x 10pcs"
+        },
+        "4": {
+          "name": "10 pF x 10pcs"
+        },
+        "5": {
+          "name": "15 pF x 10pcs"
+        },
+        "6": {
+          "name": "18 pF x 10pcs"
+        },
+        "7": {
+          "name": "20 pF x 10pcs"
+        },
+        "8": {
+          "name": "22 pF x 10pcs"
+        }
+      },
+      "price": {
+        "1": {
+          "stripePriceId": "price_1PETUCARhMwSarZXl5zCoA4n"
+        },
+        "2": {
+          "stripePriceId": "price_1PEpdYARhMwSarZXs2KZwYFU"
+        },
+        "3": {
+          "stripePriceId": "price_1PEpfSARhMwSarZX9f2GRRal"
+        },
+        "4": {
+          "stripePriceId": "price_1PEpgUARhMwSarZXktyPN01s"
+        },
+        "5": {
+          "stripePriceId": "price_1PEphJARhMwSarZXbjnudvl5"
+        },
+        "6": {
+          "stripePriceId": "price_1PEpiDARhMwSarZXduZvVPMo"
+        },
+        "7": {
+          "stripePriceId": "price_1PEpj0ARhMwSarZX3LP9EX80"
+        },
+        "8": {
+          "stripePriceId": "price_1PEpk2ARhMwSarZX7Nzlk4wj"
+        }
+      },
+      "images": [
+        {
+          "src": "SMD-Ceramic-Capacitors-0805-1.webp",
+          "alt": "SMD Ceramic Capacitors 0805"
+        }
+      ],
+      "features": [
+        {
+          "refId": 42,
+          "value": "0805"
+        }
+      ],
+      "content": "<p>SMD Ceramic Capacitors 0805 are essential components in modern electronic circuitry. With their small size and surface-mount design, they are ideal for compact and densely populated PCB layouts. These capacitors provide excellent stability, high capacitance density, and low parasitic effects, making them suitable for a wide range of applications, including decoupling, filtering, timing, and bypassing. Whether you're prototyping a new circuit or designing a production-ready PCB, SMD Ceramic Capacitors 0805 offer reliability and performance in a compact form factor.</p>"
     },
     {
       "stripeProductId": "prod_Q3sBnV4uUML5wT",
@@ -784,7 +863,7 @@
           "value": "1/4W"
         }
       ],
-      "content": "<p>Metal Film Resistors, 1/4W with an accuracy of ±1%. These precision resistors are designed to deliver consistent and reliable performance for a wide range of electronic applications.</p>"
+      "content": "<p>Metal Film Resistors, 1/4W with an accuracy of ±1%, are indispensable components in electronic circuits. These precision resistors ensure consistent and reliable performance by precisely regulating voltage and current levels. Whether used for voltage dividers, signal processing circuits, or audio amplifiers, these resistors play a crucial role in maintaining the integrity and stability of electronic systems. Their compact size and compatibility with popular prototyping platforms like breadboards and development boards make them an excellent choice for rapid prototyping and experimentation.</p>"
     },
     {
       "stripeProductId": "prod_PtZxJVSgtguXZ7",

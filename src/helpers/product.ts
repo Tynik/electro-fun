@@ -94,7 +94,6 @@ export const matchProductWithSearch = (
     manufacturerIds: ManufacturerId[];
   },
 ): boolean => {
-  // show all items by default if nothing was passed
   let isProductMatched = true;
 
   if (searchKeywords && searchKeywords.length) {
@@ -105,9 +104,11 @@ export const matchProductWithSearch = (
       manufacturerIds,
     );
   }
+
   if (isProductMatched && categoryId) {
     isProductMatched &&= product.categoryId === categoryId;
   }
+
   return isProductMatched;
 };
 

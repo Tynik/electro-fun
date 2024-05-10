@@ -41,8 +41,8 @@ export type ProductFeature = {
 };
 
 export type ProductImage = {
-  alt: string;
   src: string;
+  alt: string;
   description?: string;
   optionId?: string;
 };

@@ -73,18 +73,18 @@ export const ProductInfoPage = () => {
       </Grid>
 
       <Grid xs={12} item>
-        <ProductInfoHeader item={product} />
+        <ProductInfoHeader product={product} />
       </Grid>
 
       <Grid xs={12} md={6} item>
         <ImageSlider images={images} height="300px" />
 
         {product.content && (
-          <Box component={'main'} marginTop={theme.spacing(2)}>
-            <Typography variant={'overline'}>Description</Typography>
+          <Box component="main" marginTop={theme.spacing(2)}>
+            <Typography variant="overline">Description</Typography>
 
             <Typography
-              variant={'body1'}
+              variant="body1"
               sx={{ whiteSpace: 'pre-line', textAlign: 'justify' }}
               dangerouslySetInnerHTML={{ __html: product.content }}
             />

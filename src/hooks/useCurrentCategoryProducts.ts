@@ -15,5 +15,8 @@ export const useCurrentCategoryProducts = () => {
     }
   }, [category]);
 
-  return { category, foundProducts };
+  return {
+    category,
+    foundProducts,
+  };
 };

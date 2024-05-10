@@ -36,7 +36,10 @@ export const SearchResultsPage = ({
       {foundProducts !== null &&
         !foundProducts.length &&
         (!foundDatasheets || !Object.keys(foundDatasheets).length) && (
-          <Alert severity="info">Nothing was found</Alert>
+          <Alert severity="info">
+            Sorry, we couldn't find any results matching your search criteria. Please try again with
+            different keywords or check back later for updates.
+          </Alert>
         )}
 
       <Box sx={{ marginTop: 2 }}>
