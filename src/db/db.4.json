@@ -628,6 +628,75 @@
         },
         "13": {
           "name": "100 pF x 20pcs"
+        },
+        "14": {
+          "name": "150 pF x 20pcs"
+        },
+        "15": {
+          "name": "180 pF x 20pcs"
+        },
+        "16": {
+          "name": "220 pF x 20pcs"
+        },
+        "17": {
+          "name": "330 pF x 20pcs"
+        },
+        "18": {
+          "name": "470 pF x 20pcs"
+        },
+        "19": {
+          "name": "680 pF x 20pcs"
+        },
+        "20": {
+          "name": "1 nF x 20pcs"
+        },
+        "21": {
+          "name": "2.2 nF x 20pcs"
+        },
+        "22": {
+          "name": "3.3 nF x 20pcs"
+        },
+        "23": {
+          "name": "4.7 nF x 20pcs"
+        },
+        "24": {
+          "name": "10 nF x 20pcs"
+        },
+        "25": {
+          "name": "22 nF x 20pcs"
+        },
+        "26": {
+          "name": "33 nF x 20pcs"
+        },
+        "27": {
+          "name": "47 nF x 20pcs"
+        },
+        "28": {
+          "name": "68 nF x 20pcs"
+        },
+        "29": {
+          "name": "100 nF x 20pcs"
+        },
+        "30": {
+          "name": "220 nF x 20pcs"
+        },
+        "31": {
+          "name": "330 nF x 20pcs"
+        },
+        "32": {
+          "name": "470 nF x 20pcs"
+        },
+        "33": {
+          "name": "1 uF x 20pcs"
+        },
+        "34": {
+          "name": "2.2 uF x 20pcs"
+        },
+        "35": {
+          "name": "4.7 uF x 20pcs"
+        },
+        "36": {
+          "name": "10 uF x 20pcs"
         }
       },
       "price": {
@@ -669,6 +738,75 @@
         },
         "13": {
           "stripePriceId": "price_1PEwFMARhMwSarZXIR7yKowf"
+        },
+        "14": {
+          "stripePriceId": "price_1PEwcMARhMwSarZXsHoqXZjl"
+        },
+        "15": {
+          "stripePriceId": "price_1PEwd4ARhMwSarZXtohHyELq"
+        },
+        "16": {
+          "stripePriceId": "price_1PEwduARhMwSarZXCXiiAS77"
+        },
+        "17": {
+          "stripePriceId": "price_1PEwegARhMwSarZXre13KPPC"
+        },
+        "18": {
+          "stripePriceId": "price_1PEwfiARhMwSarZXjUjsV3pe"
+        },
+        "19": {
+          "stripePriceId": "price_1PEwhCARhMwSarZXLXdzD28C"
+        },
+        "20": {
+          "stripePriceId": "price_1PEwiDARhMwSarZXeaWiGEDI"
+        },
+        "21": {
+          "stripePriceId": "price_1PEwjGARhMwSarZXHhDgf1yC"
+        },
+        "22": {
+          "stripePriceId": "price_1PEwjzARhMwSarZXRMUyAzF2"
+        },
+        "23": {
+          "stripePriceId": "price_1PEwlNARhMwSarZXZVVik03j"
+        },
+        "24": {
+          "stripePriceId": "price_1PEwmTARhMwSarZXHocJRGAa"
+        },
+        "25": {
+          "stripePriceId": "price_1PEwnLARhMwSarZXP6hxbUsF"
+        },
+        "26": {
+          "stripePriceId": "price_1PEwo8ARhMwSarZXORRVn6PF"
+        },
+        "27": {
+          "stripePriceId": "price_1PEwqcARhMwSarZXMil5GhhL"
+        },
+        "28": {
+          "stripePriceId": "price_1PEwrRARhMwSarZXjZvDrfQ3"
+        },
+        "29": {
+          "stripePriceId": "price_1PEwsDARhMwSarZXi7ym0qdg"
+        },
+        "30": {
+          "stripePriceId": "price_1PEwt8ARhMwSarZXCogMTJtL"
+        },
+        "31": {
+          "stripePriceId": "price_1PEwtzARhMwSarZXG9BYkLsC"
+        },
+        "32": {
+          "stripePriceId": "price_1PEwuiARhMwSarZX0ZlY3opW"
+        },
+        "33": {
+          "stripePriceId": "price_1PEwvlARhMwSarZXfVBOko4j"
+        },
+        "34": {
+          "stripePriceId": "price_1PEwwNARhMwSarZXX32oZsCQ"
+        },
+        "35": {
+          "stripePriceId": "price_1PEwxHARhMwSarZX6zUqv133"
+        },
+        "36": {
+          "stripePriceId": "price_1PEwxvARhMwSarZX4DPjCtoC"
         }
       },
       "images": [
