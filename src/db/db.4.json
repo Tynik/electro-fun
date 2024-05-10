@@ -590,29 +590,44 @@
       "weight": 2,
       "options": {
         "1": {
-          "name": "1 pF x 10pcs",
+          "name": "1 pF x 20pcs",
           "default": true
         },
         "2": {
-          "name": "4.7 pF x 10pcs"
+          "name": "4.7 pF x 20pcs"
         },
         "3": {
-          "name": "6.8 pF x 10pcs"
+          "name": "6.8 pF x 20pcs"
         },
         "4": {
-          "name": "10 pF x 10pcs"
+          "name": "10 pF x 20pcs"
         },
         "5": {
-          "name": "15 pF x 10pcs"
+          "name": "15 pF x 20pcs"
         },
         "6": {
-          "name": "18 pF x 10pcs"
+          "name": "18 pF x 20pcs"
         },
         "7": {
-          "name": "20 pF x 10pcs"
+          "name": "20 pF x 20pcs"
         },
         "8": {
-          "name": "22 pF x 10pcs"
+          "name": "22 pF x 20pcs"
+        },
+        "9": {
+          "name": "30 pF x 20pcs"
+        },
+        "10": {
+          "name": "33 pF x 20pcs"
+        },
+        "11": {
+          "name": "47 pF x 20pcs"
+        },
+        "12": {
+          "name": "68 pF x 20pcs"
+        },
+        "13": {
+          "name": "100 pF x 20pcs"
         }
       },
       "price": {
@@ -639,6 +654,21 @@
         },
         "8": {
           "stripePriceId": "price_1PEpk2ARhMwSarZX7Nzlk4wj"
+        },
+        "9": {
+          "stripePriceId": "price_1PEw5mARhMwSarZX8sj1Z8zk"
+        },
+        "10": {
+          "stripePriceId": "price_1PEw6nARhMwSarZXrGWZvbJU"
+        },
+        "11": {
+          "stripePriceId": "price_1PEw7wARhMwSarZXD73Pu2Hh"
+        },
+        "12": {
+          "stripePriceId": "price_1PEw8tARhMwSarZXay1SbWfb"
+        },
+        "13": {
+          "stripePriceId": "price_1PEwFMARhMwSarZXIR7yKowf"
         }
       },
       "images": [
@@ -668,95 +698,95 @@
       "weight": 2,
       "options": {
         "1": {
-          "name": "10 Ohm x 10pcs",
+          "name": "10 Ohm x 20pcs",
           "default": true
         },
         "2": {
-          "name": "22 Ohm x 10pcs"
+          "name": "22 Ohm x 20pcs"
         },
         "3": {
-          "name": "47 Ohm x 10pcs"
+          "name": "47 Ohm x 20pcs"
         },
         "4": {
-          "name": "100 Ohm x 10pcs"
+          "name": "100 Ohm x 20pcs"
         },
         "5": {
-          "name": "150 Ohm x 10pcs"
+          "name": "150 Ohm x 20pcs"
         },
         "6": {
-          "name": "200 Ohm x 10pcs"
+          "name": "200 Ohm x 20pcs"
         },
         "7": {
-          "name": "220 Ohm x 10pcs"
+          "name": "220 Ohm x 20pcs"
         },
         "8": {
-          "name": "270 Ohm x 10pcs"
+          "name": "270 Ohm x 20pcs"
         },
         "9": {
-          "name": "330 Ohm x 10pcs"
+          "name": "330 Ohm x 20pcs"
         },
         "10": {
-          "name": "470 Ohm x 10pcs"
+          "name": "470 Ohm x 20pcs"
         },
         "11": {
-          "name": "510 Ohm x 10pcs"
+          "name": "510 Ohm x 20pcs"
         },
         "12": {
-          "name": "680 Ohm x 10pcs"
+          "name": "680 Ohm x 20pcs"
         },
         "13": {
-          "name": "1 kOhm x 10pcs"
+          "name": "1 kOhm x 20pcs"
         },
         "14": {
-          "name": "2 kOhm x 10pcs"
+          "name": "2 kOhm x 20pcs"
         },
         "15": {
-          "name": "2.2 kOhm x 10pcs"
+          "name": "2.2 kOhm x 20pcs"
         },
         "16": {
-          "name": "3.3 kOhm x 10pcs"
+          "name": "3.3 kOhm x 20pcs"
         },
         "17": {
-          "name": "4.7 kOhm x 10pcs"
+          "name": "4.7 kOhm x 20pcs"
         },
         "18": {
-          "name": "5.1 kOhm x 10pcs"
+          "name": "5.1 kOhm x 20pcs"
         },
         "19": {
-          "name": "6.8 kOhm x 10pcs"
+          "name": "6.8 kOhm x 20pcs"
         },
         "20": {
-          "name": "10 kOhm x 10pcs"
+          "name": "10 kOhm x 20pcs"
         },
         "21": {
-          "name": "20 kOhm x 10pcs"
+          "name": "20 kOhm x 20pcs"
         },
         "22": {
-          "name": "47 kOhm x 10pcs"
+          "name": "47 kOhm x 20pcs"
         },
         "23": {
-          "name": "51 kOhm x 10pcs"
+          "name": "51 kOhm x 20pcs"
         },
         "24": {
-          "name": "68 kOhm x 10pcs"
+          "name": "68 kOhm x 20pcs"
         },
         "25": {
-          "name": "100 kOhm x 10pcs"
+          "name": "100 kOhm x 20pcs"
         },
         "26": {
-          "name": "220 kOhm x 10pcs"
+          "name": "220 kOhm x 20pcs"
         },
         "27": {
-          "name": "300 kOhm x 10pcs"
+          "name": "300 kOhm x 20pcs"
         },
         "28": {
-          "name": "470 kOhm x 10pcs"
+          "name": "470 kOhm x 20pcs"
         },
         "29": {
-          "name": "680 kOhm x 10pcs"
+          "name": "680 kOhm x 20pcs"
         },
         "30": {
-          "name": "1 MOhm x 10pcs"
+          "name": "1 MOhm x 20pcs"
         }
       },
       "price": {
