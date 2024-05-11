@@ -1004,6 +1004,15 @@
       "content": "<p>The OLED I²C Display Module 128x32 SSD1306 is a specific variant of OLED display module that utilizes the SSD1306 driver IC.</p><p>The display module is driven by the SSD1306 controller IC, which is a popular choice for OLED displays due to its versatility, reliability, and extensive community support. The SSD1306 controller offers features such as display RAM, built-in charge pump, and I²C communication interface.</p><p>OLED technology offers several advantages, including high contrast ratios, wide viewing angles, and low power consumption. The OLED display produces vibrant colors and deep blacks, resulting in excellent image quality.</p><p>The display module communicates with the host microcontroller or system using the I²C (Inter-Integrated Circuit) interface. This standard serial communication protocol allows for easy integration and control of the display module with minimal wiring and hardware requirements.</p><p>With its compact size, the OLED display module is suitable for space-constrained applications where a smaller footprint is desired. It can be easily integrated into various electronic devices, including wearable gadgets, IoT devices, and handheld instruments.</p><p>OLED displays offer wide viewing angles, ensuring clear visibility from different perspectives. This feature makes the display module suitable for applications where multiple users may view the screen from various angles.</p><p>OLED technology consumes less power compared to traditional LCD screens, making it ideal for battery-powered devices and applications where energy efficiency is critical.</p><p>The OLED I²C Display Module 128x32 SSD1306 is suitable for a wide range of applications, including wearable devices, smartwatches, fitness trackers, IoT sensors, electronic instrumentation, and portable gadgets.</p>",
       "relatedDatasheetIds": [
         "SSD1306"
+      ],
+      "externalLinks": [
+        {
+          "name": "Adafruit library for OLEDs based on SSD1306 drivers",
+          "url": "https://github.com/adafruit/Adafruit_SSD1306",
+          "lang": "en",
+          "icon": "github.com.svg",
+          "iconAlt": "github.com"
+        }
       ]
     },
     {

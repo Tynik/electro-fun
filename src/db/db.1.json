@@ -644,7 +644,12 @@
       "lang": "en"
     },
     "SSD1306": {
-      "lang": "en"
+      "lang": "en",
+      "keywords": [
+        "OLED",
+        "PLED",
+        "display-driver"
+      ]
     },
     "LM2596": {
       "lang": "en"
@@ -1722,7 +1727,7 @@
     },
     {
       "stripeProductId": "prod_OCUx258nVbZ0Ua",
-      "stripePriceId": "price_1NQ5xzARhMwSarZXhmGQXjAM",
+      "stripePriceId": "price_1PFKj3ARhMwSarZXnreh0UUO",
       "categoryId": 18,
       "title": "BMP280",
       "subtitle": "Sensor for temperature measurement, etc.",
