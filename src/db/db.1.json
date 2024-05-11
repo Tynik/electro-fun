@@ -1684,19 +1684,19 @@
       "datasheetId": "LM2596",
       "images": [
         {
-          "src": "https://images.izi.ua/83859610",
+          "src": "LM2596s-DC-DC-3A-1.webp",
           "alt": "LM2596s"
         },
         {
-          "src": "https://images.izi.ua/83859871",
+          "src": "LM2596s-DC-DC-3A-2.webp",
           "alt": "LM2596s"
         },
         {
-          "src": "https://images.izi.ua/83859870",
+          "src": "LM2596s-DC-DC-3A-3.webp",
           "alt": "LM2596s"
         },
         {
-          "src": "https://images.izi.ua/83859609",
+          "src": "LM2596s-DC-DC-3A-4.webp",
           "alt": "LM2596s"
         }
       ],
@@ -1741,11 +1741,11 @@
       "datasheetId": "BMP280",
       "images": [
         {
-          "src": "https://images.izi.ua/84778923",
+          "src": "BMP280-1.webp",
           "alt": "BMP280 - Top View"
         },
         {
-          "src": "https://images.izi.ua/84778922",
+          "src": "BMP280-2.webp",
           "alt": "BMP280 - Bottom View"
         }
       ],
@@ -1824,16 +1824,16 @@
       "companyUrl": "https://invensense.tdk.com",
       "images": [
         {
-          "src": "https://images.izi.ua/29881771",
+          "src": "MPU-9250-1.webp",
           "alt": "MPU-9250"
         },
         {
-          "src": "https://images.izi.ua/29881770",
+          "src": "MPU-9250-2.webp",
           "alt": "MPU-9250"
         },
         {
-          "src": "https://images.izi.ua/29886022",
-          "alt": "MPU-9250"
+          "src": "MPU-9250-3.webp",
+          "alt": "MPU-9250 - Circuit"
         }
       ],
       "content": "<p>MPU-9250 is a 9-axis motion tracking device that combines a 3-axis gyroscope, a 3-axis accelerometer, a 3-axis magnetometer, and a Digital Motion Processor™ (DMP), all in a small 3x3x1mm package, available as a pin-compatible upgrade from the MPU-6515.</p><p>With its dedicated I²C sensor bus, the MPU-9250 directly provides full 9-axis MotionFusion™ output. The MPU-9250 motion tracking device with its 9-axis integration, built-in MotionFusion™ engine, and runtime calibration firmware enables manufacturers to eliminate the costly and complex selection, qualification, and system level integration of discrete devices in motion-enabled products.</p>",
@@ -1909,15 +1909,15 @@
       "datasheetId": "CCS811",
       "images": [
         {
-          "src": "https://images.izi.ua/54929459",
+          "src": "CCS811-1.webp",
           "alt": "CCS811"
         },
         {
-          "src": "https://images.izi.ua/54929458",
+          "src": "CCS811-2.webp",
           "alt": "CCS811"
         },
         {
-          "src": "https://images.izi.ua/54929353",
+          "src": "CCS811-3.webp",
           "alt": "CCS811"
         }
       ],
@@ -1954,13 +1954,6 @@
       ],
       "externalLinks": [
         {
-          "name": "Official CCS811 Page",
-          "url": "https://www.sciosense.com/products/environmental-sensors/ccs811-gas-sensor-solution/",
-          "lang": "en",
-          "icon": "sciosense.com.png",
-          "iconAlt": "sciosense.com"
-        },
-        {
           "name": "ESPHome CCS811 CO2 and Volatile Organic Compound Sensor Component",
           "url": "https://esphome.io/components/sensor/ccs811.html",
           "lang": "en",
@@ -1984,26 +1977,26 @@
       "subtitle": "RGB Color Sensor and Gesture Recognition",
       "seo": {
         "description": "APDS-9960 RGB color sensor and gesture recognition",
-        "keywords": "sensor, gestures, rgb, recognition, i2c"
+        "keywords": "APDS-9960, sensor, gestures, RGB, recognition, I2C"
       },
       "buy": true,
       "weight": 5,
       "datasheetId": "APDS-9960",
       "images": [
         {
-          "src": "https://images.izi.ua/25804439",
+          "src": "APDS-9960-1.webp",
           "alt": "APDS-9960"
         },
         {
-          "src": "https://images.izi.ua/25804442",
+          "src": "APDS-9960-2.webp",
           "alt": "APDS-9960"
         },
         {
-          "src": "https://images.izi.ua/25804441",
+          "src": "APDS-9960-3.webp",
           "alt": "APDS-9960"
         },
         {
-          "src": "https://images.izi.ua/25804440",
+          "src": "APDS-9960-4.webp",
           "alt": "APDS-9960"
         }
       ],
