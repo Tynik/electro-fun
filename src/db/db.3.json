@@ -887,16 +887,75 @@
       ]
     },
     {
+      "stripeProductId": "prod_Q5Q2uNoVvlLBVd",
+      "categoryId": 19,
+      "title": "SMT USB 3.1 12-pin Type-C Connector",
+      "subtitle": "Double-sided female",
+      "seo": {
+        "description": "Discover the SMT USB 3.1 Type-C Connector – a compact, high-speed solution for modern devices. Enjoy effortless connectivity and rapid data transfer with its reversible Type-C interface.",
+        "keywords": "SMT, USB, USB-C, Type-C, connector, 12-pin, 12PIN, female, double-sided, fast-charging, data-transfer"
+      },
+      "buy": true,
+      "weight": 2,
+      "options": {
+        "1": {
+          "name": "Black",
+          "default": true
+        }
+      },
+      "price": {
+        "1": {
+          "stripePriceId": "price_1PFFCLARhMwSarZXh0lM0QNW"
+        }
+      },
+      "images": [
+        {
+          "src": "SMT-USB-Type-C-Connector-Black-1.webp",
+          "alt": "SMT USB Type-C Connector - Black",
+          "optionId": "1"
+        },
+        {
+          "src": "SMT-USB-Type-C-Connector-2.webp",
+          "alt": "SMT USB Type-C Connector - 24PIN"
+        },
+        {
+          "src": "SMT-USB-Type-C-Connector-3.webp",
+          "alt": "SMT USB Type-C Connector - EasyEDA Circuit"
+        }
+      ],
+      "features": [
+        {
+          "refId": 183,
+          "value": 12
+        },
+        {
+          "refId": 184,
+          "value": "Type-C"
+        }
+      ],
+      "content": "<p>Introducing the SMT USB 3.1 Type-C Connector, a versatile and high-performance solution designed to meet the demands of modern connectivity. Engineered for Surface Mount Technology (SMT) applications, this connector offers seamless integration into electronic devices, ensuring a compact and efficient design.</p><p><h5>12-Pin Configuration</h5>Unlike the standard Type-C connector, which typically has 24 pins, the Type-C 12-pin variant features a reduced pin count optimized for specific functionalities or form factors.</p><p><h5>USB 3.1 Compatibility</h5>This connector supports the USB 3.1 standard, providing high-speed data transfer rates of up to 10 Gbps. It enables fast file transfers and efficient device charging.</p>"
+    },
+    {
       "stripeProductId": "prod_OCfE4cIIwSTBOc",
       "categoryId": 18,
       "title": "SIM800",
       "subtitle": "GSM/GPRS 850/900/1800/1900MHz",
+      "manufacturerId": "11",
       "seo": {
         "description": "SIM800 - GSM/GPRS module operating on GSM850MHz, EGSM900MHz, DCS1800MHz, and PCS1900MHz frequencies",
         "keywords": "sim, sim800, sim800l, gsm, gprs, ttl, module"
       },
       "buy": true,
       "weight": 15,
+      "options": {
+        "1": {
+          "name": "SIM800L Module",
+          "default": true
+        },
+        "2": {
+          "name": "SIM800H"
+        }
+      },
       "price": {
         "1": {
           "stripePriceId": "price_1NQFu1ARhMwSarZX34TzO0E1"
@@ -905,8 +964,6 @@
           "stripePriceId": "price_1P5BgkARhMwSarZXHw3L4EqI"
         }
       },
-      "manufacturerId": "11",
-      "content": "<p>SIM800H & SIM800L - 4-band GSM/GPRS module operating on GSM850MHz, EGSM900MHz, DCS1800MHz, and PCS1900MHz frequencies.<p/>",
       "images": [
         {
           "src": "SIM800L-module-1.webp",
@@ -924,15 +981,6 @@
           "optionId": "2"
         }
       ],
-      "options": {
-        "1": {
-          "name": "SIM800L Module",
-          "default": true
-        },
-        "2": {
-          "name": "SIM800H"
-        }
-      },
       "features": [
         {
           "refId": 24,
@@ -953,6 +1001,7 @@
           "optionId": "2"
         }
       ],
+      "content": "<p>SIM800H & SIM800L - 4-band GSM/GPRS module operating on GSM850MHz, EGSM900MHz, DCS1800MHz, and PCS1900MHz frequencies.<p/>",
       "applicationIds": [
         "1",
         "2",

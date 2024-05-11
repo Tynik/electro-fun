@@ -1643,6 +1643,12 @@
     },
     "182": {
       "name": "IDC"
+    },
+    "183": {
+      "name": "PIN(s)"
+    },
+    "184": {
+      "name": "Form Factor"
     }
   },
   "items": [
