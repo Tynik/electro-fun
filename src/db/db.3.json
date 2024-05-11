@@ -936,6 +936,77 @@
       "content": "<p>Introducing the SMT USB 3.1 Type-C Connector, a versatile and high-performance solution designed to meet the demands of modern connectivity. Engineered for Surface Mount Technology (SMT) applications, this connector offers seamless integration into electronic devices, ensuring a compact and efficient design.</p><p><h5>12-Pin Configuration</h5>Unlike the standard Type-C connector, which typically has 24 pins, the Type-C 12-pin variant features a reduced pin count optimized for specific functionalities or form factors.</p><p><h5>USB 3.1 Compatibility</h5>This connector supports the USB 3.1 standard, providing high-speed data transfer rates of up to 10 Gbps. It enables fast file transfers and efficient device charging.</p>"
     },
     {
+      "stripeProductId": "prod_Q5Qlywt2DDlFXm",
+      "categoryId": 15,
+      "title": "OLED I²C Display Module 128x32",
+      "subtitle": "Driver SSD1306",
+      "seo": {
+        "description": "Discover the OLED I²C Display Module 128x32 SSD1306 – a compact, high-quality display solution for various electronic projects. Featuring OLED technology, SSD1306 driver IC, and I²C communication interface.",
+        "keywords": "OLED, display module, arduino, IIC, I2C, 128x32, compact, SSD1306"
+      },
+      "images": [
+        {
+          "src": "OLED-I2C-Display-Module-128x32-0.91-inch-1.webp",
+          "alt": "OLED I²C Display Module 128x32 - White",
+          "optionId": "1"
+        },
+        {
+          "src": "OLED-I2C-Display-Module-128x32-0.91-inch-2.webp",
+          "alt": "OLED I²C Display Module 128x32 - Blue",
+          "optionId": "2"
+        },
+        {
+          "src": "OLED-I2C-Display-Module-128x32-0.91-inch-3.webp",
+          "alt": "OLED I²C Display Module 128x32 - Bottom side"
+        }
+      ],
+      "buy": true,
+      "weight": 15,
+      "features": [
+        {
+          "refId": 13,
+          "value": "3.3 - 5V"
+        },
+        {
+          "refId": 156,
+          "value": "0.91''"
+        },
+        {
+          "refId": 157,
+          "value": "128 x 32"
+        },
+        {
+          "refId": 159,
+          "value": "SSD1306"
+        },
+        {
+          "refId": 185,
+          "value": "I²C"
+        }
+      ],
+      "options": {
+        "1": {
+          "name": "White",
+          "default": true
+        },
+        "2": {
+          "name": "Blue"
+        }
+      },
+      "price": {
+        "1": {
+          "stripePriceId": "price_1PFFu4ARhMwSarZXlX7ooXm8"
+        },
+        "2": {
+          "stripePriceId": "price_1PFFv4ARhMwSarZX1P2Ph4vJ"
+        }
+      },
+      "content": "<p>The OLED I²C Display Module 128x32 SSD1306 is a specific variant of OLED display module that utilizes the SSD1306 driver IC.</p><p>The display module is driven by the SSD1306 controller IC, which is a popular choice for OLED displays due to its versatility, reliability, and extensive community support. The SSD1306 controller offers features such as display RAM, built-in charge pump, and I²C communication interface.</p><p>OLED technology offers several advantages, including high contrast ratios, wide viewing angles, and low power consumption. The OLED display produces vibrant colors and deep blacks, resulting in excellent image quality.</p><p>The display module communicates with the host microcontroller or system using the I²C (Inter-Integrated Circuit) interface. This standard serial communication protocol allows for easy integration and control of the display module with minimal wiring and hardware requirements.</p><p>With its compact size, the OLED display module is suitable for space-constrained applications where a smaller footprint is desired. It can be easily integrated into various electronic devices, including wearable gadgets, IoT devices, and handheld instruments.</p><p>OLED displays offer wide viewing angles, ensuring clear visibility from different perspectives. This feature makes the display module suitable for applications where multiple users may view the screen from various angles.</p><p>OLED technology consumes less power compared to traditional LCD screens, making it ideal for battery-powered devices and applications where energy efficiency is critical.</p><p>The OLED I²C Display Module 128x32 SSD1306 is suitable for a wide range of applications, including wearable devices, smartwatches, fitness trackers, IoT sensors, electronic instrumentation, and portable gadgets.</p>",
+      "relatedDatasheetIds": [
+        "SSD1306"
+      ]
+    },
+    {
       "stripeProductId": "prod_OCfE4cIIwSTBOc",
       "categoryId": 18,
       "title": "SIM800",

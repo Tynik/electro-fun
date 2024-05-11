@@ -643,6 +643,9 @@
     "LP5036": {
       "lang": "en"
     },
+    "SSD1306": {
+      "lang": "en"
+    },
     "LM2596": {
       "lang": "en"
     },
@@ -806,6 +809,11 @@
       "name": "Fuses",
       "icon": "fuse",
       "visible": false
+    },
+    {
+      "id": 15,
+      "name": "Displays",
+      "icon": "apps"
     },
     {
       "id": 16,
@@ -1649,6 +1657,10 @@
     },
     "184": {
       "name": "Form Factor"
+    },
+    "185": {
+      "name": "Interface",
+      "featSecRefId": 17
     }
   },
   "items": [

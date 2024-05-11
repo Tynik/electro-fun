@@ -432,7 +432,7 @@
       "subtitle": "DevKit",
       "seo": {
         "description": "LoLin NodeMCU ESP8266 V3",
-        "keywords": "nodemcu, esp8266, esp-12e, devkit, arduino, wifi, iot, i2c, spi, uart, pwm, adc, espressif",
+        "keywords": "nodemcu, esp8266, ESP-12E, devkit, arduino, WIFI, IOT, I2C, SPI, UART, PWM, ADC, espressif",
         "measurement": "4MB"
       },
       "buy": true,
