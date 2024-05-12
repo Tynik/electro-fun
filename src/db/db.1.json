@@ -239,6 +239,17 @@
     }
   },
   "datasheets": {
+    "Nichicon_ES": {
+      "lang": "en",
+      "keywords": [
+        "electrolytic capacitor",
+        "capacitor",
+        "bi-polarized",
+        "nichicon",
+        "MUSE",
+        "audio"
+      ]
+    },
     "CH32V00x-Evaluation-Board-Reference": {
       "lang": "en",
       "manufacturerId": "19",
@@ -818,11 +829,6 @@
     {
       "id": 15,
       "name": "Displays",
-      "icon": "apps"
-    },
-    {
-      "id": 16,
-      "name": "Stabilizers",
       "icon": "apps"
     },
     {
@@ -2152,7 +2158,7 @@
         },
         {
           "refId": 33,
-          "value": "0.75Ω"
+          "value": "0.75Ohm"
         }
       ],
       "content": "",
@@ -2176,15 +2182,15 @@
         },
         {
           "src": "BHI260AP-2.webp",
-          "alt": "BHI260AP Contact Pads"
+          "alt": "BHI260AP - Contact Pads"
         },
         {
           "src": "BHI260AP-3.webp",
-          "alt": "BHI260AP Pinout"
+          "alt": "BHI260AP - Pinout"
         },
         {
           "src": "BHI260AP-4.webp",
-          "alt": "BHI260AP Diagram"
+          "alt": "BHI260AP - Diagram"
         }
       ],
       "features": [
@@ -2205,15 +2211,15 @@
         },
         {
           "refId": 34,
-          "value": "249µA"
+          "value": "249uA"
         },
         {
           "refId": 35,
-          "value": "386µA"
+          "value": "386uA"
         },
         {
           "refId": 36,
-          "value": "8µA"
+          "value": "8uA"
         },
         {
           "refId": 16,
@@ -2307,11 +2313,11 @@
         },
         {
           "refId": 29,
-          "value": "26µA - Standby-I"
+          "value": "26uA - Standby-I"
         },
         {
           "refId": 29,
-          "value": "320µA - Standby-II"
+          "value": "320uA - Standby-II"
         }
       ],
       "content": "<p>nRF24L01+ is a single-chip 2.4 GHz transceiver with a built-in Enhanced ShockBurst™ protocol engine, suitable for ultra-low-power wireless applications.\n\nnRF24L01+ is designed to operate in the worldwide ISM frequency band from 2.4 to 2.4835 GHz.</p>",
@@ -2479,7 +2485,7 @@
         },
         {
           "refId": 36,
-          "value": "0.7µA"
+          "value": "0.7uA"
         },
         {
           "refId": 56,
@@ -2560,7 +2566,7 @@
         },
         {
           "refId": 36,
-          "value": "0.94μA (including RTC, 80KB RAM, and CPU retention)"
+          "value": "0.94uA (including RTC, 80KB RAM, and CPU retention)"
         },
         {
           "refId": 54,
@@ -2794,7 +2800,7 @@
           "value": "55V",
           "info": [
             "V<sub>GS</sub> = 0V",
-            "I<sub>D</sub> = 250µA"
+            "I<sub>D</sub> = 250uA"
           ]
         },
         {
@@ -2802,7 +2808,7 @@
           "value": "2 - 4V",
           "info": [
             "V<sub>DS</sub> = V<sub>GS</sub>",
-            "I<sub>D</sub> = 250µA"
+            "I<sub>D</sub> = 250uA"
           ]
         }
       ],

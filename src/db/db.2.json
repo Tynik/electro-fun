@@ -189,7 +189,7 @@
         },
         {
           "refId": 36,
-          "value": "0.94μA (including RTC, 80KB RAM, and CPU retention)"
+          "value": "0.94uA (including RTC, 80KB RAM, and CPU retention)"
         },
         {
           "refId": 50,
@@ -484,7 +484,7 @@
         },
         {
           "refId": 36,
-          "value": "≤ 200µA"
+          "value": "≤ 200uA"
         },
         {
           "refId": 50,

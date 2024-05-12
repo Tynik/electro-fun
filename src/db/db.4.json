@@ -1,9 +1,58 @@
 {
   "items": [
     {
+      "stripeProductId": "prod_Q5rBlhVLXLjEpT",
+      "categoryId": 31,
+      "title": "Nichicon ES Electrolytic Capacitors",
+      "subtitle": "Bi-polarized for HiFi audio",
+      "seo": {
+        "description": "Nichicon ES Bipolar Electrolytic Capacitors: Reliable components for circuits requiring bidirectional voltage handling. Ideal for audio, motor control, and crossover networks.",
+        "keywords": "Nichicon ES, bi-polarized, bipolar, non-polar, electrolytic, audio capacitor, HiFI audio"
+      },
+      "datasheetId": "Nichicon_ES",
+      "buy": true,
+      "weight": 2,
+      "options": {
+        "1": {
+          "name": "10uF 25V x 10pcs",
+          "default": true
+        },
+        "2": {
+          "name": "22uF 25V x 10pcs"
+        }
+      },
+      "price": {
+        "1": {
+          "stripePriceId": "price_1PFfTMARhMwSarZXbn20qTZX"
+        },
+        "2": {
+          "stripePriceId": "price_1PFfURARhMwSarZXKQ3CbxAv"
+        }
+      },
+      "features": [
+        {
+          "refId": 76,
+          "value": "5 x 11mm",
+          "optionId": "1"
+        },
+        {
+          "refId": 76,
+          "value": "6.3 x 11mm",
+          "optionId": "2"
+        }
+      ],
+      "images": [
+        {
+          "src": "Nichicon-ES-Electrolytic-Capacitors-1.webp",
+          "alt": "Nichicon ES Electrolytic Capacitors"
+        }
+      ],
+      "content": "<p>Introducing Nichicon ES Bipolar Electrolytic Capacitors, essential components designed for specific applications where bi-polar characteristics are required. Unlike standard electrolytic capacitors, Nichicon ES Bipolar capacitors are capable of handling both positive and negative voltages, making them ideal for circuits where voltage reversal may occur.</p><p><h5>AC Signal Coupling</h5>In audio equipment and amplifier circuits, where AC signals are present, Nichicon ES Bipolar capacitors are used for coupling signals while blocking DC offset. Their bi-polar nature allows them to pass both positive and negative AC signals without distortion, ensuring accurate signal transmission.</p><p><h5>AC Motor Applications</h5>In motor control circuits, where reversing the motor direction is necessary, Nichicon ES Bipolar capacitors are employed to handle the bidirectional voltage spikes generated during motor operation. Their ability to withstand voltage reversal protects the circuitry and ensures reliable motor control.</p><p><h5>Crossover Networks</h5>In speaker crossover networks, where signals are split into high and low frequencies, Nichicon ES Bipolar capacitors are used to block DC components while allowing AC signals to pass. Their bi-polar characteristics enable seamless integration into crossover designs, maintaining signal integrity.</p><p><h5>Energy Storage</h5>In circuits requiring energy storage with bidirectional voltage swings, such as in pulse circuits or power factor correction, Nichicon ES Bipolar capacitors provide efficient energy storage and voltage buffering. Their ability to handle both positive and negative voltages ensures stable operation in dynamic environments.</p><p><h5>Reliability</h5>With Nichicon's reputation for quality and reliability, ES Bipolar capacitors offer excellent performance and longevity. They are designed to withstand demanding operating conditions and provide consistent performance over time.</p>"
+    },
+    {
       "stripeProductId": "prod_OCf0MkNHp6CnLc",
       "stripePriceId": "price_1NQFg7ARhMwSarZXMcU2IkDC",
-      "categoryId": 21,
+      "categoryId": 19,
       "title": "Jumper Wire Set",
       "subtitle": "140 pcs.",
       "seo": {
@@ -88,12 +137,12 @@
             "7MHz (40dB gain)",
             "1.6MHz (60dB gain)"
           ],
-          "info": "-3dB (RL = 2kΩ, CL = 10pF)"
+          "info": "-3dB (RL = 2kOhm, CL = 10pF)"
         },
         {
           "refId": 163,
-          "value": "19V/µs",
-          "info": "RL = 2kΩ, CL = 50pF"
+          "value": "19V/us",
+          "info": "RL = 2kOhm, CL = 50pF"
         },
         {
           "refId": 164,

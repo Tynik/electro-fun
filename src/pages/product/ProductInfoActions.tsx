@@ -92,13 +92,13 @@ export const ProductInfoActions = ({ product, stripeProduct }: ProductInfoAction
                 </Button>
               </Badge>
 
-              <Typography variant={'body2'} color={'primary.dark'} marginLeft={2}>
+              <Typography variant="body2" color="primary.dark" marginLeft={2}>
                 In Stock: {productAvailability}
               </Typography>
             </>
           ) : (
-            <Typography variant={'body2'} color={'primary.dark'} marginLeft={2}>
-              Out of Stock
+            <Typography variant="body2" color="primary.dark" marginLeft={2}>
+              Sold Out
             </Typography>
           )}
         </Box>

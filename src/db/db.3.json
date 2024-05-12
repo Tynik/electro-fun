@@ -3,7 +3,7 @@
     {
       "stripeProductId": "prod_OCemxwzlXzyoUp",
       "stripePriceId": "price_1NQFSfARhMwSarZXa4Fk8FcR",
-      "categoryId": 16,
+      "categoryId": 27,
       "title": "AMS1117 3.3V",
       "subtitle": "Voltage Regulator",
       "seo": {
@@ -116,7 +116,7 @@
         },
         {
           "refId": 94,
-          "value": "≤ 10µA",
+          "value": "≤ 10uA",
           "info": "At reverse voltage of 6V"
         },
         {
@@ -461,7 +461,7 @@
       },
       "buy": true,
       "weight": 150,
-      "content": "<p>Approximate charging time for capacitors:</p><p>470μF 390V = 2 seconds<br/>1000μF 390V = 4 seconds<br/>2200μF 390V = 8 seconds<br/>4700μF 390V = 18 seconds</p>",
+      "content": "<p>Approximate charging time for capacitors:</p><p>470uF 390V = 2 seconds<br/>1000uF 390V = 4 seconds<br/>2200uF 390V = 8 seconds<br/>4700uF 390V = 18 seconds</p>",
       "options": {
         "1": {
           "name": "Dual Output",
@@ -609,7 +609,7 @@
       "stripePriceId": "price_1NQ70GARhMwSarZXz2gXHYEt",
       "categoryId": 18,
       "title": "PM2.5/PMS5003 Dust Sensor",
-      "subtitle": "Detection of dust particles from 1 to 2.5 μm",
+      "subtitle": "Detection of dust particles from 1 to 2.5um",
       "seo": {
         "description": "PMS5003 - air particle concentration sensor",
         "keywords": "pms5003, pm2.5, sensor, dust, pollution, particles, air"
@@ -656,20 +656,20 @@
         },
         {
           "refId": 123,
-          "value": "0 - 500μg/m³"
+          "value": "0 - 500ug/m³"
         },
         {
           "refId": 124,
-          "value": "0 - 1000μg/m³"
+          "value": "0 - 1000ug/m³"
         },
         {
           "refId": 125,
-          "value": "1μg/m³"
+          "value": "1ug/m³"
         },
         {
           "refId": 126,
           "value": "≤ ±10%",
-          "info": "100 - 500μg/m³"
+          "info": "100 - 500ug/m³"
         }
       ],
       "peculiarities": [
@@ -725,7 +725,7 @@
         },
         {
           "refId": 28,
-          "value": "150µA"
+          "value": "150uA"
         },
         {
           "refId": 127,
@@ -795,7 +795,7 @@
         },
         {
           "refId": 36,
-          "value": "1µA"
+          "value": "1uA"
         },
         {
           "refId": 76,
