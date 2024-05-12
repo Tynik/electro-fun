@@ -50,6 +50,43 @@
       "content": "<p>Introducing Nichicon ES Bipolar Electrolytic Capacitors, essential components designed for specific applications where bi-polar characteristics are required. Unlike standard electrolytic capacitors, Nichicon ES Bipolar capacitors are capable of handling both positive and negative voltages, making them ideal for circuits where voltage reversal may occur.</p><p><h5>AC Signal Coupling</h5>In audio equipment and amplifier circuits, where AC signals are present, Nichicon ES Bipolar capacitors are used for coupling signals while blocking DC offset. Their bi-polar nature allows them to pass both positive and negative AC signals without distortion, ensuring accurate signal transmission.</p><p><h5>AC Motor Applications</h5>In motor control circuits, where reversing the motor direction is necessary, Nichicon ES Bipolar capacitors are employed to handle the bidirectional voltage spikes generated during motor operation. Their ability to withstand voltage reversal protects the circuitry and ensures reliable motor control.</p><p><h5>Crossover Networks</h5>In speaker crossover networks, where signals are split into high and low frequencies, Nichicon ES Bipolar capacitors are used to block DC components while allowing AC signals to pass. Their bi-polar characteristics enable seamless integration into crossover designs, maintaining signal integrity.</p><p><h5>Energy Storage</h5>In circuits requiring energy storage with bidirectional voltage swings, such as in pulse circuits or power factor correction, Nichicon ES Bipolar capacitors provide efficient energy storage and voltage buffering. Their ability to handle both positive and negative voltages ensures stable operation in dynamic environments.</p><p><h5>Reliability</h5>With Nichicon's reputation for quality and reliability, ES Bipolar capacitors offer excellent performance and longevity. They are designed to withstand demanding operating conditions and provide consistent performance over time.</p>"
     },
     {
+      "stripeProductId": "prod_Q5tsyCKKYsATZ1",
+      "categoryId": 31,
+      "title": "High Frequency Electrolytic Capacitors",
+      "subtitle": "Low resistance (ESR)",
+      "seo": {
+        "description": "",
+        "keywords": "electrolytic, aluminum, capacitor, high frequency, low ESR, low resistance"
+      },
+      "buy": true,
+      "weight": 3,
+      "options": {
+        "1": {
+          "name": "4700uF 10V x 10pcs",
+          "default": true
+        }
+      },
+      "price": {
+        "1": {
+          "stripePriceId": "price_1PFi59ARhMwSarZXrp6Y1B9F"
+        }
+      },
+      "features": [
+        {
+          "refId": 76,
+          "value": "13 x 21mm",
+          "optionId": "1"
+        }
+      ],
+      "images": [
+        {
+          "src": "High-Frequency-Electrolytic-Capacitors-1.webp",
+          "alt": "High Frequency Electrolytic Capacitors"
+        }
+      ],
+      "content": "<p>Introducing high-frequency electrolytic capacitors with low Equivalent Series Resistance (ESR), essential components for applications demanding efficient energy storage and stable performance at high frequencies. These capacitors are specifically designed to minimize ESR, enabling them to handle rapid voltage changes and high-frequency signals with minimal loss. Ideal for power supply filtering, decoupling, and voltage regulation in electronic circuits, they ensure reliable operation and optimal performance, even in demanding environments.</p>"
+    },
+    {
       "stripeProductId": "prod_OCf0MkNHp6CnLc",
       "stripePriceId": "price_1NQFg7ARhMwSarZXMcU2IkDC",
       "categoryId": 19,

@@ -242,11 +242,20 @@
     "Nichicon_ES": {
       "lang": "en",
       "keywords": [
-        "electrolytic capacitor",
+        "electrolytic",
         "capacitor",
         "bi-polarized",
         "nichicon",
         "MUSE",
+        "audio"
+      ]
+    },
+    "Nichicon_FW": {
+      "lang": "en",
+      "keywords": [
+        "electrolytic",
+        "capacitor",
+        "nichicon",
         "audio"
       ]
     },
