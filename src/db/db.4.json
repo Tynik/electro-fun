@@ -99,18 +99,90 @@
       "weight": 3,
       "options": {
         "1": {
-          "name": "2200uF 10V x 10pcs",
+          "name": "0.22uF 50V x 10pcs",
           "default": true
         },
         "2": {
+          "name": "0.47uF 50V x 10pcs"
+        },
+        "3": {
+          "name": "1uF 50V x 10pcs"
+        },
+        "4": {
+          "name": "2.2uF 50V x 10pcs"
+        },
+        "5": {
+          "name": "4.7uF 50V x 10pcs"
+        },
+        "6": {
+          "name": "10uF 25V x 10pcs"
+        },
+        "7": {
+          "name": "22uF 16V x 10pcs"
+        },
+        "8": {
+          "name": "33uF 16V x 10pcs"
+        },
+        "9": {
+          "name": "47uF 16V x 10pcs"
+        },
+        "10": {
+          "name": "100uF 16V x 10pcs"
+        },
+        "11": {
+          "name": "220uF 16V x 10pcs"
+        },
+        "12": {
+          "name": "470uF 16V x 10pcs"
+        },
+        "13": {
+          "name": "2200uF 10V x 10pcs"
+        },
+        "14": {
           "name": "2200uF 25V x 5PCS"
         }
       },
       "price": {
         "1": {
-          "stripePriceId": "price_1PFiHMARhMwSarZXdEx8vaww"
+          "stripePriceId": "price_1PFj1jARhMwSarZXQ9RltjNd"
         },
         "2": {
+          "stripePriceId": "price_1PFj6kARhMwSarZXsnH2on0j"
+        },
+        "3": {
+          "stripePriceId": "price_1PFjAkARhMwSarZXUtB4Zu92"
+        },
+        "4": {
+          "stripePriceId": "price_1PFjCbARhMwSarZXdzZ94zus"
+        },
+        "5": {
+          "stripePriceId": "price_1PFiwyARhMwSarZXfQobxVSg"
+        },
+        "6": {
+          "stripePriceId": "price_1PFjEZARhMwSarZX9PdsDW3J"
+        },
+        "7": {
+          "stripePriceId": "price_1PFjG5ARhMwSarZX6VqIe2bQ"
+        },
+        "8": {
+          "stripePriceId": "price_1PFjHcARhMwSarZX5DIinJkz"
+        },
+        "9": {
+          "stripePriceId": "price_1PFjJ0ARhMwSarZX1P6b4bke"
+        },
+        "10": {
+          "stripePriceId": "price_1PFjKPARhMwSarZXiiYPsIBr"
+        },
+        "11": {
+          "stripePriceId": "price_1PFjLnARhMwSarZX04aQRR2O"
+        },
+        "12": {
+          "stripePriceId": "price_1PFjNZARhMwSarZXXrIq45kF"
+        },
+        "13": {
+          "stripePriceId": "price_1PFiHMARhMwSarZXdEx8vaww"
+        },
+        "14": {
           "stripePriceId": "price_1PFiI2ARhMwSarZXrX5ecqnR"
         }
       },
@@ -118,12 +190,12 @@
         {
           "refId": 76,
           "value": "10.5 x 17mm",
-          "optionId": "1"
+          "optionId": "13"
         },
         {
           "refId": 76,
           "value": "13 x 21mm",
-          "optionId": "2"
+          "optionId": "14"
         }
       ],
       "images": [
