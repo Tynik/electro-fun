@@ -55,7 +55,7 @@
       "title": "High Frequency Electrolytic Capacitors",
       "subtitle": "Low resistance (ESR)",
       "seo": {
-        "description": "",
+        "description": "High-frequency electrolytic capacitors with low ESR for efficient energy storage and stable performance in electronic circuits demanding rapid voltage changes and high frequencies.",
         "keywords": "electrolytic, aluminum, capacitor, high frequency, low ESR, low resistance"
       },
       "buy": true,
@@ -85,6 +85,54 @@
         }
       ],
       "content": "<p>Introducing high-frequency electrolytic capacitors with low Equivalent Series Resistance (ESR), essential components for applications demanding efficient energy storage and stable performance at high frequencies. These capacitors are specifically designed to minimize ESR, enabling them to handle rapid voltage changes and high-frequency signals with minimal loss. Ideal for power supply filtering, decoupling, and voltage regulation in electronic circuits, they ensure reliable operation and optimal performance, even in demanding environments.</p>"
+    },
+    {
+      "stripeProductId": "prod_Q5u5chABf4twIj",
+      "categoryId": 31,
+      "title": "Aluminum Electrolytic Capacitors",
+      "subtitle": "Efficient energy storage and voltage regulation",
+      "seo": {
+        "description": "Aluminum electrolytic capacitors for efficient energy storage and voltage regulation in electronic circuits.",
+        "keywords": "electrolytic, capacitor, aluminum, energy storage, decoupling capacitors"
+      },
+      "buy": true,
+      "weight": 3,
+      "options": {
+        "1": {
+          "name": "2200uF 10V x 10pcs",
+          "default": true
+        },
+        "2": {
+          "name": "2200uF 25V x 5PCS"
+        }
+      },
+      "price": {
+        "1": {
+          "stripePriceId": "price_1PFiHMARhMwSarZXdEx8vaww"
+        },
+        "2": {
+          "stripePriceId": "price_1PFiI2ARhMwSarZXrX5ecqnR"
+        }
+      },
+      "features": [
+        {
+          "refId": 76,
+          "value": "10.5 x 17mm",
+          "optionId": "1"
+        },
+        {
+          "refId": 76,
+          "value": "13 x 21mm",
+          "optionId": "2"
+        }
+      ],
+      "images": [
+        {
+          "src": "Electrolytic-Capacitors-1.webp",
+          "alt": "Electrolytic Capacitors"
+        }
+      ],
+      "content": "<p>Aluminum electrolytic capacitors are a type of electrolytic capacitor that utilizes aluminum oxide as the dielectric material. These capacitors are widely used in electronic circuits due to their high capacitance values and relatively low cost compared to other capacitor types. They are polarized, meaning they must be connected in a specific orientation in the circuit to function properly.</p><p>Aluminum electrolytic capacitors are commonly used in power supply circuits, audio equipment, and other applications where large capacitance values and high voltage ratings are required. They are particularly effective for smoothing and filtering DC voltage, as well as for decoupling and bypassing in electronic circuits.</p><p>Despite their advantages, aluminum electrolytic capacitors have limitations such as relatively high Equivalent Series Resistance (ESR) and limited lifetime compared to other capacitor types. However, advancements in technology have led to improvements in performance and reliability over the years.</p><p>Overall, aluminum electrolytic capacitors are indispensable components in electronic design, providing efficient energy storage and voltage regulation in a wide range of applications.</p>"
     },
     {
       "stripeProductId": "prod_OCf0MkNHp6CnLc",
