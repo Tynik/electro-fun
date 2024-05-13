@@ -112,42 +112,51 @@
           "name": "2.2uF 50V x 10pcs"
         },
         "5": {
-          "name": "4.7uF 50V x 10pcs"
+          "name": "3.3uF 50V x 10pcs"
         },
         "6": {
-          "name": "10uF 25V x 10pcs"
+          "name": "4.7uF 50V x 10pcs"
         },
         "7": {
-          "name": "10uF 50V x 10pcs"
+          "name": "10uF 25V x 10pcs"
         },
         "8": {
-          "name": "22uF 16V x 10pcs"
+          "name": "10uF 50V x 10pcs"
         },
         "9": {
-          "name": "33uF 16V x 10pcs"
+          "name": "22uF 16V x 10pcs"
         },
         "10": {
-          "name": "33uF 25V x 10pcs"
+          "name": "22uF 25V x 10pcs"
         },
         "11": {
-          "name": "47uF 16V x 10pcs"
+          "name": "33uF 16V x 10pcs"
         },
         "12": {
-          "name": "47uF 25V x 10pcs"
+          "name": "33uF 25V x 10pcs"
         },
         "13": {
-          "name": "100uF 16V x 10pcs"
+          "name": "47uF 16V x 10pcs"
         },
         "14": {
-          "name": "220uF 16V x 10pcs"
+          "name": "47uF 25V x 10pcs"
         },
         "15": {
-          "name": "470uF 16V x 10pcs"
+          "name": "100uF 16V x 10pcs"
         },
         "16": {
-          "name": "2200uF 10V x 10pcs"
+          "name": "220uF 16V x 10pcs"
         },
         "17": {
+          "name": "470uF 16V x 10pcs"
+        },
+        "18": {
+          "name": "1000uF 16V x 5pcs"
+        },
+        "19": {
+          "name": "2200uF 10V x 10pcs"
+        },
+        "20": {
           "name": "2200uF 25V x 5PCS"
         }
       },
@@ -165,42 +174,51 @@
           "stripePriceId": "price_1PFjCbARhMwSarZXdzZ94zus"
         },
         "5": {
-          "stripePriceId": "price_1PFiwyARhMwSarZXfQobxVSg"
+          "stripePriceId": "price_1PFvGAARhMwSarZX8hE66TsD"
         },
         "6": {
-          "stripePriceId": "price_1PFjEZARhMwSarZX9PdsDW3J"
+          "stripePriceId": "price_1PFiwyARhMwSarZXfQobxVSg"
         },
         "7": {
-          "stripePriceId": "price_1PFjhtARhMwSarZXS60aHE0O"
+          "stripePriceId": "price_1PFjEZARhMwSarZX9PdsDW3J"
         },
         "8": {
-          "stripePriceId": "price_1PFjG5ARhMwSarZX6VqIe2bQ"
+          "stripePriceId": "price_1PFjhtARhMwSarZXS60aHE0O"
         },
         "9": {
-          "stripePriceId": "price_1PFjHcARhMwSarZX5DIinJkz"
+          "stripePriceId": "price_1PFjG5ARhMwSarZX6VqIe2bQ"
         },
         "10": {
-          "stripePriceId": "price_1PFjaCARhMwSarZXliktDIpl"
+          "stripePriceId": "price_1PFvE7ARhMwSarZXVI2FD2S7"
         },
         "11": {
-          "stripePriceId": "price_1PFjJ0ARhMwSarZX1P6b4bke"
+          "stripePriceId": "price_1PFjHcARhMwSarZX5DIinJkz"
         },
         "12": {
-          "stripePriceId": "price_1PFjYFARhMwSarZXooSKoA4V"
+          "stripePriceId": "price_1PFjaCARhMwSarZXliktDIpl"
         },
         "13": {
-          "stripePriceId": "price_1PFjKPARhMwSarZXiiYPsIBr"
+          "stripePriceId": "price_1PFjJ0ARhMwSarZX1P6b4bke"
         },
         "14": {
-          "stripePriceId": "price_1PFjLnARhMwSarZX04aQRR2O"
+          "stripePriceId": "price_1PFjYFARhMwSarZXooSKoA4V"
         },
         "15": {
-          "stripePriceId": "price_1PFjNZARhMwSarZXXrIq45kF"
+          "stripePriceId": "price_1PFjKPARhMwSarZXiiYPsIBr"
         },
         "16": {
-          "stripePriceId": "price_1PFiHMARhMwSarZXdEx8vaww"
+          "stripePriceId": "price_1PFjLnARhMwSarZX04aQRR2O"
         },
         "17": {
+          "stripePriceId": "price_1PFjNZARhMwSarZXXrIq45kF"
+        },
+        "18": {
+          "stripePriceId": "price_1PFvJ2ARhMwSarZXkSA28pmZ"
+        },
+        "19": {
+          "stripePriceId": "price_1PFiHMARhMwSarZXdEx8vaww"
+        },
+        "20": {
           "stripePriceId": "price_1PFiI2ARhMwSarZXrX5ecqnR"
         }
       },
@@ -208,12 +226,12 @@
         {
           "refId": 76,
           "value": "10.5 x 17mm",
-          "optionId": "16"
+          "optionId": "19"
         },
         {
           "refId": 76,
           "value": "13 x 21mm",
-          "optionId": "17"
+          "optionId": "20"
         }
       ],
       "images": [
