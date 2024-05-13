@@ -1910,17 +1910,17 @@
       ]
     },
     {
+      "stripeProductId": "prod_Q67ygWbH1mwhBA",
+      "stripePriceId": "price_1PFviiARhMwSarZXausfmAl8",
       "categoryId": 18,
-      "title": "CCS811",
+      "title": "CCS811 Module",
       "subtitle": "Air Quality Sensor",
       "seo": {
-        "description": "CCS811 - Air Quality Sensor",
-        "keywords": "sensor, co2, air quality, particles, voc, tvoc"
+        "description": "CCS811 module for detecting indoor air quality with VOC and CO2 monitoring. Low power consumption, digital output for easy integration.",
+        "keywords": "CCS811, module, sensor, co2, air quality, particles, VOC, TVOC"
       },
-      "buy": false,
-      "price": 0,
+      "buy": true,
       "weight": 10,
-      "quantity": 0,
       "datasheetId": "CCS811",
       "images": [
         {
@@ -1936,7 +1936,6 @@
           "alt": "CCS811"
         }
       ],
-      "content": "<p>CCS811 is an ultra-low-power digital gas sensor solution for detecting low levels of VOCs typically found indoors, with a microcontroller (MCU) and an analog-to-digital converter (ADC) to monitor the local environment and provide an indication of indoor air quality via an equivalent CO2 or TVOC output over a standard digital I²C interface.</p>",
       "features": [
         {
           "refId": 2,
@@ -1967,6 +1966,7 @@
           "value": "30mA"
         }
       ],
+      "content": "<p>CCS811 is an ultra-low-power digital gas sensor solution for detecting low levels of VOCs typically found indoors, with a microcontroller (MCU) and an analog-to-digital converter (ADC) to monitor the local environment and provide an indication of indoor air quality via an equivalent CO2 or TVOC output over a standard digital I²C interface.</p><p><h5>Indoor Air Quality Monitoring</h5>The primary function of the CCS811 sensor is to monitor indoor air quality by measuring levels of VOCs and CO2. This is particularly useful in applications such as smart home systems, air purifiers, and HVAC (heating, ventilation, and air conditioning) systems.</p><p><h5>Low Power Consumption</h5>The sensor chip and module are designed for low power operation, making them suitable for battery-powered devices and applications where energy efficiency is essential.</p><p><h5>Digital Output</h5>The CCS811 module typically provides digital output via an I2C interface, allowing for easy communication with microcontrollers and other digital devices.</p><p><h5>Built-in Algorithms</h5>The CCS811 sensor chip often includes built-in algorithms for calculating equivalent CO2 (eCO2) and total volatile organic compound (TVOC) concentrations, simplifying data processing and interpretation.</p><p>Overall, the CCS811 module offers a convenient and reliable solution for indoor air quality monitoring in a wide range of electronic devices and systems, contributing to healthier and more comfortable indoor environments.</p>",
       "externalLinks": [
         {
           "name": "ESPHome CCS811 CO2 and Volatile Organic Compound Sensor Component",
