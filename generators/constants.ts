@@ -1,1 +1,1 @@
-export const SITE_DOMAIN = 'https://smartstream-electronics.uk';
+export const SITE_DOMAIN = 'https://smartstream-electronics.co.uk';
