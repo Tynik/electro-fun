@@ -148,15 +148,18 @@
           "name": "220uF 16V x 10pcs"
         },
         "17": {
-          "name": "470uF 16V x 10pcs"
+          "name": "330uF 16V x 10pcs"
         },
         "18": {
-          "name": "1000uF 16V x 5pcs"
+          "name": "470uF 16V x 10pcs"
         },
         "19": {
-          "name": "2200uF 10V x 10pcs"
+          "name": "1000uF 16V x 5pcs"
         },
         "20": {
+          "name": "2200uF 10V x 10pcs"
+        },
+        "21": {
           "name": "2200uF 25V x 5PCS"
         }
       },
@@ -210,15 +213,18 @@
           "stripePriceId": "price_1PFjLnARhMwSarZX04aQRR2O"
         },
         "17": {
-          "stripePriceId": "price_1PFjNZARhMwSarZXXrIq45kF"
+          "stripePriceId": "price_1PG21iARhMwSarZXGoYPAtMB"
         },
         "18": {
-          "stripePriceId": "price_1PFvJ2ARhMwSarZXkSA28pmZ"
+          "stripePriceId": "price_1PFjNZARhMwSarZXXrIq45kF"
         },
         "19": {
-          "stripePriceId": "price_1PFiHMARhMwSarZXdEx8vaww"
+          "stripePriceId": "price_1PFvJ2ARhMwSarZXkSA28pmZ"
         },
         "20": {
+          "stripePriceId": "price_1PFiHMARhMwSarZXdEx8vaww"
+        },
+        "21": {
           "stripePriceId": "price_1PFiI2ARhMwSarZXrX5ecqnR"
         }
       },
@@ -226,12 +232,12 @@
         {
           "refId": 76,
           "value": "10.5 x 17mm",
-          "optionId": "19"
+          "optionId": "20"
         },
         {
           "refId": 76,
           "value": "13 x 21mm",
-          "optionId": "20"
+          "optionId": "21"
         }
       ],
       "images": [
@@ -1064,6 +1070,32 @@
         }
       ],
       "content": "<p>SMD Ceramic Capacitors 0805 are essential components in modern electronic circuitry. With their small size and surface-mount design, they are ideal for compact and densely populated PCB layouts. These capacitors provide excellent stability, high capacitance density, and low parasitic effects, making them suitable for a wide range of applications, including decoupling, filtering, timing, and bypassing. Whether you're prototyping a new circuit or designing a production-ready PCB, SMD Ceramic Capacitors 0805 offer reliability and performance in a compact form factor.</p>"
+    },
+    {
+      "stripeProductId": "prod_Q6Eg96PVj9wP7B",
+      "stripePriceId": "price_1PG2CwARhMwSarZXWWsbvyLT",
+      "categoryId": 29,
+      "title": "Metal Film Resistors Kit 2600pcs 1/4W",
+      "subtitle": "130 values x 20pcs, Resistance ±1%",
+      "seo": {
+        "description": "Metal film resistors kit 2600pcs 1/4W ranging from 1 Ohm to 2.4 MOhm. Ideal for electronic projects and prototyping.",
+        "keywords": "metal film resistor, resistor, resistance, 1/4W, kit, 2600pcs"
+      },
+      "buy": true,
+      "weight": 500,
+      "features": [
+        {
+          "refId": 180,
+          "value": "1/4W"
+        }
+      ],
+      "images": [
+        {
+          "src": "Metal-Film-Resistors-Kit-2600pcs-1-4W-1.webp",
+          "alt": "Metal Film Resistors Kit 2600pcs 1/4W"
+        }
+      ],
+      "content": "<p><h5>Ohm</h5>1 Ohm, 1.2 Ohm, 1.5 Ohm, 1.8 Ohm, 2 Ohm, 2.2 Ohm, 2.4 Ohm, 2.7 Ohm, 3 Ohm, 3.3 Ohm, 3.6 Ohm, 3.9 Ohm, 4.3 Ohm, 4.7 Ohm, 5.1 Ohm, 5.6 Ohm, 6.2 Ohm, 6.8 Ohm, 7.5 Ohm, 8.2 Ohm, 9.1 Ohm, 10 Ohm, 12 Ohm, 15 Ohm, 18 Ohm, 20 Ohm, 22 Ohm, 24 Ohm, 27 Ohm, 30 Ohm, 33 Ohm, 36 Ohm, 39 Ohm, 43 Ohm, 47 Ohm, 51 Ohm, 56 Ohm, 62 Ohm, 68 Ohm, 75 Ohm, 82 Ohm, 91 Ohm, 100 Ohm, 120 Ohm, 150 Ohm, 180 Ohm, 200 Ohm, 220 Ohm, 240 Ohm, 270 Ohm, 300 Ohm, 330 Ohm, 360 Ohm, 390 Ohm, 430 Ohm, 470 Ohm, 510 Ohm, 560 Ohm, 620 Ohm, 680 Ohm, 750 Ohm, 820 Ohm, 910 Ohm</p><p><h5>kOhm</h5>1 kOhm, 1.2 kOhm, 1.5 kOhm, 1.8 kOhm, 2 kOhm, 2.2 kOhm, 2.4 kOhm, 2.7 kOhm, 3 kOhm, 3.3 kOhm, 3.6 kOhm, 3.9 kOhm, 4.3 kOhm, 4.7 kOhm, 5.1 kOhm, 5.6 kOhm, 6.2 kOhm, 6.8 kOhm, 7.5 kOhm, 8.2 kOhm, 9.1 kOhm, 10 kOhm, 12 kOhm, 15 kOhm, 18 kOhm, 20 kOhm, 22 kOhm, 24 kOhm, 27 kOhm, 30 kOhm, 33 kOhm, 36 kOhm, 39 kOhm, 43 kOhm, 47 kOhm, 51 kOhm, 56 kOhm, 62 kOhm, 68 kOhm, 75 kOhm, 82 kOhm, 91 kOhm, 100 kOhm, 120 kOhm, 150 kOhm, 180 kOhm, 200 kOhm, 220 kOhm, 240 kOhm, 270 kOhm, 300 kOhm, 330 kOhm, 360 kOhm, 390 kOhm, 430 kOhm, 470 kOhm, 510 kOhm, 560 kOhm, 620 kOhm, 680 kOhm, 750 kOhm, 820 kOhm, 910 kOhm</p><p><h5>MOhm</h5>1 MOhm, 2 MOhm, 2.2 MOhm, 2.4 MOhm</p>"
     },
     {
       "stripeProductId": "prod_Q3sBnV4uUML5wT",
