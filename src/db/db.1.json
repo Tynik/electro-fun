@@ -856,7 +856,7 @@
     },
     {
       "id": 18,
-      "name": "Modules",
+      "name": "Breakout Boards",
       "icon": "apps"
     },
     {
@@ -1690,6 +1690,9 @@
     "185": {
       "name": "Interface",
       "featSecRefId": 17
+    },
+    "186": {
+      "name": "Chip"
     }
   },
   "items": [

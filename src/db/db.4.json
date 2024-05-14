@@ -4,11 +4,12 @@
       "stripeProductId": "prod_Q6cpHFceUb0Jun",
       "stripePriceId": "price_1PGPZZARhMwSarZXEKV08kll",
       "categoryId": 18,
-      "title": "CD74HC4067 Module",
-      "subtitle": "16-channel analog multiplexer/demultiplexer",
+      "manufacturerId": "8",
+      "title": "CD74HC4067 Breakout Board",
+      "subtitle": "HP4067 16-channel analog mux/demux",
       "seo": {
         "description": "CD74HC4067 breakout board for simplify integration analog multiplexer/demultiplexer chip into electronic circuits. Ideal for expanding analog input/output capabilities.",
-        "keywords": "CD74HC4067, module, 16-channel, analog, breakout board, multiplexer/demultiplexer, mux/demux"
+        "keywords": "CD74HC4067, HP4067, module, 16-channel, analog, breakout board, multiplexer/demultiplexer, mux/demux"
       },
       "buy": true,
       "weight": 10,
@@ -27,6 +28,10 @@
         {
           "refId": 177,
           "value": 16
+        },
+        {
+          "refId": 186,
+          "value": "HP4067"
         }
       ],
       "content": "<p>The CD74HC4067 module is an analog multiplexer/demultiplexer designed to facilitate the selection and routing of analog signals in electronic circuits. Developed by Texas Instruments, the CD74HC4067 module provides a straightforward solution for expanding the number of analog inputs or outputs available to microcontrollers or other digital devices.</p>",
