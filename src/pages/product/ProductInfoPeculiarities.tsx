@@ -17,7 +17,7 @@ export const ProductInfoPeculiarities = ({ peculiarities }: ProductInfoPeculiari
 
       <List disablePadding>
         {peculiarities.map(peculiarity => (
-          <ListItem key={peculiarity} disablePadding>
+          <ListItem key={peculiarity} alignItems="flex-start" disablePadding>
             <ListItemIcon sx={{ minWidth: theme.spacing(1) }}>
               <ArrowRightIcon />
             </ListItemIcon>

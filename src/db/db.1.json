@@ -1102,7 +1102,7 @@
       "name": "Power Consumption"
     },
     "28": {
-      "name": "Maximum",
+      "name": "Max",
       "featSecRefId": 7
     },
     "29": {

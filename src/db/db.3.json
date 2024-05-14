@@ -684,16 +684,15 @@
       "stripeProductId": "prod_OCVzWTw5FIJXJK",
       "stripePriceId": "price_1NQ6xYARhMwSarZXKaiy7dtj",
       "categoryId": 18,
-      "lang": "en",
       "title": "ADS1015 Module",
-      "subtitle": "12-bit ADC 4-Channel I²C",
+      "subtitle": "12-bit ADC 4-Channels I²C",
       "seo": {
-        "description": "ADS1015 - 12-bit ADC module",
-        "keywords": "ads1115, adc, ads, i2c, module, 12-bit",
+        "description": "ADS1015 module - high-resolution analog-to-digital converter with x4 input channels. Ideal for precise measurement applications in electronic circuits.",
+        "keywords": "ADS1015, ADS1115, ADC, I2C, module, 12-bit, analog-to-digital, 4-channels",
         "measurement": "12-bit"
       },
       "buy": true,
-      "weight": 10,
+      "weight": 5,
       "datasheetId": "ADS101x",
       "images": [
         {
@@ -705,7 +704,6 @@
           "alt": "ADS1015 - bottom view"
         }
       ],
-      "content": "",
       "features": [
         {
           "refId": 2,
@@ -743,6 +741,15 @@
           "refId": 130,
           "value": "Yes"
         }
+      ],
+      "content": "<p>The ADS1015 module is a compact and versatile analog-to-digital converter (ADC) module designed for precision measurement applications in electronic circuits. Developed by Texas Instruments, the ADS1015 module is equipped with four analog input channels and provides high-resolution ADC conversion with up to 12 bits of resolution. This module is particularly suitable for applications requiring accurate and reliable conversion of analog signals into digital data.</p>",
+      "peculiarities": [
+        "High Resolution: The ADS1015 module offers up to 12 bits of resolution, allowing for precise conversion of analog signals into digital data. This high resolution ensures accurate measurement of small voltage changes and subtle variations in the input signals.",
+        "x4 Analog Input Channels: With four analog input channels, the ADS1015 module enables simultaneous measurement of multiple signals or sensors, making it suitable for multi-channel data acquisition systems and sensor arrays.",
+        "Programmable Gain Amplifier (PGA): The ADS1015 module features a built-in programmable gain amplifier that allows users to adjust the gain of the input signals, enabling measurement of both small and large voltage ranges with high accuracy.",
+        "I2C Interface: The ADS1015 module communicates with microcontrollers and other digital devices via the I2C (Inter-Integrated Circuit) interface, providing easy integration into existing circuits and systems.",
+        "Low Power Consumption: Designed for low power operation, the ADS1015 module consumes minimal power during operation, making it suitable for battery-powered and portable devices.\n\n",
+        "Compact Size: The ADS1015 module comes in a compact and lightweight form factor, making it easy to integrate into electronic projects and prototype designs."
       ],
       "applicationIds": [
         "11",
