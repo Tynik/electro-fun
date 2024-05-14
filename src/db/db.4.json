@@ -1,6 +1,44 @@
 {
   "items": [
     {
+      "stripeProductId": "prod_Q6cpHFceUb0Jun",
+      "stripePriceId": "price_1PGPZZARhMwSarZXEKV08kll",
+      "categoryId": 18,
+      "title": "CD74HC4067 Module",
+      "subtitle": "16-channel analog multiplexer/demultiplexer",
+      "seo": {
+        "description": "CD74HC4067 breakout board for simplify integration analog multiplexer/demultiplexer chip into electronic circuits. Ideal for expanding analog input/output capabilities.",
+        "keywords": "CD74HC4067, module, 16-channel, analog, breakout board, multiplexer/demultiplexer, mux/demux"
+      },
+      "buy": true,
+      "weight": 10,
+      "datasheetId": "CD74HC4067",
+      "images": [
+        {
+          "src": "CD74HC4067-Module-1.webp",
+          "alt": "CD74HC4067 Module 16-channel"
+        },
+        {
+          "src": "CD74HC4067-Module-2.webp",
+          "alt": "CD74HC4067 Module 16-channel - Connect"
+        }
+      ],
+      "features": [
+        {
+          "refId": 177,
+          "value": 16
+        }
+      ],
+      "content": "<p>The CD74HC4067 module is an analog multiplexer/demultiplexer designed to facilitate the selection and routing of analog signals in electronic circuits. Developed by Texas Instruments, the CD74HC4067 module provides a straightforward solution for expanding the number of analog inputs or outputs available to microcontrollers or other digital devices.</p>",
+      "peculiarities": [
+        "Multiple Analog Channels: The CD74HC4067 module offers a total of 16 analog input/output channels, which can be selectively connected to a single analog input/output pin using the built-in multiplexer/demultiplexer functionality.",
+        "High-Speed Operation: The CD74HC4067 module operates at high speed, allowing for rapid switching between different analog channels without introducing significant delay or latency.",
+        "Digital Control Interface: The CD74HC4067 module communicates with microcontrollers and other digital devices via a standard digital interface (e.g., SPI or I2C), enabling easy control and configuration of the multiplexer/demultiplexer settings.",
+        "Wide Voltage Range: The CD74HC4067 module supports a wide voltage range, making it compatible with a variety of analog input/output signals and voltage levels commonly encountered in electronic circuits.",
+        "Low Power Consumption: Designed for low power operation, the CD74HC4067 module consumes minimal power during operation, making it suitable for battery-powered and portable devices."
+      ]
+    },
+    {
       "stripeProductId": "prod_Q5rBlhVLXLjEpT",
       "categoryId": 31,
       "title": "Nichicon ES Electrolytic Capacitors",

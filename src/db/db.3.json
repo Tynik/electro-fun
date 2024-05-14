@@ -685,7 +685,7 @@
       "stripePriceId": "price_1NQ6xYARhMwSarZXKaiy7dtj",
       "categoryId": 18,
       "title": "ADS1015 Module",
-      "subtitle": "12-bit ADC 4-Channels I²C",
+      "subtitle": "12-bit ADC 4-channels I²C",
       "seo": {
         "description": "ADS1015 module - high-resolution analog-to-digital converter with x4 input channels. Ideal for precise measurement applications in electronic circuits.",
         "keywords": "ADS1015, ADS1115, ADC, I2C, module, 12-bit, analog-to-digital, 4-channels",
@@ -770,7 +770,7 @@
       "stripePriceId": "price_1NQ6rHARhMwSarZXaqFFQBTR",
       "categoryId": 18,
       "title": "MCP2515 Module",
-      "subtitle": "CAN Controller, SPI",
+      "subtitle": "CAN controller, SPI",
       "seo": {
         "description": "MCP2515 - CAN controller module",
         "keywords": "MCP2515, TJA1050, module, CAN, bus, SPI, OBD, OBD2, OBDII, arduino"
@@ -848,7 +848,7 @@
       "stripePriceId": "price_1NQ6pQARhMwSarZX56Y1W0Ap",
       "categoryId": 18,
       "title": "MCP2551 Module",
-      "subtitle": "CAN Transceiver",
+      "subtitle": "CAN transceiver",
       "seo": {
         "description": "MCP2551 - High-Speed CAN module",
         "keywords": "mcp2551, can, bus, obd2, obdii, module, high-speed, transceiver"

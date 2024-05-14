@@ -239,6 +239,15 @@
     }
   },
   "datasheets": {
+    "CD74HC4067": {
+      "lang": "en",
+      "keywords": [
+        "16-channel",
+        "analog",
+        "multiplexer/demultiplexer",
+        "mux/demux"
+      ]
+    },
     "Nichicon_ES": {
       "lang": "en",
       "keywords": [
@@ -1914,7 +1923,7 @@
       "stripePriceId": "price_1PFviiARhMwSarZXausfmAl8",
       "categoryId": 18,
       "title": "CCS811 Module",
-      "subtitle": "Air Quality Sensor",
+      "subtitle": "Air quality sensor",
       "seo": {
         "description": "CCS811 module for detecting indoor air quality with VOC and CO2 monitoring. Low power consumption, digital output for easy integration.",
         "keywords": "CCS811, module, sensor, co2, air quality, particles, VOC, TVOC"
@@ -1989,7 +1998,7 @@
       "stripePriceId": "price_1NQ64TARhMwSarZXA5VfFuPI",
       "categoryId": 18,
       "title": "APDS-9960",
-      "subtitle": "RGB Color Sensor and Gesture Recognition",
+      "subtitle": "RGB color sensor and gesture recognition",
       "seo": {
         "description": "APDS-9960 RGB color sensor and gesture recognition",
         "keywords": "APDS-9960, sensor, gestures, RGB, recognition, I2C"
@@ -2285,7 +2294,7 @@
       "stripePriceId": "price_1NQ6CGARhMwSarZXFBeaxMs1",
       "categoryId": 18,
       "title": "nRF24L01+",
-      "subtitle": "2.4 GHz Transceiver and Audio Streamer",
+      "subtitle": "2.4GHz transceiver and audio streamer",
       "seo": {
         "description": "nRF24L01+ - 2.4 GHz transceiver and audio streamer",
         "keywords": "nrf24l01, transceiver, receiver, audio-streamer"
