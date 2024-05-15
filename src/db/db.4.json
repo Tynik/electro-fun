@@ -1,6 +1,47 @@
 {
   "items": [
     {
+      "stripeProductId": "prod_Q71N96wBiDELwm",
+      "stripePriceId": "price_1PGnKSARhMwSarZXoZS6FV6g",
+      "categoryId": 18,
+      "title": "Micro SD Card Module",
+      "subtitle": "SPI interface",
+      "seo": {
+        "description": "Micro SD Card Module with SPI interface to add external storage capabilities to microcontroller projects. Compatible with Arduino, Raspberry Pi, and more.",
+        "keywords": "micro SD, TF card, module, arduino, SPI, external storage, microcontroller, MCU"
+      },
+      "buy": true,
+      "weight": 10,
+      "images": [
+        {
+          "src": "Micro-SD-Card-Module-1.webp",
+          "alt": "Micro SD Card Module - Top view"
+        },
+        {
+          "src": "Micro-SD-Card-Module-2.webp",
+          "alt": "Micro SD Card Module - Bottom view"
+        },
+        {
+          "src": "Micro-SD-Card-Module-3.webp",
+          "alt": "Micro SD Card Module - Top view with dimensions"
+        }
+      ],
+      "features": [
+        {
+          "refId": 76,
+          "value": "42 x 24 x 12mm"
+        }
+      ],
+      "content": "<p>The Micro SD Card Module with SPI interface offers a convenient solution for adding external storage capabilities to various microcontroller projects. Utilizing the Serial Peripheral Interface (SPI) protocol, this module enables seamless communication between the microcontroller and the microSD card, facilitating fast and efficient data transfer.</p>",
+      "peculiarities": [
+        "SPI Interface: The module's SPI interface allows it to be used with a wide range of microcontroller platforms that support SPI communication, including Arduino, Raspberry Pi, ESP32, STM32, and more.",
+        "Universal Compatibility: Compatible with standard microSD cards, the module supports various storage capacities and brands, making it versatile for different project requirements.",
+        "Easy Integration: With its simple interface and compact design, the module can be easily integrated into a variety of projects, from data logging and sensor applications to multimedia playback and IoT devices.",
+        "Reliable Performance: Designed for reliability and stability, the module provides consistent performance in reading and writing data to the microSD card, ensuring seamless operation in diverse applications.",
+        "Wide Range of Applications: Suitable for a multitude of applications beyond microcontroller projects, including digital cameras, audio recorders, GPS devices, and more, the module offers versatile storage solutions for various electronic devices."
+      ]
+    },
+    {
       "stripeProductId": "prod_Q6cpHFceUb0Jun",
       "stripePriceId": "price_1PGPZZARhMwSarZXEKV08kll",
       "categoryId": 18,
