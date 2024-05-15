@@ -262,7 +262,7 @@
         "measurement": "8 channels"
       },
       "buy": true,
-      "weight": 10,
+      "weight": 5,
       "datasheetId": "74HC4051xx",
       "content": "<p>The 8-channel analog multiplexer module 74HC4051 can be used when there are multiple analog inputs/outputs in a circuit. In this case, it allows you to select one of the 8 inputs/outputs and route its signal to a single input/output.</p>",
       "warningContent": "<p>The voltage on the input/output pins or the input/output selection pins should not exceed the power supply voltage of the circuit.</p>",
@@ -951,6 +951,8 @@
         "description": "Discover the OLED I²C Display Module 128x32 SSD1306 – a compact, high-quality display solution for various electronic projects. Featuring OLED technology, SSD1306 driver IC, and I²C communication interface.",
         "keywords": "OLED, display module, arduino, IIC, I2C, 128x32, compact, SSD1306"
       },
+      "buy": true,
+      "weight": 10,
       "images": [
         {
           "src": "OLED-I2C-Display-Module-128x32-0.91-inch-1.webp",
@@ -967,8 +969,6 @@
           "alt": "OLED I²C Display Module 128x32 - Bottom side"
         }
       ],
-      "buy": true,
-      "weight": 15,
       "features": [
         {
           "refId": 13,

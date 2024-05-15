@@ -504,7 +504,7 @@
         "keywords": "0515, A0515S-2WR3, hi-link, power, dc-dc, dual-outputs, 5V, 15V, 2W"
       },
       "buy": true,
-      "weight": 10,
+      "weight": 7,
       "datasheetId": "A0515S-2WR3",
       "manufacturerId": "14",
       "features": [
@@ -570,7 +570,7 @@
       "categoryId": 23,
       "manufacturerId": "17",
       "buy": true,
-      "weight": 50,
+      "weight": 100,
       "features": [
         {
           "refId": 19,
