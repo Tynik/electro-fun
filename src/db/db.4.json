@@ -12,6 +12,9 @@
       },
       "buy": true,
       "weight": 10,
+      "relatedDatasheetIds": [
+        "SN74LVC125A"
+      ],
       "images": [
         {
           "src": "Micro-SD-Card-Module-1.webp",
@@ -28,8 +31,35 @@
       ],
       "features": [
         {
+          "refId": 2,
+          "value": "SPI"
+        },
+        {
+          "refId": 13,
+          "value": "4.5 - 5.5V"
+        },
+        {
+          "refId": 28,
+          "value": "200mA"
+        },
+        {
+          "refId": 29,
+          "value": "80mA"
+        },
+        {
           "refId": 76,
           "value": "42 x 24 x 12mm"
+        },
+        {
+          "refId": 187,
+          "value": [
+            "Micro SD ≤ 2Gb",
+            "Micro SDHC ≤ 32Gb"
+          ]
+        },
+        {
+          "refId": 188,
+          "value": "0.2mA"
         }
       ],
       "content": "<p>The Micro SD Card Module with SPI interface offers a convenient solution for adding external storage capabilities to various microcontroller projects. Utilizing the Serial Peripheral Interface (SPI) protocol, this module enables seamless communication between the microcontroller and the microSD card, facilitating fast and efficient data transfer.</p>",
@@ -532,10 +562,10 @@
       "stripeProductId": "prod_Q1QHLPUEEbzB9F",
       "stripePriceId": "price_1PBNR6ARhMwSarZXcmD1YmxW",
       "title": "WeAct USB Logic Analyzer",
-      "subtitle": "24MHz 8-channels",
+      "subtitle": "24MHz 8-channel",
       "seo": {
         "description": "WeAct LogicAnalyzerV1 offers powerful logic analysis capabilities with its Cypress/Corebai USB controller. Capture data from 8 channels simultaneously at a maximum sampling rate of 24MHz, supporting logic levels up to 5.5V. Compatible with sigrok-PulseView software for open-source protocol analysis on Linux, Windows, and Mac OS X",
-        "keywords": "logic analyzer, WeAct, cypress, corebai, 8-channels, 24MHz, logic level analysis, protocol analysis"
+        "keywords": "logic analyzer, WeAct, cypress, corebai, 8-channel, 24MHz, logic level analysis, protocol analysis"
       },
       "categoryId": 23,
       "manufacturerId": "17",

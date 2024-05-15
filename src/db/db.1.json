@@ -239,8 +239,17 @@
     }
   },
   "datasheets": {
+    "SN74LVC125A": {
+      "lang": "en",
+      "manufacturerId": "8",
+      "keywords": [
+        "4-channel",
+        "bus buffer"
+      ]
+    },
     "CD74HC4067": {
       "lang": "en",
+      "manufacturerId": "8",
       "keywords": [
         "16-channel",
         "analog",
@@ -951,84 +960,48 @@
   },
   "itemFeatures": {
     "1": {
-      "name": "CPU",
-      "categories": [
-        2
-      ]
+      "name": "CPU"
     },
     "2": {
-      "name": "Interface",
-      "categories": [
-        1
-      ]
+      "name": "Interface"
     },
     "3": {
       "name": "Power",
-      "categories": [
-        1
-      ],
       "featSecRefId": 3
     },
     "4": {
       "name": "Temperature",
-      "categories": [
-        1
-      ],
       "featSecRefId": 5
     },
     "5": {
       "name": "Humidity",
-      "categories": [
-        1
-      ],
       "featSecRefId": 5
     },
     "6": {
       "name": "Pressure",
-      "categories": [
-        1
-      ],
       "featSecRefId": 5
     },
     "7": {
-      "name": "I²C Address",
-      "categories": [
-        1
-      ]
+      "name": "I²C Address"
     },
     "8": {
       "name": "Temperature",
-      "categories": [
-        1
-      ],
       "featSecRefId": 1
     },
     "9": {
       "name": "Pressure",
-      "categories": [
-        1
-      ],
       "featSecRefId": 1
     },
     "10": {
       "name": "Humidity",
-      "categories": [
-        1
-      ],
       "featSecRefId": 1
     },
     "11": {
       "name": "Humidity",
-      "categories": [
-        1
-      ],
       "featSecRefId": 2
     },
     "12": {
       "name": "Pressure",
-      "categories": [
-        1
-      ],
       "featSecRefId": 2
     },
     "13": {
@@ -1048,35 +1021,23 @@
       "suffix": {
         "axis": "-axis",
         "range": "º/s"
-      },
-      "categories": [
-        1
-      ]
+      }
     },
     "17": {
       "name": "Accelerometer",
       "suffix": {
         "axis": "-axis"
-      },
-      "categories": [
-        1
-      ]
+      }
     },
     "18": {
       "name": "Magnetometer",
       "suffix": {
         "axis": "-axis"
-      },
-      "categories": [
-        1
-      ]
+      }
     },
     "19": {
       "name": "USB",
-      "featSecRefId": 3,
-      "categories": [
-        1
-      ]
+      "featSecRefId": 3
     },
     "20": {
       "name": "Total",
@@ -1120,29 +1081,17 @@
     },
     "30": {
       "name": "Temperature Difference Between Sides",
-      "categories": [
-        3
-      ],
       "featSecRefId": 13
     },
     "31": {
       "name": "Cooling Power",
-      "categories": [
-        3
-      ],
       "featSecRefId": 13
     },
     "32": {
-      "name": "Number of Thermocouples",
-      "categories": [
-        3
-      ]
+      "name": "Number of Thermocouples"
     },
     "33": {
-      "name": "Resistance",
-      "categories": [
-        3
-      ]
+      "name": "Resistance"
     },
     "34": {
       "name": "Self-Learning (25Hz)",
@@ -1693,6 +1642,13 @@
     },
     "186": {
       "name": "Chip"
+    },
+    "187": {
+      "name": "Supported Cards"
+    },
+    "188": {
+      "name": "Min",
+      "featSecRefId": 7
     }
   },
   "items": [

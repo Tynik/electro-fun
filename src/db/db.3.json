@@ -255,7 +255,7 @@
       "stripePriceId": "price_1NQFdkARhMwSarZXqQemcab1",
       "categoryId": 18,
       "title": "74HC4051 (Module)",
-      "subtitle": "8-channels analog mux/demux",
+      "subtitle": "8-channel analog mux/demux",
       "seo": {
         "description": "74HC4051 - 8-channel analog multiplexer/demultiplexer",
         "keywords": "74HC4051, WCMCU-4051, 4051, multiplexer, demultiplexer, 8 channels, arduino, MUX, DEMUX",
@@ -685,10 +685,10 @@
       "stripePriceId": "price_1NQ6xYARhMwSarZXKaiy7dtj",
       "categoryId": 18,
       "title": "ADS1015 Module",
-      "subtitle": "12-bit ADC 4-channels I²C",
+      "subtitle": "12-bit ADC 4-channel I²C",
       "seo": {
         "description": "ADS1015 module - high-resolution analog-to-digital converter with x4 input channels. Ideal for precise measurement applications in electronic circuits.",
-        "keywords": "ADS1015, ADS1115, ADC, I2C, module, 12-bit, analog-to-digital, 4-channels",
+        "keywords": "ADS1015, ADS1115, ADC, I2C, module, 12-bit, analog-to-digital, 4-channel",
         "measurement": "12-bit"
       },
       "buy": true,
