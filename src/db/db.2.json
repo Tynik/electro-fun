@@ -1419,7 +1419,7 @@
         "keywords": "usb, pcb, type-c, breakout, female"
       },
       "buy": true,
-      "weight": 5,
+      "weight": 3,
       "images": [
         {
           "src": "USB-Type-C-Breakout-Board-1.webp",
@@ -1445,7 +1445,7 @@
         "keywords": "LiPo, Li-Po, lLithium-polymer, battery, rechargeable, 2000mAh, 3.7V"
       },
       "buy": true,
-      "weight": 15,
+      "weight": 25,
       "features": [
         {
           "refId": 14,

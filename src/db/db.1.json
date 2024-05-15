@@ -2706,7 +2706,7 @@
         "keywords": "IRF3205, MOSFET, transistor, 55V, 110A"
       },
       "buy": true,
-      "weight": 3,
+      "weight": 2,
       "datasheetId": "IRF3205",
       "manufacturerId": "6",
       "images": [
@@ -2789,7 +2789,7 @@
           ]
         }
       ],
-      "content": "",
+      "content": "<p>The IRF3205 is a high-power N-channel MOSFET transistor designed for use in a variety of electronic applications. With its low on-state resistance and high current-handling capabilities, the IRF3205 is commonly used in power switching circuits, motor control, voltage regulation, and other high-power applications.</p>",
       "externalLinks": [
         {
           "name": "Official IRF3205 Page",

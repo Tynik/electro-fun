@@ -125,7 +125,7 @@
       },
       "datasheetId": "Nichicon_ES",
       "buy": true,
-      "weight": 2,
+      "weight": 15,
       "options": {
         "1": {
           "name": "10uF 25V x 10pcs",
@@ -173,7 +173,7 @@
         "keywords": "electrolytic, aluminum, capacitor, high frequency, low ESR, low resistance"
       },
       "buy": true,
-      "weight": 3,
+      "weight": 10,
       "options": {
         "1": {
           "name": "4700uF 10V x 10pcs",
@@ -210,7 +210,7 @@
         "keywords": "electrolytic, capacitor, aluminum, energy storage, decoupling capacitors"
       },
       "buy": true,
-      "weight": 3,
+      "weight": 15,
       "options": {
         "1": {
           "name": "0.22uF 50V x 10pcs",
@@ -707,13 +707,14 @@
       "title": "CH32V003",
       "subtitle": "General-purpose MCU 32-bit RISC-V",
       "seo": {
-        "description": "",
-        "keywords": "CH32V003, CH32V003J4M6, SOP8, 32-bit, general-purpose, MCU, RISC-V"
+        "description": "CH32V003 industrial-grade RISC-V microcontroller with 48MHz main frequency, wide voltage support, low power consumption, and integrated peripherals including ADCs, op-amp comparators, and communication interfaces.",
+        "keywords": "CH32V003, CH32V003J4M6, SOP8, 32-bit, 48MHz, general-purpose, MCU, RISC-V"
       },
       "buy": true,
-      "weight": 2,
+      "weight": 1,
       "manufacturerId": "19",
       "datasheetId": "CH32V003",
+      "content": "<p>Discover the CH32V003 series, a lineup of industrial-grade general-purpose microcontrollers built on the robust QingKe RISC-V2A core design. With a 48MHz system main frequency, wide voltage support, and ultra-small package, these microcontrollers offer reliable performance in diverse industrial applications. Equipped with a range of integrated features including DMA controllers, 10-bit ADCs, op-amp comparators, and standard communication interfaces like USART, I2C, and SPI, the CH32V003 series delivers versatile functionality while maintaining low-power consumption. Explore the power and flexibility of the CH32V003 series for your next embedded project.</p>",
       "features": [
         {
           "refId": 20,
@@ -799,7 +800,7 @@
         "keywords": "CH32V003, CH32V003F4P6, WCH-LinkE, development-board, prototyping, general-purpose, MCU, RISC-V"
       },
       "buy": true,
-      "weight": 50,
+      "weight": 150,
       "manufacturerId": "19",
       "datasheetId": "CH32V00x-Evaluation-Board-Reference",
       "features": [
@@ -903,7 +904,7 @@
         "keywords": "inductor, power inductor, CD54, SMD, filtering, noise reduction, voltage regulation"
       },
       "buy": true,
-      "weight": 5,
+      "weight": 10,
       "images": [
         {
           "src": "Power-Inductor-CD54-1.webp",
