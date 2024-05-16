@@ -7,7 +7,7 @@
       "subtitle": "Low quiescent current LDO",
       "seo": {
         "description": "MCP1700 low dropout voltage regulator offering stable output voltage with minimal dropout. Ideal for battery-powered and low voltage applications.",
-        "keywords": "MCP1700, voltage-regulator, low-dropout, linear regulator, stable output, low quiescent current"
+        "keywords": "MCP1700, MCP1700-3302E, voltage-regulator, low-dropout, linear regulator, stable output, low quiescent current, TO92"
       },
       "buy": true,
       "weight": 1,
@@ -15,7 +15,7 @@
       "manufacturerId": "9",
       "options": {
         "1": {
-          "name": "TO-92",
+          "name": "3.3V (TO-92)",
           "default": true
         }
       },
