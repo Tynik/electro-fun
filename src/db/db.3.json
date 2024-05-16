@@ -2,22 +2,32 @@
   "items": [
     {
       "stripeProductId": "prod_OCemxwzlXzyoUp",
-      "stripePriceId": "price_1NQFSfARhMwSarZXa4Fk8FcR",
       "categoryId": 27,
       "title": "Voltage Regulator AMS1117",
-      "subtitle": "Output 3.3V ≤ 1A",
+      "subtitle": "1A LDO",
       "seo": {
         "description": "AMS1117 low dropout linear voltage regulator providing stable output voltage with minimal dropout. Wide input voltage range and high accuracy make it ideal for various electronic applications.",
-        "keywords": "AMS1117, voltage-regulator, 5V, 3.3V, 1A"
+        "keywords": "AMS1117, voltage-regulator, LOD, low dropout, 1A"
       },
       "buy": true,
       "weight": 1,
       "datasheetId": "AMS1117",
-      "content": "<p>The adjustable and fixed voltage regulators of the AMS1117 series are designed to provide an output current of up to 1A and operate up to 1V between inputs and outputs. The device's dropout voltage is guaranteed to be as low as 1.3V at maximum output current and decreases at lower load currents. On-chip trimming adjusts the reference voltage to within 1%. Current limit is also trimmed, minimizing the stress on both the regulator and the power source circuitry under overload conditions. AMS1117 devices are pin-compatible with other 3-pin SCSI regulators and are offered in a low-profile SOT-223 surface-mount package, SOIC 8L package, and a plastic TO-252 (DPAK) package.</p>",
+      "options": {
+        "1": {
+          "name": "Out 3.3V (SOT-223)",
+          "default": true
+        }
+      },
+      "price": {
+        "1": {
+          "stripePriceId": "price_1NQFSfARhMwSarZXa4Fk8FcR"
+        }
+      },
       "images": [
         {
           "src": "AMS1117-3.3V-1.webp",
-          "alt": "Voltage Regulator AMS1117 - Exterior View"
+          "alt": "Voltage Regulator AMS1117 - Exterior View",
+          "optionId": "1"
         },
         {
           "src": "AMS1117-3.3V-2.webp",
@@ -31,7 +41,8 @@
         },
         {
           "refId": 14,
-          "value": "3.235 - 3.365V"
+          "value": "3.235 - 3.365V",
+          "optionId": "1"
         },
         {
           "refId": 15,
@@ -39,11 +50,14 @@
         },
         {
           "refId": 42,
-          "value": "SOT-223"
+          "value": "SOT-223",
+          "optionId": "1"
         }
       ],
+      "content": "<p>The AMS1117 is a low dropout linear voltage regulator IC manufactured by Advanced Monolithic Systems (AMS), which is now a part of the ON Semiconductor family. This voltage regulator is widely used in electronic circuits to provide a stable output voltage from a higher input voltage source, with minimal dropout voltage.</p><p><h5>Low Dropout Voltage</h5>The AMS1117 has a low dropout voltage, typically around 1.2 volts at full load and room temperature, allowing it to regulate output voltage even when the input voltage is very close to the desired output voltage.</p><p><h5>Wide Input Voltage Range</h5>It can accept a wide range of input voltages, making it suitable for various applications where the input voltage may vary.</p><p><h5>Fixed Output Voltage Options</h5>The AMS1117 is available in fixed output voltage versions ranging from 1.8V to 5.0V, providing flexibility to meet different voltage requirements.</p><p><h5>High Accuracy</h5>It provides a stable output voltage with high accuracy and low output voltage noise, making it suitable for applications requiring precise voltage regulation.</p><p><h5>Current Limit Protection</h5>The AMS1117 includes built-in current limit protection to protect the regulator and the load from excessive current.</p><p><h5>Thermal Shutdown Protection</h5>Some versions of the AMS1117 feature thermal shutdown protection, which shuts down the regulator in case of overheating, preventing damage to the device.</p><p><h5>Compact Size</h5>The AMS1117 comes in a small surface-mount or through-hole package, making it easy to integrate into various electronic designs.</p><p>Overall, the AMS1117 is a reliable and cost-effective voltage regulator suitable for a wide range of applications, including battery-powered devices, embedded systems, consumer electronics, and more. Its low dropout voltage, wide input voltage range, and high accuracy make it a popular choice among electronics enthusiasts and professionals alike.</p>",
       "relatedDatasheetIds": [
-        "LM1117"
+        "LM1117",
+        "MCP1700"
       ]
     },
     {
