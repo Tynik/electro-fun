@@ -1,6 +1,69 @@
 {
   "items": [
     {
+      "stripeProductId": "prod_Q7P7JLXjG4lcAI",
+      "categoryId": 27,
+      "title": "Voltage Regulator MCP1700",
+      "subtitle": "Low quiescent current LDO",
+      "seo": {
+        "description": "MCP1700 low dropout voltage regulator offering stable output voltage with minimal dropout. Ideal for battery-powered and low voltage applications.",
+        "keywords": "MCP1700, voltage-regulator, low-dropout, linear regulator, stable output, low quiescent current"
+      },
+      "buy": true,
+      "weight": 1,
+      "datasheetId": "MCP1700",
+      "manufacturerId": "9",
+      "options": {
+        "1": {
+          "name": "TO-92",
+          "default": true
+        }
+      },
+      "price": {
+        "1": {
+          "stripePriceId": "price_1PHAJTARhMwSarZXuuOuWjTk"
+        }
+      },
+      "images": [
+        {
+          "src": "Voltage-Regulator-MCP1700-1.webp",
+          "alt": "Voltage Regulator MCP1700",
+          "optionId": "1"
+        }
+      ],
+      "features": [
+        {
+          "refId": 13,
+          "value": "2.3 - 6V"
+        },
+        {
+          "refId": 14,
+          "value": "1.2 - 5V"
+        },
+        {
+          "refId": 15,
+          "value": [
+            "200mA (output < 2.5V)",
+            "250mA (output ≥ 2.5V)"
+          ]
+        },
+        {
+          "refId": 42,
+          "value": "TO-92",
+          "optionId": "1"
+        },
+        {
+          "refId": 118,
+          "value": "Yes"
+        },
+        {
+          "refId": 189,
+          "value": "Yes"
+        }
+      ],
+      "content": "<p>The MCP1700 is a low dropout (LDO) voltage regulator manufactured by Microchip Technology. It's designed to provide a stable output voltage with minimal dropout voltage, making it ideal for applications requiring precise voltage regulation even when the input voltage is close to the output voltage.</p><p><h5>Low Dropout Voltage</h5>The MCP1700 has a very low dropout voltage, typically around 178mV at full load and room temperature, allowing it to regulate output voltage even when the input voltage is very close to the desired output voltage.</p><p><h5>Wide Input Voltage Range</h5>It can accept a wide range of input voltages, from 2.3V to 6.0V, making it suitable for various battery-powered and low voltage applications.</p><p><h5>Fixed and Adjustable Output Voltage Options</h5>The MCP1700 is available in fixed output voltage versions ranging from 1.2V to 5.0V, as well as an adjustable version that allows the output voltage to be set anywhere between 1.22V and 5.5V using external resistors.</p><p><h5>Low Quiescent Current</h5>It has a low quiescent current, typically around 1.6µA, which minimizes power consumption and extends battery life in battery-powered applications.</p><p><h5>Stable Output</h5>The MCP1700 provides a stable output voltage with low output voltage noise and excellent load and line regulation characteristics.</p><p><h5>Shutdown Mode</h5>Some versions of the MCP1700 feature a shutdown mode, allowing the regulator to be disabled to conserve power when not in use.</p><p>Overall, the MCP1700 is a versatile and reliable voltage regulator suitable for a wide range of applications, including battery-powered devices, sensor modules, portable gadgets, and more. Its low dropout voltage, wide input voltage range, and low quiescent current make it an excellent choice for applications where efficiency and precision are critical.</p>"
+    },
+    {
       "stripeProductId": "prod_Q71N96wBiDELwm",
       "stripePriceId": "price_1PGnKSARhMwSarZXoZS6FV6g",
       "categoryId": 18,

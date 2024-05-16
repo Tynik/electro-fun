@@ -4,24 +4,24 @@
       "stripeProductId": "prod_OCemxwzlXzyoUp",
       "stripePriceId": "price_1NQFSfARhMwSarZXa4Fk8FcR",
       "categoryId": 27,
-      "title": "AMS1117 3.3V",
-      "subtitle": "Voltage Regulator",
+      "title": "Voltage Regulator AMS1117",
+      "subtitle": "Output 3.3V ≤ 1A",
       "seo": {
-        "description": "AMS1117 - 5V to 3.3V Voltage Regulator",
-        "keywords": "ams1117, voltage-regulator, 5V, 3.3V"
+        "description": "AMS1117 low dropout linear voltage regulator providing stable output voltage with minimal dropout. Wide input voltage range and high accuracy make it ideal for various electronic applications.",
+        "keywords": "AMS1117, voltage-regulator, 5V, 3.3V, 1A"
       },
       "buy": true,
       "weight": 1,
       "datasheetId": "AMS1117",
-      "content": "<p>The adjustable and fixed voltage regulators of the AMS1117 series are designed to provide an output current of up to 1A and operate up to 1V between inputs and outputs. The device's dropout voltage is guaranteed to be as low as 1.3V at maximum output current and decreases at lower load currents.\n\nOn-chip trimming adjusts the reference voltage to within 1%. Current limit is also trimmed, minimizing the stress on both the regulator and the power source circuitry under overload conditions.\n\nAMS1117 devices are pin-compatible with other 3-pin SCSI regulators and are offered in a low-profile SOT-223 surface-mount package, SOIC 8L package, and a plastic TO-252 (DPAK) package.</p>",
+      "content": "<p>The adjustable and fixed voltage regulators of the AMS1117 series are designed to provide an output current of up to 1A and operate up to 1V between inputs and outputs. The device's dropout voltage is guaranteed to be as low as 1.3V at maximum output current and decreases at lower load currents. On-chip trimming adjusts the reference voltage to within 1%. Current limit is also trimmed, minimizing the stress on both the regulator and the power source circuitry under overload conditions. AMS1117 devices are pin-compatible with other 3-pin SCSI regulators and are offered in a low-profile SOT-223 surface-mount package, SOIC 8L package, and a plastic TO-252 (DPAK) package.</p>",
       "images": [
         {
           "src": "AMS1117-3.3V-1.webp",
-          "alt": "AMS1117 3.3V - Exterior View"
+          "alt": "Voltage Regulator AMS1117 - Exterior View"
         },
         {
           "src": "AMS1117-3.3V-2.webp",
-          "alt": "AMS1117 3.3V - Connection Diagram"
+          "alt": "Voltage Regulator AMS1117 - Connection Diagram"
         }
       ],
       "features": [

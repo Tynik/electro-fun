@@ -239,6 +239,17 @@
     }
   },
   "datasheets": {
+    "MCP1700": {
+      "lang": "en",
+      "manufacturerId": "9",
+      "keywords": [
+        "voltage regulator",
+        "fixed output voltage",
+        "stable output voltage",
+        "load regulation",
+        "LDO"
+      ]
+    },
     "SN74LVC125A": {
       "lang": "en",
       "manufacturerId": "8",
@@ -899,12 +910,6 @@
       "icon": "threeDPrinter"
     },
     {
-      "id": 26,
-      "name": "Displays",
-      "icon": "tv",
-      "visible": false
-    },
-    {
       "id": 27,
       "name": "ICs",
       "icon": "chip"
@@ -1397,12 +1402,12 @@
       "featSecRefId": 12
     },
     "119": {
-      "name": "Over-current Protection",
+      "name": "Over Current Protection",
       "type": "bool",
       "featSecRefId": 12
     },
     "120": {
-      "name": "Over-voltage Protection",
+      "name": "Over Voltage Protection",
       "type": "bool",
       "featSecRefId": 12
     },
@@ -1649,6 +1654,11 @@
     "188": {
       "name": "Min",
       "featSecRefId": 7
+    },
+    "189": {
+      "name": "Over Temperature Protection",
+      "type": "bool",
+      "featSecRefId": 12
     }
   },
   "items": [
