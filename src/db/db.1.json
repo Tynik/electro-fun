@@ -813,6 +813,16 @@
     },
     "PMS5003": {
       "lang": "en"
+    },
+    "TCA9548A": {
+      "lang": "en",
+      "manufacturerId": "8",
+      "keywords": [
+        "8-channel switch",
+        "I2C",
+        "bidirectional",
+        "SMBus"
+      ]
     }
   },
   "docs": [

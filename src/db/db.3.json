@@ -1,6 +1,46 @@
 {
   "items": [
     {
+      "stripeProductId": "prod_Q89QfxymIbTDkF",
+      "stripePriceId": "price_1PHt7WARhMwSarZXpTy4pNRU",
+      "categoryId": 18,
+      "title": "TCA9548A Breakout Board",
+      "subtitle": "8-channel I²C multiplexer",
+      "seo": {
+        "description": "TCA9548A Breakout Board: Easily manage up to eight I²C buses with one interface. Perfect for projects with multiple I²C devices, featuring flexible voltage operation and compact design.",
+        "keywords": "TCA9548A, breakout board, I2C, multiplexer, 8-channel, multi-channel, I2C device expansion"
+      },
+      "buy": true,
+      "weight": 10,
+      "datasheetId": "TCA9548A",
+      "features": [
+      ],
+      "images": [
+        {
+          "src": "TCA9548A-Breakout-Board-1.webp",
+          "alt": "TCA9548A Breakout Board - Top view"
+        },
+        {
+          "src": "TCA9548A-Breakout-Board-2.webp",
+          "alt": "TCA9548A Breakout Board - Bottom view"
+        },
+        {
+          "src": "TCA9548A-Breakout-Board-3.webp",
+          "alt": "TCA9548A Breakout Board - Connection"
+        }
+      ],
+      "content": "<p>The TCA9548A is a powerful chip designed to simplify the use of multiple I²C devices in your projects. This breakout board leverages the TCA9548A I²C multiplexer chip, enabling communication with up to eight separate I²C buses using a single I²C interface on your microcontroller.</p>",
+      "externalLinks": [
+        {
+          "name": "Guide for TCA9548A I2C Multiplexer: ESP32, ESP8266, Arduino",
+          "url": "https://randomnerdtutorials.com/tca9548a-i2c-multiplexer-esp32-esp8266-arduino",
+          "lang": "en",
+          "icon": "randomnerdtutorials.com.webp",
+          "iconAlt": "randomnerdtutorials.com"
+        }
+      ]
+    },
+    {
       "stripeProductId": "prod_Q88PpYr0VjCEZR",
       "categoryId": 7,
       "title": "SMD Rectifier Diode",
@@ -10,7 +50,7 @@
         "keywords": "1N4001, 1N4004, 1N4007, SS14, SS24, SS34, SS16, SS26, SS36, AC to DC conversion, rectifier diode, SMD, SMA, polarity protection diode"
       },
       "buy": true,
-      "weight": 1,
+      "weight": 2,
       "features": [
         {
           "refId": 190,
@@ -444,11 +484,11 @@
       "stripeProductId": "prod_OCex9p9bj16Ue8",
       "stripePriceId": "price_1NQFdkARhMwSarZXqQemcab1",
       "categoryId": 18,
-      "title": "74HC4051 (Module)",
+      "title": "74HC4051 Breakout Board",
       "subtitle": "8-channel analog mux/demux",
       "seo": {
         "description": "74HC4051 - 8-channel analog multiplexer/demultiplexer",
-        "keywords": "74HC4051, WCMCU-4051, 4051, multiplexer, demultiplexer, 8 channels, arduino, MUX, DEMUX",
+        "keywords": "74HC4051, WCMCU-4051, breakout board, multiplexer, demultiplexer, 8-channel, arduino, mux, demux",
         "measurement": "8 channels"
       },
       "buy": true,
