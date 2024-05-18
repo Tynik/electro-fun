@@ -1681,6 +1681,9 @@
     },
     "191": {
       "name": "I<sub>F(AV)</sub>"
+    },
+    "192": {
+      "name": "Frequency"
     }
   },
   "items": [

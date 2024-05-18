@@ -5,7 +5,7 @@
       "stripePriceId": "price_1PHt7WARhMwSarZXpTy4pNRU",
       "categoryId": 18,
       "title": "TCA9548A Breakout Board",
-      "subtitle": "8-channel I²C multiplexer",
+      "subtitle": "8-channel I²C multiplexer with reset",
       "seo": {
         "description": "TCA9548A Breakout Board: Easily manage up to eight I²C buses with one interface. Perfect for projects with multiple I²C devices, featuring flexible voltage operation and compact design.",
         "keywords": "TCA9548A, breakout board, I2C, multiplexer, 8-channel, multi-channel, I2C device expansion"
@@ -14,6 +14,18 @@
       "weight": 10,
       "datasheetId": "TCA9548A",
       "features": [
+        {
+          "refId": 13,
+          "value": "1.65 - 5.5V"
+        },
+        {
+          "refId": 177,
+          "value": 8
+        },
+        {
+          "refId": 192,
+          "value": "≤ 0.4MHz"
+        }
       ],
       "images": [
         {
@@ -31,6 +43,13 @@
       ],
       "content": "<p>The TCA9548A is a powerful chip designed to simplify the use of multiple I²C devices in your projects. This breakout board leverages the TCA9548A I²C multiplexer chip, enabling communication with up to eight separate I²C buses using a single I²C interface on your microcontroller.</p>",
       "externalLinks": [
+        {
+          "name": "Official TCA9548A page",
+          "url": "https://www.ti.com/product/TCA9548A",
+          "lang": "en",
+          "icon": "ti.com.ico",
+          "iconAlt": "ti.com"
+        },
         {
           "name": "Guide for TCA9548A I2C Multiplexer: ESP32, ESP8266, Arduino",
           "url": "https://randomnerdtutorials.com/tca9548a-i2c-multiplexer-esp32-esp8266-arduino",
