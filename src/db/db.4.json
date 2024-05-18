@@ -962,6 +962,43 @@
       ]
     },
     {
+      "stripeProductId": "prod_Q7zqNebPuPocGp",
+      "categoryId": 30,
+      "title": "Annular Common Mode Inductor",
+      "subtitle": "High current filter inductor",
+      "seo": {
+        "description": "Annular Common Mode Filter Inductor suppresses common mode noise and EMI, ensuring signal integrity and reducing interference in power supplies, communication lines, and electronic systems.",
+        "keywords": "inductor, common mode choke, EMI filter, filter inductor, ring inductor, high current inductor"
+      },
+      "buy": true,
+      "weight": 5,
+      "options": {
+        "1": {
+          "name": "10mH 4A 0.6mm",
+          "default": true
+        }
+      },
+      "price": {
+        "1": {
+          "stripePriceId": "price_1PHjrAARhMwSarZXPUHsYUzP"
+        }
+      },
+      "features": [
+        {
+          "refId": 76,
+          "value": "14 x 9 x 5mm",
+          "optionId": "1"
+        }
+      ],
+      "images": [
+        {
+          "src": "Annular-Common-Mode-Filter-Inductor-1.webp",
+          "alt": "Annular Common Mode Filter Inductor"
+        }
+      ],
+      "content": "<p>The Annular Common Mode Filter Inductor is a crucial component in electronic circuits designed to suppress common mode noise and electromagnetic interference (EMI). These inductors are commonly used in power supply lines, signal lines, and data communication systems to enhance signal integrity and reduce interference.</p><p><h5>Common Mode Noise Suppression</h5>Effectively attenuates common mode noise, improving the overall performance and reliability of electronic systems.</p><p><h5>Electromagnetic Interference (EMI) Reduction</h5> Minimizes EMI, ensuring compliance with regulatory standards and reducing potential interference with other electronic devices.</p><p><h5>Compact Annular Design</h5>The annular (ring-shaped) design provides efficient magnetic coupling and high inductance in a compact form factor, making it suitable for space-constrained applications.</p><p><h5>High Current Handling</h5>Capable of handling high current levels, making them ideal for use in power supply lines and high-current circuits.</p><p>Applications of Annular Common Mode Filter Inductors include power supplies, data communication lines, audio and video equipment, automotive electronics, and industrial control systems. These inductors play a critical role in maintaining signal integrity and reducing noise in electronic circuits.</p>"
+    },
+    {
       "stripeProductId": "prod_Q42vWiDtIpxQMT",
       "categoryId": 30,
       "title": "SMD Power Inductor CD54",
