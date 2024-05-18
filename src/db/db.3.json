@@ -1,6 +1,182 @@
 {
   "items": [
     {
+      "stripeProductId": "prod_Q88PpYr0VjCEZR",
+      "categoryId": 7,
+      "title": "SMD Rectifier Diode",
+      "subtitle": "Efficient AC to DC Conversion Diodes",
+      "seo": {
+        "description": "SMD Rectifier Diodes for high-efficiency AC to DC conversion with models like 1N4001, 1N4004, 1N4007, SS14, SS24, SS34, SS16, SS26, and SS36. Ideal for power supplies, battery chargers, and more.",
+        "keywords": "1N4001, 1N4004, 1N4007, SS14, SS24, SS34, SS16, SS26, SS36, AC to DC conversion, rectifier diode, SMD, SMA, polarity protection diode"
+      },
+      "buy": true,
+      "weight": 1,
+      "features": [
+        {
+          "refId": 190,
+          "value": "50V",
+          "optionId": "1"
+        },
+        {
+          "refId": 191,
+          "value": "1A",
+          "optionId": "1"
+        },
+        {
+          "refId": 190,
+          "value": "400V",
+          "optionId": "2"
+        },
+        {
+          "refId": 191,
+          "value": "1A",
+          "optionId": "2"
+        },
+        {
+          "refId": 190,
+          "value": "1000V",
+          "optionId": "3"
+        },
+        {
+          "refId": 191,
+          "value": "1A",
+          "optionId": "3"
+        },
+        {
+          "refId": 190,
+          "value": "40V",
+          "optionId": "4"
+        },
+        {
+          "refId": 191,
+          "value": "1A",
+          "optionId": "4"
+        },
+        {
+          "refId": 190,
+          "value": "40V",
+          "optionId": "5"
+        },
+        {
+          "refId": 191,
+          "value": "2A",
+          "optionId": "5"
+        },
+        {
+          "refId": 190,
+          "value": "40V",
+          "optionId": "6"
+        },
+        {
+          "refId": 191,
+          "value": "3A",
+          "optionId": "6"
+        },
+        {
+          "refId": 190,
+          "value": "60V",
+          "optionId": "7"
+        },
+        {
+          "refId": 191,
+          "value": "1A",
+          "optionId": "7"
+        },
+        {
+          "refId": 190,
+          "value": "60V",
+          "optionId": "8"
+        },
+        {
+          "refId": 191,
+          "value": "2A",
+          "optionId": "8"
+        },
+        {
+          "refId": 190,
+          "value": "60V",
+          "optionId": "9"
+        },
+        {
+          "refId": 191,
+          "value": "3A",
+          "optionId": "9"
+        }
+      ],
+      "options": {
+        "1": {
+          "name": "1N4001 x 10pcs",
+          "default": true
+        },
+        "2": {
+          "name": "1N4004 x 10pcs"
+        },
+        "3": {
+          "name": "1N4007 x 10pcs"
+        },
+        "4": {
+          "name": "SS14 x 10pcs"
+        },
+        "5": {
+          "name": "SS24 x 10pcs"
+        },
+        "6": {
+          "name": "SS34 x 10pcs"
+        },
+        "7": {
+          "name": "SS16 x 10pcs"
+        },
+        "8": {
+          "name": "SS26 x 10pcs"
+        },
+        "9": {
+          "name": "SS36 x 10pcs"
+        }
+      },
+      "price": {
+        "1": {
+          "stripePriceId": "price_1PHs8pARhMwSarZXBZAiE2rg"
+        },
+        "2": {
+          "stripePriceId": "price_1PHs9qARhMwSarZXislon1ph"
+        },
+        "3": {
+          "stripePriceId": "price_1PHsAJARhMwSarZXCgET956l"
+        },
+        "4": {
+          "stripePriceId": "price_1PHsAiARhMwSarZX6qHbI78j"
+        },
+        "5": {
+          "stripePriceId": "price_1PHsB6ARhMwSarZXume7YsLm"
+        },
+        "6": {
+          "stripePriceId": "price_1PHsBTARhMwSarZXaPWvDSBZ"
+        },
+        "7": {
+          "stripePriceId": "price_1PHsBrARhMwSarZXT4LF3SeN"
+        },
+        "8": {
+          "stripePriceId": "price_1PHsCEARhMwSarZX7GMHmiXN"
+        },
+        "9": {
+          "stripePriceId": "price_1PHsCdARhMwSarZX4d2r2Zw2"
+        }
+      },
+      "images": [
+        {
+          "src": "SMD-Rectifier-Diode-1.webp",
+          "alt": "SMD Rectifier Diode"
+        }
+      ],
+      "content": "<p>SMD Rectifier Diodes are essential components in electronic circuits used for rectifying alternating current (AC) to direct current (DC). These diodes are available in various models, each suited for specific applications based on their voltage and current ratings. Common models include 1N4001, 1N4004, 1N4007, SS14, SS24, SS34, SS16, SS26, and SS36.</p><p><h5>High Efficiency</h5>Efficiently convert AC to DC, making them suitable for power supply and rectification applications.</p><p><h5>Low Forward Voltage Drop</h5>Minimize power loss and improve efficiency in electronic circuits.</p><p><h5>High Surge Current Capability</h5>Handle high inrush currents, protecting circuits from potential damage.</p><p><h5>Compact SMD Package</h5>Surface-mount design allows for easy integration into compact and space-constrained electronic devices.</p><p><h5>Wide Voltage Range</h5>Available in different voltage ratings to accommodate various application requirements.</p><p></p>",
+      "relatedDatasheetIds": [
+        "1N400x",
+        "SS1x",
+        "SS2x",
+        "SS3x"
+      ]
+    },
+    {
       "stripeProductId": "prod_OCemxwzlXzyoUp",
       "categoryId": 27,
       "title": "Voltage Regulator AMS1117",

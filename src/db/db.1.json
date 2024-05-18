@@ -650,6 +650,12 @@
     "SS1x": {
       "lang": "en"
     },
+    "SS2x": {
+      "lang": "en"
+    },
+    "SS3x": {
+      "lang": "en"
+    },
     "1N4148WS": {
       "lang": "en"
     },
@@ -1659,6 +1665,12 @@
       "name": "Over Temperature Protection",
       "type": "bool",
       "featSecRefId": 12
+    },
+    "190": {
+      "name": "V<sub>RRM</sub>"
+    },
+    "191": {
+      "name": "I<sub>F(AV)</sub>"
     }
   },
   "items": [
