@@ -823,6 +823,17 @@
         "bidirectional",
         "SMBus"
       ]
+    },
+    "PCF8574": {
+      "lang": "en",
+      "manufacturerId": "8",
+      "keywords": [
+        "8-bit",
+        "I/O expander",
+        "I/O expansion",
+        "I2C",
+        "bidirectional"
+      ]
     }
   },
   "docs": [
@@ -987,7 +998,7 @@
       "name": "Interface"
     },
     "3": {
-      "name": "Power",
+      "name": "Supply",
       "featSecRefId": 3
     },
     "4": {

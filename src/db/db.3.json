@@ -1,6 +1,54 @@
 {
   "items": [
     {
+      "stripeProductId": "prod_Q8B4SKs2FoGHjg",
+      "stripePriceId": "price_1PHuiQARhMwSarZXLC71xb0R",
+      "categoryId": 18,
+      "title": "PCF8574T Breakout Board",
+      "subtitle": "8-channel I/O expander",
+      "seo": {
+        "description": "PCF8574T Breakout Board to expand your microcontroller's I/O capabilities with 8 additional pins via I²C interface. Ideal for GPIO expansion, sensor networks, and automation projects",
+        "keywords": "PCF8574T, PCF8574, I/O expander, I2C, GPIO expansion, bidirectional, extra I/O pins"
+      },
+      "buy": true,
+      "weight": 10,
+      "datasheetId": "PCF8574",
+      "features": [
+        {
+          "refId": 2,
+          "value": "I²C"
+        },
+        {
+          "refId": 3,
+          "value": "2.5 - 6V"
+        },
+        {
+          "refId": 76,
+          "value": "23.4 x 21.1mm"
+        },
+        {
+          "refId": 177,
+          "value": 8
+        }
+      ],
+      "images": [
+        {
+          "src": "PCF8574T-Breakout-Board-1.webp",
+          "alt": "PCF8574T Breakout Board"
+        }
+      ],
+      "content": "<p>The PCF8574T Breakout Board is a practical and efficient solution for expanding the input/output capabilities of your microcontroller. Featuring the PCF8574T I/O expander chip, this breakout board provides 8 additional I/O pins through an I²C interface, making it ideal for projects that require more I/O pins than your microcontroller can provide.</p><p><h5>8 Additional I/O Pins</h5>Expands your microcontroller's I/O capacity by providing 8 extra pins.</p><p><h5>I²C Interface</h5>Utilizes a simple two-wire I²C interface for communication, requiring only two pins from your microcontroller.</p><p><h5>Configurable Addresses</h5>Supports up to 8 different I²C addresses, allowing multiple PCF8574T boards to be used simultaneously.</p><p><h5>Bidirectional I/O</h5>Each of the 8 I/O pins can be configured as either input or output.</p><p><h5>Low Power Consumption</h5>Designed for energy-efficient operation, suitable for battery-powered applications.</p><p><h5></h5></p>",
+      "externalLinks": [
+        {
+          "name": "PCF8574 GPIO Extender - With Arduino and NodeMCU",
+          "url": "https://www.instructables.com/PCF8574-GPIO-Extender-With-Arduino-and-NodeMCU",
+          "lang": "en",
+          "icon": "instructables.com.ico",
+          "iconAlt": "instructables.com"
+        }
+      ]
+    },
+    {
       "stripeProductId": "prod_Q89QfxymIbTDkF",
       "stripePriceId": "price_1PHt7WARhMwSarZXpTy4pNRU",
       "categoryId": 18,
@@ -15,16 +63,20 @@
       "datasheetId": "TCA9548A",
       "features": [
         {
-          "refId": 13,
+          "refId": 2,
+          "value": "I²C (≤ 400kHz)"
+        },
+        {
+          "refId": 3,
           "value": "1.65 - 5.5V"
+        },
+        {
+          "refId": 76,
+          "value": "31.5 x 21.4mm"
         },
         {
           "refId": 177,
           "value": 8
-        },
-        {
-          "refId": 192,
-          "value": "≤ 0.4MHz"
         }
       ],
       "images": [
