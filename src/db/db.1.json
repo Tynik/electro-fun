@@ -2158,10 +2158,10 @@
       "stripePriceId": "price_1NQ69FARhMwSarZXRNj9MqxP",
       "categoryId": 7,
       "title": "TEC1-12715",
-      "subtitle": "Peltier Element 40x40x4mm, up to 136W",
+      "subtitle": "Peltier element up to 136W",
       "seo": {
-        "description": "TEC1-12715 - Peltier element with a power of up to 136W",
-        "keywords": "tec1-12715, peltier, thermocouple, cooling, heating"
+        "description": "TEC1-12715 thermoelectric cooler for efficient Peltier cooling module with 137W capacity and up to 68°C temperature differential. Ideal for electronics cooling, portable refrigeration, and temperature control.",
+        "keywords": "TEC1-12715, Peltier, thermocouple, cooling, heating, thermoelectric cooler, electronic cooling"
       },
       "datasheetId": "TEC1-12715",
       "buy": true,
@@ -2196,9 +2196,13 @@
         {
           "refId": 33,
           "value": "0.75Ohm"
+        },
+        {
+          "refId": 76,
+          "value": "40 x 40 x 3.6mm"
         }
       ],
-      "content": "",
+      "content": "<p>The TEC1-12715 is a thermoelectric cooling module, also known as a Peltier cooler, designed to create a temperature differential across its two sides, providing efficient cooling in various applications. This module is widely used in electronics cooling, small refrigeration units, and temperature control systems.</p>",
       "warningContent": "<p>Do not allow the hot side of the thermoelectric element to exceed 50°C, as the thermoelectric element will fail within 1-2 minutes of operation without heat dissipation.</p>"
     },
     {

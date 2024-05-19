@@ -365,7 +365,7 @@
       "title": "PZEM-004T v3.0",
       "subtitle": "80 - 260V and current up to 100A",
       "seo": {
-        "description": "PZEM-004T v3 - measurement of voltage 80 - 260V and current up to 100A",
+        "description": "PZEM-004T v3.0 power monitor with accurate AC voltage, current, power, and energy measurement with TTL serial interface. Ideal for energy monitoring, smart home, and industrial applications.",
         "keywords": "pzem, v3, measurement, voltage, current, 100A"
       },
       "datasheetId": "PZEM-004",
@@ -474,7 +474,7 @@
           "value": "0.5%"
         }
       ],
-      "content": "<p><p/>",
+      "content": "<p>The PZEM-004T v3.0 is a compact power monitoring module designed to measure voltage, current, power, and energy consumption in AC electrical systems. This module is commonly used in various applications, including energy monitoring, smart home projects, and industrial automation.</p>",
       "relatedDatasheetIds": [
         "SD3004"
       ],
