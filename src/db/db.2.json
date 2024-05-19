@@ -1,6 +1,43 @@
 {
   "items": [
     {
+      "stripeProductId": "prod_Q8Y5FSWXE8jwzq",
+      "categoryId": 7,
+      "title": "SMD Tactile Push Button 3x4x2mm 2-pin",
+      "subtitle": "Miniature tactile switch",
+      "seo": {
+        "description": "SMD Tactile Push Button 3x4x2mm 2-pin is a miniature surface-mount switch with tactile feedback, ideal for compact electronic devices and precise control interfaces.",
+        "keywords": "push button, SMD tactile push button, 3x4mm push button, 2-pin tactile switch, miniature push button, compact tactile switch"
+      },
+      "buy": true,
+      "weight": 2,
+      "options": {
+        "1": {
+          "name": "10pcs",
+          "default": true
+        }
+      },
+      "price": {
+        "1": {
+          "stripePriceId": "price_1PIGzQARhMwSarZXy2GiMPzL"
+        }
+      },
+      "images": [
+        {
+          "src": "SMD-Tactile-Push-Button-3x4x2mm-2-pin-1.webp",
+          "alt": "SMD Tactile Push Button 3x4x2mm 2-pin"
+        }
+      ],
+      "content": "<p>The SMD Tactile Push Button 3x4mm 2-pin is a miniature and reliable switch designed for surface-mount applications. It provides a tactile feedback when pressed, making it ideal for compact and precise control interfaces in various electronic devices.</p>",
+      "peculiarities": [
+        "Miniature Size: Small 3x4mm footprint, perfect for space-constrained designs.",
+        "Tactile Feedback: Ensures a responsive and satisfying click when pressed.",
+        "Momentary Action: Active only while pressed, suitable for temporary input applications.",
+        "Surface-Mount Design: Easy to integrate into SMD PCBs, suitable for automated assembly processes.",
+        "Durable Construction: Designed for longevity, withstanding numerous press cycles."
+      ]
+    },
+    {
       "stripeProductId": "prod_Q8WyJHzAe1mxH1",
       "categoryId": 7,
       "title": "Tactile Push Button 6x6mm 4-pin",
@@ -28,7 +65,14 @@
           "alt": "Momentary Tactile Push Button 6x6mm"
         }
       ],
-      "content": "<p>The Momentary Tactile Push Button 6x6mm is a compact and reliable switch designed for a wide range of electronic applications. These push buttons provide a tactile feedback when pressed, ensuring a responsive and precise control interface for various devices and projects.</p>"
+      "content": "<p>The Momentary Tactile Push Button 6x6mm is a compact and reliable switch designed for a wide range of electronic applications. These push buttons provide a tactile feedback when pressed, ensuring a responsive and precise control interface for various devices and projects.</p>",
+      "peculiarities": [
+        "Compact Size: Small 6x6mm footprint, ideal for space-constrained applications.",
+        "Tactile Feedback: Provides a satisfying click response, ensuring reliable and precise operation.",
+        "Momentary Action: Switch is only active while being pressed, perfect for temporary inputs and controls.",
+        "Durable Design: Built to withstand repeated presses, ensuring long-lasting performance.",
+        "Easy to Integrate: Simple through-hole mounting for easy installation in PCBs and prototyping boards."
+      ]
     },
     {
       "stripeProductId": "prod_Q8QRBzQR4vpiH1",
