@@ -1,6 +1,94 @@
 {
-  "datasheets": {},
   "items": [
+    {
+      "stripeProductId": "prod_Q8QRBzQR4vpiH1",
+      "categoryId": 23,
+      "title": "WeAct ESP32-D0WD-V3 Dev Board",
+      "subtitle": "Dual-core 240MHz Type-C WiFi+Bluetooth",
+      "seo": {
+        "description": "WeAct ESP32-D0WD-V3 Dev Board is a high-performance development board with dual-core processing, Wi-Fi, and Bluetooth. Ideal for IoT, smart home, and automation projects.",
+        "keywords": "ESP32, ESP32-D0WD-V3, dual-core, WeAct, development board, WIFI, bluetooth, Arduino, PlatformIO"
+      },
+      "manufacturerId": "17",
+      "datasheetId": "ESP32",
+      "buy": true,
+      "weight": 10,
+      "options": {
+        "1": {
+          "name": "8MB Flash",
+          "default": true
+        }
+      },
+      "price": {
+        "1": {
+          "stripePriceId": "price_1PI9alARhMwSarZXa71OE6R6"
+        }
+      },
+      "features": [
+        {
+          "refId": 50,
+          "value": "Dual-core Xtensa® 32-bit LX6"
+        },
+        {
+          "refId": 51,
+          "value": "994.26 (4.14MHz)"
+        },
+        {
+          "refId": 53,
+          "value": "240MHz"
+        },
+        {
+          "refId": 54,
+          "value": "8MB",
+          "optionId": "1"
+        },
+        {
+          "refId": 59,
+          "value": "448KB"
+        },
+        {
+          "refId": 60,
+          "value": "520KB"
+        },
+        {
+          "refId": 135,
+          "value": "12-bit"
+        }
+      ],
+      "images": [
+        {
+          "src": "WeAct-ESP32-Development-Board-1.webp",
+          "alt": "WeAct ESP32 Development Board"
+        },
+        {
+          "src": "WeAct-ESP32-Development-Board-2.webp",
+          "alt": "WeAct ESP32 Development Board"
+        },
+        {
+          "src": "WeAct-ESP32-Development-Board-3.webp",
+          "alt": "WeAct ESP32 Development Board"
+        }
+      ],
+      "content": "<p>The WeAct ESP32-D0WD-V3 Dev Board is a powerful development board based on the ESP32-D0WD-V3 microcontroller. This board is designed for a wide range of IoT and embedded applications, offering robust performance, comprehensive wireless connectivity, and a rich set of features.<p/>",
+      "peculiarities": [
+        "ESP32-D0WD-V3 Chip: Features the latest ESP32-D0WD-V3 microcontroller with dual-core processing, integrated Wi-Fi, and Bluetooth capabilities.",
+        "Wireless Connectivity: Supports 2.4 GHz Wi-Fi and Bluetooth 4.2 (including BLE), providing versatile communication options for IoT projects.",
+        "Ample I/O Ports: Offers numerous GPIO pins, ADCs, DACs, UARTs, SPIs, I²Cs, and PWM outputs for extensive peripheral interfacing.",
+        "High Performance: Dual-core Xtensa® 32-bit LX6 CPU with adjustable clock frequency (up to 240 MHz), 520 KB SRAM, and 16 MB Flash memory for demanding applications.",
+        "Low Power Consumption: Advanced power management features, including multiple low-power modes, suitable for battery-operated devices.",
+        "Development Friendly: Compatible with popular development environments like Arduino IDE, ESP-IDF, and PlatformIO, making it easy to get started.",
+        "Compact Design: Small form factor for easy integration into various projects and prototypes."
+      ],
+      "externalLinks": [
+        {
+          "name": "WeActStudio ESP32CoreBoard",
+          "url": "https://github.com/WeActStudio/WeActStudio.ESP32CoreBoard",
+          "lang": "en",
+          "icon": "github.com.svg",
+          "iconAlt": "github.com"
+        }
+      ]
+    },
     {
       "stripeProductId": "prod_OCVlJp6AQyquy6",
       "categoryId": 12,
@@ -12,7 +100,6 @@
       },
       "buy": true,
       "weight": 10,
-      "content": "<p><p/>",
       "datasheetId": "LED0805BLUE",
       "images": [
         {
@@ -74,7 +161,8 @@
           "refId": 62,
           "value": "-40 - +100°C"
         }
-      ]
+      ],
+      "content": "<p><p/>"
     },
     {
       "stripeProductId": "prod_Pv1595MD9KfsNa",

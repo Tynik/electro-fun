@@ -629,7 +629,7 @@
       "stripeProductId": "prod_Q1QHLPUEEbzB9F",
       "stripePriceId": "price_1PBNR6ARhMwSarZXcmD1YmxW",
       "title": "WeAct USB Logic Analyzer",
-      "subtitle": "24MHz 8-channel",
+      "subtitle": "8-channel 24MHz for each",
       "seo": {
         "description": "WeAct LogicAnalyzerV1 offers powerful logic analysis capabilities with its Cypress/Corebai USB controller. Capture data from 8 channels simultaneously at a maximum sampling rate of 24MHz, supporting logic levels up to 5.5V. Compatible with sigrok-PulseView software for open-source protocol analysis on Linux, Windows, and Mac OS X",
         "keywords": "logic analyzer, WeAct, cypress, corebai, 8-channel, 24MHz, logic level analysis, protocol analysis"
@@ -654,7 +654,7 @@
         {
           "refId": 178,
           "value": "24MHz",
-          "info": "per channel"
+          "info": "for each channel"
         }
       ],
       "images": [

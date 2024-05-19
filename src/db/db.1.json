@@ -629,6 +629,9 @@
     "ESP32-S2-WROVER-x": {
       "lang": "en"
     },
+    "ESP32": {
+      "lang": "en"
+    },
     "BMP390": {
       "lang": "en"
     },
