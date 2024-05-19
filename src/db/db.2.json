@@ -1,6 +1,36 @@
 {
   "items": [
     {
+      "stripeProductId": "prod_Q8WyJHzAe1mxH1",
+      "categoryId": 7,
+      "title": "Tactile Push Button 6x6mm 4-pin",
+      "subtitle": "Compact tactile feedback switch",
+      "seo": {
+        "description": "Momentary Tactile Push Button 6x6mm as a compact, reliable switch with tactile feedback for precise control in various electronic applications.",
+        "keywords": "6x6mm button, tactile switch, momentary switch, PCB mount switch, button"
+      },
+      "buy": true,
+      "weight": 5,
+      "options": {
+        "1": {
+          "name": "6x6x5mm x 10pcs",
+          "default": true
+        }
+      },
+      "price": {
+        "1": {
+          "stripePriceId": "price_1PIFuOARhMwSarZXDZ35yKWb"
+        }
+      },
+      "images": [
+        {
+          "src": "Momentary-Tactile-Push-Button-6x6mm-1.webp",
+          "alt": "Momentary Tactile Push Button 6x6mm"
+        }
+      ],
+      "content": "<p>The Momentary Tactile Push Button 6x6mm is a compact and reliable switch designed for a wide range of electronic applications. These push buttons provide a tactile feedback when pressed, ensuring a responsive and precise control interface for various devices and projects.</p>"
+    },
+    {
       "stripeProductId": "prod_Q8QRBzQR4vpiH1",
       "categoryId": 23,
       "title": "WeAct ESP32-D0WD-V3 Dev Board",
@@ -306,7 +336,7 @@
         },
         {
           "refId": 76,
-          "value": "30 x 16.4 x (2.2 ± 0.1)mm"
+          "value": "30x16.4x(2.2 ± 0.1)mm"
         }
       ],
       "content": "<p>RF-BM-2652P2 is a radio frequency module based on CC2652P, which is a multi-protocol wireless module supporting Thread, Zigbee®, Bluetooth® 5.1 Low Energy, IEEE 802.15.4, smart objects with IPv6 (6LoWPAN) support, proprietary systems including TI 15.4-Stack (2.4 GHz), and parallel multi-protocol through DMM driver.\n\nIt combines 48MHz and 32.768 kHz crystals, 352KB of on-chip programmable flash memory, 256KB of ROM, 8KB of cache SRAM, and 80KB of ultra-low-leakage SRAM.\n\nIts main application processor, ARM® Cortex®-M4F, can operate at an extremely low current in flexible power modes. Additionally, the module enables long-range and low-power applications using the built-in powerful +20dBm amplifier with best-in-class transmit current at 85mA.\n\nIt features small size, long-range connectivity, and high reliability.</p>",
@@ -392,7 +422,7 @@
         },
         {
           "refId": 76,
-          "value": "30.1 x 73.7 x 14.3mm"
+          "value": "30.1x73.7x14.3mm"
         },
         {
           "refId": 77,
@@ -798,7 +828,7 @@
         },
         {
           "refId": 76,
-          "value": "18 x 23.5mm"
+          "value": "18x23.5mm"
         },
         {
           "refId": 54,
@@ -904,7 +934,7 @@
         },
         {
           "refId": 76,
-          "value": "18 x 22.5mm"
+          "value": "18x22.5mm"
         },
         {
           "refId": 97,
@@ -943,7 +973,7 @@
         },
         {
           "refId": 76,
-          "value": "98 x 56mm"
+          "value": "98x56mm"
         },
         {
           "refId": 156,
@@ -1099,7 +1129,7 @@
         },
         {
           "refId": 76,
-          "value": "215 x 115 x 30mm"
+          "value": "215x115x30mm"
         },
         {
           "refId": 117,
@@ -1252,7 +1282,7 @@
         },
         {
           "refId": 76,
-          "value": "146 x 74 x 34mm"
+          "value": "146x74x34mm"
         },
         {
           "refId": 83,
@@ -1362,7 +1392,7 @@
         },
         {
           "refId": 76,
-          "value": "109.7 x 98mm"
+          "value": "109.7x98mm"
         },
         {
           "refId": 165,
@@ -1517,7 +1547,7 @@
       "features": [
         {
           "refId": 76,
-          "value": "21.6 x 14.2 x 4.9mm"
+          "value": "21.6x14.2x4.9mm"
         }
       ],
       "content": "<p>USB Type-C Breakout Board featuring a meticulously designed interface with precise pin arrangement. With symmetrical reversible connectors, expanded data pin functionality, and enhanced current output, this ultra-compact board delivers unparalleled versatility. Crafted from high-quality FR-4 fiberglass and finished with a premium red oil tin injection process.</p>"
@@ -1545,7 +1575,7 @@
         },
         {
           "refId": 76,
-          "value": "10 x 34 x 50mm"
+          "value": "10x34x50mm"
         },
         {
           "refId": 171,

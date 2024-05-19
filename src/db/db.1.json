@@ -2199,7 +2199,7 @@
         },
         {
           "refId": 76,
-          "value": "40 x 40 x 3.6mm"
+          "value": "40x40x3.6mm"
         }
       ],
       "content": "<p>The TEC1-12715 is a thermoelectric cooling module, also known as a Peltier cooler, designed to create a temperature differential across its two sides, providing efficient cooling in various applications. This module is widely used in electronics cooling, small refrigeration units, and temperature control systems.</p>",
@@ -2414,7 +2414,7 @@
         },
         {
           "refId": 42,
-          "value": "QFN32 (5 x 5mm)"
+          "value": "QFN32 (5x5mm)"
         },
         {
           "refId": 38,
@@ -2468,7 +2468,7 @@
       "images": [
         {
           "src": "CC1310-1.webp",
-          "alt": "CC1310 - 5 x 5mm RHB"
+          "alt": "CC1310 - 5x5mm RHB"
         },
         {
           "src": "CC1310-2.webp",
@@ -2476,15 +2476,15 @@
         },
         {
           "src": "CC1310-3.webp",
-          "alt": "CC1310 - 4 x 4mm RSM Pinout"
+          "alt": "CC1310 - 4x4mm RSM Pinout"
         },
         {
           "src": "CC1310-4.webp",
-          "alt": "CC1310 - 5 x 5mm RHB Pinout"
+          "alt": "CC1310 - 5x5mm RHB Pinout"
         },
         {
           "src": "CC1310-5.webp",
-          "alt": "CC1310 - 7 x 7mm RGZ Pinout"
+          "alt": "CC1310 - 7x7mm RGZ Pinout"
         }
       ],
       "features": [
@@ -2519,9 +2519,9 @@
         {
           "refId": 42,
           "value": [
-            "7 x 7mm RGZ VQFN48 (30 GPIOs)",
-            "5 x 5mm RHB VQFN32 (15 GPIOs)",
-            "4 x 4mm RSM VQFN32 (10 GPIOs)"
+            "7x7mm RGZ VQFN48 (30 GPIOs)",
+            "5x5mm RHB VQFN32 (15 GPIOs)",
+            "4x4mm RSM VQFN32 (10 GPIOs)"
           ]
         },
         {
@@ -2564,7 +2564,7 @@
       "images": [
         {
           "src": "CC2652P-1.webp",
-          "alt": "CC2652P - RGZ 48 7 x 7mm"
+          "alt": "CC2652P - RGZ 48 7x7mm"
         },
         {
           "src": "CC2652P-2.webp",
@@ -2572,7 +2572,7 @@
         },
         {
           "src": "CC2652P-3.webp",
-          "alt": "CC2652P - pinout RGZ 7 x 7mm"
+          "alt": "CC2652P - pinout RGZ 7x7mm"
         },
         {
           "src": "CC2652P-4.webp",
@@ -2599,7 +2599,7 @@
         },
         {
           "refId": 42,
-          "value": "7 x 7mm RGZ VQFN48 (26 GPIOs)"
+          "value": "7x7mm RGZ VQFN48 (26 GPIOs)"
         },
         {
           "refId": 53,
