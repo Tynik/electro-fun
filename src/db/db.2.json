@@ -57,16 +57,16 @@
       ],
       "images": [
         {
-          "src": "WeAct-ESP32-Development-Board-1.webp",
-          "alt": "WeAct ESP32 Development Board"
+          "src": "WeAct-ESP32-D0WD-V3-Dev-Board-1.webp",
+          "alt": "WeAct ESP32-D0WD-V3 Dev Board"
         },
         {
-          "src": "WeAct-ESP32-Development-Board-2.webp",
-          "alt": "WeAct ESP32 Development Board"
+          "src": "WeAct-ESP32-D0WD-V3-Dev-Board-2.webp",
+          "alt": "WeAct ESP32-D0WD-V3 Dev Board"
         },
         {
-          "src": "WeAct-ESP32-Development-Board-3.webp",
-          "alt": "WeAct ESP32 Development Board"
+          "src": "WeAct-ESP32-D0WD-V3-Dev-Board-3.webp",
+          "alt": "WeAct ESP32-D0WD-V3 Dev Board"
         }
       ],
       "content": "<p>The WeAct ESP32-D0WD-V3 Dev Board is a powerful development board based on the ESP32-D0WD-V3 microcontroller. This board is designed for a wide range of IoT and embedded applications, offering robust performance, comprehensive wireless connectivity, and a rich set of features.<p/>",
