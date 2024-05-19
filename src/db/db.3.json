@@ -592,10 +592,10 @@
       "stripePriceId": "price_1NQFaqARhMwSarZXmcbfkzYJ",
       "categoryId": 13,
       "title": "AC-CT 0-100A 1:1000",
-      "subtitle": "Measurement of Alternating Current",
+      "subtitle": "Accurate 100A AC current measurement",
       "seo": {
-        "description": "Transformer for measuring alternating current",
-        "keywords": "transformer, current, measurement, 100A"
+        "description": "AC-CT 0-100A 1:1000 current transformer with accurate current measurement for AC systems up to 100A with 1:1000 ratio. Ideal for energy monitoring, power meters, and industrial automation.",
+        "keywords": "AC-CT 0-100A, current transformer, AC current measurement, load monitoring, power meters, energy monitoring, AC current sensor"
       },
       "buy": true,
       "weight": 15,
@@ -615,7 +615,8 @@
           "refId": 100,
           "value": "15.2mm"
         }
-      ]
+      ],
+      "content": "<p>The AC-CT 0-100A 1:1000 is a current transformer designed to measure alternating current (AC) up to 100 amperes and provide a scaled-down output for monitoring and analysis. This transformer is ideal for applications where precise current measurement is required, such as energy monitoring systems, power meters, and industrial automation.</p>"
     },
     {
       "stripeProductId": "prod_OCex9p9bj16Ue8",
