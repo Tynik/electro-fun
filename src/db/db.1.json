@@ -834,6 +834,17 @@
         "I2C",
         "bidirectional"
       ]
+    },
+    "PCF8575": {
+      "lang": "en",
+      "manufacturerId": "8",
+      "keywords": [
+        "16-bit",
+        "I/O expander",
+        "I/O expansion",
+        "I2C",
+        "bidirectional"
+      ]
     }
   },
   "docs": [

@@ -1,6 +1,65 @@
 {
   "items": [
     {
+      "stripeProductId": "prod_Q8PMGAj3jFkoPZ",
+      "stripePriceId": "price_1PI8Y8ARhMwSarZX1zlo7ILE",
+      "categoryId": 18,
+      "title": "PCF8575 Breakout Board",
+      "subtitle": "16-channel I/O expander",
+      "seo": {
+        "description": "PCF8575 Breakout Board to expand your microcontroller's I/O with 16 additional pins via I²C. Ideal for GPIO expansion, sensor arrays, and automation projects.",
+        "keywords": "PCF8575, I/O expander, I2C, GPIO expansion, bidirectional, 16 extra I/O pins, low power consumption"
+      },
+      "buy": true,
+      "weight": 10,
+      "datasheetId": "PCF8575",
+      "features": [
+        {
+          "refId": 2,
+          "value": "I²C (400 kHz)"
+        },
+        {
+          "refId": 3,
+          "value": "2.5 - 5.5V"
+        },
+        {
+          "refId": 76,
+          "value": "26.60 x 27.0mm"
+        },
+        {
+          "refId": 177,
+          "value": 16
+        }
+      ],
+      "images": [
+        {
+          "src": "PCF8575-Breakout-Board-1.webp",
+          "alt": "PCF8575 Breakout Board - Top view"
+        },
+        {
+          "src": "PCF8575-Breakout-Board-2.webp",
+          "alt": "PCF8575 Breakout Board - Bottom view"
+        }
+      ],
+      "content": "<p>The PCF8575 Breakout Board is an advanced I/O expansion solution that allows you to add 16 additional input/output pins to your microcontroller using a simple I²C interface. This board is ideal for applications that require more I/O pins than your microcontroller can provide.</p><p><h5>16 Additional I/O Pins</h5>Doubles the I/O capacity compared to the PCF8574, providing 16 extra pins.</p><p><h5>I²C Interface</h5>Uses a straightforward two-wire I²C interface for communication, saving valuable microcontroller pins.</p><p><h5>Configurable Addresses</h5>Supports multiple I²C addresses, enabling the use of multiple PCF8575 boards on the same I²C bus.</p><p><h5>Bidirectional I/O</h5>Each of the 16 I/O pins can be individually configured as either input or output.</p><p><h5>Interrupt Capabilities</h5>Features interrupt output for input state changes, enhancing responsiveness in your applications.</p><p><h5>Low Power Consumption</h5>Designed for efficient power usage, suitable for battery-powered devices.</p>",
+      "externalLinks": [
+        {
+          "name": "PCF8575 (i2c 16 Pins Digital I/O Expander) Fast Easy Usage (Arduino, Esp8266 and Esp32)",
+          "url": "https://www.instructables.com/PCF8575-i2c-16-Pins-Digital-IO-Expander-Fast-Easy-",
+          "lang": "en",
+          "icon": "instructables.com.ico",
+          "iconAlt": "instructables.com"
+        },
+        {
+          "name": "PCF8575 digital input and output expander with I2C bus",
+          "url": "https://github.com/xreef/PCF8575_library",
+          "lang": "en",
+          "icon": "github.com.svg",
+          "iconAlt": "github.com"
+        }
+      ]
+    },
+    {
       "stripeProductId": "prod_Q8B4SKs2FoGHjg",
       "stripePriceId": "price_1PHuiQARhMwSarZXLC71xb0R",
       "categoryId": 18,
@@ -16,7 +75,7 @@
       "features": [
         {
           "refId": 2,
-          "value": "I²C"
+          "value": "I²C (400 kHz)"
         },
         {
           "refId": 3,
@@ -37,7 +96,7 @@
           "alt": "PCF8574T Breakout Board"
         }
       ],
-      "content": "<p>The PCF8574T Breakout Board is a practical and efficient solution for expanding the input/output capabilities of your microcontroller. Featuring the PCF8574T I/O expander chip, this breakout board provides 8 additional I/O pins through an I²C interface, making it ideal for projects that require more I/O pins than your microcontroller can provide.</p><p><h5>8 Additional I/O Pins</h5>Expands your microcontroller's I/O capacity by providing 8 extra pins.</p><p><h5>I²C Interface</h5>Utilizes a simple two-wire I²C interface for communication, requiring only two pins from your microcontroller.</p><p><h5>Configurable Addresses</h5>Supports up to 8 different I²C addresses, allowing multiple PCF8574T boards to be used simultaneously.</p><p><h5>Bidirectional I/O</h5>Each of the 8 I/O pins can be configured as either input or output.</p><p><h5>Low Power Consumption</h5>Designed for energy-efficient operation, suitable for battery-powered applications.</p><p><h5></h5></p>",
+      "content": "<p>The PCF8574T Breakout Board is a practical and efficient solution for expanding the input/output capabilities of your microcontroller. Featuring the PCF8574T I/O expander chip, this breakout board provides 8 additional I/O pins through an I²C interface, making it ideal for projects that require more I/O pins than your microcontroller can provide.</p><p><h5>8 Additional I/O Pins</h5>Expands your microcontroller's I/O capacity by providing 8 extra pins.</p><p><h5>I²C Interface</h5>Utilizes a simple two-wire I²C interface for communication, requiring only two pins from your microcontroller.</p><p><h5>Configurable Addresses</h5>Supports up to 8 different I²C addresses, allowing multiple PCF8574T boards to be used simultaneously.</p><p><h5>Bidirectional I/O</h5>Each of the 8 I/O pins can be configured as either input or output.</p><p><h5>Low Power Consumption</h5>Designed for energy-efficient operation, suitable for battery-powered applications.</p>",
       "externalLinks": [
         {
           "name": "PCF8574 GPIO Extender - With Arduino and NodeMCU",
@@ -45,6 +104,13 @@
           "lang": "en",
           "icon": "instructables.com.ico",
           "iconAlt": "instructables.com"
+        },
+        {
+          "name": "PCF8574 PCF8574AP digital input and output expander with I2C bus",
+          "url": "https://github.com/xreef/PCF8574_library",
+          "lang": "en",
+          "icon": "github.com.svg",
+          "iconAlt": "github.com"
         }
       ]
     },
