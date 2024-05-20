@@ -39,6 +39,7 @@ import {
 } from '@mui/icons-material';
 
 import {
+  ButtonIcon,
   CapacitorIcon,
   ChipIcon,
   InductorIcon,
@@ -94,5 +95,6 @@ export const getIcon = (name: string, props: SvgIconProps = {}): any => {
     transistor: <TransistorIcon {...props} />,
     inductor: <InductorIcon {...props} />,
     capacitor: <CapacitorIcon {...props} />,
+    button: <ButtonIcon {...props} />,
   }[name];
 };

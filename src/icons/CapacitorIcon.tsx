@@ -5,7 +5,7 @@ import type { SvgIconOwnProps } from '@mui/material';
 export const CapacitorIcon = (props: SvgIconOwnProps) => {
   return (
     <SvgIcon {...props}>
-      <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 460">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 460" fill="currentColor">
         <g id="XMLID_995_">
           <path
             id="XMLID_1006_"

@@ -1045,10 +1045,36 @@
       "content": "<p>Elevate your electronic designs with the Power Inductor CD54, a crucial component for efficient power management. Whether you're designing power supplies, DC-DC converters, or voltage regulators, this inductor ensures stable and reliable power delivery. With its ability to store energy, filter out noise, and regulate voltage levels, the CD54 is indispensable for achieving optimal performance in your circuits.</p><p><strong>Filtering and Smoothing:</strong> Inductors are commonly used in conjunction with capacitors to form low-pass, high-pass, or band-pass filters. These filters remove unwanted frequencies or noise from signals, ensuring a smoother and cleaner output.</p><p><strong>Energy Storage:</strong> Inductors store energy in the form of a magnetic field when current flows through them. This stored energy can be released when the current decreases, acting as a source of energy for the circuit and smoothing out voltage fluctuations.</p><p><strong>DC-DC Conversion:</strong> Inductors play a crucial role in DC-DC converters by storing and transferring energy efficiently. They help regulate voltage levels, step up or step down voltage, and improve power conversion efficiency.</p><p><strong>Impedance Matching:</strong> Inductors are used in impedance matching circuits to ensure maximum power transfer between components, especially in RF circuits and antenna systems.</p><p><strong>Magnetic Coupling:</strong> Inductors can be used in transformers to transfer energy from one circuit to another while maintaining electrical isolation. This is commonly used in power distribution systems and voltage regulation.</p>"
     },
     {
+      "stripeProductId": "prod_Q8ufYA9TD6pDcY",
+      "stripePriceId": "price_1PIcplARhMwSarZXQqVcPq6Y",
+      "categoryId": 29,
+      "title": "SMD Resistors Kit 0805",
+      "subtitle": "80 values x 25pcs, Resistance ±5%",
+      "seo": {
+        "description": "SMD Resistors Kit 0805 comprehensive set of surface-mount resistors in 0805 size. Ideal for prototyping, repairs, and custom electronics design.",
+        "keywords": "SMD resistors kit, 0805 resistors, resistor assortment, PCB resistors"
+      },
+      "buy": true,
+      "weight": 50,
+      "features": [
+        {
+          "refId": 42,
+          "value": "0805"
+        }
+      ],
+      "images": [
+        {
+          "src": "SMD-Resistors-Kit-0805-1.webp",
+          "alt": "SMD Resistors Kit 0805"
+        }
+      ],
+      "content": "<p>The SMD Resistors Kit 0805 is a comprehensive assortment of surface-mount resistors, ideal for electronic prototyping and repair. This kit includes a wide range of resistance values, making it a versatile and essential component for any electronics enthusiast or professional.</p>"
+    },
+    {
       "stripeProductId": "prod_Q4cjWSr5eWA3Dx",
       "categoryId": 31,
       "title": "SMD Ceramic Capacitors 0805",
-      "subtitle": "36 Values",
+      "subtitle": "36 values",
       "seo": {
         "description": "SMD Ceramic Capacitors 0805 for compact and reliable electronic circuitry. Ideal for a range of applications, these capacitors offer stability and performance in a small form factor.",
         "keywords": "ceramic capacitor, capacitor, 0805, SMD"

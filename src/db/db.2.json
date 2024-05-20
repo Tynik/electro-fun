@@ -2,7 +2,7 @@
   "items": [
     {
       "stripeProductId": "prod_Q8Y5FSWXE8jwzq",
-      "categoryId": 7,
+      "categoryId": 1,
       "title": "SMD Tactile Push Button 3x4x2mm 2-pin",
       "subtitle": "Miniature tactile switch",
       "seo": {
@@ -39,7 +39,7 @@
     },
     {
       "stripeProductId": "prod_Q8WyJHzAe1mxH1",
-      "categoryId": 7,
+      "categoryId": 1,
       "title": "Tactile Push Button 6x6mm 4-pin",
       "subtitle": "Compact tactile feedback switch",
       "seo": {

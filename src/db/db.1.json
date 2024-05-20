@@ -870,6 +870,11 @@
   ],
   "categories": [
     {
+      "id": 1,
+      "name": "Buttons",
+      "icon": "button"
+    },
+    {
       "id": 4,
       "name": "DC-DC Converters",
       "icon": "flash"
@@ -918,7 +923,7 @@
     {
       "id": 18,
       "name": "Breakout Boards",
-      "icon": "apps"
+      "icon": "cpu"
     },
     {
       "id": 19,
