@@ -1008,7 +1008,7 @@
       },
       "buy": true,
       "weight": 150,
-      "content": "<p>Introducing the BIGTREETECH TFT35 SPI V2.1, a versatile and crystal-clear 3D printer display meticulously crafted by the innovative 3D printing team at Shenzhen Big Tree Technology Co., Ltd.</p><p>This medium-sized display features a seamless integration of SPI for LCD display and I2C for touch functionality. The touch screen, efficiently controlled by the onboard chip, not only ensures precise responsiveness but also contributes to cost-effectiveness. The connection to the motherboard is effortlessly established through the FPC cable, offering simplicity and convenience in setup.</p><p>Crafted with the user in mind, the TFT35 SPI V2.1 comes equipped with a XH2.54 terminal, facilitating seamless communication with the printer board. Elevate your 3D printing experience with this thoughtfully designed display unit, perfectly balancing functionality and user-friendly design.</p>",
+      "content": "<p>Introducing the BIGTREETECH TFT35 SPI V2.1 - crystal-clear 3D printer display meticulously crafted by the innovative 3D printing team at Shenzhen Big Tree Technology Co., Ltd.</p><p>This medium-sized display features a seamless integration of SPI for LCD display and I2C for touch functionality. The touch screen, efficiently controlled by the onboard chip, not only ensures precise responsiveness but also contributes to cost-effectiveness. The connection to the motherboard is effortlessly established through the FPC cable, offering simplicity and convenience in setup.</p><p>Crafted with the user in mind, the TFT35 SPI V2.1 comes equipped with a XH2.54 terminal, facilitating seamless communication with the printer board. Elevate your 3D printing experience with this thoughtfully designed display unit, perfectly balancing functionality and user-friendly design.</p>",
       "warningContent": "<p>TFT35 SPI can directly work with Manta M4P/M5P/M8P+CB1 v2.2 without the need for additional modules. Due to the absence of an FPC IPS interface on the PI4B Adapter, when using TFT 35 SPI with the PI4B Adapter + CB1 v2.2, it still requires an IO2CAN module for interface conversion.</p>",
       "features": [
         {
@@ -1064,6 +1064,15 @@
       "relatedDatasheetIds": [
         "ILI9488",
         "NS2009"
+      ],
+      "externalLinks": [
+        {
+          "name": "TFT35-SPI V2.1",
+          "url": "https://github.com/bigtreetech/TFT35-SPI/tree/master/v2",
+          "lang": "en",
+          "icon": "github.com.svg",
+          "iconAlt": "github.com"
+        }
       ]
     },
     {
@@ -1220,6 +1229,7 @@
       "title": "Stepper Motor NEMA 17 (40mm)",
       "subtitle": "17CS04A-170E",
       "brandId": "2",
+      "manufacturerId": "21",
       "seo": {
         "description": "Stepper Motor NEMA 17 (40mm) 17CS04A-170E",
         "keywords": "stepper-motor, nema, 40mm, 17cs04a-170e"
@@ -1259,7 +1269,7 @@
         },
         {
           "refId": 140,
-          "value": "0.42N⋅m"
+          "value": "0.42N/m"
         },
         {
           "refId": 141,
@@ -1279,7 +1289,7 @@
         },
         {
           "refId": 145,
-          "value": "57g⋅cm²"
+          "value": "57g/cm²"
         },
         {
           "refId": 146,
@@ -1525,6 +1535,22 @@
         "Compatible drive sockets for both EZ series drive modules and TMC series drive modules.",
         "Each motor drive module can conveniently select the corresponding motor voltage through a jumper cap.",
         "Supports motor power supply up to 48V, with isolation chip integration for enhanced safety, especially with TMC5160 and EZ5160 usage."
+      ],
+      "externalLinks": [
+        {
+          "name": "Marlin 3D Printer Firmware",
+          "url": "https://github.com/MarlinFirmware/Marlin",
+          "lang": "en",
+          "icon": "github.com.svg",
+          "iconAlt": "github.com"
+        },
+        {
+          "name": "Marlin 3D Printer Firmware configuration examples 2.1.x",
+          "url": "https://github.com/MarlinFirmware/Configurations/tree/import-2.1.x/config/examples",
+          "lang": "en",
+          "icon": "github.com.svg",
+          "iconAlt": "github.com"
+        }
       ]
     },
     {

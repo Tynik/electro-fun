@@ -139,7 +139,7 @@
       "url": "https://github.com/WeActStudio"
     },
     "18": {
-      "name": "COREBAI",
+      "name": "Corebai",
       "url": "https://corebai.com"
     },
     "19": {
@@ -149,6 +149,10 @@
     "20": {
       "name": "Allegro MicroSystems",
       "url": "https://www.allegromicro.com"
+    },
+    "21": {
+      "name": "Cloudray",
+      "url": "https://www.cloudraylaser.com"
     }
   },
   "abbreviations": {},
@@ -239,6 +243,49 @@
     }
   },
   "datasheets": {
+    "SN65HVD23x": {
+      "lang": "en",
+      "keywords": [
+        "CAN bus",
+        "transceiver"
+      ]
+    },
+    "SMF30A": {
+      "lang": "en",
+      "keywords": [
+        "protection diode"
+      ]
+    },
+    "SS8050-G": {
+      "lang": "en",
+      "keywords": [
+        "general purpose",
+        "transistor",
+        "NPN"
+      ]
+    },
+    "ME2807": {
+      "lang": "en",
+      "keywords": [
+        "voltage detector",
+        "ME2807A27XG",
+        "ME2807A33XG",
+        "ME2807A22M3G",
+        "ME2807A33M3G",
+        "ME2807A22TG",
+        "ME2807B33M3G"
+      ]
+    },
+    "LMR14006": {
+      "lang": "en",
+      "manufacturerId": "8",
+      "keywords": [
+        "DC/DC",
+        "step-down",
+        "high voltage",
+        "ultra low current"
+      ]
+    },
     "MCP1700": {
       "lang": "en",
       "manufacturerId": "9",
@@ -456,6 +503,21 @@
     "Ai-M62-32S": {
       "lang": "en"
     },
+    "Ai-M62-32S-Kit": {
+      "lang": "en"
+    },
+    "Ai-M62-12F": {
+      "lang": "en"
+    },
+    "Ai-M62-13": {
+      "lang": "en"
+    },
+    "Ai-M62-13U": {
+      "lang": "en"
+    },
+    "Ai-M62-M2-I": {
+      "lang": "en"
+    },
     "Ai-WB2-M1": {
       "lang": "en"
     },
@@ -611,6 +673,9 @@
     "ESP32-C3": {
       "lang": "en"
     },
+    "ESP32-C6": {
+      "lang": "en"
+    },
     "ESP32-C3-MINI-1": {
       "lang": "en"
     },
@@ -678,6 +743,9 @@
       "lang": "en"
     },
     "ESP32-S3": {
+      "lang": "en"
+    },
+    "ESP32-S3-WROOM-1": {
       "lang": "en"
     },
     "MOC302x": {
