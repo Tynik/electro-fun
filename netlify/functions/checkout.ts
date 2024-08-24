@@ -1,7 +1,12 @@
 import Stripe from 'stripe';
 
 import { SITE_DOMAIN } from '../constants';
-import { createHandler, getStripeAllowableShippingRates, initStripeClient } from '../helpers';
+import {
+  createHandler,
+  findStripeCustomer,
+  getStripeAllowableShippingRates,
+  initStripeClient,
+} from '../helpers';
 
 const ORDER_CONFIRMATION_PAGE_URL = `${SITE_DOMAIN}/order-confirmation?sessionId={CHECKOUT_SESSION_ID}`;
 
@@ -69,18 +74,20 @@ export const handler = createHandler<CheckoutPayload>(
       }),
     );
 
+    const existCustomer = await findStripeCustomer(stripe, payload.email);
+
     const session = await stripe.checkout.sessions.create({
       payment_intent_data: paymentIntentData,
       line_items: lineItems,
-      customer_email: payload.email,
       shipping_options: shippingRates.map(shippingRate => ({
         shipping_rate: shippingRate.id,
       })),
       success_url: ORDER_CONFIRMATION_PAGE_URL,
       cancel_url: ORDER_CONFIRMATION_PAGE_URL,
       mode: 'payment',
-      customer: undefined,
-      customer_creation: 'always',
+      customer: existCustomer?.id,
+      customer_email: existCustomer ? undefined : payload.email,
+      customer_creation: existCustomer ? undefined : 'always',
       currency: 'GBP',
     });
 

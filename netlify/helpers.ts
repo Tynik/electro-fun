@@ -93,7 +93,7 @@ export const createHandler = <Payload = unknown>(
 
 export const initStripeClient = () => {
   return new Stripe(STRIPE_API_KEY, {
-    apiVersion: '2024-04-10',
+    apiVersion: '2024-06-20',
   });
 };
 
@@ -146,6 +146,15 @@ export const getStripeProductPricesList = async (
   });
 
   return prices;
+};
+
+export const findStripeCustomer = async (stripe: Stripe, email: string) => {
+  const foundCustomers = await stripe.customers.list({
+    email,
+    limit: 1,
+  });
+
+  return foundCustomers.data[0];
 };
 
 export const processProductPrices = (prices: Stripe.Price[]) =>

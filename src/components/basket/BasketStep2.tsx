@@ -117,105 +117,113 @@ export const BasketStep2 = ({ isActive, products, onBefore }: BasketStep2Props) 
       <Grid justifyContent={'center'} container item>
         <Grid xs={12} sm={6} item>
           <Box
-            component={'form'}
-            autoComplete={'off'}
+            component="form"
+            autoComplete="off"
             sx={{
               '& .MuiTextField-root': { m: 1 },
             }}
             noValidate
           >
             <TextField
-              {...formFields.fullName.props}
+              value={formFields.fullName.props.value}
               error={formFields.fullName.errors.length > 0}
               helperText={formFields.fullName.errors[0]?.message}
-              label={'Full Name'}
-              variant={'outlined'}
-              size={'small'}
+              onChange={formFields.fullName.props.onChange}
+              label="Full Name"
+              variant="outlined"
+              size="small"
               required
               fullWidth
             />
 
             <TextField
-              {...formFields.phone.props}
+              value={formFields.phone.props.value}
               error={formFields.phone.errors.length > 0}
               helperText={formFields.phone.errors[0]?.message}
-              label={'Phone'}
-              variant={'outlined'}
-              size={'small'}
+              onChange={formFields.phone.props.onChange}
+              label="Phone"
+              variant="outlined"
+              size="small"
               fullWidth
             />
 
             <TextField
-              {...formFields.email.props}
+              value={formFields.email.props.value}
               error={formFields.email.errors.length > 0}
               helperText={formFields.email.errors[0]?.message}
-              label={'E-mail'}
-              variant={'outlined'}
-              size={'small'}
+              onChange={formFields.email.props.onChange}
+              label="E-mail"
+              variant="outlined"
+              size="small"
               required
               fullWidth
             />
 
             <TextField
-              value={'United Kingdom'}
-              label={'Country'}
-              variant={'outlined'}
-              size={'small'}
+              value="United Kingdom"
+              label="Country"
+              variant="outlined"
+              size="small"
               required
               disabled
               fullWidth
             />
 
             <TextField
-              {...formFields.shippingCity.props}
+              value={formFields.shippingCity.props.value}
               error={formFields.shippingCity.errors.length > 0}
               helperText={formFields.shippingCity.errors[0]?.message}
-              label={'City'}
-              variant={'outlined'}
-              size={'small'}
+              onChange={formFields.shippingCity.props.onChange}
+              label="City"
+              variant="outlined"
+              size="small"
               required
               fullWidth
             />
 
             <TextField
-              {...formFields.shippingAddress1.props}
+              value={formFields.shippingAddress1.props.value}
               error={formFields.shippingAddress1.errors.length > 0}
               helperText={formFields.shippingAddress1.errors[0]?.message}
-              label={'Address 1'}
-              variant={'outlined'}
-              size={'small'}
+              onChange={formFields.shippingAddress1.props.onChange}
+              label="Address 1"
+              variant="outlined"
+              size="small"
               required
               fullWidth
             />
 
             <TextField
-              {...formFields.shippingAddress2.props}
+              value={formFields.shippingAddress2.props.value}
               error={formFields.shippingAddress2.errors.length > 0}
               helperText={formFields.shippingAddress2.errors[0]?.message}
-              label={'Address 2'}
-              variant={'outlined'}
-              size={'small'}
+              onChange={formFields.shippingAddress2.props.onChange}
+              label="Address 2"
+              variant="outlined"
+              size="small"
               fullWidth
             />
 
             <TextField
-              {...formFields.shippingPostcode.props}
+              value={formFields.shippingPostcode.props.value}
               error={formFields.shippingPostcode.errors.length > 0}
               helperText={formFields.shippingPostcode.errors[0]?.message}
-              label={'Postcode'}
-              variant={'outlined'}
-              size={'small'}
+              onChange={formFields.shippingPostcode.props.onChange}
+              label="Postcode"
+              variant="outlined"
+              size="small"
               required
               fullWidth
             />
 
             <TextField
-              {...formFields.note.props}
+              value={formFields.note.props.value}
               error={formFields.note.errors.length > 0}
               helperText={formFields.note.errors[0]?.message}
-              label={'Note'}
-              variant={'outlined'}
-              size={'small'}
+              onChange={formFields.note.props.onChange}
+              label="Note"
+              variant="outlined"
+              size="small"
               rows={3}
               multiline
               fullWidth
