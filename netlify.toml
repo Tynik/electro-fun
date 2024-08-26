@@ -7,3 +7,8 @@
   from = "/assets/images/:file"
   to = "/.netlify/images?url=/assets/images/:file"
   status = 200
+
+[[redirects]]
+  from = "/assets/photos/:file"
+  to = "/.netlify/images?url=/assets/photos/:file"
+  status = 200
