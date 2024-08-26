@@ -149,12 +149,12 @@ export const getStripeProductPricesList = async (
 };
 
 export const findStripeCustomer = async (stripe: Stripe, email: string) => {
-  const foundCustomers = await stripe.customers.list({
+  const { data } = await stripe.customers.list({
     email,
     limit: 1,
   });
 
-  return foundCustomers.data[0];
+  return data[0];
 };
 
 export const processProductPrices = (prices: Stripe.Price[]) =>

@@ -85,10 +85,15 @@ export const handler = createHandler<CheckoutPayload>(
       success_url: ORDER_CONFIRMATION_PAGE_URL,
       cancel_url: ORDER_CONFIRMATION_PAGE_URL,
       mode: 'payment',
-      customer: existCustomer?.id,
-      customer_email: existCustomer ? undefined : payload.email,
-      customer_creation: existCustomer ? undefined : 'always',
       currency: 'GBP',
+      ...(existCustomer
+        ? {
+            customer: existCustomer.id,
+          }
+        : {
+            customer_email: payload.email,
+            customer_creation: 'always',
+          }),
     });
 
     return {

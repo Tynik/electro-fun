@@ -2,3 +2,8 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[redirects]]
+  from = "/assets/images/:file"
+  to = "/.netlify/images?url=/:file"
+  status = 200
