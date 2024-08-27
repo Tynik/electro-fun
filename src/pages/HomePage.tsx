@@ -38,7 +38,7 @@ export const HomePage = (props: HomePageProps) => {
           <Box
             sx={{
               position: 'absolute',
-              backgroundImage: 'url(assets/images/home-page-back.webp)',
+              backgroundImage: 'url(assets/images/home-page-back.webp?w=1200&h=1200)',
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
