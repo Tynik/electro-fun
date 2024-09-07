@@ -114,7 +114,7 @@ export const BasketStep2 = ({ isActive, products, onBefore }: BasketStep2Props) 
 
   return (
     <>
-      <Grid justifyContent={'center'} container item>
+      <Grid justifyContent="center" container item>
         <Grid xs={12} sm={6} item>
           <Box
             component="form"
